@@ -1,0 +1,31 @@
+<PreferenceScreen  xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <Preference
+      app:title="Scan on trusted device"
+      app:selectable="false"
+      app:summary="@string/scan_result"/>
+
+  <Preference
+      android:key="Progress"
+      app:title="1/1"
+      app:selectable="false"/>
+
+  <com.android.devicediagnostics.LayoutPreference
+      android:key="qr_code"
+      app:selectable="false"
+      android:layout="@layout/layout_evaluated_qr_code" />
+
+  <Preference
+      app:key="Next"
+      app:title="Next"
+      app:isPreferenceVisible="false" />
+
+  <Preference
+      app:key="Previous"
+      app:title="Previous"
+      app:isPreferenceVisible="false" />
+
+  <Preference
+      app:key="Done"
+      app:title="Done" />
+</PreferenceScreen>

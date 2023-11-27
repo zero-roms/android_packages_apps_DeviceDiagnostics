@@ -1,0 +1,28 @@
+DeviceDiagnostics
+
+This is a placeholder for the refurb project
+Once we have a name and a repo in the android codebase, this is redundant
+
+Get the topic:
+
+https://googleplex-android-review.git.corp.google.com/q/topic:DeviceDiagnostics
+
+Add a folder packages/apps/DeviceDiagnostics to your android tree
+
+Pull this git to it
+
+You should now be able to build Android and see a new setting:
+
+System/Reset options/Device Diagnostics
+
+The first screen is still part of settings, but once you press the button,
+you are running the DeviceDiagnostics app from system
+
+You can develop in one of two ways:
+
+Edit the files, rebuild Android, flash (or use adb remount and sync)
+
+Alternatively you can remove DeviceDiagnostics from the device (roll back the change
+in device/google/shusky) and then simply use Android Studio to edit/test the
+apk. This is dramatically faster. However, you should test to make sure you
+haven't broken Android development before uploading.

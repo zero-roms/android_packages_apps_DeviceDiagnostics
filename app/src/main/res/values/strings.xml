@@ -1,0 +1,32 @@
+<resources>
+  <string name="app_name">DeviceDiagnostics</string>
+
+  <!-- TrusteActivity strings -->
+  <string name="qr_code_description">QR Code</string>
+  <string name="scan_now">
+    <![CDATA[
+On the device you wish to evaluate, go to\n
+Settings/DeviceDiagnostics/Evaluated Device\n
+Follow the prompts on that device.
+  ]]>
+  </string>
+  <string name="screen_test_summary">
+    <![CDATA[
+You will now be shown a series of screens.
+Study each on and look for defects.
+Once you are satisfied, touch the screen to move to the next one.
+At the end, you will be asked if the screens look unblemished.
+  ]]>
+  </string>
+  <string name="screen_test_finalize">
+    <![CDATA[
+Please select the option below that best matches the condition of the screen.
+  ]]>
+  </string>
+  <string name="scan_result">
+    <![CDATA[
+Please scan this QR code on the trusted device. After you have scanned it, you
+may press Done on this device.
+  ]]>
+  </string>
+</resources>

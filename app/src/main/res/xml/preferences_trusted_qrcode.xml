@@ -1,0 +1,17 @@
+<PreferenceScreen  xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        app:key="Scan"
+        app:title="Scan now"
+        app:selectable="false"
+        app:summary="@string/scan_now"/>
+
+  <com.android.devicediagnostics.LayoutPreference
+      android:key="qr_code"
+      android:layout="@layout/layout_trusted_qrcode" />
+
+    <Preference
+        app:key="Continue"
+        app:title="Continue"
+        app:summary="Follow the prompts on the evaluated device. When prompted, press here to continue on this device"/>
+</PreferenceScreen>

@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <PreferenceCategory android:title="Device Diagnostics">
+    <Preference
+        app:key="Trusted"
+        app:title="Trusted Device"
+        app:summary="Start by selecting this option on a trusted device"/>
+
+    <Preference
+        app:key="Evaluated"
+        app:title="Evaluated Device"
+        app:summary="When prompted to do so, select this option on the evaluated device"/>
+  </PreferenceCategory>
+</PreferenceScreen>
