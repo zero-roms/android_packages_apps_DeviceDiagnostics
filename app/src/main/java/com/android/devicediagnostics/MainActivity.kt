@@ -6,18 +6,20 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.evaluated.QrCodeScanActivity
+import com.android.devicediagnostics.trusted.QrCodeDisplayActivity
 
 class MainFragment : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.preferences_main, rootKey)
     findPreference<Preference>("Trusted")?.setOnPreferenceClickListener{
-      Intent(activity, TrustedActivity::class.java).also {
+      Intent(activity, QrCodeDisplayActivity::class.java).also {
         startActivity(it)
       }
       true
     }
     findPreference<Preference>("Evaluated")?.setOnPreferenceClickListener{
-      Intent(activity, EvaluatedQrCodeScanActivity::class.java).also {
+      Intent(activity, QrCodeScanActivity::class.java).also {
         startActivity(it)
       }
       true

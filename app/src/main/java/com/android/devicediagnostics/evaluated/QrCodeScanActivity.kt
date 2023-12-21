@@ -1,4 +1,4 @@
-package com.android.devicediagnostics
+package com.android.devicediagnostics.evaluated
 
 import android.Manifest
 import android.content.Intent
@@ -20,6 +20,14 @@ import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.trusted.CHUNK
+import com.android.devicediagnostics.trusted.CHUNKS
+import com.android.devicediagnostics.trusted.CONTENTS
+import com.android.devicediagnostics.trusted.CRC32
+import com.android.devicediagnostics.LayoutPreference
+import com.android.devicediagnostics.trusted.QRCODE
+import com.android.devicediagnostics.R
+import com.android.devicediagnostics.trusted.VERSION
 import com.android.settingslib.qrcode.QrCamera
 import java.util.zip.CRC32
 import org.json.JSONException
@@ -27,7 +35,7 @@ import org.json.JSONObject
 
 private const val TAG = "DeviceDiagnostics: EvaluatedQrCodeScanActivity"
 
-class EvaluatedQrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
+class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
                                   PreferenceFragmentCompat() {
   private var mListener = listener
   private var mTextureView: TextureView? = null
@@ -51,10 +59,10 @@ class EvaluatedQrCodeScanFragment(listener: TextureView.SurfaceTextureListener) 
     textureView.clipToOutline = true
   }
 }
-class EvaluatedQrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
-                                    TextureView.SurfaceTextureListener,
-                                    QrCamera.ScannerCallback {
-  private var mFragment = EvaluatedQrCodeScanFragment(this)
+class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
+                           TextureView.SurfaceTextureListener,
+                           QrCamera.ScannerCallback {
+  private var mFragment = QrCodeScanFragment(this)
   private var mCamera = QrCamera(this, this)
   private var mChunk = 1
   private var mChunks = 1
@@ -159,7 +167,7 @@ class EvaluatedQrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragm
 
   override fun handleSuccessfulResult(qrCode: String?) {
     startActivity(
-      Intent(this, EvaluatedScreenTestIntroActivity::class.java)
+      Intent(this, ScreenTestIntroActivity::class.java)
         .putExtra(QRCODE, mResult)
     )
   }

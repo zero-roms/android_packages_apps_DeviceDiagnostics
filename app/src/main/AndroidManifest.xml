@@ -23,15 +23,15 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name="com.android.devicediagnostics.TrustedActivity" />
-    <activity android:name="com.android.devicediagnostics.TrustedQrCodeScanActivity" />
-    <activity android:name="com.android.devicediagnostics.TrustedDisplayResultActivity" />
-    <activity android:name="com.android.devicediagnostics.TrustedDisplayAttestationDetailsActivity" />
-    <activity android:name="com.android.devicediagnostics.EvaluatedQrCodeScanActivity" />
-    <activity android:name="com.android.devicediagnostics.EvaluatedScreenTestIntroActivity" />
-    <activity android:name="com.android.devicediagnostics.EvaluatedScreenTestActivity"
+    <activity android:name="com.android.devicediagnostics.trusted.QrCodeDisplayActivity" />
+    <activity android:name="com.android.devicediagnostics.trusted.QrCodeScanActivity" />
+    <activity android:name="com.android.devicediagnostics.trusted.DisplayResultActivity" />
+    <activity android:name="com.android.devicediagnostics.trusted.DisplayAttestationDetailsActivity" />
+    <activity android:name="com.android.devicediagnostics.evaluated.QrCodeScanActivity" />
+    <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestIntroActivity" />
+    <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestActivity"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-    <activity android:name="com.android.devicediagnostics.EvaluatedScreenTestFinalizeActivity" />
-    <activity android:name="com.android.devicediagnostics.EvaluatedQrDisplayActivity" />
+    <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestFinalizeActivity" />
+    <activity android:name="com.android.devicediagnostics.evaluated.QrDisplayActivity" />
   </application>
 </manifest>

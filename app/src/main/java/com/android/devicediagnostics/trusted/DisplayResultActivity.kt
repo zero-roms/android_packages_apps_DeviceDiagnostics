@@ -1,4 +1,4 @@
-package com.android.devicediagnostics
+package com.android.devicediagnostics.trusted
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,12 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.R
+import com.android.devicediagnostics.getAttestation
 import java.io.IOException
 import java.util.zip.Inflater
 
-class TrustedDisplayResultFragment : PreferenceFragmentCompat() {
+class DisplayResultFragment : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     val attestation = requireActivity().intent.extras?.getByteArray(QRCODE) ?: throw AssertionError ("No attestation")
     val challenge = requireActivity().intent.extras?.getByteArray(CHALLENGE) ?: throw AssertionError ("No challenge")
@@ -20,7 +22,7 @@ class TrustedDisplayResultFragment : PreferenceFragmentCompat() {
     findPreference<Preference>("screen")?.summary = if(screenCondition) "Good" else "Bad"
 
     findPreference<Preference>("done")?.setOnPreferenceClickListener{
-      Intent(activity, TrustedActivity::class.java).also {
+      Intent(activity, QrCodeDisplayActivity::class.java).also {
         requireActivity().finishAffinity()
       }
       true
@@ -50,8 +52,11 @@ class TrustedDisplayResultFragment : PreferenceFragmentCompat() {
             }
             findPreference<Preference>("attestation_details")?.also {
               it.setOnPreferenceClickListener{
-                startActivity(Intent(requireActivity(), TrustedDisplayAttestationDetailsActivity::class.java)
-                                .putExtra(QRCODE, toString(attestationRecord)))
+                startActivity(Intent(requireActivity(), DisplayAttestationDetailsActivity::class.java)
+                                .putExtra(
+                                  QRCODE,
+                                  com.android.devicediagnostics.toString(attestationRecord)
+                                ))
                 true
               }
               it.isVisible = true
@@ -75,14 +80,14 @@ class TrustedDisplayResultFragment : PreferenceFragmentCompat() {
   }
 }
 
-class TrustedDisplayResultActivity : FragmentActivity(R.layout.activity_one_fragment) {
+class DisplayResultActivity : FragmentActivity(R.layout.activity_one_fragment) {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
     if (savedInstanceState == null) {
       supportFragmentManager.commit {
         setReorderingAllowed(true)
-        add(R.id.fragment_container_view, TrustedDisplayResultFragment())
+        add(R.id.fragment_container_view, DisplayResultFragment())
       }
     }
   }

@@ -1,4 +1,4 @@
-package com.android.devicediagnostics
+package com.android.devicediagnostics.trusted
 
 import android.Manifest
 import android.content.Intent
@@ -20,6 +20,8 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.LayoutPreference
+import com.android.devicediagnostics.R
 import com.android.settingslib.qrcode.QrCamera
 import java.util.zip.CRC32
 import org.json.JSONException
@@ -39,7 +41,7 @@ const val CHUNKS = "Chunks"
 
 private const val TAG = "DeviceDiagnostics: TrustedQrCodeScanModeActivity"
 
-class TrustedQrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
+class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
   PreferenceFragmentCompat() {
   private var mListener = listener
   private var mTextureView: TextureView? = null
@@ -70,10 +72,10 @@ class TrustedQrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
   }
 }
 
-class TrustedQrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
-                                  TextureView.SurfaceTextureListener,
-                                  QrCamera.ScannerCallback {
-  private var mFragment = TrustedQrCodeScanFragment(this)
+class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
+                           TextureView.SurfaceTextureListener,
+                           QrCamera.ScannerCallback {
+  private var mFragment = QrCodeScanFragment(this)
   private var mCamera = QrCamera(this, this)
   private var mChunk = 1
   private var mChunks = 1
@@ -185,7 +187,7 @@ class TrustedQrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragmen
   }
 
   override fun handleSuccessfulResult(qrCode: String?) {
-    startActivity(Intent(this, TrustedDisplayResultActivity::class.java)
+    startActivity(Intent(this, DisplayResultActivity::class.java)
                     .putExtra(QRCODE, mResult)
                     .putExtra(CHALLENGE, mChallenge)
                     .putExtra(SCREEN_CONDITION, mScreenCondition))

@@ -1,4 +1,4 @@
-package com.android.devicediagnostics
+package com.android.devicediagnostics.evaluated
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
@@ -12,6 +12,15 @@ import android.view.View
 import android.widget.ImageView
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.trusted.CHUNK
+import com.android.devicediagnostics.trusted.CHUNKS
+import com.android.devicediagnostics.trusted.CONTENTS
+import com.android.devicediagnostics.trusted.CRC32
+import com.android.devicediagnostics.LayoutPreference
+import com.android.devicediagnostics.trusted.QRCODE
+import com.android.devicediagnostics.R
+import com.android.devicediagnostics.trusted.SCREEN_CONDITION
+import com.android.devicediagnostics.trusted.VERSION
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
 import java.nio.ByteBuffer
@@ -63,7 +72,7 @@ private fun attest(challenge: ByteArray): ByteArray {
 
   return deflated
 }
-class EvaluatedQrDisplayFragment(challenge: ByteArray, screenCondition: Boolean) : PreferenceFragmentCompat() {
+class QrDisplayFragment(challenge: ByteArray, screenCondition: Boolean) : PreferenceFragmentCompat() {
   private var mChallenge = challenge
   private var mScreenCondition = screenCondition
   private var mChunk = 1
@@ -162,18 +171,20 @@ class EvaluatedQrDisplayFragment(challenge: ByteArray, screenCondition: Boolean)
   }
 }
 
-class EvaluatedQrDisplayActivity : FragmentActivity(R.layout.activity_one_fragment) {
+class QrDisplayActivity : FragmentActivity(R.layout.activity_one_fragment) {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     if (savedInstanceState == null) {
       supportFragmentManager.commit {
         setReorderingAllowed(true)
-        add(R.id.fragment_container_view,
-            EvaluatedQrDisplayFragment(
+        add(
+          R.id.fragment_container_view,
+          QrDisplayFragment(
               intent.extras?.getByteArray(QRCODE)?:
             throw AssertionError("Missing challenge"),
               intent.extras?.getBoolean(SCREEN_CONDITION)?:
-            throw AssertionError("Missing screen condition")))
+            throw AssertionError("Missing screen condition"))
+        )
       }
     }
   }

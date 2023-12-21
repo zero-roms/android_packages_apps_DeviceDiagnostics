@@ -1,4 +1,4 @@
-package com.android.devicediagnostics
+package com.android.devicediagnostics.trusted
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,7 +9,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
 
-class TrustedDisplayAttestationDetailsActivity : ComponentActivity()  {
+class DisplayAttestationDetailsActivity : ComponentActivity()  {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContent {

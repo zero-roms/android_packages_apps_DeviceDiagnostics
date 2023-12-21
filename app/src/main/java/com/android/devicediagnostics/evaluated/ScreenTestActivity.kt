@@ -1,4 +1,4 @@
-package com.android.devicediagnostics
+package com.android.devicediagnostics.evaluated
 
 import android.app.Activity
 import android.content.Intent
@@ -7,8 +7,10 @@ import android.view.View
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import com.android.devicediagnostics.trusted.QRCODE
+import com.android.devicediagnostics.R
 
-class EvaluatedScreenTestActivity : Activity() {
+class ScreenTestActivity : Activity() {
   private enum class State {
     RED, GREEN, BLUE
   }
@@ -38,7 +40,7 @@ class EvaluatedScreenTestActivity : Activity() {
           state = State.BLUE
         }
 
-        State.BLUE -> Intent(this, EvaluatedScreenTestFinalizeActivity::class.java).also {
+        State.BLUE -> Intent(this, ScreenTestFinalizeActivity::class.java).also {
           it.putExtra(QRCODE, intent.extras?.getByteArray(QRCODE))
           startActivity(it)
         }
