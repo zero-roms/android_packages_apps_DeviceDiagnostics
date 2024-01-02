@@ -32,6 +32,8 @@
     <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestActivity"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestFinalizeActivity" />
+    <activity android:name="com.android.devicediagnostics.evaluated.TouchTestActivity"
+        android:exported="true"/>
     <activity android:name="com.android.devicediagnostics.evaluated.QrDisplayActivity" />
   </application>
 </manifest>
