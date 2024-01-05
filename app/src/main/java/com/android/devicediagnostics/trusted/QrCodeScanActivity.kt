@@ -177,7 +177,8 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
       // This is not the last chunk, so we say it's invalid and we'll keep getting new ones
       mChunk += 1
       runOnUiThread {
-        mFragment.progressPreference.title = "Scan QR code $mChunk/$mChunks"
+        mFragment.progressPreference.title = resources.getString(R.string.scan_qr_code) +
+          " $mChunk/$mChunks"
       }
       return false
     } catch(ex: JSONException) {

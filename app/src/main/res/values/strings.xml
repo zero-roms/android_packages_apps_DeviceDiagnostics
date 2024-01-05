@@ -1,6 +1,10 @@
 <resources>
   <string name="app_name">DeviceDiagnostics</string>
 
+  <string name="locked">Locked</string>
+  <string name="not_locked">Not locked</string>
+  <string name="attestation_challenge_does_not_match">"Attestation challenge does not match!"</string>
+  <string name="scan_qr_code">Scan QR code</string>
   <!-- TrusteActivity strings -->
   <string name="qr_code_description">QR Code</string>
   <string name="scan_now">

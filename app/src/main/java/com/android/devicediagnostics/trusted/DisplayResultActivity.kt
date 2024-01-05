@@ -43,7 +43,10 @@ class DisplayResultFragment : PreferenceFragmentCompat() {
         if (attestationRecord.attestationChallenge contentEquals challenge) {
           requireActivity().runOnUiThread {
             findPreference<Preference>("locked")?.also {
-              it.summary = if (attestationRecord.teeEnforced.rootOfTrust.get().deviceLocked) "Locked" else "Not locked"
+              it.summary = if (attestationRecord.teeEnforced.rootOfTrust.get().deviceLocked)
+                resources.getString(R.string.locked)
+              else
+                resources.getString(R.string.not_locked)
               it.isVisible = true
             }
             findPreference<Preference>("trustworthy")?.also {
@@ -64,7 +67,7 @@ class DisplayResultFragment : PreferenceFragmentCompat() {
           }
         } else {
           findPreference<Preference>("failure")?.also {
-            it.summary = "Attestation challenge does not match!" +
+            it.summary = resources.getString(R.string.attestation_challenge_does_not_match) +
               "\n" + attestationRecord.attestationChallenge.toString(Charsets.UTF_8) +
               "\n" + challenge.toString(Charsets.UTF_8)
             it.isVisible = true
