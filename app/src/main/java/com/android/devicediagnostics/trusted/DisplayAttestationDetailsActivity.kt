@@ -1,22 +1,15 @@
 package com.android.devicediagnostics.trusted
 
+import android.app.Activity
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Text
-import androidx.compose.ui.Modifier
+import android.widget.TextView
+import com.android.devicediagnostics.R
 
-class DisplayAttestationDetailsActivity : ComponentActivity()  {
+class DisplayAttestationDetailsActivity : Activity()  {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContent {
-      val qrcode = intent.extras?.getString(QRCODE) ?: throw AssertionError("No attestation string")
-      Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-        Text(qrcode)
-      }
-    }
+    setContentView(R.layout.layout_trusted_attestation_details)
+    val text = findViewById<TextView>(R.id.attestation_details) ?: throw AssertionError("Can't find TextView")
+    text.text = intent.extras?.getString(QRCODE) ?: throw AssertionError("No attestation string")
   }
 }
