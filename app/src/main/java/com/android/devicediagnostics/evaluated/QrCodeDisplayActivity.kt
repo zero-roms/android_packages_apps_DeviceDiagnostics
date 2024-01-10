@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import android.graphics.Bitmap
 import android.graphics.Color
+import android.security.keystore.AttestationUtils
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import android.util.Base64
@@ -37,7 +38,7 @@ private const val CHUNK_SIZE = 1024
 private const val EC_CURVE = "secp256r1"
 private const val KEYSTORE_ALIAS = "attestation_collector_key"
 
-private fun attest(challenge: ByteArray): ByteArray {
+private fun getAttestation(challenge: ByteArray, withImei: Boolean) : ByteArray {
   val keyStore = KeyStore.getInstance("AndroidKeyStore")
   keyStore.load(null)
   keyStore.deleteEntry(KEYSTORE_ALIAS)
@@ -47,6 +48,11 @@ private fun attest(challenge: ByteArray): ByteArray {
       .setAlgorithmParameterSpec(ECGenParameterSpec(EC_CURVE))
       .setDigests(KeyProperties.DIGEST_SHA256)
       .setAttestationChallenge(challenge)
+      .setAttestationIds( if(withImei)
+                            intArrayOf(AttestationUtils.ID_TYPE_SERIAL,
+                                       AttestationUtils.ID_TYPE_IMEI)
+                          else
+                            intArrayOf())
       .build()
 
   val keyPairGenerator =
@@ -72,6 +78,17 @@ private fun attest(challenge: ByteArray): ByteArray {
 
   return deflated
 }
+
+private fun attest(challenge: ByteArray): ByteArray {
+  // On devices without device IDs provisioned, the above code will throw ProviderException
+  // Continue without this data to support testing other functionality
+  return try {
+    getAttestation(challenge, withImei = true)
+  } catch (e: java.security.ProviderException) {
+    getAttestation(challenge, withImei = false)
+  }
+}
+
 class QrDisplayFragment(challenge: ByteArray, screenCondition: Boolean) : PreferenceFragmentCompat() {
   private var mChallenge = challenge
   private var mScreenCondition = screenCondition

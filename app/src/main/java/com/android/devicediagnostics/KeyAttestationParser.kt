@@ -150,11 +150,13 @@ private fun printAuthorizationList(
   printOptional(authorizationList.attestationIdBrand, indent + "Attestation ID Brand")
   printOptional(authorizationList.attestationIdDevice, indent + "Attestation ID Device")
   printOptional(authorizationList.attestationIdProduct, indent + "Attestation ID Product")
-  printOptional(authorizationList.attestationIdSerial, indent + "Attestation ID Serial")
-  printOptional(authorizationList.attestationIdImei, indent + "Attestation ID IMEI")
-  printOptional(
-    authorizationList.attestationIdSecondImei, indent + "Attestation ID SECOND IMEI"
-  )
+  printOptional(authorizationList.attestationIdSerial, indent + "Attestation ID Serial",
+                base64encode = false)
+
+  printOptional(authorizationList.attestationIdImei,
+                indent + "Attestation ID IMEI", base64encode = false)
+  printOptional(authorizationList.attestationIdSecondImei,
+                indent + "Attestation ID SECOND IMEI", base64encode = false)
   printOptional(authorizationList.attestationIdMeid, indent + "Attestation ID MEID")
   printOptional(
     authorizationList.attestationIdManufacturer, indent + "Attestation ID Manufacturer"
@@ -201,10 +203,14 @@ private fun printAttestationApplicationId(
   }
 }
 
-private fun <T> printOptional(optional: Optional<T>, caption: String) {
+private fun <T> printOptional(optional: Optional<T>, caption: String, base64encode: Boolean = true) {
   if (optional.isPresent) {
     if (optional.get() is ByteArray) {
-      println(caption + ": " + Base64.toBase64String(optional.get() as ByteArray))
+      if (base64encode) {
+        println(caption + ": " + Base64.toBase64String(optional.get() as ByteArray))
+      } else {
+        println(caption + ": " + (optional.get() as ByteArray).toString(Charsets.UTF_8))
+      }
     } else {
       println(caption + ": " + optional.get())
     }
