@@ -27,6 +27,7 @@ android_app {
         "androidx.lifecycle_lifecycle-viewmodel-compose",
         "androidx.recyclerview_recyclerview",
         "kotlinx-coroutines-core",
+        "kotlin-reflect",
         "zxing-core-1.7",
         "SettingsLib",
         "android-key-attestation",

@@ -5,7 +5,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import android.graphics.Bitmap
 import android.graphics.Color
-import android.security.keystore.AttestationUtils
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import android.util.Base64
@@ -42,18 +41,20 @@ private fun getAttestation(challenge: ByteArray, withImei: Boolean) : ByteArray 
   val keyStore = KeyStore.getInstance("AndroidKeyStore")
   keyStore.load(null)
   keyStore.deleteEntry(KEYSTORE_ALIAS)
-  val keyPurpose: Int = KeyProperties::PURPOSE_SIGN.get() or KeyProperties::PURPOSE_VERIFY.get()
-  val spec: KeyGenParameterSpec =
+  val keyPurpose = KeyProperties::PURPOSE_SIGN.get() or KeyProperties::PURPOSE_VERIFY.get()
+  var builder =
     KeyGenParameterSpec.Builder(KEYSTORE_ALIAS, keyPurpose)
       .setAlgorithmParameterSpec(ECGenParameterSpec(EC_CURVE))
       .setDigests(KeyProperties.DIGEST_SHA256)
       .setAttestationChallenge(challenge)
-      .setAttestationIds( if(withImei)
-                            intArrayOf(AttestationUtils.ID_TYPE_SERIAL,
-                                       AttestationUtils.ID_TYPE_IMEI)
-                          else
-                            intArrayOf())
-      .build()
+
+  // Use reflection to call this system API so we can still build in Android Studio
+  if(withImei)
+    builder = builder::class.members.firstOrNull { it.name == "setAttestationIds" }?.call(builder,
+      intArrayOf(1, 2) // AttestationUtils.ID_TYPE_SERIAL, AttestationUtils.ID_TYPE_IMEI
+    ) as KeyGenParameterSpec.Builder
+
+  val spec = builder.build()
 
   val keyPairGenerator =
     KeyPairGenerator.getInstance(KeyProperties.KEY_ALGORITHM_EC, "AndroidKeyStore")
@@ -85,6 +86,8 @@ private fun attest(challenge: ByteArray): ByteArray {
   return try {
     getAttestation(challenge, withImei = true)
   } catch (e: java.security.ProviderException) {
+    getAttestation(challenge, withImei = false)
+  } catch (e: SecurityException) {
     getAttestation(challenge, withImei = false)
   }
 }
@@ -197,7 +200,9 @@ class QrDisplayActivity : FragmentActivity(R.layout.activity_one_fragment) {
         add(
           R.id.fragment_container_view,
           QrDisplayFragment(
+            // Support string challenge so this intent can be launched from am
               intent.extras?.getByteArray(QRCODE)?:
+                     intent.extras?.getString(QRCODE)?.toByteArray()?:
             throw AssertionError("Missing challenge"),
               intent.extras?.getBoolean(SCREEN_CONDITION)?:
             throw AssertionError("Missing screen condition"))
