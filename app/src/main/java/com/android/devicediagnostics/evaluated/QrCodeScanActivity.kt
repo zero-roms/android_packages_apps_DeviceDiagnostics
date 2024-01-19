@@ -166,9 +166,9 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
   }
 
   override fun handleSuccessfulResult(qrCode: String?) {
-    startActivity(
-      Intent(this, ScreenTestIntroActivity::class.java)
-        .putExtra(QRCODE, mResult)
-    )
+    Intent(this, ScreenTestIntroActivity::class.java).also {
+      TestStatus(challenge = mResult).write(it)
+      startActivity(it)
+    }
   }
 }

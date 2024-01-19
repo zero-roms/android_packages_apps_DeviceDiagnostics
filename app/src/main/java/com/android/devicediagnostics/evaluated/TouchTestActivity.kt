@@ -2,6 +2,7 @@ package com.android.devicediagnostics.evaluated
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.os.Bundle
@@ -36,7 +37,7 @@ class TouchTestView(context : Context, attrs: AttributeSet) :
   private var count: Int = 0
     set(value) {
       if (value == rows * columns) {
-        (getContext() as Activity).finishAffinity()
+        (getContext() as TouchTestActivity).reportResult(true)
       }
       field = value
     }
@@ -55,9 +56,8 @@ class TouchTestView(context : Context, attrs: AttributeSet) :
     if (event != null)  try{
       when (event.action) {
         MotionEvent.ACTION_DOWN -> timer = timeSource.markNow()
-        MotionEvent.ACTION_UP -> if(timeSource.markNow() - timer < 0.2.seconds) {
-          array = Array(columns) { BooleanArray(rows) }
-          }
+        MotionEvent.ACTION_UP -> if(timeSource.markNow() - timer < 0.2.seconds)
+          (getContext() as TouchTestActivity).reportResult(false)
       }
 
       val x = (event.x / xSize).toInt()
@@ -72,9 +72,21 @@ class TouchTestView(context : Context, attrs: AttributeSet) :
     return true
   }
 }
+
 class TouchTestActivity : Activity() {
+  private lateinit var testStatus: TestStatus
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.touch_test)
+    testStatus = TestStatus(intent!!.extras!!)
+  }
+
+  fun reportResult(result: Boolean) {
+    testStatus.touchTest = result
+    Intent(this, TouchTestFinalizeActivity::class.java).also {
+      testStatus.write(it)
+      startActivity(it)
+    }
   }
 }

@@ -6,16 +6,14 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import com.android.devicediagnostics.trusted.QRCODE
 import com.android.devicediagnostics.R
 
-class ScreenTestIntroFragment(challenge: ByteArray) : PreferenceFragmentCompat() {
-  private val mChallenge = challenge
+class ScreenTestIntroFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.preferences_evaluated_screen_test, rootKey)
     findPreference<Preference>("continue")?.setOnPreferenceClickListener{
       Intent(activity, ScreenTestActivity::class.java).also {
-        it.putExtra(QRCODE, mChallenge)
+        testStatus.write(it)
         startActivity(it)
       }
       true
@@ -31,8 +29,7 @@ class ScreenTestIntroActivity : FragmentActivity(R.layout.activity_one_fragment)
         setReorderingAllowed(true)
         add(
           R.id.fragment_container_view,
-          ScreenTestIntroFragment(intent.extras?.getByteArray(QRCODE)?:
-              throw AssertionError("Missing challenge"))
+          ScreenTestIntroFragment(TestStatus(intent!!.extras!!))
         )
       }
     }

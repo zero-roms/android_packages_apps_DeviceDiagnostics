@@ -17,6 +17,11 @@
       app:selectable="false" />
 
   <Preference
+      app:key="touch"
+      app:title="Touch sensor status"
+      app:selectable="false" />
+
+  <Preference
       app:key="attestation_details"
       app:isPreferenceVisible="false"
       app:title="Attestation details ..." />

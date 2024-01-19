@@ -7,7 +7,6 @@ import android.view.View
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import com.android.devicediagnostics.trusted.QRCODE
 import com.android.devicediagnostics.R
 
 class ScreenTestActivity : Activity() {
@@ -41,7 +40,7 @@ class ScreenTestActivity : Activity() {
         }
 
         State.BLUE -> Intent(this, ScreenTestFinalizeActivity::class.java).also {
-          it.putExtra(QRCODE, intent.extras?.getByteArray(QRCODE))
+          TestStatus(intent!!.extras!!).write(it)
           startActivity(it)
         }
       }

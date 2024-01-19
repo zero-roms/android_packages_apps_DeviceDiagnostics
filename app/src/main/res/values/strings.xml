@@ -27,6 +27,17 @@ At the end, you will be asked if the screens look unblemished.
 Please select the option below that best matches the condition of the screen.
   ]]>
   </string>
+  <string name="touch_test_summary">
+    <![CDATA[
+You will now be shown a white screen.
+Rub your finger over the screen until the screen is entirely red. Be careful not
+to short tap the screen. If you are unable to turn part of the screen red, short
+tap the screen to indicate that the touch sensor is not fully working.
+
+The touch sensor will be reported as good if you touch the whole screen,
+defective if you short tap it.
+  ]]>
+  </string>
   <string name="scan_result">
     <![CDATA[
 Please scan this QR code on the trusted device. After you have scanned it, you

@@ -17,9 +17,9 @@ import com.android.devicediagnostics.trusted.CHUNKS
 import com.android.devicediagnostics.trusted.CONTENTS
 import com.android.devicediagnostics.trusted.CRC32
 import com.android.devicediagnostics.LayoutPreference
-import com.android.devicediagnostics.trusted.QRCODE
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.trusted.SCREEN_CONDITION
+import com.android.devicediagnostics.trusted.TOUCH_CONDITION
 import com.android.devicediagnostics.trusted.VERSION
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
@@ -92,9 +92,7 @@ private fun attest(challenge: ByteArray): ByteArray {
   }
 }
 
-class QrDisplayFragment(challenge: ByteArray, screenCondition: Boolean) : PreferenceFragmentCompat() {
-  private var mChallenge = challenge
-  private var mScreenCondition = screenCondition
+class QrDisplayFragment(private var testStatus: TestStatus) : PreferenceFragmentCompat() {
   private var mChunk = 1
   private var mChunks = 1
   private var mChunkSize = 0
@@ -136,7 +134,7 @@ class QrDisplayFragment(challenge: ByteArray, screenCondition: Boolean) : Prefer
     super.onViewCreated(view, savedInstanceState)
 
     Thread {
-      mAttestation = attest(mChallenge)
+      mAttestation = attest(testStatus.challenge)
       requireActivity().runOnUiThread() {
         mChunks = (mAttestation.size + CHUNK_SIZE - 1) / CHUNK_SIZE
         mChunkSize = (mAttestation.size + mChunks - 1) / mChunks
@@ -165,7 +163,8 @@ class QrDisplayFragment(challenge: ByteArray, screenCondition: Boolean) : Prefer
       json.put(CRC32, crc.value)
       json.put(CHUNK, mChunk)
       json.put(CHUNKS, mChunks)
-      json.put(SCREEN_CONDITION, mScreenCondition)
+      json.put(SCREEN_CONDITION, testStatus.screenTest)
+      json.put(TOUCH_CONDITION, testStatus.touchTest)
 
       val writer = QRCodeWriter()
       val bitMatrix =
@@ -199,13 +198,7 @@ class QrDisplayActivity : FragmentActivity(R.layout.activity_one_fragment) {
         setReorderingAllowed(true)
         add(
           R.id.fragment_container_view,
-          QrDisplayFragment(
-            // Support string challenge so this intent can be launched from am
-              intent.extras?.getByteArray(QRCODE)?:
-                     intent.extras?.getString(QRCODE)?.toByteArray()?:
-            throw AssertionError("Missing challenge"),
-              intent.extras?.getBoolean(SCREEN_CONDITION)?:
-            throw AssertionError("Missing screen condition"))
+          QrDisplayFragment(TestStatus(intent!!.extras!!))
         )
       }
     }

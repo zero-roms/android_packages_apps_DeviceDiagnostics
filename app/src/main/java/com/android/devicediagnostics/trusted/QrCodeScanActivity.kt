@@ -22,6 +22,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.LayoutPreference
 import com.android.devicediagnostics.R
+import com.android.devicediagnostics.evaluated.TestStatus
 import com.android.settingslib.qrcode.QrCamera
 import java.util.zip.CRC32
 import org.json.JSONException
@@ -31,6 +32,7 @@ import org.json.JSONObject
 const val CHALLENGE = "CHALLENGE"
 const val QRCODE = "QRCODE"
 const val SCREEN_CONDITION = "SCREEN_CONDITION"
+const val TOUCH_CONDITION = "TOUCH_CONDITION"
 
 // json values in QR codes
 const val CONTENTS = "Contents"
@@ -79,9 +81,7 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
   private var mCamera = QrCamera(this, this)
   private var mChunk = 1
   private var mChunks = 1
-  private var mChallenge: ByteArray? = null
-  private var mResult = ByteArray(0)
-  private var mScreenCondition = false
+  private var testStatus = TestStatus()
   private val requestPermission =
     registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
       if (isGranted) {
@@ -95,7 +95,7 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     requestPermission.launch(Manifest.permission.CAMERA)
-    mChallenge = intent.extras?.getByteArray(CHALLENGE)
+    testStatus.challenge = intent.extras?.getByteArray(CHALLENGE)!!
   }
   override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
     mCamera.start(surface)
@@ -155,9 +155,16 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
       }
 
       if (mChunk == 1) {
-        mScreenCondition = json.getBoolean(SCREEN_CONDITION)
-      } else if (mScreenCondition != json.getBoolean(SCREEN_CONDITION)) {
+        testStatus.screenTest = json.getBoolean(SCREEN_CONDITION)
+      } else if (testStatus.screenTest != json.getBoolean(SCREEN_CONDITION)) {
         Log.d(TAG, "Inconsistent screen condition")
+        return false
+      }
+
+      if (mChunk == 1) {
+        testStatus.touchTest = json.getBoolean(TOUCH_CONDITION)
+      } else if (testStatus.touchTest != json.getBoolean(TOUCH_CONDITION)) {
+        Log.d(TAG, "Inconsistent touch condition")
         return false
       }
 
@@ -171,7 +178,7 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
         )
       }
       mChunks = json.getInt(CHUNKS)
-      mResult += bytes
+      testStatus.attestation += bytes
       if (mChunk == mChunks) { return true }
 
       // This is not the last chunk, so we say it's invalid and we'll keep getting new ones
@@ -188,9 +195,9 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
   }
 
   override fun handleSuccessfulResult(qrCode: String?) {
-    startActivity(Intent(this, DisplayResultActivity::class.java)
-                    .putExtra(QRCODE, mResult)
-                    .putExtra(CHALLENGE, mChallenge)
-                    .putExtra(SCREEN_CONDITION, mScreenCondition))
+    Intent(this, DisplayResultActivity::class.java).also {
+      testStatus.write(it)
+      startActivity(it)
+    }
   }
 }
