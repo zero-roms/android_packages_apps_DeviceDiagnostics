@@ -7,10 +7,11 @@ import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.evaluated.TestStatus
+import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.getAttestation
 import java.io.IOException
-import java.util.zip.Inflater
+
+const val ATTESTATION = "ATTESTATION"
 
 class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -28,16 +29,7 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
 
     Thread {
       try {
-        val inflater = Inflater()
-        inflater.setInput(testStatus.attestation, 0, testStatus.attestation.size)
-        var inflated = ByteArray(0)
-        while(true) {
-          val inflatedChunk = ByteArray(256)
-          val inflatedBytes = inflater.inflate(inflatedChunk)
-          if (inflatedBytes == 0) break
-          inflated += inflatedChunk.take(inflatedBytes).toByteArray()
-        }
-        val attestationRecord = getAttestation(inflated)
+        val attestationRecord = getAttestation(testStatus.attestation)
         if (attestationRecord.attestationChallenge contentEquals testStatus.challenge) {
           requireActivity().runOnUiThread {
             findPreference<Preference>("locked")?.also {
@@ -52,12 +44,9 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
               it.isVisible = true
             }
             findPreference<Preference>("attestation_details")?.also {
-              it.setOnPreferenceClickListener{
+              it.setOnPreferenceClickListener {
                 startActivity(Intent(requireActivity(), DisplayAttestationDetailsActivity::class.java)
-                                .putExtra(
-                                  QRCODE,
-                                  com.android.devicediagnostics.toString(attestationRecord)
-                                ))
+                  .putExtra (ATTESTATION, com.android.devicediagnostics.toString(attestationRecord)))
                 true
               }
               it.isVisible = true

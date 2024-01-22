@@ -8,6 +8,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.android.devicediagnostics.R
+import com.android.devicediagnostics.TestStatus
 
 class ScreenTestActivity : Activity() {
   private enum class State {

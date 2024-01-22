@@ -29,6 +29,7 @@ import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate
 import java.util.Arrays
 import java.util.Optional
+import java.util.zip.Inflater
 import org.bouncycastle.util.encoders.Base64
 
 /**
@@ -62,9 +63,17 @@ private fun println(stuff: String) {
 }
 
 fun getAttestation(attestation: ByteArray): ParsedAttestationRecord {
-  val certs: List<X509Certificate>
+  val inflater = Inflater()
+  inflater.setInput(attestation, 0, attestation.size)
+  var inflated = ByteArray(0)
+  while(true) {
+    val inflatedChunk = ByteArray(256)
+    val inflatedBytes = inflater.inflate(inflatedChunk)
+    if (inflatedBytes == 0) break
+    inflated += inflatedChunk.take(inflatedBytes).toByteArray()
+  }
 
-  certs = loadCertificates(attestation)
+  val certs = loadCertificates(inflated)
   verifyCertificateChain(certs)
   return ParsedAttestationRecord.createParsedAttestationRecord(certs)
 }

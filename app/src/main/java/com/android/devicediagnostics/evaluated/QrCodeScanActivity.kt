@@ -9,8 +9,6 @@ import android.graphics.SurfaceTexture
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
-import android.util.Base64
-import android.util.Log
 import android.util.Size
 import android.view.TextureView
 import android.view.View
@@ -20,20 +18,10 @@ import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.PreferenceFragmentCompat
-import com.android.devicediagnostics.trusted.CHUNK
-import com.android.devicediagnostics.trusted.CHUNKS
-import com.android.devicediagnostics.trusted.CONTENTS
-import com.android.devicediagnostics.trusted.CRC32
 import com.android.devicediagnostics.LayoutPreference
-import com.android.devicediagnostics.trusted.QRCODE
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.trusted.VERSION
+import com.android.devicediagnostics.TestStatus
 import com.android.settingslib.qrcode.QrCamera
-import java.util.zip.CRC32
-import org.json.JSONException
-import org.json.JSONObject
-
-private const val TAG = "DeviceDiagnostics: EvaluatedQrCodeScanActivity"
 
 class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
                                   PreferenceFragmentCompat() {
@@ -64,9 +52,7 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
                            QrCamera.ScannerCallback {
   private var mFragment = QrCodeScanFragment(this)
   private var mCamera = QrCamera(this, this)
-  private var mChunk = 1
-  private var mChunks = 1
-  private var mResult = ByteArray(0)
+  private var testStatus: TestStatus = TestStatus()
   private val mRequestPermission =
       registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
         if (isGranted) {
@@ -115,33 +101,9 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
 
   override fun isValid(qrCode: String?): Boolean {
     try {
-      if (qrCode == null) {
-        Log.d(TAG, "No qr content")
-        return false
-      }
-      val json = JSONObject(qrCode)
-      if (json.getInt(VERSION) != 1) {
-        Log.d(TAG, "Bad version ")
-        return false
-      }
-      val contents = json.getString(CONTENTS)
-      val bytes = Base64.decode(contents, 0)
-      val crc = CRC32()
-      crc.update(bytes)
-      if (json.getLong(CRC32) != crc.value) {
-        Log.d(TAG, "CRC doesn't match ")
-        return false
-      }
-      if (json.getInt(CHUNK) != mChunk) {
-        Log.d(TAG, "Wrong chunk")
-        return false
-      }
-      if (json.getInt(CHUNKS) != mChunks && mChunk != 1) {
-        Log.d(TAG, "Wrong total chunks")
-        return false
-      }
+      testStatus = TestStatus(qrCode, getAttestation = false)
 
-      // The chunk is valid. Buzz the user
+      // The code is valid. Buzz the user
       runOnUiThread {
         getSystemService<Vibrator>(this, Vibrator::class.java)!!.vibrate(
           VibrationEffect.createOneShot(
@@ -150,24 +112,15 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
           )
         )
       }
-      mChunks = json.getInt(CHUNKS)
-      mResult += bytes
-      if (mChunk == mChunks) {
-        return true
-      }
-
-      // This is not the last chunk, so we say it's invalid and we'll keep getting new ones
-      mChunk += 1
-      return false
-    } catch (ex: JSONException) {
-      Log.d(TAG, "JSON missing fields")
+      return true
+    } catch (ex: TestStatus.TSException) {
       return false
     }
   }
 
   override fun handleSuccessfulResult(qrCode: String?) {
     Intent(this, ScreenTestIntroActivity::class.java).also {
-      TestStatus(challenge = mResult).write(it)
+      testStatus.write(it)
       startActivity(it)
     }
   }

@@ -7,6 +7,7 @@ import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
+import com.android.devicediagnostics.TestStatus
 
 class TouchTestIntroFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
