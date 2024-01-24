@@ -48,6 +48,30 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
         val attestationRecord = getAttestation(testStatus.attestation)
         if (attestationRecord.attestationChallenge contentEquals testStatus.challenge) {
           requireActivity().runOnUiThread {
+            findPreference<Preference>("imei")?.also {
+              if (attestationRecord.teeEnforced.attestationIdImei.isPresent) {
+                it.summary =
+                  attestationRecord.teeEnforced.attestationIdImei.get().toString(Charsets.UTF_8)
+                it.isVisible = true
+              }
+            }
+
+            findPreference<Preference>("imei2")?.also {
+              if (attestationRecord.teeEnforced.attestationIdSecondImei.isPresent) {
+                it.summary =
+                  attestationRecord.teeEnforced.attestationIdSecondImei.get().toString(Charsets.UTF_8)
+                it.isVisible = true
+              }
+            }
+
+            findPreference<Preference>("serial")?.also {
+              if (attestationRecord.teeEnforced.attestationIdSerial.isPresent) {
+                it.summary =
+                  attestationRecord.teeEnforced.attestationIdSerial.get().toString(Charsets.UTF_8)
+                it.isVisible = true
+              }
+            }
+
             findPreference<Preference>("locked")?.also {
               it.summary = if (attestationRecord.teeEnforced.rootOfTrust.get().deviceLocked)
                 resources.getString(R.string.locked)
