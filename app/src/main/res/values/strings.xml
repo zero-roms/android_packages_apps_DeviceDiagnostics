@@ -1,6 +1,7 @@
 <resources>
   <string name="app_name">DeviceDiagnostics</string>
   <string name="app_title">Device Diagnostics</string>
+  <string name="package_name">com.android.devicediagnostics</string>
 
   <!-- Main preference screen -->
   <string name="eval_title">Evaluation</string>

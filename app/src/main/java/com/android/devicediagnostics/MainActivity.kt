@@ -28,18 +28,6 @@ import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 class MainFragment : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.preferences_main, rootKey)
-    findPreference<Preference>("Trusted")?.setOnPreferenceClickListener{
-      Intent(activity, QrCodeDisplayActivity::class.java).also {
-        startActivity(it)
-      }
-      true
-    }
-    findPreference<Preference>("Evaluated")?.setOnPreferenceClickListener{
-      Intent(activity, QrCodeScanActivity::class.java).also {
-        startActivity(it)
-      }
-      true
-    }
   }
 }
 

@@ -6,7 +6,7 @@
       app:selectable="false"
       app:summary="Scan the QR code on the evaluated device in the rectangle below"/>
 
-  <com.android.devicediagnostics.LayoutPreference
+  <com.android.settingslib.widget.LayoutPreference
       android:key="qr_code"
       app:selectable="false"
       android:layout="@layout/qrcode_scanner" />

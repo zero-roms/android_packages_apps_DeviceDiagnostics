@@ -5,11 +5,19 @@
     <Preference
         app:key="Trusted"
         app:title="@string/trusted_device_title"
-        app:summary="@string/trusted_device_summary"/>
+        app:summary="@string/trusted_device_summary">
+        <intent
+            android:targetClass="com.android.devicediagnostics.trusted.QrCodeDisplayActivity"
+            android:targetPackage="@string/package_name"/>
+    </Preference>
 
     <Preference
         app:key="Evaluated"
         app:title="@string/evaluated_device_title"
-        app:summary="@string/evaluated_device_summary"/>
+        app:summary="@string/evaluated_device_summary">
+        <intent
+            android:targetClass="com.android.devicediagnostics.evaluated.QrCodeScanActivity"
+            android:targetPackage="@string/package_name"/>
+    </Preference>
   </PreferenceCategory>
 </PreferenceScreen>

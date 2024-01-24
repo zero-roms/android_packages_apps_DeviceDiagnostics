@@ -10,7 +10,7 @@
       app:title="1/1"
       app:selectable="false"/>
 
-  <com.android.devicediagnostics.LayoutPreference
+  <com.android.settingslib.widget.LayoutPreference
       android:key="qr_code"
       app:selectable="false"
       android:layout="@layout/layout_evaluated_qr_code" />

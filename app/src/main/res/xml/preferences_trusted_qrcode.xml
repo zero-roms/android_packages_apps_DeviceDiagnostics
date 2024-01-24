@@ -6,7 +6,7 @@
         app:selectable="false"
         app:summary="@string/scan_now"/>
 
-  <com.android.devicediagnostics.LayoutPreference
+  <com.android.settingslib.widget.LayoutPreference
       android:key="qr_code"
       android:layout="@layout/layout_trusted_qrcode" />
 
