@@ -29,20 +29,20 @@ class ScreenTestFinalizeFragment(private var testStatus: TestStatus) : Preferenc
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.preferences_evaluated_screen_test_finalize, rootKey)
     findPreference<Preference>("Good")?.setOnPreferenceClickListener{
-      Intent(activity, TouchTestActivity::class.java).also {
-        testStatus.screenTest = true
-        testStatus.write(it)
-        startActivity(it)
-      }
+      nextActivity(true)
       true
     }
     findPreference<Preference>("Bad")?.setOnPreferenceClickListener{
-      Intent(activity, TouchTestActivity::class.java).also {
-        testStatus.screenTest = false
-        testStatus.write(it)
-        startActivity(it)
-      }
+      nextActivity(false)
       true
+    }
+  }
+
+  private fun nextActivity(screenTestResult: Boolean) {
+    testStatus.screenTest = screenTestResult
+    Intent(activity, TouchTestIntroActivity::class.java).also {
+      testStatus.write(it)
+      startActivity(it)
     }
   }
 }

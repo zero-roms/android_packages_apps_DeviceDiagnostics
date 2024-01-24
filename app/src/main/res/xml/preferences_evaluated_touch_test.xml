@@ -2,7 +2,7 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
   <Preference
       app:key="Trusted"
-      app:title="Screen test"
+      app:title="Touch test"
       app:selectable="false"
       app:summary="@string/touch_test_summary"/>
   <Preference

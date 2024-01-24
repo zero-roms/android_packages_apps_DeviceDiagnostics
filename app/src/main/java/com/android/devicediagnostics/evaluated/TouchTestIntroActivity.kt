@@ -27,7 +27,7 @@ import com.android.devicediagnostics.TestStatus
 
 class TouchTestIntroFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-    setPreferencesFromResource(R.xml.preferences_evaluated_screen_test, rootKey)
+    setPreferencesFromResource(R.xml.preferences_evaluated_touch_test, rootKey)
     findPreference<Preference>("continue")?.setOnPreferenceClickListener{
       Intent(activity, TouchTestActivity::class.java).also {
         testStatus.write(it)

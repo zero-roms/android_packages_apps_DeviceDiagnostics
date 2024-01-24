@@ -5,7 +5,6 @@
   <string name="not_locked">Not locked</string>
   <string name="attestation_challenge_does_not_match">"Attestation challenge does not match!"</string>
   <string name="scan_qr_code">Scan QR code</string>
-  <!-- TrusteActivity strings -->
   <string name="qr_code_description">QR Code</string>
   <string name="scan_now">
     <![CDATA[
@@ -29,13 +28,14 @@ Please select the option below that best matches the condition of the screen.
   </string>
   <string name="touch_test_summary">
     <![CDATA[
-You will now be shown a white screen.
-Rub your finger over the screen until the screen is entirely red. Be careful not
-to short tap the screen. If you are unable to turn part of the screen red, short
-tap the screen to indicate that the touch sensor is not fully working.
-
-The touch sensor will be reported as good if you touch the whole screen,
-defective if you short tap it.
+You will now be shown a red screen.\n
+\n
+Rub your finger over the screen until the screen is entirely white. If you are
+unable to turn part of the screen white, short tap the screen to indicate that
+the touch sensor is not fully working.\n
+\n
+If you wish, you can back swipe from the report screen and continue the test
+from where you left off.\n
   ]]>
   </string>
   <string name="scan_result">

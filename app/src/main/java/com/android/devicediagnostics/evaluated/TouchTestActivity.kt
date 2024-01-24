@@ -51,13 +51,6 @@ class TouchTestView(context : Context, attrs: AttributeSet) :
 
   private val timeSource = TimeSource.Monotonic
   private var timer  = timeSource.markNow()
-  private var count: Int = 0
-    set(value) {
-      if (value == rows * columns) {
-        (getContext() as TouchTestActivity).reportResult(true)
-      }
-      field = value
-    }
 
   override fun onDraw(canvas: Canvas) {
     super.onDraw(canvas)
@@ -73,17 +66,14 @@ class TouchTestView(context : Context, attrs: AttributeSet) :
     if (event != null)  try{
       when (event.action) {
         MotionEvent.ACTION_DOWN -> timer = timeSource.markNow()
-        MotionEvent.ACTION_UP -> if(timeSource.markNow() - timer < 0.2.seconds)
-          (getContext() as TouchTestActivity).reportResult(false)
+        MotionEvent.ACTION_UP ->
+          if(array.all{it.all{it}})
+            (context as TouchTestActivity).reportResult(true)
+          else if(timeSource.markNow() - timer < 0.2.seconds)
+            (context as TouchTestActivity).reportResult(false)
       }
 
-      val x = (event.x / xSize).toInt()
-      val y = (event.y / ySize).toInt()
-      if (!array[x][y]) {
-        count++
-        array[x][y] = true
-      }
-
+      array[(event.x / xSize).toInt()][(event.y / ySize).toInt()] = true
       invalidate()
     } catch (e : Exception) {}
     return true
