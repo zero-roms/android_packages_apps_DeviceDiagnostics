@@ -18,12 +18,12 @@ package com.android.devicediagnostics
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.evaluated.QrCodeScanActivity
 import com.android.devicediagnostics.trusted.QrCodeDisplayActivity
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
 class MainFragment : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -43,9 +43,12 @@ class MainFragment : PreferenceFragmentCompat() {
   }
 }
 
-class MainActivity : FragmentActivity(R.layout.activity_one_fragment) {
+class MainActivity : CollapsingToolbarBaseActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_one_fragment);
+    setTitle(R.string.app_title);
+
     if (savedInstanceState == null) {
       supportFragmentManager.commit {
         setReorderingAllowed(true)
