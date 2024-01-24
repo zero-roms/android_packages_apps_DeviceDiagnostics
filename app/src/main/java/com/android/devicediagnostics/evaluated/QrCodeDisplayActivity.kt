@@ -25,9 +25,9 @@ import android.view.View
 import android.widget.ImageView
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import com.android.devicediagnostics.LayoutPreference
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
+import com.android.settingslib.widget.LayoutPreference
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
 

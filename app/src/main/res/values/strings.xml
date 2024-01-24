@@ -1,5 +1,13 @@
 <resources>
   <string name="app_name">DeviceDiagnostics</string>
+  <string name="app_title">Device Diagnostics</string>
+
+  <!-- Main preference screen -->
+  <string name="eval_title">Evaluation</string>
+  <string name="trusted_device_title">Trusted Device</string>
+  <string name="trusted_device_summary">Start by selecting this option on a trusted device</string>
+  <string name="evaluated_device_title">Evaluated Device</string>
+  <string name="evaluated_device_summary">When prompted to do so, select this option on the evaluated device</string>
 
   <string name="locked">Locked</string>
   <string name="not_locked">Not locked</string>

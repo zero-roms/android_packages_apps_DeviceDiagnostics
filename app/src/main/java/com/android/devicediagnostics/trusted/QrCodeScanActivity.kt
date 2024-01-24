@@ -34,10 +34,10 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import com.android.devicediagnostics.LayoutPreference
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.ChunkedTestStatus
 import com.android.devicediagnostics.TestStatus
+import com.android.settingslib.widget.LayoutPreference
 import com.android.settingslib.qrcode.QrCamera
 
 private const val TAG = "DeviceDiagnostics: TrustedQrCodeScanModeActivity"
