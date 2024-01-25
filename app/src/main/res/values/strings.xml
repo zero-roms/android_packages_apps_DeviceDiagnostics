@@ -20,7 +20,7 @@
   <string name="battery_title">Battery status</string>
 
   <!-- Battery screen -->
-  <string name="battery_health">Health</string>
+  <string name="battery_health_title">Health</string>
   <string name="battery_manufacturing_date">Manufacturing date</string>
   <string name="battery_first_usage_date">First usage date</string>
   <string name="battery_cycle_count">Cycle count</string>
@@ -30,6 +30,12 @@
   <string name="battery_replaced">Replaced</string>
   <string name="battery_part_history">Part History</string>
   <string name="battery_health_summary">%1$d%% of original capacity</string>
+
+  <!-- Storage screen -->
+  <string name="storage_health_title">Storage health</string>
+  <string name="storage_total_capacity_title">Total capacity</string>
+  <string name="storage_total_capacity_summary">%1$d %2$s</string>
+  <string name="storage_health_summary">%1$d%% lifetime remaining</string>
 
   <string name="locked">Locked</string>
   <string name="not_locked">Not locked</string>

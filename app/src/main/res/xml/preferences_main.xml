@@ -41,18 +41,18 @@
 
   <PreferenceCategory android:title="@string/component_title">
     <Preference
-      app:key="Storage"
-      app:title="@string/storage_title">
-      <intent
-        android:targetClass="com.android.devicediagnostics.evaluated.StorageActivity"
-        android:targetPackage="@string/package_name"/>
-    </Preference>
-
-    <Preference
         app:key="Battery"
         app:title="@string/battery_title">
       <intent
           android:targetClass="com.android.devicediagnostics.evaluated.BatteryActivity"
+          android:targetPackage="@string/package_name"/>
+    </Preference>
+
+    <Preference
+        app:key="Storage"
+        app:title="@string/storage_title">
+      <intent
+          android:targetClass="com.android.devicediagnostics.evaluated.StorageActivity"
           android:targetPackage="@string/package_name"/>
     </Preference>
   </PreferenceCategory>

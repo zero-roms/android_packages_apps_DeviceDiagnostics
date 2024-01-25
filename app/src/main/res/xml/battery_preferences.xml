@@ -3,7 +3,7 @@
   <com.android.devicediagnostics.evaluated.BatteryHealthPreference
       android:key="health"
       android:selectable="false"
-      android:title="@string/battery_health"
+      android:title="@string/battery_health_title"
       android:summary="@string/unavailable" />
 
   <PreferenceCategory
