@@ -1,0 +1,43 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <com.android.devicediagnostics.evaluated.BatteryHealthPreference
+      android:key="health"
+      android:selectable="false"
+      android:title="@string/battery_health"
+      android:summary="@string/unavailable" />
+
+  <PreferenceCategory
+      android:key="part_history"
+      android:title="@string/battery_part_history">
+
+    <Preference
+        android:key="manufacture_date"
+        android:selectable="false"
+        android:title="@string/battery_manufacturing_date"
+        android:summary="@string/unavailable" />
+
+    <Preference
+        android:key="first_usage_date"
+        android:selectable="false"
+        android:title="@string/battery_first_usage_date"
+        android:summary="@string/unavailable" />
+
+    <Preference
+        android:key="cycle_count"
+        android:selectable="false"
+        android:title="@string/battery_cycle_count"
+        android:summary="@string/unavailable" />
+
+    <Preference
+        android:key="serial_number"
+        android:selectable="false"
+        android:title="@string/battery_serial_number"
+        android:summary="@string/unavailable" />
+
+    <Preference
+        android:key="part_status"
+        android:selectable="false"
+        android:title="@string/battery_part_status"
+        android:summary="@string/unavailable" />
+  </PreferenceCategory>
+</PreferenceScreen>

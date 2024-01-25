@@ -18,12 +18,12 @@ package com.android.devicediagnostics.evaluated
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
 class TouchTestIntroFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -38,15 +38,18 @@ class TouchTestIntroFragment(private val testStatus: TestStatus) : PreferenceFra
   }
 }
 
-class TouchTestIntroActivity : FragmentActivity(R.layout.activity_one_fragment) {
+class TouchTestIntroActivity : CollapsingToolbarBaseActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_one_fragment)
+    setTitle(R.string.touch_test_title)
+
     if (savedInstanceState == null) {
       supportFragmentManager.commit {
         setReorderingAllowed(true)
         add(
           R.id.fragment_container_view,
-          TouchTestIntroFragment(TestStatus(intent!!.extras!!)))
+          TouchTestIntroFragment(TestStatus(intent)))
       }
     }
   }

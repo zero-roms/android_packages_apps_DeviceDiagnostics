@@ -18,12 +18,12 @@ package com.android.devicediagnostics.evaluated
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
 class TouchTestFinalizeFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
 
@@ -41,9 +41,12 @@ class TouchTestFinalizeFragment(private val testStatus: TestStatus) : Preference
   }
 }
 
-class TouchTestFinalizeActivity : FragmentActivity(R.layout.activity_one_fragment) {
+class TouchTestFinalizeActivity : CollapsingToolbarBaseActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_one_fragment)
+    setTitle(R.string.touch_test_title)
+
     if (savedInstanceState == null) {
       supportFragmentManager.commit {
         setReorderingAllowed(true)

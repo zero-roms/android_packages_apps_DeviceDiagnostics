@@ -10,6 +10,7 @@
   <uses-permission android:name="android.permission.VIBRATE" />
   <uses-permission android:name="android.permission.CAMERA" />
   <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+  <uses-permission android:name="android.permission.BATTERY_STATS" />
   <application
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
@@ -37,5 +38,6 @@
     <activity android:name="com.android.devicediagnostics.evaluated.TouchTestActivity" />
     <activity android:name="com.android.devicediagnostics.evaluated.TouchTestFinalizeActivity" />
     <activity android:name="com.android.devicediagnostics.evaluated.QrDisplayActivity" />
+    <activity android:name="com.android.devicediagnostics.evaluated.BatteryActivity" />
   </application>
 </manifest>

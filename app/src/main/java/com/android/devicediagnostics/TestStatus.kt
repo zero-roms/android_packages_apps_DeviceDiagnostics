@@ -36,6 +36,7 @@ private const val CHALLENGE_CRC32 = "CHALLENGE_CRC32"
 private const val ATTESTATION_CRC32 = "ATTESTATION_CRC32"
 private const val CHUNK = "CHUNK"
 private const val CHUNKS = "CHUNKS"
+private const val IN_TEST_FLOW = "IN_TEST_FLOW"
 
 private const val VERSION_NUMBER = 1
 private const val CHUNK_SIZE = 1024
@@ -47,21 +48,29 @@ open class TestStatus (
   var screenTest: Boolean = false,
   var touchTest: Boolean = false,
   var attestation: ByteArray = byteArrayOf(),
+  var inTestFlow: Boolean = false,
   ) {
-  constructor(bundle: Bundle) : this(
+  constructor(bundle: Bundle?) : this() {
+    if (bundle == null) {
+      return
+    }
     // Support string challenge so intents can be launched from am
     challenge = bundle.getByteArray(CHALLENGE) ?: bundle.getString(CHALLENGE)?.toByteArray()
-      ?: throw AssertionError("Missing challenge"),
-    screenTest = bundle.getBoolean(SCREEN_TEST),
-    touchTest = bundle.getBoolean(TOUCH_TEST),
+      ?: throw AssertionError("Missing challenge")
+    screenTest = bundle.getBoolean(SCREEN_TEST)
+    touchTest = bundle.getBoolean(TOUCH_TEST)
     attestation = bundle.getByteArray(ATTESTATION) ?: byteArrayOf()
-  )
+    inTestFlow = bundle.getBoolean(IN_TEST_FLOW)
+  }
+
+  constructor(intent: Intent?) : this(intent?.extras) {}
 
   fun write(intent: Intent) {
     intent.putExtra(CHALLENGE, challenge)
     intent.putExtra(SCREEN_TEST, screenTest)
     intent.putExtra(TOUCH_TEST, touchTest)
     intent.putExtra(ATTESTATION, attestation)
+    intent.putExtra(IN_TEST_FLOW, inTestFlow)
   }
 
   class TSException(message: String) : Exception(message) {

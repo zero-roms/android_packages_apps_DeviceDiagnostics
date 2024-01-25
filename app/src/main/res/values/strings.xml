@@ -3,12 +3,33 @@
   <string name="app_title">Device Diagnostics</string>
   <string name="package_name">com.android.devicediagnostics</string>
 
+  <string name="activity_continue">Continue</string>
+  <string name="unavailable">Unavailable</string>
+
   <!-- Main preference screen -->
-  <string name="eval_title">Evaluation</string>
+  <string name="manual_eval_title">Manual Evaluation</string>
+  <string name="screen_test_title">Display Evaluation</string>
+  <string name="touch_test_title">Touch Evaluation</string>
+  <string name="trusted_eval_title">Trusted Evaluation</string>
   <string name="trusted_device_title">Trusted Device</string>
   <string name="trusted_device_summary">Start by selecting this option on a trusted device</string>
   <string name="evaluated_device_title">Evaluated Device</string>
   <string name="evaluated_device_summary">When prompted to do so, select this option on the evaluated device</string>
+  <string name="component_title">Component Status</string>
+  <string name="storage_title">Storage status</string>
+  <string name="battery_title">Battery status</string>
+
+  <!-- Battery screen -->
+  <string name="battery_health">Health</string>
+  <string name="battery_manufacturing_date">Manufacturing date</string>
+  <string name="battery_first_usage_date">First usage date</string>
+  <string name="battery_cycle_count">Cycle count</string>
+  <string name="battery_serial_number">Serial number</string>
+  <string name="battery_part_status">Part status</string>
+  <string name="battery_original">Original</string>
+  <string name="battery_replaced">Replaced</string>
+  <string name="battery_part_history">Part History</string>
+  <string name="battery_health_summary">%1$d%% of original capacity</string>
 
   <string name="locked">Locked</string>
   <string name="not_locked">Not locked</string>

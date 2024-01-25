@@ -1,0 +1,168 @@
+/*
+ * Copyright 2024 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.android.devicediagnostics.evaluated
+
+import android.content.Context
+import android.content.Context.BATTERY_SERVICE
+import android.content.Intent
+import android.content.IntentFilter
+import android.os.BatteryManager
+import android.os.Bundle
+import android.util.AttributeSet
+import androidx.fragment.app.commit
+import androidx.preference.Preference
+import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.R
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
+import com.android.settingslib.widget.UsageProgressBarPreference
+import java.time.Instant
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
+
+private fun formatSecondsAsDate(seconds: Long): String {
+    val instant = Instant.ofEpochSecond(seconds)
+    return instant.atZone(ZoneId.systemDefault())
+            .toLocalDate()
+            .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
+}
+
+class BatteryDiagnostics {
+    var cycleCount: Int = -1
+    var manufactureDate: String? = null
+    var firstUsageDate: String? = null
+    var stateOfHealth: Int = -1
+    var serial: String? = null
+    var partStatus: String? = null
+
+    constructor(context: Context) {
+        val bm = context.getSystemService(BATTERY_SERVICE) as? BatteryManager
+        if (bm != null) {
+            try {
+                var date = bm.getLongProperty(BatteryManager.BATTERY_PROPERTY_MANUFACTURING_DATE)
+                if (date >= 0) {
+                    manufactureDate = formatSecondsAsDate(date)
+                }
+
+                date = bm.getLongProperty(BatteryManager.BATTERY_PROPERTY_FIRST_USAGE_DATE)
+                if (date >= 0) {
+                    firstUsageDate = formatSecondsAsDate(date)
+                }
+            } catch (e: Exception) {
+            }
+
+            stateOfHealth = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_STATE_OF_HEALTH)
+
+            if (android.os.Flags.batteryPartStatusApi()) {
+                val status = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_PART_STATUS)
+                if (status == BatteryManager.PART_STATUS_ORIGINAL) {
+                    partStatus = context.resources.getString(R.string.battery_original)
+                } else if (status == BatteryManager.PART_STATUS_REPLACED) {
+                    partStatus = context.resources.getString(R.string.battery_replaced)
+                }
+
+                serial = bm.getStringProperty(BatteryManager.BATTERY_PROPERTY_SERIAL_NUMBER)
+            }
+        }
+
+        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+        val batteryStatus = context.registerReceiver(null, filter)
+        if (batteryStatus != null) {
+            cycleCount = batteryStatus.getIntExtra("android.os.extra.CYCLE_COUNT", -1)
+        }
+    }
+}
+
+class BatteryFragment(private var diagnostics: BatteryDiagnostics) : PreferenceFragmentCompat() {
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.battery_preferences, rootKey)
+
+        findPreference<BatteryHealthPreference>("health")!!.also {
+            if (diagnostics.stateOfHealth != -1) {
+                it.setPercent(diagnostics.stateOfHealth.toLong(), 100)
+                it.setBottomSummary(getString(R.string.battery_health_summary,
+                    diagnostics.stateOfHealth))
+            } else {
+                it.isVisible = false
+            }
+        }
+
+        findPreference<Preference>("manufacture_date")!!.also {
+            if (diagnostics.manufactureDate != null) {
+                it.summary = diagnostics.manufactureDate
+            }
+        }
+
+        findPreference<Preference>("first_usage_date")!!.also {
+            if (diagnostics.firstUsageDate != null) {
+                it.summary = diagnostics.firstUsageDate
+            }
+        }
+
+        findPreference<Preference>("cycle_count")!!.also {
+            if (diagnostics.cycleCount != -1) {
+                it.summary = diagnostics.cycleCount.toString()
+            }
+        }
+
+        findPreference<Preference>("serial_number")!!.also {
+            if (diagnostics.serial != null) {
+                it.summary = diagnostics.serial
+            }
+        }
+
+        findPreference<Preference>("serial_number")!!.also {
+            if (diagnostics.serial != null) {
+                it.summary = diagnostics.serial
+            }
+        }
+    }
+}
+
+class BatteryActivity : CollapsingToolbarBaseActivity() {
+    lateinit var diagnostics: BatteryDiagnostics
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_one_fragment)
+        setTitle(R.string.battery_title)
+
+        diagnostics = BatteryDiagnostics(this)
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add(R.id.fragment_container_view, BatteryFragment(diagnostics))
+            }
+        }
+    }
+}
+
+class BatteryHealthPreference(context: Context, attrs: AttributeSet) :
+    UsageProgressBarPreference(context, attrs) {
+
+    fun constructor() {}
+
+    val diagnostics: BatteryDiagnostics
+        get() = (context as BatteryActivity).diagnostics
+
+    override fun getSummary(): CharSequence? {
+        if (diagnostics.stateOfHealth == -1) {
+            return "Unavailable"
+        }
+        return diagnostics.stateOfHealth.toString() + "%"
+    }
+}
