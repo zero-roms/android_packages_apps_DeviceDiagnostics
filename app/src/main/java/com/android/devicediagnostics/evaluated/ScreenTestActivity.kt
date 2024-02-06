@@ -63,6 +63,7 @@ class ScreenTestActivity : Activity() {
         State.BLUE -> Intent(this, ScreenTestFinalizeActivity::class.java).also {
           TestStatus(intent!!.extras!!).write(it)
           startActivity(it)
+          finish()
         }
       }
     }

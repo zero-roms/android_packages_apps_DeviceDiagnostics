@@ -34,7 +34,9 @@
     <activity android:name="com.android.devicediagnostics.evaluated.QrCodeScanActivity" />
     <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestIntroActivity" />
     <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestActivity"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        android:noHistory="true"
+        android:excludeFromRecents="true" />
     <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestFinalizeActivity" />
     <activity android:name="com.android.devicediagnostics.evaluated.TouchTestIntroActivity" />
     <activity android:name="com.android.devicediagnostics.evaluated.TouchTestActivity" />
