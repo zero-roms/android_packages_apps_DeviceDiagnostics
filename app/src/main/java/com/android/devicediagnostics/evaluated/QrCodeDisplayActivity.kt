@@ -16,17 +16,20 @@
 
 package com.android.devicediagnostics.evaluated
 
+import android.bluetooth.BluetoothDevice
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import android.graphics.Bitmap
 import android.graphics.Color
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
+import com.android.devicediagnostics.bluetooth.SendMessage
 import com.android.settingslib.widget.LayoutPreference
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
@@ -39,6 +42,19 @@ class QrDisplayFragment(private var testStatus: TestStatus) : PreferenceFragment
   private lateinit var mNextPreference: Preference
   private lateinit var mPreviousPreference: Preference
   private lateinit var mProgressPreference: Preference
+
+  private val address = testStatus.address
+
+  init {
+    testStatus.address = ""
+  }
+
+  private val sendMessage = object : SendMessage() {
+    override fun foundDevice(device: BluetoothDevice) {
+      if (device.address.equals(address))
+        setDevice(device)
+    }
+  }
 
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.preferences_evaluated_qr_display, rootKey)
@@ -75,6 +91,9 @@ class QrDisplayFragment(private var testStatus: TestStatus) : PreferenceFragment
     Thread {
       testStatus.attestation = getAttestation(testStatus.challenge)
       requireActivity().runOnUiThread() {
+        sendMessage.send(testStatus.toString(putAttestation = true),
+                         this, requireActivity().application)
+
         if (testStatus.chunks > 1) {
           mNextPreference.isVisible = true
           mPreviousPreference.isVisible = true
@@ -103,6 +122,11 @@ class QrDisplayFragment(private var testStatus: TestStatus) : PreferenceFragment
         mProgressPreference.title = "$mChunk/${testStatus.chunks}"
       }
     }.start()
+  }
+
+  override fun onStop() {
+    super.onStop()
+    sendMessage.stop()
   }
 }
 

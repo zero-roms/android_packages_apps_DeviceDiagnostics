@@ -24,6 +24,7 @@ import android.graphics.SurfaceTexture
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
+import android.util.Log
 import android.util.Size
 import android.view.TextureView
 import android.view.View
@@ -36,9 +37,11 @@ import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestSequenceId
 import com.android.devicediagnostics.TestStatus
+import com.android.devicediagnostics.bluetooth.ReceiveMessage
 import com.android.settingslib.qrcode.QrCamera
 import com.android.settingslib.widget.LayoutPreference
 
+private const val TAG = "evaluated/QrCodeScan"
 class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
                                   PreferenceFragmentCompat() {
   private var mListener = listener
@@ -69,21 +72,46 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
   private var mFragment = QrCodeScanFragment(this)
   private var mCamera = QrCamera(this, this)
   private var testStatus: TestStatus = TestStatus()
-  private val mRequestPermission =
-      registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
-        if (isGranted) {
-          supportFragmentManager.commit {
-            setReorderingAllowed(true)
-            add(R.id.fragment_container_view, mFragment)
+
+  private val receiveMessage = ReceiveMessage()
+  private val mRequestPermissions =
+    registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
+      if (permissions.entries.all { it.value }) {
+        supportFragmentManager.commit {
+          setReorderingAllowed(true)
+          add(R.id.fragment_container_view, mFragment)
+        }
+        receiveMessage.receive(this, application) {
+          try {
+            Log.d(TAG, "Testing $it")
+            testStatus = TestStatus(it, getAttestation = false)
+            testStatus.address = receiveMessage.address
+            Log.d(TAG, "Got address ${testStatus.address}")
+            runOnUiThread { handleSuccessfulResult("") }
+            true
+          } catch (e: Exception) {
+            Log.d(TAG, "Failed ${e.message}")
+            false
           }
         }
       }
+    }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     if (savedInstanceState == null) {
-      mRequestPermission.launch(Manifest.permission.CAMERA)
+      mRequestPermissions.launch(arrayOf(
+        Manifest.permission.CAMERA,
+        Manifest.permission.BLUETOOTH_ADVERTISE,
+        Manifest.permission.BLUETOOTH_CONNECT,
+        Manifest.permission.BLUETOOTH_SCAN
+      ))
     }
+  }
+
+  override fun onStop() {
+    super.onStop()
+    receiveMessage.stop()
   }
 
   override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {

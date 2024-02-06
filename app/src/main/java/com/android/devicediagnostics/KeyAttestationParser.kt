@@ -72,6 +72,7 @@ fun getAttestation(attestation: ByteArray): ParsedAttestationRecord {
     if (inflatedBytes == 0) break
     inflated += inflatedChunk.take(inflatedBytes).toByteArray()
   }
+  inflater.end()
 
   val certs = loadCertificates(inflated)
   verifyCertificateChain(certs)

@@ -41,6 +41,8 @@ private const val ATTESTATION_CRC32 = "ATTESTATION_CRC32"
 private const val CHUNK = "CHUNK"
 private const val CHUNKS = "CHUNKS"
 private const val TEST_SEQUENCE = "TEST_SEQUENCE"
+private const val IN_TEST_FLOW = "IN_TEST_FLOW"
+private const val ADDRESS = "ADDRESS"
 
 private const val VERSION_NUMBER = 1
 private const val CHUNK_SIZE = 1024
@@ -65,6 +67,8 @@ open class TestStatus (
   var touchTest: Boolean = false,
   var attestation: ByteArray = byteArrayOf(),
   var sequence: TestSequenceId = TestSequenceId.ONE_SHOT,
+  var inTestFlow: Boolean = false,
+  var address: String = ""
   ) {
   constructor(bundle: Bundle?) : this() {
     if (bundle == null) {
@@ -77,6 +81,8 @@ open class TestStatus (
     touchTest = bundle.getBoolean(TOUCH_TEST)
     attestation = bundle.getByteArray(ATTESTATION) ?: byteArrayOf()
     sequence = TestSequenceId.fromInt(bundle.getInt(TEST_SEQUENCE))
+    inTestFlow = bundle.getBoolean(IN_TEST_FLOW)
+    address = bundle.getString(ADDRESS) ?: ""
   }
 
   constructor(intent: Intent?) : this(intent?.extras) {}
@@ -91,13 +97,11 @@ open class TestStatus (
     intent.putExtra(TOUCH_TEST, touchTest)
     intent.putExtra(ATTESTATION, attestation)
     intent.putExtra(TEST_SEQUENCE, sequence.value)
+    intent.putExtra(IN_TEST_FLOW, inTestFlow)
+    intent.putExtra(ADDRESS, address)
   }
 
-  class TSException(message: String) : Exception(message) {
-    init {
-      Log.d(TAG, message)
-    }
-  }
+  class TSException(message: String) : Exception(message)
 
   constructor(string: String?, getAttestation: Boolean = true) : this() {
     if (string == null) throw TSException("Empty QR code")
@@ -128,7 +132,8 @@ open class TestStatus (
 
     json.put(SCREEN_TEST, screenTest)
     json.put(TOUCH_TEST, touchTest)
-    if (putAttestation) {
+    json.put(ADDRESS, address)
+    if (putAttestation && chunk != 0) {
       var topOfSlice = chunk * chunkSize - 1
       if (topOfSlice >= attestation.size) topOfSlice = attestation.size - 1
       val slice = attestation.slice((chunk - 1) * chunkSize..topOfSlice).toByteArray()
@@ -140,6 +145,15 @@ open class TestStatus (
       json.put(ATTESTATION_CRC32, crc.value)
       json.put(CHUNK, chunk)
       json.put(CHUNKS, chunks)
+    } else if (putAttestation) {
+      val code = Base64.encodeToString(attestation, 0)
+      crc.reset()
+      crc.update(attestation)
+
+      json.put(ATTESTATION, code)
+      json.put(ATTESTATION_CRC32, crc.value)
+      json.put(CHUNK, 1)
+      json.put(CHUNKS, 1)
     }
 
     return json.toString()
@@ -203,10 +217,12 @@ class ChunkedTestStatus(bundle: Bundle) : TestStatus(bundle) {
       if (chunk == 1) {
         screenTest = testStatus.screenTest
         touchTest = testStatus.touchTest
+        address = testStatus.address
         chunks = json.getInt(CHUNKS)
       } else {
         if (screenTest != testStatus.screenTest) throw TSException("Inconsistent screen condition")
         if (touchTest != testStatus.touchTest) throw TSException("Inconsistent touch condition")
+        if (address != testStatus.address) throw TSException("Inconsistent address")
         if (chunks != json.getInt(CHUNKS)) throw TSException("Inconsistent chunk count")
       }
 

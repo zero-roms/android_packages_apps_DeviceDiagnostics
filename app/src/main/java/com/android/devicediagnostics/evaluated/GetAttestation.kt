@@ -66,6 +66,7 @@ private fun getAttestation(challenge: ByteArray, withImei: Boolean) : ByteArray 
     if (deflatedBytes == 0) break
     deflated += deflatedChunk.take(deflatedBytes).toByteArray()
   }
+  deflater.end()
 
   return deflated
 }

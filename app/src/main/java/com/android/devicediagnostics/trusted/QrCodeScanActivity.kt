@@ -37,10 +37,9 @@ import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.ChunkedTestStatus
 import com.android.devicediagnostics.TestStatus
+import com.android.devicediagnostics.bluetooth.ReceiveMessage
 import com.android.settingslib.widget.LayoutPreference
 import com.android.settingslib.qrcode.QrCamera
-
-private const val TAG = "DeviceDiagnostics: TrustedQrCodeScanModeActivity"
 
 class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
   PreferenceFragmentCompat() {
@@ -78,21 +77,44 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
                            QrCamera.ScannerCallback {
   private var mFragment = QrCodeScanFragment(this)
   private var mCamera = QrCamera(this, this)
-  private lateinit var testStatus: ChunkedTestStatus
-  private val requestPermission =
-    registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
-      if (isGranted) {
+  private lateinit var testStatus: TestStatus
+  private val chunkedTestStatus: ChunkedTestStatus
+    get() { return testStatus as ChunkedTestStatus }
+
+  private val receiveMessage = ReceiveMessage()
+  private val requestPermissions =
+    registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
+      if (it.entries.all { entry -> entry.value }) {
         supportFragmentManager.commit {
           setReorderingAllowed(true)
           add(R.id.fragment_container_view, mFragment)
         }
+        receiveMessage.receive(this, application) {
+            try {
+              testStatus = TestStatus(it)
+              runOnUiThread { handleSuccessfulResult("") }
+              true
+            } catch (e: Exception) {
+              false
+            }
+          }
       }
     }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    requestPermission.launch(Manifest.permission.CAMERA)
+    requestPermissions.launch(arrayOf(
+      Manifest.permission.CAMERA,
+      Manifest.permission.BLUETOOTH_ADVERTISE,
+      Manifest.permission.BLUETOOTH_CONNECT,
+      Manifest.permission.BLUETOOTH_SCAN
+    ))
     testStatus = ChunkedTestStatus(intent!!.extras!!)
+  }
+
+  override fun onStop() {
+    super.onStop()
+    receiveMessage.stop()
   }
 
   override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
@@ -126,7 +148,7 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
 
   override fun isValid(qrCode: String?): Boolean {
     try {
-      val complete = testStatus.readChunk(qrCode)
+      val complete = chunkedTestStatus.readChunk(qrCode)
 
       // The chunk is valid. Buzz the user
       runOnUiThread {
@@ -142,7 +164,7 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
       // This is not the last chunk, so we say it's invalid and we'll keep getting new ones
       runOnUiThread {
         mFragment.progressPreference.title = resources.getString(R.string.scan_qr_code) +
-          " ${testStatus.chunk}/${testStatus.chunks}"
+          " ${chunkedTestStatus.chunk}/${testStatus.chunks}"
       }
       return false
     } catch(ex: TestStatus.TSException) {
