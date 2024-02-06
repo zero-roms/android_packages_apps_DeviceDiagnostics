@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <Preference
+      app:key="trusted_device"
+      app:title="@string/trusted_device_title">
+    <intent
+        android:targetClass="com.android.devicediagnostics.trusted.QrCodeDisplayActivity"
+        android:targetPackage="@string/package_name" />
+  </Preference>
+
+  <Preference
+      app:key="evaluation_mode"
+      app:title="@string/evaluated_device_title">
+    <intent
+        android:targetClass="com.android.devicediagnostics.evaluated.QrCodeScanActivity"
+        android:targetPackage="@string/package_name" />
+  </Preference>
+</PreferenceScreen>

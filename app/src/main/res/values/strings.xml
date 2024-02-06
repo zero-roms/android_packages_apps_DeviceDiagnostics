@@ -6,18 +6,24 @@
   <string name="activity_continue">Continue</string>
   <string name="unavailable">Unavailable</string>
 
-  <!-- Main preference screen -->
-  <string name="manual_eval_title">Manual Evaluation</string>
-  <string name="screen_test_title">Display Evaluation</string>
-  <string name="touch_test_title">Touch Evaluation</string>
+  <!-- Main activity -->
+  <string name="component_health_title">Component health</string>
+  <string name="evaluation_mode_title">Evaluation mode</string>
+
+  <!-- Diagnostics landing -->
+  <string name="manual_eval_title">Manual tests</string>
+  <string name="screen_test_title">Display test</string>
+  <string name="touch_test_title">Touch test</string>
+  <string name="component_title">Component status</string>
+  <string name="storage_title">Storage status</string>
+  <string name="battery_title">Battery status</string>
+
+  <!-- Evaluation mode -->
   <string name="trusted_eval_title">Trusted Evaluation</string>
   <string name="trusted_device_title">Trusted Device</string>
   <string name="trusted_device_summary">Start by selecting this option on a trusted device</string>
   <string name="evaluated_device_title">Evaluated Device</string>
   <string name="evaluated_device_summary">When prompted to do so, select this option on the evaluated device</string>
-  <string name="component_title">Component Status</string>
-  <string name="storage_title">Storage status</string>
-  <string name="battery_title">Battery status</string>
 
   <!-- Battery screen -->
   <string name="battery_health_title">Health</string>

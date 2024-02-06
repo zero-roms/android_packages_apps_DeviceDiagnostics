@@ -25,6 +25,8 @@
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
+    <activity android:name="com.android.devicediagnostics.DiagnosticsActivity" />
+    <activity android:name="com.android.devicediagnostics.EvaluationModeActivity" />
     <activity android:name="com.android.devicediagnostics.trusted.QrCodeDisplayActivity" />
     <activity android:name="com.android.devicediagnostics.trusted.QrCodeScanActivity" />
     <activity android:name="com.android.devicediagnostics.trusted.DisplayResultActivity" />

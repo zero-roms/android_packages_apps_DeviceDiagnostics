@@ -117,7 +117,7 @@ class StorageHealthPreference(context: Context, attrs: AttributeSet) :
 
     override fun getSummary(): CharSequence? {
         if (diagnostics.lifetime == -1) {
-            return "Unavailable"
+            return context.getString(R.string.unavailable)
         }
         return diagnostics.lifetime.toString() + "%"
     }

@@ -161,7 +161,7 @@ class BatteryHealthPreference(context: Context, attrs: AttributeSet) :
 
     override fun getSummary(): CharSequence? {
         if (diagnostics.stateOfHealth == -1) {
-            return "Unavailable"
+            return context.getString(R.string.unavailable)
         }
         return diagnostics.stateOfHealth.toString() + "%"
     }
