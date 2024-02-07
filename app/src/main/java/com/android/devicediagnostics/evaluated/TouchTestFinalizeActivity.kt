@@ -30,10 +30,7 @@ class TouchTestFinalizeFragment(private val testStatus: TestStatus) : Preference
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.preferences_evaluated_touch_test_finalize, rootKey)
     findPreference<Preference>("Continue")?.setOnPreferenceClickListener {
-      Intent(activity, QrDisplayActivity::class.java).also {
-        testStatus.write(it)
-        startActivity(it)
-      }
+      testStatus.nextTestActivity(activity!!)
       true
     }
 

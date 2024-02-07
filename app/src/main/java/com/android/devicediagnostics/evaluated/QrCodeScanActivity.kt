@@ -17,7 +17,6 @@
 package com.android.devicediagnostics.evaluated
 
 import android.Manifest
-import android.content.Intent
 import android.graphics.Matrix
 import android.graphics.Outline
 import android.graphics.Rect
@@ -35,6 +34,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
+import com.android.devicediagnostics.TestSequenceId
 import com.android.devicediagnostics.TestStatus
 import com.android.settingslib.qrcode.QrCamera
 import com.android.settingslib.widget.LayoutPreference
@@ -135,10 +135,7 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
   }
 
   override fun handleSuccessfulResult(qrCode: String?) {
-    Intent(this, ScreenTestIntroActivity::class.java).also {
-      testStatus.inTestFlow = true
-      testStatus.write(it)
-      startActivity(it)
-    }
+    testStatus.sequence = TestSequenceId.START
+    testStatus.nextTestActivity(this)
   }
 }

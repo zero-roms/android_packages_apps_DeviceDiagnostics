@@ -16,7 +16,6 @@
 
 package com.android.devicediagnostics.evaluated
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.commit
 import androidx.preference.Preference
@@ -40,10 +39,7 @@ class ScreenTestFinalizeFragment(private var testStatus: TestStatus) : Preferenc
 
   private fun nextActivity(screenTestResult: Boolean) {
     testStatus.screenTest = screenTestResult
-    Intent(activity, TouchTestIntroActivity::class.java).also {
-      testStatus.write(it)
-      startActivity(it)
-    }
+    testStatus.nextTestActivity(activity!!)
   }
 }
 

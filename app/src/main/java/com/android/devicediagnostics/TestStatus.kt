@@ -16,10 +16,14 @@
 
 package com.android.devicediagnostics
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Base64
 import android.util.Log
+import com.android.devicediagnostics.evaluated.ScreenTestIntroActivity
+import com.android.devicediagnostics.evaluated.TouchTestIntroActivity
+import com.android.devicediagnostics.evaluated.QrDisplayActivity
 import java.util.zip.CRC32
 import org.json.JSONException
 import org.json.JSONObject
@@ -36,19 +40,31 @@ private const val CHALLENGE_CRC32 = "CHALLENGE_CRC32"
 private const val ATTESTATION_CRC32 = "ATTESTATION_CRC32"
 private const val CHUNK = "CHUNK"
 private const val CHUNKS = "CHUNKS"
-private const val IN_TEST_FLOW = "IN_TEST_FLOW"
+private const val TEST_SEQUENCE = "TEST_SEQUENCE"
 
 private const val VERSION_NUMBER = 1
 private const val CHUNK_SIZE = 1024
 
 private const val TAG = "TestStatus"
 
+enum class TestSequenceId(val value: Int) {
+  ONE_SHOT(-1),
+  START(0),
+  SCREEN_TEST(1),
+  TOUCH_TEST(2),
+  FINISHED(3);
+
+  companion object {
+    fun fromInt(value: Int) = TestSequenceId.values().first { it.value == value }
+  }
+}
+
 open class TestStatus (
   var challenge: ByteArray = byteArrayOf(),
   var screenTest: Boolean = false,
   var touchTest: Boolean = false,
   var attestation: ByteArray = byteArrayOf(),
-  var inTestFlow: Boolean = false,
+  var sequence: TestSequenceId = TestSequenceId.ONE_SHOT,
   ) {
   constructor(bundle: Bundle?) : this() {
     if (bundle == null) {
@@ -60,17 +76,21 @@ open class TestStatus (
     screenTest = bundle.getBoolean(SCREEN_TEST)
     touchTest = bundle.getBoolean(TOUCH_TEST)
     attestation = bundle.getByteArray(ATTESTATION) ?: byteArrayOf()
-    inTestFlow = bundle.getBoolean(IN_TEST_FLOW)
+    sequence = TestSequenceId.fromInt(bundle.getInt(TEST_SEQUENCE))
   }
 
   constructor(intent: Intent?) : this(intent?.extras) {}
+
+  fun clone(): TestStatus {
+    return TestStatus(challenge, screenTest, touchTest, attestation, sequence)
+  }
 
   fun write(intent: Intent) {
     intent.putExtra(CHALLENGE, challenge)
     intent.putExtra(SCREEN_TEST, screenTest)
     intent.putExtra(TOUCH_TEST, touchTest)
     intent.putExtra(ATTESTATION, attestation)
-    intent.putExtra(IN_TEST_FLOW, inTestFlow)
+    intent.putExtra(TEST_SEQUENCE, sequence.value)
   }
 
   class TSException(message: String) : Exception(message) {
@@ -123,6 +143,33 @@ open class TestStatus (
     }
 
     return json.toString()
+  }
+
+  fun nextTestActivity(activity: Activity) {
+    if (sequence == TestSequenceId.ONE_SHOT) {
+      Intent(activity, DiagnosticsActivity::class.java).also {
+        it.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.startActivity(it)
+        activity.finish()
+      }
+      return
+    }
+
+    val nextStatus = clone()
+    nextStatus.sequence = TestSequenceId.fromInt(sequence.value + 1)
+
+    val nextActivityClass =
+      when (nextStatus.sequence) {
+        TestSequenceId.SCREEN_TEST -> ScreenTestIntroActivity::class.java.name
+        TestSequenceId.TOUCH_TEST -> TouchTestIntroActivity::class.java.name
+        TestSequenceId.FINISHED -> QrDisplayActivity::class.java.name
+        else -> null
+      }
+
+    val intent = Intent()
+    intent.setClassName(activity, nextActivityClass!!)
+    nextStatus.write(intent)
+    activity.startActivity(intent)
   }
 
   open val chunks: Int
