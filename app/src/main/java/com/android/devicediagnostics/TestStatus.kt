@@ -177,6 +177,8 @@ open class TestStatus (
 
   private val chunkSize: Int
     get() = (attestation.size + chunks - 1) / chunks
+
+  val oneShot get() = (sequence == TestSequenceId.ONE_SHOT)
 }
 
 class ChunkedTestStatus(bundle: Bundle) : TestStatus(bundle) {

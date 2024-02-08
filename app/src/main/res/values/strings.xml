@@ -58,9 +58,16 @@ Follow the prompts on that device.
   <string name="screen_test_summary">
     <![CDATA[
 You will now be shown a series of screens.
-Study each on and look for defects.
+Study each one and look for defects.
 Once you are satisfied, touch the screen to move to the next one.
 At the end, you will be asked if the screens look unblemished.
+  ]]>
+  </string>
+  <string name="screen_test_summary_one_shot">
+    <![CDATA[
+You will now be shown a series of screens.
+Study each one and look for defects.
+Touch the screen to move to the next one.
   ]]>
   </string>
   <string name="screen_test_finalize">

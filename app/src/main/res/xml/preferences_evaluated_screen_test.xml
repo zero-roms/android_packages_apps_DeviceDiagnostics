@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
   <Preference
-      app:key="Trusted"
+      app:key="title"
       app:title="@string/screen_test_title"
       app:selectable="false"
       app:summary="@string/screen_test_summary"/>

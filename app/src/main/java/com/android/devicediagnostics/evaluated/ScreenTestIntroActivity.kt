@@ -28,12 +28,19 @@ import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 class ScreenTestIntroFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.preferences_evaluated_screen_test, rootKey)
-    findPreference<Preference>("continue")?.setOnPreferenceClickListener{
-      Intent(activity, ScreenTestActivity::class.java).also {
-        testStatus.write(it)
-        startActivity(it)
+    findPreference<Preference>("title")!!.also {
+      if (testStatus.oneShot) {
+        it.setSummary(R.string.screen_test_summary_one_shot)
       }
-      true
+    }
+    findPreference<Preference>("continue")!!.also {
+      it.setOnPreferenceClickListener{
+        Intent(activity, ScreenTestActivity::class.java).also {
+          testStatus.write(it)
+          startActivity(it)
+        }
+        true
+      }
     }
   }
 }

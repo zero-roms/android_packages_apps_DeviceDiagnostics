@@ -60,10 +60,18 @@ class ScreenTestActivity : Activity() {
         State.RED -> state = State.GREEN
         State.GREEN -> state = State.BLUE
 
-        State.BLUE -> Intent(this, ScreenTestFinalizeActivity::class.java).also {
-          TestStatus(intent!!.extras!!).write(it)
-          startActivity(it)
-          finish()
+        State.BLUE -> {
+          val status = TestStatus(intent!!.extras!!)
+          if (status.oneShot) {
+            // Return to the component health screen.
+            status.nextTestActivity(this)
+          } else {
+            Intent(this, ScreenTestFinalizeActivity::class.java).also {
+              TestStatus(intent!!.extras!!).write(it)
+              startActivity(it)
+              finish()
+            }
+          }
         }
       }
     }
