@@ -1,54 +1,54 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
   <Preference
       app:key="imei"
-      app:title="IMEI"
+      app:title="@string/imei_title"
       app:selectable="false"
       app:isPreferenceVisible="false" />
 
   <Preference
       app:key="imei2"
-      app:title="Second IMEI"
+      app:title="@string/imei2_title"
       app:selectable="false"
       app:isPreferenceVisible="false" />
 
   <Preference
       app:key="serial"
-      app:title="Serial Number"
+      app:title="@string/serial_number_title"
       app:selectable="false"
       app:isPreferenceVisible="false" />
 
   <Preference
       app:key="locked"
-      app:title="Device locked"
+      app:title="@string/bootloader_locked_title"
       app:selectable="false"
       app:isPreferenceVisible="false" />
 
   <Preference
       app:key="trustworthy"
-      app:title="Device trustworthy"
+      app:title="@string/trustworthy_title"
       app:selectable="false"
       app:isPreferenceVisible="false" />
 
   <Preference
       app:key="screen"
-      app:title="Screen status"
+      app:title="@string/display_status_title"
       app:selectable="false" />
 
   <Preference
       app:key="touch"
-      app:title="Touch sensor status"
+      app:title="@string/touch_sensor_status_title"
       app:selectable="false" />
 
   <Preference
       app:key="attestation_details"
       app:isPreferenceVisible="false"
-      app:title="Attestation details ..." />
+      app:title="@string/attestation_details_title" />
 
   <Preference
       app:key="failure"
       app:isPreferenceVisible="false"
       app:selectable="false"
-      app:title="Attestation failure" />
+      app:title="@string/attestation_failure_title" />
 
   <Preference
       app:key="done"

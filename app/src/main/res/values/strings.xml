@@ -43,6 +43,16 @@
   <string name="storage_total_capacity_summary">%1$d %2$s</string>
   <string name="storage_health_summary">%1$d%% lifetime remaining</string>
 
+  <!-- Trusted result display -->
+  <string name="imei_title">IMEI</string>
+  <string name="imei2_title">Second IMEI</string>
+  <string name="serial_number_title">Serial number</string>
+  <string name="bootloader_locked_title">Bootloader locked</string>
+  <string name="trustworthy_title">Device trustworthy</string>
+  <string name="display_status_title">Display status</string>
+  <string name="touch_sensor_status_title">Touch sensor status</string>
+  <string name="attestation_details_title">Attestation details</string>
+  <string name="attestation_failure_title">Attestation failure</string>
   <string name="locked">Locked</string>
   <string name="not_locked">Not locked</string>
   <string name="attestation_challenge_does_not_match">"Attestation challenge does not match!"</string>
