@@ -26,6 +26,8 @@ import com.android.devicediagnostics.TestStatus
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
 class TouchTestIntroFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
+  fun constructor() {}
+
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.preferences_evaluated_touch_test, rootKey)
     findPreference<Preference>("continue")?.setOnPreferenceClickListener{
