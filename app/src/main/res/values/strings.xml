@@ -52,10 +52,15 @@
   <string name="display_status_title">Display status</string>
   <string name="touch_sensor_status_title">Touch sensor status</string>
   <string name="attestation_details_title">Attestation details</string>
-  <string name="attestation_failure_title">Attestation failure</string>
+  <string name="attestation_local_failure_title">Attestation failed</string>
+  <string name="attestation_remote_failure_title">Retry attestation</string>
+  <string name="attestation_remote_failure_summary">Failed to verify attestation, check your connection and try again.</string>
+  <string name="evaluate_mode_next_action_title">Next steps</string>
+  <string name="evaluate_another_title">Evaluate another device</string>
+  <string name="back_to_main_title">Back to main menu</string>
   <string name="locked">Locked</string>
   <string name="not_locked">Not locked</string>
-  <string name="attestation_challenge_does_not_match">"Attestation challenge does not match!"</string>
+  <string name="attestation_challenge_does_not_match">"Attestation challenge does not match"</string>
   <string name="scan_qr_code">Scan QR code</string>
   <string name="qr_code_description">QR Code</string>
   <string name="scan_now">

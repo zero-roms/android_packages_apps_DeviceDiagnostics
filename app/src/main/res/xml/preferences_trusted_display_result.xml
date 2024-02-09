@@ -45,13 +45,30 @@
       app:title="@string/attestation_details_title" />
 
   <Preference
-      app:key="failure"
+      app:key="non_retry_failure"
       app:isPreferenceVisible="false"
       app:selectable="false"
-      app:title="@string/attestation_failure_title" />
+      app:title="@string/attestation_local_failure_title"
+      app:summary="@string/attestation_challenge_does_not_match"/>
 
   <Preference
-      app:key="done"
-      app:title="Done" />
+      app:key="retry_failure"
+      app:isPreferenceVisible="false"
+      app:selectable="true"
+      app:title="@string/attestation_remote_failure_title"
+      app:summary="@string/attestation_remote_failure_summary"/>
+
+  <PreferenceCategory
+      app:key="actions"
+      app:title="@string/evaluate_mode_next_action_title">
+
+    <Preference
+        app:key="evaluate_another"
+        app:title="@string/evaluate_another_title" />
+
+    <Preference
+        app:key="done"
+        app:title="@string/back_to_main_title" />
+  </PreferenceCategory>
 
 </PreferenceScreen>

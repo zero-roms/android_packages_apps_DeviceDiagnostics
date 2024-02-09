@@ -23,6 +23,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.MainActivity
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.getAttestation
@@ -39,13 +40,33 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
     findPreference<Preference>("screen")?.summary = if(testStatus.screenTest) "Good" else "Bad"
     findPreference<Preference>("touch")?.summary = if(testStatus.touchTest) "Good" else "Bad"
 
-    findPreference<Preference>("done")?.setOnPreferenceClickListener{
-      Intent(activity, QrCodeDisplayActivity::class.java).also {
-        requireActivity().finishAffinity()
-      }
+    findPreference<Preference>("evaluate_another")?.setOnPreferenceClickListener{
+      val intent = Intent(activity, QrCodeDisplayActivity::class.java)
+      intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+      activity!!.startActivity(intent)
+      activity!!.finish()
       true
     }
 
+    findPreference<Preference>("done")?.setOnPreferenceClickListener{
+      val intent = Intent(activity, MainActivity::class.java)
+      intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+      activity!!.startActivity(intent)
+      activity!!.finish()
+      true
+    }
+
+    findPreference<Preference>("retry_failure")?.also {
+      it.setOnPreferenceClickListener {
+        verifyAttestation()
+        true
+      }
+    }
+
+    verifyAttestation()
+  }
+
+  private fun verifyAttestation() {
     Thread {
       var attestationRecord: ParsedAttestationRecord? = null
       try {
@@ -64,8 +85,12 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
   }
 
   private fun onAttestationReceived(attestationRecord: ParsedAttestationRecord) {
+    findPreference<Preference>("retry_failure")?.also {
+      it.isVisible = false
+    }
+
     if (!attestationRecord.attestationChallenge.contentEquals(testStatus.challenge)) {
-      findPreference<Preference>("failure")?.also {
+      findPreference<Preference>("non_retry_failure")?.also {
         it.summary = resources.getString(R.string.attestation_challenge_does_not_match) +
                 "\n" + attestationRecord.attestationChallenge.toString(Charsets.UTF_8) +
                 "\n" + testStatus.challenge.toString(Charsets.UTF_8)
@@ -121,7 +146,6 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
 
   private fun onAttestationError() {
     findPreference<Preference>("failure")?.also {
-      it.summary = "Failed to get attestation"
       it.isVisible = true
     }
   }
