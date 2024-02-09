@@ -18,6 +18,7 @@ package com.android.devicediagnostics.trusted
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
@@ -25,9 +26,11 @@ import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.getAttestation
+import com.google.android.attestation.ParsedAttestationRecord
 import java.io.IOException
 
 const val ATTESTATION = "ATTESTATION"
+private const val TAG = "DisplayResultActivity"
 
 class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFragmentCompat() {
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -44,69 +47,83 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
     }
 
     Thread {
+      var attestationRecord: ParsedAttestationRecord? = null
       try {
-        val attestationRecord = getAttestation(testStatus.attestation)
-        if (attestationRecord.attestationChallenge contentEquals testStatus.challenge) {
-          requireActivity().runOnUiThread {
-            findPreference<Preference>("imei")?.also {
-              if (attestationRecord.teeEnforced.attestationIdImei.isPresent) {
-                it.summary =
-                  attestationRecord.teeEnforced.attestationIdImei.get().toString(Charsets.UTF_8)
-                it.isVisible = true
-              }
-            }
-
-            findPreference<Preference>("imei2")?.also {
-              if (attestationRecord.teeEnforced.attestationIdSecondImei.isPresent) {
-                it.summary =
-                  attestationRecord.teeEnforced.attestationIdSecondImei.get().toString(Charsets.UTF_8)
-                it.isVisible = true
-              }
-            }
-
-            findPreference<Preference>("serial")?.also {
-              if (attestationRecord.teeEnforced.attestationIdSerial.isPresent) {
-                it.summary =
-                  attestationRecord.teeEnforced.attestationIdSerial.get().toString(Charsets.UTF_8)
-                it.isVisible = true
-              }
-            }
-
-            findPreference<Preference>("locked")?.also {
-              it.summary = if (attestationRecord.teeEnforced.rootOfTrust.get().deviceLocked)
-                resources.getString(R.string.locked)
-              else
-                resources.getString(R.string.not_locked)
-              it.isVisible = true
-            }
-            findPreference<Preference>("trustworthy")?.also {
-              it.summary = attestationRecord.teeEnforced.rootOfTrust.get().verifiedBootState.name
-              it.isVisible = true
-            }
-            findPreference<Preference>("attestation_details")?.also {
-              it.setOnPreferenceClickListener {
-                startActivity(Intent(requireActivity(), DisplayAttestationDetailsActivity::class.java)
-                  .putExtra (ATTESTATION, com.android.devicediagnostics.toString(attestationRecord)))
-                true
-              }
-              it.isVisible = true
-            }
-          }
-        } else {
-          findPreference<Preference>("failure")?.also {
-            it.summary = resources.getString(R.string.attestation_challenge_does_not_match) +
-              "\n" + attestationRecord.attestationChallenge.toString(Charsets.UTF_8) +
-              "\n" + testStatus.challenge.toString(Charsets.UTF_8)
-            it.isVisible = true
-          }
-        }
+        attestationRecord = getAttestation(testStatus.attestation)
       } catch (e : IOException) {
-        findPreference<Preference>("failure")?.also {
-          it.summary = e.toString()
-          it.isVisible = true
-        }
+        Log.e(TAG, "Failed to get attestation record")
+        Log.e(TAG, e.toString())
+      }
+      requireActivity().runOnUiThread {
+        if (attestationRecord != null)
+          onAttestationReceived(attestationRecord)
+        else
+          onAttestationError()
       }
     }.start()
+  }
+
+  private fun onAttestationReceived(attestationRecord: ParsedAttestationRecord) {
+    if (!attestationRecord.attestationChallenge.contentEquals(testStatus.challenge)) {
+      findPreference<Preference>("failure")?.also {
+        it.summary = resources.getString(R.string.attestation_challenge_does_not_match) +
+                "\n" + attestationRecord.attestationChallenge.toString(Charsets.UTF_8) +
+                "\n" + testStatus.challenge.toString(Charsets.UTF_8)
+        it.isVisible = true
+      }
+      return
+    }
+
+    findPreference<Preference>("imei")?.also {
+      if (attestationRecord.teeEnforced.attestationIdImei.isPresent) {
+        it.summary =
+          attestationRecord.teeEnforced.attestationIdImei.get().toString(Charsets.UTF_8)
+        it.isVisible = true
+      }
+    }
+
+    findPreference<Preference>("imei2")?.also {
+      if (attestationRecord.teeEnforced.attestationIdSecondImei.isPresent) {
+        it.summary =
+          attestationRecord.teeEnforced.attestationIdSecondImei.get().toString(Charsets.UTF_8)
+        it.isVisible = true
+      }
+    }
+
+    findPreference<Preference>("serial")?.also {
+      if (attestationRecord.teeEnforced.attestationIdSerial.isPresent) {
+        it.summary =
+          attestationRecord.teeEnforced.attestationIdSerial.get().toString(Charsets.UTF_8)
+        it.isVisible = true
+      }
+    }
+
+    findPreference<Preference>("locked")?.also {
+      it.summary = if (attestationRecord.teeEnforced.rootOfTrust.get().deviceLocked)
+        resources.getString(R.string.locked)
+      else
+        resources.getString(R.string.not_locked)
+      it.isVisible = true
+    }
+    findPreference<Preference>("trustworthy")?.also {
+      it.summary = attestationRecord.teeEnforced.rootOfTrust.get().verifiedBootState.name
+      it.isVisible = true
+    }
+    findPreference<Preference>("attestation_details")?.also {
+      it.setOnPreferenceClickListener {
+        startActivity(Intent(requireActivity(), DisplayAttestationDetailsActivity::class.java)
+                .putExtra (ATTESTATION, com.android.devicediagnostics.toString(attestationRecord)))
+        true
+      }
+      it.isVisible = true
+    }
+  }
+
+  private fun onAttestationError() {
+    findPreference<Preference>("failure")?.also {
+      it.summary = "Failed to get attestation"
+      it.isVisible = true
+    }
   }
 }
 
