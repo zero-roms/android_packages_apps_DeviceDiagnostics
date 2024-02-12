@@ -16,31 +16,26 @@
 
 package com.android.devicediagnostics.trusted
 
-import android.Manifest
-import android.bluetooth.BluetoothDevice
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
-import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
-import com.android.devicediagnostics.bluetooth.SendMessage
+import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.widget.LayoutPreference
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
 import kotlin.random.Random
 
 private const val BITMAP_SIZE = 512
-private const val TAG = "trusted/QrCodeDisplay"
+
 private fun displayQrCode(testStatus: TestStatus) : Bitmap {
 
     val writer = QRCodeWriter()
@@ -55,45 +50,14 @@ private fun displayQrCode(testStatus: TestStatus) : Bitmap {
 
 class QrCodeDisplayFragment : PreferenceFragmentCompat() {
     private var testStatus = TestStatus(challenge = Random.nextBytes(32))
-    private val sendMessage = object : SendMessage() {
-        override fun foundDevice(device: BluetoothDevice) {
-            requireActivity().runOnUiThread() {
-                Log.d(TAG, "Found device ${device.name}")
 
-                if (deviceCategory.findPreference<Preference>(device.address) == null) {
-                    val preference = Preference(requireActivity())
-                    preference.title = device.name
-                    preference.key = device.address
-                    preference.setOnPreferenceClickListener {
-                        setDevice(device)
-                        true
-                    }
-                    deviceCategory.addPreference(preference)
-                }
-            }
-        }
-
-        override fun sent() {
-            super.sent()
-            Intent(activity, QrCodeScanActivity::class.java).also {
-                testStatus.write(it)
-                startActivity(it)
-            }
-        }
+    init {
+      BluetoothServer.start(testStatus.toString(putAttestation = false))
     }
 
-    private lateinit var deviceCategory: PreferenceCategory
-
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        mRequestBlePermission.launch(arrayOf(
-            Manifest.permission.BLUETOOTH_ADVERTISE,
-            Manifest.permission.BLUETOOTH_CONNECT,
-            Manifest.permission.BLUETOOTH_SCAN,
-            Manifest.permission.ACCESS_FINE_LOCATION
-        ))
-
         setPreferencesFromResource(R.xml.preferences_trusted_qrcode, rootKey)
-        findPreference<Preference>("Continue")?.setOnPreferenceClickListener{
+        findPreference<Preference>("Continue")?.setOnPreferenceClickListener {
             Intent(activity, QrCodeScanActivity::class.java).also {
                 testStatus.write(it)
                 startActivity(it)
@@ -101,7 +65,7 @@ class QrCodeDisplayFragment : PreferenceFragmentCompat() {
             true
         }
 
-        deviceCategory = findPreference<PreferenceCategory>("Devices")!!
+        findPreference<Preference>("PSM")!!.summary = BluetoothServer.psm.toString()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -113,19 +77,6 @@ class QrCodeDisplayFragment : PreferenceFragmentCompat() {
         val image = layoutPreference?.findViewById<ImageView>(R.id.qrCode)
         image?.setImageBitmap(bmp)
     }
-
-    override fun onStop() {
-        super.onStop()
-        sendMessage.stop()
-    }
-
-    private val mRequestBlePermission =
-        registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
-            if (it.entries.all { entry -> entry.value }) {
-                sendMessage.send(testStatus.toString(putAttestation = false),
-                                 this, requireActivity().application)
-            }
-        }
 }
 
 class QrCodeDisplayActivity : FragmentActivity(R.layout.activity_one_fragment) {

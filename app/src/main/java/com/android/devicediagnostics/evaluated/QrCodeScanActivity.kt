@@ -32,12 +32,15 @@ import android.view.ViewOutlineProvider
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
+import androidx.preference.EditTextPreference
+import androidx.preference.Preference
+import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestSequenceId
 import com.android.devicediagnostics.TestStatus
-import com.android.devicediagnostics.bluetooth.ReceiveMessage
+import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.settingslib.qrcode.QrCamera
 import com.android.settingslib.widget.LayoutPreference
 
@@ -51,9 +54,42 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
     get() {
       return mTextureView ?: throw AssertionError("texture view is null")
     }
+  private var psmPreference: EditTextPreference? = null
 
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.preferences_evaluated_scan, rootKey)
+    psmPreference = findPreference<EditTextPreference>("PSM")
+    val deviceCategory = findPreference<PreferenceCategory>("Devices")!!
+
+    psmPreference?.setOnPreferenceChangeListener { p, value ->
+      p.summary = value as String
+      true
+    }
+
+    BluetoothClient.start() {
+      requireActivity().runOnUiThread() {
+        Log.d(TAG, "Found device ${it.name}")
+
+        if (deviceCategory.findPreference<Preference>(it.address) == null) {
+          val preference = Preference(requireActivity())
+          preference.title = it.name
+          preference.key = it.address
+          preference.setOnPreferenceClickListener { _ ->
+            Thread {
+              val ts = BluetoothClient.read(it, psmPreference!!.summary.toString().toInt())
+              requireActivity().runOnUiThread {
+                (requireActivity() as QrCodeScanActivity).also {
+                  it.testStatus = TestStatus(ts, getAttestation = false)
+                  it.handleSuccessfulResult("")
+                }
+              }
+            }.start()
+            true
+          }
+          deviceCategory.addPreference(preference)
+        }
+      }
+    }
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -75,9 +111,8 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
   QrCamera.ScannerCallback {
   private var mFragment = QrCodeScanFragment(this)
   private var mCamera = QrCamera(this, this)
-  private var testStatus: TestStatus = TestStatus()
+  var testStatus: TestStatus = TestStatus()
 
-  private val receiveMessage = ReceiveMessage()
   private val permissions = PermissionsHelper(this,
     arrayOf(
       Manifest.permission.CAMERA,
@@ -100,24 +135,6 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
       setReorderingAllowed(true)
       add(R.id.fragment_container_view, mFragment)
     }
-    receiveMessage.receive(this, application) {
-      try {
-        Log.d(TAG, "Testing $it")
-        testStatus = TestStatus(it, getAttestation = false)
-        testStatus.address = receiveMessage.address
-        Log.d(TAG, "Got address ${testStatus.address}")
-        runOnUiThread { handleSuccessfulResult("") }
-        true
-      } catch (e: Exception) {
-        Log.d(TAG, "Failed ${e.message}")
-        false
-      }
-    }
-  }
-
-  override fun onStop() {
-    super.onStop()
-    receiveMessage.stop()
   }
 
   override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {

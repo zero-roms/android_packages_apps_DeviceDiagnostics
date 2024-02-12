@@ -15,9 +15,10 @@
         app:title="Continue"
         app:summary="Follow the prompts on the evaluated device. When prompted, press here to continue on this device"/>
 
-  <PreferenceCategory
-      app:key="Devices"
-      app:summary="Alternatively select the device from the list below"
-      app:title="Select device to evaluate"
+
+
+  <Preference
+      app:key="PSM"
+      app:title="PSM"
       app:selectable="false"/>
 </PreferenceScreen>

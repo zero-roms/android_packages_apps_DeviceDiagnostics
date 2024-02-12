@@ -38,9 +38,10 @@ import com.android.devicediagnostics.R
 import com.android.devicediagnostics.ChunkedTestStatus
 import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.TestStatus
-import com.android.devicediagnostics.bluetooth.ReceiveMessage
+import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.widget.LayoutPreference
 import com.android.settingslib.qrcode.QrCamera
+import java.lang.Exception
 
 class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
   PreferenceFragmentCompat() {
@@ -82,7 +83,6 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
   private val chunkedTestStatus: ChunkedTestStatus
     get() { return testStatus as ChunkedTestStatus }
 
-  private val receiveMessage = ReceiveMessage()
   private val permissions = PermissionsHelper(this,
     arrayOf(
       Manifest.permission.CAMERA,
@@ -96,16 +96,15 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
       setReorderingAllowed(true)
       add(R.id.fragment_container_view, mFragment)
     }
-    receiveMessage.receive(this, application) {
-        try {
-          testStatus = TestStatus(it)
-          runOnUiThread { handleSuccessfulResult("") }
-          true
-        } catch (e: Exception) {
-          false
-        }
+    Thread {
+      val ts = BluetoothServer.read()
+      try {
+        testStatus = TestStatus(ts, getAttestation = true)
+        runOnUiThread { handleSuccessfulResult("") }
+      } catch ( _ : Exception ) {
       }
-    }
+    }.start()
+  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -115,11 +114,6 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
   override fun onResume() {
     super.onResume()
     permissions.requestPermissions()
-  }
-
-  override fun onStop() {
-    super.onStop()
-    receiveMessage.stop()
   }
 
   override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
