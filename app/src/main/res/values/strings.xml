@@ -43,6 +43,11 @@
   <string name="storage_total_capacity_summary">%1$d %2$s</string>
   <string name="storage_health_summary">%1$d%% lifetime remaining</string>
 
+  <!-- Permissions -->
+  <string name="grant_eval_permissions_dialog">Please grant the requested permissions to continue in evaluation mode.</string>
+  <string name="cancel_button">Cancel</string>
+  <string name="try_again_button">Try again</string>
+
   <!-- Trusted result display -->
   <string name="imei_title">IMEI</string>
   <string name="imei2_title">Second IMEI</string>

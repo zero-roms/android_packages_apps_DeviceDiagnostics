@@ -17,19 +17,24 @@
 package com.android.devicediagnostics.evaluated
 
 import android.Manifest
+import android.content.DialogInterface
+import android.content.Intent
 import android.graphics.Matrix
 import android.graphics.Outline
 import android.graphics.Rect
 import android.graphics.SurfaceTexture
+import android.net.Uri
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
+import android.provider.Settings
 import android.util.Log
 import android.util.Size
 import android.view.TextureView
 import android.view.View
 import android.view.ViewOutlineProvider
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
@@ -72,41 +77,75 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
   private var mFragment = QrCodeScanFragment(this)
   private var mCamera = QrCamera(this, this)
   private var testStatus: TestStatus = TestStatus()
+  private var permissionsDeniedOnce = false
 
   private val receiveMessage = ReceiveMessage()
   private val mRequestPermissions =
     registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
-      if (permissions.entries.all { it.value }) {
-        supportFragmentManager.commit {
-          setReorderingAllowed(true)
-          add(R.id.fragment_container_view, mFragment)
-        }
-        receiveMessage.receive(this, application) {
-          try {
-            Log.d(TAG, "Testing $it")
-            testStatus = TestStatus(it, getAttestation = false)
-            testStatus.address = receiveMessage.address
-            Log.d(TAG, "Got address ${testStatus.address}")
-            runOnUiThread { handleSuccessfulResult("") }
-            true
-          } catch (e: Exception) {
-            Log.d(TAG, "Failed ${e.message}")
-            false
-          }
-        }
-      }
+      handlePermissions(permissions)
     }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     if (savedInstanceState == null) {
-      mRequestPermissions.launch(arrayOf(
-        Manifest.permission.CAMERA,
-        Manifest.permission.BLUETOOTH_ADVERTISE,
-        Manifest.permission.BLUETOOTH_CONNECT,
-        Manifest.permission.BLUETOOTH_SCAN
-      ))
+      requestPermissions()
     }
+  }
+
+  private fun requestPermissions() {
+    mRequestPermissions.launch(arrayOf(
+      Manifest.permission.CAMERA,
+      Manifest.permission.BLUETOOTH_ADVERTISE,
+      Manifest.permission.BLUETOOTH_CONNECT,
+      Manifest.permission.BLUETOOTH_SCAN
+    ))
+  }
+
+  private fun handlePermissions(permissions: Map<String, Boolean>) {
+    if (!permissions.entries.all { it.value }) {
+      requestPermissionsAgain()
+      return
+    }
+
+    supportFragmentManager.commit {
+      setReorderingAllowed(true)
+      add(R.id.fragment_container_view, mFragment)
+    }
+    receiveMessage.receive(this, application) {
+      try {
+        Log.d(TAG, "Testing $it")
+        testStatus = TestStatus(it, getAttestation = false)
+        testStatus.address = receiveMessage.address
+        Log.d(TAG, "Got address ${testStatus.address}")
+        runOnUiThread { handleSuccessfulResult("") }
+        true
+      } catch (e: Exception) {
+        Log.d(TAG, "Failed ${e.message}")
+        false
+      }
+    }
+  }
+
+  private fun requestPermissionsAgain() {
+    val builder = AlertDialog.Builder(this)
+    builder.setMessage(R.string.grant_eval_permissions_dialog)
+    builder.setNegativeButton(R.string.cancel_button, DialogInterface.OnClickListener { _, _ ->
+      finish()
+    })
+    builder.setPositiveButton(R.string.try_again_button, DialogInterface.OnClickListener { _, _ ->
+      // Android doesn't let apps spam users with repeated permissions requests, so after one failure
+      // we have to direct them to the Settings app to correct things.
+      if (permissionsDeniedOnce) {
+        startActivity(Intent().apply {
+          action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+          data = Uri.fromParts("package", getString(R.string.package_name), null)
+        })
+      } else {
+        requestPermissions()
+        permissionsDeniedOnce = true
+      }
+    })
+    builder.show()
   }
 
   override fun onStop() {
