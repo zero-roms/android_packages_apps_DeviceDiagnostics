@@ -17,6 +17,7 @@
 package com.android.devicediagnostics.trusted
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.FragmentActivity
@@ -140,7 +141,9 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
                 .putExtra (ATTESTATION, com.android.devicediagnostics.toString(attestationRecord)))
         true
       }
-      it.isVisible = true
+      if (Build.IS_USERDEBUG || Build.IS_ENG) {
+        it.isVisible = true
+      }
     }
   }
 
