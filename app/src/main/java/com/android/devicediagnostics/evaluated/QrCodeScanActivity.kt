@@ -17,28 +17,23 @@
 package com.android.devicediagnostics.evaluated
 
 import android.Manifest
-import android.content.DialogInterface
-import android.content.Intent
 import android.graphics.Matrix
 import android.graphics.Outline
 import android.graphics.Rect
 import android.graphics.SurfaceTexture
-import android.net.Uri
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
-import android.provider.Settings
 import android.util.Log
 import android.util.Size
 import android.view.TextureView
 import android.view.View
 import android.view.ViewOutlineProvider
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestSequenceId
 import com.android.devicediagnostics.TestStatus
@@ -47,12 +42,15 @@ import com.android.settingslib.qrcode.QrCamera
 import com.android.settingslib.widget.LayoutPreference
 
 private const val TAG = "evaluated/QrCodeScan"
+
 class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
-                                  PreferenceFragmentCompat() {
+  PreferenceFragmentCompat() {
   private var mListener = listener
   private var mTextureView: TextureView? = null
-  val textureView : TextureView
-    get() { return mTextureView ?: throw AssertionError("texture view is null") }
+  val textureView: TextureView
+    get() {
+      return mTextureView ?: throw AssertionError("texture view is null")
+    }
 
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.preferences_evaluated_scan, rootKey)
@@ -60,7 +58,7 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    val layoutPreference = findPreference( "qr_code" ) as LayoutPreference?
+    val layoutPreference = findPreference("qr_code") as LayoutPreference?
     mTextureView = layoutPreference!!.findViewById<TextureView>(R.id.preview_view)
     textureView.surfaceTextureListener = mListener
     textureView.outlineProvider = object : ViewOutlineProvider() {
@@ -71,42 +69,33 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
     textureView.clipToOutline = true
   }
 }
+
 class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
-                           TextureView.SurfaceTextureListener,
-                           QrCamera.ScannerCallback {
+  TextureView.SurfaceTextureListener,
+  QrCamera.ScannerCallback {
   private var mFragment = QrCodeScanFragment(this)
   private var mCamera = QrCamera(this, this)
   private var testStatus: TestStatus = TestStatus()
-  private var permissionsDeniedOnce = false
 
   private val receiveMessage = ReceiveMessage()
-  private val mRequestPermissions =
-    registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
-      handlePermissions(permissions)
-    }
-
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    if (savedInstanceState == null) {
-      requestPermissions()
-    }
-  }
-
-  private fun requestPermissions() {
-    mRequestPermissions.launch(arrayOf(
+  private val permissions = PermissionsHelper(this,
+    arrayOf(
       Manifest.permission.CAMERA,
       Manifest.permission.BLUETOOTH_ADVERTISE,
       Manifest.permission.BLUETOOTH_CONNECT,
-      Manifest.permission.BLUETOOTH_SCAN
-    ))
+      Manifest.permission.BLUETOOTH_SCAN)
+  ) { onPermissionsGranted() }
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
   }
 
-  private fun handlePermissions(permissions: Map<String, Boolean>) {
-    if (!permissions.entries.all { it.value }) {
-      requestPermissionsAgain()
-      return
-    }
+  override fun onResume() {
+    super.onResume()
+    permissions.requestPermissions()
+  }
 
+  private fun onPermissionsGranted() {
     supportFragmentManager.commit {
       setReorderingAllowed(true)
       add(R.id.fragment_container_view, mFragment)
@@ -124,28 +113,6 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
         false
       }
     }
-  }
-
-  private fun requestPermissionsAgain() {
-    val builder = AlertDialog.Builder(this)
-    builder.setMessage(R.string.grant_eval_permissions_dialog)
-    builder.setNegativeButton(R.string.cancel_button, DialogInterface.OnClickListener { _, _ ->
-      finish()
-    })
-    builder.setPositiveButton(R.string.try_again_button, DialogInterface.OnClickListener { _, _ ->
-      // Android doesn't let apps spam users with repeated permissions requests, so after one failure
-      // we have to direct them to the Settings app to correct things.
-      if (permissionsDeniedOnce) {
-        startActivity(Intent().apply {
-          action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
-          data = Uri.fromParts("package", getString(R.string.package_name), null)
-        })
-      } else {
-        requestPermissions()
-        permissionsDeniedOnce = true
-      }
-    })
-    builder.show()
   }
 
   override fun onStop() {
