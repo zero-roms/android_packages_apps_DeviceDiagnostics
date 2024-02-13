@@ -36,6 +36,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.ChunkedTestStatus
+import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.bluetooth.ReceiveMessage
 import com.android.settingslib.widget.LayoutPreference
@@ -82,34 +83,38 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
     get() { return testStatus as ChunkedTestStatus }
 
   private val receiveMessage = ReceiveMessage()
-  private val requestPermissions =
-    registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
-      if (it.entries.all { entry -> entry.value }) {
-        supportFragmentManager.commit {
-          setReorderingAllowed(true)
-          add(R.id.fragment_container_view, mFragment)
+  private val permissions = PermissionsHelper(this,
+    arrayOf(
+      Manifest.permission.CAMERA,
+      Manifest.permission.BLUETOOTH_ADVERTISE,
+      Manifest.permission.BLUETOOTH_CONNECT,
+      Manifest.permission.BLUETOOTH_SCAN)
+  ) { onPermissionsGranted() }
+
+  private fun onPermissionsGranted() {
+    supportFragmentManager.commit {
+      setReorderingAllowed(true)
+      add(R.id.fragment_container_view, mFragment)
+    }
+    receiveMessage.receive(this, application) {
+        try {
+          testStatus = TestStatus(it)
+          runOnUiThread { handleSuccessfulResult("") }
+          true
+        } catch (e: Exception) {
+          false
         }
-        receiveMessage.receive(this, application) {
-            try {
-              testStatus = TestStatus(it)
-              runOnUiThread { handleSuccessfulResult("") }
-              true
-            } catch (e: Exception) {
-              false
-            }
-          }
       }
     }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    requestPermissions.launch(arrayOf(
-      Manifest.permission.CAMERA,
-      Manifest.permission.BLUETOOTH_ADVERTISE,
-      Manifest.permission.BLUETOOTH_CONNECT,
-      Manifest.permission.BLUETOOTH_SCAN
-    ))
     testStatus = ChunkedTestStatus(intent!!.extras!!)
+  }
+
+  override fun onResume() {
+    super.onResume()
+    permissions.requestPermissions()
   }
 
   override fun onStop() {
