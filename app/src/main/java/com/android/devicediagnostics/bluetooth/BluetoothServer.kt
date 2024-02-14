@@ -62,6 +62,8 @@ object BluetoothServer {
 
         Thread {
             socket = serverSocket!!.accept()
+            serverSocket!!.close()
+            serverSocket = null
             advertiser!!.stopAdvertising(advertiseCallback)
             var output = socket!!.outputStream
             output.write(string.toByteArray(Charsets.UTF_8))
@@ -80,6 +82,9 @@ object BluetoothServer {
             if (size < CHUNK) break;
         }
         Log.d(TAG, "read: ${b.size} ${b!!.toString(Charsets.UTF_8)}")
+        socket!!.outputStream.write("Done".toByteArray())
+        socket!!.close()
+        socket = null
         return b!!.toString(Charsets.UTF_8)
     }
 
@@ -90,7 +95,6 @@ object BluetoothServer {
         .build()
     private var advertiseData = AdvertiseData.Builder()
         .addServiceUuid(ParcelUuid(SERVICE_UUID))
-//    .addServiceSolicitationUuid(ParcelUuid(connectionData.solicitationUuid))
         .setIncludeDeviceName(true).build()
 
     private var advertiseCallback: AdvertiseCallback? = null

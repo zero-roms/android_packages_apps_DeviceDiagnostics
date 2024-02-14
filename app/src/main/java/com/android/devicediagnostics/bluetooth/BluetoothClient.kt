@@ -67,6 +67,8 @@ object BluetoothClient {
         var output = socket!!.outputStream
         output.write(s.toByteArray(Charsets.UTF_8))
         Log.d(TAG, "wrote ${s}")
+        socket!!.inputStream.readNBytes(4)
+        socket!!.close()
     }
 
     private var socket: BluetoothSocket? = null
