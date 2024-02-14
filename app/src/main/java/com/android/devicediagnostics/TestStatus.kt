@@ -20,7 +20,6 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Base64
-import android.util.Log
 import com.android.devicediagnostics.evaluated.ScreenTestIntroActivity
 import com.android.devicediagnostics.evaluated.TouchTestIntroActivity
 import com.android.devicediagnostics.evaluated.QrDisplayActivity
@@ -38,8 +37,6 @@ private const val TOUCH_TEST = "TOUCH_TEST"
 private const val VERSION = "VERSION"
 private const val CHALLENGE_CRC32 = "CHALLENGE_CRC32"
 private const val ATTESTATION_CRC32 = "ATTESTATION_CRC32"
-private const val CHUNK = "CHUNK"
-private const val CHUNKS = "CHUNKS"
 private const val TEST_SEQUENCE = "TEST_SEQUENCE"
 private const val IN_TEST_FLOW = "IN_TEST_FLOW"
 private const val ADDRESS = "ADDRESS"
@@ -122,7 +119,7 @@ open class TestStatus (
     }
   }
 
-  fun toString(putAttestation: Boolean = true, chunk: Int = 0): String {
+  fun toString(putAttestation: Boolean = true): String {
     val json = JSONObject()
     json.put(VERSION, VERSION_NUMBER)
     json.put(CHALLENGE, Base64.encodeToString(challenge, 0))
@@ -133,27 +130,13 @@ open class TestStatus (
     json.put(SCREEN_TEST, screenTest)
     json.put(TOUCH_TEST, touchTest)
     json.put(ADDRESS, address)
-    if (putAttestation && chunk != 0) {
-      var topOfSlice = chunk * chunkSize - 1
-      if (topOfSlice >= attestation.size) topOfSlice = attestation.size - 1
-      val slice = attestation.slice((chunk - 1) * chunkSize..topOfSlice).toByteArray()
-      val code = Base64.encodeToString(slice, 0)
-      crc.reset()
-      crc.update(slice)
-
-      json.put(ATTESTATION, code)
-      json.put(ATTESTATION_CRC32, crc.value)
-      json.put(CHUNK, chunk)
-      json.put(CHUNKS, chunks)
-    } else if (putAttestation) {
+    if (putAttestation) {
       val code = Base64.encodeToString(attestation, 0)
       crc.reset()
       crc.update(attestation)
 
       json.put(ATTESTATION, code)
       json.put(ATTESTATION_CRC32, crc.value)
-      json.put(CHUNK, 1)
-      json.put(CHUNKS, 1)
     }
 
     return json.toString()
@@ -186,57 +169,5 @@ open class TestStatus (
     activity.startActivity(intent)
   }
 
-  open val chunks: Int
-    get() = (attestation.size + CHUNK_SIZE - 1) / CHUNK_SIZE
-
-  private val chunkSize: Int
-    get() = (attestation.size + chunks - 1) / chunks
-
   val oneShot get() = (sequence == TestSequenceId.ONE_SHOT)
-}
-
-class ChunkedTestStatus(bundle: Bundle) : TestStatus(bundle) {
-
-  // Read a chunk.
-  // Return false if valid but not last chunk
-  // Return true if valid and last chunk
-  // Otherwise throw TSException
-  fun readChunk(string: String?): Boolean {
-    if (string == null) throw TSException("Empty QR code")
-    try {
-      val json = JSONObject(string)
-      if (json.getInt(CHUNK) != chunk) throw TSException("Wrong chunk")
-      val contents = json.getString(ATTESTATION)
-      val bytes = Base64.decode(contents, 0)
-      val crc = CRC32()
-      crc.update(bytes)
-      if (json.getLong(ATTESTATION_CRC32) != crc.value) throw TSException("CRC doesn't match ")
-
-      val testStatus = TestStatus(string, getAttestation = false)
-      if (!testStatus.challenge.contentEquals(challenge)) throw TSException("Wrong challenge")
-      if (chunk == 1) {
-        screenTest = testStatus.screenTest
-        touchTest = testStatus.touchTest
-        address = testStatus.address
-        chunks = json.getInt(CHUNKS)
-      } else {
-        if (screenTest != testStatus.screenTest) throw TSException("Inconsistent screen condition")
-        if (touchTest != testStatus.touchTest) throw TSException("Inconsistent touch condition")
-        if (address != testStatus.address) throw TSException("Inconsistent address")
-        if (chunks != json.getInt(CHUNKS)) throw TSException("Inconsistent chunk count")
-      }
-
-      attestation += bytes
-      chunk++
-      return chunk > chunks
-    } catch (ex: JSONException) {
-      throw TSException("JSON missing required fields")
-    }
-  }
-
-  var chunk = 1
-    private set
-
-  override var chunks = 0
-    private set
 }
