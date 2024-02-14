@@ -26,39 +26,39 @@ import com.android.devicediagnostics.TestStatus
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
 class ScreenTestIntroFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
-  override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-    setPreferencesFromResource(R.xml.preferences_evaluated_screen_test, rootKey)
-    findPreference<Preference>("title")!!.also {
-      if (testStatus.oneShot) {
-        it.setSummary(R.string.screen_test_summary_one_shot)
-      }
-    }
-    findPreference<Preference>("continue")!!.also {
-      it.setOnPreferenceClickListener{
-        Intent(activity, ScreenTestActivity::class.java).also {
-          testStatus.write(it)
-          startActivity(it)
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.preferences_evaluated_screen_test, rootKey)
+        findPreference<Preference>("title")!!.also {
+            if (testStatus.oneShot) {
+                it.setSummary(R.string.screen_test_summary_one_shot)
+            }
         }
-        true
-      }
+        findPreference<Preference>("continue")!!.also {
+            it.setOnPreferenceClickListener {
+                Intent(activity, ScreenTestActivity::class.java).also {
+                    testStatus.write(it)
+                    startActivity(it)
+                }
+                true
+            }
+        }
     }
-  }
 }
 
 class ScreenTestIntroActivity : CollapsingToolbarBaseActivity() {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_one_fragment)
-    setTitle(R.string.screen_test_title)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_one_fragment)
+        setTitle(R.string.screen_test_title)
 
-    if (savedInstanceState == null) {
-      supportFragmentManager.commit {
-        setReorderingAllowed(true)
-        add(
-          R.id.fragment_container_view,
-          ScreenTestIntroFragment(TestStatus(intent))
-        )
-      }
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add(
+                    R.id.fragment_container_view,
+                    ScreenTestIntroFragment(TestStatus(intent))
+                )
+            }
+        }
     }
-  }
 }

@@ -36,8 +36,8 @@ import java.time.format.FormatStyle
 private fun formatSecondsAsDate(seconds: Long): String {
     val instant = Instant.ofEpochSecond(seconds)
     return instant.atZone(ZoneId.systemDefault())
-            .toLocalDate()
-            .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
+        .toLocalDate()
+        .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
 }
 
 class BatteryDiagnostics {

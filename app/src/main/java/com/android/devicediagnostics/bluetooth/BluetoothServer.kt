@@ -33,83 +33,85 @@ private const val TAG = "BluetoothServer"
 const val CHUNK = 4096
 
 private const val PSM = "PSM"
+
 class BluetoothConnectionData(var psm: Int = 0) {
-  constructor(json: String) : this() {
-    val json = JSONObject(json)
-    psm = json.getInt(PSM)
-  }
-  override fun toString(): String {
-    val json = JSONObject()
-    json.put(PSM, psm)
-    return json.toString()
-  }
+    constructor(json: String) : this() {
+        val json = JSONObject(json)
+        psm = json.getInt(PSM)
+    }
+
+    override fun toString(): String {
+        val json = JSONObject()
+        json.put(PSM, psm)
+        return json.toString()
+    }
 }
 
 object BluetoothServer {
-  private val adapter: BluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
-  private var serverSocket: BluetoothServerSocket? = null
-  private var socket: BluetoothSocket? = null
-  var connectionData = BluetoothConnectionData()
-    private set
+    private val adapter: BluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
+    private var serverSocket: BluetoothServerSocket? = null
+    private var socket: BluetoothSocket? = null
+    var connectionData = BluetoothConnectionData()
+        private set
 
-  fun start(string: String, written: ()->Unit = {}) {
-    startAdvertisement()
-    serverSocket = adapter.listenUsingInsecureL2capChannel()
-    Log.d(TAG, "Server started with psm ${serverSocket?.psm}")
-    connectionData.psm = serverSocket!!.psm
+    fun start(string: String, written: () -> Unit = {}) {
+        startAdvertisement()
+        serverSocket = adapter.listenUsingInsecureL2capChannel()
+        Log.d(TAG, "Server started with psm ${serverSocket?.psm}")
+        connectionData.psm = serverSocket!!.psm
 
-    Thread {
-      socket = serverSocket!!.accept()
-      advertiser!!.stopAdvertising(advertiseCallback)
-      var output = socket!!.outputStream
-      output.write(string.toByteArray(Charsets.UTF_8))
-      Log.d(TAG, "wrote $string")
-      written()
-    }.start()
-  }
-
-  fun read(): String {
-    var input = socket!!.inputStream
-    var b = ByteArray(0)
-    while (true) {
-      val chunk = ByteArray(CHUNK)
-      val size = input.read(chunk)
-      b += chunk.slice(IntRange(0, size - 1))
-      if (size < CHUNK) break;
+        Thread {
+            socket = serverSocket!!.accept()
+            advertiser!!.stopAdvertising(advertiseCallback)
+            var output = socket!!.outputStream
+            output.write(string.toByteArray(Charsets.UTF_8))
+            Log.d(TAG, "wrote $string")
+            written()
+        }.start()
     }
-    Log.d(TAG, "read: ${b.size} ${b!!.toString(Charsets.UTF_8)}")
-    return b!!.toString(Charsets.UTF_8)
-  }
 
-  private var advertiser: BluetoothLeAdvertiser? = null
-  private var advertiseSettings = AdvertiseSettings.Builder()
-    .setAdvertiseMode(AdvertiseSettings.ADVERTISE_MODE_LOW_POWER)
-    .setTimeout(0)
-    .build()
-  private var advertiseData = AdvertiseData.Builder()
-    .addServiceUuid(ParcelUuid(SERVICE_UUID))
+    fun read(): String {
+        var input = socket!!.inputStream
+        var b = ByteArray(0)
+        while (true) {
+            val chunk = ByteArray(CHUNK)
+            val size = input.read(chunk)
+            b += chunk.slice(IntRange(0, size - 1))
+            if (size < CHUNK) break;
+        }
+        Log.d(TAG, "read: ${b.size} ${b!!.toString(Charsets.UTF_8)}")
+        return b!!.toString(Charsets.UTF_8)
+    }
+
+    private var advertiser: BluetoothLeAdvertiser? = null
+    private var advertiseSettings = AdvertiseSettings.Builder()
+        .setAdvertiseMode(AdvertiseSettings.ADVERTISE_MODE_LOW_POWER)
+        .setTimeout(0)
+        .build()
+    private var advertiseData = AdvertiseData.Builder()
+        .addServiceUuid(ParcelUuid(SERVICE_UUID))
 //    .addServiceSolicitationUuid(ParcelUuid(connectionData.solicitationUuid))
-    .setIncludeDeviceName(true).build()
+        .setIncludeDeviceName(true).build()
 
-  private var advertiseCallback: AdvertiseCallback? = null
+    private var advertiseCallback: AdvertiseCallback? = null
 
-  private fun startAdvertisement() {
-    advertiser = adapter.bluetoothLeAdvertiser
-    Log.d(TAG, "startAdvertisement: with advertiser ${advertiser}")
+    private fun startAdvertisement() {
+        advertiser = adapter.bluetoothLeAdvertiser
+        Log.d(TAG, "startAdvertisement: with advertiser ${advertiser}")
 
-    advertiseCallback = DeviceAdvertiseCallback()
-    advertiser!!.startAdvertising(advertiseSettings, advertiseData, advertiseCallback)
-  }
-
-  private class DeviceAdvertiseCallback : AdvertiseCallback() {
-    override fun onStartFailure(errorCode: Int) {
-      super.onStartFailure(errorCode)
-      Log.d(TAG, "Advertising failed with error: $errorCode")
+        advertiseCallback = DeviceAdvertiseCallback()
+        advertiser!!.startAdvertising(advertiseSettings, advertiseData, advertiseCallback)
     }
 
-    override fun onStartSuccess(settingsInEffect: AdvertiseSettings) {
-      super.onStartSuccess(settingsInEffect)
-      Log.d(TAG, "Advertising successfully started")
+    private class DeviceAdvertiseCallback : AdvertiseCallback() {
+        override fun onStartFailure(errorCode: Int) {
+            super.onStartFailure(errorCode)
+            Log.d(TAG, "Advertising failed with error: $errorCode")
+        }
+
+        override fun onStartSuccess(settingsInEffect: AdvertiseSettings) {
+            super.onStartSuccess(settingsInEffect)
+            Log.d(TAG, "Advertising successfully started")
+        }
     }
-  }
 }

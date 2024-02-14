@@ -27,58 +27,58 @@ import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
 
 class ScreenTestActivity : Activity() {
-  private enum class State {
-    RED, GREEN, BLUE
-  }
-
-  private var state = State.RED
-    set(value) {
-      when(value) {
-        State.RED -> rectangle.setBackgroundColor(getColor(R.color.red))
-        State.GREEN -> rectangle.setBackgroundColor(getColor(R.color.green))
-        State.BLUE -> rectangle.setBackgroundColor(getColor(R.color.blue))
-      }
-      field = value
+    private enum class State {
+        RED, GREEN, BLUE
     }
 
-  private lateinit var rectangle: View
-
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-
-    // Attempt to hide system bars
-    val windowInsetsController =
-      WindowCompat.getInsetsController(window, window.decorView)
-    windowInsetsController.systemBarsBehavior =
-      WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-    windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
-
-    setContentView(R.layout.layout_evaluated_screen_test)
-    rectangle = findViewById<View>(R.id.mainLayout) ?: throw AssertionError("Can't find view")
-    rectangle.setOnClickListener {
-      when (state) {
-        State.RED -> state = State.GREEN
-        State.GREEN -> state = State.BLUE
-
-        State.BLUE -> {
-          val status = TestStatus(intent!!.extras!!)
-          if (status.oneShot) {
-            // Return to the component health screen.
-            status.nextTestActivity(this)
-          } else {
-            Intent(this, ScreenTestFinalizeActivity::class.java).also {
-              TestStatus(intent!!.extras!!).write(it)
-              startActivity(it)
-              finish()
+    private var state = State.RED
+        set(value) {
+            when (value) {
+                State.RED -> rectangle.setBackgroundColor(getColor(R.color.red))
+                State.GREEN -> rectangle.setBackgroundColor(getColor(R.color.green))
+                State.BLUE -> rectangle.setBackgroundColor(getColor(R.color.blue))
             }
-          }
+            field = value
         }
-      }
-    }
-  }
 
-  override fun onStart() {
-    super.onStart()
-    state = State.RED
-  }
+    private lateinit var rectangle: View
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Attempt to hide system bars
+        val windowInsetsController =
+            WindowCompat.getInsetsController(window, window.decorView)
+        windowInsetsController.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+
+        setContentView(R.layout.layout_evaluated_screen_test)
+        rectangle = findViewById<View>(R.id.mainLayout) ?: throw AssertionError("Can't find view")
+        rectangle.setOnClickListener {
+            when (state) {
+                State.RED -> state = State.GREEN
+                State.GREEN -> state = State.BLUE
+
+                State.BLUE -> {
+                    val status = TestStatus(intent!!.extras!!)
+                    if (status.oneShot) {
+                        // Return to the component health screen.
+                        status.nextTestActivity(this)
+                    } else {
+                        Intent(this, ScreenTestFinalizeActivity::class.java).also {
+                            TestStatus(intent!!.extras!!).write(it)
+                            startActivity(it)
+                            finish()
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        state = State.RED
+    }
 }

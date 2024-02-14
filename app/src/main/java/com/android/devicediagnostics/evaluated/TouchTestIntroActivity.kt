@@ -26,33 +26,33 @@ import com.android.devicediagnostics.TestStatus
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
 class TouchTestIntroFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
-  fun constructor() {}
+    fun constructor() {}
 
-  override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-    setPreferencesFromResource(R.xml.preferences_evaluated_touch_test, rootKey)
-    findPreference<Preference>("continue")?.setOnPreferenceClickListener{
-      Intent(activity, TouchTestActivity::class.java).also {
-        testStatus.write(it)
-        startActivity(it)
-      }
-      true
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.preferences_evaluated_touch_test, rootKey)
+        findPreference<Preference>("continue")?.setOnPreferenceClickListener {
+            Intent(activity, TouchTestActivity::class.java).also {
+                testStatus.write(it)
+                startActivity(it)
+            }
+            true
+        }
     }
-  }
 }
 
 class TouchTestIntroActivity : CollapsingToolbarBaseActivity() {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_one_fragment)
-    setTitle(R.string.touch_test_title)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_one_fragment)
+        setTitle(R.string.touch_test_title)
 
-    if (savedInstanceState == null) {
-      supportFragmentManager.commit {
-        setReorderingAllowed(true)
-        add(
-          R.id.fragment_container_view,
-          TouchTestIntroFragment(TestStatus(intent)))
-      }
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add(
+                    R.id.fragment_container_view,
+                    TouchTestIntroFragment(TestStatus(intent)))
+            }
+        }
     }
-  }
 }

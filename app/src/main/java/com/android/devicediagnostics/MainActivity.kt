@@ -22,22 +22,22 @@ import androidx.preference.PreferenceFragmentCompat
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
 class MainFragment : PreferenceFragmentCompat() {
-  override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-    setPreferencesFromResource(R.xml.preferences_main, rootKey)
-  }
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.preferences_main, rootKey)
+    }
 }
 
 class MainActivity : CollapsingToolbarBaseActivity() {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_one_fragment)
-    setTitle(R.string.app_title)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_one_fragment)
+        setTitle(R.string.app_title)
 
-    if (savedInstanceState == null) {
-      supportFragmentManager.commit {
-        setReorderingAllowed(true)
-        add(R.id.fragment_container_view, MainFragment())
-      }
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add(R.id.fragment_container_view, MainFragment())
+            }
+        }
     }
-  }
 }

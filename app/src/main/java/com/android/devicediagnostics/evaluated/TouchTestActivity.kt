@@ -32,68 +32,69 @@ import kotlin.time.ExperimentalTime
 import kotlin.time.TimeSource
 
 @OptIn(ExperimentalTime::class)
-class TouchTestView(context : Context, attrs: AttributeSet) :
-  View(context, attrs, 0) {
+class TouchTestView(context: Context, attrs: AttributeSet) :
+    View(context, attrs, 0) {
 
-  private val whitePaint = Paint().apply {
-    this.color = getContext().getColor(R.color.white)
-  }
-  private val redPaint = Paint().apply {
-    this.color = getContext().getColor(R.color.red)
-  }
+    private val whitePaint = Paint().apply {
+        this.color = getContext().getColor(R.color.white)
+    }
+    private val redPaint = Paint().apply {
+        this.color = getContext().getColor(R.color.red)
+    }
 
-  private val rows = 20
-  private val columns = 10
-  private val xSize get() = width.toFloat() / columns
-  private val ySize get() = height.toFloat() / rows
+    private val rows = 20
+    private val columns = 10
+    private val xSize get() = width.toFloat() / columns
+    private val ySize get() = height.toFloat() / rows
 
-  private var array = Array(columns) { BooleanArray(rows) }
+    private var array = Array(columns) { BooleanArray(rows) }
 
-  private val timeSource = TimeSource.Monotonic
-  private var timer  = timeSource.markNow()
+    private val timeSource = TimeSource.Monotonic
+    private var timer = timeSource.markNow()
 
-  override fun onDraw(canvas: Canvas) {
-    super.onDraw(canvas)
-    for (x in 0 until columns)
-      for (y in 0 until rows)
-        canvas.drawRect(xSize * x, ySize * y,
-                        xSize * (x + 1), ySize * (y + 1),
-                        if (array[x][y]) whitePaint else redPaint
-        )
-  }
+    override fun onDraw(canvas: Canvas) {
+        super.onDraw(canvas)
+        for (x in 0 until columns)
+            for (y in 0 until rows)
+                canvas.drawRect(xSize * x, ySize * y,
+                    xSize * (x + 1), ySize * (y + 1),
+                    if (array[x][y]) whitePaint else redPaint
+                )
+    }
 
-  override fun onTouchEvent(event: MotionEvent?): Boolean {
-    if (event != null)  try{
-      when (event.action) {
-        MotionEvent.ACTION_DOWN -> timer = timeSource.markNow()
-        MotionEvent.ACTION_UP ->
-          if(array.all{it.all{it}})
-            (context as TouchTestActivity).reportResult(true)
-          else if(timeSource.markNow() - timer < 0.2.seconds)
-            (context as TouchTestActivity).reportResult(false)
-      }
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        if (event != null) try {
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> timer = timeSource.markNow()
+                MotionEvent.ACTION_UP ->
+                    if (array.all { it.all { it } })
+                        (context as TouchTestActivity).reportResult(true)
+                    else if (timeSource.markNow() - timer < 0.2.seconds)
+                        (context as TouchTestActivity).reportResult(false)
+            }
 
-      array[(event.x / xSize).toInt()][(event.y / ySize).toInt()] = true
-      invalidate()
-    } catch (e : Exception) {}
-    return true
-  }
+            array[(event.x / xSize).toInt()][(event.y / ySize).toInt()] = true
+            invalidate()
+        } catch (e: Exception) {
+        }
+        return true
+    }
 }
 
 class TouchTestActivity : Activity() {
-  private lateinit var testStatus: TestStatus
+    private lateinit var testStatus: TestStatus
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.touch_test)
-    testStatus = TestStatus(intent!!.extras!!)
-  }
-
-  fun reportResult(result: Boolean) {
-    testStatus.touchTest = result
-    Intent(this, TouchTestFinalizeActivity::class.java).also {
-      testStatus.write(it)
-      startActivity(it)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.touch_test)
+        testStatus = TestStatus(intent!!.extras!!)
     }
-  }
+
+    fun reportResult(result: Boolean) {
+        testStatus.touchTest = result
+        Intent(this, TouchTestFinalizeActivity::class.java).also {
+            testStatus.write(it)
+            startActivity(it)
+        }
+    }
 }

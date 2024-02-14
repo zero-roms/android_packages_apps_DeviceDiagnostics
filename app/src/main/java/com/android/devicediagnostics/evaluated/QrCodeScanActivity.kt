@@ -48,141 +48,141 @@ import com.android.settingslib.widget.LayoutPreference
 private const val TAG = "evaluated/QrCodeScan"
 
 class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
-  PreferenceFragmentCompat() {
-  private var mListener = listener
-  private var mTextureView: TextureView? = null
-  val textureView: TextureView
-    get() {
-      return mTextureView ?: throw AssertionError("texture view is null")
-    }
-  var psmPreference: EditTextPreference? = null
-  var deviceCategory: PreferenceCategory? = null
-
-  override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-    setPreferencesFromResource(R.xml.preferences_evaluated_scan, rootKey)
-    psmPreference = findPreference("PSM")
-    deviceCategory = findPreference("Devices")!!
-
-    psmPreference?.setOnPreferenceChangeListener { p, value ->
-      p.summary = value as String
-      true
-    }
-  }
-
-  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
-    val layoutPreference = findPreference("qr_code") as LayoutPreference?
-    mTextureView = layoutPreference!!.findViewById<TextureView>(R.id.preview_view)
-    textureView.surfaceTextureListener = mListener
-    textureView.outlineProvider = object : ViewOutlineProvider() {
-      override fun getOutline(view: View, outline: Outline) {
-        outline.setRoundRect(0, 0, view.width, view.height, 12f)
-      }
-    }
-    textureView.clipToOutline = true
-  }
-
-  fun setConnectionData(connectionData: BluetoothConnectionData) {
-    BluetoothClient.connectionData = connectionData
-    BluetoothClient.start() {
-      Log.d(TAG, "Found device ${it.name}")
-      requireActivity().runOnUiThread() {
-        if (deviceCategory!!.findPreference<Preference>(it.address) == null) {
-          val preference = Preference(requireActivity())
-          preference.title = it.name
-          preference.key = it.address
-          deviceCategory!!.addPreference(preference)
+    PreferenceFragmentCompat() {
+    private var mListener = listener
+    private var mTextureView: TextureView? = null
+    val textureView: TextureView
+        get() {
+            return mTextureView ?: throw AssertionError("texture view is null")
         }
-      }
-      val ts = BluetoothClient.read(it)
-      requireActivity().runOnUiThread {
-        (requireActivity() as QrCodeScanActivity).also {
-          it.testStatus = TestStatus(ts, getAttestation = false)
-          it.testStatus.sequence = TestSequenceId.START
-          it.testStatus.nextTestActivity(requireActivity())
+    var psmPreference: EditTextPreference? = null
+    var deviceCategory: PreferenceCategory? = null
+
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.preferences_evaluated_scan, rootKey)
+        psmPreference = findPreference("PSM")
+        deviceCategory = findPreference("Devices")!!
+
+        psmPreference?.setOnPreferenceChangeListener { p, value ->
+            p.summary = value as String
+            true
         }
-      }
     }
-  }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val layoutPreference = findPreference("qr_code") as LayoutPreference?
+        mTextureView = layoutPreference!!.findViewById<TextureView>(R.id.preview_view)
+        textureView.surfaceTextureListener = mListener
+        textureView.outlineProvider = object : ViewOutlineProvider() {
+            override fun getOutline(view: View, outline: Outline) {
+                outline.setRoundRect(0, 0, view.width, view.height, 12f)
+            }
+        }
+        textureView.clipToOutline = true
+    }
+
+    fun setConnectionData(connectionData: BluetoothConnectionData) {
+        BluetoothClient.connectionData = connectionData
+        BluetoothClient.start() {
+            Log.d(TAG, "Found device ${it.name}")
+            requireActivity().runOnUiThread() {
+                if (deviceCategory!!.findPreference<Preference>(it.address) == null) {
+                    val preference = Preference(requireActivity())
+                    preference.title = it.name
+                    preference.key = it.address
+                    deviceCategory!!.addPreference(preference)
+                }
+            }
+            val ts = BluetoothClient.read(it)
+            requireActivity().runOnUiThread {
+                (requireActivity() as QrCodeScanActivity).also {
+                    it.testStatus = TestStatus(ts, getAttestation = false)
+                    it.testStatus.sequence = TestSequenceId.START
+                    it.testStatus.nextTestActivity(requireActivity())
+                }
+            }
+        }
+    }
 }
 
 class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
-  TextureView.SurfaceTextureListener,
-  QrCamera.ScannerCallback {
-  private var mFragment = QrCodeScanFragment(this)
-  private var mCamera = QrCamera(this, this)
-  var testStatus: TestStatus = TestStatus()
+    TextureView.SurfaceTextureListener,
+    QrCamera.ScannerCallback {
+    private var mFragment = QrCodeScanFragment(this)
+    private var mCamera = QrCamera(this, this)
+    var testStatus: TestStatus = TestStatus()
 
-  private val permissions = PermissionsHelper(this,
-    arrayOf(
-      Manifest.permission.CAMERA,
-      Manifest.permission.BLUETOOTH_ADVERTISE,
-      Manifest.permission.BLUETOOTH_CONNECT,
-      Manifest.permission.BLUETOOTH_SCAN)
-  ) { onPermissionsGranted() }
+    private val permissions = PermissionsHelper(this,
+        arrayOf(
+            Manifest.permission.CAMERA,
+            Manifest.permission.BLUETOOTH_ADVERTISE,
+            Manifest.permission.BLUETOOTH_CONNECT,
+            Manifest.permission.BLUETOOTH_SCAN)
+    ) { onPermissionsGranted() }
 
-  override fun onResume() {
-    super.onResume()
-    permissions.requestPermissions()
-  }
-
-  private fun onPermissionsGranted() {
-    supportFragmentManager.commit {
-      setReorderingAllowed(true)
-      add(R.id.fragment_container_view, mFragment)
+    override fun onResume() {
+        super.onResume()
+        permissions.requestPermissions()
     }
-  }
 
-  override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
-    mCamera.start(surface)
-  }
-
-  override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, width: Int, height: Int) {}
-
-  override fun onSurfaceTextureDestroyed(surface: SurfaceTexture): Boolean {
-    mCamera.stop()
-    return true
-  }
-
-  override fun onSurfaceTextureUpdated(surface: SurfaceTexture) {}
-
-  override fun handleCameraFailure() {
-    mCamera.stop()
-  }
-
-  override fun getViewSize(): Size {
-    return Size(mFragment.textureView.width, mFragment.textureView.height)
-  }
-
-  override fun getFramePosition(previewSize: Size, cameraOrientation: Int): Rect {
-    return Rect(0, 0, previewSize.height, previewSize.height)
-  }
-
-  override fun setTransform(transform: Matrix?) {
-    mFragment.textureView.setTransform(transform)
-  }
-
-  override fun isValid(qrCode: String?): Boolean {
-    try {
-      var connectionData = BluetoothConnectionData(qrCode!!)
-
-      // The code is valid. Buzz the user
-      runOnUiThread {
-        getSystemService<Vibrator>(this, Vibrator::class.java)!!.vibrate(
-          VibrationEffect.createOneShot(
-            500,
-            VibrationEffect.DEFAULT_AMPLITUDE
-          )
-        )
-        mFragment.psmPreference!!.summary = connectionData.psm.toString()
-      }
-      return true
-    } catch (ex: TestStatus.TSException) {
-      return false
+    private fun onPermissionsGranted() {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            add(R.id.fragment_container_view, mFragment)
+        }
     }
-  }
 
-  override fun handleSuccessfulResult(qrCode: String?) {
-    mFragment.setConnectionData(BluetoothConnectionData(qrCode!!))
-  }
+    override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
+        mCamera.start(surface)
+    }
+
+    override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, width: Int, height: Int) {}
+
+    override fun onSurfaceTextureDestroyed(surface: SurfaceTexture): Boolean {
+        mCamera.stop()
+        return true
+    }
+
+    override fun onSurfaceTextureUpdated(surface: SurfaceTexture) {}
+
+    override fun handleCameraFailure() {
+        mCamera.stop()
+    }
+
+    override fun getViewSize(): Size {
+        return Size(mFragment.textureView.width, mFragment.textureView.height)
+    }
+
+    override fun getFramePosition(previewSize: Size, cameraOrientation: Int): Rect {
+        return Rect(0, 0, previewSize.height, previewSize.height)
+    }
+
+    override fun setTransform(transform: Matrix?) {
+        mFragment.textureView.setTransform(transform)
+    }
+
+    override fun isValid(qrCode: String?): Boolean {
+        try {
+            var connectionData = BluetoothConnectionData(qrCode!!)
+
+            // The code is valid. Buzz the user
+            runOnUiThread {
+                getSystemService<Vibrator>(this, Vibrator::class.java)!!.vibrate(
+                    VibrationEffect.createOneShot(
+                        500,
+                        VibrationEffect.DEFAULT_AMPLITUDE
+                    )
+                )
+                mFragment.psmPreference!!.summary = connectionData.psm.toString()
+            }
+            return true
+        } catch (ex: TestStatus.TSException) {
+            return false
+        }
+    }
+
+    override fun handleSuccessfulResult(qrCode: String?) {
+        mFragment.setConnectionData(BluetoothConnectionData(qrCode!!))
+    }
 }

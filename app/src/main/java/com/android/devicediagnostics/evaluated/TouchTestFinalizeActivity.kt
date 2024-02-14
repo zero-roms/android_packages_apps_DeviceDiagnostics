@@ -27,31 +27,31 @@ import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
 class TouchTestFinalizeFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
 
-  override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-    setPreferencesFromResource(R.xml.preferences_evaluated_touch_test_finalize, rootKey)
-    findPreference<Preference>("Continue")?.setOnPreferenceClickListener {
-      testStatus.nextTestActivity(activity!!)
-      true
-    }
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.preferences_evaluated_touch_test_finalize, rootKey)
+        findPreference<Preference>("Continue")?.setOnPreferenceClickListener {
+            testStatus.nextTestActivity(activity!!)
+            true
+        }
 
-    findPreference<Preference>(if (testStatus.touchTest) "Good" else "Bad")?.isVisible = true
-  }
+        findPreference<Preference>(if (testStatus.touchTest) "Good" else "Bad")?.isVisible = true
+    }
 }
 
 class TouchTestFinalizeActivity : CollapsingToolbarBaseActivity() {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_one_fragment)
-    setTitle(R.string.touch_test_title)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_one_fragment)
+        setTitle(R.string.touch_test_title)
 
-    if (savedInstanceState == null) {
-      supportFragmentManager.commit {
-        setReorderingAllowed(true)
-        add(
-          R.id.fragment_container_view,
-          TouchTestFinalizeFragment(TestStatus(intent!!.extras!!))
-        )
-      }
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add(
+                    R.id.fragment_container_view,
+                    TouchTestFinalizeFragment(TestStatus(intent!!.extras!!))
+                )
+            }
+        }
     }
-  }
 }

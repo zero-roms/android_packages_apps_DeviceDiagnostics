@@ -27,35 +27,35 @@ import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 
 class QrDisplayFragment(private var testStatus: TestStatus) : PreferenceFragmentCompat() {
-  override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-    setPreferencesFromResource(R.xml.preferences_evaluated_qr_display, rootKey)
-    findPreference<Preference>("Done")?.setOnPreferenceClickListener {
-      requireActivity().finishAffinity()
-      true
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.preferences_evaluated_qr_display, rootKey)
+        findPreference<Preference>("Done")?.setOnPreferenceClickListener {
+            requireActivity().finishAffinity()
+            true
+        }
     }
-  }
 
-  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    Thread {
-      testStatus.attestation = getAttestation(testStatus.challenge)
-      BluetoothClient.write(testStatus.toString(putAttestation = true))
-    }.start()
-  }
+        Thread {
+            testStatus.attestation = getAttestation(testStatus.challenge)
+            BluetoothClient.write(testStatus.toString(putAttestation = true))
+        }.start()
+    }
 }
 
 class QrDisplayActivity : FragmentActivity(R.layout.activity_one_fragment) {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    if (savedInstanceState == null) {
-      supportFragmentManager.commit {
-        setReorderingAllowed(true)
-        add(
-          R.id.fragment_container_view,
-          QrDisplayFragment(TestStatus(intent!!.extras!!))
-        )
-      }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add(
+                    R.id.fragment_container_view,
+                    QrDisplayFragment(TestStatus(intent!!.extras!!))
+                )
+            }
+        }
     }
-  }
 }

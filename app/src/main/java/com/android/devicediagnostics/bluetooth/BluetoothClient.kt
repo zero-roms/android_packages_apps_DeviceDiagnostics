@@ -28,74 +28,75 @@ import android.os.ParcelUuid
 import android.util.Log
 
 private const val TAG = "BluetoothClient"
+
 object BluetoothClient {
-  var connectionData: BluetoothConnectionData? = null
+    var connectionData: BluetoothConnectionData? = null
 
-  fun start(foundDevice: (device: BluetoothDevice) -> Unit) {
-    foundDevice_ = foundDevice
-    scanner = adapter.bluetoothLeScanner
-    scanCallback = DeviceScanCallback()
+    fun start(foundDevice: (device: BluetoothDevice) -> Unit) {
+        foundDevice_ = foundDevice
+        scanner = adapter.bluetoothLeScanner
+        scanCallback = DeviceScanCallback()
 
-    val filters = listOf(ScanFilter.Builder()
-      .setServiceUuid(ParcelUuid(SERVICE_UUID))
-      .build())
-    val settings = ScanSettings.Builder()
-      .setScanMode(ScanSettings.SCAN_MODE_LOW_POWER)
-      .build()
-    scanner!!.startScan(filters, settings, scanCallback)
-    Log.d(TAG, "Started scan $scanner");
-  }
-
-  fun read(device: BluetoothDevice): String {
-    stopScanning()
-    socket = device.createInsecureL2capChannel(connectionData!!.psm)
-    socket!!.connect()
-    var input = socket!!.inputStream
-    var b = ByteArray(0)
-    while (true) {
-      val chunk = ByteArray(CHUNK)
-      val size = input.read(chunk)
-      b += chunk.slice(IntRange(0, size - 1))
-      if (size < CHUNK) break;
-    }
-    Log.d(TAG, "read ${b.size} ${b!!.toString(Charsets.UTF_8)}")
-    return b!!.toString(Charsets.UTF_8)
-  }
-
-  fun write(s: String) {
-    var output = socket!!.outputStream
-    output.write(s.toByteArray(Charsets.UTF_8))
-    Log.d(TAG, "wrote ${s}")
-  }
-
-  private var socket: BluetoothSocket? = null
-  private var foundDevice_: ((BluetoothDevice) -> Unit)? = null
-  private val adapter = BluetoothAdapter.getDefaultAdapter()
-  private var scanner: BluetoothLeScanner? = null
-  private var scanCallback : DeviceScanCallback? = null
-
-  private fun stopScanning() {
-    Log.d(TAG, "stopped scan");
-    scanner?.stopScan(scanCallback)
-    adapter.cancelDiscovery()
-  }
-
-  private class DeviceScanCallback : ScanCallback() {
-    override fun onBatchScanResults(results: List<ScanResult>) {
-      super.onBatchScanResults(results)
-      for (item in results) {
-        item.device?.let { foundDevice_!!(it) }
-      }
+        val filters = listOf(ScanFilter.Builder()
+            .setServiceUuid(ParcelUuid(SERVICE_UUID))
+            .build())
+        val settings = ScanSettings.Builder()
+            .setScanMode(ScanSettings.SCAN_MODE_LOW_POWER)
+            .build()
+        scanner!!.startScan(filters, settings, scanCallback)
+        Log.d(TAG, "Started scan $scanner");
     }
 
-    override fun onScanResult(callbackType: Int, result: ScanResult) {
-      super.onScanResult(callbackType, result)
-      result.device?.let { foundDevice_!!(it) }
+    fun read(device: BluetoothDevice): String {
+        stopScanning()
+        socket = device.createInsecureL2capChannel(connectionData!!.psm)
+        socket!!.connect()
+        var input = socket!!.inputStream
+        var b = ByteArray(0)
+        while (true) {
+            val chunk = ByteArray(CHUNK)
+            val size = input.read(chunk)
+            b += chunk.slice(IntRange(0, size - 1))
+            if (size < CHUNK) break;
+        }
+        Log.d(TAG, "read ${b.size} ${b!!.toString(Charsets.UTF_8)}")
+        return b!!.toString(Charsets.UTF_8)
     }
 
-    override fun onScanFailed(errorCode: Int) {
-      super.onScanFailed(errorCode)
-      Log.d(TAG, "Scan failed with error: $errorCode")
+    fun write(s: String) {
+        var output = socket!!.outputStream
+        output.write(s.toByteArray(Charsets.UTF_8))
+        Log.d(TAG, "wrote ${s}")
     }
-  }
+
+    private var socket: BluetoothSocket? = null
+    private var foundDevice_: ((BluetoothDevice) -> Unit)? = null
+    private val adapter = BluetoothAdapter.getDefaultAdapter()
+    private var scanner: BluetoothLeScanner? = null
+    private var scanCallback: DeviceScanCallback? = null
+
+    private fun stopScanning() {
+        Log.d(TAG, "stopped scan");
+        scanner?.stopScan(scanCallback)
+        adapter.cancelDiscovery()
+    }
+
+    private class DeviceScanCallback : ScanCallback() {
+        override fun onBatchScanResults(results: List<ScanResult>) {
+            super.onBatchScanResults(results)
+            for (item in results) {
+                item.device?.let { foundDevice_!!(it) }
+            }
+        }
+
+        override fun onScanResult(callbackType: Int, result: ScanResult) {
+            super.onScanResult(callbackType, result)
+            result.device?.let { foundDevice_!!(it) }
+        }
+
+        override fun onScanFailed(errorCode: Int) {
+            super.onScanFailed(errorCode)
+            Log.d(TAG, "Scan failed with error: $errorCode")
+        }
+    }
 }

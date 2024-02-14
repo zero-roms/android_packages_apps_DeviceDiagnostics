@@ -24,52 +24,56 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 
 class PermissionsHelper(private val activity: ComponentActivity,
-  private val permissions: Array<String>,
-  private val onPermissionsGranted: () -> Unit) {
-  private var permissionsDeniedOnce = false
-  private val requestPermissions =
-    activity.registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
-      handlePermissions(permissions)
-    }
-  private var active = false
+    private val permissions: Array<String>,
+    private val onPermissionsGranted: () -> Unit) {
+    private var permissionsDeniedOnce = false
+    private val requestPermissions =
+        activity.registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
+            handlePermissions(permissions)
+        }
+    private var active = false
 
-  private fun handlePermissions(permissions: Map<String, Boolean>) {
-    if (!permissions.entries.all { it.value }) {
-      requestPermissionsAgain()
-      return
+    private fun handlePermissions(permissions: Map<String, Boolean>) {
+        if (!permissions.entries.all { it.value }) {
+            requestPermissionsAgain()
+            return
+        }
+        onPermissionsGranted()
     }
-    onPermissionsGranted()
-  }
 
-  public fun requestPermissions() {
-    if (active) {
-      return
-    }
-    active = true
-    requestPermissions.launch(permissions)
-  }
-
-  private fun requestPermissionsAgain() {
-    val builder = AlertDialog.Builder(activity)
-    builder.setMessage(R.string.grant_eval_permissions_dialog)
-    builder.setNegativeButton(R.string.cancel_button, DialogInterface.OnClickListener { _, _ ->
-      active = false
-      activity.finish()
-    })
-    builder.setPositiveButton(R.string.try_again_button, DialogInterface.OnClickListener { _, _ ->
-      // Android doesn't let apps spam users with repeated permissions requests, so after one failure
-      // we have to direct them to the Settings app to correct things.
-      if (permissionsDeniedOnce) {
-        activity.startActivity(Intent().apply {
-          action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
-          data = Uri.fromParts("package", activity.getString(R.string.package_name), null)
-        })
-        active = false
-      } else {
+    public fun requestPermissions() {
+        if (active) {
+            return
+        }
+        active = true
         requestPermissions.launch(permissions)
-        permissionsDeniedOnce = true
-      }
-    })
-    builder.show()
-  }
+    }
+
+    private fun requestPermissionsAgain() {
+        val builder = AlertDialog.Builder(activity)
+        builder.setMessage(R.string.grant_eval_permissions_dialog)
+        builder.setNegativeButton(R.string.cancel_button, DialogInterface.OnClickListener { _, _ ->
+            active = false
+            activity.finish()
+        })
+        builder.setPositiveButton(R.string.try_again_button,
+            DialogInterface.OnClickListener { _, _ ->
+                // Android doesn't let apps spam users with repeated permissions requests, so after one failure
+                // we have to direct them to the Settings app to correct things.
+                if (permissionsDeniedOnce) {
+                    activity.startActivity(Intent().apply {
+                        action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+                        data =
+                            Uri.fromParts("package",
+                                activity.getString(R.string.package_name),
+                                null)
+                    })
+                    active = false
+                } else {
+                    requestPermissions.launch(permissions)
+                    permissionsDeniedOnce = true
+                }
+            })
+        builder.show()
+    }
 }

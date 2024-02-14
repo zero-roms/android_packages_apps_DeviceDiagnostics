@@ -29,45 +29,45 @@ import com.android.devicediagnostics.bluetooth.BluetoothServer
 import java.lang.Exception
 
 class QrCodeScanFragment() : PreferenceFragmentCompat() {
-  override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-    setPreferencesFromResource(R.xml.preferences_trusted_scan, rootKey)
-  }
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.preferences_trusted_scan, rootKey)
+    }
 }
 
 class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment) {
-  private var mFragment = QrCodeScanFragment()
-  private lateinit var testStatus: TestStatus
+    private var mFragment = QrCodeScanFragment()
+    private lateinit var testStatus: TestStatus
 
-  private val permissions = PermissionsHelper(this,
-    arrayOf(
-      Manifest.permission.CAMERA,
-      Manifest.permission.BLUETOOTH_ADVERTISE,
-      Manifest.permission.BLUETOOTH_CONNECT,
-      Manifest.permission.BLUETOOTH_SCAN)
-  ) { onPermissionsGranted() }
+    private val permissions = PermissionsHelper(this,
+        arrayOf(
+            Manifest.permission.CAMERA,
+            Manifest.permission.BLUETOOTH_ADVERTISE,
+            Manifest.permission.BLUETOOTH_CONNECT,
+            Manifest.permission.BLUETOOTH_SCAN)
+    ) { onPermissionsGranted() }
 
-  private fun onPermissionsGranted() {
-    supportFragmentManager.commit {
-      setReorderingAllowed(true)
-      add(R.id.fragment_container_view, mFragment)
-    }
-    Thread {
-      val ts = BluetoothServer.read()
-      try {
-        testStatus = TestStatus(ts, getAttestation = true)
-        runOnUiThread {
-          Intent(this, DisplayResultActivity::class.java).also {
-            testStatus.write(it)
-            startActivity(it)
-          }
+    private fun onPermissionsGranted() {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            add(R.id.fragment_container_view, mFragment)
         }
-      } catch ( _ : Exception ) {
-      }
-    }.start()
-  }
+        Thread {
+            val ts = BluetoothServer.read()
+            try {
+                testStatus = TestStatus(ts, getAttestation = true)
+                runOnUiThread {
+                    Intent(this, DisplayResultActivity::class.java).also {
+                        testStatus.write(it)
+                        startActivity(it)
+                    }
+                }
+            } catch (_: Exception) {
+            }
+        }.start()
+    }
 
-  override fun onResume() {
-    super.onResume()
-    permissions.requestPermissions()
-  }
+    override fun onResume() {
+        super.onResume()
+        permissions.requestPermissions()
+    }
 }
