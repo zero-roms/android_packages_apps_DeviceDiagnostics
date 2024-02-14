@@ -41,6 +41,7 @@ import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestSequenceId
 import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.bluetooth.BluetoothClient
+import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
 import com.android.settingslib.qrcode.QrCamera
 import com.android.settingslib.widget.LayoutPreference
 
@@ -54,41 +55,17 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
     get() {
       return mTextureView ?: throw AssertionError("texture view is null")
     }
-  private var psmPreference: EditTextPreference? = null
+  var psmPreference: EditTextPreference? = null
+  var deviceCategory: PreferenceCategory? = null
 
   override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
     setPreferencesFromResource(R.xml.preferences_evaluated_scan, rootKey)
-    psmPreference = findPreference<EditTextPreference>("PSM")
-    val deviceCategory = findPreference<PreferenceCategory>("Devices")!!
+    psmPreference = findPreference("PSM")
+    deviceCategory = findPreference("Devices")!!
 
     psmPreference?.setOnPreferenceChangeListener { p, value ->
       p.summary = value as String
       true
-    }
-
-    BluetoothClient.start() {
-      requireActivity().runOnUiThread() {
-        Log.d(TAG, "Found device ${it.name}")
-
-        if (deviceCategory.findPreference<Preference>(it.address) == null) {
-          val preference = Preference(requireActivity())
-          preference.title = it.name
-          preference.key = it.address
-          preference.setOnPreferenceClickListener { _ ->
-            Thread {
-              val ts = BluetoothClient.read(it, psmPreference!!.summary.toString().toInt())
-              requireActivity().runOnUiThread {
-                (requireActivity() as QrCodeScanActivity).also {
-                  it.testStatus = TestStatus(ts, getAttestation = false)
-                  it.handleSuccessfulResult("")
-                }
-              }
-            }.start()
-            true
-          }
-          deviceCategory.addPreference(preference)
-        }
-      }
     }
   }
 
@@ -103,6 +80,29 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
       }
     }
     textureView.clipToOutline = true
+  }
+
+  fun setConnectionData(connectionData: BluetoothConnectionData) {
+    BluetoothClient.connectionData = connectionData
+    BluetoothClient.start() {
+      Log.d(TAG, "Found device ${it.name}")
+      requireActivity().runOnUiThread() {
+        if (deviceCategory!!.findPreference<Preference>(it.address) == null) {
+          val preference = Preference(requireActivity())
+          preference.title = it.name
+          preference.key = it.address
+          deviceCategory!!.addPreference(preference)
+        }
+      }
+      val ts = BluetoothClient.read(it)
+      requireActivity().runOnUiThread {
+        (requireActivity() as QrCodeScanActivity).also {
+          it.testStatus = TestStatus(ts, getAttestation = false)
+          it.testStatus.sequence = TestSequenceId.START
+          it.testStatus.nextTestActivity(requireActivity())
+        }
+      }
+    }
   }
 }
 
@@ -120,10 +120,6 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
       Manifest.permission.BLUETOOTH_CONNECT,
       Manifest.permission.BLUETOOTH_SCAN)
   ) { onPermissionsGranted() }
-
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-  }
 
   override fun onResume() {
     super.onResume()
@@ -168,7 +164,7 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
 
   override fun isValid(qrCode: String?): Boolean {
     try {
-      testStatus = TestStatus(qrCode, getAttestation = false)
+      var connectionData = BluetoothConnectionData(qrCode!!)
 
       // The code is valid. Buzz the user
       runOnUiThread {
@@ -178,6 +174,7 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
             VibrationEffect.DEFAULT_AMPLITUDE
           )
         )
+        mFragment.psmPreference!!.summary = connectionData.psm.toString()
       }
       return true
     } catch (ex: TestStatus.TSException) {
@@ -186,7 +183,6 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
   }
 
   override fun handleSuccessfulResult(qrCode: String?) {
-    testStatus.sequence = TestSequenceId.START
-    testStatus.nextTestActivity(this)
+    mFragment.setConnectionData(BluetoothConnectionData(qrCode!!))
   }
 }

@@ -26,22 +26,37 @@ import android.bluetooth.le.BluetoothLeAdvertiser
 import android.os.ParcelUuid
 import android.util.Log
 import java.util.UUID
+import org.json.JSONObject
 
 val SERVICE_UUID: UUID = UUID.fromString("0000b81d-0000-1000-8000-00805f9b34fb")
 private const val TAG = "BluetoothServer"
 const val CHUNK = 4096
+
+private const val PSM = "PSM"
+class BluetoothConnectionData(var psm: Int = 0) {
+  constructor(json: String) : this() {
+    val json = JSONObject(json)
+    psm = json.getInt(PSM)
+  }
+  override fun toString(): String {
+    val json = JSONObject()
+    json.put(PSM, psm)
+    return json.toString()
+  }
+}
+
 object BluetoothServer {
   private val adapter: BluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
   private var serverSocket: BluetoothServerSocket? = null
   private var socket: BluetoothSocket? = null
-  var psm = 0
+  var connectionData = BluetoothConnectionData()
     private set
 
-  fun start(string: String) {
+  fun start(string: String, written: ()->Unit = {}) {
     startAdvertisement()
     serverSocket = adapter.listenUsingInsecureL2capChannel()
     Log.d(TAG, "Server started with psm ${serverSocket?.psm}")
-    psm = serverSocket!!.psm
+    connectionData.psm = serverSocket!!.psm
 
     Thread {
       socket = serverSocket!!.accept()
@@ -49,6 +64,7 @@ object BluetoothServer {
       var output = socket!!.outputStream
       output.write(string.toByteArray(Charsets.UTF_8))
       Log.d(TAG, "wrote $string")
+      written()
     }.start()
   }
 
@@ -72,6 +88,7 @@ object BluetoothServer {
     .build()
   private var advertiseData = AdvertiseData.Builder()
     .addServiceUuid(ParcelUuid(SERVICE_UUID))
+//    .addServiceSolicitationUuid(ParcelUuid(connectionData.solicitationUuid))
     .setIncludeDeviceName(true).build()
 
   private var advertiseCallback: AdvertiseCallback? = null

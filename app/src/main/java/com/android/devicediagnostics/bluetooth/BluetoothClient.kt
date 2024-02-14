@@ -29,17 +29,26 @@ import android.util.Log
 
 private const val TAG = "BluetoothClient"
 object BluetoothClient {
+  var connectionData: BluetoothConnectionData? = null
+
   fun start(foundDevice: (device: BluetoothDevice) -> Unit) {
     foundDevice_ = foundDevice
     scanner = adapter.bluetoothLeScanner
     scanCallback = DeviceScanCallback()
-    scanner!!.startScan(scanFilters, scanSettings, scanCallback)
+
+    val filters = listOf(ScanFilter.Builder()
+      .setServiceUuid(ParcelUuid(SERVICE_UUID))
+      .build())
+    val settings = ScanSettings.Builder()
+      .setScanMode(ScanSettings.SCAN_MODE_LOW_POWER)
+      .build()
+    scanner!!.startScan(filters, settings, scanCallback)
     Log.d(TAG, "Started scan $scanner");
   }
 
-  fun read(device: BluetoothDevice, psm: Int): String {
+  fun read(device: BluetoothDevice): String {
     stopScanning()
-    socket = device.createInsecureL2capChannel(psm)
+    socket = device.createInsecureL2capChannel(connectionData!!.psm)
     socket!!.connect()
     var input = socket!!.inputStream
     var b = ByteArray(0)
@@ -63,15 +72,6 @@ object BluetoothClient {
   private var foundDevice_: ((BluetoothDevice) -> Unit)? = null
   private val adapter = BluetoothAdapter.getDefaultAdapter()
   private var scanner: BluetoothLeScanner? = null
-  private val scanFilters: List<ScanFilter> = listOf(
-    ScanFilter.Builder()
-      .setServiceUuid(ParcelUuid(SERVICE_UUID))
-      .build())
-
-  private val scanSettings: ScanSettings = ScanSettings.Builder()
-    .setScanMode(ScanSettings.SCAN_MODE_LOW_POWER)
-    .build()
-
   private var scanCallback : DeviceScanCallback? = null
 
   private fun stopScanning() {

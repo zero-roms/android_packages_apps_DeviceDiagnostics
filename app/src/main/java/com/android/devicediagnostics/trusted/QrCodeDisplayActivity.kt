@@ -28,6 +28,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
+import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
 import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.widget.LayoutPreference
 import com.google.zxing.BarcodeFormat
@@ -36,10 +37,10 @@ import kotlin.random.Random
 
 private const val BITMAP_SIZE = 512
 
-private fun displayQrCode(testStatus: TestStatus) : Bitmap {
+private fun displayQrCode(connectionData: BluetoothConnectionData) : Bitmap {
 
     val writer = QRCodeWriter()
-    val bitMatrix = writer.encode(testStatus.toString(putAttestation = false),
+    val bitMatrix = writer.encode(connectionData.toString(),
                                   BarcodeFormat.QR_CODE, BITMAP_SIZE, BITMAP_SIZE)
     val bmp = Bitmap.createBitmap(BITMAP_SIZE, BITMAP_SIZE, Bitmap.Config.RGB_565)
     for (x in 0 until BITMAP_SIZE)
@@ -52,7 +53,14 @@ class QrCodeDisplayFragment : PreferenceFragmentCompat() {
     private var testStatus = TestStatus(challenge = Random.nextBytes(32))
 
     init {
-      BluetoothServer.start(testStatus.toString(putAttestation = false))
+      BluetoothServer.start(testStatus.toString(putAttestation = false)) {
+          requireActivity().runOnUiThread() {
+              Intent(activity, QrCodeScanActivity::class.java).also {
+                  testStatus.write(it)
+                  startActivity(it)
+              }
+          }
+      }
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -65,13 +73,13 @@ class QrCodeDisplayFragment : PreferenceFragmentCompat() {
             true
         }
 
-        findPreference<Preference>("PSM")!!.summary = BluetoothServer.psm.toString()
+        findPreference<Preference>("PSM")!!.summary = BluetoothServer.connectionData.psm.toString()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bmp = displayQrCode(testStatus)
+        val bmp = displayQrCode(BluetoothServer.connectionData)
 
         val layoutPreference = findPreference( "qr_code" ) as LayoutPreference?
         val image = layoutPreference?.findViewById<ImageView>(R.id.qrCode)
