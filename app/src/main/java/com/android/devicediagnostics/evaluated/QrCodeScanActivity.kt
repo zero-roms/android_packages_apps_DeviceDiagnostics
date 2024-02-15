@@ -118,7 +118,8 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
             Manifest.permission.CAMERA,
             Manifest.permission.BLUETOOTH_ADVERTISE,
             Manifest.permission.BLUETOOTH_CONNECT,
-            Manifest.permission.BLUETOOTH_SCAN)
+            Manifest.permission.BLUETOOTH_SCAN,
+            Manifest.permission.ACCESS_FINE_LOCATION)
     ) { onPermissionsGranted() }
 
     override fun onResume() {
