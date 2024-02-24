@@ -55,18 +55,11 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
         get() {
             return mTextureView ?: throw AssertionError("texture view is null")
         }
-    var psmPreference: EditTextPreference? = null
     var deviceCategory: PreferenceCategory? = null
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_scan, rootKey)
-        psmPreference = findPreference("PSM")
         deviceCategory = findPreference("Devices")!!
-
-        psmPreference?.setOnPreferenceChangeListener { p, value ->
-            p.summary = value as String
-            true
-        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -175,7 +168,6 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
                         VibrationEffect.DEFAULT_AMPLITUDE
                     )
                 )
-                mFragment.psmPreference!!.summary = connectionData.psm.toString()
             }
             return true
         } catch (ex: TestStatus.TSException) {

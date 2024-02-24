@@ -18,10 +18,6 @@
       app:summary="Once you have successfully scanned the QR code, this device will automatically
 start a series of tests." />
 
-  <EditTextPreference
-      app:key="PSM"
-      app:title="Enter PSM" />
-
   <PreferenceCategory
       app:key="Devices"
       app:summary="Alternatively select the device from the list below"

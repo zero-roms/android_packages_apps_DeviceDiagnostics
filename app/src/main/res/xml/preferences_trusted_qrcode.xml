@@ -14,11 +14,4 @@
         app:key="Continue"
         app:title="Continue"
         app:summary="Follow the prompts on the evaluated device. When prompted, press here to continue on this device"/>
-
-
-
-  <Preference
-      app:key="PSM"
-      app:title="PSM"
-      app:selectable="false"/>
 </PreferenceScreen>

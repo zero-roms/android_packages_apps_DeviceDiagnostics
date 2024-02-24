@@ -72,8 +72,6 @@ class QrCodeDisplayFragment : PreferenceFragmentCompat() {
             }
             true
         }
-
-        findPreference<Preference>("PSM")!!.summary = BluetoothServer.connectionData.psm.toString()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
