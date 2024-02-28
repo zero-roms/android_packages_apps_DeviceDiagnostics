@@ -151,7 +151,11 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
     }
 
     private fun onAttestationError() {
-        findPreference<Preference>("failure")?.also {
+        findPreference<Preference>("retry_failure")?.also {
+            it.setOnPreferenceClickListener {
+                verifyAttestation()
+                true
+            }
             it.isVisible = true
         }
     }
