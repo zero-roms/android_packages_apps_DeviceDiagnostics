@@ -16,4 +16,9 @@
         android:targetClass="com.android.devicediagnostics.evaluated.QrCodeScanActivity"
         android:targetPackage="@string/package_name" />
   </Preference>
+
+  <Preference
+      app:key="bluetooth_disabled"
+      app:title="Please enable bluetooth to continue"
+      app:isPreferenceVisible="false" />
 </PreferenceScreen>

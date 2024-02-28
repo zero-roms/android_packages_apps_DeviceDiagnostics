@@ -48,11 +48,12 @@ class BluetoothConnectionData(var psm: Int = 0) {
 }
 
 object BluetoothServer {
-    private val adapter: BluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
+    private val adapter get() = BluetoothAdapter.getDefaultAdapter()
     private var serverSocket: BluetoothServerSocket? = null
     private var socket: BluetoothSocket? = null
     var connectionData = BluetoothConnectionData()
         private set
+    val bluetoothEnabled get() = adapter.isEnabled
 
     fun start(string: String, written: () -> Unit = {}) {
         startAdvertisement()
