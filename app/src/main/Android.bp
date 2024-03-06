@@ -4,7 +4,6 @@ package {
 
 android_app {
     name: "DeviceDiagnostics",
-    // Only compile source java files in this apk.
     privileged: true,
     platform_apis: true,
     srcs: ["java/**/*.kt"],
@@ -33,5 +32,6 @@ android_app {
         "SettingsLib",
         "android-key-attestation",
         "gson",
+        "DeviceDiagnosticsLib",
     ],
 }

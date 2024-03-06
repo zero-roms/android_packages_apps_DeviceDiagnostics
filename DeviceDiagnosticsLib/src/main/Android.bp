@@ -1,0 +1,35 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+android_library {
+    name: "DeviceDiagnosticsLib",
+    platform_apis: true,
+    srcs: ["java/**/*.kt"],
+    static_libs: [
+        "PlatformComposeCore",
+        "androidx.activity_activity-compose",
+        "androidx.appcompat_appcompat",
+        "androidx.compose.animation_animation-core",
+        "androidx.compose.foundation_foundation",
+        "androidx.compose.material3_material3",
+        "androidx.compose.material_material-icons-core",
+        "androidx.compose.material_material-icons-extended",
+        "androidx.compose.runtime_runtime",
+        "androidx.compose.ui_ui",
+        "androidx.compose.ui_ui-tooling",
+        "androidx.core_core-ktx",
+        "androidx.credentials_credentials",
+        "androidx.lifecycle_lifecycle-extensions",
+        "androidx.lifecycle_lifecycle-livedata",
+        "androidx.lifecycle_lifecycle-runtime-ktx",
+        "androidx.lifecycle_lifecycle-viewmodel-compose",
+        "androidx.recyclerview_recyclerview",
+        "kotlinx-coroutines-core",
+        "kotlin-reflect",
+        "zxing-core-1.7",
+        "SettingsLib",
+        "android-key-attestation",
+        "gson",
+    ],
+}

@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "DeviceDiagnostics"
 include(":app")
+include(":DeviceDiagnosticsLib")

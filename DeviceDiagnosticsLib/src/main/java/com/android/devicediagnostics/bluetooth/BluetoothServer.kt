@@ -102,7 +102,7 @@ object BluetoothServer {
 
     private fun startAdvertisement() {
         advertiser = adapter.bluetoothLeAdvertiser
-        Log.d(TAG, "startAdvertisement: with advertiser ${advertiser}")
+        Log.d(TAG, "startAdvertisement: with advertiser $advertiser")
 
         advertiseCallback = DeviceAdvertiseCallback()
         advertiser!!.startAdvertising(advertiseSettings, advertiseData, advertiseCallback)
