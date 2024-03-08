@@ -16,10 +16,6 @@
 
 package com.android.devicediagnostics
 
-import android.app.Activity
-import android.content.ComponentName
-import android.content.Intent
-import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ActivityScenario.launch
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Assert.*
@@ -32,12 +28,9 @@ class MainActivityKtTest {
 
   @Test
   fun testTitle() {
-    val intent = Intent()
-    intent.component = ComponentName("com.android.devicediagnostics",
-                                     "com.android.devicediagnostics.MainActivity")
-    val activityScenario: ActivityScenario<Activity> = launch(intent)
+    val activityScenario = launch(MainActivity::class.java)
     activityScenario.onActivity {activity ->
-      assertEquals("Device Diagnostics", activity.title)
+      assertEquals(activity.title, "Device Diagnostics")
     }
   }
 }

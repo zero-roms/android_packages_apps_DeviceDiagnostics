@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.android.devicediagnostics">
+
+    <uses-sdk android:minSdkVersion="34" android:targetSdkVersion="34" />
+
+    <instrumentation android:name="androidx.test.runner.AndroidJUnitRunner"
+                     android:targetPackage="com.android.devicediagnostics"
+                     android:label="DeviceDiagnosticsTests"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DeviceDiagnostics"
+        android:label="DeviceDiagnosticsTests"
+        android:debuggable="true">
+        <uses-library android:name="android.test.runner"/>
+        <activity
+            android:name="com.android.devicediagnostics.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.android.devicediagnostics.DiagnosticsActivity" />
+        <activity android:name="com.android.devicediagnostics.EvaluationModeActivity" />
+        <activity android:name="com.android.devicediagnostics.trusted.QrCodeDisplayActivity" />
+        <activity android:name="com.android.devicediagnostics.trusted.QrCodeScanActivity" />
+        <activity android:name="com.android.devicediagnostics.trusted.DisplayResultActivity" />
+        <activity android:name="com.android.devicediagnostics.trusted.DisplayAttestationDetailsActivity" />
+        <activity android:name="com.android.devicediagnostics.evaluated.QrCodeScanActivity" />
+        <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestIntroActivity" />
+        <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:noHistory="true"
+            android:excludeFromRecents="true" />
+        <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestFinalizeActivity" />
+        <activity android:name="com.android.devicediagnostics.evaluated.TouchTestIntroActivity" />
+        <activity android:name="com.android.devicediagnostics.evaluated.TouchTestActivity" />
+        <activity android:name="com.android.devicediagnostics.evaluated.TouchTestFinalizeActivity" />
+        <activity android:name="com.android.devicediagnostics.evaluated.QrDisplayActivity" />
+        <activity android:name="com.android.devicediagnostics.evaluated.BatteryActivity" />
+        <activity android:name="com.android.devicediagnostics.evaluated.StorageActivity" />
+    </application>
+</manifest>

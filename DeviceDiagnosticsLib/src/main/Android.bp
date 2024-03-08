@@ -6,6 +6,7 @@ android_library {
     name: "DeviceDiagnosticsLib",
     visibility: [
         "//packages/apps/DeviceDiagnostics/app/src/main",
+        "//packages/apps/DeviceDiagnostics/DeviceDiagnosticsLib/src/androidTest",
     ],
     platform_apis: true,
     srcs: ["java/**/*.kt"],
