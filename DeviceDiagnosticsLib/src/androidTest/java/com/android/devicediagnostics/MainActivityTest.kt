@@ -16,7 +16,13 @@
 
 package com.android.devicediagnostics
 
+import android.app.Activity
 import androidx.test.core.app.ActivityScenario.launch
+import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Assert.*
 
@@ -29,8 +35,12 @@ class MainActivityKtTest {
   @Test
   fun testTitle() {
     val activityScenario = launch(MainActivity::class.java)
-    activityScenario.onActivity {activity ->
+    activityScenario.onActivity {activity : Activity ->
       assertEquals(activity.title, "Device Diagnostics")
     }
+    onView(withText("Evaluation mode")).perform(click())
+    onView(withText("Evaluated Device")).check(matches(isDisplayed()))
+    onView(withText("Evaluated Device")).perform(click())
+    onView(withText("Scan now")).check(matches(isDisplayed()))
   }
 }

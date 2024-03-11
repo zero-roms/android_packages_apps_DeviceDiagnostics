@@ -30,8 +30,9 @@ android_test {
     ],
     static_libs: [
         "androidx.test.core",
+        "androidx.test.espresso.core",
         "androidx.test.ext.junit",
-        "DeviceDiagnosticsLib"
+        "DeviceDiagnosticsLib",
     ],
     libs: [
         "android.test.runner.stubs",
