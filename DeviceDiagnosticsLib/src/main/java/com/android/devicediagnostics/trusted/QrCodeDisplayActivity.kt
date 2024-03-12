@@ -27,6 +27,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
@@ -51,18 +52,16 @@ private fun displayQrCode(connectionData: BluetoothConnectionData) : Bitmap {
     return bmp
 }
 
-class QrCodeDisplayFragment : PreferenceFragmentCompat() {
-    private var testStatus = TestStatus(challenge = Random.nextBytes(32))
-
+class QrCodeDisplayFragment(private var testStatus: TestStatus) : PreferenceFragmentCompat() {
     init {
-      BluetoothServer.start(testStatus.toString(putAttestation = false)) {
-          requireActivity().runOnUiThread() {
-              Intent(activity, QrCodeScanActivity::class.java).also {
-                  testStatus.write(it)
-                  startActivity(it)
-              }
-          }
-      }
+        BluetoothServer.start(testStatus.toString(putAttestation = false)) {
+            requireActivity().runOnUiThread() {
+                Intent(activity, QrCodeScanActivity::class.java).also {
+                    testStatus.write(it)
+                    startActivity(it)
+                }
+            }
+        }
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -99,7 +98,9 @@ class QrCodeDisplayActivity : FragmentActivity(R.layout.activity_one_fragment) {
     private fun onPermissionsGranted() {
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            add(R.id.fragment_container_view, QrCodeDisplayFragment())
+            add(R.id.fragment_container_view, QrCodeDisplayFragment(TestStatus(challenge =
+                             (getApplicationContext() as ApplicationInterface)
+                                 .GetRandomBytes(32))))
         }
     }
 
