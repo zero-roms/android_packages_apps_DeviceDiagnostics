@@ -16,6 +16,7 @@
 
 package com.android.devicediagnostics.trusted
 
+import android.Manifest
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
@@ -26,6 +27,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
@@ -86,13 +88,23 @@ class QrCodeDisplayFragment : PreferenceFragmentCompat() {
 }
 
 class QrCodeDisplayActivity : FragmentActivity(R.layout.activity_one_fragment) {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        if (savedInstanceState == null) {
-            supportFragmentManager.commit {
-                setReorderingAllowed(true)
-                add(R.id.fragment_container_view, QrCodeDisplayFragment())
-            }
+    private val permissions = PermissionsHelper(this,
+        arrayOf(
+            Manifest.permission.BLUETOOTH_ADVERTISE,
+            Manifest.permission.BLUETOOTH_CONNECT,
+            Manifest.permission.BLUETOOTH_SCAN,
+            Manifest.permission.ACCESS_FINE_LOCATION)
+    ) { onPermissionsGranted() }
+
+    private fun onPermissionsGranted() {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            add(R.id.fragment_container_view, QrCodeDisplayFragment())
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        permissions.requestPermissions()
     }
 }
