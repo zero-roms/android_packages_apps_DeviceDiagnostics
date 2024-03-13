@@ -24,6 +24,11 @@
   <string name="trusted_device_summary">Start by selecting this option on a trusted device</string>
   <string name="evaluated_device_title">Evaluated Device</string>
   <string name="evaluated_device_summary">When prompted to do so, select this option on the evaluated device</string>
+  <string name="evaluated_scan_now">Scan now</string>
+  <string name="evaluated_scan_now_summary">Scan the QR code on the trusted device in the rectangle below</string>
+  <string name="evaluated_scan_continue_summary">Once you have successfully scanned the QR code, this device will automatically start a series of tests.</string>
+  <string name="evaluated_scan_select_device_title">Select trusted device</string>
+  <string name="evaluated_scan_select_device_summary">Alternatively select the device from the list below</string>
 
   <!-- Battery screen -->
   <string name="battery_health_title">Health</string>
