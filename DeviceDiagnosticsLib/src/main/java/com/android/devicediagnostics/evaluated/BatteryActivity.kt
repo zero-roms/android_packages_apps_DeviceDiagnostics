@@ -154,8 +154,6 @@ class BatteryActivity : CollapsingToolbarBaseActivity() {
 class BatteryHealthPreference(context: Context, attrs: AttributeSet) :
     UsageProgressBarPreference(context, attrs) {
 
-    fun constructor() {}
-
     val diagnostics: BatteryDiagnostics
         get() = (context as BatteryActivity).diagnostics
 

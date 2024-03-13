@@ -16,7 +16,6 @@
 
 package com.android.devicediagnostics.evaluated
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.commit
 import androidx.preference.Preference
@@ -30,7 +29,7 @@ class TouchTestFinalizeFragment(private val testStatus: TestStatus) : Preference
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_touch_test_finalize, rootKey)
         findPreference<Preference>("Continue")?.setOnPreferenceClickListener {
-            testStatus.nextTestActivity(activity!!)
+            testStatus.nextTestActivity(requireActivity())
             true
         }
 

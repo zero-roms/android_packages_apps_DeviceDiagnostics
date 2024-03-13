@@ -39,7 +39,7 @@ class ScreenTestFinalizeFragment(private var testStatus: TestStatus) : Preferenc
 
     private fun nextActivity(screenTestResult: Boolean) {
         testStatus.screenTest = screenTestResult
-        testStatus.nextTestActivity(activity!!)
+        testStatus.nextTestActivity(requireActivity())
     }
 }
 

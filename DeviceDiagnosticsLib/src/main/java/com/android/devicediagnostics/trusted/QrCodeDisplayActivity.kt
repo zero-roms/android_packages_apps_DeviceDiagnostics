@@ -36,7 +36,6 @@ import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.widget.LayoutPreference
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
-import kotlin.random.Random
 
 private const val BITMAP_SIZE = 512
 

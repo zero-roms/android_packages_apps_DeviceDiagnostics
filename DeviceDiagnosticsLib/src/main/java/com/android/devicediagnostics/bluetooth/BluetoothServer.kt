@@ -36,14 +36,11 @@ private const val PSM = "PSM"
 
 class BluetoothConnectionData(var psm: Int = 0) {
     constructor(json: String) : this() {
-        val json = JSONObject(json)
-        psm = json.getInt(PSM)
+        psm = JSONObject(json).getInt(PSM)
     }
 
     override fun toString(): String {
-        val json = JSONObject()
-        json.put(PSM, psm)
-        return json.toString()
+        return JSONObject().put(PSM, psm).toString()
     }
 }
 
@@ -74,7 +71,7 @@ object BluetoothServer {
     }
 
     fun read(): String {
-        var input = socket!!.inputStream
+        val input = socket!!.inputStream
         var b = ByteArray(0)
         while (true) {
             val chunk = ByteArray(CHUNK)
@@ -82,11 +79,11 @@ object BluetoothServer {
             b += chunk.slice(IntRange(0, size - 1))
             if (size < CHUNK) break;
         }
-        Log.d(TAG, "read: ${b.size} ${b!!.toString(Charsets.UTF_8)}")
+        Log.d(TAG, "read: ${b.size} ${b.toString(Charsets.UTF_8)}")
         socket!!.outputStream.write("Done".toByteArray())
         socket!!.close()
         socket = null
-        return b!!.toString(Charsets.UTF_8)
+        return b.toString(Charsets.UTF_8)
     }
 
     private var advertiser: BluetoothLeAdvertiser? = null

@@ -32,7 +32,6 @@ import android.view.ViewOutlineProvider
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
-import androidx.preference.EditTextPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
@@ -158,21 +157,21 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
 
     override fun isValid(qrCode: String?): Boolean {
         try {
-            var connectionData = BluetoothConnectionData(qrCode!!)
-
-            // The code is valid. Buzz the user
-            runOnUiThread {
-                getSystemService<Vibrator>(this, Vibrator::class.java)!!.vibrate(
-                    VibrationEffect.createOneShot(
-                        500,
-                        VibrationEffect.DEFAULT_AMPLITUDE
-                    )
-                )
-            }
-            return true
+            BluetoothConnectionData(qrCode!!)
         } catch (ex: TestStatus.TSException) {
             return false
         }
+
+        // The code is valid. Buzz the user
+        runOnUiThread {
+            getSystemService<Vibrator>(this, Vibrator::class.java)!!.vibrate(
+                VibrationEffect.createOneShot(
+                    500,
+                    VibrationEffect.DEFAULT_AMPLITUDE
+                )
+            )
+        }
+        return true
     }
 
     override fun handleSuccessfulResult(qrCode: String?) {
