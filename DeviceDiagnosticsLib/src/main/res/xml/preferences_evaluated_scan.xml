@@ -9,17 +9,11 @@
   <com.android.settingslib.widget.LayoutPreference
       android:key="qr_code"
       app:selectable="false"
-      android:layout="@layout/qrcode_scanner" />
+      android:layout="@layout/evaluated_qrcode_scanner" />
 
-  <Preference
-      app:key="Continue"
-      app:title="@string/activity_continue"
+  <com.android.settingslib.widget.LayoutPreference
+      android:key="connection_progress"
       app:selectable="false"
-      app:summary="@string/evaluated_scan_continue_summary" />
-
-  <PreferenceCategory
-      app:key="Devices"
-      app:summary="@string/evaluated_scan_select_device_summary"
-      app:title="@string/evaluated_scan_select_device_title"
-      app:selectable="false"/>
+      app:isPreferenceVisible="false"
+      android:layout="@layout/bluetooth_progress" />
 </PreferenceScreen>
