@@ -66,13 +66,6 @@ class QrCodeDisplayFragment(private var testStatus: TestStatus) : PreferenceFrag
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_trusted_qrcode, rootKey)
-        findPreference<Preference>("Continue")?.setOnPreferenceClickListener {
-            Intent(activity, QrCodeScanActivity::class.java).also {
-                testStatus.write(it)
-                startActivity(it)
-            }
-            true
-        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
