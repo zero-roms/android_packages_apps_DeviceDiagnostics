@@ -21,6 +21,7 @@
 
   <string name="activity_continue">Continue</string>
   <string name="unavailable">Unavailable</string>
+  <string name="bluetooth_connecting">Connecting...</string>
 
   <!-- Main activity -->
   <string name="component_health_title">Component health</string>

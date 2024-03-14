@@ -17,6 +17,7 @@
 package com.android.devicediagnostics.evaluated
 
 import android.Manifest
+import android.bluetooth.BluetoothDevice
 import android.graphics.Matrix
 import android.graphics.Outline
 import android.graphics.Rect
@@ -54,11 +55,9 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
         get() {
             return mTextureView ?: throw AssertionError("texture view is null")
         }
-    var deviceCategory: PreferenceCategory? = null
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_scan, rootKey)
-        deviceCategory = findPreference("Devices")!!
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -76,24 +75,26 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
 
     fun setConnectionData(connectionData: BluetoothConnectionData) {
         BluetoothClient.connectionData = connectionData
+
+        requireActivity().runOnUiThread {
+            val pref = findPreference<Preference>("connection_progress")!!
+            pref.isVisible = true
+        }
+
         BluetoothClient.start() {
             Log.d(TAG, "Found device ${it.name}")
-            requireActivity().runOnUiThread() {
-                if (deviceCategory!!.findPreference<Preference>(it.address) == null) {
-                    val preference = Preference(requireActivity())
-                    preference.title = it.name
-                    preference.key = it.address
-                    deviceCategory!!.addPreference(preference)
-                }
-            }
             val ts = BluetoothClient.read(it)
             requireActivity().runOnUiThread {
-                (requireActivity() as QrCodeScanActivity).also {
-                    it.testStatus = TestStatus(ts, getAttestation = false)
-                    it.testStatus.sequence = TestSequenceId.START
-                    it.testStatus.nextTestActivity(requireActivity())
-                }
+                onDeviceConnected(ts)
             }
+        }
+    }
+
+    private fun onDeviceConnected(ts: String) {
+        (requireActivity() as QrCodeScanActivity).also {
+            it.testStatus = TestStatus(ts, getAttestation = false)
+            it.testStatus.sequence = TestSequenceId.START
+            it.testStatus.nextTestActivity(requireActivity())
         }
     }
 }
