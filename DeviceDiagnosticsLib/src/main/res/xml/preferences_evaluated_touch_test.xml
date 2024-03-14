@@ -2,10 +2,10 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
   <Preference
       app:key="Trusted"
-      app:title="Touch test"
+      app:title="@string/touch_test_title"
       app:selectable="false"
       app:summary="@string/touch_test_summary"/>
   <Preference
       app:key="continue"
-      app:title="Continue"/>
+      app:title="@string/activity_continue"/>
 </PreferenceScreen>
