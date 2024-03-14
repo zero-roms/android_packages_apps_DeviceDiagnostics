@@ -2,9 +2,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <Preference
         app:key="Scan"
-        app:title="Scan now"
+        app:title="@string/trusted_scan_now_title"
         app:selectable="false"
-        app:summary="@string/scan_now"/>
+        app:summary="@string/trusted_scan_now_summary"/>
 
   <com.android.settingslib.widget.LayoutPreference
       android:key="qr_code"
@@ -12,6 +12,6 @@
 
     <Preference
         app:key="Continue"
-        app:title="Continue"
-        app:summary="Follow the prompts on the evaluated device. When prompted, press here to continue on this device"/>
+        app:title="@string/activity_continue"
+        app:summary="@string/trusted_follow_prompts_summary" />
 </PreferenceScreen>

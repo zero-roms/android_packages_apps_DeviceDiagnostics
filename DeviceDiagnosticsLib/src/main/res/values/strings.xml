@@ -70,7 +70,18 @@
   <string name="cancel_button">Cancel</string>
   <string name="try_again_button">Try again</string>
 
-  <!-- Trusted result display -->
+  <!-- Touch test activity -->
+  <string name="touch_test_result_title">Touch test result</string>
+  <string name="touch_test_result_summary">
+    <![CDATA[
+This is the result of the touch test. You can rerun the test by navigating back.
+    ]]>
+  </string>
+  <string name="touch_test_good_title">The touch sensor test passed</string>
+  <string name="touch_test_bad_title">The touch sensor test failed</string>
+
+
+  <!-- Trusted activity -->
   <string name="imei_title">IMEI</string>
   <string name="imei2_title">Second IMEI</string>
   <string name="serial_number_title">Serial number</string>
@@ -88,13 +99,20 @@
   <string name="locked">Locked</string>
   <string name="not_locked">Not locked</string>
   <string name="attestation_challenge_does_not_match">"Attestation challenge does not match"</string>
-  <string name="scan_qr_code">Scan QR code</string>
   <string name="qr_code_description">QR Code</string>
-  <string name="scan_now">
+  <string name="continue_on_evaluated_title">Continue on the device being evaluated</string>
+  <string name="continue_on_evaluated_summary">Complete the tests on the device that you are evaluating, then the results will appear here</string>
+  <string name="trusted_scan_now_title">Scan now</string>
+  <string name="trusted_scan_now_summary">
     <![CDATA[
 On the device you wish to evaluate, go to\n
 Settings/DeviceDiagnostics/Evaluated Device\n
 Follow the prompts on that device.
+  ]]>
+  </string>
+  <string name="trusted_follow_prompts_summary">
+    <![CDATA[
+Follow the prompts on the evaluated device. When prompted, press here to continue on this device.
   ]]>
   </string>
   <string name="screen_test_summary">
