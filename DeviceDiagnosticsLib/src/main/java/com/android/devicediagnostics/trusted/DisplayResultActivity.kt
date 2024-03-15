@@ -28,6 +28,7 @@ import com.android.devicediagnostics.MainActivity
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.getAttestation
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.google.android.attestation.ParsedAttestationRecord
 import java.io.IOException
 
@@ -161,9 +162,11 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
     }
 }
 
-class DisplayResultActivity : FragmentActivity(R.layout.activity_one_fragment) {
+class DisplayResultActivity : CollapsingToolbarBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_one_fragment)
+        setTitle(R.string.evaluation_results)
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {

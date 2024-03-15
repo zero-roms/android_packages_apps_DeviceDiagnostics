@@ -82,6 +82,7 @@ This is the result of the touch test. You can rerun the test by navigating back.
 
 
   <!-- Trusted activity -->
+  <string name="evaluation_results">Evaluation results</string>
   <string name="imei_title">IMEI</string>
   <string name="imei2_title">Second IMEI</string>
   <string name="serial_number_title">Serial number</string>

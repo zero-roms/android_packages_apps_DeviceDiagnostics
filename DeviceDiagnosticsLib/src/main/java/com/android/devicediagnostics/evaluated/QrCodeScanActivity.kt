@@ -42,6 +42,7 @@ import com.android.devicediagnostics.TestSequenceId
 import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.qrcode.QrCamera
 import com.android.settingslib.widget.LayoutPreference
 
@@ -99,7 +100,7 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
     }
 }
 
-class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
+class QrCodeScanActivity : CollapsingToolbarBaseActivity(),
     TextureView.SurfaceTextureListener,
     QrCamera.ScannerCallback {
     private var mFragment = QrCodeScanFragment(this)
@@ -114,6 +115,12 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
             Manifest.permission.BLUETOOTH_SCAN,
             Manifest.permission.ACCESS_FINE_LOCATION)
     ) { onPermissionsGranted() }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_one_fragment)
+        setTitle(R.string.evaluation_mode_title)
+    }
 
     override fun onResume() {
         super.onResume()

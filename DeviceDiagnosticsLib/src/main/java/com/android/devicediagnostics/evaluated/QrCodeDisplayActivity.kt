@@ -25,6 +25,7 @@ import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.bluetooth.BluetoothClient
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
 class QrDisplayFragment(private var testStatus: TestStatus) : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -45,9 +46,12 @@ class QrDisplayFragment(private var testStatus: TestStatus) : PreferenceFragment
     }
 }
 
-class QrDisplayActivity : FragmentActivity(R.layout.activity_one_fragment) {
+class QrDisplayActivity : CollapsingToolbarBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_one_fragment)
+        setTitle(R.string.evaluation_mode_title)
+
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)

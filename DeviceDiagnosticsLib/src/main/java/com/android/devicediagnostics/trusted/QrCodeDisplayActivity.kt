@@ -33,6 +33,7 @@ import com.android.devicediagnostics.R
 import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
 import com.android.devicediagnostics.bluetooth.BluetoothServer
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.widget.LayoutPreference
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
@@ -78,7 +79,7 @@ class QrCodeDisplayFragment(private var testStatus: TestStatus) : PreferenceFrag
     }
 }
 
-class QrCodeDisplayActivity : FragmentActivity(R.layout.activity_one_fragment) {
+class QrCodeDisplayActivity : CollapsingToolbarBaseActivity() {
     private val permissions = PermissionsHelper(this,
         arrayOf(
             Manifest.permission.BLUETOOTH_ADVERTISE,
@@ -86,6 +87,12 @@ class QrCodeDisplayActivity : FragmentActivity(R.layout.activity_one_fragment) {
             Manifest.permission.BLUETOOTH_SCAN,
             Manifest.permission.ACCESS_FINE_LOCATION)
     ) { onPermissionsGranted() }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_one_fragment)
+        setTitle(R.string.evaluation_mode_title)
+    }
 
     private fun onPermissionsGranted() {
         supportFragmentManager.commit {
