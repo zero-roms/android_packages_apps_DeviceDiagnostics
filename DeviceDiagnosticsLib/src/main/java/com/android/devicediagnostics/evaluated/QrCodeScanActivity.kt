@@ -159,7 +159,7 @@ class QrCodeScanActivity : FragmentActivity(R.layout.activity_one_fragment),
     override fun isValid(qrCode: String?): Boolean {
         try {
             BluetoothConnectionData(qrCode!!)
-        } catch (ex: TestStatus.TSException) {
+        } catch (e: Exception) {
             return false
         }
 
