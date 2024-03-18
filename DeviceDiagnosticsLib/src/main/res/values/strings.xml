@@ -80,7 +80,6 @@ This is the result of the touch test. You can rerun the test by navigating back.
   <string name="touch_test_good_title">The touch sensor test passed</string>
   <string name="touch_test_bad_title">The touch sensor test failed</string>
 
-
   <!-- Trusted activity -->
   <string name="evaluation_results">Evaluation results</string>
   <string name="imei_title">IMEI</string>

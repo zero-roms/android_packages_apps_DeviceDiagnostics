@@ -17,7 +17,6 @@
 package com.android.devicediagnostics.evaluated
 
 import android.os.Bundle
-import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import android.view.View
 import androidx.preference.Preference
@@ -27,7 +26,7 @@ import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
-class QrDisplayFragment(private var testStatus: TestStatus) : PreferenceFragmentCompat() {
+class EvaluationFinalizeFragment(private var testStatus: TestStatus) : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_qr_display, rootKey)
         findPreference<Preference>("Done")?.setOnPreferenceClickListener {
@@ -46,7 +45,7 @@ class QrDisplayFragment(private var testStatus: TestStatus) : PreferenceFragment
     }
 }
 
-class QrDisplayActivity : CollapsingToolbarBaseActivity() {
+class EvaluationFinalizeActivity : CollapsingToolbarBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_one_fragment)
@@ -57,7 +56,7 @@ class QrDisplayActivity : CollapsingToolbarBaseActivity() {
                 setReorderingAllowed(true)
                 add(
                     R.id.fragment_container_view,
-                    QrDisplayFragment(TestStatus(intent!!.extras!!))
+                    EvaluationFinalizeFragment(TestStatus(intent!!.extras!!))
                 )
             }
         }

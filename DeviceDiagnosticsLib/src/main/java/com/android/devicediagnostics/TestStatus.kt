@@ -22,7 +22,7 @@ import android.os.Bundle
 import android.util.Base64
 import com.android.devicediagnostics.evaluated.ScreenTestIntroActivity
 import com.android.devicediagnostics.evaluated.TouchTestIntroActivity
-import com.android.devicediagnostics.evaluated.QrDisplayActivity
+import com.android.devicediagnostics.evaluated.EvaluationFinalizeActivity
 import java.util.zip.CRC32
 import org.json.JSONException
 import org.json.JSONObject
@@ -159,7 +159,7 @@ open class TestStatus(
             when (nextStatus.sequence) {
                 TestSequenceId.SCREEN_TEST -> ScreenTestIntroActivity::class.java.name
                 TestSequenceId.TOUCH_TEST -> TouchTestIntroActivity::class.java.name
-                TestSequenceId.FINISHED -> QrDisplayActivity::class.java.name
+                TestSequenceId.FINISHED -> EvaluationFinalizeActivity::class.java.name
                 else -> null
             }
 
