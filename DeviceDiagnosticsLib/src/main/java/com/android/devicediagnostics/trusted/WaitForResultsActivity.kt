@@ -19,8 +19,6 @@ package com.android.devicediagnostics.trusted
 import android.Manifest
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
-import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
@@ -30,14 +28,14 @@ import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import java.lang.Exception
 
-class QrCodeScanFragment() : PreferenceFragmentCompat() {
+class WaitForResultFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_trusted_scan, rootKey)
     }
 }
 
-class QrCodeScanActivity : CollapsingToolbarBaseActivity() {
-    private var mFragment = QrCodeScanFragment()
+class WaitForResultActivity : CollapsingToolbarBaseActivity() {
+    private var mFragment = WaitForResultFragment()
     private lateinit var testStatus: TestStatus
 
     private val permissions = PermissionsHelper(this,

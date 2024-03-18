@@ -23,9 +23,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
-import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
-import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.PermissionsHelper
@@ -56,7 +54,7 @@ class QrCodeDisplayFragment(private var testStatus: TestStatus) : PreferenceFrag
     init {
         BluetoothServer.start(testStatus.toString(putAttestation = false)) {
             requireActivity().runOnUiThread() {
-                Intent(activity, QrCodeScanActivity::class.java).also {
+                Intent(activity, WaitForResultActivity::class.java).also {
                     testStatus.write(it)
                     startActivity(it)
                 }
