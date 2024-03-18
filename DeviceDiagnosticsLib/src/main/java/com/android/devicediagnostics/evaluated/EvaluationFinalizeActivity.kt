@@ -21,12 +21,13 @@ import androidx.fragment.app.commit
 import android.view.View
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
+import com.google.protobuf.ByteString
 
-class EvaluationFinalizeFragment(private var testStatus: TestStatus) : PreferenceFragmentCompat() {
+class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_qr_display, rootKey)
         findPreference<Preference>("Done")?.setOnPreferenceClickListener {
@@ -39,8 +40,16 @@ class EvaluationFinalizeFragment(private var testStatus: TestStatus) : Preferenc
         super.onViewCreated(view, savedInstanceState)
 
         Thread {
-            testStatus.attestation = getAttestation(testStatus.challenge)
-            BluetoothClient.write(testStatus.toString(putAttestation = true))
+            val reportBuilder = DeviceReport.newBuilder()
+
+            val state = TestState.fromActivity(activity!!)!!
+            reportBuilder.setTests(state.testResults)
+
+            val attestation = createAttestationRecord(state.trustedDevice.challenge.toByteArray())
+            reportBuilder.setAttestation(ByteString.copyFrom(attestation))
+
+            val report = reportBuilder.build()
+            BluetoothClient.write(report.toByteArray())
         }.start()
     }
 }
@@ -56,7 +65,7 @@ class EvaluationFinalizeActivity : CollapsingToolbarBaseActivity() {
                 setReorderingAllowed(true)
                 add(
                     R.id.fragment_container_view,
-                    EvaluationFinalizeFragment(TestStatus(intent!!.extras!!))
+                    EvaluationFinalizeFragment()
                 )
             }
         }

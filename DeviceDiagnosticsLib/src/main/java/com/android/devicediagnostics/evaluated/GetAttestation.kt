@@ -74,7 +74,7 @@ private fun getAttestation(challenge: ByteArray, withImei: Boolean): ByteArray {
     return deflated
 }
 
-fun getAttestation(challenge: ByteArray): ByteArray {
+fun createAttestationRecord(challenge: ByteArray): ByteArray {
     // On devices without device IDs provisioned, the above code will throw ProviderException
     // Continue without this data to support testing other functionality
     return try {

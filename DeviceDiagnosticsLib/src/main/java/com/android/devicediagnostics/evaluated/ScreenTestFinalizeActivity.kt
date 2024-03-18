@@ -21,10 +21,9 @@ import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.TestStatus
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
-class ScreenTestFinalizeFragment(private var testStatus: TestStatus) : PreferenceFragmentCompat() {
+class ScreenTestFinalizeFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_screen_test_finalize, rootKey)
         findPreference<Preference>("Good")?.setOnPreferenceClickListener {
@@ -38,8 +37,9 @@ class ScreenTestFinalizeFragment(private var testStatus: TestStatus) : Preferenc
     }
 
     private fun nextActivity(screenTestResult: Boolean) {
-        testStatus.screenTest = screenTestResult
-        testStatus.nextTestActivity(requireActivity())
+        nextTest(requireActivity()) {
+            it.setScreenTest(screenTestResult)
+        }
     }
 }
 
@@ -54,7 +54,7 @@ class ScreenTestFinalizeActivity : CollapsingToolbarBaseActivity() {
                 setReorderingAllowed(true)
                 add(
                     R.id.fragment_container_view,
-                    ScreenTestFinalizeFragment(TestStatus(intent!!.extras!!))
+                    ScreenTestFinalizeFragment()
                 )
             }
         }

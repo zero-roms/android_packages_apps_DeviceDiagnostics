@@ -47,7 +47,7 @@ object BluetoothClient {
         Log.d(TAG, "Started scan $scanner");
     }
 
-    fun read(device: BluetoothDevice): String {
+    fun read(device: BluetoothDevice): ByteArray {
         stopScanning()
         socket = device.createInsecureL2capChannel(connectionData!!.psm)
         socket!!.connect()
@@ -59,14 +59,13 @@ object BluetoothClient {
             b += chunk.slice(IntRange(0, size - 1))
             if (size < CHUNK) break;
         }
-        Log.d(TAG, "read ${b.size} ${b.toString(Charsets.UTF_8)}")
-        return b.toString(Charsets.UTF_8)
+        Log.d(TAG, "read ${b.size} bytes")
+        return b
     }
 
-    fun write(s: String) {
+    fun write(bytes: ByteArray) {
         val output = socket!!.outputStream
-        output.write(s.toByteArray(Charsets.UTF_8))
-        Log.d(TAG, "wrote ${s}")
+        output.write(bytes)
         socket!!.inputStream.readNBytes(4)
         socket!!.close()
     }

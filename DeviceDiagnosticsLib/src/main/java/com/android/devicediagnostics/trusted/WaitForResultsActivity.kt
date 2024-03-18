@@ -17,16 +17,17 @@
 package com.android.devicediagnostics.trusted
 
 import android.Manifest
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.commit
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.PermissionsHelper
-import com.android.devicediagnostics.TestStatus
+import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import java.lang.Exception
+
+const val DEVICE_REPORT_KEY = "device_report"
 
 class WaitForResultFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -36,7 +37,6 @@ class WaitForResultFragment() : PreferenceFragmentCompat() {
 
 class WaitForResultActivity : CollapsingToolbarBaseActivity() {
     private var mFragment = WaitForResultFragment()
-    private lateinit var testStatus: TestStatus
 
     private val permissions = PermissionsHelper(this,
         arrayOf(
@@ -58,18 +58,23 @@ class WaitForResultActivity : CollapsingToolbarBaseActivity() {
             add(R.id.fragment_container_view, mFragment)
         }
         Thread {
-            val ts = BluetoothServer.read()
             try {
-                testStatus = TestStatus(ts, getAttestation = true)
+                val bytes = BluetoothServer.read()
+                val report = DeviceReport.parseFrom(bytes)
                 runOnUiThread {
-                    Intent(this, DisplayResultActivity::class.java).also {
-                        testStatus.write(it)
-                        startActivity(it)
-                    }
+                    onReportReceived(report)
                 }
             } catch (_: Exception) {
+                // :TODO: handle this
             }
         }.start()
+    }
+
+    fun onReportReceived(report: DeviceReport) {
+        val state = TrustedState.fromActivity(this)!!
+        state.report = report
+        launchTrustedActivity(this, DisplayResultActivity::class.java.name, state)
+        finish()
     }
 
     override fun onResume() {

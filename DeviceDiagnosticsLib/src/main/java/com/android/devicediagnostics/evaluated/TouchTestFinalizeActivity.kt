@@ -21,19 +21,22 @@ import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.TestStatus
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
-class TouchTestFinalizeFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
+class TouchTestFinalizeFragment() : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_touch_test_finalize, rootKey)
+
+        val result = activity!!.intent.getBooleanExtra(TOUCH_TEST_RESULT_KEY, false)
+
         findPreference<Preference>("Continue")?.setOnPreferenceClickListener {
-            testStatus.nextTestActivity(requireActivity())
+            nextTest(activity!!) {
+                it.setTouchTest(result)
+            }
             true
         }
-
-        findPreference<Preference>(if (testStatus.touchTest) "Good" else "Bad")?.isVisible = true
+        findPreference<Preference>(if (result) "Good" else "Bad")?.isVisible = true
     }
 }
 
@@ -48,7 +51,7 @@ class TouchTestFinalizeActivity : CollapsingToolbarBaseActivity() {
                 setReorderingAllowed(true)
                 add(
                     R.id.fragment_container_view,
-                    TouchTestFinalizeFragment(TestStatus(intent!!.extras!!))
+                    TouchTestFinalizeFragment()
                 )
             }
         }

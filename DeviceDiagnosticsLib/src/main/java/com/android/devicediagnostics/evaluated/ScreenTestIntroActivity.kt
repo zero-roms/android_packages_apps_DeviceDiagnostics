@@ -16,29 +16,24 @@
 
 package com.android.devicediagnostics.evaluated
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.TestStatus
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
-class ScreenTestIntroFragment(private val testStatus: TestStatus) : PreferenceFragmentCompat() {
+class ScreenTestIntroFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_screen_test, rootKey)
         findPreference<Preference>("title")!!.also {
-            if (testStatus.oneShot) {
+            if (isOneShotTest(activity!!)) {
                 it.setSummary(R.string.screen_test_summary_one_shot)
             }
         }
         findPreference<Preference>("continue")!!.also {
             it.setOnPreferenceClickListener {
-                Intent(activity, ScreenTestActivity::class.java).also {
-                    testStatus.write(it)
-                    startActivity(it)
-                }
+                nextTestActivity(activity!!, ScreenTestActivity::class.java.name)
                 true
             }
         }
@@ -56,7 +51,7 @@ class ScreenTestIntroActivity : CollapsingToolbarBaseActivity() {
                 setReorderingAllowed(true)
                 add(
                     R.id.fragment_container_view,
-                    ScreenTestIntroFragment(TestStatus(intent))
+                    ScreenTestIntroFragment()
                 )
             }
         }

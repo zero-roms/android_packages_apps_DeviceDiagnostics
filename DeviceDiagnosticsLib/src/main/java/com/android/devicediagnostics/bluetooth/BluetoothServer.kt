@@ -25,6 +25,7 @@ import android.bluetooth.le.AdvertiseSettings
 import android.bluetooth.le.BluetoothLeAdvertiser
 import android.os.ParcelUuid
 import android.util.Log
+import com.android.devicediagnostics.Protos.TrustedDeviceInfo
 import java.util.UUID
 import org.json.JSONObject
 
@@ -52,7 +53,7 @@ object BluetoothServer {
         private set
     val bluetoothEnabled get() = adapter.isEnabled
 
-    fun start(string: String, written: () -> Unit = {}) {
+    fun start(trustedDeviceInfo: TrustedDeviceInfo, written: () -> Unit = {}) {
         startAdvertisement()
         serverSocket = adapter.listenUsingInsecureL2capChannel()
         Log.d(TAG, "Server started with psm ${serverSocket?.psm}")
@@ -64,13 +65,13 @@ object BluetoothServer {
             serverSocket = null
             advertiser!!.stopAdvertising(advertiseCallback)
             var output = socket!!.outputStream
-            output.write(string.toByteArray(Charsets.UTF_8))
-            Log.d(TAG, "wrote $string")
+            output.write(trustedDeviceInfo.toByteArray())
+            Log.d(TAG, "wrote start message")
             written()
         }.start()
     }
 
-    fun read(): String {
+    fun read(): ByteArray {
         val input = socket!!.inputStream
         var b = ByteArray(0)
         while (true) {
@@ -79,11 +80,11 @@ object BluetoothServer {
             b += chunk.slice(IntRange(0, size - 1))
             if (size < CHUNK) break;
         }
-        Log.d(TAG, "read: ${b.size} ${b.toString(Charsets.UTF_8)}")
+        Log.d(TAG, "read: ${b.size}")
         socket!!.outputStream.write("Done".toByteArray())
         socket!!.close()
         socket = null
-        return b.toString(Charsets.UTF_8)
+        return b
     }
 
     private var advertiser: BluetoothLeAdvertiser? = null

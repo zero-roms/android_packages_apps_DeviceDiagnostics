@@ -18,7 +18,6 @@ package com.android.devicediagnostics.evaluated
 
 import android.app.Activity
 import android.content.Context
-import android.content.Intent
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.os.Bundle
@@ -26,10 +25,11 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.TestStatus
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime
 import kotlin.time.TimeSource
+
+const val TOUCH_TEST_RESULT_KEY = "touch_test_result"
 
 @OptIn(ExperimentalTime::class)
 class TouchTestView(context: Context, attrs: AttributeSet) :
@@ -82,19 +82,14 @@ class TouchTestView(context: Context, attrs: AttributeSet) :
 }
 
 class TouchTestActivity : Activity() {
-    private lateinit var testStatus: TestStatus
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.touch_test)
-        testStatus = TestStatus(intent!!.extras!!)
     }
 
     fun reportResult(result: Boolean) {
-        testStatus.touchTest = result
-        Intent(this, TouchTestFinalizeActivity::class.java).also {
-            testStatus.write(it)
-            startActivity(it)
+        nextTestActivity(this, TouchTestFinalizeActivity::class.java.name) {
+            it.putExtra(TOUCH_TEST_RESULT_KEY, result)
         }
     }
 }

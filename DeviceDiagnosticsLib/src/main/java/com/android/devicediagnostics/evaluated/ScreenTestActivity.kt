@@ -17,14 +17,12 @@
 package com.android.devicediagnostics.evaluated
 
 import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.TestStatus
 
 class ScreenTestActivity : Activity() {
     private enum class State {
@@ -61,17 +59,7 @@ class ScreenTestActivity : Activity() {
                 State.GREEN -> state = State.BLUE
 
                 State.BLUE -> {
-                    val status = TestStatus(intent!!.extras!!)
-                    if (status.oneShot) {
-                        // Return to the component health screen.
-                        status.nextTestActivity(this)
-                    } else {
-                        Intent(this, ScreenTestFinalizeActivity::class.java).also {
-                            TestStatus(intent!!.extras!!).write(it)
-                            startActivity(it)
-                            finish()
-                        }
-                    }
+                    nextTestActivity(this, ScreenTestFinalizeActivity::class.java.name)
                 }
             }
         }

@@ -20,13 +20,12 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.MainActivity
+import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.getAttestation
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.google.android.attestation.ParsedAttestationRecord
@@ -35,12 +34,16 @@ import java.io.IOException
 const val ATTESTATION = "ATTESTATION"
 private const val TAG = "DisplayResultActivity"
 
-class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFragmentCompat() {
+class DisplayResultFragment(private var state : TrustedState) : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_trusted_display_result, rootKey)
 
-        findPreference<Preference>("screen")?.summary = if (testStatus.screenTest) "Good" else "Bad"
-        findPreference<Preference>("touch")?.summary = if (testStatus.touchTest) "Good" else "Bad"
+        val report = state.report
+        val tests = report.tests
+
+        // :TODO: string-ize
+        findPreference<Preference>("screen")?.summary = if (tests.screenTest) "Good" else "Bad"
+        findPreference<Preference>("touch")?.summary = if (tests.touchTest) "Good" else "Bad"
 
         findPreference<Preference>("evaluate_another")?.setOnPreferenceClickListener {
             val intent = Intent(activity, QrCodeDisplayActivity::class.java)
@@ -60,19 +63,19 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
 
         findPreference<Preference>("retry_failure")?.also {
             it.setOnPreferenceClickListener {
-                verifyAttestation()
+                verifyAttestation(report.attestation.toByteArray())
                 true
             }
         }
 
-        verifyAttestation()
+        verifyAttestation(state.report.attestation.toByteArray())
     }
 
-    private fun verifyAttestation() {
+    private fun verifyAttestation(bytes: ByteArray) {
         Thread {
             var attestationRecord: ParsedAttestationRecord? = null
             try {
-                attestationRecord = getAttestation(testStatus.attestation)
+                attestationRecord = getAttestation(bytes)
             } catch (e: IOException) {
                 Log.e(TAG, "Failed to get attestation record")
                 Log.e(TAG, e.toString())
@@ -91,11 +94,11 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
             it.isVisible = false
         }
 
-        if (!attestationRecord.attestationChallenge.contentEquals(testStatus.challenge)) {
+        if (!attestationRecord.attestationChallenge.contentEquals(state.challenge)) {
             findPreference<Preference>("non_retry_failure")?.also {
                 it.summary = resources.getString(R.string.attestation_challenge_does_not_match) +
                     "\n" + attestationRecord.attestationChallenge.toString(Charsets.UTF_8) +
-                    "\n" + testStatus.challenge.toString(Charsets.UTF_8)
+                    "\n" + state.challenge.toString(Charsets.UTF_8)
                 it.isVisible = true
             }
             return
@@ -154,7 +157,7 @@ class DisplayResultFragment(private var testStatus: TestStatus) : PreferenceFrag
     private fun onAttestationError() {
         findPreference<Preference>("retry_failure")?.also {
             it.setOnPreferenceClickListener {
-                verifyAttestation()
+                verifyAttestation(state.report.attestation.toByteArray())
                 true
             }
             it.isVisible = true
@@ -169,10 +172,10 @@ class DisplayResultActivity : CollapsingToolbarBaseActivity() {
         setTitle(R.string.evaluation_results)
 
         if (savedInstanceState == null) {
+            val state = TrustedState.fromActivity(this)!!
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add(R.id.fragment_container_view,
-                    DisplayResultFragment(TestStatus(intent!!.extras!!)))
+                add(R.id.fragment_container_view, DisplayResultFragment(state))
             }
         }
     }

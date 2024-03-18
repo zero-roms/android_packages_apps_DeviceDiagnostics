@@ -17,7 +17,6 @@
 package com.android.devicediagnostics.evaluated
 
 import android.Manifest
-import android.bluetooth.BluetoothDevice
 import android.graphics.Matrix
 import android.graphics.Outline
 import android.graphics.Rect
@@ -31,15 +30,12 @@ import android.view.TextureView
 import android.view.View
 import android.view.ViewOutlineProvider
 import androidx.core.content.ContextCompat.getSystemService
-import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import androidx.preference.Preference
-import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.PermissionsHelper
+import com.android.devicediagnostics.Protos
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.TestSequenceId
-import com.android.devicediagnostics.TestStatus
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
@@ -84,19 +80,27 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
 
         BluetoothClient.start() {
             Log.d(TAG, "Found device ${it.name}")
-            val ts = BluetoothClient.read(it)
-            requireActivity().runOnUiThread {
-                onDeviceConnected(ts)
+            try {
+                val bytes = BluetoothClient.read(it)
+                val trustedDeviceInfo = Protos.TrustedDeviceInfo.parseFrom(bytes)
+                requireActivity().runOnUiThread {
+                    onDeviceConnected(trustedDeviceInfo)
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Could not connect to trusted device: $e")
+                requireActivity().runOnUiThread {
+                    onBluetoothFailure()
+                }
             }
         }
     }
 
-    private fun onDeviceConnected(ts: String) {
-        (requireActivity() as QrCodeScanActivity).also {
-            it.testStatus = TestStatus(ts, getAttestation = false)
-            it.testStatus.sequence = TestSequenceId.START
-            it.testStatus.nextTestActivity(requireActivity())
-        }
+    private fun onDeviceConnected(trustedDeviceInfo: Protos.TrustedDeviceInfo) {
+        startFullTestFlow(activity!!, trustedDeviceInfo)
+    }
+
+    private fun onBluetoothFailure() {
+        // :TODO: implement.
     }
 }
 
@@ -105,7 +109,6 @@ class QrCodeScanActivity : CollapsingToolbarBaseActivity(),
     QrCamera.ScannerCallback {
     private var mFragment = QrCodeScanFragment(this)
     private var mCamera = QrCamera(this, this)
-    var testStatus: TestStatus = TestStatus()
 
     private val permissions = PermissionsHelper(this,
         arrayOf(
