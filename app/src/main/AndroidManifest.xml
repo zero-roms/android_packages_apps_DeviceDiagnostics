@@ -37,17 +37,27 @@
     <activity android:name="com.android.devicediagnostics.trusted.WaitForResultActivity" />
     <activity android:name="com.android.devicediagnostics.trusted.DisplayResultActivity" />
     <activity android:name="com.android.devicediagnostics.trusted.DisplayAttestationDetailsActivity" />
-    <activity android:name="com.android.devicediagnostics.evaluated.QrCodeScanActivity" />
-    <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestIntroActivity" />
+
+    <!-- Test tasks -->
+    <activity android:name="com.android.devicediagnostics.evaluated.QrCodeScanActivity"
+              android:taskAffinity="com.android.devicediagnostics.evaluated" />
+    <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestIntroActivity"
+              android:taskAffinity="com.android.devicediagnostics.evaluated" />
     <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestActivity"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
         android:noHistory="true"
-        android:excludeFromRecents="true" />
-    <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestFinalizeActivity" />
-    <activity android:name="com.android.devicediagnostics.evaluated.TouchTestIntroActivity" />
-    <activity android:name="com.android.devicediagnostics.evaluated.TouchTestActivity" />
-    <activity android:name="com.android.devicediagnostics.evaluated.TouchTestFinalizeActivity" />
-    <activity android:name="com.android.devicediagnostics.evaluated.EvaluationFinalizeActivity" />
+        android:excludeFromRecents="true"
+        android:taskAffinity="com.android.devicediagnostics.evaluated" />
+    <activity android:name="com.android.devicediagnostics.evaluated.ScreenTestFinalizeActivity"
+              android:taskAffinity="com.android.devicediagnostics.evaluated" />
+    <activity android:name="com.android.devicediagnostics.evaluated.TouchTestIntroActivity"
+              android:taskAffinity="com.android.devicediagnostics.evaluated" />
+    <activity android:name="com.android.devicediagnostics.evaluated.TouchTestActivity"
+              android:taskAffinity="com.android.devicediagnostics.evaluated" />
+    <activity android:name="com.android.devicediagnostics.evaluated.TouchTestFinalizeActivity"
+              android:taskAffinity="com.android.devicediagnostics.evaluated" />
+    <activity android:name="com.android.devicediagnostics.evaluated.EvaluationFinalizeActivity"
+              android:taskAffinity="com.android.devicediagnostics.evaluated" />
     <activity android:name="com.android.devicediagnostics.evaluated.BatteryActivity" />
     <activity android:name="com.android.devicediagnostics.evaluated.StorageActivity" />
   </application>

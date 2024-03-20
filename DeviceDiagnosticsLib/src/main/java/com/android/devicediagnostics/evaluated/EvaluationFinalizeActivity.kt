@@ -16,11 +16,13 @@
 
 package com.android.devicediagnostics.evaluated
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.commit
 import android.view.View
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.MainActivity
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.bluetooth.BluetoothClient
@@ -31,7 +33,10 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_qr_display, rootKey)
         findPreference<Preference>("Done")?.setOnPreferenceClickListener {
-            requireActivity().finishAffinity()
+            val intent = Intent(activity, MainActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            activity!!.startActivity(intent)
+            activity!!.finish()
             true
         }
     }

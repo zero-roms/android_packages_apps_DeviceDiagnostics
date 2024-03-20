@@ -23,6 +23,7 @@ import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.bluetooth.BluetoothServer
+import com.android.devicediagnostics.evaluated.QrCodeScanActivity
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
 class EvaluationModeFragment : PreferenceFragmentCompat() {
@@ -35,7 +36,16 @@ class EvaluationModeFragment : PreferenceFragmentCompat() {
 
         val enabled = BluetoothServer.bluetoothEnabled
         findPreference<Preference>("trusted_device")!!.isVisible = enabled
-        findPreference<Preference>("evaluation_mode")!!.isVisible = enabled
+        findPreference<Preference>("evaluation_mode")!!.also {
+            it.isVisible = enabled
+            it.setOnPreferenceClickListener {
+                val intent = Intent()
+                intent.setClassName(activity!!, QrCodeScanActivity::class.java.name)
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+                true
+            }
+        }
         findPreference<Preference>("bluetooth_disabled")!!.also {
             it.isVisible = !enabled
             it.setOnPreferenceClickListener {

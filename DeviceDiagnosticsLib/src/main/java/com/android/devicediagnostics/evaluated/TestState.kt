@@ -106,9 +106,15 @@ fun nextTest(from: Activity, withReport: (builder: TestResults.Builder) -> Unit)
             TouchTestFinalizeActivity::class.java.name -> EvaluationFinalizeActivity::class.java.name
             else -> null
         }
+
     val intent = Intent()
     intent.setClassName(from, nextActivityClass!!)
     intent.putExtra(TEST_STATE_KEY, state)
+
+    // Don't allow navigating back once we're submitting the results.
+    if (nextActivityClass == EvaluationFinalizeActivity::class.java.name)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK.or(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+
     from.startActivity(intent)
 }
 
