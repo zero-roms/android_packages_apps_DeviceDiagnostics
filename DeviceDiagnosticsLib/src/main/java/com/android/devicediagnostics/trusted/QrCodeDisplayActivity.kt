@@ -60,7 +60,7 @@ class QrCodeDisplayFragment(private var challenge: ByteArray) : PreferenceFragme
         BluetoothServer.start(info) {
             requireActivity().runOnUiThread() {
                 val state = TrustedState(challenge, DeviceReport.getDefaultInstance())
-                launchTrustedActivity(activity!!, WaitForResultActivity::class.java.name, state)
+                launchTrustedActivity(requireActivity(), WaitForResultActivity::class.java.name, state)
             }
         }
     }

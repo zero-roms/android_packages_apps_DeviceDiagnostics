@@ -19,10 +19,15 @@ package com.android.devicediagnostics
 import android.app.Application
 import android.content.Context
 import android.graphics.SurfaceTexture
+import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
+import com.android.devicediagnostics.bluetooth.IBluetoothClient
+import com.android.devicediagnostics.bluetooth.IBluetoothDevice
 import com.android.devicediagnostics.evaluated.IQrCamera
+import com.android.devicediagnostics.Protos.TrustedDeviceInfo
 import com.android.settingslib.qrcode.QrCamera
+import com.google.protobuf.ByteString
 
-private const val payload = "{\"PSM\":134}"
+private const val QR_PAYLOAD = "{\"PSM\":134}"
 class TestApplication : Application(), ApplicationInterface {
   override fun getRandomBytes(count: Int) : ByteArray {
     return (1..count).map{it.toByte()}.toByteArray()
@@ -32,12 +37,32 @@ class TestApplication : Application(), ApplicationInterface {
     return object : IQrCamera {
       override fun start(surface: SurfaceTexture) {
         Thread {
-          if (activity.isValid(payload))
-            activity.handleSuccessfulResult(payload)
+          if (activity.isValid(QR_PAYLOAD))
+            activity.handleSuccessfulResult(QR_PAYLOAD)
         }.run()
       }
 
       override fun stop() {}
+    }
+  }
+
+  override fun getBluetoothClient() : IBluetoothClient {
+    return object : IBluetoothClient {
+      override var connectionData: BluetoothConnectionData? = null
+
+      override fun start(foundDevice: (device: IBluetoothDevice) -> Unit) {
+        foundDevice(object : IBluetoothDevice { override val name = "Test" })
+      }
+
+      override fun read(device: IBluetoothDevice): ByteArray {
+        val infoBuilder = TrustedDeviceInfo.newBuilder()
+        infoBuilder.setChallenge(ByteString.copyFrom((1..32).map{it.toByte()}.toByteArray()))
+        return infoBuilder.build().toByteArray()
+      }
+
+      override fun write(bytes: ByteArray) {
+        // TODO
+      }
     }
   }
 }

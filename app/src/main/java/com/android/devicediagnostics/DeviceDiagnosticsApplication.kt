@@ -19,6 +19,8 @@ package com.android.devicediagnostics
 import android.app.Application
 import android.content.Context
 import android.graphics.SurfaceTexture
+import com.android.devicediagnostics.bluetooth.BluetoothClient
+import com.android.devicediagnostics.bluetooth.IBluetoothClient
 import com.android.devicediagnostics.evaluated.IQrCamera
 import kotlin.random.Random
 import com.android.settingslib.qrcode.QrCamera
@@ -33,5 +35,9 @@ class DeviceDiagnosticsApplication : Application(), ApplicationInterface {
       override fun start(surface: SurfaceTexture) {super.start(surface)}
       override fun stop() {super.stop()}
     }
+  }
+
+  override fun getBluetoothClient() : IBluetoothClient {
+    return BluetoothClient
   }
 }

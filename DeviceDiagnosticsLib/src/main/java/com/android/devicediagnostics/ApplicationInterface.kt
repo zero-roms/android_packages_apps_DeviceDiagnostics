@@ -17,10 +17,13 @@
 package com.android.devicediagnostics
 
 import android.content.Context
+import com.android.devicediagnostics.bluetooth.IBluetoothClient
 import com.android.devicediagnostics.evaluated.IQrCamera
 import com.android.settingslib.qrcode.QrCamera
 
 interface ApplicationInterface {
   abstract fun getRandomBytes(count: Int) : ByteArray
   abstract fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : IQrCamera
+
+  abstract fun getBluetoothClient() : IBluetoothClient
 }

@@ -41,6 +41,6 @@ class MainActivityKtTest {
     onView(withText("Evaluation mode")).perform(click())
     onView(withText("Evaluated Device")).check(matches(isDisplayed()))
     onView(withText("Evaluated Device")).perform(click())
-    onView(withText("Scan now")).check(matches(isDisplayed()))
+    onView(withText("Continue")).check(matches(isDisplayed()))
   }
 }

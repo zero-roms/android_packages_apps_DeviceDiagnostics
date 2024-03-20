@@ -37,7 +37,6 @@ import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.Protos
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.qrcode.QrCamera
@@ -71,17 +70,19 @@ class QrCodeScanFragment(private val listener: TextureView.SurfaceTextureListene
     }
 
     fun setConnectionData(connectionData: BluetoothConnectionData) {
-        BluetoothClient.connectionData = connectionData
+        val bluetoothClient = (requireActivity().applicationContext as ApplicationInterface)
+            .getBluetoothClient()
+        bluetoothClient.connectionData = connectionData
 
         requireActivity().runOnUiThread {
             val pref = findPreference<Preference>("connection_progress")!!
             pref.isVisible = true
         }
 
-        BluetoothClient.start() {
+        bluetoothClient.start() {
             Log.d(TAG, "Found device ${it.name}")
             try {
-                val bytes = BluetoothClient.read(it)
+                val bytes = bluetoothClient.read(it)
                 val trustedDeviceInfo = Protos.TrustedDeviceInfo.parseFrom(bytes)
                 requireActivity().runOnUiThread {
                     onDeviceConnected(trustedDeviceInfo)
@@ -96,7 +97,7 @@ class QrCodeScanFragment(private val listener: TextureView.SurfaceTextureListene
     }
 
     private fun onDeviceConnected(trustedDeviceInfo: Protos.TrustedDeviceInfo) {
-        startFullTestFlow(activity!!, trustedDeviceInfo)
+        startFullTestFlow(requireActivity(), trustedDeviceInfo)
     }
 
     private fun onBluetoothFailure() {
@@ -108,7 +109,6 @@ interface IQrCamera {
     fun start(surface: SurfaceTexture)
     fun stop()
 }
-
 
 class QrCodeScanActivity : CollapsingToolbarBaseActivity(),
     TextureView.SurfaceTextureListener,
