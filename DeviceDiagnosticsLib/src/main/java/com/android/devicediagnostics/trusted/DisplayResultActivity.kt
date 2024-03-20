@@ -41,9 +41,11 @@ class DisplayResultFragment(private var state : TrustedState) : PreferenceFragme
         val report = state.report
         val tests = report.tests
 
-        // :TODO: string-ize
-        findPreference<Preference>("screen")?.summary = if (tests.screenTest) "Good" else "Bad"
-        findPreference<Preference>("touch")?.summary = if (tests.touchTest) "Good" else "Bad"
+        val pass = getString(R.string.pass)
+        val fail = getString(R.string.fail)
+
+        findPreference<Preference>("screen")?.summary = if (tests.screenTest) pass else fail
+        findPreference<Preference>("touch")?.summary = if (tests.touchTest) pass else fail
 
         findPreference<Preference>("evaluate_another")?.setOnPreferenceClickListener {
             val intent = Intent(activity, QrCodeDisplayActivity::class.java)

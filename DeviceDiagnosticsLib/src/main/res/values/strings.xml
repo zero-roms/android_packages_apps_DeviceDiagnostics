@@ -79,6 +79,8 @@ This is the result of the touch test. You can rerun the test by navigating back.
   </string>
   <string name="touch_test_good_title">The touch sensor test passed</string>
   <string name="touch_test_bad_title">The touch sensor test failed</string>
+  <string name="pass">Pass</string>
+  <string name="fail">Fail</string>
 
   <!-- Trusted activity -->
   <string name="evaluation_results">Evaluation results</string>
