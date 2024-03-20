@@ -98,9 +98,9 @@ class QrCodeDisplayActivity : CollapsingToolbarBaseActivity() {
     private fun onPermissionsGranted() {
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-
-            val challenge = (applicationContext as ApplicationInterface).GetRandomBytes(32)
-            add(R.id.fragment_container_view, QrCodeDisplayFragment(challenge))
+            add(R.id.fragment_container_view,
+                QrCodeDisplayFragment((applicationContext as ApplicationInterface)
+                                 .getRandomBytes(32)))
         }
     }
 

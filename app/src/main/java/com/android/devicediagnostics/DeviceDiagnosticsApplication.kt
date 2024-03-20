@@ -17,10 +17,21 @@
 package com.android.devicediagnostics
 
 import android.app.Application
+import android.content.Context
+import android.graphics.SurfaceTexture
+import com.android.devicediagnostics.evaluated.IQrCamera
 import kotlin.random.Random
+import com.android.settingslib.qrcode.QrCamera
 
 class DeviceDiagnosticsApplication : Application(), ApplicationInterface {
-  override fun GetRandomBytes(count: Int) : ByteArray {
+  override fun getRandomBytes(count: Int) : ByteArray {
     return Random.nextBytes(count)
+  }
+
+  override fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : IQrCamera {
+    return object : IQrCamera, QrCamera(context, activity) {
+      override fun start(surface: SurfaceTexture) {super.start(surface)}
+      override fun stop() {super.stop()}
+    }
   }
 }

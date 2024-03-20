@@ -33,6 +33,7 @@ import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.Protos
 import com.android.devicediagnostics.R
@@ -44,9 +45,8 @@ import com.android.settingslib.widget.LayoutPreference
 
 private const val TAG = "evaluated/QrCodeScan"
 
-class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
+class QrCodeScanFragment(private val listener: TextureView.SurfaceTextureListener) :
     PreferenceFragmentCompat() {
-    private var mListener = listener
     private var mTextureView: TextureView? = null
     val textureView: TextureView
         get() {
@@ -61,7 +61,7 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
         super.onViewCreated(view, savedInstanceState)
         val layoutPreference = findPreference("qr_code") as LayoutPreference?
         mTextureView = layoutPreference!!.findViewById<TextureView>(R.id.preview_view)
-        textureView.surfaceTextureListener = mListener
+        textureView.surfaceTextureListener = listener
         textureView.outlineProvider = object : ViewOutlineProvider() {
             override fun getOutline(view: View, outline: Outline) {
                 outline.setRoundRect(0, 0, view.width, view.height, 12f)
@@ -104,11 +104,17 @@ class QrCodeScanFragment(listener: TextureView.SurfaceTextureListener) :
     }
 }
 
+interface IQrCamera {
+    fun start(surface: SurfaceTexture)
+    fun stop()
+}
+
+
 class QrCodeScanActivity : CollapsingToolbarBaseActivity(),
     TextureView.SurfaceTextureListener,
     QrCamera.ScannerCallback {
     private var mFragment = QrCodeScanFragment(this)
-    private var mCamera = QrCamera(this, this)
+    private lateinit var mCamera : IQrCamera
 
     private val permissions = PermissionsHelper(this,
         arrayOf(
@@ -121,6 +127,7 @@ class QrCodeScanActivity : CollapsingToolbarBaseActivity(),
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mCamera = (applicationContext as ApplicationInterface).getQrCamera(this, this)
         setContentView(R.layout.activity_one_fragment)
         setTitle(R.string.evaluation_mode_title)
     }
