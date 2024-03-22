@@ -73,8 +73,13 @@ class TouchTestView(context: Context, attrs: AttributeSet) :
                         (context as TouchTestActivity).reportResult(false)
             }
 
-            array[(event.x / xSize).toInt()][(event.y / ySize).toInt()] = true
-            invalidate()
+            val x = (event.x / xSize).toInt()
+            val y = (event.y / ySize).toInt()
+            if (!array[x][y]) {
+                array[x][y] = true
+                invalidate()
+            }
+
         } catch (e: Exception) {
         }
         return true

@@ -22,10 +22,10 @@ import androidx.fragment.app.commit
 import android.view.View
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.MainActivity
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.google.protobuf.ByteString
 
@@ -45,6 +45,7 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
         super.onViewCreated(view, savedInstanceState)
 
         Thread {
+            var count = 0
             val reportBuilder = DeviceReport.newBuilder()
 
             val state = TestState.fromActivity(activity!!)!!
@@ -54,7 +55,10 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
             reportBuilder.setAttestation(ByteString.copyFrom(attestation))
 
             val report = reportBuilder.build()
-            BluetoothClient.write(report.toByteArray())
+
+            val bluetoothClient = (requireActivity().applicationContext as ApplicationInterface)
+                .getBluetoothClient()
+            bluetoothClient.write(report.toByteArray())
         }.start()
     }
 }

@@ -46,6 +46,7 @@ class TestApplication : Application(), ApplicationInterface {
     }
   }
 
+  var writtenData : ByteArray? = null
   override fun getBluetoothClient() : IBluetoothClient {
     return object : IBluetoothClient {
       override var connectionData: BluetoothConnectionData? = null
@@ -61,7 +62,7 @@ class TestApplication : Application(), ApplicationInterface {
       }
 
       override fun write(bytes: ByteArray) {
-        // TODO
+        writtenData = bytes
       }
     }
   }
