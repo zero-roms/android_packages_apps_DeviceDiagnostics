@@ -75,18 +75,22 @@ class DisplayResultFragment(private var state : TrustedState) : PreferenceFragme
 
     private fun verifyAttestation(bytes: ByteArray) {
         Thread {
-            var attestationRecord: ParsedAttestationRecord? = null
-            try {
-                attestationRecord = getAttestation(bytes)
-            } catch (e: IOException) {
-                Log.e(TAG, "Failed to get attestation record")
-                Log.e(TAG, e.toString())
-            }
-            requireActivity().runOnUiThread {
-                if (attestationRecord != null)
-                    onAttestationReceived(attestationRecord)
-                else
-                    onAttestationError()
+            if (bytes.isEmpty()) {
+                onAttestationError()
+            } else {
+                var attestationRecord: ParsedAttestationRecord? = null
+                try {
+                    attestationRecord = getAttestation(bytes)
+                } catch (e: IOException) {
+                    Log.e(TAG, "Failed to get attestation record")
+                    Log.e(TAG, e.toString())
+                }
+                requireActivity().runOnUiThread {
+                    if (attestationRecord != null)
+                        onAttestationReceived(attestationRecord)
+                    else
+                        onAttestationError()
+                }
             }
         }.start()
     }

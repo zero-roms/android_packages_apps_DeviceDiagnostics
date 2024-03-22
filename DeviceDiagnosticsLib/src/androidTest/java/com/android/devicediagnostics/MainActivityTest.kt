@@ -31,6 +31,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.devicediagnostics.Protos.DeviceReport
+import kotlin.concurrent.withLock
 import org.hamcrest.Matcher
 import org.junit.Assert.*
 import org.junit.Test
@@ -103,5 +104,32 @@ class MainActivityKtTest {
     val report = DeviceReport.parseFrom((getApplicationContext() as TestApplication).writtenData)
     assert(report.tests.screenTest)
     assert(!report.tests.touchTest)
+  }
+
+  private fun notifyMock () {
+    (getApplicationContext() as TestApplication).lock.withLock() {
+      (getApplicationContext() as TestApplication).condition.signal()
+    }
+  }
+  @Test
+  fun testTrustedFlow() {
+    val activityScenario = launch(MainActivity::class.java)
+    activityScenario.onActivity {activity : Activity ->
+      assertEquals(activity.title, "Device Diagnostics")
+    }
+    onView(withText("Evaluation mode")).perform(click())
+    onView(withText("Trusted Device")).check(matches(isDisplayed()))
+    onView(withText("Trusted Device")).perform(click())
+    onView(withText("Scan now")).check(matches(isDisplayed()))
+    Thread.sleep(200)
+    notifyMock()
+    Thread.sleep(200)
+    onView(withText("Continue on the device being evaluated")).check(matches(isDisplayed()))
+    Thread.sleep(200)
+    notifyMock()
+    Thread.sleep(200)
+    onView(withText("Pass")).check(matches(isDisplayed()))
+    onView(withText("Fail")).check(matches(isDisplayed()))
+    onView(withText("Retry attestation")).check(matches(isDisplayed()))
   }
 }

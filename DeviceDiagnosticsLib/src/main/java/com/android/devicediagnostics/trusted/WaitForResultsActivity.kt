@@ -20,6 +20,7 @@ import android.Manifest
 import android.os.Bundle
 import androidx.fragment.app.commit
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.Protos.DeviceReport
@@ -59,7 +60,7 @@ class WaitForResultActivity : CollapsingToolbarBaseActivity() {
         }
         Thread {
             try {
-                val bytes = BluetoothServer.read()
+                val bytes = (applicationContext as ApplicationInterface).getBluetoothServer().read()
                 val report = DeviceReport.parseFrom(bytes)
                 runOnUiThread {
                     onReportReceived(report)
