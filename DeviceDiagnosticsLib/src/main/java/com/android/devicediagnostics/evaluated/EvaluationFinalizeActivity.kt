@@ -45,7 +45,6 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
         super.onViewCreated(view, savedInstanceState)
 
         Thread {
-            var count = 0
             val reportBuilder = DeviceReport.newBuilder()
 
             val state = TestState.fromActivity(activity!!)!!

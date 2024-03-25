@@ -20,7 +20,9 @@ import android.app.Application
 import android.content.Context
 import android.graphics.SurfaceTexture
 import com.android.devicediagnostics.bluetooth.BluetoothClient
+import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.devicediagnostics.bluetooth.IBluetoothClient
+import com.android.devicediagnostics.bluetooth.IBluetoothServer
 import com.android.devicediagnostics.evaluated.IQrCamera
 import kotlin.random.Random
 import com.android.settingslib.qrcode.QrCamera
@@ -39,5 +41,9 @@ class DeviceDiagnosticsApplication : Application(), ApplicationInterface {
 
   override fun getBluetoothClient() : IBluetoothClient {
     return BluetoothClient
+  }
+
+  override fun getBluetoothServer() : IBluetoothServer {
+    return BluetoothServer
   }
 }

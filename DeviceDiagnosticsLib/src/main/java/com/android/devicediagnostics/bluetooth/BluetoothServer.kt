@@ -45,15 +45,24 @@ class BluetoothConnectionData(var psm: Int = 0) {
     }
 }
 
-object BluetoothServer {
+interface IBluetoothServer {
+    var connectionData : BluetoothConnectionData
+
+    val bluetoothEnabled : Boolean
+
+    fun start(trustedDeviceInfo: TrustedDeviceInfo, written: () -> Unit = {})
+
+    fun read(): ByteArray
+}
+
+object BluetoothServer : IBluetoothServer {
     private val adapter get() = BluetoothAdapter.getDefaultAdapter()
     private var serverSocket: BluetoothServerSocket? = null
     private var socket: BluetoothSocket? = null
-    var connectionData = BluetoothConnectionData()
-        private set
-    val bluetoothEnabled get() = adapter.isEnabled
+    override var connectionData = BluetoothConnectionData()
+    override val bluetoothEnabled get() = adapter.isEnabled
 
-    fun start(trustedDeviceInfo: TrustedDeviceInfo, written: () -> Unit = {}) {
+    override fun start(trustedDeviceInfo: TrustedDeviceInfo, written: () -> Unit) {
         startAdvertisement()
         serverSocket = adapter.listenUsingInsecureL2capChannel()
         Log.d(TAG, "Server started with psm ${serverSocket?.psm}")
@@ -71,7 +80,7 @@ object BluetoothServer {
         }.start()
     }
 
-    fun read(): ByteArray {
+    override fun read(): ByteArray {
         val input = socket!!.inputStream
         var b = ByteArray(0)
         while (true) {
