@@ -25,6 +25,7 @@ import android.util.AttributeSet
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.Protos.BatteryInfo
 import com.android.devicediagnostics.R
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.widget.UsageProgressBarPreference
@@ -40,53 +41,46 @@ private fun formatSecondsAsDate(seconds: Long): String {
         .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
 }
 
-class BatteryDiagnostics {
-    var cycleCount: Int = -1
-    var manufactureDate: String? = null
-    var firstUsageDate: String? = null
-    var stateOfHealth: Int = -1
-    var serial: String? = null
-    var partStatus: String? = null
+public fun getBatteryInfo(context: Context): BatteryInfo {
+    val builder = BatteryInfo.newBuilder()
+    val bm = context.getSystemService(BATTERY_SERVICE) as? BatteryManager
+    if (bm == null) return builder.build()
 
-    constructor(context: Context) {
-        val bm = context.getSystemService(BATTERY_SERVICE) as? BatteryManager
-        if (bm != null) {
-            try {
-                var date = bm.getLongProperty(BatteryManager.BATTERY_PROPERTY_MANUFACTURING_DATE)
-                if (date >= 0) {
-                    manufactureDate = formatSecondsAsDate(date)
-                }
-
-                date = bm.getLongProperty(BatteryManager.BATTERY_PROPERTY_FIRST_USAGE_DATE)
-                if (date >= 0) {
-                    firstUsageDate = formatSecondsAsDate(date)
-                }
-            } catch (e: Exception) {
-            }
-
-            stateOfHealth = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_STATE_OF_HEALTH)
-
-            if (android.os.Flags.batteryPartStatusApi()) {
-                val status = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_PART_STATUS)
-                if (status == BatteryManager.PART_STATUS_ORIGINAL) {
-                    partStatus = context.resources.getString(R.string.battery_original)
-                } else if (status == BatteryManager.PART_STATUS_REPLACED) {
-                    partStatus = context.resources.getString(R.string.battery_replaced)
-                }
-
-                serial = bm.getStringProperty(BatteryManager.BATTERY_PROPERTY_SERIAL_NUMBER)
-            }
+    try {
+        var date = bm.getLongProperty(BatteryManager.BATTERY_PROPERTY_MANUFACTURING_DATE)
+        if (date >= 0) {
+            builder.setManufactureDate(formatSecondsAsDate(date))
         }
 
-        val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
-        val batteryStatus = context.registerReceiver(null, filter)
-        if (batteryStatus != null) {
-            cycleCount = batteryStatus.getIntExtra("android.os.extra.CYCLE_COUNT", -1)
+        date = bm.getLongProperty(BatteryManager.BATTERY_PROPERTY_FIRST_USAGE_DATE)
+        if (date >= 0) {
+            builder.setFirstUsageDate(formatSecondsAsDate(date))
         }
+    } catch (e: Exception) {
     }
+
+    builder.setStateOfHealth(bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_STATE_OF_HEALTH))
+
+    if (android.os.Flags.batteryPartStatusApi()) {
+        val status = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_PART_STATUS)
+        if (status == BatteryManager.PART_STATUS_ORIGINAL) {
+            builder.setPartStatus(context.resources.getString(R.string.battery_original))
+        } else if (status == BatteryManager.PART_STATUS_REPLACED) {
+            builder.setPartStatus(context.resources.getString(R.string.battery_replaced))
+        }
+        builder.setSerial(bm.getStringProperty(BatteryManager.BATTERY_PROPERTY_SERIAL_NUMBER))
+    }
+
+    val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+    val batteryStatus = context.registerReceiver(null, filter)
+    if (batteryStatus != null) {
+        builder.setCycleCount(batteryStatus.getIntExtra("android.os.extra.CYCLE_COUNT", -1))
+    }
+
+    return builder.build()
 }
 
-class BatteryFragment(private var diagnostics: BatteryDiagnostics) : PreferenceFragmentCompat() {
+class BatteryFragment(private var diagnostics: BatteryInfo) : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.battery_preferences, rootKey)
 
@@ -133,14 +127,14 @@ class BatteryFragment(private var diagnostics: BatteryDiagnostics) : PreferenceF
 }
 
 class BatteryActivity : CollapsingToolbarBaseActivity() {
-    lateinit var diagnostics: BatteryDiagnostics
+    lateinit var diagnostics: BatteryInfo
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_one_fragment)
         setTitle(R.string.battery_title)
 
-        diagnostics = BatteryDiagnostics(this)
+        diagnostics = getBatteryInfo(this)
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
@@ -154,7 +148,7 @@ class BatteryActivity : CollapsingToolbarBaseActivity() {
 class BatteryHealthPreference(context: Context, attrs: AttributeSet) :
     UsageProgressBarPreference(context, attrs) {
 
-    val diagnostics: BatteryDiagnostics
+    val diagnostics: BatteryInfo
         get() = (context as BatteryActivity).diagnostics
 
     override fun getSummary(): CharSequence? {

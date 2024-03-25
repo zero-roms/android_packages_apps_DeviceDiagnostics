@@ -24,11 +24,26 @@ message TestResults {
     bool touch_test = 2;
 }
 
-message DeviceReport {
-    TestResults tests = 1;
-    bytes attestation = 2;
+message BatteryInfo {
+    int32 cycle_count = 1;
+    optional string manufacture_date = 2;
+    optional string first_usage_date = 3;
+    int32 state_of_health = 4;
+    optional string serial = 5;
+    optional string part_status = 6;
+}
+
+message StorageInfo {
+    int64 capacity = 1;
+    string capacity_units = 2;
+    optional int32 useful_lifetime_remaining = 3;
 }
 
 message TrustedDeviceInfo {
     bytes challenge = 1;
+}
+
+message DeviceReport {
+    TestResults tests = 1;
+    bytes attestation = 2;
 }

@@ -24,56 +24,54 @@ import android.util.AttributeSet
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.Protos.StorageInfo
 import com.android.devicediagnostics.R
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.widget.UsageProgressBarPreference
 
-class StorageDiagnostics {
-    var lifetime: Int = -1
-    var totalCapacity: Long = -1
-    var totalCapacityUnits: String? = null
+public fun getStorageInfo(context: Context): StorageInfo {
+    val builder = StorageInfo.newBuilder()
 
-    constructor(context: Context) {
-        val ssm =
-            IStorageStatsManager.Stub.asInterface(ServiceManager.getService(Context.STORAGE_STATS_SERVICE));
+    val ssm =
+        IStorageStatsManager.Stub.asInterface(ServiceManager.getService(Context.STORAGE_STATS_SERVICE));
+    val totalBytes =
+        ssm.getTotalBytes(StorageManager.UUID_PRIVATE_INTERNAL, context.opPackageName)
+    setStorageInfoCapacity(builder, (totalBytes / 1000) / 1000)
 
-        val totalBytes =
-            ssm.getTotalBytes(StorageManager.UUID_PRIVATE_INTERNAL, context.opPackageName)
-        setCapacity((totalBytes / 1000) / 1000)
-
+    if (android.os.Flags.storageLifetimeApi()) {
         val sm = context.getSystemService(Context.STORAGE_SERVICE) as StorageManager
-        if (android.os.Flags.storageLifetimeApi()) {
-            lifetime = sm.internalStorageRemainingLifetime
-        }
+        builder.setUsefulLifetimeRemaining(sm.internalStorageRemainingLifetime)
+    }
+    return builder.build()
+}
+
+private fun setStorageInfoCapacity(builder: StorageInfo.Builder, value: Long) {
+    var totalCapacity = value
+    var totalCapacityUnits = "MB"
+
+    if (totalCapacity >= 1000) {
+        totalCapacity /= 1000
+        totalCapacityUnits = "GB"
     }
 
-    private fun setCapacity(value: Long) {
-        totalCapacity = value
-        if (totalCapacity < 1000) {
-            totalCapacityUnits = "MB"
-            return
-        }
-
-        totalCapacity /= 1000
-        if (totalCapacity < 1000) {
-            totalCapacityUnits = "GB"
-            return
-        }
-
+    if (totalCapacity >= 1000) {
         totalCapacity /= 1000
         totalCapacityUnits = "TB"
     }
+
+    builder.setCapacity(totalCapacity)
+    builder.setCapacityUnits(totalCapacityUnits)
 }
 
-class StorageFragment(private var diagnostics: StorageDiagnostics) : PreferenceFragmentCompat() {
+class StorageFragment(private var diagnostics: StorageInfo) : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.storage_preferences, rootKey)
 
         findPreference<StorageHealthPreference>("health")!!.also {
-            if (diagnostics.lifetime != -1) {
-                it.setPercent(diagnostics.lifetime.toLong(), 100)
+            if (diagnostics.usefulLifetimeRemaining != -1) {
+                it.setPercent(diagnostics.usefulLifetimeRemaining.toLong(), 100)
                 it.setBottomSummary(getString(R.string.storage_health_summary,
-                    diagnostics.lifetime))
+                    diagnostics.usefulLifetimeRemaining))
             } else {
                 it.isVisible = false
             }
@@ -82,21 +80,21 @@ class StorageFragment(private var diagnostics: StorageDiagnostics) : PreferenceF
         findPreference<Preference>("total_capacity")!!.also {
             it.summary =
                 getString(R.string.storage_total_capacity_summary,
-                    diagnostics.totalCapacity,
-                    diagnostics.totalCapacityUnits)
+                    diagnostics.capacity,
+                    diagnostics.capacityUnits)
         }
     }
 }
 
 class StorageActivity : CollapsingToolbarBaseActivity() {
-    lateinit var diagnostics: StorageDiagnostics
+    lateinit var diagnostics: StorageInfo
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_one_fragment)
         setTitle(R.string.storage_title)
 
-        diagnostics = StorageDiagnostics(this)
+        diagnostics = getStorageInfo(this)
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
@@ -112,13 +110,13 @@ class StorageHealthPreference(context: Context, attrs: AttributeSet) :
 
     fun constructor() {}
 
-    val diagnostics: StorageDiagnostics
+    val diagnostics: StorageInfo
         get() = (context as StorageActivity).diagnostics
 
     override fun getSummary(): CharSequence? {
-        if (diagnostics.lifetime == -1) {
+        if (diagnostics.usefulLifetimeRemaining == -1) {
             return context.getString(R.string.unavailable)
         }
-        return diagnostics.lifetime.toString() + "%"
+        return diagnostics.usefulLifetimeRemaining.toString() + "%"
     }
 }
