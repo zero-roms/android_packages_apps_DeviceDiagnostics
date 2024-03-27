@@ -67,9 +67,11 @@ object BluetoothClient : IBluetoothClient {
     }
 
     override fun read(device: IBluetoothDevice): ByteArray {
-        stopScanning()
         socket = (device as BluetoothDeviceAdapter).device.createInsecureL2capChannel(connectionData!!.psm)
         socket!!.connect()
+        if (socket == null)
+            throw Exception()
+        stopScanning()
         val input = socket!!.inputStream
         var b = ByteArray(0)
         while (true) {

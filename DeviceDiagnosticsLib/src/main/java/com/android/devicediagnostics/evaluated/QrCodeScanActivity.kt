@@ -80,28 +80,21 @@ class QrCodeScanFragment(private val listener: TextureView.SurfaceTextureListene
         }
 
         bluetoothClient.start() {
-            Log.d(TAG, "Found device ${it.name}")
             try {
+                Log.d(TAG, "Found device ${it.name}")
                 val bytes = bluetoothClient.read(it)
                 val trustedDeviceInfo = Protos.TrustedDeviceInfo.parseFrom(bytes)
                 requireActivity().runOnUiThread {
                     onDeviceConnected(trustedDeviceInfo)
                 }
             } catch (e: Exception) {
-                Log.e(TAG, "Could not connect to trusted device: $e")
-                requireActivity().runOnUiThread {
-                    onBluetoothFailure()
-                }
+                Log.e(TAG, "Could not connect to trusted device")
             }
         }
     }
 
     private fun onDeviceConnected(trustedDeviceInfo: Protos.TrustedDeviceInfo) {
         startFullTestFlow(requireActivity(), trustedDeviceInfo)
-    }
-
-    private fun onBluetoothFailure() {
-        // :TODO: implement.
     }
 }
 
