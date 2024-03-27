@@ -16,4 +16,10 @@
       app:selectable="false"
       app:isPreferenceVisible="false"
       android:layout="@layout/bluetooth_progress" />
+
+  <Preference
+      app:key="connection_failed"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/evaluated_bt_fail_title" />
 </PreferenceScreen>

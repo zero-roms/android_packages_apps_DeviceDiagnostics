@@ -17,6 +17,7 @@
 package com.android.devicediagnostics.evaluated
 
 import android.Manifest
+import android.content.Context
 import android.graphics.Matrix
 import android.graphics.Outline
 import android.graphics.Rect
@@ -38,6 +39,8 @@ import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.Protos
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
+import com.android.devicediagnostics.bluetooth.IBluetoothClient
+import com.android.devicediagnostics.bluetooth.IBluetoothDevice
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.qrcode.QrCamera
 import com.android.settingslib.widget.LayoutPreference
@@ -52,10 +55,14 @@ interface IQrCamera {
 class QrCodeScanFragment() :
     TextureView.SurfaceTextureListener,
     QrCamera.ScannerCallback,
-    PreferenceFragmentCompat() {
+    IBluetoothClient.ScanListener,
+    PreferenceFragmentCompat()
+{
     private var mTextureView: TextureView? = null
+    private var bluetoothClient: IBluetoothClient? = null
     private lateinit var mCamera : IQrCamera
-    val textureView: TextureView
+
+    private val textureView: TextureView
         get() {
             return mTextureView ?: throw AssertionError("texture view is null")
         }
@@ -78,32 +85,54 @@ class QrCodeScanFragment() :
         textureView.clipToOutline = true
     }
 
-    fun setConnectionData(connectionData: BluetoothConnectionData) {
-        val bluetoothClient = (requireActivity().applicationContext as ApplicationInterface)
-            .getBluetoothClient()
-        bluetoothClient.connectionData = connectionData
+    fun startBluetooth(connectionData: BluetoothConnectionData) {
+        bluetoothClient = (activity!!.applicationContext as ApplicationInterface).getBluetoothClient()
+        bluetoothClient!!.connectionData = connectionData
+        bluetoothClient!!.start(this)
 
         requireActivity().runOnUiThread {
-            val pref = findPreference<Preference>("connection_progress")!!
-            pref.isVisible = true
-        }
-
-        bluetoothClient.start() {
-            try {
-                Log.d(TAG, "Found device ${it.name}")
-                val bytes = bluetoothClient.read(it)
-                val trustedDeviceInfo = Protos.TrustedDeviceInfo.parseFrom(bytes)
-                requireActivity().runOnUiThread {
-                    onDeviceConnected(trustedDeviceInfo)
-                }
-            } catch (e: Exception) {
-                Log.e(TAG, "Could not connect to trusted device")
-            }
+            setConnectionProgressVisibility(true)
         }
     }
 
+    override fun onBluetoothConnected(device: IBluetoothDevice) {
+        try {
+            Log.d(TAG, "Found device ${device.name}")
+            val bytes = bluetoothClient!!.read(device)
+            val trustedDeviceInfo = Protos.TrustedDeviceInfo.parseFrom(bytes)
+            requireActivity().runOnUiThread {
+                onDeviceConnected(trustedDeviceInfo)
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Could not connect to trusted device: $e")
+        }
+    }
+
+    override fun onBluetoothConnectionFailed() {
+        onBluetoothFailure()
+    }
+
+    private fun setConnectionProgressVisibility(visible: Boolean) {
+        val pref = findPreference<Preference>("connection_progress")!!
+        pref.isVisible = visible
+    }
+
+    private fun setConnectionFailedVisibility(visible: Boolean) {
+        val pref = findPreference<Preference>("connection_failed")!!
+        pref.isVisible = visible
+    }
+
     private fun onDeviceConnected(trustedDeviceInfo: Protos.TrustedDeviceInfo) {
+        setConnectionProgressVisibility(false)
         startFullTestFlow(requireActivity(), trustedDeviceInfo)
+    }
+
+    private fun onBluetoothFailure() {
+        setConnectionProgressVisibility(false)
+        setConnectionFailedVisibility(true)
+
+        val bt = (requireActivity().applicationContext as ApplicationInterface).getBluetoothClient()
+        bt.reset()
     }
 
     override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
@@ -151,7 +180,7 @@ class QrCodeScanFragment() :
                 VibrationEffect.DEFAULT_AMPLITUDE
             )
         )
-        setConnectionData(BluetoothConnectionData(qrCode!!))
+        startBluetooth(BluetoothConnectionData(qrCode!!))
     }
 }
 

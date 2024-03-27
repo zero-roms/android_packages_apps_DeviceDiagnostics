@@ -32,11 +32,15 @@ private const val TAG = "BluetoothClient"
 interface IBluetoothClient {
     var connectionData: BluetoothConnectionData?
 
-    fun start(foundDevice: (device: IBluetoothDevice) -> Unit)
-
+    fun start(callback: ScanListener)
     fun read(device: IBluetoothDevice): ByteArray
-
     fun write(bytes: ByteArray)
+    fun reset()
+
+    interface ScanListener {
+        fun onBluetoothConnected(device: IBluetoothDevice)
+        fun onBluetoothConnectionFailed()
+    }
 }
 
 interface IBluetoothDevice {
@@ -51,8 +55,8 @@ class BluetoothDeviceAdapter(val device: BluetoothDevice) : IBluetoothDevice {
 object BluetoothClient : IBluetoothClient {
     override var connectionData: BluetoothConnectionData? = null
 
-    override fun start(foundDevice: (device: IBluetoothDevice) -> Unit) {
-        foundDevice_ = foundDevice
+    override fun start(listener: IBluetoothClient.ScanListener) {
+        this.listener = listener
         scanner = adapter.bluetoothLeScanner
         scanCallback = DeviceScanCallback()
 
@@ -92,34 +96,43 @@ object BluetoothClient : IBluetoothClient {
     }
 
     private var socket: BluetoothSocket? = null
-    private var foundDevice_: ((IBluetoothDevice) -> Unit)? = null
+    private var listener: IBluetoothClient.ScanListener? = null
     private val adapter = BluetoothAdapter.getDefaultAdapter()
     private var scanner: BluetoothLeScanner? = null
-    private var scanCallback: DeviceScanCallback? = null
+    private var scanCallback: DeviceScanCallback = DeviceScanCallback()
+
+    override fun reset() {
+        connectionData = null
+        try {
+            stopScanning()
+            socket?.close()
+        } catch (_: Exception) {}
+        socket = null
+        listener = null
+        scanner = null
+    }
 
     private fun stopScanning() {
         Log.d(TAG, "stopped scan");
         scanner?.stopScan(scanCallback)
         adapter.cancelDiscovery()
-        foundDevice_ = null
+        listener = null
     }
 
     private class DeviceScanCallback : ScanCallback() {
         override fun onBatchScanResults(results: List<ScanResult>) {
-            super.onBatchScanResults(results)
             for (item in results) {
-                item.device?.let { foundDevice_?.invoke(BluetoothDeviceAdapter(it)) }
+                item.device?.let { listener?.onBluetoothConnected(BluetoothDeviceAdapter(it)) }
             }
         }
 
         override fun onScanResult(callbackType: Int, result: ScanResult) {
-            super.onScanResult(callbackType, result)
-            result.device?.let { foundDevice_?.invoke(BluetoothDeviceAdapter(it)) }
+            result.device?.let { listener?.onBluetoothConnected(BluetoothDeviceAdapter(it)) }
         }
 
         override fun onScanFailed(errorCode: Int) {
-            super.onScanFailed(errorCode)
             Log.d(TAG, "Scan failed with error: $errorCode")
+            listener?.onBluetoothConnectionFailed()
         }
     }
 }

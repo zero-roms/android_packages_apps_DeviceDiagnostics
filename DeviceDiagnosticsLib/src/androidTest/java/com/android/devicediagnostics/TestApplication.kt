@@ -56,8 +56,8 @@ class TestApplication : Application(), ApplicationInterface {
     return object : IBluetoothClient {
       override var connectionData: BluetoothConnectionData? = null
 
-      override fun start(foundDevice: (device: IBluetoothDevice) -> Unit) {
-        foundDevice(object : IBluetoothDevice { override val name = "Test" })
+      override fun start(callback: IBluetoothClient.ScanListener) {
+        callback.onBluetoothConnected(object : IBluetoothDevice { override val name = "Test" })
       }
 
       override fun read(device: IBluetoothDevice): ByteArray {
@@ -69,6 +69,8 @@ class TestApplication : Application(), ApplicationInterface {
       override fun write(bytes: ByteArray) {
         writtenData = bytes
       }
+
+      override fun reset() {}
     }
   }
 

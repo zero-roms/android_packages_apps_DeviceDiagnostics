@@ -46,6 +46,7 @@
   <string name="evaluated_scan_continue_summary">Once you have successfully scanned the QR code, this device will automatically start a series of tests.</string>
   <string name="evaluated_scan_select_device_title">Select trusted device</string>
   <string name="evaluated_scan_select_device_summary">Alternatively select the device from the list below</string>
+  <string name="evaluated_bt_fail_title">Connection failed, please try again.</string>
 
   <!-- Battery screen -->
   <string name="battery_health_title">Health</string>
