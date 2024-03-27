@@ -37,7 +37,7 @@ import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
 
-private fun touchDownAndUp(x: Float, y: Float): ViewAction? {
+private fun touchDownAndUp(): ViewAction? {
   return object : ViewAction {
     override fun getConstraints(): Matcher<View> {
       return isDisplayed()
@@ -53,7 +53,8 @@ private fun touchDownAndUp(x: Float, y: Float): ViewAction? {
       view.getLocationOnScreen(location)
 
       // Offset coordinates by view position
-      val coordinates = floatArrayOf(x + location[0], y + location[1])
+      val coordinates = floatArrayOf(view.width.toFloat() / 2 + location[0],
+                                               view.height.toFloat() / 2 + location[1])
       val precision = floatArrayOf(1f, 1f)
 
       // Send down event, pause, and send up
@@ -79,11 +80,11 @@ class MainActivityKtTest {
     onView(withText("Continue")).check(matches(isDisplayed()))
     onView(withText("Continue")).perform(click())
     Thread.sleep(100)
-    onView(withId(R.id.mainLayout)).perform(touchDownAndUp(10f, 10f));
+    onView(withId(R.id.mainLayout)).perform(touchDownAndUp());
     Thread.sleep(100)
-    onView(withId(R.id.mainLayout)).perform(touchDownAndUp(10f, 10f));
+    onView(withId(R.id.mainLayout)).perform(touchDownAndUp());
     Thread.sleep(100)
-    onView(withId(R.id.mainLayout)).perform(touchDownAndUp(10f, 10f));
+    onView(withId(R.id.mainLayout)).perform(touchDownAndUp());
     Thread.sleep(100)
     onView(withText("No obvious defects")).check(matches(isDisplayed()))
     onView(withText("Defective in some way")).check(matches(isDisplayed()))
@@ -91,7 +92,7 @@ class MainActivityKtTest {
     onView(withText("Continue")).check(matches(isDisplayed()))
     onView(withText("Continue")).perform(click())
     Thread.sleep(200)
-    onView(withId(R.id.touchTest)).perform(touchDownAndUp(10f, 10f))
+    onView(withId(R.id.touchTest)).perform(touchDownAndUp())
     Thread.sleep(100)
     onView(withText("The touch sensor test failed")).check(matches(isDisplayed()))
     onView(withText("Continue")).perform(click())
