@@ -68,7 +68,10 @@ public fun getBatteryInfo(context: Context): BatteryInfo {
         } else if (status == BatteryManager.PART_STATUS_REPLACED) {
             builder.setPartStatus(context.resources.getString(R.string.battery_replaced))
         }
-        builder.setSerial(bm.getStringProperty(BatteryManager.BATTERY_PROPERTY_SERIAL_NUMBER))
+        val serial = bm.getStringProperty(BatteryManager.BATTERY_PROPERTY_SERIAL_NUMBER)
+        if (serial != null) {
+            builder.setSerial(serial)
+        }
     }
 
     val filter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
