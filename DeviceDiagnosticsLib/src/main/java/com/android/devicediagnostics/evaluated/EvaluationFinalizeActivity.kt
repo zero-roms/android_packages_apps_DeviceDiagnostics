@@ -52,6 +52,8 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
 
             val attestation = createAttestationRecord(state.trustedDevice.challenge.toByteArray())
             reportBuilder.setAttestation(ByteString.copyFrom(attestation))
+            reportBuilder.setBattery(getBatteryInfo(activity!!))
+            reportBuilder.setStorage(getStorageInfo(activity!!))
 
             val report = reportBuilder.build()
 

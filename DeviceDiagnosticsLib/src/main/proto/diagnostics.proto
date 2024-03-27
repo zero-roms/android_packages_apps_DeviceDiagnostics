@@ -46,4 +46,6 @@ message TrustedDeviceInfo {
 message DeviceReport {
     TestResults tests = 1;
     bytes attestation = 2;
+    BatteryInfo battery = 3;
+    StorageInfo storage = 4;
 }
