@@ -37,7 +37,7 @@ class WaitForResultFragment() : PreferenceFragmentCompat() {
     }
 }
 
-class WaitForResultActivity : CollapsingToolbarBaseActivity() {
+class WaitForResultActivity : CollapsingToolbarBaseActivity(), BluetoothServer.ReadListener {
     private var mFragment = WaitForResultFragment()
 
     private val permissions = PermissionsHelper(this,
@@ -59,17 +59,19 @@ class WaitForResultActivity : CollapsingToolbarBaseActivity() {
             setReorderingAllowed(true)
             add(R.id.fragment_container_view, mFragment)
         }
-        runInBackground {
-            try {
-                val bytes = (applicationContext as ApplicationInterface).getBluetoothServer().read()
-                val report = DeviceReport.parseFrom(bytes)
-                runOnUiThread {
-                    onReportReceived(report)
-                }
-            } catch (_: Exception) {
-                // :TODO: handle this
-            }
+        val btServer = (applicationContext as ApplicationInterface).getBluetoothServer()
+        btServer.startAsyncRead(this)
+    }
+
+    override fun onBluetoothRead(bytes: ByteArray) {
+        val report = DeviceReport.parseFrom(bytes)
+        runOnUiThread {
+            onReportReceived(report)
         }
+    }
+
+    override fun onBluetoothError(e: Exception) {
+        // :TODO: handle
     }
 
     fun onReportReceived(report: DeviceReport) {

@@ -62,7 +62,7 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
 
             val bluetoothClient = (requireActivity().applicationContext as ApplicationInterface)
                 .getBluetoothClient()
-            bluetoothClient.write(report.toByteArray())
+            bluetoothClient.sendReport(report)
         }
     }
 }

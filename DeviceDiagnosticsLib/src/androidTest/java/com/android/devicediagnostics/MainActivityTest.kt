@@ -19,23 +19,45 @@ package com.android.devicediagnostics
 import android.app.Activity
 import android.view.View
 import androidx.test.core.app.ActivityScenario.launch
-import androidx.test.core.app.ApplicationProvider.getApplicationContext
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.UiController
 import androidx.test.espresso.ViewAction
 import androidx.test.espresso.action.MotionEvents
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.intent.Intents
+import androidx.test.espresso.intent.Intents.intended
+import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.devicediagnostics.Protos.DeviceReport
-import kotlin.concurrent.withLock
+import com.android.devicediagnostics.Protos.TestResults
+import com.android.devicediagnostics.Protos.TrustedDeviceInfo
+import com.android.devicediagnostics.bluetooth.BluetoothClient
+import com.android.devicediagnostics.bluetooth.BluetoothServer
+import com.android.devicediagnostics.bluetooth.IBluetoothDevice
+import com.android.devicediagnostics.evaluated.ScreenTestFinalizeActivity
+import com.android.devicediagnostics.evaluated.TouchTestFinalizeActivity
+import com.android.devicediagnostics.trusted.DisplayResultActivity
+import com.android.devicediagnostics.trusted.WaitForResultActivity
+import com.android.settingslib.qrcode.QrCamera
+import com.google.protobuf.ByteString
+import java.nio.charset.Charset
 import org.hamcrest.Matcher
+import org.junit.After
 import org.junit.Assert.*
+import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.Mockito
+import org.mockito.kotlin.any
+import org.mockito.kotlin.argumentCaptor
+import org.mockito.kotlin.times
+import org.mockito.kotlin.verify
+import org.mockito.kotlin.whenever
 
 private fun touchDownAndUp(): ViewAction? {
   return object : ViewAction {
@@ -65,8 +87,37 @@ private fun touchDownAndUp(): ViewAction? {
   }
 }
 
+private const val QR_PAYLOAD = "{\"PSM\":134}"
+
 @RunWith(AndroidJUnit4::class)
 class MainActivityKtTest {
+  @Before
+  fun setupMocks() {
+    Intents.init()
+    app.btClient = Mockito.mock(BluetoothClient::class.java)
+    app.btServer = Mockito.mock(BluetoothServer::class.java)
+    app.qrCameraProvider = Mockito.mock(QrCameraProvider::class.java)
+  }
+
+  @After
+  fun teardownMocks() {
+    app.btClient = null
+    app.btServer = null
+    app.qrCameraProvider = null
+    Intents.release()
+  }
+
+  private val app : TestApplication
+    get() = (ApplicationProvider.getApplicationContext() as TestApplication)
+
+  private val btClient: BluetoothClient
+    get() = app.getBluetoothClient()
+
+  private val btServer : BluetoothServer
+    get() = app.getBluetoothServer()
+
+  private val qrCameraProvider: QrCameraProvider
+    get() = app.qrCameraProvider!!
 
   @Test
   fun testEvaluationFlow() {
@@ -76,59 +127,107 @@ class MainActivityKtTest {
     }
     onView(withText("Evaluation mode")).perform(click())
     onView(withText("Evaluated Device")).check(matches(isDisplayed()))
+
+    // Set up the mock QR code scanner.
+    val qrCaptor = argumentCaptor<QrCamera.ScannerCallback>()
+    val qrCamera = Mockito.mock(QrCamera::class.java)
+    whenever(qrCameraProvider.getQrCamera(qrCaptor.capture())).thenAnswer { qrCamera }
+
+    // Set up the mock bluetooth client.
+    val challenge = ByteString.copyFrom("test challenge", Charset.defaultCharset())
+    val deviceInfo = TrustedDeviceInfo.newBuilder()
+      .setChallenge(challenge)
+      .build()
+    whenever(btClient.read(any())).thenAnswer {
+      val device = it.arguments[0] as IBluetoothDevice
+      assertEquals(device.name, "Test")
+      deviceInfo.toByteArray()
+    }
+
+    // Move to the QrCodeScanner activity.
     onView(withText("Evaluated Device")).perform(click())
+
+    // Check that the camera was started.
+    verify(qrCamera, times(1)).start(any())
+
+    // Simulate scanning a QR code.
+    val qrScanner = qrCaptor.firstValue
+    qrScanner.handleSuccessfulResult(QR_PAYLOAD)
+
+    // Check that bluetooth was started.
+    val btCaptor = argumentCaptor<BluetoothClient.ScanListener>()
+    verify(btClient).start(btCaptor.capture())
+    btCaptor.firstValue.onBluetoothConnected(object : IBluetoothDevice { override val name = "Test" })
+
     onView(withText("Continue")).check(matches(isDisplayed()))
     onView(withText("Continue")).perform(click())
-    Thread.sleep(100)
     onView(withId(R.id.mainLayout)).perform(touchDownAndUp());
-    Thread.sleep(100)
     onView(withId(R.id.mainLayout)).perform(touchDownAndUp());
-    Thread.sleep(100)
     onView(withId(R.id.mainLayout)).perform(touchDownAndUp());
-    Thread.sleep(100)
+    intended(hasComponent(ScreenTestFinalizeActivity::class.java.name))
     onView(withText("No obvious defects")).check(matches(isDisplayed()))
     onView(withText("Defective in some way")).check(matches(isDisplayed()))
     onView(withText("No obvious defects")).perform(click())
     onView(withText("Continue")).check(matches(isDisplayed()))
     onView(withText("Continue")).perform(click())
-    Thread.sleep(200)
+    onView(withId(R.id.touchTest)).check(matches(isDisplayed()))
     onView(withId(R.id.touchTest)).perform(touchDownAndUp())
-    Thread.sleep(100)
+    intended(hasComponent(TouchTestFinalizeActivity::class.java.name))
     onView(withText("The touch sensor test failed")).check(matches(isDisplayed()))
     onView(withText("Continue")).perform(click())
-    Thread.sleep(100)
     onView(withText("Evaluation complete")).check(matches(isDisplayed()))
-    Thread.sleep(1000)
 
-    while((getApplicationContext() as TestApplication).writtenData == null)
-      Thread.sleep(1000)
-    val report = DeviceReport.parseFrom((getApplicationContext() as TestApplication).writtenData)
+    // Verify the report was sent.
+    val reportCaptor = argumentCaptor<DeviceReport>()
+    verify(btClient, times(1)).sendReport(reportCaptor.capture())
+    val report = reportCaptor.firstValue
+
     assert(report.tests.screenTest)
     assert(!report.tests.touchTest)
   }
 
-  private fun notifyMock () {
-    (getApplicationContext() as TestApplication).lock.withLock() {
-      (getApplicationContext() as TestApplication).condition.signal()
-    }
-  }
   @Test
   fun testTrustedFlow() {
     val activityScenario = launch(MainActivity::class.java)
     activityScenario.onActivity {activity : Activity ->
       assertEquals(activity.title, "Device Diagnostics")
     }
+
     onView(withText("Evaluation mode")).perform(click())
     onView(withText("Trusted Device")).check(matches(isDisplayed()))
     onView(withText("Trusted Device")).perform(click())
     onView(withText("Scan now")).check(matches(isDisplayed()))
-    Thread.sleep(200)
-    notifyMock()
-    Thread.sleep(200)
+
+    // Verify that we started waiting for the bluetooth server.
+    val callbackCaptor = argumentCaptor<() -> Unit>()
+    verify(btServer, times(1)).start(any(), callbackCaptor.capture())
+
+    // Set up the mocked test results.
+    val deviceReportBuilder = DeviceReport.newBuilder()
+    val testResultsBuilder = TestResults.newBuilder()
+    testResultsBuilder.setScreenTest(true)
+    testResultsBuilder.setTouchTest(false)
+    deviceReportBuilder.setTests(testResultsBuilder)
+    val deviceReport = deviceReportBuilder.build()
+
+    // Invoke the server completion callback.
+    callbackCaptor.firstValue()
+
+    intended(hasComponent(WaitForResultActivity::class.java.name))
+    waitForActivity<WaitForResultActivity>()
+
     onView(withText("Continue on the device being evaluated")).check(matches(isDisplayed()))
-    Thread.sleep(200)
-    notifyMock()
-    Thread.sleep(200)
+
+    // Catch the call to btServer.startAsyncRead().
+    val readListenerCaptor = argumentCaptor<BluetoothServer.ReadListener>()
+    verify(btServer, times(1)).startAsyncRead(readListenerCaptor.capture())
+
+    // Finish the read operation.
+    readListenerCaptor.firstValue.onBluetoothRead(deviceReport.toByteArray())
+
+    intended(hasComponent(DisplayResultActivity::class.java.name))
+    waitForActivity<DisplayResultActivity>()
+
     onView(withText("Pass")).check(matches(isDisplayed()))
     onView(withText("Fail")).check(matches(isDisplayed()))
     onView(withText("Retry attestation")).check(matches(isDisplayed()))

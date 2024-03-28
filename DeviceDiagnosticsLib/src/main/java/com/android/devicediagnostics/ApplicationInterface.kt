@@ -18,16 +18,15 @@ package com.android.devicediagnostics
 
 import android.content.Context
 import android.os.AsyncTask
-import com.android.devicediagnostics.bluetooth.IBluetoothClient
-import com.android.devicediagnostics.bluetooth.IBluetoothServer
-import com.android.devicediagnostics.evaluated.IQrCamera
+import com.android.devicediagnostics.bluetooth.BluetoothClient
+import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.qrcode.QrCamera
 
 interface ApplicationInterface {
   fun getRandomBytes(count: Int) : ByteArray
-  fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : IQrCamera
-  fun getBluetoothClient() : IBluetoothClient
-  fun getBluetoothServer() : IBluetoothServer
+  fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : QrCamera
+  fun getBluetoothClient() : BluetoothClient
+  fun getBluetoothServer() : BluetoothServer
 }
 
 // Must only be called on the UI thread.

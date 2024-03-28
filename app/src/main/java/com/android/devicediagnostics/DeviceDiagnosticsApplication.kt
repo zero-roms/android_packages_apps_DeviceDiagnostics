@@ -18,12 +18,8 @@ package com.android.devicediagnostics
 
 import android.app.Application
 import android.content.Context
-import android.graphics.SurfaceTexture
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothServer
-import com.android.devicediagnostics.bluetooth.IBluetoothClient
-import com.android.devicediagnostics.bluetooth.IBluetoothServer
-import com.android.devicediagnostics.evaluated.IQrCamera
 import kotlin.random.Random
 import com.android.settingslib.qrcode.QrCamera
 
@@ -32,18 +28,15 @@ class DeviceDiagnosticsApplication : Application(), ApplicationInterface {
     return Random.nextBytes(count)
   }
 
-  override fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : IQrCamera {
-    return object : IQrCamera, QrCamera(context, activity) {
-      override fun start(surface: SurfaceTexture) {super.start(surface)}
-      override fun stop() {super.stop()}
-    }
+  override fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : QrCamera {
+    return QrCamera(context, activity)
   }
 
-  override fun getBluetoothClient() : IBluetoothClient {
+  override fun getBluetoothClient() : BluetoothClient {
     return BluetoothClient
   }
 
-  override fun getBluetoothServer() : IBluetoothServer {
+  override fun getBluetoothServer() : BluetoothServer {
     return BluetoothServer
   }
 }

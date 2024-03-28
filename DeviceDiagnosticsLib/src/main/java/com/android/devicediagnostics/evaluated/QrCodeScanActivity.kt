@@ -39,7 +39,7 @@ import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.Protos
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
-import com.android.devicediagnostics.bluetooth.IBluetoothClient
+import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.IBluetoothDevice
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.qrcode.QrCamera
@@ -47,42 +47,33 @@ import com.android.settingslib.widget.LayoutPreference
 
 private const val TAG = "evaluated/QrCodeScan"
 
-interface IQrCamera {
-    fun start(surface: SurfaceTexture)
-    fun stop()
-}
-
 class QrCodeScanFragment() :
     TextureView.SurfaceTextureListener,
+    BluetoothClient.ScanListener,
     QrCamera.ScannerCallback,
-    IBluetoothClient.ScanListener,
     PreferenceFragmentCompat()
 {
-    private var mTextureView: TextureView? = null
-    private var bluetoothClient: IBluetoothClient? = null
-    private lateinit var mCamera : IQrCamera
-
-    private val textureView: TextureView
-        get() {
-            return mTextureView ?: throw AssertionError("texture view is null")
-        }
+    private var textureView: TextureView? = null
+    private var bluetoothClient: BluetoothClient? = null
+    private var mCamera: QrCamera? = null
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_scan, rootKey)
-        mCamera = (activity!!.applicationContext as ApplicationInterface).getQrCamera(activity!!, this)
+        mCamera =
+            (activity!!.applicationContext as ApplicationInterface).getQrCamera(activity!!, this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val layoutPreference = findPreference("qr_code") as LayoutPreference?
-        mTextureView = layoutPreference!!.findViewById<TextureView>(R.id.preview_view)
-        textureView.surfaceTextureListener = this
-        textureView.outlineProvider = object : ViewOutlineProvider() {
+        textureView = layoutPreference!!.findViewById<TextureView>(R.id.preview_view)
+        textureView!!.surfaceTextureListener = this
+        textureView!!.outlineProvider = object : ViewOutlineProvider() {
             override fun getOutline(view: View, outline: Outline) {
                 outline.setRoundRect(0, 0, view.width, view.height, 12f)
             }
         }
-        textureView.clipToOutline = true
+        textureView!!.clipToOutline = true
     }
 
     fun startBluetooth(connectionData: BluetoothConnectionData) {
@@ -136,24 +127,24 @@ class QrCodeScanFragment() :
     }
 
     override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
-        mCamera.start(surface)
+        mCamera?.start(surface)
     }
 
     override fun onSurfaceTextureSizeChanged(surface: SurfaceTexture, width: Int, height: Int) {}
 
     override fun onSurfaceTextureDestroyed(surface: SurfaceTexture): Boolean {
-        mCamera.stop()
+        mCamera?.stop()
         return true
     }
 
     override fun onSurfaceTextureUpdated(surface: SurfaceTexture) {}
 
     override fun handleCameraFailure() {
-        mCamera.stop()
+        mCamera?.stop()
     }
 
     override fun getViewSize(): Size {
-        return Size(textureView.width, textureView.height)
+        return Size(textureView!!.width, textureView!!.height)
     }
 
     override fun getFramePosition(previewSize: Size, cameraOrientation: Int): Rect {
@@ -161,7 +152,7 @@ class QrCodeScanFragment() :
     }
 
     override fun setTransform(transform: Matrix?) {
-        textureView.setTransform(transform)
+        textureView!!.setTransform(transform)
     }
 
     override fun isValid(qrCode: String?): Boolean {

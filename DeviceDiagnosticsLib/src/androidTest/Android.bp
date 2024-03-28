@@ -31,12 +31,16 @@ android_test {
     static_libs: [
         "androidx.test.core",
         "androidx.test.espresso.core",
+        "androidx.test.espresso.intents",
         "androidx.test.ext.junit",
         "DeviceDiagnosticsLib",
+        "mockito-kotlin2",
     ],
     libs: [
         "android.test.runner.stubs",
         "android.test.base.stubs",
+        "android.test.mock",
+        "android.test.mock.stubs",
     ],
     test_suites: ["general-tests"],
 }

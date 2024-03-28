@@ -26,22 +26,9 @@ import android.bluetooth.le.ScanResult
 import android.bluetooth.le.ScanSettings
 import android.os.ParcelUuid
 import android.util.Log
+import com.android.devicediagnostics.Protos.DeviceReport
 
 private const val TAG = "BluetoothClient"
-
-interface IBluetoothClient {
-    var connectionData: BluetoothConnectionData?
-
-    fun start(callback: ScanListener)
-    fun read(device: IBluetoothDevice): ByteArray
-    fun write(bytes: ByteArray)
-    fun reset()
-
-    interface ScanListener {
-        fun onBluetoothConnected(device: IBluetoothDevice)
-        fun onBluetoothConnectionFailed()
-    }
-}
 
 interface IBluetoothDevice {
     val name : String
@@ -52,10 +39,15 @@ class BluetoothDeviceAdapter(val device: BluetoothDevice) : IBluetoothDevice {
         get() = device.name
 }
 
-object BluetoothClient : IBluetoothClient {
-    override var connectionData: BluetoothConnectionData? = null
+object BluetoothClient {
+    interface ScanListener {
+        fun onBluetoothConnected(device: IBluetoothDevice)
+        fun onBluetoothConnectionFailed()
+    }
 
-    override fun start(listener: IBluetoothClient.ScanListener) {
+    var connectionData: BluetoothConnectionData? = null
+
+    fun start(listener: ScanListener) {
         this.listener = listener
         scanner = adapter.bluetoothLeScanner
         scanCallback = DeviceScanCallback()
@@ -70,7 +62,7 @@ object BluetoothClient : IBluetoothClient {
         Log.d(TAG, "Started scan $scanner");
     }
 
-    override fun read(device: IBluetoothDevice): ByteArray {
+    fun read(device: IBluetoothDevice): ByteArray {
         socket = (device as BluetoothDeviceAdapter).device.createInsecureL2capChannel(connectionData!!.psm)
         socket!!.connect()
         if (socket == null)
@@ -88,7 +80,7 @@ object BluetoothClient : IBluetoothClient {
         return b
     }
 
-    override fun write(bytes: ByteArray) {
+    private fun write(bytes: ByteArray) {
         val output = socket!!.outputStream
         output.write(bytes)
         socket!!.inputStream.readNBytes(4)
@@ -96,12 +88,12 @@ object BluetoothClient : IBluetoothClient {
     }
 
     private var socket: BluetoothSocket? = null
-    private var listener: IBluetoothClient.ScanListener? = null
+    private var listener: ScanListener? = null
     private val adapter = BluetoothAdapter.getDefaultAdapter()
     private var scanner: BluetoothLeScanner? = null
     private var scanCallback: DeviceScanCallback = DeviceScanCallback()
 
-    override fun reset() {
+    fun reset() {
         connectionData = null
         try {
             stopScanning()
@@ -117,6 +109,10 @@ object BluetoothClient : IBluetoothClient {
         scanner?.stopScan(scanCallback)
         adapter.cancelDiscovery()
         listener = null
+    }
+
+    fun sendReport(report: DeviceReport) {
+        write(report.toByteArray())
     }
 
     private class DeviceScanCallback : ScanCallback() {

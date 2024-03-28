@@ -25,7 +25,9 @@ import android.bluetooth.le.AdvertiseSettings
 import android.bluetooth.le.BluetoothLeAdvertiser
 import android.os.ParcelUuid
 import android.util.Log
+import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.Protos.TrustedDeviceInfo
+import com.android.devicediagnostics.runInBackground
 import java.util.UUID
 import org.json.JSONObject
 
@@ -45,31 +47,21 @@ class BluetoothConnectionData(var psm: Int = 0) {
     }
 }
 
-interface IBluetoothServer {
-    var connectionData : BluetoothConnectionData
-
-    val bluetoothEnabled : Boolean
-
-    fun start(trustedDeviceInfo: TrustedDeviceInfo, written: () -> Unit = {})
-
-    fun read(): ByteArray
-}
-
-object BluetoothServer : IBluetoothServer {
+object BluetoothServer {
     private val adapter get() = BluetoothAdapter.getDefaultAdapter()
     private var serverSocket: BluetoothServerSocket? = null
     private var socket: BluetoothSocket? = null
-    override var connectionData = BluetoothConnectionData()
-    override val bluetoothEnabled get() = adapter.isEnabled
+    var connectionData = BluetoothConnectionData()
+    val bluetoothEnabled get() = adapter.isEnabled
 
-    override fun start(trustedDeviceInfo: TrustedDeviceInfo, written: () -> Unit) {
+    fun start(trustedDeviceInfo: TrustedDeviceInfo, written: () -> Unit) {
         startAdvertisement()
         serverSocket = adapter.listenUsingInsecureL2capChannel()
         Log.d(TAG, "Server started with psm ${serverSocket?.psm}")
         connectionData.psm = serverSocket!!.psm
 
         // Thread since this waits for connections and otherwise will block Ux
-        Thread {
+        runInBackground() {
             socket = serverSocket!!.accept()
             serverSocket!!.close()
             serverSocket = null
@@ -78,10 +70,10 @@ object BluetoothServer : IBluetoothServer {
             output.write(trustedDeviceInfo.toByteArray())
             Log.d(TAG, "wrote start message")
             written()
-        }.start()
+        }
     }
 
-    override fun read(): ByteArray {
+    private fun read(): ByteArray {
         val input = socket!!.inputStream
         var b = ByteArray(0)
         while (true) {
@@ -95,6 +87,21 @@ object BluetoothServer : IBluetoothServer {
         socket!!.close()
         socket = null
         return b
+    }
+
+    interface ReadListener {
+        fun onBluetoothRead(bytes: ByteArray)
+        fun onBluetoothError(e: Exception)
+    }
+
+    fun startAsyncRead(listener: ReadListener) {
+        runInBackground() {
+            try {
+                listener.onBluetoothRead(read())
+            } catch (e: Exception) {
+                listener.onBluetoothError(e)
+            }
+        }
     }
 
     private var advertiser: BluetoothLeAdvertiser? = null
