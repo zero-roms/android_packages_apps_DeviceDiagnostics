@@ -44,9 +44,17 @@ import com.android.settingslib.widget.LayoutPreference
 
 private const val TAG = "evaluated/QrCodeScan"
 
-class QrCodeScanFragment(private val listener: TextureView.SurfaceTextureListener) :
+interface IQrCamera {
+    fun start(surface: SurfaceTexture)
+    fun stop()
+}
+
+class QrCodeScanFragment() :
+    TextureView.SurfaceTextureListener,
+    QrCamera.ScannerCallback,
     PreferenceFragmentCompat() {
     private var mTextureView: TextureView? = null
+    private lateinit var mCamera : IQrCamera
     val textureView: TextureView
         get() {
             return mTextureView ?: throw AssertionError("texture view is null")
@@ -54,13 +62,14 @@ class QrCodeScanFragment(private val listener: TextureView.SurfaceTextureListene
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_scan, rootKey)
+        mCamera = (activity!!.applicationContext as ApplicationInterface).getQrCamera(activity!!, this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val layoutPreference = findPreference("qr_code") as LayoutPreference?
         mTextureView = layoutPreference!!.findViewById<TextureView>(R.id.preview_view)
-        textureView.surfaceTextureListener = listener
+        textureView.surfaceTextureListener = this
         textureView.outlineProvider = object : ViewOutlineProvider() {
             override fun getOutline(view: View, outline: Outline) {
                 outline.setRoundRect(0, 0, view.width, view.height, 12f)
@@ -96,46 +105,6 @@ class QrCodeScanFragment(private val listener: TextureView.SurfaceTextureListene
     private fun onDeviceConnected(trustedDeviceInfo: Protos.TrustedDeviceInfo) {
         startFullTestFlow(requireActivity(), trustedDeviceInfo)
     }
-}
-
-interface IQrCamera {
-    fun start(surface: SurfaceTexture)
-    fun stop()
-}
-
-class QrCodeScanActivity : CollapsingToolbarBaseActivity(),
-    TextureView.SurfaceTextureListener,
-    QrCamera.ScannerCallback {
-    private var mFragment = QrCodeScanFragment(this)
-    private lateinit var mCamera : IQrCamera
-
-    private val permissions = PermissionsHelper(this,
-        arrayOf(
-            Manifest.permission.CAMERA,
-            Manifest.permission.BLUETOOTH_ADVERTISE,
-            Manifest.permission.BLUETOOTH_CONNECT,
-            Manifest.permission.BLUETOOTH_SCAN,
-            Manifest.permission.ACCESS_FINE_LOCATION)
-    ) { onPermissionsGranted() }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        mCamera = (applicationContext as ApplicationInterface).getQrCamera(this, this)
-        setContentView(R.layout.activity_one_fragment)
-        setTitle(R.string.evaluation_mode_title)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        permissions.requestPermissions()
-    }
-
-    private fun onPermissionsGranted() {
-        supportFragmentManager.commit {
-            setReorderingAllowed(true)
-            add(R.id.fragment_container_view, mFragment)
-        }
-    }
 
     override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
         mCamera.start(surface)
@@ -155,7 +124,7 @@ class QrCodeScanActivity : CollapsingToolbarBaseActivity(),
     }
 
     override fun getViewSize(): Size {
-        return Size(mFragment.textureView.width, mFragment.textureView.height)
+        return Size(textureView.width, textureView.height)
     }
 
     override fun getFramePosition(previewSize: Size, cameraOrientation: Int): Rect {
@@ -163,7 +132,7 @@ class QrCodeScanActivity : CollapsingToolbarBaseActivity(),
     }
 
     override fun setTransform(transform: Matrix?) {
-        mFragment.textureView.setTransform(transform)
+        textureView.setTransform(transform)
     }
 
     override fun isValid(qrCode: String?): Boolean {
@@ -174,18 +143,51 @@ class QrCodeScanActivity : CollapsingToolbarBaseActivity(),
         }
 
         // The code is valid. Buzz the user
-        runOnUiThread {
-            getSystemService<Vibrator>(this, Vibrator::class.java)!!.vibrate(
-                VibrationEffect.createOneShot(
-                    500,
-                    VibrationEffect.DEFAULT_AMPLITUDE
+        activity?.also {
+            it.runOnUiThread {
+                getSystemService<Vibrator>(it, Vibrator::class.java)!!.vibrate(
+                    VibrationEffect.createOneShot(
+                        500,
+                        VibrationEffect.DEFAULT_AMPLITUDE
+                    )
                 )
-            )
+            }
         }
         return true
     }
 
     override fun handleSuccessfulResult(qrCode: String?) {
-        mFragment.setConnectionData(BluetoothConnectionData(qrCode!!))
+        setConnectionData(BluetoothConnectionData(qrCode!!))
+    }
+}
+
+class QrCodeScanActivity : CollapsingToolbarBaseActivity() {
+    private var mFragment = QrCodeScanFragment()
+
+    private val permissions = PermissionsHelper(this,
+        arrayOf(
+            Manifest.permission.CAMERA,
+            Manifest.permission.BLUETOOTH_ADVERTISE,
+            Manifest.permission.BLUETOOTH_CONNECT,
+            Manifest.permission.BLUETOOTH_SCAN,
+            Manifest.permission.ACCESS_FINE_LOCATION)
+    ) { onPermissionsGranted() }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_one_fragment)
+        setTitle(R.string.evaluation_mode_title)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        permissions.requestPermissions()
+    }
+
+    private fun onPermissionsGranted() {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            add(R.id.fragment_container_view, mFragment)
+        }
     }
 }
