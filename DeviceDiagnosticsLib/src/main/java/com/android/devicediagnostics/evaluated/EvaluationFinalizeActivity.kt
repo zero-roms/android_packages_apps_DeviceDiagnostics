@@ -44,6 +44,8 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Launch in separate thread since gathering attestation takes time and we don't want to block
+        // the UI from appearing
         Thread {
             val reportBuilder = DeviceReport.newBuilder()
 

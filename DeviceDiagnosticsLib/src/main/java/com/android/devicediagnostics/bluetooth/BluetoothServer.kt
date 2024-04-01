@@ -68,6 +68,7 @@ object BluetoothServer : IBluetoothServer {
         Log.d(TAG, "Server started with psm ${serverSocket?.psm}")
         connectionData.psm = serverSocket!!.psm
 
+        // Thread since this waits for connections and otherwise will block Ux
         Thread {
             socket = serverSocket!!.accept()
             serverSocket!!.close()

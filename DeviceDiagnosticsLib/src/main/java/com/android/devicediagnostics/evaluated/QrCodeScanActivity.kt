@@ -141,22 +141,16 @@ class QrCodeScanFragment() :
         } catch (e: Exception) {
             return false
         }
-
-        // The code is valid. Buzz the user
-        activity?.also {
-            it.runOnUiThread {
-                getSystemService<Vibrator>(it, Vibrator::class.java)!!.vibrate(
-                    VibrationEffect.createOneShot(
-                        500,
-                        VibrationEffect.DEFAULT_AMPLITUDE
-                    )
-                )
-            }
-        }
         return true
     }
 
     override fun handleSuccessfulResult(qrCode: String?) {
+        getSystemService<Vibrator>(activity!!, Vibrator::class.java)!!.vibrate(
+            VibrationEffect.createOneShot(
+                500,
+                VibrationEffect.DEFAULT_AMPLITUDE
+            )
+        )
         setConnectionData(BluetoothConnectionData(qrCode!!))
     }
 }

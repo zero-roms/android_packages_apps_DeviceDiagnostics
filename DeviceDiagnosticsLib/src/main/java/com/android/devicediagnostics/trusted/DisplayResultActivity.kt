@@ -74,6 +74,7 @@ class DisplayResultFragment(private var state : TrustedState) : PreferenceFragme
     }
 
     private fun verifyAttestation(bytes: ByteArray) {
+        // Attestation check does a network lookup, so must be on separate thread
         Thread {
             if (bytes.isEmpty()) {
                 onAttestationError()

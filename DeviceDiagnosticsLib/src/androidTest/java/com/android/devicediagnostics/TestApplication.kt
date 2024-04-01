@@ -42,10 +42,8 @@ class TestApplication : Application(), ApplicationInterface {
   override fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : IQrCamera {
     return object : IQrCamera {
       override fun start(surface: SurfaceTexture) {
-        Thread {
-          if (activity.isValid(QR_PAYLOAD))
-            activity.handleSuccessfulResult(QR_PAYLOAD)
-        }.run()
+        if (activity.isValid(QR_PAYLOAD))
+          activity.handleSuccessfulResult(QR_PAYLOAD)
       }
 
       override fun stop() {}
