@@ -51,11 +51,24 @@ private fun displayQrCode(connectionData: BluetoothConnectionData) : Bitmap {
     return bmp
 }
 
-class QrCodeDisplayFragment(private var challenge: ByteArray) : PreferenceFragmentCompat() {
-
-
+class QrCodeDisplayFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_trusted_qrcode, rootKey)
+
+        val app = activity!!.applicationContext as ApplicationInterface
+        val challenge = app.getRandomBytes(32)
+
+        val infoBuilder = TrustedDeviceInfo.newBuilder()
+        infoBuilder.setChallenge(ByteString.copyFrom(challenge))
+        val info = infoBuilder.build()
+
+        app.getBluetoothServer().start(info) {
+            activity!!.runOnUiThread() {
+                val state = TrustedState(challenge, DeviceReport.getDefaultInstance())
+                launchTrustedActivity(activity!!, WaitForResultActivity::class.java.name, state)
+            }
+        }
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -70,8 +83,6 @@ class QrCodeDisplayFragment(private var challenge: ByteArray) : PreferenceFragme
 }
 
 class QrCodeDisplayActivity : CollapsingToolbarBaseActivity() {
-    lateinit var challenge : ByteArray
-
     init {
     }
 
@@ -86,19 +97,6 @@ class QrCodeDisplayActivity : CollapsingToolbarBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        challenge = (applicationContext as ApplicationInterface).getRandomBytes(32)
-
-        val infoBuilder = TrustedDeviceInfo.newBuilder()
-        infoBuilder.setChallenge(ByteString.copyFrom(challenge))
-        val info = infoBuilder.build()
-
-        (applicationContext as ApplicationInterface).getBluetoothServer().start(info) {
-            runOnUiThread() {
-                val state = TrustedState(challenge, DeviceReport.getDefaultInstance())
-                launchTrustedActivity(this, WaitForResultActivity::class.java.name, state)
-            }
-        }
-
         setContentView(R.layout.activity_one_fragment)
         setTitle(R.string.evaluation_mode_title)
     }
@@ -106,7 +104,7 @@ class QrCodeDisplayActivity : CollapsingToolbarBaseActivity() {
     private fun onPermissionsGranted() {
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            add(R.id.fragment_container_view, QrCodeDisplayFragment(challenge))
+            add(R.id.fragment_container_view, QrCodeDisplayFragment())
         }
     }
 
