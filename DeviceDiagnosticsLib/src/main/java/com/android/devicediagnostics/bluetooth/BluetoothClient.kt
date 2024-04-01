@@ -101,19 +101,20 @@ object BluetoothClient : IBluetoothClient {
         Log.d(TAG, "stopped scan");
         scanner?.stopScan(scanCallback)
         adapter.cancelDiscovery()
+        foundDevice_ = null
     }
 
     private class DeviceScanCallback : ScanCallback() {
         override fun onBatchScanResults(results: List<ScanResult>) {
             super.onBatchScanResults(results)
             for (item in results) {
-                item.device?.let { foundDevice_!!(BluetoothDeviceAdapter(it)) }
+                item.device?.let { foundDevice_?.invoke(BluetoothDeviceAdapter(it)) }
             }
         }
 
         override fun onScanResult(callbackType: Int, result: ScanResult) {
             super.onScanResult(callbackType, result)
-            result.device?.let { foundDevice_!!(BluetoothDeviceAdapter(it)) }
+            result.device?.let { foundDevice_?.invoke(BluetoothDeviceAdapter(it)) }
         }
 
         override fun onScanFailed(errorCode: Int) {
