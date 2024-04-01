@@ -27,6 +27,7 @@ import com.android.devicediagnostics.MainActivity
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.getAttestation
+import com.android.devicediagnostics.runInBackground
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.google.android.attestation.ParsedAttestationRecord
 import java.io.IOException
@@ -75,7 +76,7 @@ class DisplayResultFragment(private var state : TrustedState) : PreferenceFragme
 
     private fun verifyAttestation(bytes: ByteArray) {
         // Attestation check does a network lookup, so must be on separate thread
-        Thread {
+        runInBackground {
             if (bytes.isEmpty()) {
                 onAttestationError()
             } else {
@@ -93,7 +94,7 @@ class DisplayResultFragment(private var state : TrustedState) : PreferenceFragme
                         onAttestationError()
                 }
             }
-        }.start()
+        }
     }
 
     private fun onAttestationReceived(attestationRecord: ParsedAttestationRecord) {

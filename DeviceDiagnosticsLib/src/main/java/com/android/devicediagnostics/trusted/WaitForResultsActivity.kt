@@ -25,6 +25,7 @@ import com.android.devicediagnostics.R
 import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.bluetooth.BluetoothServer
+import com.android.devicediagnostics.runInBackground
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import java.lang.Exception
 
@@ -58,7 +59,7 @@ class WaitForResultActivity : CollapsingToolbarBaseActivity() {
             setReorderingAllowed(true)
             add(R.id.fragment_container_view, mFragment)
         }
-        Thread {
+        runInBackground {
             try {
                 val bytes = (applicationContext as ApplicationInterface).getBluetoothServer().read()
                 val report = DeviceReport.parseFrom(bytes)
@@ -68,7 +69,7 @@ class WaitForResultActivity : CollapsingToolbarBaseActivity() {
             } catch (_: Exception) {
                 // :TODO: handle this
             }
-        }.start()
+        }
     }
 
     fun onReportReceived(report: DeviceReport) {

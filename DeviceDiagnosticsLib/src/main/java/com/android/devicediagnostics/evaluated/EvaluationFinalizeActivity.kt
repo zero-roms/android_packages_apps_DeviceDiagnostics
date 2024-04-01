@@ -26,6 +26,7 @@ import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.MainActivity
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.R
+import com.android.devicediagnostics.runInBackground
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.google.protobuf.ByteString
 
@@ -46,7 +47,7 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
 
         // Launch in separate thread since gathering attestation takes time and we don't want to block
         // the UI from appearing
-        Thread {
+        runInBackground {
             val reportBuilder = DeviceReport.newBuilder()
 
             val state = TestState.fromActivity(activity!!)!!
@@ -62,7 +63,7 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
             val bluetoothClient = (requireActivity().applicationContext as ApplicationInterface)
                 .getBluetoothClient()
             bluetoothClient.write(report.toByteArray())
-        }.start()
+        }
     }
 }
 
