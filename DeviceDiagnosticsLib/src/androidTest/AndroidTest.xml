@@ -26,6 +26,10 @@
         <option name="hidden-api-checks" value="false"/>
     </test>
 
+    <target_preparer class="com.android.tradefed.targetprep.RunCommandTargetPreparer">
+        <option name="run-command" value="settings put secure immersive_mode_confirmations confirmed" />
+    </target_preparer>
+
     <object type="module_controller"
             class="com.android.tradefed.testtype.suite.module.Sdk34ModuleController"/>
 </configuration>
