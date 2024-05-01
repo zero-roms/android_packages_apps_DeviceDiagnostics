@@ -25,7 +25,6 @@ import com.android.devicediagnostics.R
 import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.bluetooth.BluetoothServer
-import com.android.devicediagnostics.runInBackground
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import java.lang.Exception
 
