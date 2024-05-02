@@ -15,7 +15,6 @@
 package com.android.devicediagnostics
 
 import com.google.android.attestation.AttestationApplicationId
-import com.google.android.attestation.AuthorizationList
 import com.google.android.attestation.CertificateRevocationStatus
 import com.google.android.attestation.Constants
 import com.google.android.attestation.ParsedAttestationRecord
@@ -57,12 +56,11 @@ import org.bouncycastle.util.encoders.Base64
  *
  * 5. Verifying (and printing) several important data elements from the attestation extension.
  */
-private var output = ""
-private fun println(stuff: String) {
-    output += "$stuff\n"
+
+class AttestationResult(val record: ParsedAttestationRecord, val verified: Boolean) {
 }
 
-fun getAttestation(attestation: ByteArray): ParsedAttestationRecord {
+fun getAttestation(attestation: ByteArray): AttestationResult {
     val inflater = Inflater()
     inflater.setInput(attestation, 0, attestation.size)
     var inflated = ByteArray(0)
@@ -75,108 +73,9 @@ fun getAttestation(attestation: ByteArray): ParsedAttestationRecord {
     inflater.end()
 
     val certs = loadCertificates(inflated)
-    verifyCertificateChain(certs)
-    return ParsedAttestationRecord.createParsedAttestationRecord(certs)
-}
-
-fun toString(parsedAttestationRecord: ParsedAttestationRecord): String {
-    val indent = "\t"
-    output = ""
-    println("Attestation version: " + parsedAttestationRecord.attestationVersion)
-    println(
-        "Attestation Security Level: " + parsedAttestationRecord.attestationSecurityLevel.name
-    )
-    println("Keymaster Version: " + parsedAttestationRecord.keymasterVersion)
-    println(
-        "Keymaster Security Level: " + parsedAttestationRecord.keymasterSecurityLevel.name
-    )
-    println(
-        "Attestation Challenge: "
-            + parsedAttestationRecord.attestationChallenge.toString(Charsets.UTF_8)
-    )
-    println("Unique ID: " + Arrays.toString(parsedAttestationRecord.uniqueId))
-    println("Software Enforced Authorization List:")
-    val softwareEnforced = parsedAttestationRecord.softwareEnforced
-    printAuthorizationList(softwareEnforced, indent)
-    println("TEE Enforced Authorization List:")
-    val teeEnforced = parsedAttestationRecord.teeEnforced
-    printAuthorizationList(teeEnforced, indent)
-    return output
-}
-
-private fun printAuthorizationList(
-    authorizationList: AuthorizationList,
-    @Suppress("SameParameterValue") indent: String,
-) {
-    // Detailed explanation of the keys and their values can be found here:
-    // https://source.android.com/security/keystore/tags
-    printOptional(authorizationList.purpose, indent + "Purpose(s)")
-    printOptional(authorizationList.algorithm, indent + "Algorithm")
-    printOptional(authorizationList.keySize, indent + "Key Size")
-    printOptional(authorizationList.digest, indent + "Digest")
-    printOptional(authorizationList.padding, indent + "Padding")
-    printOptional(authorizationList.ecCurve, indent + "EC Curve")
-    printOptional(authorizationList.rsaPublicExponent, indent + "RSA Public Exponent")
-    println(indent + "Rollback Resistance: " + authorizationList.rollbackResistance)
-    printOptional(authorizationList.activeDateTime, indent + "Active DateTime")
-    printOptional(
-        authorizationList.originationExpireDateTime, indent + "Origination Expire DateTime"
-    )
-    printOptional(authorizationList.usageExpireDateTime, indent + "Usage Expire DateTime")
-    println(indent + "No Auth Required: " + authorizationList.noAuthRequired)
-    printOptional(authorizationList.userAuthType, indent + "User Auth Type")
-    printOptional(authorizationList.authTimeout, indent + "Auth Timeout")
-    println(indent + "Allow While On Body: " + authorizationList.allowWhileOnBody)
-    println(
-        indent
-            + "Trusted User Presence Required: "
-            + authorizationList.trustedUserPresenceRequired
-    )
-    println(
-        indent + "Trusted Confirmation Required: " + authorizationList.trustedConfirmationRequired
-    )
-    println(
-        indent + "Unlocked Device Required: " + authorizationList.unlockedDeviceRequired
-    )
-    println(indent + "All Applications: " + authorizationList.allApplications)
-    printOptional(authorizationList.applicationId, indent + "Application ID")
-    printOptional(authorizationList.creationDateTime, indent + "Creation DateTime")
-    printOptional(authorizationList.origin, indent + "Origin")
-    println(indent + "Rollback Resistant: " + authorizationList.rollbackResistant)
-    if (authorizationList.rootOfTrust.isPresent) {
-        println(indent + "Root Of Trust:")
-        printRootOfTrust(authorizationList.rootOfTrust, indent + "\t")
-    }
-    printOptional(authorizationList.osVersion, indent + "OS Version")
-    printOptional(authorizationList.osPatchLevel, indent + "OS Patch Level")
-    if (authorizationList.attestationApplicationId.isPresent) {
-        println(indent + "Attestation Application ID:")
-        printAttestationApplicationId(authorizationList.attestationApplicationId, indent + "\t")
-    }
-    printOptional(
-        authorizationList.attestationApplicationIdBytes,
-        indent + "Attestation Application ID Bytes"
-    )
-    printOptional(authorizationList.attestationIdBrand, indent + "Attestation ID Brand")
-    printOptional(authorizationList.attestationIdDevice, indent + "Attestation ID Device")
-    printOptional(authorizationList.attestationIdProduct, indent + "Attestation ID Product")
-    printOptional(authorizationList.attestationIdSerial, indent + "Attestation ID Serial",
-        base64encode = false)
-
-    printOptional(authorizationList.attestationIdImei,
-        indent + "Attestation ID IMEI", base64encode = false)
-    printOptional(authorizationList.attestationIdSecondImei,
-        indent + "Attestation ID SECOND IMEI", base64encode = false)
-    printOptional(authorizationList.attestationIdMeid, indent + "Attestation ID MEID")
-    printOptional(
-        authorizationList.attestationIdManufacturer, indent + "Attestation ID Manufacturer"
-    )
-    printOptional(authorizationList.attestationIdModel, indent + "Attestation ID Model")
-    printOptional(authorizationList.vendorPatchLevel, indent + "Vendor Patch Level")
-    printOptional(authorizationList.bootPatchLevel, indent + "Boot Patch Level")
-    println(
-        indent + "Identity Credential Key: " + authorizationList.identityCredentialKey
-    )
+    val verified = verifyCertificateChain(certs)
+    val record = ParsedAttestationRecord.createParsedAttestationRecord(certs)
+    return AttestationResult(record, verified)
 }
 
 private fun printRootOfTrust(rootOfTrust: Optional<RootOfTrust>, indent: String) {
@@ -198,38 +97,7 @@ private fun printRootOfTrust(rootOfTrust: Optional<RootOfTrust>, indent: String)
     }
 }
 
-private fun printAttestationApplicationId(
-    attestationApplicationId: Optional<AttestationApplicationId>, indent: String
-) {
-    if (attestationApplicationId.isPresent) {
-        println(indent + "Package Info (<package name>, <version>): ")
-        for (info in attestationApplicationId.get().packageInfos) {
-            println(indent + "\t" + info.packageName + ", " + info.version)
-        }
-        println(indent + "Signature Digests:")
-        for (digest in attestationApplicationId.get().signatureDigests) {
-            println(indent + "\t" + Base64.toBase64String(digest))
-        }
-    }
-}
-
-private fun <T> printOptional(optional: Optional<T>,
-    caption: String,
-    base64encode: Boolean = true) {
-    if (optional.isPresent) {
-        if (optional.get() is ByteArray) {
-            if (base64encode) {
-                println(caption + ": " + Base64.toBase64String(optional.get() as ByteArray))
-            } else {
-                println(caption + ": " + (optional.get() as ByteArray).toString(Charsets.UTF_8))
-            }
-        } else {
-            println(caption + ": " + optional.get())
-        }
-    }
-}
-
-private fun verifyCertificateChain(certs: List<X509Certificate>) {
+private fun verifyCertificateChain(certs: List<X509Certificate>): Boolean {
     var parent = certs[certs.size - 1]
     for (i in certs.indices.reversed()) {
         val cert = certs[i]
@@ -255,24 +123,7 @@ private fun verifyCertificateChain(certs: List<X509Certificate>) {
     // Google Play services, the root certificate should be signed with the
     // Google attestation root key.
     val googleRootCaPubKey = Base64.decode(Constants.GOOGLE_ROOT_CA_PUB_KEY)
-    if (Arrays.equals(
-            googleRootCaPubKey,
-            certs[certs.size - 1].publicKey.encoded
-        )
-    ) {
-        println(
-            "The root certificate is correct, so this attestation is trustworthy, as long as none of"
-                + " the certificates in the chain have been revoked."
-        )
-    } else {
-        println(
-            "The root certificate is NOT correct. The attestation was probably generated by"
-                + " software, not in secure hardware. This means that there is no guarantee that the"
-                + " claims within the attestation are correct. If you're using a production-level"
-                + " system, you should disregard any claims made within this attestation certificate"
-                + " as there is no authority backing them up."
-        )
-    }
+    return googleRootCaPubKey.contentEquals(certs[certs.size - 1].publicKey.encoded)
 }
 
 private fun loadCertificates(attestation: ByteArray): ImmutableList<X509Certificate> {

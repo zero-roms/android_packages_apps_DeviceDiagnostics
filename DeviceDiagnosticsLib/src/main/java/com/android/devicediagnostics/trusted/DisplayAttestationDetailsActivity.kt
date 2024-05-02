@@ -16,19 +16,28 @@
 
 package com.android.devicediagnostics.trusted
 
-import android.app.Activity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.fragment.app.commit
+import com.android.devicediagnostics.AttestationResult
+import com.android.devicediagnostics.DisplayAttestationResultFragment
 import com.android.devicediagnostics.R
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
-class DisplayAttestationDetailsActivity : Activity() {
+class DisplayAttestationDetailsActivity : CollapsingToolbarBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layout_trusted_attestation_details)
-        val text =
-            findViewById<TextView>(R.id.attestation_details)
-                ?: throw AssertionError("Can't find TextView")
-        text.text =
-            intent.extras?.getString(ATTESTATION) ?: throw AssertionError("No attestation string")
+        setContentView(R.layout.activity_one_fragment)
+        setTitle(R.string.evaluation_results)
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add(R.id.fragment_container_view, DisplayAttestationResultFragment(result!!))
+            }
+        }
+    }
+
+    companion object Values {
+        var result: AttestationResult? = null
     }
 }

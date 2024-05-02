@@ -83,8 +83,34 @@ This is the result of the touch test. You can rerun the test by navigating back.
   <string name="pass">Pass</string>
   <string name="fail">Fail</string>
 
+  <!-- Attestation details -->
+  <string name="attestation_verified">Verified certificate</string>
+  <string name="attestation_device_locked">Device locked</string>
+  <string name="attestation_verified_boot_state">Verified boot state</string>
+  <string name="attestation_security_level">Security level</string>
+  <string name="attestation_keymaster_version">Keymaster version</string>
+  <string name="attestation_keymaster_security_level">Keymaster security level</string>
+  <string name="attestation_os_version">OS version</string>
+  <string name="attestation_brand">Brand</string>
+  <string name="attestation_device">Device</string>
+  <string name="attestation_product">Product</string>
+  <string name="attestation_serial">Serial</string>
+  <string name="attestation_imei">IMEI</string>
+  <string name="attestation_second_imei">Second IMEI</string>
+  <string name="attestation_meid">MEID</string>
+  <string name="attestation_manufacturer">Manufacturer</string>
+  <string name="attestation_model">Model</string>
+  <string name="attestation_vendor_patch_level">Vendor patch level</string>
+  <string name="attestation_boot_patch_level">Boot patch level</string>
+  <string name="attestation_rollback_resistant">Rollback resistant</string>
+  <string name="attestation_rollback_resistance">Rollback resistance</string>
+  <string name="yes">Yes</string>
+  <string name="no">No</string>
+  <string name="unknown">Unknown</string>
+
   <!-- Trusted activity -->
   <string name="evaluation_results">Evaluation results</string>
+  <string name="attestation_results">Attestation results</string>
   <string name="imei_title">IMEI</string>
   <string name="imei2_title">Second IMEI</string>
   <string name="serial_number_title">Serial number</string>

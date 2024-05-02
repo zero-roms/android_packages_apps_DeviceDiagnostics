@@ -75,16 +75,16 @@ class DisplayResultFragment(private var state : TrustedState) : PreferenceFragme
             if (bytes.isEmpty()) {
                 onAttestationError()
             } else {
-                var attestationRecord: ParsedAttestationRecord? = null
+                var attestationResult: AttestationResult? = null
                 try {
-                    attestationRecord = getAttestation(bytes)
-                } catch (e: IOException) {
+                    attestationResult= getAttestation(bytes)
+                } catch (e: Exception) {
                     Log.e(TAG, "Failed to get attestation record")
                     Log.e(TAG, e.toString())
                 }
                 requireActivity().runOnUiThread {
-                    if (attestationRecord != null)
-                        onAttestationReceived(attestationRecord)
+                    if (attestationResult != null)
+                        onAttestationReceived(attestationResult)
                     else
                         onAttestationError()
                 }
@@ -92,7 +92,8 @@ class DisplayResultFragment(private var state : TrustedState) : PreferenceFragme
         }
     }
 
-    private fun onAttestationReceived(attestationRecord: ParsedAttestationRecord) {
+    private fun onAttestationReceived(attestationResult: AttestationResult) {
+        val attestationRecord = attestationResult.record
         findPreference<Preference>("retry_failure")?.also {
             it.isVisible = false
         }
@@ -145,12 +146,10 @@ class DisplayResultFragment(private var state : TrustedState) : PreferenceFragme
         }
         findPreference<Preference>("attestation_details")?.also {
             it.setOnPreferenceClickListener {
+                DisplayAttestationDetailsActivity.result = attestationResult
                 startActivity(
                     Intent(requireActivity(),
-                    DisplayAttestationDetailsActivity::class.java)
-                    .putExtra(
-                        ATTESTATION,
-                        com.android.devicediagnostics.toString(attestationRecord)))
+                    DisplayAttestationDetailsActivity::class.java))
                 true
             }
             if (Build.IS_USERDEBUG || Build.IS_ENG) {
