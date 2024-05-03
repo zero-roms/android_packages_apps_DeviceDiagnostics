@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
+    <string name="app_title" msgid="7463703024205195273">"Greining tækis"</string>
+    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Áfram"</string>
+    <string name="unavailable" msgid="7842920330665850121">"Ekki tiltækt"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"Tengist..."</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Ástand íhlutar"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Matsstilling"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Handvirk próf"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Skjápróf"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Snertipróf"</string>
+    <string name="component_title" msgid="6580046234562555655">"Staða íhlutar"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Staða geymslu"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Staða rafhlöðu"</string>
+    <string name="trusted_eval_title" msgid="4432759069360054054">"Traust mat"</string>
+    <string name="trusted_device_title" msgid="3219415756372384370">"Traust tæki"</string>
+    <string name="trusted_device_summary" msgid="4474986970820223924">"Byrjaðu á að velja þennan valkost í traustu tæki"</string>
+    <string name="evaluated_device_title" msgid="9045224709517029285">"Metið tæki"</string>
+    <string name="evaluated_device_summary" msgid="7492640289008695049">"Veldu þennan valkost í metna tækinu þegar beðið er um það"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skanna núna"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skannaðu QR-kóðann á trausta tækinu í ferhyrningnum að neðan"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Þegar þú hefur skannað QR-kóðann hefur þetta tæki sjálfkrafa nokkur próf."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Valið traust tæki"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Þú getur einnig valið tækið af listanum fyrir neðan"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Ekki náðist tenging, reyndu aftur."</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Heilsa"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Framleiðsludagsetning"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Dagsetning fyrstu notkunar"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Fjöldi endurhleðslna"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Raðnúmer"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Staða hlutar"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Upprunalegt"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Skipt um"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Ferill hlutar"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% af upprunalegu geymslurými"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Ástand geymslu"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Heildarrými"</string>
+    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% eftir af líftíma"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Veittu umbeðna heimild til að halda áfram í matsstillingu."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Hætta við"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Reyndu aftur"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Niðurstöður snertiprófs"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Þetta eru niðurstöður snertiprófsins. Þú getur keyrt prófið aftur með því að fara til baka."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Stóðst snertiskynjaraprófið"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Stóðst ekki snertiskynjaraprófið"</string>
+    <string name="pass" msgid="6411665547268368837">"Stóðst"</string>
+    <string name="fail" msgid="3918028202746427731">"Stóðst ekki"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"Niðurstöður mats"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"Annað IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Raðnúmer"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Ræsiforrit læst"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Tæki áreiðanlegt"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Birta stöðu"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Staða snertiskynjara"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Ítaratriði staðfestingar"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Staðfesting mistókst"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Reyna aftur staðsetningu"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Tókst ekki að sannreyna staðfestingu, athugaðu tenginguna og reyndu aftur."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Næstu skref"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Meta annað tæki"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Aftur í aðalvalmynd"</string>
+    <string name="locked" msgid="2034650000550950371">"Læst"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Ekki læst"</string>
+    <string name="attestation_challenge_does_not_match" msgid="7812342034909019443">"Staðfestingaráskorun passar ekki"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR-kóði"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Haltu áfram í tækinu sem er verið að meta"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Ljúktu prófunum á tækinu sem þú ert að meta, þá birtast niðurstöðurnar hér"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skanna núna"</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Í tækinu sem þú vilt meta, farðu í \n Settings/DeviceDiagnostics/Evaluated Device\n Fylgdu leiðbeiningunum í því tæki."</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Fylgdu leiðbeiningunum í metna tækinu. Ýttu hér þegar um það er beðið til að halda áfram í þessu tæki."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Nú verða þér sýndar nokkrar skjámyndir. Skoðaðu hverja þeirra vel og leitaðu að göllum. Þegar þú ert búin(n) skaltu snerta skjámyndina til að fara í þá næstu. Í lokin verðurðu spurð(ur) hvort skjámyndirnar hafi virst gallalausar."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Nú verða þér sýndar nokkrar skjámyndir. Skoðaðu hverja þeirra vel og leitaðu að göllum. Snertu skjámyndina til að fara í þá næstu."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Veldu þann valkost hér að neðan sem passar best við ástand skjásins."</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"Nú verður þér sýnd rauð skjámynd.\n \n Nuddaðu fingrinum yfir skjáinn þangað til hann er alhvítur. Ef þér tekst ekki að gera hluta af skjánum hvítan skaltu ýta snöggt á skjáinn til að gefa til kynna að snertiskynjarinn virki ekki fullkomlega.\n \n Ef þú vilt geturðu strokið til baka á skýrsluskjámyndinni og haldið áfram þar sem frá var horfið.\n"</string>
+    <string name="scan_result" msgid="7232716409194522023">"Skannaðu þennan QR-kóða á trausta tækinu. Þegar þú hefur skannað hann máttu ýta á Lokið í þessu tæki."</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
+    <string name="app_title" msgid="7463703024205195273">"デバイス診断"</string>
+    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"続行"</string>
+    <string name="unavailable" msgid="7842920330665850121">"使用不可"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"接続しています..."</string>
+    <string name="component_health_title" msgid="6177813132789269842">"コンポーネントの状態"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"評価モード"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"手動テスト"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"ディスプレイのテスト"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"タッチテスト"</string>
+    <string name="component_title" msgid="6580046234562555655">"コンポーネントのステータス"</string>
+    <string name="storage_title" msgid="5921235202250843966">"ストレージのステータス"</string>
+    <string name="battery_title" msgid="6707361668941323259">"バッテリーの状態"</string>
+    <string name="trusted_eval_title" msgid="4432759069360054054">"信頼できる評価機能"</string>
+    <string name="trusted_device_title" msgid="3219415756372384370">"信頼できるデバイス"</string>
+    <string name="trusted_device_summary" msgid="4474986970820223924">"まずは信頼できるデバイスでこのオプションを選択します"</string>
+    <string name="evaluated_device_title" msgid="9045224709517029285">"評価対象デバイス"</string>
+    <string name="evaluated_device_summary" msgid="7492640289008695049">"メッセージが表示されたら、評価対象デバイスでこのオプションを選択します"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"スキャン開始"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"信頼できるデバイスで、以下の長方形内の QR コードをスキャンします"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR コードのスキャンが適切に完了すると、このデバイスで一連のテストが自動的に開始されます。"</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"信頼できるデバイスを選択"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"または、以下のリストから別のデバイスを選択します"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"接続できません。もう一度お試しください。"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"健全性"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"製造日"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"初回利用日時"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"サイクル回数"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"シリアル番号"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"パーツのステータス"</string>
+    <string name="battery_original" msgid="2552600989411644999">"オリジナル"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"交換済み"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"パーツの履歴"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"元の容量の %1$d%%"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"ストレージの健全性"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"総容量"</string>
+    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"残存耐用期間: %1$d%%"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"評価モードで続行するには、必要な許可を与えてください。"</string>
+    <string name="cancel_button" msgid="7011882021431169180">"キャンセル"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"もう一度お試しください"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"タッチテストの結果"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"タッチテストの結果です。戻って再度テストすることもできます。"</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"タッチセンサーのテストは合格でした"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"タッチセンサーのテストは不合格でした"</string>
+    <string name="pass" msgid="6411665547268368837">"合格"</string>
+    <string name="fail" msgid="3918028202746427731">"不合格"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"評価の結果"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"2 つ目の IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"シリアル番号"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"ブートローダーのロック"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"信頼できるデバイス"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"ディスプレイのステータス"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"タッチセンサーのステータス"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"認証の詳細"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"認証が失敗"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"認証を再試行"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"認証に失敗しました。接続状態を確認してから、もう一度お試しください。"</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"次のステップ"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"別のデバイスを評価"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"メインメニューに戻る"</string>
+    <string name="locked" msgid="2034650000550950371">"ロック中"</string>
+    <string name="not_locked" msgid="1663929635666930122">"ロック解除中"</string>
+    <string name="attestation_challenge_does_not_match" msgid="7812342034909019443">"認証のチャレンジが一致しません"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR コード"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"評価対象デバイスの診断を続ける"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"評価対象デバイスに対するテストが完了すると、結果がここに表示されます"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"スキャン開始"</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"評価対象デバイスで、\n[設定] &gt; [DeviceDiagnostics] &gt; [評価対象デバイス] の順に選択します。\n そのデバイスで表示されるメッセージに即してテストを進めます。"</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"評価対象デバイスで表示されるメッセージに即して進めます。メッセージが表示されたら、そのデバイスでテストを進めます。"</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"一連の画面が表示されます。各画面をチェックし、不具合がないか確認してください。問題がなかったら、画面をタップして次に進みます。最後に、画面に傷や汚れがないか確認するメッセージが表示されます。"</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"一連の画面が表示されます。各画面をチェックし、不具合がないか確認してください。画面をタップすると次に進みます。"</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"以下の中から、画面の状態を最もよく表している選択肢を選んでください。"</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"赤い画面が表示されます。\n \n 画面が完全に白くなるまで、指で画面をこすります。画面内に白くならない部分がある場合は、タッチセンサーが適切に機能していないことを示すため、その部分をタップします。\n \n レポート画面でバックスワイプすることで、中断した場所からテストを再開することもできます。\n"</string>
+    <string name="scan_result" msgid="7232716409194522023">"信頼できるデバイスで QR コードをスキャンしてください。スキャンが完了したら、そのデバイスで [完了] を押します。"</string>
+</resources>

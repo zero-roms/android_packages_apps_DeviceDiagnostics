@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"UchunguziwaKifaa"</string>
+    <string name="app_title" msgid="7463703024205195273">"Uchunguzi wa Kifaa"</string>
+    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Endelea"</string>
+    <string name="unavailable" msgid="7842920330665850121">"Haipo"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"Inaunganisha..."</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Uthabiti wa kipengele cha kifaa"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Hali ya kutathmini"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Majaribio ya kujifanyia"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Jaribio la skrini"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Jaribio la kugusa"</string>
+    <string name="component_title" msgid="6580046234562555655">"Hali ya kipengele cha kifaa"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Hali ya hifadhi"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Hali ya betri"</string>
+    <string name="trusted_eval_title" msgid="4432759069360054054">"Kutathmini Kuaminika kwa Kifaa"</string>
+    <string name="trusted_device_title" msgid="3219415756372384370">"Kifaa Unachokiamini"</string>
+    <string name="trusted_device_summary" msgid="4474986970820223924">"Anza kwa kuteua chaguo hili kwenye kifaa unachokiamini"</string>
+    <string name="evaluated_device_title" msgid="9045224709517029285">"Kifaa Kilichotathminiwa"</string>
+    <string name="evaluated_device_summary" msgid="7492640289008695049">"Ukidokezewa, teua chaguo hili kwenye kifaa kilichotathminiwa"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Changanua sasa"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Changanua msimbo wa QR kwenye kifaa unachokiamini katika mstatili ulio hapa chini"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Baada ya kuchanganua msimbo wa QR, kifaa hiki kitaanzisha kiotomatiki mfululizo wa majaribio."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Chagua kifaa unachokiamini"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Au, chagua kifaa kwenye orodha iliyo hapa chini"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Imeshindwa kuunganisha, tafadhali jaribu tena."</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Muda wa kudumu wa betri"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Tarehe ya kutengenezwa"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Tarehe ya matumizi ya kwanza"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Mara za kuchaji betri"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Namba ya ufuatiliaji"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Hali ya kipengele cha kifaa"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Halisi"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Imebadilishwa"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Kumbukumbu za Kipengele cha Kifaa"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% ya uwezo halisi"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Uthabiti wa hifadhi"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Kiasi chote cha hifadhi"</string>
+    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"Imebakisha %1$d%% ya muda wake wa kudumu"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Tafadhali toa ruhusa zinazotakikana ili uendelee katika hali ya kutathmini."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Acha"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Jaribu tena"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Matokeo ya jaribio la kugusa"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Haya ni matokeo ya jaribio la kugusa. Unaweza kurudia jaribio hilo kwa kurudi nyuma."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Jaribio la kitambuzi cha kugusa limefaulu"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Jaribio la kitambuzi cha kugusa limefeli"</string>
+    <string name="pass" msgid="6411665547268368837">"Imefaulu"</string>
+    <string name="fail" msgid="3918028202746427731">"Imefeli"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"Matokeo ya kutathmini"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"IMEI ya pili"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Namba ya ufuatiliaji"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Programu ya kuwasha mfumo wa uendeshaji imefungwa"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Kuaminika kwa kifaa"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Hali ya skrini"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Hali ya kitambuzi cha kugusa"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Maelezo ya uthibitishaji"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Imeshindwa kuthibitisha"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Jaribu kuthibitisha upya"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Imeshindwa kuthibitisha, angalia muunganisho wako kisha ujaribu tena."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Hatua zinazofuata"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Tathmini kifaa kingine"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Rudi kwenye menyu kuu"</string>
+    <string name="locked" msgid="2034650000550950371">"Imefungwa"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Haijafungwa"</string>
+    <string name="attestation_challenge_does_not_match" msgid="7812342034909019443">"Jaribio la uthibitishaji halilingani"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"Msimbo wa QR"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Endelea kwenye kifaa kinachotathminiwa"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Kamilisha kufanya majaribio kwenye kifaa unachokitathmini, kisha matokeo yataonekana hapa"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Changanua sasa"</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Kwenye kifaa ambacho ungependa kukitathmini, nenda kwenye\n Mipangilio/UchunguziwaKifaa/Kifaa Kilichotathminiwa\n Fuata vidokezo kwenye kifaa hicho."</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Fuata vidokezo kwenye kifaa kilichotathminiwa. Ukidokezewa, bonyeza hapa ili uendelee kwenye kifaa hiki."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Sasa utaonyeshwa mfululizo wa skrini. Chunguza kila skrini na ubaini kasoro. Baada ya kuridhika, gusa skrini iliyopo ili uende kwenye skrini inayofuata. Hatimaye, utaulizwa iwapo skrini hazina kasoro zozote."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Sasa utaonyeshwa mfululizo wa skrini. Chunguza kila skrini na ubaini kasoro. Gusa skrini iliyopo ili uende kwenye skrini inayofuata."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Tafadhali teua chaguo lililo hapa chini linalolingana vizuri zaidi na hali ya skrini."</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"Sasa utaonyeshwa skrini nyekundu.\n \n Sugua kidole chako kwenye skrini hadi skrini nzima iwe nyeupe. Ikiwa huwezi kubadilisha sehemu fulani ya skrini iwe nyeupe, gusa skrini kidogo ili kuashiria kuwa kitambuzi cha kugusa hakifanyi kazi inavyostahili.\n \n Ukipenda, unaweza kutelezesha kidole nyuma kutoka kwenye skrini ya ripoti na uendelee na jaribio kuanzia ulikoachia.\n"</string>
+    <string name="scan_result" msgid="7232716409194522023">"Tafadhali changanua msimbo huu wa QR kwenye kifaa unachokiamini. Baada ya kuuchanganua, unaweza kubonyeza \'Nimemaliza\' kwenye kifaa hiki."</string>
+</resources>
