@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"I-DeviceDiagnostics"</string>
+    <string name="app_title" msgid="7463703024205195273">"Ezokuhlolisimo Sensiza"</string>
+    <string name="package_name" msgid="857863781906528502">"Okuthi com.android.devicediagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Qhubeka"</string>
+    <string name="unavailable" msgid="7842920330665850121">"Ayitholakali"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"Iyaxhuma..."</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Impilo yesakhi"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Imodi yokuhlola"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Ukuhlola okwenziwa mathupha"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Bonisa ukuhlola"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Ukuhlola kokuthinta"</string>
+    <string name="component_title" msgid="6580046234562555655">"Isimo sesakhi"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Isimo sesitoreji"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Isimo sebhethri"</string>
+    <string name="trusted_eval_title" msgid="4432759069360054054">"Ukuhlola Okuthenjwayo"</string>
+    <string name="trusted_device_title" msgid="3219415756372384370">"Idivayisi Ethenjwayo"</string>
+    <string name="trusted_device_summary" msgid="4474986970820223924">"Qala ngokukhetha lokhu okukhethwa kukho edivayisini ethenjwayo"</string>
+    <string name="evaluated_device_title" msgid="9045224709517029285">"Idivayisi Ehloliwe"</string>
+    <string name="evaluated_device_summary" msgid="7492640289008695049">"Uma uyalwa ukwenza kanjalo, khetha lokhu okukhethwa kukho edivayisini ehloliwe"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skena manje"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skena ikhodi ye-QR edivayisini ethembekile onxandeni ongezansi"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Uma ususkene ikhodi ye-QR ngempumelelo, le divayisi izoqala uchungechunge lokuhlola ngokuzenzekelayo."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Khetha idivayisi ethembekile"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Noma khetha idivayisi ohlwini olungezansi"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Uxhumo lwehlulekile, sicela uzame futhi."</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Ezempilo"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Ilanga lokukhiqiza"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Ilanga lokuqala lokusetshenziswa"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Isibalo somjikelezo"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Inombolo yomkhiqizo"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Isimo sengxenye"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Okwangempela"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Kufakwe esikhundleni"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Umlando Wengxenye"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"U-%1$d%% womthamo wokuqala"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Impilo yesitoreji"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Inani lomthamo"</string>
+    <!-- String.format failed for translation -->
+    <!-- no translation found for storage_total_capacity_summary (5266698118960025252) -->
+    <skip />
+    <string name="storage_health_summary" msgid="598369034208451623">"U-%1$d%% wakho konke ukuphila osele"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Sicela unikeze izimvume eziceliwe ukuze uqhubeke emodini yokuhlola."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Khansela"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Zama futhi"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Umphumela wokuhlola kokuthinta"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Lona ngumphumela wokuhlolwa kokuthinta. Ungaphinda uqalise ukuhlola ngokufuna ubuyela emuva."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Ukuhlolwa kwenzwa yokuthinta kuphumelele"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Ukuhlolwa kwenzwa yokuthinta kuhlulekile"</string>
+    <string name="pass" msgid="6411665547268368837">"Imvume"</string>
+    <string name="fail" msgid="3918028202746427731">"Ukuhluleka"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"Imiphumela yokuhlola"</string>
+    <string name="imei_title" msgid="4360390946838995750">"I-IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"I-IMEI Yesibili"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Inombolo yomkhiqizo"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"I-bootloader ikhiyiwe"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Idivayisi ethenjwayo"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Bonisa isimo"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Isimo senzwa yokuthinta"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Imininingwane ye-attestation"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"I-attestation yehlulekile"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Zama i-attestation futhi"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Yehlulekile ukuqinisekisa ubufakazi, hlola uxhumo lwakho bese uyazama futhi."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Izinyathelo ezilandelayo"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Linganisa enye idivayisi"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Buyela kumenyu enkulu"</string>
+    <string name="locked" msgid="2034650000550950371">"Kukhiyiwe"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Akukhiywanga"</string>
+    <string name="attestation_challenge_does_not_match" msgid="7812342034909019443">"Inselele ye-attestation ayifani"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"Ikhodi ye-QR"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Qhubeka edivayisini ehlolwayo"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Qedela ukuhlola edivayisini oyihlolayo, bese imiphumela izovela lapha"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skena manje"</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Edivayisi ofisa ukuyihlola, iya\n Kumasethingi/i-DeviceDiagnostics/Idivayisi Ehloliwe\n Landela imiyalo kuleyo divayisi."</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Landela imiyalo edivayisini ehloliwe. Uma uyalwa, cindezela lapha ukuze uqhubeke kule divayisi."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Manje uzoboniswa uchungechunge lwezikrini. Funda ngakunye futhi ubheke amaphutha. Uma sewanelisekile, thinta isikrini ukuze uye kwesilandelayo. Ekugcineni, uzobuzwa ukuthi izikrini zibukeka zingenasici."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Manje uzoboniswa uchungechunge lwezikrini. Funda ngakunye futhi ubheke amaphutha. Thinta isikrini ukuze uye kwesilandelayo."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Sicela ukhethe okukhethwa kukho okungezansi okuhambisana kangcono nesimo sesikrini."</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"Manje uzoboniswa isikrini esibomvu.\n \n Hlikihla umunwe wakho esikrinini kuze kube yilapho isikrini siba mhlophe ngokuphelele. Uma ungakwazi ukushintsha ingxenye yesikrini ibe mhlophe, cindezela kafushane isikrini ukubonisa ukuthi inzwa yokuthinta ayisebenzi ngokugcwele.\n \n Uma uthanda, ungaswayipha emuva ukusuka esikrinini sombiko futhi uqhubeke nokuhlola ukusuka lapho ogcine khona.\n"</string>
+    <string name="scan_result" msgid="7232716409194522023">"Sicela uskene le khodi ye-QR edivayisini ethembekile. Ngemva kokuyiskena, ungacindezela okuthi Kwenziwe kule divayisi."</string>
+</resources>
