@@ -26,7 +26,7 @@ class DisplayAttestationResultFragment(private var result: AttestationResult) : 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.attestation_details, rootKey)
 
-        val record = result.record
+        val record = result.record!!
 
         if (result.verified)
             show("attestation_verified", activity!!.resources.getString(R.string.yes))
@@ -68,12 +68,12 @@ class DisplayAttestationResultFragment(private var result: AttestationResult) : 
     }
 
     private fun isDeviceLocked(): Boolean {
-        val root = result.record.teeEnforced.rootOfTrust
+        val root = result.record!!.teeEnforced.rootOfTrust
         return root.isPresent && root.get().deviceLocked
     }
 
     private fun getVerifiedBootState(): String {
-        val root = result.record.teeEnforced.rootOfTrust
+        val root = result.record!!.teeEnforced.rootOfTrust
         if (!root.isPresent)
             return activity!!.resources.getString(R.string.unknown)
         return root.get().verifiedBootState.name

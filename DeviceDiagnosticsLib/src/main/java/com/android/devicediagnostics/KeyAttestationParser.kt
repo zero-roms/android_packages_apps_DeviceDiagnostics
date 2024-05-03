@@ -57,10 +57,17 @@ import org.bouncycastle.util.encoders.Base64
  * 5. Verifying (and printing) several important data elements from the attestation extension.
  */
 
-class AttestationResult(val record: ParsedAttestationRecord, val verified: Boolean) {
+class AttestationResult(val record: ParsedAttestationRecord?, val verified: Boolean,
+                        val exception: Exception?) {
+    fun hasError(): Boolean {
+        return record == null || exception != null
+    }
+    fun hasNetworkOnlyError(): Boolean {
+        return record != null && exception != null && exception is IOException
+    }
 }
 
-fun getAttestation(attestation: ByteArray): AttestationResult {
+fun getAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult {
     val inflater = Inflater()
     inflater.setInput(attestation, 0, attestation.size)
     var inflated = ByteArray(0)
@@ -72,28 +79,18 @@ fun getAttestation(attestation: ByteArray): AttestationResult {
     }
     inflater.end()
 
-    val certs = loadCertificates(inflated)
-    val verified = verifyCertificateChain(certs)
-    val record = ParsedAttestationRecord.createParsedAttestationRecord(certs)
-    return AttestationResult(record, verified)
-}
+    var certs: ImmutableList<X509Certificate>?
+    var record: ParsedAttestationRecord? = null
 
-private fun printRootOfTrust(rootOfTrust: Optional<RootOfTrust>, indent: String) {
-    if (rootOfTrust.isPresent) {
-        println(
-            indent
-                + "Verified Boot Key: "
-                + Base64.toBase64String(rootOfTrust.get().verifiedBootKey)
-        )
-        println(indent + "Device Locked: " + rootOfTrust.get().deviceLocked)
-        println(
-            indent + "Verified Boot State: " + rootOfTrust.get().verifiedBootState.name
-        )
-        println(
-            indent
-                + "Verified Boot Hash: "
-                + Base64.toBase64String(rootOfTrust.get().verifiedBootHash)
-        )
+    try {
+        certs = loadCertificates(inflated)
+        record = ParsedAttestationRecord.createParsedAttestationRecord(certs)
+        var verified = verifyCertificateChain(certs)
+        if (!record.attestationChallenge.contentEquals(challenge))
+            throw Exception("Challenge does not match")
+        return AttestationResult(record, verified, null)
+    } catch (e: Exception) {
+        return AttestationResult(null, false, e)
     }
 }
 
@@ -105,16 +102,12 @@ private fun verifyCertificateChain(certs: List<X509Certificate>): Boolean {
         cert.checkValidity()
         cert.verify(parent.publicKey)
         parent = cert
-        try {
-            val certStatus = CertificateRevocationStatus
-                .fetchStatus(cert.serialNumber)
-            if (certStatus != null) {
-                throw CertificateException(
-                    "Certificate revocation status is " + certStatus.status.name
-                )
-            }
-        } catch (e: IOException) {
-            throw IOException("Unable to fetch certificate status. Check connectivity.")
+        val certStatus = CertificateRevocationStatus
+            .fetchStatus(cert.serialNumber)
+        if (certStatus != null) {
+            throw CertificateException(
+                "Certificate revocation status is " + certStatus.status.name
+            )
         }
     }
 

@@ -39,4 +39,8 @@ class DeviceDiagnosticsApplication : Application(), ApplicationInterface {
   override fun getBluetoothServer() : BluetoothServer {
     return BluetoothServer
   }
+
+  override fun verifyAttestation(attestation: ByteArray, challenge: ByteArray) : AttestationResult {
+    return getAttestation(attestation, challenge)
+  }
 }

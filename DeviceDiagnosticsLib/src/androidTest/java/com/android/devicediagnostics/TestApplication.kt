@@ -30,6 +30,10 @@ interface QrCameraProvider {
   fun getQrCamera(activity: QrCamera.ScannerCallback) : QrCamera
 }
 
+interface AttestationVerifier {
+  fun verifyAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult
+}
+
 class TestApplication : Application(), ApplicationInterface {
   override fun getRandomBytes(count: Int) : ByteArray {
     return (1..count).map{it.toByte()}.toByteArray()
@@ -38,6 +42,7 @@ class TestApplication : Application(), ApplicationInterface {
   var btClient : BluetoothClient? = null
   var btServer : BluetoothServer? = null
   var qrCameraProvider : QrCameraProvider? = null
+  var attestationVerifier : AttestationVerifier? = null
 
   override fun getBluetoothClient() : BluetoothClient {
     return btClient!!
@@ -49,6 +54,10 @@ class TestApplication : Application(), ApplicationInterface {
 
   override fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : QrCamera {
     return qrCameraProvider!!.getQrCamera(activity)
+  }
+
+  override fun verifyAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult {
+    return attestationVerifier!!.verifyAttestation(attestation, challenge)
   }
 }
 

@@ -27,6 +27,7 @@ interface ApplicationInterface {
   fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : QrCamera
   fun getBluetoothClient() : BluetoothClient
   fun getBluetoothServer() : BluetoothServer
+  fun verifyAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult
 }
 
 // Must only be called on the UI thread.
