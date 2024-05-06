@@ -1,6 +1,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <com.android.devicediagnostics.evaluated.BatteryHealthPreference
+  <com.android.devicediagnostics.BatteryHealthPreference
       android:key="health"
       android:selectable="false"
       android:title="@string/battery_health_title"

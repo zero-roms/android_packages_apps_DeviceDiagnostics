@@ -24,7 +24,7 @@
         app:key="Battery"
         app:title="@string/battery_title">
       <intent
-          android:targetClass="com.android.devicediagnostics.evaluated.BatteryActivity"
+          android:targetClass="com.android.devicediagnostics.BatteryActivity"
           android:targetPackage="@string/package_name" />
     </Preference>
 

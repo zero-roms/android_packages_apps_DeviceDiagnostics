@@ -58,7 +58,7 @@
               android:taskAffinity="com.android.devicediagnostics.evaluated" />
     <activity android:name="com.android.devicediagnostics.evaluated.EvaluationFinalizeActivity"
               android:taskAffinity="com.android.devicediagnostics.evaluated" />
-    <activity android:name="com.android.devicediagnostics.evaluated.BatteryActivity" />
+    <activity android:name="com.android.devicediagnostics.BatteryActivity" />
     <activity android:name="com.android.devicediagnostics.evaluated.StorageActivity" />
   </application>
 </manifest>
