@@ -18,12 +18,14 @@ package com.android.devicediagnostics.evaluated
 
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
+import android.util.Log
 import java.nio.ByteBuffer
 import java.security.KeyPairGenerator
 import java.security.KeyStore
 import java.security.spec.ECGenParameterSpec
 import java.util.zip.Deflater
 
+private const val TAG = "GetAttestation"
 private const val EC_CURVE = "secp256r1"
 private const val KEYSTORE_ALIAS = "attestation_collector_key"
 
@@ -80,8 +82,10 @@ fun createAttestationRecord(challenge: ByteArray): ByteArray {
     return try {
         getAttestation(challenge, withImei = true)
     } catch (e: java.security.ProviderException) {
+        Log.e(TAG, "Could not get attestation with IMEI, retrying without: $e")
         getAttestation(challenge, withImei = false)
     } catch (e: SecurityException) {
+        Log.e(TAG, "Could not get attestation with IMEI, retrying without: $e")
         getAttestation(challenge, withImei = false)
     }
 }

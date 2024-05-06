@@ -28,14 +28,24 @@ class DisplayAttestationResultFragment(private var result: AttestationResult) : 
 
         val record = result.record!!
 
-        if (result.verified)
+        // By default, show a failure code for IMEI/Serial. It will get overridden if it's actually
+        // present.
+        if (result.verified) {
             show("attestation_verified", activity!!.resources.getString(R.string.yes))
-        else
+            show("attestation_imei", activity!!.resources.getString(R.string.unknown))
+            show("attestation_serial", activity!!.resources.getString(R.string.unknown))
+        } else {
             show("attestation_verified", activity!!.resources.getString(R.string.no))
-        if (isDeviceLocked())
+            show("attestation_imei", activity!!.resources.getString(R.string.attestation_failed))
+            show("attestation_serial", activity!!.resources.getString(R.string.attestation_failed))
+        }
+
+        if (isDeviceLocked()) {
             show("attestation_device_locked", activity!!.resources.getString(R.string.yes))
-        else
+        } else {
             show("attestation_device_locked", activity!!.resources.getString(R.string.no))
+        }
+
         show("attestation_verified_boot_state", getVerifiedBootState())
         show("attestation_security_level", record.attestationSecurityLevel.name)
         show("attestation_keymaster_version", record.keymasterVersion.toString())

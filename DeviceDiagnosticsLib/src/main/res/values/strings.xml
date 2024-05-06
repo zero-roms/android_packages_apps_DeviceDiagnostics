@@ -107,6 +107,7 @@ This is the result of the touch test. You can rerun the test by navigating back.
   <string name="yes">Yes</string>
   <string name="no">No</string>
   <string name="unknown">Unknown</string>
+  <string name="attestation_failed">Attestation failed</string>
 
   <!-- Trusted activity -->
   <string name="evaluation_results">Evaluation results</string>
