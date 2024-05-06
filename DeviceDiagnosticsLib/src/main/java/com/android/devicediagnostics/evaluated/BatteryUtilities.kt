@@ -71,6 +71,7 @@ fun getBatteryInfo(context: Context): BatteryInfo {
     val batteryStatus = context.registerReceiver(null, filter)
     if (batteryStatus != null) {
         builder.setCycleCount(batteryStatus.getIntExtra("android.os.extra.CYCLE_COUNT", -1))
+        builder.setLegacyHealth(batteryStatus.getIntExtra(BatteryManager.EXTRA_HEALTH, -1))
     }
 
     return builder.build()

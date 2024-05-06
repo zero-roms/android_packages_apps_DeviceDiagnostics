@@ -59,6 +59,12 @@
   <string name="battery_replaced">Replaced</string>
   <string name="battery_part_history">Part History</string>
   <string name="battery_health_summary">%1$d%% of original capacity</string>
+  <string name="battery_health_unavailable">Battery health unavailable</string>
+  <string name="battery_health_cold">Cold</string>
+  <string name="battery_health_dead">Dead</string>
+  <string name="battery_health_good">Good</string>
+  <string name="battery_health_overheat">Overheat</string>
+  <string name="battery_health_over_voltage">Over voltage</string>
 
   <!-- Storage screen -->
   <string name="storage_health_title">Storage health</string>

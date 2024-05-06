@@ -31,6 +31,7 @@ message BatteryInfo {
     int32 state_of_health = 4;
     optional string serial = 5;
     optional string part_status = 6;
+    int32 legacy_health = 7;
 }
 
 message StorageInfo {

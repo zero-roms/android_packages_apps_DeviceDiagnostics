@@ -21,6 +21,7 @@ import android.app.ActivityManager
 import android.app.Application
 import android.content.Context
 import android.content.Context.ACTIVITY_SERVICE
+import android.os.Build
 import androidx.test.platform.app.InstrumentationRegistry
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothServer
@@ -58,6 +59,11 @@ class TestApplication : Application(), ApplicationInterface {
 
   override fun verifyAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult {
     return attestationVerifier!!.verifyAttestation(attestation, challenge)
+  }
+
+  // Not mocked yet.
+  override fun getLaunchLevel() : Int {
+    return Build.VERSION_CODES.VANILLA_ICE_CREAM
   }
 }
 

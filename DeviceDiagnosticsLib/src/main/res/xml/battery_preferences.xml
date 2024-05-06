@@ -11,6 +11,12 @@
       android:title="@string/battery_part_history">
 
     <Preference
+        android:key="legacy_health"
+        android:selectable="false"
+        android:title="@string/battery_health_title"
+        android:summary="@string/unavailable" />
+
+    <Preference
         android:key="manufacture_date"
         android:selectable="false"
         android:title="@string/battery_manufacturing_date"
