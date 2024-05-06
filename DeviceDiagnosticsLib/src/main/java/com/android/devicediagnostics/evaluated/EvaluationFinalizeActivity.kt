@@ -45,6 +45,9 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val batteryInfo = getBatteryInfo(activity!!)
+        val storageInfo = getStorageInfo(activity!!)
+
         // Launch in separate thread since gathering attestation takes time and we don't want to block
         // the UI from appearing
         runInBackground {
@@ -55,8 +58,8 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
 
             val attestation = createAttestationRecord(state.trustedDevice.challenge.toByteArray())
             reportBuilder.setAttestation(ByteString.copyFrom(attestation))
-            reportBuilder.setBattery(getBatteryInfo(activity!!))
-            reportBuilder.setStorage(getStorageInfo(activity!!))
+            reportBuilder.setBattery(batteryInfo)
+            reportBuilder.setStorage(storageInfo)
 
             val report = reportBuilder.build()
 
