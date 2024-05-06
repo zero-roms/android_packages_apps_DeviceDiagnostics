@@ -15,6 +15,7 @@
  */
 package com.android.devicediagnostics
 
+import android.app.Application
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -71,41 +72,24 @@ class DisplayResultFragment(private var state : TrustedState) : PreferenceFragme
 
     private fun verifyAttestation(bytes: ByteArray) {
         // Attestation check does a network lookup, so must be on separate thread
+        val app = activity!!.applicationContext as ApplicationInterface
         runInBackground {
-            if (bytes.isEmpty()) {
-                onAttestationError()
-            } else {
-                var attestationResult: AttestationResult? = null
-                try {
-                    attestationResult= getAttestation(bytes)
-                } catch (e: Exception) {
-                    Log.e(TAG, "Failed to get attestation record")
-                    Log.e(TAG, e.toString())
-                }
-                requireActivity().runOnUiThread {
-                    if (attestationResult != null)
-                        onAttestationReceived(attestationResult)
-                    else
-                        onAttestationError()
-                }
+            var result = app.verifyAttestation(bytes, state.challenge)
+            requireActivity().runOnUiThread {
+                if (!result.hasError())
+                    onAttestationReceived(result)
+                else
+                    onAttestationError(result)
             }
         }
     }
 
     private fun onAttestationReceived(attestationResult: AttestationResult) {
-        val attestationRecord = attestationResult.record
+        val attestationRecord = attestationResult.record!!
+
+        // Make invisible in case this is a successful retry attempt.
         findPreference<Preference>("retry_failure")?.also {
             it.isVisible = false
-        }
-
-        if (!attestationRecord.attestationChallenge.contentEquals(state.challenge)) {
-            findPreference<Preference>("non_retry_failure")?.also {
-                it.summary = resources.getString(R.string.attestation_challenge_does_not_match) +
-                    "\n" + attestationRecord.attestationChallenge.toString(Charsets.UTF_8) +
-                    "\n" + state.challenge.toString(Charsets.UTF_8)
-                it.isVisible = true
-            }
-            return
         }
 
         findPreference<Preference>("imei")?.also {
@@ -134,14 +118,18 @@ class DisplayResultFragment(private var state : TrustedState) : PreferenceFragme
         }
 
         findPreference<Preference>("locked")?.also {
-            it.summary = if (attestationRecord.teeEnforced.rootOfTrust.get().deviceLocked)
+            val rootOfTrust = attestationRecord.teeEnforced.rootOfTrust
+            it.summary = if (rootOfTrust.isPresent && rootOfTrust.get().deviceLocked)
                 resources.getString(R.string.locked)
             else
                 resources.getString(R.string.not_locked)
             it.isVisible = true
         }
         findPreference<Preference>("trustworthy")?.also {
-            it.summary = attestationRecord.teeEnforced.rootOfTrust.get().verifiedBootState.name
+            if (attestationResult.verified)
+                it.summary = attestationRecord.teeEnforced.rootOfTrust.get().verifiedBootState.name
+            else
+                it.summary = activity!!.resources.getString(R.string.no)
             it.isVisible = true
         }
         findPreference<Preference>("attestation_details")?.also {
@@ -152,19 +140,23 @@ class DisplayResultFragment(private var state : TrustedState) : PreferenceFragme
                     DisplayAttestationDetailsActivity::class.java))
                 true
             }
-            if (Build.IS_USERDEBUG || Build.IS_ENG) {
-                it.isVisible = true
-            }
+            it.isVisible = true
         }
     }
 
-    private fun onAttestationError() {
-        findPreference<Preference>("retry_failure")?.also {
-            it.setOnPreferenceClickListener {
-                verifyAttestation(state.report.attestation.toByteArray())
-                true
+    private fun onAttestationError(result: AttestationResult) {
+        if (result.hasNetworkOnlyError()) {
+            findPreference<Preference>("retry_failure")?.also {
+                it.setOnPreferenceClickListener {
+                    verifyAttestation(state.report.attestation.toByteArray())
+                    true
+                }
+                it.isVisible = true
             }
-            it.isVisible = true
+        } else {
+            findPreference<Preference>("non_retry_failure")?.also {
+                it.isVisible = true
+            }
         }
     }
 }

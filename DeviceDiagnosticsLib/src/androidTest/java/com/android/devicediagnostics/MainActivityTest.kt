@@ -44,6 +44,9 @@ import com.android.devicediagnostics.evaluated.TouchTestFinalizeActivity
 import com.android.devicediagnostics.trusted.DisplayResultActivity
 import com.android.devicediagnostics.trusted.WaitForResultActivity
 import com.android.settingslib.qrcode.QrCamera
+import com.google.android.attestation.AuthorizationList
+import com.google.android.attestation.ParsedAttestationRecord
+import com.google.android.attestation.RootOfTrust
 import com.google.protobuf.ByteString
 import java.nio.charset.Charset
 import org.hamcrest.Matcher
@@ -97,6 +100,7 @@ class MainActivityKtTest {
     app.btClient = Mockito.mock(BluetoothClient::class.java)
     app.btServer = Mockito.mock(BluetoothServer::class.java)
     app.qrCameraProvider = Mockito.mock(QrCameraProvider::class.java)
+    app.attestationVerifier = Mockito.mock(AttestationVerifier::class.java)
   }
 
   @After
@@ -104,6 +108,7 @@ class MainActivityKtTest {
     app.btClient = null
     app.btServer = null
     app.qrCameraProvider = null
+    app.attestationVerifier = null
     Intents.release()
   }
 
@@ -222,6 +227,15 @@ class MainActivityKtTest {
     val readListenerCaptor = argumentCaptor<BluetoothServer.ReadListener>()
     verify(btServer, times(1)).startAsyncRead(readListenerCaptor.capture())
 
+    // Set up the verifyAttestation call.
+    val rootOfTrust = Mockito.mock(RootOfTrust::class.java)
+    val authorizationList = AuthorizationList.builder()
+      .build()
+    val attestationRecord = ParsedAttestationRecord.create(1, ParsedAttestationRecord.SecurityLevel.SOFTWARE, 1, ParsedAttestationRecord.SecurityLevel.SOFTWARE,
+      ByteArray(0), ByteArray(0), authorizationList, authorizationList)
+    val attestationResult = AttestationResult(attestationRecord, false, null)
+    whenever(app.attestationVerifier!!.verifyAttestation(any(), any())).thenReturn(attestationResult)
+
     // Finish the read operation.
     readListenerCaptor.firstValue.onBluetoothRead(deviceReport.toByteArray())
 
@@ -230,6 +244,5 @@ class MainActivityKtTest {
 
     onView(withText("Pass")).check(matches(isDisplayed()))
     onView(withText("Fail")).check(matches(isDisplayed()))
-    onView(withText("Retry attestation")).check(matches(isDisplayed()))
   }
 }

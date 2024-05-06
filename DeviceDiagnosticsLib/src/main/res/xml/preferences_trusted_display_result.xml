@@ -1,5 +1,31 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
   <Preference
+      app:key="trustworthy"
+      app:title="@string/trustworthy_title"
+      app:selectable="false"
+      app:isPreferenceVisible="false" />
+
+  <Preference
+      app:key="locked"
+      app:title="@string/bootloader_locked_title"
+      app:selectable="false"
+      app:isPreferenceVisible="false" />
+
+  <Preference
+      app:key="retry_failure"
+      app:isPreferenceVisible="false"
+      app:selectable="true"
+      app:title="@string/attestation_remote_failure_title"
+      app:summary="@string/attestation_remote_failure_summary"/>
+
+  <Preference
+      app:key="non_retry_failure"
+      app:isPreferenceVisible="false"
+      app:selectable="false"
+      app:title="@string/attestation_local_failure_title"
+      app:summary="@string/attestation_local_failure_summary"/>
+
+  <Preference
       app:key="imei"
       app:title="@string/imei_title"
       app:selectable="false"
@@ -18,18 +44,6 @@
       app:isPreferenceVisible="false" />
 
   <Preference
-      app:key="locked"
-      app:title="@string/bootloader_locked_title"
-      app:selectable="false"
-      app:isPreferenceVisible="false" />
-
-  <Preference
-      app:key="trustworthy"
-      app:title="@string/trustworthy_title"
-      app:selectable="false"
-      app:isPreferenceVisible="false" />
-
-  <Preference
       app:key="screen"
       app:title="@string/display_status_title"
       app:selectable="false" />
@@ -43,20 +57,6 @@
       app:key="attestation_details"
       app:isPreferenceVisible="false"
       app:title="@string/attestation_details_title" />
-
-  <Preference
-      app:key="non_retry_failure"
-      app:isPreferenceVisible="false"
-      app:selectable="false"
-      app:title="@string/attestation_local_failure_title"
-      app:summary="@string/attestation_challenge_does_not_match"/>
-
-  <Preference
-      app:key="retry_failure"
-      app:isPreferenceVisible="false"
-      app:selectable="true"
-      app:title="@string/attestation_remote_failure_title"
-      app:summary="@string/attestation_remote_failure_summary"/>
 
   <PreferenceCategory
       app:key="actions"
