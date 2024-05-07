@@ -70,6 +70,6 @@
         <activity android:name="com.android.devicediagnostics.evaluated.TouchTestFinalizeActivity" />
         <activity android:name="com.android.devicediagnostics.evaluated.EvaluationFinalizeActivity" />
         <activity android:name="com.android.devicediagnostics.BatteryActivity" />
-        <activity android:name="com.android.devicediagnostics.evaluated.StorageActivity" />
+        <activity android:name="com.android.devicediagnostics.StorageActivity" />
     </application>
 </manifest>

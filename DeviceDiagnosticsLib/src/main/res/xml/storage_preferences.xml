@@ -1,5 +1,5 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-  <com.android.devicediagnostics.evaluated.StorageHealthPreference
+  <com.android.devicediagnostics.StorageHealthPreference
       android:key="health"
       android:selectable="false"
       android:title="@string/storage_health_title"
