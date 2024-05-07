@@ -48,6 +48,7 @@ class BatteryInfoFragment(private var diagnostics: BatteryInfo) : PreferenceFrag
         val vsrLevel = app.getLaunchLevel()
 
         findPreference<BatteryHealthPreference>("health")!!.also {
+            it.diagnostics = diagnostics
             if (vsrLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
                 it.setPercent(max(0, diagnostics.stateOfHealth.toLong()), 100)
                 if (diagnostics.stateOfHealth >= 0) {
@@ -124,8 +125,7 @@ class BatteryInfoFragment(private var diagnostics: BatteryInfo) : PreferenceFrag
 class BatteryHealthPreference(context: Context, attrs: AttributeSet) :
     UsageProgressBarPreference(context, attrs) {
 
-    val diagnostics: BatteryInfo
-        get() = (context as BatteryActivity).diagnostics
+    var diagnostics: BatteryInfo = BatteryInfo.getDefaultInstance()
 
     override fun getSummary(): CharSequence? {
         if (diagnostics.stateOfHealth == -1) {
@@ -136,16 +136,13 @@ class BatteryHealthPreference(context: Context, attrs: AttributeSet) :
 }
 
 class BatteryActivity : CollapsingToolbarBaseActivity() {
-    lateinit var diagnostics: BatteryInfo
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_one_fragment)
         setTitle(R.string.battery_title)
 
-        diagnostics = getBatteryInfo(this)
-
         if (savedInstanceState == null) {
+            val diagnostics = getBatteryInfo(this)
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 add(R.id.fragment_container_view, BatteryInfoFragment(diagnostics))

@@ -31,6 +31,7 @@ class StorageInfoFragment(private var diagnostics: StorageInfo) : PreferenceFrag
         setPreferencesFromResource(R.xml.storage_preferences, rootKey)
 
         findPreference<StorageHealthPreference>("health")!!.also {
+            it.diagnostics = diagnostics
             if (diagnostics.usefulLifetimeRemaining != -1) {
                 it.setPercent(diagnostics.usefulLifetimeRemaining.toLong(), 100)
                 it.setBottomSummary(getString(R.string.storage_health_summary,
@@ -54,8 +55,7 @@ class StorageHealthPreference(context: Context, attrs: AttributeSet) :
 
     fun constructor() {}
 
-    val diagnostics: StorageInfo
-        get() = (context as StorageActivity).diagnostics
+    var diagnostics: StorageInfo = StorageInfo.getDefaultInstance()
 
     override fun getSummary(): CharSequence? {
         if (diagnostics.usefulLifetimeRemaining == -1) {
@@ -66,16 +66,13 @@ class StorageHealthPreference(context: Context, attrs: AttributeSet) :
 }
 
 class StorageActivity : CollapsingToolbarBaseActivity() {
-    lateinit var diagnostics: StorageInfo
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_one_fragment)
         setTitle(R.string.storage_title)
 
-        diagnostics = getStorageInfo(this)
-
         if (savedInstanceState == null) {
+            val diagnostics = getStorageInfo(this)
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 add(R.id.fragment_container_view, StorageInfoFragment(diagnostics))
