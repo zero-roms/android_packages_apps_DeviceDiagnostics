@@ -18,6 +18,7 @@ package com.android.devicediagnostics.trusted
 
 import android.os.Bundle
 import androidx.fragment.app.commit
+import com.android.devicediagnostics.AttestationController
 import com.android.devicediagnostics.DisplayResultFragment
 import com.android.devicediagnostics.R
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
@@ -33,9 +34,10 @@ class DisplayResultActivity : CollapsingToolbarBaseActivity() {
 
         if (savedInstanceState == null) {
             val state = TrustedState.fromActivity(this)!!
+            val controller = AttestationController(state.challenge)
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add(R.id.fragment_container_view, DisplayResultFragment(state))
+                add(R.id.fragment_container_view, DisplayResultFragment(state.report, controller))
             }
         }
     }

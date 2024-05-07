@@ -14,11 +14,12 @@
  */
 package com.android.devicediagnostics
 
-import com.google.android.attestation.AttestationApplicationId
+import android.app.Activity
+import android.util.Log
+import com.android.devicediagnostics.Protos.DeviceReport
 import com.google.android.attestation.CertificateRevocationStatus
 import com.google.android.attestation.Constants
 import com.google.android.attestation.ParsedAttestationRecord
-import com.google.android.attestation.RootOfTrust
 import com.google.common.collect.ImmutableList
 import java.io.ByteArrayInputStream
 import java.io.IOException
@@ -26,10 +27,10 @@ import java.nio.ByteBuffer
 import java.security.cert.CertificateException
 import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate
-import java.util.Arrays
-import java.util.Optional
 import java.util.zip.Inflater
 import org.bouncycastle.util.encoders.Base64
+
+private const val TAG = "Attestation"
 
 /**
  * This is an illustration of how you can use the Bouncy Castle ASN.1 parser to extract information
@@ -67,6 +68,26 @@ class AttestationResult(val record: ParsedAttestationRecord?, val verified: Bool
     }
 }
 
+class AttestationController(val challenge: ByteArray) {
+    interface Callbacks {
+        fun onAttestationReceived(result: AttestationResult)
+        fun onAttestationError(result: AttestationResult)
+    }
+    fun verifyAttestation(activity: Activity, report: DeviceReport, callbacks: Callbacks) {
+        // Attestation check does a network lookup, so must be on separate thread
+        val app = activity.applicationContext as ApplicationInterface
+        runInBackground {
+            var result = app.verifyAttestation(report.attestation.toByteArray(), challenge)
+            activity.runOnUiThread {
+                if (!result.hasError())
+                    callbacks.onAttestationReceived(result)
+                else
+                    callbacks.onAttestationError(result)
+            }
+        }
+    }
+}
+
 fun getAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult {
     val inflater = Inflater()
     inflater.setInput(attestation, 0, attestation.size)
@@ -90,7 +111,9 @@ fun getAttestation(attestation: ByteArray, challenge: ByteArray): AttestationRes
             throw Exception("Challenge does not match")
         return AttestationResult(record, verified, null)
     } catch (e: Exception) {
-        return AttestationResult(null, false, e)
+        // Note: set record so we can distinguish between parsing errors and network errors.
+        Log.e(TAG, "Attestation failed: $e")
+        return AttestationResult(record, false, e)
     }
 }
 
