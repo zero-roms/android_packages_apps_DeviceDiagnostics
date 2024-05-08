@@ -3,6 +3,7 @@
 
   <Preference
       app:key="trusted_device"
+      app:icon="@drawable/ic_trusted_device"
       app:title="@string/trusted_device_title">
     <intent
         android:targetClass="com.android.devicediagnostics.trusted.QrCodeDisplayActivity"
@@ -11,6 +12,7 @@
 
   <Preference
       app:key="evaluation_mode"
+      app:icon="@drawable/ic_device_unknown"
       app:title="@string/evaluated_device_title">
     <intent
         android:targetClass="com.android.devicediagnostics.evaluated.QrCodeScanActivity"

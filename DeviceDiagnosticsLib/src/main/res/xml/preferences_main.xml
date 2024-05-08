@@ -3,6 +3,7 @@
 
   <Preference
     app:key="diagnostics"
+    app:icon="@drawable/ic_component_diagnostics"
     app:title="@string/component_health_title">
     <intent
       android:targetClass="com.android.devicediagnostics.DiagnosticsActivity"
@@ -11,6 +12,7 @@
 
   <Preference
       app:key="evaluation_mode"
+      app:icon="@drawable/ic_manual_diagnostics"
       app:title="@string/evaluation_mode_title">
     <intent
         android:targetClass="com.android.devicediagnostics.EvaluationModeActivity"

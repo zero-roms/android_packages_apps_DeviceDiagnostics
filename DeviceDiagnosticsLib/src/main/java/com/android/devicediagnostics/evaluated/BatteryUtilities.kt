@@ -62,7 +62,7 @@ fun getBatteryInfo(context: Context): BatteryInfo {
             builder.setPartStatus(context.resources.getString(R.string.battery_replaced))
         }
         val serial = bm.getStringProperty(BatteryManager.BATTERY_PROPERTY_SERIAL_NUMBER)
-        if (serial != null) {
+        if (!serial.isNullOrEmpty()) {
             builder.setSerial(serial)
         }
     }

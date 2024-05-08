@@ -4,6 +4,7 @@
   <PreferenceCategory android:title="@string/manual_eval_title">
     <Preference
         app:key="screen_test"
+        app:icon="@drawable/ic_screen_diagnostics"
         app:title="@string/screen_test_title">
       <intent
           android:targetClass="com.android.devicediagnostics.evaluated.ScreenTestIntroActivity"
@@ -12,6 +13,7 @@
 
     <Preference
         app:key="touch_test"
+        app:icon="@drawable/ic_touch_diagnostics"
         app:title="@string/touch_test_title">
       <intent
           android:targetClass="com.android.devicediagnostics.evaluated.TouchTestIntroActivity"
@@ -22,6 +24,7 @@
   <PreferenceCategory android:title="@string/component_title">
     <Preference
         app:key="Battery"
+        app:icon="@drawable/ic_battery_diagnostics"
         app:title="@string/battery_title">
       <intent
           android:targetClass="com.android.devicediagnostics.BatteryActivity"
@@ -30,6 +33,7 @@
 
     <Preference
         app:key="Storage"
+        app:icon="@drawable/ic_storage_diagnostics"
         app:title="@string/storage_title">
       <intent
           android:targetClass="com.android.devicediagnostics.StorageActivity"
