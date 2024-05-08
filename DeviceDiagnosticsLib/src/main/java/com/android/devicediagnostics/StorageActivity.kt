@@ -15,7 +15,9 @@
  */
 package com.android.devicediagnostics
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.AttributeSet
 import androidx.fragment.app.commit
@@ -72,11 +74,29 @@ class StorageActivity : CollapsingToolbarBaseActivity() {
         setTitle(R.string.storage_title)
 
         if (savedInstanceState == null) {
-            val diagnostics = getStorageInfo(this)
+            val diagnostics = readStorageInfo()
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 add(R.id.fragment_container_view, StorageInfoFragment(diagnostics))
             }
+        }
+    }
+
+    // Get either current battery info or battery info from the intent.
+    private fun readStorageInfo(): StorageInfo {
+        if (intent.extras != null) {
+            val array = intent.extras!!.getByteArray(INTENT_STORAGE_INFO)
+            return StorageInfo.parseFrom(array)
+        }
+        return getStorageInfo(this)
+    }
+
+    companion object Static {
+        const val INTENT_STORAGE_INFO = "storage_info"
+
+        fun createIntent(from: Activity, diagnostics: StorageInfo): Intent {
+            return Intent(from, StorageActivity::class.java)
+                .putExtra(INTENT_STORAGE_INFO, diagnostics.toByteArray())
         }
     }
 }

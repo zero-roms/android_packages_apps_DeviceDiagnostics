@@ -41,6 +41,18 @@ class DisplayResultFragment(
         findPreference<Preference>("screen")?.summary = if (tests.screenTest) pass else fail
         findPreference<Preference>("touch")?.summary = if (tests.touchTest) pass else fail
 
+        findPreference<Preference>("battery")!!.setOnPreferenceClickListener {
+            val intent = BatteryActivity.createIntent(activity!!, report.battery)
+            activity!!.startActivity(intent)
+            true
+        }
+
+        findPreference<Preference>("storage")!!.setOnPreferenceClickListener {
+            val intent = StorageActivity.createIntent(activity!!, report.storage)
+            activity!!.startActivity(intent)
+            true
+        }
+
         findPreference<Preference>("evaluate_another")?.setOnPreferenceClickListener {
             val intent = Intent(activity, QrCodeDisplayActivity::class.java)
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
