@@ -36,8 +36,9 @@ class StorageInfoFragment(private var diagnostics: StorageInfo) : PreferenceFrag
             it.diagnostics = diagnostics
             if (diagnostics.usefulLifetimeRemaining != -1) {
                 it.setPercent(diagnostics.usefulLifetimeRemaining.toLong(), 100)
-                it.setBottomSummary(getString(R.string.storage_health_summary,
-                    diagnostics.usefulLifetimeRemaining))
+                it.setBottomSummary(
+                    getString(R.string.storage_health_summary, diagnostics.usefulLifetimeRemaining)
+                )
             } else {
                 it.isVisible = false
             }
@@ -45,9 +46,11 @@ class StorageInfoFragment(private var diagnostics: StorageInfo) : PreferenceFrag
 
         findPreference<Preference>("total_capacity")!!.also {
             it.summary =
-                getString(R.string.storage_total_capacity_summary,
+                getString(
+                    R.string.storage_total_capacity_summary,
                     diagnostics.capacity,
-                    diagnostics.capacityUnits)
+                    diagnostics.capacityUnits
+                )
         }
     }
 }

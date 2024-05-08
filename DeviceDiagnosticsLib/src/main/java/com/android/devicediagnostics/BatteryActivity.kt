@@ -54,7 +54,9 @@ class BatteryInfoFragment(private var diagnostics: BatteryInfo) : PreferenceFrag
             if (vsrLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
                 it.setPercent(max(0, diagnostics.stateOfHealth.toLong()), 100)
                 if (diagnostics.stateOfHealth >= 0) {
-                    it.setBottomSummary(getString(R.string.battery_health_summary, diagnostics.stateOfHealth))
+                    it.setBottomSummary(
+                        getString(R.string.battery_health_summary, diagnostics.stateOfHealth)
+                    )
                 } else {
                     it.setBottomSummary(getString(R.string.battery_health_unavailable))
                 }

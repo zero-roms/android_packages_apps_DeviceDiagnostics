@@ -20,27 +20,30 @@ import android.app.Application
 import android.content.Context
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothServer
-import kotlin.random.Random
 import com.android.settingslib.qrcode.QrCamera
+import kotlin.random.Random
 
 class DeviceDiagnosticsApplication : Application(), ApplicationInterface {
-  override fun getRandomBytes(count: Int) : ByteArray {
-    return Random.nextBytes(count)
-  }
+    override fun getRandomBytes(count: Int): ByteArray {
+        return Random.nextBytes(count)
+    }
 
-  override fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : QrCamera {
-    return QrCamera(context, activity)
-  }
+    override fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback): QrCamera {
+        return QrCamera(context, activity)
+    }
 
-  override fun getBluetoothClient() : BluetoothClient {
-    return BluetoothClient
-  }
+    override fun getBluetoothClient(): BluetoothClient {
+        return BluetoothClient
+    }
 
-  override fun getBluetoothServer() : BluetoothServer {
-    return BluetoothServer
-  }
+    override fun getBluetoothServer(): BluetoothServer {
+        return BluetoothServer
+    }
 
-  override fun verifyAttestation(attestation: ByteArray, challenge: ByteArray) : AttestationResult {
-    return getAttestation(attestation, challenge)
-  }
+    override fun verifyAttestation(
+        attestation: ByteArray,
+        challenge: ByteArray
+    ): AttestationResult {
+        return getAttestation(attestation, challenge)
+    }
 }

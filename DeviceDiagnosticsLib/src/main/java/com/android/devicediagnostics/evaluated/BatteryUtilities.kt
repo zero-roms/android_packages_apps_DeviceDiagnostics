@@ -29,7 +29,8 @@ import java.time.format.FormatStyle
 
 private fun formatSecondsAsDate(seconds: Long): String {
     val instant = Instant.ofEpochSecond(seconds)
-    return instant.atZone(ZoneId.systemDefault())
+    return instant
+        .atZone(ZoneId.systemDefault())
         .toLocalDate()
         .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
 }
@@ -49,8 +50,7 @@ fun getBatteryInfo(context: Context): BatteryInfo {
         if (date >= 0) {
             builder.setFirstUsageDate(formatSecondsAsDate(date))
         }
-    } catch (e: Exception) {
-    }
+    } catch (e: Exception) {}
 
     builder.setStateOfHealth(bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_STATE_OF_HEALTH))
 

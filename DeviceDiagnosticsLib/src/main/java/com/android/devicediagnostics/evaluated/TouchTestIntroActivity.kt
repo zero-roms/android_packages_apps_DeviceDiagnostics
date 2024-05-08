@@ -21,7 +21,7 @@ import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
 class TouchTestIntroFragment() : PreferenceFragmentCompat() {
     fun constructor() {}
@@ -44,9 +44,7 @@ class TouchTestIntroActivity : CollapsingToolbarBaseActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add(
-                    R.id.fragment_container_view,
-                    TouchTestIntroFragment())
+                add(R.id.fragment_container_view, TouchTestIntroFragment())
             }
         }
     }

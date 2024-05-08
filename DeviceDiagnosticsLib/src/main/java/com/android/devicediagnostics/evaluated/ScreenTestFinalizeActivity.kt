@@ -21,7 +21,7 @@ import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.R
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
 class ScreenTestFinalizeFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -37,9 +37,7 @@ class ScreenTestFinalizeFragment() : PreferenceFragmentCompat() {
     }
 
     private fun nextActivity(screenTestResult: Boolean) {
-        nextTest(requireActivity()) {
-            it.setScreenTest(screenTestResult)
-        }
+        nextTest(requireActivity()) { it.setScreenTest(screenTestResult) }
     }
 }
 
@@ -52,10 +50,7 @@ class ScreenTestFinalizeActivity : CollapsingToolbarBaseActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add(
-                    R.id.fragment_container_view,
-                    ScreenTestFinalizeFragment()
-                )
+                add(R.id.fragment_container_view, ScreenTestFinalizeFragment())
             }
         }
     }

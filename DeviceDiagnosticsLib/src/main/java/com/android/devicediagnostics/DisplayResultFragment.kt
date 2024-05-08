@@ -27,9 +27,8 @@ private const val TAG = "DisplayResultFragment"
 
 class DisplayResultFragment(
     private val report: DeviceReport,
-    private val attestation: AttestationController)
-    : PreferenceFragmentCompat(), AttestationController.Callbacks
-{
+    private val attestation: AttestationController
+) : PreferenceFragmentCompat(), AttestationController.Callbacks {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_trusted_display_result, rootKey)
 
@@ -87,9 +86,7 @@ class DisplayResultFragment(
         val attestationRecord = attestationResult.record!!
 
         // Make invisible in case this is a successful retry attempt.
-        findPreference<Preference>("retry_failure")?.also {
-            it.isVisible = false
-        }
+        findPreference<Preference>("retry_failure")?.also { it.isVisible = false }
 
         findPreference<Preference>("imei")?.also {
             if (attestationRecord.teeEnforced.attestationIdImei.isPresent) {
@@ -102,7 +99,8 @@ class DisplayResultFragment(
         findPreference<Preference>("imei2")?.also {
             if (attestationRecord.teeEnforced.attestationIdSecondImei.isPresent) {
                 it.summary =
-                    attestationRecord.teeEnforced.attestationIdSecondImei.get()
+                    attestationRecord.teeEnforced.attestationIdSecondImei
+                        .get()
                         .toString(Charsets.UTF_8)
                 it.isVisible = true
             }
@@ -118,25 +116,24 @@ class DisplayResultFragment(
 
         findPreference<Preference>("locked")?.also {
             val rootOfTrust = attestationRecord.teeEnforced.rootOfTrust
-            it.summary = if (rootOfTrust.isPresent && rootOfTrust.get().deviceLocked)
-                resources.getString(R.string.locked)
-            else
-                resources.getString(R.string.not_locked)
+            it.summary =
+                if (rootOfTrust.isPresent && rootOfTrust.get().deviceLocked)
+                    resources.getString(R.string.locked)
+                else resources.getString(R.string.not_locked)
             it.isVisible = true
         }
         findPreference<Preference>("trustworthy")?.also {
             if (attestationResult.verified)
                 it.summary = attestationRecord.teeEnforced.rootOfTrust.get().verifiedBootState.name
-            else
-                it.summary = activity!!.resources.getString(R.string.no)
+            else it.summary = activity!!.resources.getString(R.string.no)
             it.isVisible = true
         }
         findPreference<Preference>("attestation_details")?.also {
             it.setOnPreferenceClickListener {
                 DisplayAttestationDetailsActivity.result = attestationResult
                 startActivity(
-                    Intent(requireActivity(),
-                    DisplayAttestationDetailsActivity::class.java))
+                    Intent(requireActivity(), DisplayAttestationDetailsActivity::class.java)
+                )
                 true
             }
             it.isVisible = true
@@ -157,9 +154,7 @@ class DisplayResultFragment(
                 it.isVisible = true
             }
         } else {
-            findPreference<Preference>("non_retry_failure")?.also {
-                it.isVisible = true
-            }
+            findPreference<Preference>("non_retry_failure")?.also { it.isVisible = true }
         }
     }
 }

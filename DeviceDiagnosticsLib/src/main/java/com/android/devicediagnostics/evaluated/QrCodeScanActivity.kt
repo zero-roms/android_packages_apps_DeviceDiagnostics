@@ -17,7 +17,6 @@
 package com.android.devicediagnostics.evaluated
 
 import android.Manifest
-import android.content.Context
 import android.graphics.Matrix
 import android.graphics.Outline
 import android.graphics.Rect
@@ -38,8 +37,8 @@ import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.Protos
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
 import com.android.devicediagnostics.bluetooth.BluetoothClient
+import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
 import com.android.devicediagnostics.bluetooth.IBluetoothDevice
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.qrcode.QrCamera
@@ -51,8 +50,7 @@ class QrCodeScanFragment() :
     TextureView.SurfaceTextureListener,
     BluetoothClient.ScanListener,
     QrCamera.ScannerCallback,
-    PreferenceFragmentCompat()
-{
+    PreferenceFragmentCompat() {
     private var textureView: TextureView? = null
     private var bluetoothClient: BluetoothClient? = null
     private var mCamera: QrCamera? = null
@@ -68,22 +66,22 @@ class QrCodeScanFragment() :
         val layoutPreference = findPreference("qr_code") as LayoutPreference?
         textureView = layoutPreference!!.findViewById<TextureView>(R.id.preview_view)
         textureView!!.surfaceTextureListener = this
-        textureView!!.outlineProvider = object : ViewOutlineProvider() {
-            override fun getOutline(view: View, outline: Outline) {
-                outline.setRoundRect(0, 0, view.width, view.height, 12f)
+        textureView!!.outlineProvider =
+            object : ViewOutlineProvider() {
+                override fun getOutline(view: View, outline: Outline) {
+                    outline.setRoundRect(0, 0, view.width, view.height, 12f)
+                }
             }
-        }
         textureView!!.clipToOutline = true
     }
 
     fun startBluetooth(connectionData: BluetoothConnectionData) {
-        bluetoothClient = (activity!!.applicationContext as ApplicationInterface).getBluetoothClient()
+        bluetoothClient =
+            (activity!!.applicationContext as ApplicationInterface).getBluetoothClient()
         bluetoothClient!!.connectionData = connectionData
         bluetoothClient!!.start(this)
 
-        requireActivity().runOnUiThread {
-            setConnectionProgressVisibility(true)
-        }
+        requireActivity().runOnUiThread { setConnectionProgressVisibility(true) }
     }
 
     override fun onBluetoothConnected(device: IBluetoothDevice) {
@@ -91,9 +89,7 @@ class QrCodeScanFragment() :
             Log.d(TAG, "Found device ${device.name}")
             val bytes = bluetoothClient!!.read(device)
             val trustedDeviceInfo = Protos.TrustedDeviceInfo.parseFrom(bytes)
-            requireActivity().runOnUiThread {
-                onDeviceConnected(trustedDeviceInfo)
-            }
+            requireActivity().runOnUiThread { onDeviceConnected(trustedDeviceInfo) }
         } catch (e: Exception) {
             Log.e(TAG, "Could not connect to trusted device: $e")
         }
@@ -166,10 +162,7 @@ class QrCodeScanFragment() :
 
     override fun handleSuccessfulResult(qrCode: String?) {
         getSystemService<Vibrator>(activity!!, Vibrator::class.java)!!.vibrate(
-            VibrationEffect.createOneShot(
-                500,
-                VibrationEffect.DEFAULT_AMPLITUDE
-            )
+            VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE)
         )
         startBluetooth(BluetoothConnectionData(qrCode!!))
     }
@@ -178,14 +171,19 @@ class QrCodeScanFragment() :
 class QrCodeScanActivity : CollapsingToolbarBaseActivity() {
     private var mFragment = QrCodeScanFragment()
 
-    private val permissions = PermissionsHelper(this,
-        arrayOf(
-            Manifest.permission.CAMERA,
-            Manifest.permission.BLUETOOTH_ADVERTISE,
-            Manifest.permission.BLUETOOTH_CONNECT,
-            Manifest.permission.BLUETOOTH_SCAN,
-            Manifest.permission.ACCESS_FINE_LOCATION)
-    ) { onPermissionsGranted() }
+    private val permissions =
+        PermissionsHelper(
+            this,
+            arrayOf(
+                Manifest.permission.CAMERA,
+                Manifest.permission.BLUETOOTH_ADVERTISE,
+                Manifest.permission.BLUETOOTH_CONNECT,
+                Manifest.permission.BLUETOOTH_SCAN,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            )
+        ) {
+            onPermissionsGranted()
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

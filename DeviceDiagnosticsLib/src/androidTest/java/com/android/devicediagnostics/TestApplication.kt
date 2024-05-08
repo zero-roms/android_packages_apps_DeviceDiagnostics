@@ -28,60 +28,67 @@ import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.qrcode.QrCamera
 
 interface QrCameraProvider {
-  fun getQrCamera(activity: QrCamera.ScannerCallback) : QrCamera
+    fun getQrCamera(activity: QrCamera.ScannerCallback): QrCamera
 }
 
 interface AttestationVerifier {
-  fun verifyAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult
+    fun verifyAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult
 }
 
 class TestApplication : Application(), ApplicationInterface {
-  override fun getRandomBytes(count: Int) : ByteArray {
-    return (1..count).map{it.toByte()}.toByteArray()
-  }
+    override fun getRandomBytes(count: Int): ByteArray {
+        return (1..count).map { it.toByte() }.toByteArray()
+    }
 
-  var btClient : BluetoothClient? = null
-  var btServer : BluetoothServer? = null
-  var qrCameraProvider : QrCameraProvider? = null
-  var attestationVerifier : AttestationVerifier? = null
+    var btClient: BluetoothClient? = null
+    var btServer: BluetoothServer? = null
+    var qrCameraProvider: QrCameraProvider? = null
+    var attestationVerifier: AttestationVerifier? = null
 
-  override fun getBluetoothClient() : BluetoothClient {
-    return btClient!!
-  }
+    override fun getBluetoothClient(): BluetoothClient {
+        return btClient!!
+    }
 
-  override fun getBluetoothServer() : BluetoothServer {
-    return btServer!!
-  }
+    override fun getBluetoothServer(): BluetoothServer {
+        return btServer!!
+    }
 
-  override fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : QrCamera {
-    return qrCameraProvider!!.getQrCamera(activity)
-  }
+    override fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback): QrCamera {
+        return qrCameraProvider!!.getQrCamera(activity)
+    }
 
-  override fun verifyAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult {
-    return attestationVerifier!!.verifyAttestation(attestation, challenge)
-  }
+    override fun verifyAttestation(
+        attestation: ByteArray,
+        challenge: ByteArray
+    ): AttestationResult {
+        return attestationVerifier!!.verifyAttestation(attestation, challenge)
+    }
 
-  // Not mocked yet.
-  override fun getLaunchLevel() : Int {
-    return Build.VERSION_CODES.VANILLA_ICE_CREAM
-  }
+    // Not mocked yet.
+    override fun getLaunchLevel(): Int {
+        return Build.VERSION_CODES.VANILLA_ICE_CREAM
+    }
 }
 
-inline fun getVisibleActivity() : String? {
-  val am = InstrumentationRegistry.getInstrumentation().context.getSystemService(ACTIVITY_SERVICE) as ActivityManager
-  return am.appTasks[0].taskInfo.topActivity?.className
+inline fun getVisibleActivity(): String? {
+    val am =
+        InstrumentationRegistry.getInstrumentation().context.getSystemService(ACTIVITY_SERVICE)
+            as ActivityManager
+    return am.appTasks[0].taskInfo.topActivity?.className
 }
 
 inline fun <reified T : Activity> waitForActivity() {
-  val timeout = 5000;
-  val startTime = System.currentTimeMillis()
-  while (true) {
-    val actual = getVisibleActivity()
-    if (actual == T::class.java.name)
-      return
-    Thread.sleep(50)
-    if (System.currentTimeMillis() - startTime >= timeout) {
-      throw AssertionError("Activity ${T::class.java.simpleName} not visible after $timeout milliseconds, got $actual")
+    val timeout = 5000
+    val startTime = System.currentTimeMillis()
+    while (true) {
+        val actual = getVisibleActivity()
+        if (actual == T::class.java.name) return
+        Thread.sleep(50)
+        if (System.currentTimeMillis() - startTime >= timeout) {
+            throw AssertionError(
+                "Activity ${T::class.java.simpleName} not visible after $timeout milliseconds, " +
+                    "got $actual"
+            )
+        }
     }
-  }
 }

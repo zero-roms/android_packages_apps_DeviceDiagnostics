@@ -31,9 +31,7 @@ class TouchTestFinalizeFragment() : PreferenceFragmentCompat() {
         val result = activity!!.intent.getBooleanExtra(TOUCH_TEST_RESULT_KEY, false)
 
         findPreference<Preference>("Continue")?.setOnPreferenceClickListener {
-            nextTest(activity!!) {
-                it.setTouchTest(result)
-            }
+            nextTest(activity!!) { it.setTouchTest(result) }
             true
         }
         findPreference<Preference>(if (result) "Good" else "Bad")?.isVisible = true
@@ -49,10 +47,7 @@ class TouchTestFinalizeActivity : CollapsingToolbarBaseActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add(
-                    R.id.fragment_container_view,
-                    TouchTestFinalizeFragment()
-                )
+                add(R.id.fragment_container_view, TouchTestFinalizeFragment())
             }
         }
     }

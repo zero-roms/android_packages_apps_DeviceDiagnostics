@@ -25,52 +25,53 @@ import com.android.settingslib.qrcode.QrCamera
 import kotlin.math.min
 
 interface ApplicationInterface {
-  fun getRandomBytes(count: Int) : ByteArray
-  fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback) : QrCamera
-  fun getBluetoothClient() : BluetoothClient
-  fun getBluetoothServer() : BluetoothServer
-  fun verifyAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult
-  fun getLaunchLevel() : Int {
-    return com.android.devicediagnostics.getLaunchLevel()
-  }
+    fun getRandomBytes(count: Int): ByteArray
+    fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback): QrCamera
+    fun getBluetoothClient(): BluetoothClient
+    fun getBluetoothServer(): BluetoothServer
+    fun verifyAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult
+    fun getLaunchLevel(): Int {
+        return com.android.devicediagnostics.getLaunchLevel()
+    }
 }
 
 // Must only be called on the UI thread.
 fun runInBackground(handler: () -> Unit) {
-  val task = object : AsyncTask<Void, Void, Void>() {
-    override fun doInBackground(vararg params: Void?): Void? {
-      handler()
-      return null
-    }
-  }
-  task.execute()
+    val task =
+        object : AsyncTask<Void, Void, Void>() {
+            override fun doInBackground(vararg params: Void?): Void? {
+                handler()
+                return null
+            }
+        }
+    task.execute()
 }
 
 fun getPropertyInt(key: String, defaultValue: Int): Int {
-  var value: String? = null
-  value = SystemProperties.get(key, null)
-  if (value == null) {
-    return defaultValue
-  }
-  try {
-    return Integer.parseInt(value)
-  } catch (e: Exception) {
-    return defaultValue
-  }
+    var value: String? = null
+    value = SystemProperties.get(key, null)
+    if (value == null) {
+        return defaultValue
+    }
+    try {
+        return Integer.parseInt(value)
+    } catch (e: Exception) {
+        return defaultValue
+    }
 }
 
 private fun getLaunchLevel(): Int {
-  val vendorApiLevel = getPropertyInt("ro.vendor.api_level", -1)
-  if (vendorApiLevel != -1) {
-    return vendorApiLevel
-  }
-  val boardApiLevel = getPropertyInt("ro.board.api_level", -1)
-  val firstApiLevel = getPropertyInt("ro.product.first_api_level", -1)
-  if (boardApiLevel != -1) {
-    if (firstApiLevel != -1) {
-      return min(boardApiLevel, firstApiLevel)
+    val vendorApiLevel = getPropertyInt("ro.vendor.api_level", -1)
+    if (vendorApiLevel != -1) {
+        return vendorApiLevel
     }
-    return boardApiLevel
-  }
-  return firstApiLevel
+    val boardApiLevel = getPropertyInt("ro.board.api_level", -1)
+    val firstApiLevel = getPropertyInt("ro.product.first_api_level", -1)
+    if (boardApiLevel != -1) {
+        if (firstApiLevel != -1) {
+            return min(boardApiLevel, firstApiLevel)
+        }
+        return boardApiLevel
+    }
+    return firstApiLevel
 }

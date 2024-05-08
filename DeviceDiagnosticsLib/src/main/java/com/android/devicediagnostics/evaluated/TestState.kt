@@ -33,17 +33,21 @@ class TestState(
     var testResults: TestResults,
     var trustedDevice: TrustedDeviceInfo,
 ) : Parcelable {
-    constructor(parcel: Parcel) : this(
+    constructor(
+        parcel: Parcel
+    ) : this(
         testResults = TestResults.parseFrom(parcel.createByteArray()),
-        trustedDevice = TrustedDeviceInfo.parseFrom(parcel.createByteArray())) {
-    }
+        trustedDevice = TrustedDeviceInfo.parseFrom(parcel.createByteArray())
+    ) {}
 
     override fun writeToParcel(dest: Parcel, flags: Int) {
         dest.writeByteArray(testResults.toByteArray())
         dest.writeByteArray(trustedDevice.toByteArray())
     }
 
-    override fun describeContents(): Int { return 0 }
+    override fun describeContents(): Int {
+        return 0
+    }
 
     companion object CREATOR : Parcelable.Creator<TestState> {
         override fun createFromParcel(parcel: Parcel): TestState {
@@ -69,16 +73,17 @@ fun startFullTestFlow(from: Activity, trustedDeviceInfo: TrustedDeviceInfo) {
 }
 
 // Advance through test subactivities (eg TouchTestIntro -> TouchTest).
-fun nextTestActivity(from: Activity, nextClass: String,
-                     withIntent: ((intent: Intent) -> Unit)? = null) {
+fun nextTestActivity(
+    from: Activity,
+    nextClass: String,
+    withIntent: ((intent: Intent) -> Unit)? = null
+) {
     val intent = Intent()
     intent.setClassName(from, nextClass)
 
     val state = TestState.fromActivity(from)
-    if (state != null)
-        intent.putExtra(TEST_STATE_KEY, state)
-    if (withIntent != null)
-        withIntent(intent)
+    if (state != null) intent.putExtra(TEST_STATE_KEY, state)
+    if (withIntent != null) withIntent(intent)
 
     from.startActivity(intent)
 }
@@ -96,14 +101,14 @@ fun nextTest(from: Activity, withReport: (builder: TestResults.Builder) -> Unit)
 
     val state = TestState.fromActivity(from)!!
     val builder = state.testResults.toBuilder()
-    if (withReport != null)
-        withReport(builder)
+    if (withReport != null) withReport(builder)
     state.testResults = builder.build()
 
     val nextActivityClass =
         when (from.javaClass.name) {
             ScreenTestFinalizeActivity::class.java.name -> TouchTestIntroActivity::class.java.name
-            TouchTestFinalizeActivity::class.java.name -> EvaluationFinalizeActivity::class.java.name
+            TouchTestFinalizeActivity::class.java.name ->
+                EvaluationFinalizeActivity::class.java.name
             else -> null
         }
 
@@ -121,7 +126,6 @@ fun nextTest(from: Activity, withReport: (builder: TestResults.Builder) -> Unit)
 // Returns whether the current activity is part of one-shot test flow.
 fun isOneShotTest(from: Activity): Boolean {
     val extras = from.intent.extras
-    if (extras == null)
-        return true
+    if (extras == null) return true
     return !extras.containsKey(TEST_STATE_KEY)
 }

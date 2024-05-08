@@ -31,11 +31,11 @@ import com.android.devicediagnostics.Protos.DeviceReport
 private const val TAG = "BluetoothClient"
 
 interface IBluetoothDevice {
-    val name : String
+    val name: String
 }
 
 class BluetoothDeviceAdapter(val device: BluetoothDevice) : IBluetoothDevice {
-    override val name : String
+    override val name: String
         get() = device.name
 }
 
@@ -52,21 +52,19 @@ object BluetoothClient {
         scanner = adapter.bluetoothLeScanner
         scanCallback = DeviceScanCallback()
 
-        val filters = listOf(ScanFilter.Builder()
-            .setServiceUuid(ParcelUuid(SERVICE_UUID))
-            .build())
-        val settings = ScanSettings.Builder()
-            .setScanMode(ScanSettings.SCAN_MODE_LOW_POWER)
-            .build()
+        val filters = listOf(ScanFilter.Builder().setServiceUuid(ParcelUuid(SERVICE_UUID)).build())
+        val settings = ScanSettings.Builder().setScanMode(ScanSettings.SCAN_MODE_LOW_POWER).build()
         scanner!!.startScan(filters, settings, scanCallback)
-        Log.d(TAG, "Started scan $scanner");
+        Log.d(TAG, "Started scan $scanner")
     }
 
     fun read(device: IBluetoothDevice): ByteArray {
-        socket = (device as BluetoothDeviceAdapter).device.createInsecureL2capChannel(connectionData!!.psm)
+        socket =
+            (device as BluetoothDeviceAdapter)
+                .device
+                .createInsecureL2capChannel(connectionData!!.psm)
         socket!!.connect()
-        if (socket == null)
-            throw Exception()
+        if (socket == null) throw Exception()
         stopScanning()
         val input = socket!!.inputStream
         var b = ByteArray(0)
@@ -74,7 +72,7 @@ object BluetoothClient {
             val chunk = ByteArray(CHUNK)
             val size = input.read(chunk)
             b += chunk.slice(IntRange(0, size - 1))
-            if (size < CHUNK) break;
+            if (size < CHUNK) break
         }
         Log.d(TAG, "read ${b.size} bytes")
         return b
@@ -105,7 +103,7 @@ object BluetoothClient {
     }
 
     private fun stopScanning() {
-        Log.d(TAG, "stopped scan");
+        Log.d(TAG, "stopped scan")
         scanner?.stopScan(scanCallback)
         adapter.cancelDiscovery()
         listener = null

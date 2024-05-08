@@ -26,7 +26,9 @@ import com.android.devicediagnostics.R
 
 class ScreenTestActivity : Activity() {
     private enum class State {
-        RED, GREEN, BLUE
+        RED,
+        GREEN,
+        BLUE
     }
 
     private var state = State.RED
@@ -45,8 +47,7 @@ class ScreenTestActivity : Activity() {
         super.onCreate(savedInstanceState)
 
         // Attempt to hide system bars
-        val windowInsetsController =
-            WindowCompat.getInsetsController(window, window.decorView)
+        val windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
         windowInsetsController.systemBarsBehavior =
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
@@ -57,7 +58,6 @@ class ScreenTestActivity : Activity() {
             when (state) {
                 State.RED -> state = State.GREEN
                 State.GREEN -> state = State.BLUE
-
                 State.BLUE -> {
                     nextTestActivity(this, ScreenTestFinalizeActivity::class.java.name)
                 }

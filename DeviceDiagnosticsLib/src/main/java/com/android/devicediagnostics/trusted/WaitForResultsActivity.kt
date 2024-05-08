@@ -21,9 +21,9 @@ import android.os.Bundle
 import androidx.fragment.app.commit
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.ApplicationInterface
-import com.android.devicediagnostics.R
 import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.Protos.DeviceReport
+import com.android.devicediagnostics.R
 import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import java.lang.Exception
@@ -39,13 +39,18 @@ class WaitForResultFragment() : PreferenceFragmentCompat() {
 class WaitForResultActivity : CollapsingToolbarBaseActivity(), BluetoothServer.ReadListener {
     private var mFragment = WaitForResultFragment()
 
-    private val permissions = PermissionsHelper(this,
-        arrayOf(
-            Manifest.permission.CAMERA,
-            Manifest.permission.BLUETOOTH_ADVERTISE,
-            Manifest.permission.BLUETOOTH_CONNECT,
-            Manifest.permission.BLUETOOTH_SCAN)
-    ) { onPermissionsGranted() }
+    private val permissions =
+        PermissionsHelper(
+            this,
+            arrayOf(
+                Manifest.permission.CAMERA,
+                Manifest.permission.BLUETOOTH_ADVERTISE,
+                Manifest.permission.BLUETOOTH_CONNECT,
+                Manifest.permission.BLUETOOTH_SCAN
+            )
+        ) {
+            onPermissionsGranted()
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,9 +69,7 @@ class WaitForResultActivity : CollapsingToolbarBaseActivity(), BluetoothServer.R
 
     override fun onBluetoothRead(bytes: ByteArray) {
         val report = DeviceReport.parseFrom(bytes)
-        runOnUiThread {
-            onReportReceived(report)
-        }
+        runOnUiThread { onReportReceived(report) }
     }
 
     override fun onBluetoothError(e: Exception) {
