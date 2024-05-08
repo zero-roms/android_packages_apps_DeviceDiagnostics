@@ -59,7 +59,7 @@ static bool DoEnterEvalMode(int argc, char**) {
 
     std::string cmd =
             "/system/bin/am start -n "
-            "com.android.devicediagnostics/.EnterTradeInMode";
+            "com.android.devicediagnostics/.EnterEvaluationMode";
     return Exec(cmd);
 }
 
@@ -74,7 +74,7 @@ int main(int argc, char** argv) {
     bool ok = false;
     if (strcmp(argv[1], "getstatus") == 0) {
         ok = DoGetStatus(argc, argv);
-    } else if (strcmp(argv[1], "enter") == 0) {
+    } else if (strcmp(argv[1], "evaluate") == 0) {
         ok = DoEnterEvalMode(argc, argv);
     } else {
         std::cerr << "Unknown command." << std::endl;

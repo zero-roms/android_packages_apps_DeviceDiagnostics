@@ -27,5 +27,6 @@ android_library {
         "gson",
         "kotlin-reflect",
         "zxing-core-1.7",
+        "aconfig_trade_in_mode_flags_java_lib",
     ],
 }
