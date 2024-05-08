@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"ການວິນິໄສອຸປະກອນ"</string>
+    <string name="app_title" msgid="7463703024205195273">"ການວິນິໄສອຸປະກອນ"</string>
+    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"ສືບຕໍ່"</string>
+    <string name="unavailable" msgid="7842920330665850121">"ບໍ່ພ້ອມໃຫ້ນຳໃຊ້"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"ກຳລັງເຊື່ອມຕໍ່..."</string>
+    <string name="component_health_title" msgid="6177813132789269842">"ປະສິດທິພາບການເຮັດວຽກຂອງອົງປະກອບ"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"ໂໝດການປະເມີນ"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"ການທົດສອບດ້ວຍຕົນເອງ"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"ການທົດສອບການສະແດງຜົນ"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"ການທົດສອບການສຳຜັດ"</string>
+    <string name="component_title" msgid="6580046234562555655">"ສະຖານະອົງປະກອບ"</string>
+    <string name="storage_title" msgid="5921235202250843966">"ສະຖານະຂອງບ່ອນຈັດເກັບຂໍ້ມູນ"</string>
+    <string name="battery_title" msgid="6707361668941323259">"ສະຖານະແບັດເຕີຣີ"</string>
+    <string name="trusted_eval_title" msgid="4432759069360054054">"ການປະເມີນທີ່ເຊື່ອຖືໄດ້"</string>
+    <string name="trusted_device_title" msgid="3219415756372384370">"ອຸປະກອນທີ່ເຊື່ອຖືໄດ້"</string>
+    <string name="trusted_device_summary" msgid="4474986970820223924">"ເລີ່ມໂດຍການເລືອກຕົວເລືອກນີ້ຢູ່ອຸປະກອນທີ່ເຊື່ອຖືໄດ້"</string>
+    <string name="evaluated_device_title" msgid="9045224709517029285">"ອຸປະກອນທີ່ໄດ້ຮັບການປະເມີນ"</string>
+    <string name="evaluated_device_summary" msgid="7492640289008695049">"ເມື່ອໄດ້ຮັບຂໍ້ຄວາມແຈ້ງດັ່ງກ່າວ, ໃຫ້ເລືອກຕົວເລືອກນີ້ຢູ່ອຸປະກອນທີ່ໄດ້ຮັບການປະເມີນ"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"ສະແກນດຽວນີ້"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"ສະແກນລະຫັດ QR ໃນອຸປະກອນທີ່ເຊື່ອຖືໄດ້ໃນຊ່ອງສີ່ຫຼ່ຽມລຸ່ມນີ້"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"ເມື່ອທ່ານສະແກນລະຫັດ QR ສຳເລັດແລ້ວ, ອຸປະກອນນີ້ຈະເລີ່ມການທົດສອບໂດຍອັດຕະໂນມັດ."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"ເລືອກອຸປະກອນທີ່ເຊື່ອຖືໄດ້"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"ຫຼື ເລືອກອຸປະກອນຈາກລາຍຊື່ລຸ່ມນີ້"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"ການເຊື່ອມຕໍ່ບໍ່ສຳເລັດ, ກະລຸນາລອງໃໝ່."</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"ປະສິດທິພາບການເຮັດວຽກ"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"ວັນທີຜະລິດ"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"ວັນທີທຳອິດທີ່ນຳໃຊ້"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"ຈຳນວນຮອບ"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"ໝາຍເລກຊີຣຽວ"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"ສະຖານະອະໄຫຼ່"</string>
+    <string name="battery_original" msgid="2552600989411644999">"ຕົ້ນສະບັບ"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"ປ່ຽນແລ້ວ"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"ປະຫວັດອະໄຫຼ່"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"ຄວາມຈຸຕົ້ນສະບັບ %1$d%%"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"ປະສິດທິພາບການເຮັດວຽກຂອງບ່ອນຈັດເກັບຂໍ້ມູນ"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"ຄວາມຈຸຮວມ"</string>
+    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"ອາຍຸການນຳໃຊ້ທີ່ເຫຼືອຢູ່ %1$d%%"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"ກະລຸນາມອບການອະນຸຍາດທີ່ຮ້ອງຂໍເພື່ອດຳເນີນການຕໍ່ໃນໂໝດການປະເມີນ."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"ຍົກເລີກ"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"ລອງໃໝ່"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"ຜົນໄດ້ຮັບຂອງການທົດສອບການສຳຜັດ"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"ນີ້ແມ່ນຜົນໄດ້ຮັບຂອງການທົດສອບການສຳຜັດ. ທ່ານສາມາດດຳເນີນການທົດສອບໃໝ່ໄດ້ໂດຍການຍ້ອນກັບຄືນ."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"ການທົດສອບເຊັນເຊີແບບສຳຜັດຜ່ານ"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"ການທົດສອບເຊັນເຊີແບບສຳຜັດບໍ່ຜ່ານ"</string>
+    <string name="pass" msgid="6411665547268368837">"ຜ່ານ"</string>
+    <string name="fail" msgid="3918028202746427731">"ບໍ່ຜ່ານ"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
+    <string name="evaluation_results" msgid="1584774109554324406">"ຜົນການປະເມີນ"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"IMEI ທີສອງ"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"ໝາຍເລກຊີຣຽວ"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Bootloader ລັອກຢູ່"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"ອຸປະກອນທີ່ເຊື່ອຖືໄດ້"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"ສະຖານະຂອງການສະແດງຜົນ"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"ສະຖານະຂອງເຊັນເຊີແບບສຳຜັດ"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"ລາຍລະອຽດຂອງເອກະສານຮັບຮອງ"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"ການຮັບຮອງບໍ່ສຳເລັດ"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"ລອງຮັບຮອງໃໝ່"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"ຢັ້ງຢືນເອກະສານຮັບຮອງບໍ່ສຳເລັດ, ກະລຸນາກວດສອບການເຊື່ອມຕໍ່ຂອງທ່ານ ແລ້ວລອງໃໝ່."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"ຂັ້ນຕອນຕໍ່ໄປ"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"ປະເມີນອຸປະກອນອື່ນ"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"ກັບຄືນໄປຫາເມນູຫຼັກ"</string>
+    <string name="locked" msgid="2034650000550950371">"ລັອກແລ້ວ"</string>
+    <string name="not_locked" msgid="1663929635666930122">"ບໍ່ໄດ້ລັອກ"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"ລະຫັດ QR"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"ດຳເນີນການຕໍ່ຢູ່ອຸປະກອນທີ່ກຳລັງປະເມີນ"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"ດຳເນີນການທົດສອບຢູ່ອຸປະກອນທີ່ທ່ານກຳລັງປະເມີນໃຫ້ສຳເລັດ, ຈາກນັ້ນຜົນໄດ້ຮັບຈະປາກົດຢູ່ບ່ອນນີ້"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"ສະແກນດຽວນີ້"</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"ຢູ່ອຸປະກອນທີ່ທ່ານຕ້ອງການປະເມີນ, ໃຫ້ເຂົ້າໄປ\n ການຕັ້ງຄ່າ/ການວິນິໄສອຸປະກອນ/ອຸປະກອນທີ່ໄດ້ຮັບການປະເມີນ\n ປະຕິບັດຕາມຂໍ້ຄວາມແຈ້ງຢູ່ອຸປະກອນດັ່ງກ່າວ."</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"ປະຕິບັດຕາມຂໍ້ຄວາມແຈ້ງຢູ່ອຸປະກອນທີ່ໄດ້ຮັບການປະເມີນ. ເມື່ອໄດ້ຮັບຂໍ້ຄວາມແຈ້ງ, ໃຫ້ກົດບ່ອນນີ້ເພື່ອດຳເນີນການຕໍ່ຢູ່ອຸປະກອນນີ້."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"ລະບົບອາດສະແດງໜ້າຈໍຫຼາຍຊຸດໃຫ້ກັບທ່ານ. ກວດສອບແຕ່ລະໜ້າຈໍ ແລະ ຊອກຫາຂໍ້ບົກພ່ອງ. ເມື່ອທ່ານພໍໃຈແລ້ວ, ໃຫ້ສຳຜັດໜ້າຈໍເພື່ອເລື່ອນໄປໜ້າຕໍ່ໄປ. ເມື່ອສິ້ນສຸດ, ລະບົບຈະຖາມທ່ານວ່າໜ້າຈໍເບິ່ງປາສະຈາກຂໍ້ບົກພ່ອງຫຼືບໍ່."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ລະບົບອາດສະແດງໜ້າຈໍຫຼາຍຊຸດໃຫ້ກັບທ່ານ. ກວດສອບແຕ່ລະໜ້າຈໍ ແລະ ຊອກຫາຂໍ້ບົກພ່ອງ. ສຳຜັດໜ້າຈໍເພື່ອເລື່ອນໄປໜ້າຕໍ່ໄປ."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"ກະລຸນາເລືອກຕົວເລືອກລຸ່ມນີ້ທີ່ກົງກັບສະພາບຂອງໜ້າຈໍຫຼາຍທີ່ສຸດ."</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"ຕອນນີ້ລະບົບຈະສະແດງໜ້າຈໍສີແດງໃຫ້ກັບທ່ານ.\n \n ຖູນິ້ວຂອງທ່ານເທິງໜ້າຈໍຈົນກວ່າໜ້າຈໍຈະກາຍເປັນສີຂາວທັງໝົດ. ຫາກທ່ານບໍ່ສາມາດເຮັດໃຫ້ບາງພາກສ່ວນຂອງໜ້າຈໍເປັນສີຂາວໄດ້, ໃຫ້ແຕະໜ້າຈໍແບບໄວໆເພື່ອລະບຸວ່າເຊັນເຊີແບບສຳຜັດເຮັດວຽກໄດ້ບໍ່ສົມບູນ.\n \n ຫາກທ່ານຕ້ອງການ, ທ່ານສາມາດປັດກັບຄືນຈາກໜ້າຈໍລາຍງານ ແລະ ດຳເນີນການທົດສອບຕໍ່ຈາກຈຸດທີ່ທ່ານຄ້າງໄວ້ໄດ້.\n"</string>
+    <string name="scan_result" msgid="7232716409194522023">"ກະລຸນາສະແກນລະຫັດ QR ນີ້ໃນອຸປະກອນທີ່ເຊື່ອຖືໄດ້. ຫຼັງຈາກທີ່ທ່ານສະແກນແລ້ວ, ທ່ານສາມາດກົດ ແລ້ວໆ ໃນອຸປະກອນນີ້ໄດ້."</string>
+</resources>

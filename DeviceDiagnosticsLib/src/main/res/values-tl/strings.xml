@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"MgaDiagnosticngDevice"</string>
+    <string name="app_title" msgid="7463703024205195273">"Mga Diagnostic ng Device"</string>
+    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Magpatuloy"</string>
+    <string name="unavailable" msgid="7842920330665850121">"Hindi available"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"Kumokonekta..."</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Kalagayan ng component"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Evaluation mode"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Mga manual na test"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Test ng display"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Touch test"</string>
+    <string name="component_title" msgid="6580046234562555655">"Status ng component"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Status ng storage"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Status ng baterya"</string>
+    <string name="trusted_eval_title" msgid="4432759069360054054">"Pinagkakatiwalaang Pagsusuri"</string>
+    <string name="trusted_device_title" msgid="3219415756372384370">"Pinagkakatiwalaang Device"</string>
+    <string name="trusted_device_summary" msgid="4474986970820223924">"Magsimula sa pamamagitan ng pagpili sa opsyong ito sa pinagkakatiwalaang device"</string>
+    <string name="evaluated_device_title" msgid="9045224709517029285">"Nasuring Device"</string>
+    <string name="evaluated_device_summary" msgid="7492640289008695049">"Kapag na-prompt kang gawin ito, piliin ang opsyong ito sa nasuring device"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Mag-scan na"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"I-scan ang QR code sa pinagkakatiwalaang device sa parihaba sa ibaba"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Kapag na-scan mo na ang QR code, awtomatikong magsasagawa ang device na ito ng isang hanay ng mga test."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Pumili ng pinagkakatiwalaang device"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"O kaya, piliin ang device sa listahan sa ibaba"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Hindi nakakonekta, pakisubukan ulit."</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Kalusugan"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Petsa ng paggawa"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Petsa ng unang paggamit"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Bilang ng cycle"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Serial number"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Status ng bahagi"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Original"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Pinalitan"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"History ng Bahagi"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% ng orihinal na kapasidad"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Kalagayan ng storage"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Kabuuang kapasidad"</string>
+    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% natitirang lifetime"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Pakibigay ang mga hinihinging pahintulot para magpatuloy sa evaluation mode."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Kanselahin"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Subukan ulit"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Resulta ng touch test"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Ito ang resulta ng touch test. Puwede mong ulitin ang test sa pamamagitan ng pag-navigate pabalik."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Nakapasa sa test ang touch sensor"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Hindi matagumpay ang pag-test sa touch sensor"</string>
+    <string name="pass" msgid="6411665547268368837">"Pumasa"</string>
+    <string name="fail" msgid="3918028202746427731">"Hindi Nakapasa"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
+    <string name="evaluation_results" msgid="1584774109554324406">"Mga resulta ng pagsusuri"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"Pangalawang IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Serial number"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Naka-lock ang bootloader"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Mapagkakatiwalaan ang device"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Ipakita ang status"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Status ng touch sensor"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Mga detalye ng attestation"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Hindi nagawa ang attestation"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Subukan ulit ang attestation"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Hindi na-verify ang attestation, tingnan ang iyong koneksyon at subukan ulit."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Mga susunod na hakbang"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Sumuri ng ibang device"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Bumalik sa pangunahing menu"</string>
+    <string name="locked" msgid="2034650000550950371">"Naka-lock"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Hindi naka-lock"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR Code"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Magpatuloy sa sinusuring device"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Tapusin ang mga test sa device na sinusuri mo, pagkatapos ay lalabas dito ang mga resulta"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Mag-scan na"</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Sa device na gusto mong suriin, pumunta sa\n Settings/DeviceDiagnostics/Evaluated Device\n Sundin ang mga prompt sa device na iyon."</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Sundin ang mga prompt sa sinuring device. Kapag na-prompt, pumindot dito para magpatuloy sa device na ito."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Papakitaan ka ngayon ng isang hanay ng mga screen. Pag-aralan ang bawat isa at maghanap ng mga depekto. Kapag tapos ka na, pindutin ang screen para lumipat sa susunod. Sa dulo, tatanungin ka kung mukhang walang sira ang mga screen."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Papakitaan ka ngayon ng isang hanay ng mga screen. Pag-aralan ang bawat isa at maghanap ng mga depekto. Pindutin ang screen para lumipat sa susunod."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Pakipili ang opsyon sa ibaba na pinakatumutugma sa kundisyon ng screen."</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"Papakitaan ka ngayon ng pulang screen.\n \n Kuskusin ang screen hanggang sa maging ganap na puti ang buong screen. Kung may bahagi ng screen na hindi mo magawang puti, i-tap ang screen para isaad na hindi ganap na gumagana ang touch sensor.\n \n Kung gusto mo, puwede kang mag-swipe pabalik mula sa screen ng ulat at magpatuloy sa test mula sa kung saan ka huminto.\n"</string>
+    <string name="scan_result" msgid="7232716409194522023">"Paki-scan ang QR code na ito sa pinagkakatiwalaang device. Pagkatapos mong i-scan ito, puwede mong pindutin ang Tapos na sa device na ito."</string>
+</resources>

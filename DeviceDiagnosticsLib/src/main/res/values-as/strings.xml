@@ -62,10 +62,60 @@
     <string name="touch_test_result_title" msgid="8236119653054988245">"স্পৰ্শ পৰীক্ষণৰ ফলাফল"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"এয়া হৈছে স্পৰ্শ পৰীক্ষণৰ ফলাফল। আপুনি পাছলৈ নেভিগে’ট কৰি পৰীক্ষণটো পুনৰ চলাব পাৰে।"</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"স্পৰ্শ ছেন্সৰৰ পৰীক্ষা সফল হৈছে"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"স্পৰ্শ ছেন্সৰৰ পৰীক্ষা কৰিব পৰা নগ’ল"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"স্পৰ্শ ছেন্সৰটো পৰীক্ষা কৰিব পৰা নগ’ল"</string>
     <string name="pass" msgid="6411665547268368837">"পাছ"</string>
     <string name="fail" msgid="3918028202746427731">"বিফল"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"মূল্যায়নৰ ফলাফল"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"দ্বিতীয় IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"ক্ৰমিক নম্বৰ"</string>
@@ -75,6 +125,8 @@
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"স্পৰ্শ ছেন্সৰৰ স্থিতি"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"প্ৰমাণীকৰণৰ সবিশেষ"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"প্ৰমাণীকৰণ কৰিব পৰা নগ’ল"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"পুনৰ প্ৰমাণীকৰণ কৰাৰ চেষ্টা কৰক"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"প্ৰমাণীকৰণ সত্যাপন কৰিব পৰা নগ’ল, আপোনাৰ সংযোগ পৰীক্ষা কৰক আৰু পুনৰ চেষ্টা কৰক।"</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"পৰৱৰ্তী পদক্ষেপ"</string>
@@ -82,7 +134,6 @@
     <string name="back_to_main_title" msgid="2496143013300121780">"মুখ্য মেনুলৈ উভতি যাওক"</string>
     <string name="locked" msgid="2034650000550950371">"লক কৰা আছে"</string>
     <string name="not_locked" msgid="1663929635666930122">"লক কৰা নাই"</string>
-    <string name="attestation_challenge_does_not_match" msgid="7812342034909019443">"প্ৰমাণীকৰণ প্ৰত্যাহ্বানৰ মিল নাই"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"কিউআৰ ক’ড"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"মূল্যায়ন কৰি থকা ডিভাইচটোত অব্যাহত ৰাখক"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"আপুনি মূল্যায়ন কৰি থকা ডিভাইচত পৰীক্ষাসমূহ সম্পূৰ্ণ কৰক, তাৰ পাছত ফলাফল ইয়াত ওলাব"</string>

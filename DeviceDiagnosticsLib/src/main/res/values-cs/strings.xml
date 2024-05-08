@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"Diagnostika zařízení"</string>
+    <string name="app_title" msgid="7463703024205195273">"Diagnostika zařízení"</string>
+    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Pokračovat"</string>
+    <string name="unavailable" msgid="7842920330665850121">"Není k dispozici"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"Připojování…"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Stav součásti"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Režim posouzení"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Ruční testy"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Test displeje"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Test dotykového senzoru"</string>
+    <string name="component_title" msgid="6580046234562555655">"Stav součásti"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Stav úložiště"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Stav baterie"</string>
+    <string name="trusted_eval_title" msgid="4432759069360054054">"Důvěryhodné posouzení"</string>
+    <string name="trusted_device_title" msgid="3219415756372384370">"Důvěryhodné zařízení"</string>
+    <string name="trusted_device_summary" msgid="4474986970820223924">"Začněte výběrem této možnosti na důvěryhodném zařízení"</string>
+    <string name="evaluated_device_title" msgid="9045224709517029285">"Posuzované zařízení"</string>
+    <string name="evaluated_device_summary" msgid="7492640289008695049">"Až k tomu budete vyzváni, vyberte na posuzovaném zařízení tuto možnost"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Zkontrolovat"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Naskenujte na důvěryhodném zařízení QR kód v obdélníku níže"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Po úspěšném naskenování QR kódu se v tomto zařízení automaticky spustí série testů."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Vyberte důvěryhodné zařízení"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Případně vyberte zařízení ze seznamu níže"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Připojení selhalo, zkuste to znovu."</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Stav"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Datum výroby"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Datum prvního použití"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Počet cyklů"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Sériové číslo"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Stav dílu"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Původní"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Vyměněná"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Historie dílu"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d %% původní kapacity"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Stav úložiště"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Celková kapacita"</string>
+    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"Zbývá %1$d %% životnosti"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Pokud chcete pokračovat v posuzování, udělte požadovaná oprávnění."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Zrušit"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Zkusit znovu"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Výsledek testu dotykového senzoru"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Toto je výsledek dotykového testu. Test můžete znovu spustit tím, že přejdete zpět."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Test dotykového senzoru byl úspěšný"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Test dotykového senzoru nebyl úspěšný"</string>
+    <string name="pass" msgid="6411665547268368837">"Vyhovuje"</string>
+    <string name="fail" msgid="3918028202746427731">"Nevyhovuje"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
+    <string name="evaluation_results" msgid="1584774109554324406">"Výsledky hodnocení"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"Druhé číslo IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Sériové číslo"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Bootloader uzamčen"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Zařízení je důvěryhodné"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Stav displeje"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Stav dotykového senzoru"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Podrobnosti o atestaci"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Atestace se nezdařila"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Opakovat pokus o atestaci"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Ověření atestace se nezdařilo, zkontrolujte připojení a zkuste to znovu."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Další kroky"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Posoudit další zařízení"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Zpět do hlavní nabídky"</string>
+    <string name="locked" msgid="2034650000550950371">"Zamčeno"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Nezamčeno"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR kód"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Pokračujte na posuzovaném zařízení"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Dokončete testy na zařízení, které posuzujete. Pak se tady zobrazí výsledky."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Zkontrolovat"</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Na zařízení, které chcete posoudit, přejděte na \nNastavení / Diagnostika zařízení / Posuzované zařízení.\nPostupujte podle pokynů na daném zařízení."</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Postupujte podle pokynů na posuzovaném zařízení. Až k tomu budete vyzváni, stiskněte toto tlačítko a pokračujte na tomto zařízení."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Teď se bude zobrazovat řada obrazovek. Každou si důkladně prohlédněte a hledejte vady. Jakmile budete spokojeni, klepnutím přejděte na další. Na konci se zeptáme, zda jste na obrazovkách našli nějaké vady."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Teď se bude zobrazovat řada obrazovek. Každou si důkladně prohlédněte a hledejte vady. Klepnutím přejdete na další."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Níže vyberte možnost, která nejlépe odpovídá stavu obrazovky."</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"Teď se vám zobrazí červená obrazovka.\n \n Přejíždějte prstem po obrazovce, dokud nebude celá bílá. Pokud se vám část obrazovky na bílo obarvit nepodaří, krátkým klepnutím na obrazovku uveďte, že dotykový senzor plně nefunguje.\n \n Z obrazovky s přehledem se můžete přejetím prstem vrátit zpět a pokračovat v testu z místa, kde jste skončili.\n"</string>
+    <string name="scan_result" msgid="7232716409194522023">"Naskenujte na důvěryhodném zařízení tento QR kód. Po naskenování můžete na tomto zařízení stisknout Hotovo."</string>
+</resources>

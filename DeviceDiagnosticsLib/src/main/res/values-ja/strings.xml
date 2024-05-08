@@ -65,7 +65,57 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"タッチセンサーのテストは不合格でした"</string>
     <string name="pass" msgid="6411665547268368837">"合格"</string>
     <string name="fail" msgid="3918028202746427731">"不合格"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"評価の結果"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"2 つ目の IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"シリアル番号"</string>
@@ -75,6 +125,8 @@
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"タッチセンサーのステータス"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"認証の詳細"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"認証が失敗"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"認証を再試行"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"認証に失敗しました。接続状態を確認してから、もう一度お試しください。"</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"次のステップ"</string>
@@ -82,13 +134,12 @@
     <string name="back_to_main_title" msgid="2496143013300121780">"メインメニューに戻る"</string>
     <string name="locked" msgid="2034650000550950371">"ロック中"</string>
     <string name="not_locked" msgid="1663929635666930122">"ロック解除中"</string>
-    <string name="attestation_challenge_does_not_match" msgid="7812342034909019443">"認証のチャレンジが一致しません"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR コード"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"評価対象デバイスの診断を続ける"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"評価対象デバイスに対するテストが完了すると、結果がここに表示されます"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"スキャン開始"</string>
     <string name="trusted_scan_now_summary" msgid="2817021308986564134">"評価対象デバイスで、\n[設定] &gt; [DeviceDiagnostics] &gt; [評価対象デバイス] の順に選択します。\n そのデバイスで表示されるメッセージに即してテストを進めます。"</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"評価対象デバイスで表示されるメッセージに即して進めます。メッセージが表示されたら、そのデバイスでテストを進めます。"</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"評価対象デバイスで表示されるメッセージに沿って進めます。メッセージが表示されたら、ここを押して、このデバイスで続行します。"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"一連の画面が表示されます。各画面をチェックし、不具合がないか確認してください。問題がなかったら、画面をタップして次に進みます。最後に、画面に傷や汚れがないか確認するメッセージが表示されます。"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"一連の画面が表示されます。各画面をチェックし、不具合がないか確認してください。画面をタップすると次に進みます。"</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"以下の中から、画面の状態を最もよく表している選択肢を選んでください。"</string>
