@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
+    <string name="app_title" msgid="7463703024205195273">"Apparaatdiagnose"</string>
+    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Doorgaan"</string>
+    <string name="unavailable" msgid="7842920330665850121">"Niet beschikbaar"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"Verbinden…"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Componentconditie"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Evaluatiemodus"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Handmatige tests"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Schermtest"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Aanraaktest"</string>
+    <string name="component_title" msgid="6580046234562555655">"Componentstatus"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Opslagstatus"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Batterijstatus"</string>
+    <string name="trusted_eval_title" msgid="4432759069360054054">"Vertrouwde evaluatie"</string>
+    <string name="trusted_device_title" msgid="3219415756372384370">"Veilig apparaat"</string>
+    <string name="trusted_device_summary" msgid="4474986970820223924">"Selecteer deze optie op een veilig apparaat om aan de slag te gaan"</string>
+    <string name="evaluated_device_title" msgid="9045224709517029285">"Geëvalueerd apparaat"</string>
+    <string name="evaluated_device_summary" msgid="7492640289008695049">"Selecteer deze optie op het geëvalueerde apparaat als je daarom wordt gevraagd"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Nu scannen"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Scan de QR-code in de rechthoek hieronder op het veilige apparaat"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Als je de QR-code hebt gescand, wordt automatisch een reeks tests op dit apparaat gestart."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Veilig apparaat selecteren"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Je kunt het apparaat ook selecteren in de lijst hieronder"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Verbinding is mislukt. Probeer het opnieuw."</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Conditie"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Productiedatum"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Datum van eerste gebruik"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Aantal cyclussen"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Serienummer"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Onderdeelstatus"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Origineel"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Vervangen"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Onderdeelgeschiedenis"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% van oorspronkelijke capaciteit"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Opslagstatus"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Totale capaciteit"</string>
+    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"Resterende levensduur van %1$d%%"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Geef de gevraagde rechten om verder te gaan in de evaluatiemodus."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Annuleren"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Opnieuw proberen"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Resultaat van aanraaktest"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Dit is het resultaat van de aanraaktest. Ga terug om de test opnieuw uit te voeren."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"De aanraaksensortest is geslaagd"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"De aanraaksensortest is mislukt"</string>
+    <string name="pass" msgid="6411665547268368837">"Geslaagd"</string>
+    <string name="fail" msgid="3918028202746427731">"Mislukt"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
+    <string name="evaluation_results" msgid="1584774109554324406">"Evaluatieresultaten"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"2e IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Serienummer"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Bootloader vergrendeld"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Apparaat vertrouwd"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Schermstatus"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Status van aanraaksensor"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Attestgegevens"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Attest mislukt"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Attest opnieuw proberen"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Kan attest niet verifiëren. Check je verbinding en probeer het opnieuw."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Volgende stappen"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Ander apparaat evalueren"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Terug naar hoofdmenu"</string>
+    <string name="locked" msgid="2034650000550950371">"Vergrendeld"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Niet vergrendeld"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR-code"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Ga verder op het apparaat dat wordt geëvalueerd"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Rond de tests af op het apparaat dat je evalueert, dan verschijnen de resultaten hier"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Nu scannen"</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Ga op het apparaat dat je wilt evalueren naar\n Settings/DeviceDiagnostics/Evaluated Device\n Volg op dat apparaat de prompts."</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Volg de prompts op het geëvalueerde apparaat. Als je daarom wordt gevraagd, druk je hier om door te gaan op dit apparaat."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Je krijgt nu een reeks schermen te zien. Zoek op elk scherm naar defecten. Klaar? Tik dan op het scherm om naar het volgende te gaan. Aan het eind wordt je gevraagd of de schermen er ongeschonden uitzien."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Je krijgt nu een reeks schermen te zien. Zoek op elk scherm naar defecten. Tik op het scherm om naar het volgende te gaan."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Selecteer hieronder de optie die het best past bij de conditie van het scherm."</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"Je krijgt nu een rood scherm te zien.\n \n Wrijf je vinger over het scherm tot het helemaal wit is. Als je een deel van het scherm niet wit kunt maken, tik je kort op het scherm om aan te geven dat de aanraaksensor niet helemaal werkt.\n \n Als je wilt, kun je vanaf het rapportscherm terugswipen en verdergaan met de test waar je was gebleven.\n"</string>
+    <string name="scan_result" msgid="7232716409194522023">"Scan deze QR-code op het veilige apparaat. Druk daarna op dit apparaat op Klaar."</string>
+</resources>

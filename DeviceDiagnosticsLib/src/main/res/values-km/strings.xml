@@ -23,7 +23,7 @@
     <string name="activity_continue" msgid="2190118984182069151">"បន្ត"</string>
     <string name="unavailable" msgid="7842920330665850121">"មិនមានទេ"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"កំពុង​ភ្ជាប់..."</string>
-    <string name="component_health_title" msgid="6177813132789269842">"សភាពសមាសធាតុ"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"គុណភាពសមាសធាតុ"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"មុខងារវាយតម្លៃ"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"ការធ្វើតេស្តដោយផ្ទាល់ដៃ"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ការធ្វើតេស្តផ្ទាំងអេក្រង់"</string>
@@ -51,9 +51,9 @@
     <string name="battery_original" msgid="2552600989411644999">"ដើម"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"បាន​ជំនួស"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"ប្រវត្តិផ្នែក"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% នៃកាប៉ាស៊ីតេបន្ទុកដើម"</string>
-    <string name="storage_health_title" msgid="2499144010514101535">"សភាពទំហំផ្ទុក"</string>
-    <string name="storage_total_capacity_title" msgid="1212959252345254806">"សមត្ថភាពផ្ទុកសរុប"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% នៃកាប៉ាស៊ីតេដើម"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"គុណភាពទំហំផ្ទុក"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"កាប៉ាស៊ីតេសរុប"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
     <string name="storage_health_summary" msgid="598369034208451623">"អាយុកាលទាំងមូលនៅសល់ %1$d%%"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"សូមផ្ដល់ការអនុញ្ញាតដែលបានស្នើសុំ ដើម្បីបន្តក្នុងមុខងារវាយតម្លៃ។"</string>
@@ -65,7 +65,57 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"ការធ្វើតេស្តសេនស័រចាប់ការចុចមិនបានសម្រេចទេ"</string>
     <string name="pass" msgid="6411665547268368837">"ជោគជ័យ"</string>
     <string name="fail" msgid="3918028202746427731">"មិនបានសម្រេច"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"លទ្ធផលវាយតម្លៃ"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"IMEI ទីពីរ"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"លេខស៊េរី"</string>
@@ -75,6 +125,8 @@
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"ស្ថានភាព​សេនស័រ​ចាប់ការចុច"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"ព័ត៌មានលម្អិតអំពីការបញ្ជាក់"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"ការបញ្ជាក់មិនបានសម្រេចទេ"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"សាកល្បងធ្វើការបញ្ជាក់ម្ដងទៀត"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"មិនអាចផ្ទៀងផ្ទាត់ការបញ្ជាក់បានទេ។ សូមពិនិត្យមើលការតភ្ជាប់របស់អ្នក រួចព្យាយាមម្ដងទៀត។"</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"ជំហាន​បន្ទាប់"</string>
@@ -82,7 +134,6 @@
     <string name="back_to_main_title" msgid="2496143013300121780">"ត្រឡប់ទៅម៉ឺនុយដើមវិញ"</string>
     <string name="locked" msgid="2034650000550950371">"បានចាក់សោ"</string>
     <string name="not_locked" msgid="1663929635666930122">"មិនបានចាក់សោ"</string>
-    <string name="attestation_challenge_does_not_match" msgid="7812342034909019443">"ការផ្ទៀងផ្ទាត់ការបញ្ជាក់មិនត្រូវគ្នាទេ"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"កូដ QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"បន្តលើឧបករណ៍ដែលកំពុងត្រូវបានវាយតម្លៃ"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"បញ្ចប់ការធ្វើតេស្តលើឧបករណ៍ដែលអ្នកកំពុងវាយតម្លៃ បន្ទាប់មក លទ្ធផលនឹងបង្ហាញនៅទីនេះ"</string>

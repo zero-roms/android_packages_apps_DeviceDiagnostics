@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"Enhetsdiagnostik"</string>
+    <string name="app_title" msgid="7463703024205195273">"Enhetsdiagnostik"</string>
+    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Fortsätt"</string>
+    <string name="unavailable" msgid="7842920330665850121">"Inte tillgängligt"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"Ansluter …"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Komponenthälsa"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Utvärderingsläge"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Manuella tester"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Skärmtest"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Trycktest"</string>
+    <string name="component_title" msgid="6580046234562555655">"Komponentstatus"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Lagringsstatus"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Batteristatus"</string>
+    <string name="trusted_eval_title" msgid="4432759069360054054">"Betrodd utvärdering"</string>
+    <string name="trusted_device_title" msgid="3219415756372384370">"Betrodd enhet"</string>
+    <string name="trusted_device_summary" msgid="4474986970820223924">"Starta testet genom att välja det här alternativet på en betrodd enhet"</string>
+    <string name="evaluated_device_title" msgid="9045224709517029285">"Utvärderad enhet"</string>
+    <string name="evaluated_device_summary" msgid="7492640289008695049">"Välj det här alternativet på den utvärderade enheten när du uppmanas till det"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skanna nu"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skanna QR-koden i rektangeln nedan med den betrodda enheten"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"När du har skannat QR-koden startas en rad test automatiskt."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Välj betrodd enhet"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Alternativt kan du välja enheten från listan nedan"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Anslutningen misslyckades. Försök igen."</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Hälsa"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Tillverkningsdatum"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Datum för första användning"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Antal cykler"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Serienummer"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Delstatus"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Original"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Ersattes"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Delhistorik"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% av ursprungskapaciteten"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Lagringshälsa"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Total kapacitet"</string>
+    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% livslängd återstår"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Bevilja de begärda behörigheterna för att fortsätta i utvärderingsläget."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Avbryt"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Försök igen"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Resultat för trycktest"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Det här är resultatet för trycktestet. Du kan köra testet igen genom att gå tillbaka."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Trycksensortestet godkändes"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Trycksensortestet misslyckades"</string>
+    <string name="pass" msgid="6411665547268368837">"Godkänd"</string>
+    <string name="fail" msgid="3918028202746427731">"Underkänd"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
+    <string name="evaluation_results" msgid="1584774109554324406">"Utvärderingsresultat"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
+    <string name="imei_title" msgid="4360390946838995750">"IMEI-nummer"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"Andra IMEI-numret"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Serienummer"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Starthanterare har låsts"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Enheten är tillförlitlig"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Skärmstatus"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Status för trycksensorn"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Attesteringsinformation"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Attestering misslyckades"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Försök attestera igen"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Det gick inte att verifiera attesteringen. Kontrollera anslutningen och försök igen."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Nästa steg"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Utvärdera en annan enhet"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Tillbaka till huvudmenyn"</string>
+    <string name="locked" msgid="2034650000550950371">"Låst"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Inte låst"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR-kod"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Fortsätt på enheten som utvärderas"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Slutför testen på enheten som du utvärderar. Då visas resultaten här."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skanna nu"</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Öppna\n Inställningar/Enhetsdiagnostik/Utvärderad enhet\n på enheten som du vill utvärdera. Följ uppmaningarna på den enheten."</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Följ uppmaningarna på den utvärderade enheten. Tryck här när du uppmanas att göra det för att fortsätta på den här enheten."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Det kommer nu visas en serie skärmar. Granska varje skärm och titta efter defekter. När du är nöjd ska du trycka på skärmen för att gå vidare till nästa. Till sist får du frågan om skärmarna ser felfria ut."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Det kommer nu visas en serie skärmar. Granska varje skärm och titta efter defekter. Tryck på skärmen för att gå vidare till nästa."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Välj det alternativ nedan som bäst matchar skärmens skick."</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"En röd skärm kommer nu att visas.\n \n Gnugga ditt finger över skärmen tills skärmen är helt vit. Om det är någon del av skärmen som inte går att göra vit trycker du snabbt på skärmen för att indikera att trycksensorn inte är helt fungerande.\n \n Om du vill kan du svepa bakåt från rapporteringssidan och fortsätta testet från där du slutade.\n"</string>
+    <string name="scan_result" msgid="7232716409194522023">"Skanna QR-koden på den betrodda enheten. När du har skannat den kan du trycka på Klar på den här enheten."</string>
+</resources>

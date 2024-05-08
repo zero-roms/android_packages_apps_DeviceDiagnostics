@@ -65,7 +65,32 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"The touch sensor test failed"</string>
     <string name="pass" msgid="6411665547268368837">"Pass"</string>
     <string name="fail" msgid="3918028202746427731">"Fail"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"Verified certificate"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"Device locked"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Verified boot state"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"Security level"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Keymaster version"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Keymaster security level"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"OS version"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"Brand"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"Device"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"Product"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"Serial"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"Second IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"Manufacturer"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"Model"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Vendor patch level"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Boot patch level"</string>
+    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Rollback resistant"</string>
+    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Rollback resistance"</string>
+    <string name="yes" msgid="6686215078709381643">"Yes"</string>
+    <string name="no" msgid="5957591978126937912">"No"</string>
+    <string name="unknown" msgid="6936738212381747979">"Unknown"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"Attestation failed"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"Evaluation results"</string>
+    <string name="attestation_results" msgid="9089126954790727665">"Attestation results"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"Second IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"Serial number"</string>
@@ -75,6 +100,7 @@
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"Touch sensor status"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"Attestation details"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"Attestation failed"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"Could not determine whether device is trustworthy"</string>
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Retry attestation"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Failed to verify attestation, check your connection and try again."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Next steps"</string>
@@ -82,7 +108,6 @@
     <string name="back_to_main_title" msgid="2496143013300121780">"Back to main menu"</string>
     <string name="locked" msgid="2034650000550950371">"Locked"</string>
     <string name="not_locked" msgid="1663929635666930122">"Not locked"</string>
-    <string name="attestation_challenge_does_not_match" msgid="7812342034909019443">"Attestation challenge does not match"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR Code"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continue on the device being evaluated"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Complete the tests on the device that you are evaluating, then the results will appear here"</string>

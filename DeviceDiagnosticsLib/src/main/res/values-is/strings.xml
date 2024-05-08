@@ -39,7 +39,7 @@
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skanna núna"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skannaðu QR-kóðann á trausta tækinu í ferhyrningnum að neðan"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Þegar þú hefur skannað QR-kóðann hefur þetta tæki sjálfkrafa nokkur próf."</string>
-    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Valið traust tæki"</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Veldu traust tæki"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Þú getur einnig valið tækið af listanum fyrir neðan"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Ekki náðist tenging, reyndu aftur."</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Heilsa"</string>
@@ -65,7 +65,57 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Stóðst ekki snertiskynjaraprófið"</string>
     <string name="pass" msgid="6411665547268368837">"Stóðst"</string>
     <string name="fail" msgid="3918028202746427731">"Stóðst ekki"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"Niðurstöður mats"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"Annað IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"Raðnúmer"</string>
@@ -75,6 +125,8 @@
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"Staða snertiskynjara"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"Ítaratriði staðfestingar"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"Staðfesting mistókst"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Reyna aftur staðsetningu"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Tókst ekki að sannreyna staðfestingu, athugaðu tenginguna og reyndu aftur."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Næstu skref"</string>
@@ -82,12 +134,11 @@
     <string name="back_to_main_title" msgid="2496143013300121780">"Aftur í aðalvalmynd"</string>
     <string name="locked" msgid="2034650000550950371">"Læst"</string>
     <string name="not_locked" msgid="1663929635666930122">"Ekki læst"</string>
-    <string name="attestation_challenge_does_not_match" msgid="7812342034909019443">"Staðfestingaráskorun passar ekki"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR-kóði"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Haltu áfram í tækinu sem er verið að meta"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Ljúktu prófunum á tækinu sem þú ert að meta, þá birtast niðurstöðurnar hér"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skanna núna"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Í tækinu sem þú vilt meta, farðu í \n Settings/DeviceDiagnostics/Evaluated Device\n Fylgdu leiðbeiningunum í því tæki."</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Í tækinu sem þú vilt meta skaltu fara í \n Settings/DeviceDiagnostics/Evaluated Device\n Fylgdu leiðbeiningunum í því tæki."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Fylgdu leiðbeiningunum í metna tækinu. Ýttu hér þegar um það er beðið til að halda áfram í þessu tæki."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Nú verða þér sýndar nokkrar skjámyndir. Skoðaðu hverja þeirra vel og leitaðu að göllum. Þegar þú ert búin(n) skaltu snerta skjámyndina til að fara í þá næstu. Í lokin verðurðu spurð(ur) hvort skjámyndirnar hafi virst gallalausar."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Nú verða þér sýndar nokkrar skjámyndir. Skoðaðu hverja þeirra vel og leitaðu að göllum. Snertu skjámyndina til að fara í þá næstu."</string>

@@ -29,7 +29,7 @@
     <string name="screen_test_title" msgid="2748510049598105155">"Prueba de pantalla"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Prueba táctil"</string>
     <string name="component_title" msgid="6580046234562555655">"Estado del componente"</string>
-    <string name="storage_title" msgid="5921235202250843966">"Estado de almacenamiento"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Estado del almacenamiento"</string>
     <string name="battery_title" msgid="6707361668941323259">"Estado de la batería"</string>
     <string name="trusted_eval_title" msgid="4432759069360054054">"Evaluación de confianza"</string>
     <string name="trusted_device_title" msgid="3219415756372384370">"Dispositivo de confianza"</string>
@@ -47,12 +47,12 @@
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Fecha del primer uso"</string>
     <string name="battery_cycle_count" msgid="1002728954996996785">"Número de ciclos"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"Número de serie"</string>
-    <string name="battery_part_status" msgid="504091754655232085">"Estado de las piezas"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Estado de la pieza"</string>
     <string name="battery_original" msgid="2552600989411644999">"Original"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Reemplazada"</string>
-    <string name="battery_part_history" msgid="5669260842330985767">"Historial de las piezas"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Historial de la pieza"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% de la capacidad original"</string>
-    <string name="storage_health_title" msgid="2499144010514101535">"Condiciones de almacenamiento"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Condiciones del almacenamiento"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Capacidad total"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
     <string name="storage_health_summary" msgid="598369034208451623">"Queda un %1$d%% de vida útil"</string>
@@ -63,9 +63,59 @@
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Este es el resultado de la prueba táctil. Puedes volver a ejecutar la prueba volviendo a la página anterior."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Prueba del sensor táctil realizada correctamente"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"No se ha podido realizar la prueba del sensor táctil"</string>
-    <string name="pass" msgid="6411665547268368837">"Aprobada"</string>
-    <string name="fail" msgid="3918028202746427731">"Fallida"</string>
+    <string name="pass" msgid="6411665547268368837">"Superada"</string>
+    <string name="fail" msgid="3918028202746427731">"No superada"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"Resultados de la evaluación"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"Segundo IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"Número de serie"</string>
@@ -74,7 +124,9 @@
     <string name="display_status_title" msgid="7827806798539639832">"Estado de la pantalla"</string>
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"Estado del sensor táctil"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"Detalles de la atestación"</string>
-    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Atestación fallida"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Error en la atestación"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Reintentar atestación"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"No se ha podido verificar la atestación. Comprueba tu conexión y vuelve a intentarlo."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Siguientes pasos"</string>
@@ -82,16 +134,15 @@
     <string name="back_to_main_title" msgid="2496143013300121780">"Volver al menú principal"</string>
     <string name="locked" msgid="2034650000550950371">"Bloqueado"</string>
     <string name="not_locked" msgid="1663929635666930122">"No bloqueado"</string>
-    <string name="attestation_challenge_does_not_match" msgid="7812342034909019443">"La prueba de atestación no coincide"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"Código QR"</string>
-    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continúa con la evaluación del dispositivo"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Completa las pruebas en el dispositivo que estés evaluando; los resultados aparecerán aquí"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continúa en el dispositivo que se está evaluando"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Completa las pruebas en el dispositivo que estés evaluando y los resultados aparecerán aquí"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Escanear ahora"</string>
     <string name="trusted_scan_now_summary" msgid="2817021308986564134">"En el dispositivo que quieras evaluar, ve a\n Ajustes/Diagnóstico del dispositivo/Dispositivo evaluado\n Sigue las instrucciones que aparecen en el dispositivo."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Sigue las indicaciones en el dispositivo evaluado. Cuando se te pida, pulsa aquí para continuar en este dispositivo."</string>
-    <string name="screen_test_summary" msgid="6565006807310186664">"Se te mostrarán una serie de pantallas. Obsérvalas y busca los defectos. Cuando hayas finalizado, toca la pantalla para pasar a la siguiente. Al final, se te preguntará si las pantallas están impecables."</string>
-    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Se te mostrarán una serie de pantallas. Obsérvalas y busca los defectos. Toca la pantalla para pasar a la siguiente."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Ahora se te mostrarán una serie de pantallas. Obsérvalas y busca posibles defectos. Cuando lo tengas todo listo, toca la pantalla para pasar a la siguiente. Al final, se te preguntará si las pantallas están impecables."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Ahora se te mostrarán una serie de pantallas. Obsérvalas y busca posibles defectos. Toca la pantalla para pasar a la siguiente."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Selecciona la opción que mejor se adapte a la condición de la pantalla."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Se te mostrará una pantalla roja.\n \n Frota la pantalla con el dedo hasta que esté completamente blanca. Si no puedes realizar correctamente esta actividad, toca ligeramente la pantalla para indicar que el sensor táctil no funciona adecuadamente.\n \n Si quieres, puedes volver a la pantalla del informe y continuar la prueba desde donde la dejaste la última vez.\n"</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"Se te mostrará una pantalla roja.\n \n Frota la pantalla con el dedo hasta que esté completamente blanca. Si no te es posible hacer que parte de la pantalla se vuelva blanca, toca ligeramente la pantalla para indicar que el sensor táctil no funciona adecuadamente.\n \n Si quieres, puedes deslizar hacia atrás desde la pantalla del informe y continuar la prueba desde donde la dejaste la última vez.\n"</string>
     <string name="scan_result" msgid="7232716409194522023">"Escanea este código QR en el dispositivo de confianza. Tras escanearlo, en el dispositivo, pulsa Hecho."</string>
 </resources>

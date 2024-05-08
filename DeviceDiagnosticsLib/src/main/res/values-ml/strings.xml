@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"ഉപകരണ ഡയഗ്‌നോസ്‌റ്റിക്‌സ്"</string>
+    <string name="app_title" msgid="7463703024205195273">"ഉപകരണ ഡയഗ്‌നോസ്‌റ്റിക്‌സ്"</string>
+    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"തുടരുക"</string>
+    <string name="unavailable" msgid="7842920330665850121">"ലഭ്യമല്ല"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"കണക്റ്റ് ചെയ്യുന്നു..."</string>
+    <string name="component_health_title" msgid="6177813132789269842">"ഘടകത്തിന്റെ ആരോഗ്യം"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"മൂല്യനിർണ്ണയ മോഡ്"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"നേരിട്ടുള്ള ടെസ്റ്റുകൾ"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"ഡിസ്പ്ലേ ടെസ്റ്റ്"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"ടച്ച് ടെസ്റ്റ്"</string>
+    <string name="component_title" msgid="6580046234562555655">"ഘടകത്തിന്റെ നില"</string>
+    <string name="storage_title" msgid="5921235202250843966">"സ്റ്റോറേജ് നില"</string>
+    <string name="battery_title" msgid="6707361668941323259">"ബാറ്ററി നില"</string>
+    <string name="trusted_eval_title" msgid="4432759069360054054">"വിശ്വസ്ത മൂല്യനിർണ്ണയം"</string>
+    <string name="trusted_device_title" msgid="3219415756372384370">"വിശ്വസ്ത ഉപകരണം"</string>
+    <string name="trusted_device_summary" msgid="4474986970820223924">"വിശ്വസ്ത ഉപകരണത്തിൽ ഈ ഓപ്ഷൻ തിരഞ്ഞെടുത്ത് ആരംഭിക്കുക"</string>
+    <string name="evaluated_device_title" msgid="9045224709517029285">"വിലയിരുത്തിയ ഉപകരണം"</string>
+    <string name="evaluated_device_summary" msgid="7492640289008695049">"അങ്ങനെ ചെയ്യാൻ ആവശ്യപ്പെടുമ്പോൾ, വിലയിരുത്തിയ ഉപകരണത്തിൽ ഈ ഓപ്ഷൻ തിരഞ്ഞെടുക്കുക"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"ഇപ്പോൾ സ്‌കാൻ ചെയ്യുക"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"ചുവടെ ദൃശ്യമാകുന്ന ദീർഘചതുരത്തിലെ QR കോഡ്, വിശ്വസ്ത ഉപകരണത്തിൽ സ്കാൻ ചെയ്യുക"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"നിങ്ങൾ QR കോഡ് സ്കാൻ ചെയ്ത് കഴിഞ്ഞാൽ, ഈ ഉപകരണം സ്വയമേവയുള്ള ടെസ്റ്റുകളുടെ ഒരു പരമ്പര നടത്താൻ ആരംഭിക്കും."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"വിശ്വസ്ത ഉപകരണം തിരഞ്ഞെടുക്കുക"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"പകരം, താഴെയുള്ള ലിസ്റ്റിൽ നിന്ന് ഉപകരണം തിരഞ്ഞെടുക്കുക"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"കണക്റ്റ് ചെയ്യാനായില്ല, വീണ്ടും ശ്രമിക്കുക."</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"ആരോഗ്യം"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"ഉത്പാദന തീയതി"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"ആദ്യം ഉപയോഗിച്ച തീയതി"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"സൈക്കിളിന്റെ എണ്ണം"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"സീരിയൽ നമ്പർ"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"വിഭാഗത്തിന്റെ നില"</string>
+    <string name="battery_original" msgid="2552600989411644999">"ഒറിജിനൽ"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"പകരം മറ്റൊരെണ്ണം നൽകി"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"വിഭാഗത്തിന്റെ ചരിത്രം"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"ഒറിജിനൽ ശേഷിയുടെ %1$d%%"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"സ്റ്റോറേജ് ആരോഗ്യം"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"മൊത്തം ശേഷി"</string>
+    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% ലൈഫ്ടൈം ശേഷിക്കുന്നു"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"മൂല്യനിർണ്ണയ മോഡിൽ തുടരാൻ അഭ്യർത്ഥിച്ച അനുമതികൾ നൽകുക."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"റദ്ദാക്കുക"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"വീണ്ടും ശ്രമിക്കുക"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"ടച്ച് ടെസ്റ്റ് ഫലം"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"ഇതാണ് ടച്ച് ടെസ്റ്റിന്റെ ഫലം. തിരികെ നാവിഗേറ്റ് ചെയ്ത് ടെസ്റ്റ് വീണ്ടും നിങ്ങൾക്ക് റൺ ചെയ്യാം."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"ടച്ച് സെൻസർ ടെസ്റ്റ് വിജയിച്ചു"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"ടച്ച് സെൻസർ ടെസ്റ്റ് പരാജയപ്പെട്ടു"</string>
+    <string name="pass" msgid="6411665547268368837">"പാസ്"</string>
+    <string name="fail" msgid="3918028202746427731">"പരാജയം"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
+    <string name="evaluation_results" msgid="1584774109554324406">"മൂല്യനിർണ്ണയ ഫലങ്ങൾ"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"രണ്ടാമത്തെ IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"സീരിയൽ നമ്പർ"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"ബൂട്ട് ലോഡർ ലോക്ക് ചെയ്തു"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"ഉപകരണത്തിന്റെ വിശ്വാസ്യത"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"ഡിസ്പ്ലേ നില"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"ടച്ച് സെൻസർ നില"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"അറ്റസ്റ്റേഷൻ വിശദാംശങ്ങൾ"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"അറ്റസ്റ്റേഷൻ പരാജയപ്പെട്ടു"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"അറ്റസ്റ്റേഷൻ ചെയ്യാൻ വീണ്ടും ശ്രമിക്കുക"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"അറ്റസ്റ്റേഷൻ പരിശോധിച്ചുറപ്പിക്കാനായില്ല, നിങ്ങളുടെ കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"അടുത്ത ഘട്ടങ്ങൾ"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"മറ്റൊരു ഉപകരണം വിലയിരുത്തുക"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"പ്രധാന മെനുവിലേക്ക് മടങ്ങുക"</string>
+    <string name="locked" msgid="2034650000550950371">"ലോക്ക് ചെയ്തു"</string>
+    <string name="not_locked" msgid="1663929635666930122">"ലോക്ക് ചെയ്തിട്ടില്ല"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR കോഡ്"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"വിലയിരുത്തുന്ന ഉപകരണത്തിൽ തന്നെ തുടരുക"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"നിങ്ങൾ വിലയിരുത്തുന്ന ഉപകരണത്തിൽ ടെസ്റ്റുകൾ പൂർത്തിയാക്കുക, തുടർന്ന് ഫലങ്ങൾ ഇവിടെ ദൃശ്യമാകും"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"ഇപ്പോൾ സ്‌കാൻ ചെയ്യുക"</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"നിങ്ങൾ വിലയിരുത്തേണ്ട ഉപകരണത്തിൽ, \n Settings/DeviceDiagnostics/Evaluated Device\n -ലേക്ക് പോയി ആ ഉപകരണത്തിലെ പ്രോംപ്റ്റുകൾ പിന്തരുക."</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"മൂല്യനിർണ്ണയം നടത്തിയ ഉപകരണത്തിലെ പ്രോംപ്റ്റുകൾ പാലിക്കുക. ആവശ്യപ്പെടുമ്പോൾ, ഈ ഉപകരണത്തിൽ തുടരാൻ ഇവിടെ അമർത്തുക."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"നിങ്ങൾക്ക് ഇപ്പോൾ സ്ക്രീനുകളുടെ ഒരു പരമ്പര കാണിക്കും. ഓരോന്നും പരിശോധിച്ച ശേഷം പിശകുകളുണ്ടോയെന്ന് മനസ്സിലാക്കുക. തൃപ്തികരമാണെങ്കിൽ, അടുത്ത ഘട്ടത്തിലേക്ക് നീങ്ങാൻ സ്ക്രീനിൽ സ്പർശിക്കുക. അവസാനം, സ്ക്രീനുകൾ കുറ്റമറ്റവയാണെന്ന് തോന്നുന്നുണ്ടോ എന്ന് നിങ്ങളോട് ചോദിക്കും."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"നിങ്ങൾക്ക് ഇപ്പോൾ സ്ക്രീനുകളുടെ ഒരു പരമ്പര കാണിക്കും. ഓരോന്നും പരിശോധിച്ച ശേഷം പിശകുകളുണ്ടോയെന്ന് മനസ്സിലാക്കുക. അടുത്തതിലേക്ക് പോകാൻ സ്ക്രീനിൽ സ്‌പർശിക്കുക."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"സ്ക്രീനിന്റെ അവസ്ഥയുമായി ഏറ്റവും നന്നായി പൊരുത്തപ്പെടുന്ന ഓപ്ഷൻ താഴെ നിന്ന് തിരഞ്ഞെടുക്കുക."</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"നിങ്ങളെ ഇപ്പോൾ ഒരു ചുവന്ന സ്ക്രീൻ കാണിക്കും.\n \n സ്ക്രീൻ പൂർണ്ണമായും വെള്ള നിറത്തിലാകുന്നത് വരെ സ്ക്രീനുമുകളിൽ വിരൽ ചലിപ്പിക്കുക. നിങ്ങൾക്ക് സ്ക്രീനിന്റെ ഒരു ഭാഗം വെള്ള നിറത്തിലാക്കാനാകുന്നില്ലെങ്കിൽ, ടച്ച് സെൻസർ പൂർണ്ണമായി പ്രവർത്തിക്കുന്നില്ലെന്ന സൂചന നൽകാൻ സ്ക്രീനിൽ ചെറുതായി ടാപ്പ് ചെയ്യുക.\n \n താൽപ്പര്യമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് റിപ്പോർട്ട് സ്ക്രീനിൽ നിന്ന് തിരികെ സ്വൈപ്പ് ചെയ്യാനും നിർത്തിയിടത്ത് നിന്ന് തന്നെ ടെസ്റ്റ് തുടരാനും കഴിയും.\n"</string>
+    <string name="scan_result" msgid="7232716409194522023">"വിശ്വസ്ത ഉപകരണത്തിൽ ഈ QR കോഡ് സ്കാൻ ചെയ്യുക. നിങ്ങൾ ഇത് സ്‌കാൻ ചെയ്‌ത ശേഷം, ഈ ഉപകരണത്തിൽ \'പൂർത്തിയായി\' അമർത്താം."</string>
+</resources>

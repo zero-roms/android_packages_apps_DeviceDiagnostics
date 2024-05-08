@@ -65,7 +65,57 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"टच सेन्सरसम्बन्धी परीक्षण फेल भएको छ"</string>
     <string name="pass" msgid="6411665547268368837">"पास भयो"</string>
     <string name="fail" msgid="3918028202746427731">"फेल भयो"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"मूल्याङ्कनको परिणाम"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"दोस्रो IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"सिरियल नम्बर"</string>
@@ -75,6 +125,8 @@
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"टच सेन्सरको स्थिति"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"प्रमाणीकरणसम्बन्धी विवरणहरू"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"प्रमाणीकरण गर्न सकिएन"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"पुनः प्रमाणीकरण गरी हेर्नुहोस्"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"प्रमाणीकरण गर्न सकिएन। इन्टरनेट कनेक्सन जाँच्नुहोस् र फेरि प्रयास गर्नुहोस्।"</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"आगामी चरणहरू"</string>
@@ -82,7 +134,6 @@
     <string name="back_to_main_title" msgid="2496143013300121780">"मुख्य मेनुमा फर्कनुहोस्"</string>
     <string name="locked" msgid="2034650000550950371">"लक गरिएको छ"</string>
     <string name="not_locked" msgid="1663929635666930122">"लक गरिएको छैन"</string>
-    <string name="attestation_challenge_does_not_match" msgid="7812342034909019443">"प्रमाणीकरणको लागि पूरा गर्नु पर्ने च्यालेन्ज मिलेन"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR कोड"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"मूल्याङ्कन गरिँदै गरिएको डिभाइसमा जारी राख्नुहोस्"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"आफूले मूल्याङ्कन गर्न लागेको डिभाइसमा परीक्षण पूरा गर्नुहोस् अनि उक्त परीक्षणका परिणामहरू यहाँ देखिने छन्"</string>

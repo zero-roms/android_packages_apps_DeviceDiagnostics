@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
+    <string name="app_title" msgid="7463703024205195273">"ਡੀਵਾਈਸ ਤਸ਼ਖੀਸਾਂ"</string>
+    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"ਜਾਰੀ ਰੱਖੋ"</string>
+    <string name="unavailable" msgid="7842920330665850121">"ਉਪਲਬਧ ਨਹੀਂ"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"ਕਨੈਕਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."</string>
+    <string name="component_health_title" msgid="6177813132789269842">"ਤੱਤ ਦੀ ਸਿਹਤ"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"ਮੁਲਾਂਕਣ ਮੋਡ"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"ਹੱਥੀਂ ਟੈਸਟ"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"ਡਿਸਪਲੇ ਦਾ ਟੈਸਟ"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"ਟੱਚ ਟੈਸਟ"</string>
+    <string name="component_title" msgid="6580046234562555655">"ਤੱਤ ਦੀ ਸਥਿਤੀ"</string>
+    <string name="storage_title" msgid="5921235202250843966">"ਸਟੋਰੇਜ ਦੀ ਸਥਿਤੀ"</string>
+    <string name="battery_title" msgid="6707361668941323259">"ਬੈਟਰੀ ਦੀ ਸਥਿਤੀ"</string>
+    <string name="trusted_eval_title" msgid="4432759069360054054">"ਭਰੋਸੇਯੋਗ ਮੁਲਾਂਕਣ"</string>
+    <string name="trusted_device_title" msgid="3219415756372384370">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ"</string>
+    <string name="trusted_device_summary" msgid="4474986970820223924">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ \'ਤੇ ਇਸ ਵਿਕਲਪ ਨੂੰ ਚੁਣ ਕੇ ਸ਼ੁਰੂ ਕਰੋ"</string>
+    <string name="evaluated_device_title" msgid="9045224709517029285">"ਮੁਲਾਂਕਣ ਕੀਤਾ ਡੀਵਾਈਸ"</string>
+    <string name="evaluated_device_summary" msgid="7492640289008695049">"ਅਜਿਹਾ ਕਰਨ ਲਈ ਕਹੇ ਜਾਣ \'ਤੇ, ਮੁਲਾਂਕਣ ਕੀਤੇ ਡੀਵਾਈਸ \'ਤੇ ਇਸ ਵਿਕਲਪ ਨੂੰ ਚੁਣੋ"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"ਹੁਣੇ ਸਕੈਨ ਕਰੋ"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"ਹੇਠਾਂ ਦਿੱਤੀ ਆਇਤ ਵਿੱਚ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ \'ਤੇ QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR ਕੋਡ ਨੂੰ ਸਫਲਤਾਪੂਰਵਕ ਸਕੈਨ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਇਹ ਡੀਵਾਈਸ ਸਵੈਚਲਿਤ ਤੌਰ \'ਤੇ ਟੈਸਟਾਂ ਦੀ ਸੀਰੀਜ਼ ਸ਼ੁਰੂ ਕਰ ਦੇਵੇਗਾ।"</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਚੁਣੋ"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"ਵਿਕਲਪਿਕ ਤੌਰ \'ਤੇ ਹੇਠਾਂ ਦਿੱਤੀ ਸੂਚੀ ਵਿੱਚੋਂ ਡੀਵਾਈਸ ਚੁਣੋ"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"ਕਨੈਕਸ਼ਨ ਅਸਫਲ ਰਿਹਾ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"ਸਿਹਤ"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"ਨਿਰਮਾਣ ਦੀ ਤਾਰੀਖ"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"ਪਹਿਲੀ ਵਰਤੋਂ ਦੀ ਤਾਰੀਖ"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"ਚੱਕਰਾਂ ਦੀ ਗਿਣਤੀ"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"ਸੀਰੀਅਲ ਨੰਬਰ"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"ਪੁਰਜ਼ੇ ਦੀ ਸਥਿਤੀ"</string>
+    <string name="battery_original" msgid="2552600989411644999">"ਮੂਲ"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"ਬਦਲੀ ਗਈ"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"ਪੁਰਜ਼ੇ ਦਾ ਇਤਿਹਾਸ"</string>
+    <string name="battery_health_summary" msgid="4699687865120722848">"ਮੂਲ ਸਮਰੱਥਾ ਦਾ %1$d%%"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"ਸਟੋਰੇਜ ਦੀ ਸਿਹਤ"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"ਕੁੱਲ ਸਮਰੱਥਾ"</string>
+    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% ਲਾਈਫਟਾਈਮ ਬਾਕੀ"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"ਕਿਰਪਾ ਕਰਕੇ ਮੁਲਾਂਕਣ ਮੋਡ ਵਿੱਚ ਜਾਰੀ ਰੱਖਣ ਲਈ ਬੇਨਤੀ ਕੀਤੀਆਂ ਇਜਾਜ਼ਤਾਂ ਦਿਓ।"</string>
+    <string name="cancel_button" msgid="7011882021431169180">"ਰੱਦ ਕਰੋ"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"ਟੱਚ ਟੈਸਟ ਦਾ ਨਤੀਜਾ"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"ਇਹ ਟੱਚ ਟੈਸਟ ਦਾ ਨਤੀਜਾ ਹੈ। ਤੁਸੀਂ ਵਾਪਸ ਨੈਵੀਗੇਟ ਕਰ ਕੇ ਟੈਸਟ ਨੂੰ ਦੁਬਾਰਾ ਚਲਾ ਸਕਦੇ ਹੋ।"</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"ਟੱਚ ਸੈਂਸਰ ਟੈਸਟ ਪਾਸ ਹੋਇਆ"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"ਟੱਚ ਸੈਂਸਰ ਟੈਸਟ ਅਸਫਲ ਰਿਹਾ"</string>
+    <string name="pass" msgid="6411665547268368837">"ਪਾਸ"</string>
+    <string name="fail" msgid="3918028202746427731">"ਅਸਫਲ"</string>
+    <!-- no translation found for attestation_verified (6535873137799452259) -->
+    <skip />
+    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
+    <skip />
+    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
+    <skip />
+    <!-- no translation found for attestation_security_level (6633918464653325429) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
+    <skip />
+    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
+    <skip />
+    <!-- no translation found for attestation_os_version (4351993398048033601) -->
+    <skip />
+    <!-- no translation found for attestation_brand (5238699762448331155) -->
+    <skip />
+    <!-- no translation found for attestation_device (1984309818766961098) -->
+    <skip />
+    <!-- no translation found for attestation_product (7325714994397112640) -->
+    <skip />
+    <!-- no translation found for attestation_serial (5001580041093391656) -->
+    <skip />
+    <!-- no translation found for attestation_imei (8985230697018835192) -->
+    <skip />
+    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
+    <skip />
+    <!-- no translation found for attestation_meid (6837237287403480594) -->
+    <skip />
+    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
+    <skip />
+    <!-- no translation found for attestation_model (8223243376214262662) -->
+    <skip />
+    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
+    <skip />
+    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
+    <skip />
+    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
+    <skip />
+    <!-- no translation found for yes (6686215078709381643) -->
+    <skip />
+    <!-- no translation found for no (5957591978126937912) -->
+    <skip />
+    <!-- no translation found for unknown (6936738212381747979) -->
+    <skip />
+    <!-- no translation found for attestation_failed (7989272430189028826) -->
+    <skip />
+    <string name="evaluation_results" msgid="1584774109554324406">"ਮੁਲਾਂਕਣ ਨਤੀਜੇ"</string>
+    <!-- no translation found for attestation_results (9089126954790727665) -->
+    <skip />
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"ਦੂਜੀ IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"ਸੀਰੀਅਲ ਨੰਬਰ"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"ਬੂਟਲੋਡਰ ਲਾਕ ਹੈ"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"ਡਿਸਪਲੇ ਦੀ ਸਥਿਤੀ"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"ਟੱਚ ਸੈਂਸਰ ਦੀ ਸਥਿਤੀ"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"ਤਸਦੀਕ ਸੰਬੰਧੀ ਵੇਰਵੇ"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"ਤਸਦੀਕ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ"</string>
+    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
+    <skip />
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"ਤਸਦੀਕ ਕਰਨ ਦੀ ਮੁੜ-ਕੋਸ਼ਿਸ਼ ਕਰੋ"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"ਤਸਦੀਕ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ, ਆਪਣੇ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰ ਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"ਅਗਲੇ ਪੜਾਅ"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"ਕਿਸੇ ਹੋਰ ਡੀਵਾਈਸ ਦਾ ਮੁਲਾਂਕਣ ਕਰੋ"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"ਮੁੱਖ ਮੀਨੂ \'ਤੇ ਵਾਪਸ ਜਾਓ"</string>
+    <string name="locked" msgid="2034650000550950371">"ਲਾਕ ਕੀਤਾ ਗਿਆ"</string>
+    <string name="not_locked" msgid="1663929635666930122">"ਲਾਕ ਨਹੀਂ ਹੈ"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR ਕੋਡ"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"ਮੁਲਾਂਕਣ ਕੀਤੇ ਜਾ ਰਹੇ ਡੀਵਾਈਸ \'ਤੇ ਜਾਰੀ ਰੱਖੋ"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"ਉਸ ਡੀਵਾਈਸ \'ਤੇ ਟੈਸਟ ਪੂਰੇ ਕਰੋ, ਜਿਸਦਾ ਤੁਸੀਂ ਮੁਲਾਂਕਣ ਕਰ ਰਹੇ ਹੋ, ਫਿਰ ਨਤੀਜੇ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"ਹੁਣੇ ਸਕੈਨ ਕਰੋ"</string>
+    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"ਜਿਸ ਡੀਵਾਈਸ ਦਾ ਤੁਸੀਂ ਮੁਲਾਂਕਣ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ,\n Settings/DeviceDiagnostics/Evaluated ਡੀਵਾਈਸ\n \'ਤੇ ਜਾਓ ਅਤੇ ਡੀਵਾਈਸ \'ਤੇ ਦਿੱਤੇ ਉਤਪ੍ਰੇਰਕਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ।"</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"ਮੁਲਾਂਕਣ ਕੀਤੇ ਡੀਵਾਈਸ \'ਤੇ ਦਿੱਤੇ ਉਤਪ੍ਰੇਰਕਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ। ਕਹੇ ਜਾਣ \'ਤੇ, ਇਸ ਡੀਵਾਈਸ \'ਤੇ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇੱਥੇ ਦਬਾਓ।"</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"ਤੁਹਾਨੂੰ ਹੁਣ ਸਕ੍ਰੀਨਾਂ ਦੀ ਇੱਕ ਸੀਰੀਜ਼ ਦਿਖਾਈ ਜਾਵੇਗੀ। ਹਰੇਕ ਦਾ ਅਧਿਐਨ ਕਰੋ ਅਤੇ ਨੁਕਸ ਲੱਭੋ। ਸੰਤੁਸ਼ਟ ਹੋਣ ਤੋਂ ਬਾਅਦ, ਅਗਲੀ ਸਕ੍ਰੀਨ \'ਤੇ ਜਾਣ ਲਈ ਸਕ੍ਰੀਨ \'ਤੇ ਸਪਰਸ਼ ਕਰੋ। ਅੰਤ ਵਿੱਚ, ਤੁਹਾਡੇ ਤੋਂ ਪੁੱਛਿਆ ਜਾਵੇਗਾ ਕਿ ਕੀ ਸਕ੍ਰੀਨਾਂ ਬੇਦਾਗ ਦਿਖਾਈ ਦਿੰਦੀਆਂ ਹਨ।"</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ਤੁਹਾਨੂੰ ਹੁਣ ਸਕ੍ਰੀਨਾਂ ਦੀ ਇੱਕ ਸੀਰੀਜ਼ ਦਿਖਾਈ ਜਾਵੇਗੀ। ਹਰੇਕ ਦਾ ਅਧਿਐਨ ਕਰੋ ਅਤੇ ਨੁਕਸ ਲੱਭੋ। ਅਗਲੀ ਸਕ੍ਰੀਨ \'ਤੇ ਜਾਣ ਲਈ ਸਕ੍ਰੀਨ \'ਤੇ ਸਪਰਸ਼ ਕਰੋ।"</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"ਕਿਰਪਾ ਕਰਕੇ ਹੇਠਾਂ ਦਿੱਤਿਆਂ ਵਿੱਚੋਂ ਉਹ ਵਿਕਲਪ ਚੁਣੋ, ਜੋ ਸਕ੍ਰੀਨ ਦੀ ਸਥਿਤੀ ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਮੇਲ ਖਾਂਦਾ ਹੈ।"</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"ਤੁਹਾਨੂੰ ਹੁਣ ਇੱਕ ਲਾਲ ਸਕ੍ਰੀਨ ਦਿਖਾਈ ਜਾਵੇਗੀ।\n \n ਆਪਣੀ ਉਂਗਲ ਨੂੰ ਸਕ੍ਰੀਨ \'ਤੇ ਉਦੋਂ ਤੱਕ ਰਗੜੋ, ਜਦੋਂ ਤੱਕ ਸਕ੍ਰੀਨ ਪੂਰੀ ਤਰ੍ਹਾਂ ਸਫ਼ੈਦ ਨਾ ਹੋ ਜਾਵੇ। ਜੇ ਤੁਸੀਂ ਸਕ੍ਰੀਨ ਦੇ ਹਿੱਸੇ ਨੂੰ ਸਫ਼ੈਦ ਨਹੀਂ ਕਰ ਪਾ ਰਹੇ ਹੋ, ਤਾਂ ਇਹ ਦਰਸਾਉਣ ਲਈ ਸਕ੍ਰੀਨ \'ਤੇ ਛੋਟਾ ਟੈਪ ਕਰੋ ਕਿ ਟੱਚ ਸੈਂਸਰ ਪੂਰੀ ਤਰ੍ਹਾਂ ਕੰਮ ਨਹੀਂ ਕਰ ਰਿਹਾ ਹੈ।\n \n ਜੇ ਤੁਸੀਂ ਚਾਹੋ, ਤਾਂ ਤੁਸੀਂ ਰਿਪੋਰਟ ਸਕ੍ਰੀਨ ਤੋਂ ਵਾਪਸ ਸਵਾਈਪ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਟੈਸਟ ਨੂੰ ਜਿੱਥੋਂ ਛੱਡਿਆ ਸੀ, ਉੱਥੋਂ ਜਾਰੀ ਰੱਖ ਸਕਦੇ ਹੋ।\n"</string>
+    <string name="scan_result" msgid="7232716409194522023">"ਕਿਰਪਾ ਕਰਕੇ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ \'ਤੇ ਇਸ QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ। ਇਸਨੂੰ ਸਕੈਨ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਤੁਸੀਂ ਇਸ ਡੀਵਾਈਸ \'ਤੇ \'ਹੋ ਗਿਆ\' ਦਬਾ ਸਕਦੇ ਹੋ।"</string>
+</resources>
