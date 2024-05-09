@@ -19,10 +19,10 @@ import android.os.Bundle
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.google.android.attestation.AuthorizationList
-import com.google.android.attestation.ParsedAttestationRecord
 import java.util.Optional
 
-class DisplayAttestationResultFragment(private var result: AttestationResult) : PreferenceFragmentCompat() {
+class DisplayAttestationResultFragment(private var result: AttestationResult) :
+    PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.attestation_details, rootKey)
 
@@ -69,12 +69,10 @@ class DisplayAttestationResultFragment(private var result: AttestationResult) : 
         showInt("attestation_boot_patch_level", list.bootPatchLevel)
         if (list.rollbackResistant)
             show("attestation_rollback_resistant", activity!!.resources.getString(R.string.yes))
-        else
-            show("attestation_rollback_resistant", activity!!.resources.getString(R.string.no))
+        else show("attestation_rollback_resistant", activity!!.resources.getString(R.string.no))
         if (list.rollbackResistance)
             show("attestation_rollback_resistance", activity!!.resources.getString(R.string.yes))
-        else
-            show("attestation_rollback_resistance", activity!!.resources.getString(R.string.no))
+        else show("attestation_rollback_resistance", activity!!.resources.getString(R.string.no))
     }
 
     private fun isDeviceLocked(): Boolean {
@@ -84,19 +82,16 @@ class DisplayAttestationResultFragment(private var result: AttestationResult) : 
 
     private fun getVerifiedBootState(): String {
         val root = result.record!!.teeEnforced.rootOfTrust
-        if (!root.isPresent)
-            return activity!!.resources.getString(R.string.unknown)
+        if (!root.isPresent) return activity!!.resources.getString(R.string.unknown)
         return root.get().verifiedBootState.name
     }
 
     private fun showInt(key: String, value: Optional<Int>?) {
-        if (value != null && value.isPresent)
-            return show(key, value.get().toString())
+        if (value != null && value.isPresent) return show(key, value.get().toString())
     }
 
     private fun show(key: String, value: Optional<ByteArray>) {
-        if (value.isPresent)
-            return show(key, value.get().toString(Charsets.UTF_8))
+        if (value.isPresent) return show(key, value.get().toString(Charsets.UTF_8))
     }
 
     private fun show(key: String, text: String) {

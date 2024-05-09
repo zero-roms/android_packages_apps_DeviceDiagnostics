@@ -18,8 +18,8 @@ package com.android.devicediagnostics.evaluated
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.commit
 import android.view.View
+import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.ApplicationInterface
@@ -48,7 +48,8 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
         val batteryInfo = getBatteryInfo(activity!!)
         val storageInfo = getStorageInfo(activity!!)
 
-        // Launch in separate thread since gathering attestation takes time and we don't want to block
+        // Launch in separate thread since gathering attestation takes time and we don't want to
+        // block
         // the UI from appearing
         runInBackground {
             val reportBuilder = DeviceReport.newBuilder()
@@ -63,8 +64,8 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
 
             val report = reportBuilder.build()
 
-            val bluetoothClient = (requireActivity().applicationContext as ApplicationInterface)
-                .getBluetoothClient()
+            val bluetoothClient =
+                (requireActivity().applicationContext as ApplicationInterface).getBluetoothClient()
             bluetoothClient.sendReport(report)
         }
     }
@@ -79,10 +80,7 @@ class EvaluationFinalizeActivity : CollapsingToolbarBaseActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add(
-                    R.id.fragment_container_view,
-                    EvaluationFinalizeFragment()
-                )
+                add(R.id.fragment_container_view, EvaluationFinalizeFragment())
             }
         }
     }

@@ -25,7 +25,6 @@ import android.bluetooth.le.AdvertiseSettings
 import android.bluetooth.le.BluetoothLeAdvertiser
 import android.os.ParcelUuid
 import android.util.Log
-import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.Protos.TrustedDeviceInfo
 import com.android.devicediagnostics.runInBackground
 import java.util.UUID
@@ -48,11 +47,13 @@ class BluetoothConnectionData(var psm: Int = 0) {
 }
 
 object BluetoothServer {
-    private val adapter get() = BluetoothAdapter.getDefaultAdapter()
+    private val adapter
+        get() = BluetoothAdapter.getDefaultAdapter()
     private var serverSocket: BluetoothServerSocket? = null
     private var socket: BluetoothSocket? = null
     var connectionData = BluetoothConnectionData()
-    val bluetoothEnabled get() = adapter.isEnabled
+    val bluetoothEnabled
+        get() = adapter.isEnabled
 
     fun start(trustedDeviceInfo: TrustedDeviceInfo, written: () -> Unit) {
         startAdvertisement()
@@ -80,7 +81,7 @@ object BluetoothServer {
             val chunk = ByteArray(CHUNK)
             val size = input.read(chunk)
             b += chunk.slice(IntRange(0, size - 1))
-            if (size < CHUNK) break;
+            if (size < CHUNK) break
         }
         Log.d(TAG, "read: ${b.size}")
         socket!!.outputStream.write("Done".toByteArray())
@@ -105,13 +106,16 @@ object BluetoothServer {
     }
 
     private var advertiser: BluetoothLeAdvertiser? = null
-    private var advertiseSettings = AdvertiseSettings.Builder()
-        .setAdvertiseMode(AdvertiseSettings.ADVERTISE_MODE_LOW_POWER)
-        .setTimeout(0)
-        .build()
-    private var advertiseData = AdvertiseData.Builder()
-        .addServiceUuid(ParcelUuid(SERVICE_UUID))
-        .setIncludeDeviceName(true).build()
+    private var advertiseSettings =
+        AdvertiseSettings.Builder()
+            .setAdvertiseMode(AdvertiseSettings.ADVERTISE_MODE_LOW_POWER)
+            .setTimeout(0)
+            .build()
+    private var advertiseData =
+        AdvertiseData.Builder()
+            .addServiceUuid(ParcelUuid(SERVICE_UUID))
+            .setIncludeDeviceName(true)
+            .build()
 
     private var advertiseCallback: AdvertiseCallback? = null
 

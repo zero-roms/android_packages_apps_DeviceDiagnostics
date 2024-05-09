@@ -32,20 +32,17 @@ import kotlin.time.TimeSource
 const val TOUCH_TEST_RESULT_KEY = "touch_test_result"
 
 @OptIn(ExperimentalTime::class)
-class TouchTestView(context: Context, attrs: AttributeSet) :
-    View(context, attrs, 0) {
+class TouchTestView(context: Context, attrs: AttributeSet) : View(context, attrs, 0) {
 
-    private val whitePaint = Paint().apply {
-        this.color = getContext().getColor(R.color.white)
-    }
-    private val redPaint = Paint().apply {
-        this.color = getContext().getColor(R.color.red)
-    }
+    private val whitePaint = Paint().apply { this.color = getContext().getColor(R.color.white) }
+    private val redPaint = Paint().apply { this.color = getContext().getColor(R.color.red) }
 
     private val rows = 20
     private val columns = 10
-    private val xSize get() = width.toFloat() / columns
-    private val ySize get() = height.toFloat() / rows
+    private val xSize
+        get() = width.toFloat() / columns
+    private val ySize
+        get() = height.toFloat() / rows
 
     private var array = Array(columns) { BooleanArray(rows) }
 
@@ -54,34 +51,34 @@ class TouchTestView(context: Context, attrs: AttributeSet) :
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        for (x in 0 until columns)
-            for (y in 0 until rows)
-                canvas.drawRect(xSize * x, ySize * y,
-                    xSize * (x + 1), ySize * (y + 1),
-                    if (array[x][y]) whitePaint else redPaint
-                )
+        for (x in 0 until columns) for (y in 0 until rows) canvas.drawRect(
+            xSize * x,
+            ySize * y,
+            xSize * (x + 1),
+            ySize * (y + 1),
+            if (array[x][y]) whitePaint else redPaint
+        )
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        if (event != null) try {
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> timer = timeSource.markNow()
-                MotionEvent.ACTION_UP ->
-                    if (array.all { it.all { it } })
-                        (context as TouchTestActivity).reportResult(true)
-                    else if (timeSource.markNow() - timer < 0.2.seconds)
-                        (context as TouchTestActivity).reportResult(false)
-            }
+        if (event != null)
+            try {
+                when (event.action) {
+                    MotionEvent.ACTION_DOWN -> timer = timeSource.markNow()
+                    MotionEvent.ACTION_UP ->
+                        if (array.all { it.all { it } })
+                            (context as TouchTestActivity).reportResult(true)
+                        else if (timeSource.markNow() - timer < 0.2.seconds)
+                            (context as TouchTestActivity).reportResult(false)
+                }
 
-            val x = (event.x / xSize).toInt()
-            val y = (event.y / ySize).toInt()
-            if (!array[x][y]) {
-                array[x][y] = true
-                invalidate()
-            }
-
-        } catch (e: Exception) {
-        }
+                val x = (event.x / xSize).toInt()
+                val y = (event.y / ySize).toInt()
+                if (!array[x][y]) {
+                    array[x][y] = true
+                    invalidate()
+                }
+            } catch (e: Exception) {}
         return true
     }
 }

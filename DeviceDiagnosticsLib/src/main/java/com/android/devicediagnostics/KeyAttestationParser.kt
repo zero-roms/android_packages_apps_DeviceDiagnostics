@@ -42,24 +42,21 @@ private const val TAG = "Attestation"
  * In this example, the certificate chain includes hard-coded excerpts of each certificate.
  *
  * This example demonstrates the following tasks:
- *
  * 1. Loading the certificates from PEM-encoded strings.
- *
- * 2. Verifying the certificate chain, up to the root. Note that this example does NOT require
- * the root certificate to appear within Google's list of root certificates. However, if you're
- * verifying the properties of hardware-backed keys on a device that ships with hardware-level key
- * attestation, Android 7.0 (API level 24) or higher, and Google Play services, your production code
- * should enforce this requirement.
- *
+ * 2. Verifying the certificate chain, up to the root. Note that this example does NOT require the
+ *    root certificate to appear within Google's list of root certificates. However, if you're
+ *    verifying the properties of hardware-backed keys on a device that ships with hardware-level
+ *    key attestation, Android 7.0 (API level 24) or higher, and Google Play services, your
+ *    production code should enforce this requirement.
  * 3. Checking if any certificate in the chain has been revoked or suspended.
- *
  * 4. Extracting the attestation extension data from the attestation certificate.
- *
  * 5. Verifying (and printing) several important data elements from the attestation extension.
  */
-
-class AttestationResult(val record: ParsedAttestationRecord?, val verified: Boolean,
-                        val exception: Exception?) {
+class AttestationResult(
+    val record: ParsedAttestationRecord?,
+    val verified: Boolean,
+    val exception: Exception?
+) {
     fun hasError(): Boolean {
         return record == null || exception != null
     }
@@ -79,10 +76,8 @@ class AttestationController(val challenge: ByteArray) {
         runInBackground {
             var result = app.verifyAttestation(report.attestation.toByteArray(), challenge)
             activity.runOnUiThread {
-                if (!result.hasError())
-                    callbacks.onAttestationReceived(result)
-                else
-                    callbacks.onAttestationError(result)
+                if (!result.hasError()) callbacks.onAttestationReceived(result)
+                else callbacks.onAttestationError(result)
             }
         }
     }
@@ -125,12 +120,9 @@ private fun verifyCertificateChain(certs: List<X509Certificate>): Boolean {
         cert.checkValidity()
         cert.verify(parent.publicKey)
         parent = cert
-        val certStatus = CertificateRevocationStatus
-            .fetchStatus(cert.serialNumber)
+        val certStatus = CertificateRevocationStatus.fetchStatus(cert.serialNumber)
         if (certStatus != null) {
-            throw CertificateException(
-                "Certificate revocation status is " + certStatus.status.name
-            )
+            throw CertificateException("Certificate revocation status is " + certStatus.status.name)
         }
     }
 

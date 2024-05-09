@@ -19,7 +19,7 @@ package com.android.devicediagnostics
 import android.os.Bundle
 import androidx.fragment.app.commit
 import androidx.preference.PreferenceFragmentCompat
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
 class MainFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {

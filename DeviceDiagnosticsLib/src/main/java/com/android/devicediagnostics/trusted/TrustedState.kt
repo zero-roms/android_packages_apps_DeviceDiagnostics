@@ -27,11 +27,9 @@ class TrustedState(
     var challenge: ByteArray,
     var report: DeviceReport,
 ) : Parcelable {
-    constructor(parcel: Parcel) : this(
-        parcel.createByteArray()!!,
-        DeviceReport.parseFrom(parcel.createByteArray()!!)
-    ) {
-    }
+    constructor(
+        parcel: Parcel
+    ) : this(parcel.createByteArray()!!, DeviceReport.parseFrom(parcel.createByteArray()!!)) {}
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeByteArray(challenge)
@@ -62,11 +60,9 @@ fun launchTrustedActivity(from: Activity, className: String, state: TrustedState
     intent.setClassName(from, className)
 
     var ts = state
-    if (ts == null)
-        ts = TrustedState.fromActivity(from)
+    if (ts == null) ts = TrustedState.fromActivity(from)
 
-    if (ts != null)
-        intent.putExtra(TRUSTED_STATE_KEY, ts)
+    if (ts != null) intent.putExtra(TRUSTED_STATE_KEY, ts)
 
     from.startActivity(intent)
 }

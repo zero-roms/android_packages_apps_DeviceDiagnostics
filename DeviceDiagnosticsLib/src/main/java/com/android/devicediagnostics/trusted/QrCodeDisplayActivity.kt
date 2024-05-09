@@ -39,15 +39,16 @@ import com.google.zxing.qrcode.QRCodeWriter
 
 private const val BITMAP_SIZE = 512
 
-private fun displayQrCode(connectionData: BluetoothConnectionData) : Bitmap {
-
+private fun displayQrCode(connectionData: BluetoothConnectionData): Bitmap {
     val writer = QRCodeWriter()
-    val bitMatrix = writer.encode(connectionData.toString(),
-                                  BarcodeFormat.QR_CODE, BITMAP_SIZE, BITMAP_SIZE)
+    val bitMatrix =
+        writer.encode(connectionData.toString(), BarcodeFormat.QR_CODE, BITMAP_SIZE, BITMAP_SIZE)
     val bmp = Bitmap.createBitmap(BITMAP_SIZE, BITMAP_SIZE, Bitmap.Config.RGB_565)
-    for (x in 0 until BITMAP_SIZE)
-        for (y in 0 until BITMAP_SIZE)
-            bmp.setPixel(x, y, if (bitMatrix[x, y]) Color.BLACK else Color.WHITE)
+    for (x in 0 until BITMAP_SIZE) for (y in 0 until BITMAP_SIZE) bmp.setPixel(
+        x,
+        y,
+        if (bitMatrix[x, y]) Color.BLACK else Color.WHITE
+    )
     return bmp
 }
 
@@ -68,7 +69,6 @@ class QrCodeDisplayFragment() : PreferenceFragmentCompat() {
                 launchTrustedActivity(activity!!, WaitForResultActivity::class.java.name, state)
             }
         }
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -76,23 +76,27 @@ class QrCodeDisplayFragment() : PreferenceFragmentCompat() {
 
         val bmp = displayQrCode(BluetoothServer.connectionData)
 
-        val layoutPreference = findPreference( "qr_code" ) as LayoutPreference?
+        val layoutPreference = findPreference("qr_code") as LayoutPreference?
         val image = layoutPreference?.findViewById<ImageView>(R.id.qrCode)
         image?.setImageBitmap(bmp)
     }
 }
 
 class QrCodeDisplayActivity : CollapsingToolbarBaseActivity() {
-    init {
-    }
+    init {}
 
-    private val permissions = PermissionsHelper(this,
-        arrayOf(
-            Manifest.permission.BLUETOOTH_ADVERTISE,
-            Manifest.permission.BLUETOOTH_CONNECT,
-            Manifest.permission.BLUETOOTH_SCAN,
-            Manifest.permission.ACCESS_FINE_LOCATION)
-    ) { onPermissionsGranted() }
+    private val permissions =
+        PermissionsHelper(
+            this,
+            arrayOf(
+                Manifest.permission.BLUETOOTH_ADVERTISE,
+                Manifest.permission.BLUETOOTH_CONNECT,
+                Manifest.permission.BLUETOOTH_SCAN,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            )
+        ) {
+            onPermissionsGranted()
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

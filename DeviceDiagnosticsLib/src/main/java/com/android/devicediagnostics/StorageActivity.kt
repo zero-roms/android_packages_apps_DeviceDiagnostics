@@ -15,7 +15,9 @@
  */
 package com.android.devicediagnostics
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.AttributeSet
 import androidx.fragment.app.commit
@@ -34,8 +36,9 @@ class StorageInfoFragment(private var diagnostics: StorageInfo) : PreferenceFrag
             it.diagnostics = diagnostics
             if (diagnostics.usefulLifetimeRemaining != -1) {
                 it.setPercent(diagnostics.usefulLifetimeRemaining.toLong(), 100)
-                it.setBottomSummary(getString(R.string.storage_health_summary,
-                    diagnostics.usefulLifetimeRemaining))
+                it.setBottomSummary(
+                    getString(R.string.storage_health_summary, diagnostics.usefulLifetimeRemaining)
+                )
             } else {
                 it.isVisible = false
             }
@@ -43,9 +46,11 @@ class StorageInfoFragment(private var diagnostics: StorageInfo) : PreferenceFrag
 
         findPreference<Preference>("total_capacity")!!.also {
             it.summary =
-                getString(R.string.storage_total_capacity_summary,
+                getString(
+                    R.string.storage_total_capacity_summary,
                     diagnostics.capacity,
-                    diagnostics.capacityUnits)
+                    diagnostics.capacityUnits
+                )
         }
     }
 }
@@ -72,11 +77,29 @@ class StorageActivity : CollapsingToolbarBaseActivity() {
         setTitle(R.string.storage_title)
 
         if (savedInstanceState == null) {
-            val diagnostics = getStorageInfo(this)
+            val diagnostics = readStorageInfo()
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 add(R.id.fragment_container_view, StorageInfoFragment(diagnostics))
             }
+        }
+    }
+
+    // Get either current battery info or battery info from the intent.
+    private fun readStorageInfo(): StorageInfo {
+        if (intent.extras != null) {
+            val array = intent.extras!!.getByteArray(INTENT_STORAGE_INFO)
+            return StorageInfo.parseFrom(array)
+        }
+        return getStorageInfo(this)
+    }
+
+    companion object Static {
+        const val INTENT_STORAGE_INFO = "storage_info"
+
+        fun createIntent(from: Activity, diagnostics: StorageInfo): Intent {
+            return Intent(from, StorageActivity::class.java)
+                .putExtra(INTENT_STORAGE_INFO, diagnostics.toByteArray())
         }
     }
 }

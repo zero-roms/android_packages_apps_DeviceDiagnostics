@@ -54,6 +54,16 @@
       app:selectable="false" />
 
   <Preference
+      app:key="battery"
+      app:title="@string/battery_title"
+      app:selectable="true" />
+
+  <Preference
+      app:key="storage"
+      app:title="@string/storage_title"
+      app:selectable="true" />
+
+  <Preference
       app:key="attestation_details"
       app:isPreferenceVisible="false"
       app:title="@string/attestation_details_title" />
