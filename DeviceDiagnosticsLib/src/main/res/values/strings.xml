@@ -16,7 +16,7 @@
 
 <resources>
   <string name="app_name">DeviceDiagnostics</string>
-  <string name="app_title">Device Diagnostics</string>
+  <string name="app_title">Device diagnostics</string>
   <string name="package_name">com.android.devicediagnostics</string>
 
   <string name="activity_continue">Continue</string>
@@ -36,10 +36,10 @@
   <string name="battery_title">Battery status</string>
 
   <!-- Evaluation mode -->
-  <string name="trusted_eval_title">Trusted Evaluation</string>
-  <string name="trusted_device_title">Trusted Device</string>
+  <string name="trusted_eval_title">Trusted evaluation</string>
+  <string name="trusted_device_title">Trusted device</string>
   <string name="trusted_device_summary">Start by selecting this option on a trusted device</string>
-  <string name="evaluated_device_title">Evaluated Device</string>
+  <string name="evaluated_device_title">Evaluated device</string>
   <string name="evaluated_device_summary">When prompted to do so, select this option on the evaluated device</string>
   <string name="evaluated_scan_now">Scan now</string>
   <string name="evaluated_scan_now_summary">Scan the QR code on the trusted device in the rectangle below</string>
@@ -142,7 +142,7 @@ This is the result of the touch test. You can rerun the test by navigating back.
   <string name="trusted_scan_now_summary">
     <![CDATA[
 On the device you wish to evaluate, go to\n
-Settings/DeviceDiagnostics/Evaluated Device\n
+Settings/DeviceDiagnostics/Evaluated device\n
 Follow the prompts on that device.
   ]]>
   </string>

@@ -131,10 +131,10 @@ class MainActivityTest {
     fun testEvaluationFlow() {
         val activityScenario = launch(MainActivity::class.java)
         activityScenario.onActivity { activity: Activity ->
-            assertEquals(activity.title, "Device Diagnostics")
+            assertEquals(activity.title, "Device diagnostics")
         }
         onView(withText("Evaluation mode")).perform(click())
-        onView(withText("Evaluated Device")).check(matches(isDisplayed()))
+        onView(withText("Evaluated device")).check(matches(isDisplayed()))
 
         // Set up the mock QR code scanner.
         val qrCaptor = argumentCaptor<QrCamera.ScannerCallback>()
@@ -151,7 +151,7 @@ class MainActivityTest {
         }
 
         // Move to the QrCodeScanner activity.
-        onView(withText("Evaluated Device")).perform(click())
+        onView(withText("Evaluated device")).perform(click())
 
         // Check that the camera was started.
         verify(qrCamera, times(1)).start(any())
@@ -200,12 +200,12 @@ class MainActivityTest {
     fun testTrustedFlow() {
         val activityScenario = launch(MainActivity::class.java)
         activityScenario.onActivity { activity: Activity ->
-            assertEquals(activity.title, "Device Diagnostics")
+            assertEquals(activity.title, "Device diagnostics")
         }
 
         onView(withText("Evaluation mode")).perform(click())
-        onView(withText("Trusted Device")).check(matches(isDisplayed()))
-        onView(withText("Trusted Device")).perform(click())
+        onView(withText("Trusted device")).check(matches(isDisplayed()))
+        onView(withText("Trusted device")).perform(click())
         onView(withText("Scan now")).check(matches(isDisplayed()))
 
         // Verify that we started waiting for the bluetooth server.
