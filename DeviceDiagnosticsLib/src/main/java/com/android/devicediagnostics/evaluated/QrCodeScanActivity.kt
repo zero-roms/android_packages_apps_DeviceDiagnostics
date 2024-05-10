@@ -57,8 +57,7 @@ class QrCodeScanFragment() :
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_scan, rootKey)
-        mCamera =
-            (activity!!.applicationContext as ApplicationInterface).getQrCamera(activity!!, this)
+        mCamera = ApplicationInterface.app.getQrCamera(activity!!, this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -76,8 +75,7 @@ class QrCodeScanFragment() :
     }
 
     fun startBluetooth(connectionData: BluetoothConnectionData) {
-        bluetoothClient =
-            (activity!!.applicationContext as ApplicationInterface).getBluetoothClient()
+        bluetoothClient = ApplicationInterface.app.getBluetoothClient()
         bluetoothClient!!.connectionData = connectionData
         bluetoothClient!!.start(this)
 
@@ -118,7 +116,7 @@ class QrCodeScanFragment() :
         setConnectionProgressVisibility(false)
         setConnectionFailedVisibility(true)
 
-        val bt = (requireActivity().applicationContext as ApplicationInterface).getBluetoothClient()
+        val bt = ApplicationInterface.app.getBluetoothClient()
         bt.reset()
     }
 

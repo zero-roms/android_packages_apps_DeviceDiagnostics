@@ -109,7 +109,7 @@ class EvaluationFinalizeActivity : CollapsingToolbarBaseActivity() {
     private fun sendReport(report: DeviceReport) {
         hideHeaderLayout()
 
-        val bluetoothClient = (applicationContext as ApplicationInterface).getBluetoothClient()
+        val bluetoothClient = ApplicationInterface.app.getBluetoothClient()
         bluetoothClient.sendReport(report)
 
         supportFragmentManager.commit {

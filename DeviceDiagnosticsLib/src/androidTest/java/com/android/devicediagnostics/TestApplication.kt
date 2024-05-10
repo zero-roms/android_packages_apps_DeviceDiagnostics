@@ -18,61 +18,20 @@ package com.android.devicediagnostics
 
 import android.app.Activity
 import android.app.ActivityManager
-import android.app.Application
-import android.content.Context
 import android.content.Context.ACTIVITY_SERVICE
-import android.os.Build
 import androidx.test.platform.app.InstrumentationRegistry
-import com.android.devicediagnostics.bluetooth.BluetoothClient
-import com.android.devicediagnostics.bluetooth.BluetoothServer
-import com.android.settingslib.qrcode.QrCamera
-import com.google.android.attestation.ParsedAttestationRecord
 
-interface QrCameraProvider {
-    fun getQrCamera(activity: QrCamera.ScannerCallback): QrCamera
-}
-
-interface AttestationVerifier {
-    fun verifyAttestation(
-        attestation: ByteArray,
-        challenge: ByteArray
-    ): Pair<ParsedAttestationRecord?, AttestationResult>
-}
-
-class TestApplication : Application(), ApplicationInterface {
+/*
+class TestApplication : ApplicationInterface() {
     override fun getRandomBytes(count: Int): ByteArray {
         return (1..count).map { it.toByte() }.toByteArray()
-    }
-
-    var btClient: BluetoothClient? = null
-    var btServer: BluetoothServer? = null
-    var qrCameraProvider: QrCameraProvider? = null
-    var attestationVerifier: AttestationVerifier? = null
-
-    override fun getBluetoothClient(): BluetoothClient {
-        return btClient!!
-    }
-
-    override fun getBluetoothServer(): BluetoothServer {
-        return btServer!!
-    }
-
-    override fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback): QrCamera {
-        return qrCameraProvider!!.getQrCamera(activity)
-    }
-
-    override fun verifyAttestation(
-        attestation: ByteArray,
-        challenge: ByteArray
-    ): Pair<ParsedAttestationRecord?, AttestationResult> {
-        return attestationVerifier!!.verifyAttestation(attestation, challenge)
     }
 
     // Not mocked yet.
     override fun getLaunchLevel(): Int {
         return Build.VERSION_CODES.VANILLA_ICE_CREAM
     }
-}
+}*/
 
 inline fun getVisibleActivity(): String? {
     val am =

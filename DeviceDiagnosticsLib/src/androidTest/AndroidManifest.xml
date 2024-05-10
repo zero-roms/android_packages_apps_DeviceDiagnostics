@@ -41,8 +41,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DeviceDiagnostics"
         android:label="DeviceDiagnosticsTests"
-        android:debuggable="true"
-        android:name=".TestApplication">
+        android:debuggable="true">
         <uses-library android:name="android.test.runner"/>
         <activity
             android:name="com.android.devicediagnostics.MainActivity"

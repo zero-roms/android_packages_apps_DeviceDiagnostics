@@ -63,7 +63,7 @@ class WaitForResultActivity : CollapsingToolbarBaseActivity(), BluetoothServer.R
             setReorderingAllowed(true)
             add(R.id.fragment_container_view, mFragment)
         }
-        val btServer = (applicationContext as ApplicationInterface).getBluetoothServer()
+        val btServer = ApplicationInterface.app.getBluetoothServer()
         btServer.startAsyncRead(this)
     }
 

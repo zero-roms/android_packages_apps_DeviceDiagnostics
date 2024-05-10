@@ -17,9 +17,9 @@
 package com.android.devicediagnostics
 
 import android.app.Activity
+import android.os.Build
 import android.view.View
 import androidx.test.core.app.ActivityScenario.launch
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.UiController
 import androidx.test.espresso.ViewAction
@@ -96,35 +96,30 @@ private const val QR_PAYLOAD = "{\"PSM\":134}"
 
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest {
+    private var oldApp: ApplicationInterface = ApplicationInterface.app
+
     @Before
     fun setupMocks() {
         Intents.init()
-        app.btClient = Mockito.mock(BluetoothClient::class.java)
-        app.btServer = Mockito.mock(BluetoothServer::class.java)
-        app.qrCameraProvider = Mockito.mock(QrCameraProvider::class.java)
-        app.attestationVerifier = Mockito.mock(AttestationVerifier::class.java)
+
+        ApplicationInterface.setApp(Mockito.mock(ApplicationInterface::class.java))
+        whenever(app.getLaunchLevel()).thenReturn(Build.VERSION_CODES.VANILLA_ICE_CREAM)
+
+        val btClient = Mockito.mock(BluetoothClient::class.java)
+        whenever(app.getBluetoothClient()).thenReturn(btClient)
+
+        val btServer = Mockito.mock(BluetoothServer::class.java)
+        whenever(app.getBluetoothServer()).thenReturn(btServer)
     }
 
     @After
     fun teardownMocks() {
-        app.btClient = null
-        app.btServer = null
-        app.qrCameraProvider = null
-        app.attestationVerifier = null
+        ApplicationInterface.setApp(oldApp)
         Intents.release()
     }
 
-    private val app: TestApplication
-        get() = (ApplicationProvider.getApplicationContext() as TestApplication)
-
-    private val btClient: BluetoothClient
-        get() = app.getBluetoothClient()
-
-    private val btServer: BluetoothServer
-        get() = app.getBluetoothServer()
-
-    private val qrCameraProvider: QrCameraProvider
-        get() = app.qrCameraProvider!!
+    private val app: ApplicationInterface
+        get() = ApplicationInterface.app
 
     @Test
     fun testEvaluationFlow() {
@@ -138,7 +133,9 @@ class MainActivityTest {
         // Set up the mock QR code scanner.
         val qrCaptor = argumentCaptor<QrCamera.ScannerCallback>()
         val qrCamera = Mockito.mock(QrCamera::class.java)
-        whenever(qrCameraProvider.getQrCamera(qrCaptor.capture())).thenAnswer { qrCamera }
+        whenever(app.getQrCamera(any(), qrCaptor.capture())).thenAnswer { qrCamera }
+
+        val btClient = app.getBluetoothClient()
 
         // Set up the mock bluetooth client.
         val challenge = ByteString.copyFrom("test challenge", Charset.defaultCharset())
@@ -205,12 +202,15 @@ class MainActivityTest {
             assertEquals(activity.title, "Device diagnostics")
         }
 
+        whenever(app.getRandomBytes(any())).thenReturn(ByteArray(32))
+
         onView(withText("Evaluation mode")).perform(click())
         onView(withText("Trusted device")).check(matches(isDisplayed()))
         onView(withText("Trusted device")).perform(click())
         onView(withText("Scan now")).check(matches(isDisplayed()))
 
         // Verify that we started waiting for the bluetooth server.
+        val btServer = app.getBluetoothServer()
         val callbackCaptor = argumentCaptor<() -> Unit>()
         verify(btServer, times(1)).start(any(), callbackCaptor.capture())
 
@@ -262,7 +262,6 @@ class MainActivityTest {
             )
 
         val attestationResult = Pair(attestationRecord, AttestationResult.UNVERIFIED)
-        whenever(app.attestationVerifier!!.verifyAttestation(any(), any()))
-            .thenReturn(attestationResult)
+        whenever(app.verifyAttestation(any(), any())).thenReturn(attestationResult)
     }
 }

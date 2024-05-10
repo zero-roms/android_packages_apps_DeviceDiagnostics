@@ -46,7 +46,7 @@ class BatteryInfoFragment(private var diagnostics: BatteryInfo) : PreferenceFrag
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.battery_preferences, rootKey)
 
-        val app = activity!!.applicationContext as ApplicationInterface
+        val app = ApplicationInterface.app
         val vsrLevel = app.getLaunchLevel()
 
         findPreference<BatteryHealthPreference>("health")!!.also {

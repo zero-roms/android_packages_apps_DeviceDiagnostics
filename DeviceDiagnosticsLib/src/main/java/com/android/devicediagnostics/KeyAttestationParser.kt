@@ -75,9 +75,12 @@ class AttestationController(val challenge: ByteArray, val selfCheck: Boolean) {
     // If "selfCheck" is true, we allow network verification to soft fail.
     fun verifyAttestation(activity: Activity, report: DeviceReport, callbacks: Callbacks) {
         // Attestation check does a network lookup, so must be on separate thread
-        val app = activity.applicationContext as ApplicationInterface
         runInBackground {
-            var attestation = app.verifyAttestation(report.attestation.toByteArray(), challenge)
+            var attestation =
+                ApplicationInterface.app.verifyAttestation(
+                    report.attestation.toByteArray(),
+                    challenge
+                )
             if (attestation.second == AttestationResult.NETWORK_ERROR && selfCheck)
                 attestation = Pair(attestation.first, AttestationResult.SKIPPED_VERIFICATION)
 

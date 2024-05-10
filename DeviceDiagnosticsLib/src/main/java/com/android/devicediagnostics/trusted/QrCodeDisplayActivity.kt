@@ -56,7 +56,7 @@ class QrCodeDisplayFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_trusted_qrcode, rootKey)
 
-        val app = activity!!.applicationContext as ApplicationInterface
+        val app = ApplicationInterface.app
         val challenge = app.getRandomBytes(32)
 
         val infoBuilder = TrustedDeviceInfo.newBuilder()
