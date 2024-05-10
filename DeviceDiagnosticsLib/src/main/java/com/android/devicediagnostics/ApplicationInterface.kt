@@ -22,6 +22,7 @@ import android.os.SystemProperties
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.qrcode.QrCamera
+import com.google.android.attestation.ParsedAttestationRecord
 import kotlin.math.min
 
 interface ApplicationInterface {
@@ -29,7 +30,10 @@ interface ApplicationInterface {
     fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback): QrCamera
     fun getBluetoothClient(): BluetoothClient
     fun getBluetoothServer(): BluetoothServer
-    fun verifyAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult
+    fun verifyAttestation(
+        attestation: ByteArray,
+        challenge: ByteArray
+    ): Pair<ParsedAttestationRecord?, AttestationResult>
     fun getLaunchLevel(): Int {
         return com.android.devicediagnostics.getLaunchLevel()
     }

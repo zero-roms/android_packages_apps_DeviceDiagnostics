@@ -47,6 +47,9 @@
   <string name="evaluated_scan_select_device_title">Select trusted device</string>
   <string name="evaluated_scan_select_device_summary">Alternatively select the device from the list below</string>
   <string name="evaluated_bt_fail_title">Connection failed, please try again.</string>
+  <string name="evaluated_confirm_send_data">Confirm the report to send to the trusted device.</string>
+  <string name="evaluated_send_report">Send report</string>
+  <string name="evaluated_finalizing_report">Finalizing report...</string>
 
   <!-- Battery screen -->
   <string name="battery_health_title">Health</string>

@@ -36,7 +36,7 @@
     <activity android:name="com.android.devicediagnostics.trusted.QrCodeDisplayActivity" />
     <activity android:name="com.android.devicediagnostics.trusted.WaitForResultActivity" />
     <activity android:name="com.android.devicediagnostics.trusted.DisplayResultActivity" />
-    <activity android:name="com.android.devicediagnostics.trusted.DisplayAttestationDetailsActivity" />
+    <activity android:name="com.android.devicediagnostics.DisplayAttestationDetailsActivity" />
 
     <!-- Test tasks -->
     <activity android:name="com.android.devicediagnostics.evaluated.QrCodeScanActivity"

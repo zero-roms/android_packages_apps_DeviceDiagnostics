@@ -14,14 +14,12 @@
  * limitations under the License.
  */
 
-package com.android.devicediagnostics.trusted
+package com.android.devicediagnostics
 
 import android.os.Bundle
 import androidx.fragment.app.commit
-import com.android.devicediagnostics.AttestationResult
-import com.android.devicediagnostics.DisplayAttestationResultFragment
-import com.android.devicediagnostics.R
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
+import com.google.android.attestation.ParsedAttestationRecord
 
 class DisplayAttestationDetailsActivity : CollapsingToolbarBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,12 +30,15 @@ class DisplayAttestationDetailsActivity : CollapsingToolbarBaseActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add(R.id.fragment_container_view, DisplayAttestationResultFragment(result!!))
+                add(
+                    R.id.fragment_container_view,
+                    DisplayAttestationResultFragment(attestation!!.first, attestation!!.second)
+                )
             }
         }
     }
 
     companion object Values {
-        var result: AttestationResult? = null
+        var attestation: Pair<ParsedAttestationRecord, AttestationResult>? = null
     }
 }

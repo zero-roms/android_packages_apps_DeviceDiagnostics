@@ -21,6 +21,7 @@ import android.content.Context
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.qrcode.QrCamera
+import com.google.android.attestation.ParsedAttestationRecord
 import kotlin.random.Random
 
 class DeviceDiagnosticsApplication : Application(), ApplicationInterface {
@@ -43,7 +44,7 @@ class DeviceDiagnosticsApplication : Application(), ApplicationInterface {
     override fun verifyAttestation(
         attestation: ByteArray,
         challenge: ByteArray
-    ): AttestationResult {
+    ): Pair<ParsedAttestationRecord?, AttestationResult> {
         return getAttestation(attestation, challenge)
     }
 }

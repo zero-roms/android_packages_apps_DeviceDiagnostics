@@ -20,8 +20,8 @@ import android.os.Bundle
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.Protos.DeviceReport
-import com.android.devicediagnostics.trusted.DisplayAttestationDetailsActivity
 import com.android.devicediagnostics.trusted.QrCodeDisplayActivity
+import com.google.android.attestation.ParsedAttestationRecord
 
 private const val TAG = "DisplayResultFragment"
 
@@ -78,12 +78,14 @@ class DisplayResultFragment(
         attestation.verifyAttestation(activity!!, report, this)
     }
 
-    override fun onAttestationReceived(attestationResult: AttestationResult) {
+    override fun onAttestationReceived(
+        attestation: Pair<ParsedAttestationRecord, AttestationResult>
+    ) {
         if (activity == null) {
             return
         }
 
-        val attestationRecord = attestationResult.record!!
+        val attestationRecord = attestation.first
 
         // Make invisible in case this is a successful retry attempt.
         findPreference<Preference>("retry_failure")?.also { it.isVisible = false }
@@ -117,20 +119,24 @@ class DisplayResultFragment(
         findPreference<Preference>("locked")?.also {
             val rootOfTrust = attestationRecord.teeEnforced.rootOfTrust
             it.summary =
-                if (rootOfTrust.isPresent && rootOfTrust.get().deviceLocked)
+                if (rootOfTrust.isPresent && rootOfTrust.get().deviceLocked) {
                     resources.getString(R.string.locked)
-                else resources.getString(R.string.not_locked)
+                } else {
+                    resources.getString(R.string.not_locked)
+                }
             it.isVisible = true
         }
         findPreference<Preference>("trustworthy")?.also {
-            if (attestationResult.verified)
+            if (attestation.second == AttestationResult.VERIFIED) {
                 it.summary = attestationRecord.teeEnforced.rootOfTrust.get().verifiedBootState.name
-            else it.summary = activity!!.resources.getString(R.string.no)
+            } else {
+                it.summary = activity!!.resources.getString(R.string.no)
+            }
             it.isVisible = true
         }
         findPreference<Preference>("attestation_details")?.also {
             it.setOnPreferenceClickListener {
-                DisplayAttestationDetailsActivity.result = attestationResult
+                DisplayAttestationDetailsActivity.attestation = attestation
                 startActivity(
                     Intent(requireActivity(), DisplayAttestationDetailsActivity::class.java)
                 )
@@ -140,21 +146,20 @@ class DisplayResultFragment(
         }
     }
 
-    override fun onAttestationError(result: AttestationResult) {
+    override fun onAttestationError() {
         if (activity == null) {
             return
         }
+        findPreference<Preference>("non_retry_failure")?.also { it.isVisible = true }
+    }
 
-        if (result.hasNetworkOnlyError()) {
-            findPreference<Preference>("retry_failure")?.also {
-                it.setOnPreferenceClickListener {
-                    attestation.verifyAttestation(activity!!, report, this)
-                    true
-                }
-                it.isVisible = true
+    override fun onAttestationRetry() {
+        findPreference<Preference>("retry_failure")?.also {
+            it.setOnPreferenceClickListener {
+                attestation.verifyAttestation(activity!!, report, this)
+                true
             }
-        } else {
-            findPreference<Preference>("non_retry_failure")?.also { it.isVisible = true }
+            it.isVisible = true
         }
     }
 }

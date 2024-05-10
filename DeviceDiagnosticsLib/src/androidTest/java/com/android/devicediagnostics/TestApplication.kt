@@ -26,13 +26,17 @@ import androidx.test.platform.app.InstrumentationRegistry
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.qrcode.QrCamera
+import com.google.android.attestation.ParsedAttestationRecord
 
 interface QrCameraProvider {
     fun getQrCamera(activity: QrCamera.ScannerCallback): QrCamera
 }
 
 interface AttestationVerifier {
-    fun verifyAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult
+    fun verifyAttestation(
+        attestation: ByteArray,
+        challenge: ByteArray
+    ): Pair<ParsedAttestationRecord?, AttestationResult>
 }
 
 class TestApplication : Application(), ApplicationInterface {
@@ -60,7 +64,7 @@ class TestApplication : Application(), ApplicationInterface {
     override fun verifyAttestation(
         attestation: ByteArray,
         challenge: ByteArray
-    ): AttestationResult {
+    ): Pair<ParsedAttestationRecord?, AttestationResult> {
         return attestationVerifier!!.verifyAttestation(attestation, challenge)
     }
 

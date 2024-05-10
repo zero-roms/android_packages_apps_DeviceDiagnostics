@@ -34,7 +34,7 @@ class DisplayResultActivity : CollapsingToolbarBaseActivity() {
 
         if (savedInstanceState == null) {
             val state = TrustedState.fromActivity(this)!!
-            val controller = AttestationController(state.challenge)
+            val controller = AttestationController(state.challenge, false)
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 add(R.id.fragment_container_view, DisplayResultFragment(state.report, controller))

@@ -46,7 +46,6 @@ import com.android.devicediagnostics.trusted.WaitForResultActivity
 import com.android.settingslib.qrcode.QrCamera
 import com.google.android.attestation.AuthorizationList
 import com.google.android.attestation.ParsedAttestationRecord
-import com.google.android.attestation.RootOfTrust
 import com.google.protobuf.ByteString
 import java.nio.charset.Charset
 import org.hamcrest.Matcher
@@ -169,6 +168,8 @@ class MainActivityTest {
             }
         )
 
+        setupAttestation()
+
         onView(withText("Continue")).check(matches(isDisplayed()))
         onView(withText("Continue")).perform(click())
         onView(withId(R.id.mainLayout)).perform(touchDownAndUp())
@@ -185,7 +186,8 @@ class MainActivityTest {
         intended(hasComponent(TouchTestFinalizeActivity::class.java.name))
         onView(withText("The touch sensor test failed")).check(matches(isDisplayed()))
         onView(withText("Continue")).perform(click())
-        onView(withText("Evaluation complete")).check(matches(isDisplayed()))
+        onView(withText("Send report")).check(matches(isDisplayed()))
+        onView(withText("Send report")).perform(click())
 
         // Verify the report was sent.
         val reportCaptor = argumentCaptor<DeviceReport>()
@@ -232,8 +234,20 @@ class MainActivityTest {
         val readListenerCaptor = argumentCaptor<BluetoothServer.ReadListener>()
         verify(btServer, times(1)).startAsyncRead(readListenerCaptor.capture())
 
+        setupAttestation()
+
+        // Finish the read operation.
+        readListenerCaptor.firstValue.onBluetoothRead(deviceReport.toByteArray())
+
+        intended(hasComponent(DisplayResultActivity::class.java.name))
+        waitForActivity<DisplayResultActivity>()
+
+        onView(withText("Pass")).check(matches(isDisplayed()))
+        onView(withText("Fail")).check(matches(isDisplayed()))
+    }
+
+    private fun setupAttestation() {
         // Set up the verifyAttestation call.
-        val rootOfTrust = Mockito.mock(RootOfTrust::class.java)
         val authorizationList = AuthorizationList.builder().build()
         val attestationRecord =
             ParsedAttestationRecord.create(
@@ -246,17 +260,9 @@ class MainActivityTest {
                 authorizationList,
                 authorizationList
             )
-        val attestationResult = AttestationResult(attestationRecord, false, null)
+
+        val attestationResult = Pair(attestationRecord, AttestationResult.UNVERIFIED)
         whenever(app.attestationVerifier!!.verifyAttestation(any(), any()))
             .thenReturn(attestationResult)
-
-        // Finish the read operation.
-        readListenerCaptor.firstValue.onBluetoothRead(deviceReport.toByteArray())
-
-        intended(hasComponent(DisplayResultActivity::class.java.name))
-        waitForActivity<DisplayResultActivity>()
-
-        onView(withText("Pass")).check(matches(isDisplayed()))
-        onView(withText("Fail")).check(matches(isDisplayed()))
     }
 }

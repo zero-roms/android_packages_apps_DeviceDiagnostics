@@ -18,11 +18,17 @@ package com.android.devicediagnostics.evaluated
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.ApplicationInterface
+import com.android.devicediagnostics.AttestationController
+import com.android.devicediagnostics.DisplayResultFragment
 import com.android.devicediagnostics.MainActivity
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.R
@@ -32,7 +38,7 @@ import com.google.protobuf.ByteString
 
 class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.preferences_evaluated_qr_display, rootKey)
+        setPreferencesFromResource(R.xml.preferences_evaluated_done, rootKey)
         findPreference<Preference>("Done")?.setOnPreferenceClickListener {
             val intent = Intent(activity, MainActivity::class.java)
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
@@ -41,21 +47,32 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
             true
         }
     }
+}
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+class EvaluationFinalizeActivity : CollapsingToolbarBaseActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.evaluated_finalize)
+        setTitle(R.string.evaluation_mode_title)
 
-        val batteryInfo = getBatteryInfo(activity!!)
-        val storageInfo = getStorageInfo(activity!!)
+        if (savedInstanceState == null) {
+            showProgressIndicator(R.string.evaluated_finalizing_report)
+            buildReport()
+        }
+    }
+
+    private fun buildReport() {
+        val state = TestState.fromActivity(this)!!
 
         // Launch in separate thread since gathering attestation takes time and we don't want to
-        // block
-        // the UI from appearing
+        // block the UI from appearing
         runInBackground {
             val reportBuilder = DeviceReport.newBuilder()
 
-            val state = TestState.fromActivity(activity!!)!!
             reportBuilder.setTests(state.testResults)
+
+            val batteryInfo = getBatteryInfo(this)
+            val storageInfo = getStorageInfo(this)
 
             val attestation = createAttestationRecord(state.trustedDevice.challenge.toByteArray())
             reportBuilder.setAttestation(ByteString.copyFrom(attestation))
@@ -64,24 +81,63 @@ class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
 
             val report = reportBuilder.build()
 
-            val bluetoothClient =
-                (requireActivity().applicationContext as ApplicationInterface).getBluetoothClient()
-            bluetoothClient.sendReport(report)
+            runOnUiThread { onReportReady(report) }
         }
     }
-}
 
-class EvaluationFinalizeActivity : CollapsingToolbarBaseActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_one_fragment)
-        setTitle(R.string.evaluation_mode_title)
-
-        if (savedInstanceState == null) {
-            supportFragmentManager.commit {
-                setReorderingAllowed(true)
-                add(R.id.fragment_container_view, EvaluationFinalizeFragment())
-            }
+    private fun onReportReady(report: DeviceReport) {
+        val confirmation = showHeaderLayout(R.layout.evaluated_final_confirmation)
+        val button = confirmation.findViewById<Button>(R.id.send_button)
+        button!!.setOnClickListener {
+            sendReport(report)
+            true
         }
+
+        val state = TestState.fromActivity(this)!!
+        val attestationController =
+            AttestationController(state.trustedDevice.challenge.toByteArray(), true)
+
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            replace(
+                R.id.fragment_container_view,
+                DisplayResultFragment(report, attestationController)
+            )
+        }
+    }
+
+    private fun sendReport(report: DeviceReport) {
+        hideHeaderLayout()
+
+        val bluetoothClient = (applicationContext as ApplicationInterface).getBluetoothClient()
+        bluetoothClient.sendReport(report)
+
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            replace(R.id.fragment_container_view, EvaluationFinalizeFragment())
+        }
+    }
+
+    private fun showHeaderLayout(layoutId: Int): View {
+        val inflater = LayoutInflater.from(this)
+        val container = findViewById<LinearLayout>(R.id.header_container)!!
+
+        val view = inflater.inflate(layoutId, container, false)
+
+        container.removeAllViews()
+        container.addView(view)
+        container.visibility = View.VISIBLE
+        return view
+    }
+
+    private fun hideHeaderLayout() {
+        val container = findViewById<LinearLayout>(R.id.header_container)!!
+        container.visibility = View.GONE
+    }
+
+    private fun showProgressIndicator(resId: Int) {
+        val progress = showHeaderLayout(R.layout.progress_indicator)
+        val text = progress.findViewById<TextView>(R.id.progress_explainer)
+        text!!.setText(resId)
     }
 }

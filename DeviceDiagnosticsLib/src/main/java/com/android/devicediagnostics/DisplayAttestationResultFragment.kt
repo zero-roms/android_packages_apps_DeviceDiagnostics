@@ -19,19 +19,26 @@ import android.os.Bundle
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.google.android.attestation.AuthorizationList
+import com.google.android.attestation.ParsedAttestationRecord
 import java.util.Optional
 
-class DisplayAttestationResultFragment(private var result: AttestationResult) :
-    PreferenceFragmentCompat() {
+class DisplayAttestationResultFragment(
+    private val record: ParsedAttestationRecord,
+    private val result: AttestationResult
+) : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.attestation_details, rootKey)
 
-        val record = result.record!!
-
         // By default, show a failure code for IMEI/Serial. It will get overridden if it's actually
         // present.
-        if (result.verified) {
-            show("attestation_verified", activity!!.resources.getString(R.string.yes))
+        if (
+            result == AttestationResult.VERIFIED || result == AttestationResult.SKIPPED_VERIFICATION
+        ) {
+            if (result == AttestationResult.VERIFIED) {
+                show("attestation_verified", activity!!.resources.getString(R.string.yes))
+            } else {
+                hide("attestation_verified")
+            }
             show("attestation_imei", activity!!.resources.getString(R.string.unknown))
             show("attestation_serial", activity!!.resources.getString(R.string.unknown))
         } else {
@@ -76,12 +83,12 @@ class DisplayAttestationResultFragment(private var result: AttestationResult) :
     }
 
     private fun isDeviceLocked(): Boolean {
-        val root = result.record!!.teeEnforced.rootOfTrust
+        val root = record.teeEnforced.rootOfTrust
         return root.isPresent && root.get().deviceLocked
     }
 
     private fun getVerifiedBootState(): String {
-        val root = result.record!!.teeEnforced.rootOfTrust
+        val root = record.teeEnforced.rootOfTrust
         if (!root.isPresent) return activity!!.resources.getString(R.string.unknown)
         return root.get().verifiedBootState.name
     }
@@ -98,5 +105,9 @@ class DisplayAttestationResultFragment(private var result: AttestationResult) :
         val pref = findPreference<Preference>(key)!!
         pref.summary = text
         pref.isVisible = true
+    }
+
+    private fun hide(key: String) {
+        findPreference<Preference>(key)!!.isVisible = false
     }
 }

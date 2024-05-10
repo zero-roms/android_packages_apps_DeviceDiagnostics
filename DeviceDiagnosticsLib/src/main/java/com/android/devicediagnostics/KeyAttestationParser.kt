@@ -52,38 +52,52 @@ private const val TAG = "Attestation"
  * 4. Extracting the attestation extension data from the attestation certificate.
  * 5. Verifying (and printing) several important data elements from the attestation extension.
  */
-class AttestationResult(
-    val record: ParsedAttestationRecord?,
-    val verified: Boolean,
-    val exception: Exception?
-) {
-    fun hasError(): Boolean {
-        return record == null || exception != null
-    }
-    fun hasNetworkOnlyError(): Boolean {
-        return record != null && exception != null && exception is IOException
-    }
+enum class AttestationResult {
+    // There was a non-network error performing attestation.
+    GENERIC_ERROR,
+    // There was a network error perform attestation.
+    NETWORK_ERROR,
+    // The certificate could not be verified.
+    UNVERIFIED,
+    // No attempt was made to verify the certificate.
+    SKIPPED_VERIFICATION,
+    // The certificate was verified.
+    VERIFIED
 }
 
-class AttestationController(val challenge: ByteArray) {
+class AttestationController(val challenge: ByteArray, val selfCheck: Boolean) {
     interface Callbacks {
-        fun onAttestationReceived(result: AttestationResult)
-        fun onAttestationError(result: AttestationResult)
+        fun onAttestationReceived(result: Pair<ParsedAttestationRecord, AttestationResult>)
+        fun onAttestationRetry()
+        fun onAttestationError()
     }
+
+    // If "selfCheck" is true, we allow network verification to soft fail.
     fun verifyAttestation(activity: Activity, report: DeviceReport, callbacks: Callbacks) {
         // Attestation check does a network lookup, so must be on separate thread
         val app = activity.applicationContext as ApplicationInterface
         runInBackground {
-            var result = app.verifyAttestation(report.attestation.toByteArray(), challenge)
+            var attestation = app.verifyAttestation(report.attestation.toByteArray(), challenge)
+            if (attestation.second == AttestationResult.NETWORK_ERROR && selfCheck)
+                attestation = Pair(attestation.first, AttestationResult.SKIPPED_VERIFICATION)
+
             activity.runOnUiThread {
-                if (!result.hasError()) callbacks.onAttestationReceived(result)
-                else callbacks.onAttestationError(result)
+                if (attestation.second == AttestationResult.GENERIC_ERROR) {
+                    callbacks.onAttestationError()
+                } else if (attestation.second == AttestationResult.NETWORK_ERROR) {
+                    callbacks.onAttestationRetry()
+                } else {
+                    callbacks.onAttestationReceived(Pair(attestation.first!!, attestation.second))
+                }
             }
         }
     }
 }
 
-fun getAttestation(attestation: ByteArray, challenge: ByteArray): AttestationResult {
+fun getAttestation(
+    attestation: ByteArray,
+    challenge: ByteArray
+): Pair<ParsedAttestationRecord?, AttestationResult> {
     val inflater = Inflater()
     inflater.setInput(attestation, 0, attestation.size)
     var inflated = ByteArray(0)
@@ -101,14 +115,20 @@ fun getAttestation(attestation: ByteArray, challenge: ByteArray): AttestationRes
     try {
         certs = loadCertificates(inflated)
         record = ParsedAttestationRecord.createParsedAttestationRecord(certs)
-        var verified = verifyCertificateChain(certs)
-        if (!record.attestationChallenge.contentEquals(challenge))
-            throw Exception("Challenge does not match")
-        return AttestationResult(record, verified, null)
+        if (verifyCertificateChain(certs)) {
+            if (record.attestationChallenge.contentEquals(challenge)) {
+                return Pair(record, AttestationResult.VERIFIED)
+            }
+            Log.e(TAG, "Attestation failed: challenge does not match")
+        }
+        return Pair(record, AttestationResult.UNVERIFIED)
     } catch (e: Exception) {
         // Note: set record so we can distinguish between parsing errors and network errors.
         Log.e(TAG, "Attestation failed: $e")
-        return AttestationResult(record, false, e)
+        if (record != null && e is IOException) {
+            return Pair(record, AttestationResult.NETWORK_ERROR)
+        }
+        return Pair(record, AttestationResult.GENERIC_ERROR)
     }
 }
 

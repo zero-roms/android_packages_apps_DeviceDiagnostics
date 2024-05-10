@@ -15,7 +15,7 @@
       android:key="connection_progress"
       app:selectable="false"
       app:isPreferenceVisible="false"
-      android:layout="@layout/bluetooth_progress" />
+      android:layout="@layout/progress_indicator" />
 
   <Preference
       app:key="connection_failed"
