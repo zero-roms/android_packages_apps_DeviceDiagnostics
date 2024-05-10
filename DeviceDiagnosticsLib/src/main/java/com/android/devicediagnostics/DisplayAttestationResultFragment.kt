@@ -74,12 +74,6 @@ class DisplayAttestationResultFragment(
         show("attestation_model", list.attestationIdModel)
         showInt("attestation_vendor_patch_level", list.vendorPatchLevel)
         showInt("attestation_boot_patch_level", list.bootPatchLevel)
-        if (list.rollbackResistant)
-            show("attestation_rollback_resistant", activity!!.resources.getString(R.string.yes))
-        else show("attestation_rollback_resistant", activity!!.resources.getString(R.string.no))
-        if (list.rollbackResistance)
-            show("attestation_rollback_resistance", activity!!.resources.getString(R.string.yes))
-        else show("attestation_rollback_resistance", activity!!.resources.getString(R.string.no))
     }
 
     private fun isDeviceLocked(): Boolean {

@@ -103,16 +103,4 @@
       app:selectable="false"
       app:isPreferenceVisible="false"
       app:title="@string/attestation_boot_patch_level"/>
-
-  <Preference
-      app:key="attestation_rollback_resistant"
-      app:selectable="false"
-      app:isPreferenceVisible="false"
-      app:title="@string/attestation_rollback_resistant"/>
-
-  <Preference
-      app:key="attestation_rollback_resistance"
-      app:selectable="false"
-      app:isPreferenceVisible="false"
-      app:title="@string/attestation_rollback_resistance"/>
 </PreferenceScreen>

@@ -111,8 +111,6 @@ This is the result of the touch test. You can rerun the test by navigating back.
   <string name="attestation_model">Model</string>
   <string name="attestation_vendor_patch_level">Vendor patch level</string>
   <string name="attestation_boot_patch_level">Boot patch level</string>
-  <string name="attestation_rollback_resistant">Rollback resistant</string>
-  <string name="attestation_rollback_resistance">Rollback resistance</string>
   <string name="yes">Yes</string>
   <string name="no">No</string>
   <string name="unknown">Unknown</string>
