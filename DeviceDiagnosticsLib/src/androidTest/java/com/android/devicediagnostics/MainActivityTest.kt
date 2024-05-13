@@ -38,7 +38,6 @@ import com.android.devicediagnostics.Protos.TestResults
 import com.android.devicediagnostics.Protos.TrustedDeviceInfo
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothServer
-import com.android.devicediagnostics.bluetooth.IBluetoothDevice
 import com.android.devicediagnostics.evaluated.ScreenTestFinalizeActivity
 import com.android.devicediagnostics.evaluated.TouchTestFinalizeActivity
 import com.android.devicediagnostics.trusted.DisplayResultActivity
@@ -140,11 +139,7 @@ class MainActivityTest {
         // Set up the mock bluetooth client.
         val challenge = ByteString.copyFrom("test challenge", Charset.defaultCharset())
         val deviceInfo = TrustedDeviceInfo.newBuilder().setChallenge(challenge).build()
-        whenever(btClient.read(any())).thenAnswer {
-            val device = it.arguments[0] as IBluetoothDevice
-            assertEquals(device.name, "Test")
-            deviceInfo.toByteArray()
-        }
+        whenever(btClient.read()).thenReturn(deviceInfo.toByteArray())
 
         // Move to the QrCodeScanner activity.
         onView(withText("Evaluated device")).perform(click())
@@ -159,11 +154,7 @@ class MainActivityTest {
         // Check that bluetooth was started.
         val btCaptor = argumentCaptor<BluetoothClient.ScanListener>()
         verify(btClient).start(btCaptor.capture())
-        btCaptor.firstValue.onBluetoothConnected(
-            object : IBluetoothDevice {
-                override val name = "Test"
-            }
-        )
+        btCaptor.firstValue.onBluetoothConnected()
 
         setupAttestation()
 

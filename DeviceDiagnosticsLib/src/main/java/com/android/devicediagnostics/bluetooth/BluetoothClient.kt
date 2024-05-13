@@ -30,18 +30,9 @@ import com.android.devicediagnostics.Protos.DeviceReport
 
 private const val TAG = "BluetoothClient"
 
-interface IBluetoothDevice {
-    val name: String
-}
-
-class BluetoothDeviceAdapter(val device: BluetoothDevice) : IBluetoothDevice {
-    override val name: String
-        get() = device.name
-}
-
-object BluetoothClient {
+object BluetoothClient : ScanCallback() {
     interface ScanListener {
-        fun onBluetoothConnected(device: IBluetoothDevice)
+        fun onBluetoothConnected()
         fun onBluetoothConnectionFailed()
     }
 
@@ -50,22 +41,14 @@ object BluetoothClient {
     fun start(listener: ScanListener) {
         this.listener = listener
         scanner = adapter.bluetoothLeScanner
-        scanCallback = DeviceScanCallback()
 
         val filters = listOf(ScanFilter.Builder().setServiceUuid(ParcelUuid(SERVICE_UUID)).build())
         val settings = ScanSettings.Builder().setScanMode(ScanSettings.SCAN_MODE_LOW_POWER).build()
-        scanner!!.startScan(filters, settings, scanCallback)
+        scanner!!.startScan(filters, settings, this)
         Log.d(TAG, "Started scan $scanner")
     }
 
-    fun read(device: IBluetoothDevice): ByteArray {
-        socket =
-            (device as BluetoothDeviceAdapter)
-                .device
-                .createInsecureL2capChannel(connectionData!!.psm)
-        socket!!.connect()
-        if (socket == null) throw Exception()
-        stopScanning()
+    fun read(): ByteArray {
         val input = socket!!.inputStream
         var b = ByteArray(0)
         while (true) {
@@ -89,7 +72,6 @@ object BluetoothClient {
     private var listener: ScanListener? = null
     private val adapter = BluetoothAdapter.getDefaultAdapter()
     private var scanner: BluetoothLeScanner? = null
-    private var scanCallback: DeviceScanCallback = DeviceScanCallback()
 
     fun reset() {
         connectionData = null
@@ -104,7 +86,7 @@ object BluetoothClient {
 
     private fun stopScanning() {
         Log.d(TAG, "stopped scan")
-        scanner?.stopScan(scanCallback)
+        scanner?.stopScan(this)
         adapter.cancelDiscovery()
         listener = null
     }
@@ -113,20 +95,36 @@ object BluetoothClient {
         write(report.toByteArray())
     }
 
-    private class DeviceScanCallback : ScanCallback() {
-        override fun onBatchScanResults(results: List<ScanResult>) {
-            for (item in results) {
-                item.device?.let { listener?.onBluetoothConnected(BluetoothDeviceAdapter(it)) }
+    private fun connect(device: BluetoothDevice?): Boolean {
+        if (device == null) {
+            return false
+        }
+        try {
+            Log.d(TAG, "Found device ${device.name}")
+            socket = device.createInsecureL2capChannel(connectionData!!.psm)
+            socket!!.connect()
+        } catch (e: Exception) {
+            return false
+        }
+        listener?.onBluetoothConnected()
+        stopScanning()
+        return true
+    }
+
+    override fun onBatchScanResults(results: List<ScanResult>) {
+        for (item in results) {
+            if (connect(item.device)) {
+                break
             }
         }
+    }
 
-        override fun onScanResult(callbackType: Int, result: ScanResult) {
-            result.device?.let { listener?.onBluetoothConnected(BluetoothDeviceAdapter(it)) }
-        }
+    override fun onScanResult(callbackType: Int, result: ScanResult) {
+        connect(result.device)
+    }
 
-        override fun onScanFailed(errorCode: Int) {
-            Log.d(TAG, "Scan failed with error: $errorCode")
-            listener?.onBluetoothConnectionFailed()
-        }
+    override fun onScanFailed(errorCode: Int) {
+        Log.d(TAG, "Scan failed with error: $errorCode")
+        listener?.onBluetoothConnectionFailed()
     }
 }

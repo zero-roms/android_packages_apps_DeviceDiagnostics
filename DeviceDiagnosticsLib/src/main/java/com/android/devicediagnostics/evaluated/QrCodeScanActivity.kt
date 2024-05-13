@@ -39,7 +39,6 @@ import com.android.devicediagnostics.Protos
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
-import com.android.devicediagnostics.bluetooth.IBluetoothDevice
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.qrcode.QrCamera
 import com.android.settingslib.widget.LayoutPreference
@@ -74,7 +73,7 @@ class QrCodeScanFragment() :
         textureView!!.clipToOutline = true
     }
 
-    fun startBluetooth(connectionData: BluetoothConnectionData) {
+    private fun startBluetooth(connectionData: BluetoothConnectionData) {
         bluetoothClient = ApplicationInterface.app.getBluetoothClient()
         bluetoothClient!!.connectionData = connectionData
         bluetoothClient!!.start(this)
@@ -82,10 +81,9 @@ class QrCodeScanFragment() :
         requireActivity().runOnUiThread { setConnectionProgressVisibility(true) }
     }
 
-    override fun onBluetoothConnected(device: IBluetoothDevice) {
+    override fun onBluetoothConnected() {
         try {
-            Log.d(TAG, "Found device ${device.name}")
-            val bytes = bluetoothClient!!.read(device)
+            val bytes = bluetoothClient!!.read()
             val trustedDeviceInfo = Protos.TrustedDeviceInfo.parseFrom(bytes)
             requireActivity().runOnUiThread { onDeviceConnected(trustedDeviceInfo) }
         } catch (e: Exception) {
