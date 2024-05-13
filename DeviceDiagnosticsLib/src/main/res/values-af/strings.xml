@@ -52,6 +52,18 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Vervang"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Onderdeelgeskiedenis"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% van oorspronklike kapasiteit"</string>
+    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
+    <skip />
+    <!-- no translation found for battery_health_cold (4164463402047143412) -->
+    <skip />
+    <!-- no translation found for battery_health_dead (3658507844189988433) -->
+    <skip />
+    <!-- no translation found for battery_health_good (4850784608550784236) -->
+    <skip />
+    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
+    <skip />
+    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
+    <skip />
     <string name="storage_health_title" msgid="2499144010514101535">"Berginggesondheid"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Totale kapasiteit"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -65,68 +77,42 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Die raaksensortoets het misluk"</string>
     <string name="pass" msgid="6411665547268368837">"Slaag"</string>
     <string name="fail" msgid="3918028202746427731">"Misluk"</string>
-    <!-- no translation found for attestation_verified (6535873137799452259) -->
-    <skip />
-    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
-    <skip />
-    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
-    <skip />
-    <!-- no translation found for attestation_security_level (6633918464653325429) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
-    <skip />
-    <!-- no translation found for attestation_os_version (4351993398048033601) -->
-    <skip />
-    <!-- no translation found for attestation_brand (5238699762448331155) -->
-    <skip />
-    <!-- no translation found for attestation_device (1984309818766961098) -->
-    <skip />
-    <!-- no translation found for attestation_product (7325714994397112640) -->
-    <skip />
-    <!-- no translation found for attestation_serial (5001580041093391656) -->
-    <skip />
-    <!-- no translation found for attestation_imei (8985230697018835192) -->
-    <skip />
-    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
-    <skip />
-    <!-- no translation found for attestation_meid (6837237287403480594) -->
-    <skip />
-    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
-    <skip />
-    <!-- no translation found for attestation_model (8223243376214262662) -->
-    <skip />
-    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
-    <skip />
-    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
-    <skip />
-    <!-- no translation found for yes (6686215078709381643) -->
-    <skip />
-    <!-- no translation found for no (5957591978126937912) -->
-    <skip />
-    <!-- no translation found for unknown (6936738212381747979) -->
-    <skip />
-    <!-- no translation found for attestation_failed (7989272430189028826) -->
-    <skip />
+    <string name="attestation_verified" msgid="6535873137799452259">"Geverifieerde sertifikaat"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"Toestel is gesluit"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Geverifieerde selflaaitoestand"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"Sekuriteitsvlak"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Keymaster-weergawe"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Keymaster-sekuriteitsvlak"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"Bedryfstelselweergawe"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"Handelsmerk"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"Toestel"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"Produk"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"Reeks"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"Tweede IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"Vervaardiger"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"Model"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Verkoperregstellingvlak"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Selflaairegstellingvlak"</string>
+    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Terugrolbestand"</string>
+    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Terugrolbestandheid"</string>
+    <string name="yes" msgid="6686215078709381643">"Ja"</string>
+    <string name="no" msgid="5957591978126937912">"Nee"</string>
+    <string name="unknown" msgid="6936738212381747979">"Onbekend"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"Attestasie het misluk"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"Evaluasieresultate"</string>
-    <!-- no translation found for attestation_results (9089126954790727665) -->
-    <skip />
+    <string name="attestation_results" msgid="9089126954790727665">"Attestasieresultate"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"Tweede IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"Reeksnommer"</string>
-    <string name="bootloader_locked_title" msgid="4498089738937695995">"Selflaai-app is gesluit"</string>
-    <string name="trustworthy_title" msgid="5360267928618795351">"Toestel is vertroubaar"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Selflaaiprogram is gesluit"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Toestel is betroubaar"</string>
     <string name="display_status_title" msgid="7827806798539639832">"Vertoon status"</string>
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"Raaksensorstatus"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"Attestasiebesonderhede"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"Attestasie het misluk"</string>
-    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
-    <skip />
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"Kon nie bepaal of toestel betroubaar is nie"</string>
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Probeer weer attestasie"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Kon nie attestasie verifieer nie; gaan jou verbinding na en probeer weer."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Volgende stappe"</string>
@@ -140,7 +126,7 @@
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skandeer nou"</string>
     <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Gaan op die toestel wat jy wil evalueer na\n Instellings/Toesteldiagnostiek/Geëvalueerde toestel\n Volg die porboodskappe op daardie toestel."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Volg die porboodskappe op die geëvalueerde toestel. Wanneer jy gevra word, druk hier om op hierdie toestel aan te gaan."</string>
-    <string name="screen_test_summary" msgid="6565006807310186664">"’n Reeks skerms sal nou aan jou gewys word. Bestudeer elkeen en kyk vir defekte. Sodra jy tevrede is, raak aan die skerm om na die volgende een toe te beweeg. Jy sal aan die einde gevra word of die skerms onbesmet lyk."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"’n Reeks skerms sal nou aan jou gewys word. Bestudeer elkeen en kyk vir defekte. Sodra jy tevrede is, raak aan die skerm om na die volgende een toe te beweeg. Jy sal aan die einde gevra word of dit lyk asof die skerms sonder probleme is."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"’n Reeks skerms sal nou aan jou gewys word. Bestudeer elkeen en kyk vir defekte. Raak aan die skerm om na die volgende een toe te beweeg."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Kies die opsie hieronder wat die beste by die toestand van die skerm pas."</string>
     <string name="touch_test_summary" msgid="508062796771632474">"’n Rooi skerm sal nou aan jou gewys word.\n \n Vryf jou vinger oor die skerm totdat die skerm heeltemal wit is. As jy ’n sekere deel van die skerm nie wit kan maak nie, korttik op die skerm om aan te dui dat die raaksensor nie ten volle werk nie.\n \n As jy wil, kan jy vanaf die verslagskerm terugswiep en waar jy opgehou het aangaan met die toets.\n"</string>

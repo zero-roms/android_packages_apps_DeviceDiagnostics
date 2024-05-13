@@ -17,13 +17,13 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
+    <string name="app_name" msgid="4531685026837318886">"设备诊断"</string>
     <string name="app_title" msgid="7463703024205195273">"设备诊断"</string>
     <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
     <string name="activity_continue" msgid="2190118984182069151">"继续"</string>
     <string name="unavailable" msgid="7842920330665850121">"不可用"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"正在连接…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"组件运行状况"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"组件健康度"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"评估模式"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"手动测试"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"显示测试"</string>
@@ -42,16 +42,28 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"选择可信设备"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"也可以在下方列表中选择所需设备"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"连接失败，请重试。"</string>
-    <string name="battery_health_title" msgid="3945318982701313271">"运行状况"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"健康度"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"制造日期"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"首次使用日期"</string>
     <string name="battery_cycle_count" msgid="1002728954996996785">"循环次数"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"序列号"</string>
     <string name="battery_part_status" msgid="504091754655232085">"部件状态"</string>
-    <string name="battery_original" msgid="2552600989411644999">"原始"</string>
-    <string name="battery_replaced" msgid="2356023769075469649">"已更换"</string>
+    <string name="battery_original" msgid="2552600989411644999">"原电池"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"更换的电池"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"部件历史记录"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"原始容量的 %1$d%%"</string>
+    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
+    <skip />
+    <!-- no translation found for battery_health_cold (4164463402047143412) -->
+    <skip />
+    <!-- no translation found for battery_health_dead (3658507844189988433) -->
+    <skip />
+    <!-- no translation found for battery_health_good (4850784608550784236) -->
+    <skip />
+    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
+    <skip />
+    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
+    <skip />
     <string name="storage_health_title" msgid="2499144010514101535">"存储空间状况"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"总容量"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -60,62 +72,37 @@
     <string name="cancel_button" msgid="7011882021431169180">"取消"</string>
     <string name="try_again_button" msgid="6015477950108798246">"请重试"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"触摸测试结果"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"这是触摸测试结果。您可以回到先前的页面重新运行测试。"</string>
-    <string name="touch_test_good_title" msgid="4008967693136685770">"触摸传感器测试已通过"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"触摸传感器测试未通过"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"这是触摸测试的结果。您可以返回并重新运行测试。"</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"已通过触摸传感器测试"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"未通过触摸传感器测试"</string>
     <string name="pass" msgid="6411665547268368837">"通过"</string>
-    <string name="fail" msgid="3918028202746427731">"失败"</string>
-    <!-- no translation found for attestation_verified (6535873137799452259) -->
-    <skip />
-    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
-    <skip />
-    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
-    <skip />
-    <!-- no translation found for attestation_security_level (6633918464653325429) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
-    <skip />
-    <!-- no translation found for attestation_os_version (4351993398048033601) -->
-    <skip />
-    <!-- no translation found for attestation_brand (5238699762448331155) -->
-    <skip />
-    <!-- no translation found for attestation_device (1984309818766961098) -->
-    <skip />
-    <!-- no translation found for attestation_product (7325714994397112640) -->
-    <skip />
-    <!-- no translation found for attestation_serial (5001580041093391656) -->
-    <skip />
-    <!-- no translation found for attestation_imei (8985230697018835192) -->
-    <skip />
-    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
-    <skip />
-    <!-- no translation found for attestation_meid (6837237287403480594) -->
-    <skip />
-    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
-    <skip />
-    <!-- no translation found for attestation_model (8223243376214262662) -->
-    <skip />
-    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
-    <skip />
-    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
-    <skip />
-    <!-- no translation found for yes (6686215078709381643) -->
-    <skip />
-    <!-- no translation found for no (5957591978126937912) -->
-    <skip />
-    <!-- no translation found for unknown (6936738212381747979) -->
-    <skip />
-    <!-- no translation found for attestation_failed (7989272430189028826) -->
-    <skip />
+    <string name="fail" msgid="3918028202746427731">"未通过"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"已验证证书"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"设备已锁定"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"已验证启动状态"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"安全等级"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Keymaster 版本"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Keymaster 安全等级"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"操作系统版本"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"品牌"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"设备"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"产品"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"序列"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"第二个 IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"制造商"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"型号"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"供应商补丁级别"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"启动补丁级别"</string>
+    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"抗回滚"</string>
+    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"抗回滚"</string>
+    <string name="yes" msgid="6686215078709381643">"是"</string>
+    <string name="no" msgid="5957591978126937912">"否"</string>
+    <string name="unknown" msgid="6936738212381747979">"未知"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"认证失败"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"评估结果"</string>
-    <!-- no translation found for attestation_results (9089126954790727665) -->
-    <skip />
+    <string name="attestation_results" msgid="9089126954790727665">"认证结果"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"第二个 IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"序列号"</string>
@@ -124,11 +111,10 @@
     <string name="display_status_title" msgid="7827806798539639832">"显示状态"</string>
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"触摸传感器状态"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"认证详情"</string>
-    <string name="attestation_local_failure_title" msgid="3071623434519219695">"认证失败"</string>
-    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
-    <skip />
-    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"重试认证"</string>
-    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"无法验证认证，请检查网络连接，然后重试。"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"未通过认证"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"无法确定设备是否可信"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"再次尝试认证"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"认证验证失败，请检查网络连接，然后重试。"</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"后续步骤"</string>
     <string name="evaluate_another_title" msgid="6275248738668045886">"评估其他设备"</string>
     <string name="back_to_main_title" msgid="2496143013300121780">"返回主菜单"</string>
@@ -139,10 +125,10 @@
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"在要评估的设备上完成测试后，这里就会显示结果"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"立即扫描"</string>
     <string name="trusted_scan_now_summary" msgid="2817021308986564134">"在要评估的设备上，前往\n“设置/设备诊断/已评估的设备”\n按照该设备上的提示操作。"</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"按照已评估的设备上的提示操作。系统提示时，按这里即可继续在这部设备上操作。"</string>
-    <string name="screen_test_summary" msgid="6565006807310186664">"现在，系统将显示一系列页面。请检查每一个页面，看看是否有缺陷。检查完一个页面后，轻触该页面即可移至下一个页面。最后，系统会询问您这些页面是否均无瑕疵。"</string>
-    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"现在，系统将显示一系列页面。请检查每一个页面，看看是否有缺陷。轻触当前页面即可移至下一个页面。"</string>
-    <string name="screen_test_finalize" msgid="9147123495799275930">"请在下方选择与页面状况最相符的选项。"</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"现在，系统将显示红色页面。\n \n用手指在页面上摩擦，直到页面完全变白。如果您无法将页面的某个部分变白，请快速点按页面，以表明触摸传感器未完全正常运行。\n \n如果需要，您可以从报告页面往回滑动，并从上次中断的地方继续进行测试。\n"</string>
+    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"按照已评估的设备上的提示操作。收到提示时，按这里即可继续在这部设备上操作。"</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"现在，系统将显示一系列画面。请检查每一个画面，看看是否有缺陷。检查完一个画面后，轻触该画面即可进入下一个画面。最后，系统会询问您这些画面看起来是否无瑕疵。"</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"现在，系统将显示一系列画面。请检查每一个画面，看看是否有缺陷。轻触当前画面可进入下一个画面。"</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"请在下方选择与画面状况最相符的选项。"</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"现在，系统将显示红色画面。\n\n用手指在画面上摩擦，直到画面完全变白。如果您无法将画面的某个部分变白，请快速点按画面，以表明触摸传感器未完全正常运行。\n\n如果需要，您可以从报告画面往回滑动，并从上次中断的地方继续进行测试。\n"</string>
     <string name="scan_result" msgid="7232716409194522023">"请扫描可信设备上的这个二维码。扫描完成后，您可以在这部设备上按下“完成”。"</string>
 </resources>

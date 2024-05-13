@@ -52,6 +52,18 @@
     <string name="battery_replaced" msgid="2356023769075469649">"மாற்றப்பட்டது"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"பேட்டரியின் முந்தைய பாகம்"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"அசல் திறனில் %1$d%%"</string>
+    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
+    <skip />
+    <!-- no translation found for battery_health_cold (4164463402047143412) -->
+    <skip />
+    <!-- no translation found for battery_health_dead (3658507844189988433) -->
+    <skip />
+    <!-- no translation found for battery_health_good (4850784608550784236) -->
+    <skip />
+    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
+    <skip />
+    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
+    <skip />
     <string name="storage_health_title" msgid="2499144010514101535">"சேமிப்பகத்தின் நிலை"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"மொத்த இடம்"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -65,57 +77,32 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"டச் சென்சார் பரிசோதனை தோல்வியடைந்தது"</string>
     <string name="pass" msgid="6411665547268368837">"வெற்றியடைந்தது"</string>
     <string name="fail" msgid="3918028202746427731">"தோல்வி"</string>
-    <!-- no translation found for attestation_verified (6535873137799452259) -->
-    <skip />
-    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
-    <skip />
-    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
-    <skip />
-    <!-- no translation found for attestation_security_level (6633918464653325429) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
-    <skip />
-    <!-- no translation found for attestation_os_version (4351993398048033601) -->
-    <skip />
-    <!-- no translation found for attestation_brand (5238699762448331155) -->
-    <skip />
-    <!-- no translation found for attestation_device (1984309818766961098) -->
-    <skip />
-    <!-- no translation found for attestation_product (7325714994397112640) -->
-    <skip />
-    <!-- no translation found for attestation_serial (5001580041093391656) -->
-    <skip />
-    <!-- no translation found for attestation_imei (8985230697018835192) -->
-    <skip />
-    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
-    <skip />
-    <!-- no translation found for attestation_meid (6837237287403480594) -->
-    <skip />
-    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
-    <skip />
-    <!-- no translation found for attestation_model (8223243376214262662) -->
-    <skip />
-    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
-    <skip />
-    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
-    <skip />
-    <!-- no translation found for yes (6686215078709381643) -->
-    <skip />
-    <!-- no translation found for no (5957591978126937912) -->
-    <skip />
-    <!-- no translation found for unknown (6936738212381747979) -->
-    <skip />
-    <!-- no translation found for attestation_failed (7989272430189028826) -->
-    <skip />
+    <string name="attestation_verified" msgid="6535873137799452259">"சரிபார்க்கப்பட்ட சான்றிதழ்"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"சாதனம் பூட்டப்பட்டுள்ளது"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"சரிபார்க்கப்பட்ட தொடக்கத்தின் நிலை"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"பாதுகாப்பு நிலை"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Keymaster பதிப்பு"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Keymaster பாதுகாப்பு நிலை"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"OS பதிப்பு"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"பிராண்டு"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"சாதனம்"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"தயாரிப்பு"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"வரிசை எண்"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"இரண்டாவது IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"உற்பத்தியாளர்"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"மாடல்"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"விற்பனையாளர் இணைப்பு நிலை"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"பேட்ச் நிலையைத் தொடங்கு"</string>
+    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"ரோல்பேக் ரெசிஸ்டண்ட்"</string>
+    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"ரோல்பேக் ரெசிஸ்டன்ஸ்"</string>
+    <string name="yes" msgid="6686215078709381643">"ஆம்"</string>
+    <string name="no" msgid="5957591978126937912">"இல்லை"</string>
+    <string name="unknown" msgid="6936738212381747979">"தெரியவில்லை"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"சான்றொப்பம் வழங்க முடியவில்லை"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"மதிப்பீட்டு முடிவுகள்"</string>
-    <!-- no translation found for attestation_results (9089126954790727665) -->
-    <skip />
+    <string name="attestation_results" msgid="9089126954790727665">"சான்றொப்ப முடிவுகள்"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"இரண்டாவது IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"வரிசை எண்"</string>
@@ -125,8 +112,7 @@
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"டச் சென்சாரின் நிலை"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"சான்றொப்ப விவரங்கள்"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"சான்றொப்பம் வழங்க முடியவில்லை"</string>
-    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
-    <skip />
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"சாதனம் நம்பகமானதா என்பதைத் தீர்மானிக்க முடியவில்லை"</string>
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"சான்றொப்பம் வழங்க மீண்டும் முயலுங்கள்"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"சான்றொப்பத்தைச் சரிபார்க்க முடியவில்லை, உங்கள் இணைப்பைச் சரிபார்த்துவிட்டு முயலவும்."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"அடுத்து செய்ய வேண்டியவை"</string>
