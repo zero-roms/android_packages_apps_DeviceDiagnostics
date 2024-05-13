@@ -50,3 +50,11 @@ message DeviceReport {
     BatteryInfo battery = 3;
     StorageInfo storage = 4;
 }
+
+message BluetoothPacket {
+    oneof payload {
+        TrustedDeviceInfo trusted_device_info = 1;
+        DeviceReport device_report = 2;
+        bool ack = 3;
+    }
+}

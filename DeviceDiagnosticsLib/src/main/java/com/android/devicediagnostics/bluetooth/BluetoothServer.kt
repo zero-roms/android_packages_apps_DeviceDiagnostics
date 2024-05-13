@@ -25,39 +25,15 @@ import android.bluetooth.le.AdvertiseSettings
 import android.bluetooth.le.BluetoothLeAdvertiser
 import android.os.ParcelUuid
 import android.util.Log
+import com.android.devicediagnostics.Protos.BluetoothPacket
+import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.Protos.TrustedDeviceInfo
 import com.android.devicediagnostics.runInBackground
 import java.util.UUID
-import org.json.JSONObject
 
 val SERVICE_UUID: UUID = UUID.fromString("0000b81d-0000-1000-8000-00805f9b34fb")
 private const val TAG = "BluetoothServer"
-private const val QRCODE_VERSION = 1
 const val CHUNK = 4096
-
-private const val JSON_PSM_KEY = "PSM"
-private const val JSON_VERSION_KEY = "version"
-
-class BluetoothConnectionData(var psm: Int = 0) {
-    companion object Helpers {
-        fun fromJson(json: String): BluetoothConnectionData {
-            val obj = JSONObject(json)
-            var version: Int = 0
-            if (obj.has(JSON_VERSION_KEY)) {
-                version = obj.getInt(JSON_VERSION_KEY)
-            }
-            if (version < QRCODE_VERSION) {
-                throw Exception("Unsupported version")
-            }
-            val psm = obj.getInt(JSON_PSM_KEY)
-            return BluetoothConnectionData(psm)
-        }
-    }
-
-    override fun toString(): String {
-        return JSONObject().put(JSON_PSM_KEY, psm).put(JSON_VERSION_KEY, QRCODE_VERSION).toString()
-    }
-}
 
 object BluetoothServer {
     private val adapter
@@ -80,42 +56,35 @@ object BluetoothServer {
             serverSocket!!.close()
             serverSocket = null
             advertiser!!.stopAdvertising(advertiseCallback)
-            var output = socket!!.outputStream
-            output.write(trustedDeviceInfo.toByteArray())
+
+            val packet =
+                BluetoothPacket.newBuilder().setTrustedDeviceInfo(trustedDeviceInfo).build()
+            writeBluetoothPacket(socket!!, packet)
             Log.d(TAG, "wrote start message")
             written()
         }
     }
 
-    private fun read(): ByteArray {
-        val input = socket!!.inputStream
-        var b = ByteArray(0)
-        while (true) {
-            val chunk = ByteArray(CHUNK)
-            val size = input.read(chunk)
-            b += chunk.slice(IntRange(0, size - 1))
-            if (size < CHUNK) break
+    private fun read(): BluetoothPacket {
+        return readBluetoothPacket(socket!!)
+    }
+
+    public fun readDeviceReport(): DeviceReport {
+        val message = read()
+        if (!message.hasDeviceReport()) {
+            throw Exception("Expected DeviceReport message")
         }
-        Log.d(TAG, "read: ${b.size}")
-        socket!!.outputStream.write("Done".toByteArray())
+
+        val ack = BluetoothPacket.newBuilder().setAck(true).build()
+        writeBluetoothPacket(socket!!, ack)
+
+        close()
+        return message.deviceReport
+    }
+
+    private fun close() {
         socket!!.close()
         socket = null
-        return b
-    }
-
-    interface ReadListener {
-        fun onBluetoothRead(bytes: ByteArray)
-        fun onBluetoothError(e: Exception)
-    }
-
-    fun startAsyncRead(listener: ReadListener) {
-        runInBackground() {
-            try {
-                listener.onBluetoothRead(read())
-            } catch (e: Exception) {
-                listener.onBluetoothError(e)
-            }
-        }
     }
 
     private var advertiser: BluetoothLeAdvertiser? = null

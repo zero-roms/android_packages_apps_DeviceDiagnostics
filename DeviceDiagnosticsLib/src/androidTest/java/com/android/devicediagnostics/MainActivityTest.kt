@@ -139,7 +139,7 @@ class MainActivityTest {
         // Set up the mock bluetooth client.
         val challenge = ByteString.copyFrom("test challenge", Charset.defaultCharset())
         val deviceInfo = TrustedDeviceInfo.newBuilder().setChallenge(challenge).build()
-        whenever(btClient.read()).thenReturn(deviceInfo.toByteArray())
+        whenever(btClient.readTrustedDeviceInfo()).thenReturn(deviceInfo)
 
         // Move to the QrCodeScanner activity.
         onView(withText("Evaluated device")).perform(click())
@@ -221,14 +221,8 @@ class MainActivityTest {
 
         onView(withText("Continue on the device being evaluated")).check(matches(isDisplayed()))
 
-        // Catch the call to btServer.startAsyncRead().
-        val readListenerCaptor = argumentCaptor<BluetoothServer.ReadListener>()
-        verify(btServer, times(1)).startAsyncRead(readListenerCaptor.capture())
-
         setupAttestation()
-
-        // Finish the read operation.
-        readListenerCaptor.firstValue.onBluetoothRead(deviceReport.toByteArray())
+        whenever(btServer.readDeviceReport()).thenReturn(deviceReport)
 
         intended(hasComponent(DisplayResultActivity::class.java.name))
         waitForActivity<DisplayResultActivity>()

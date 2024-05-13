@@ -83,8 +83,7 @@ class QrCodeScanFragment() :
 
     override fun onBluetoothConnected() {
         try {
-            val bytes = bluetoothClient!!.read()
-            val trustedDeviceInfo = Protos.TrustedDeviceInfo.parseFrom(bytes)
+            val trustedDeviceInfo = bluetoothClient!!.readTrustedDeviceInfo()
             requireActivity().runOnUiThread { onDeviceConnected(trustedDeviceInfo) }
         } catch (e: Exception) {
             Log.e(TAG, "Could not connect to trusted device: $e")

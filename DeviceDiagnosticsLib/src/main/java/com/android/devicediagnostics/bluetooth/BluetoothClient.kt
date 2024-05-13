@@ -26,7 +26,9 @@ import android.bluetooth.le.ScanResult
 import android.bluetooth.le.ScanSettings
 import android.os.ParcelUuid
 import android.util.Log
+import com.android.devicediagnostics.Protos.BluetoothPacket
 import com.android.devicediagnostics.Protos.DeviceReport
+import com.android.devicediagnostics.Protos.TrustedDeviceInfo
 
 private const val TAG = "BluetoothClient"
 
@@ -48,24 +50,12 @@ object BluetoothClient : ScanCallback() {
         Log.d(TAG, "Started scan $scanner")
     }
 
-    fun read(): ByteArray {
-        val input = socket!!.inputStream
-        var b = ByteArray(0)
-        while (true) {
-            val chunk = ByteArray(CHUNK)
-            val size = input.read(chunk)
-            b += chunk.slice(IntRange(0, size - 1))
-            if (size < CHUNK) break
+    fun readTrustedDeviceInfo(): TrustedDeviceInfo {
+        val message = readBluetoothPacket(socket!!)
+        if (!message.hasTrustedDeviceInfo()) {
+            throw Exception("Expected TrustedDeviceInfo message")
         }
-        Log.d(TAG, "read ${b.size} bytes")
-        return b
-    }
-
-    private fun write(bytes: ByteArray) {
-        val output = socket!!.outputStream
-        output.write(bytes)
-        socket!!.inputStream.readNBytes(4)
-        socket!!.close()
+        return message.trustedDeviceInfo
     }
 
     private var socket: BluetoothSocket? = null
@@ -92,7 +82,9 @@ object BluetoothClient : ScanCallback() {
     }
 
     fun sendReport(report: DeviceReport) {
-        write(report.toByteArray())
+        val packet = BluetoothPacket.newBuilder().setDeviceReport(report).build()
+        writeBluetoothPacket(socket!!, packet)
+        socket!!.close()
     }
 
     private fun connect(device: BluetoothDevice?): Boolean {

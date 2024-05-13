@@ -18,17 +18,19 @@ package com.android.devicediagnostics.trusted
 
 import android.Manifest
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.commit
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.PermissionsHelper
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.R
-import com.android.devicediagnostics.bluetooth.BluetoothServer
+import com.android.devicediagnostics.runInBackground
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import java.lang.Exception
 
 const val DEVICE_REPORT_KEY = "device_report"
+private const val TAG = "WaitForResultsActivity"
 
 class WaitForResultFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -36,7 +38,7 @@ class WaitForResultFragment() : PreferenceFragmentCompat() {
     }
 }
 
-class WaitForResultActivity : CollapsingToolbarBaseActivity(), BluetoothServer.ReadListener {
+class WaitForResultActivity : CollapsingToolbarBaseActivity() {
     private var mFragment = WaitForResultFragment()
 
     private val permissions =
@@ -63,20 +65,23 @@ class WaitForResultActivity : CollapsingToolbarBaseActivity(), BluetoothServer.R
             setReorderingAllowed(true)
             add(R.id.fragment_container_view, mFragment)
         }
+
         val btServer = ApplicationInterface.app.getBluetoothServer()
-        btServer.startAsyncRead(this)
+        runInBackground {
+            try {
+                val report = btServer.readDeviceReport()
+                runOnUiThread { onReportReceived(report) }
+            } catch (e: Exception) {
+                runOnUiThread { onBluetoothError(e) }
+            }
+        }
     }
 
-    override fun onBluetoothRead(bytes: ByteArray) {
-        val report = DeviceReport.parseFrom(bytes)
-        runOnUiThread { onReportReceived(report) }
+    private fun onBluetoothError(e: Exception) {
+        Log.e(TAG, "Could not read device report: $e")
     }
 
-    override fun onBluetoothError(e: Exception) {
-        // :TODO: handle
-    }
-
-    fun onReportReceived(report: DeviceReport) {
+    private fun onReportReceived(report: DeviceReport) {
         val state = TrustedState.fromActivity(this)!!
         state.report = report
         launchTrustedActivity(this, DisplayResultActivity::class.java.name, state)
