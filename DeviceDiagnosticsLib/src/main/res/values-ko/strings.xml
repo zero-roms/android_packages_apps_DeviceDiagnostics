@@ -52,6 +52,18 @@
     <string name="battery_replaced" msgid="2356023769075469649">"교체됨"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"부품 이력"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"원래 용량의 %1$d%%"</string>
+    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
+    <skip />
+    <!-- no translation found for battery_health_cold (4164463402047143412) -->
+    <skip />
+    <!-- no translation found for battery_health_dead (3658507844189988433) -->
+    <skip />
+    <!-- no translation found for battery_health_good (4850784608550784236) -->
+    <skip />
+    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
+    <skip />
+    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
+    <skip />
     <string name="storage_health_title" msgid="2499144010514101535">"저장용량 상태"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"총 용량"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -65,57 +77,32 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"터치 센서 테스트 실패"</string>
     <string name="pass" msgid="6411665547268368837">"통과"</string>
     <string name="fail" msgid="3918028202746427731">"실패"</string>
-    <!-- no translation found for attestation_verified (6535873137799452259) -->
-    <skip />
-    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
-    <skip />
-    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
-    <skip />
-    <!-- no translation found for attestation_security_level (6633918464653325429) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
-    <skip />
-    <!-- no translation found for attestation_os_version (4351993398048033601) -->
-    <skip />
-    <!-- no translation found for attestation_brand (5238699762448331155) -->
-    <skip />
-    <!-- no translation found for attestation_device (1984309818766961098) -->
-    <skip />
-    <!-- no translation found for attestation_product (7325714994397112640) -->
-    <skip />
-    <!-- no translation found for attestation_serial (5001580041093391656) -->
-    <skip />
-    <!-- no translation found for attestation_imei (8985230697018835192) -->
-    <skip />
-    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
-    <skip />
-    <!-- no translation found for attestation_meid (6837237287403480594) -->
-    <skip />
-    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
-    <skip />
-    <!-- no translation found for attestation_model (8223243376214262662) -->
-    <skip />
-    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
-    <skip />
-    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
-    <skip />
-    <!-- no translation found for yes (6686215078709381643) -->
-    <skip />
-    <!-- no translation found for no (5957591978126937912) -->
-    <skip />
-    <!-- no translation found for unknown (6936738212381747979) -->
-    <skip />
-    <!-- no translation found for attestation_failed (7989272430189028826) -->
-    <skip />
+    <string name="attestation_verified" msgid="6535873137799452259">"검증된 인증서"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"기기 잠김"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"자체 검사 부팅 상태"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"보안 수준"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Keymaster 버전"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Keymaster 보안 수준"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"OS 버전"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"브랜드"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"기기"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"제품"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"일련번호"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"두 번째 IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"제조업체"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"모델"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"공급업체 패치 수준"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"부팅 패치 수준"</string>
+    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"롤백 방지"</string>
+    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"롤백 방지"</string>
+    <string name="yes" msgid="6686215078709381643">"예"</string>
+    <string name="no" msgid="5957591978126937912">"아니요"</string>
+    <string name="unknown" msgid="6936738212381747979">"알 수 없음"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"증명 실패"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"평가 결과"</string>
-    <!-- no translation found for attestation_results (9089126954790727665) -->
-    <skip />
+    <string name="attestation_results" msgid="9089126954790727665">"증명 결과"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"두 번째 IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"일련번호"</string>
@@ -125,8 +112,7 @@
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"터치 센서 상태"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"증명 세부정보"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"증명 실패"</string>
-    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
-    <skip />
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"기기 신뢰 여부를 확인할 수 없습니다."</string>
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"증명 재시도"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"증명을 확인할 수 없습니다. 연결을 확인한 후 다시 시도해 주세요."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"다음 단계"</string>

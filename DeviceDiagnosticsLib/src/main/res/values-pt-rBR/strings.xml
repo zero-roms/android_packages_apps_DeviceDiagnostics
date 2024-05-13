@@ -18,7 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
-    <string name="app_title" msgid="7463703024205195273">"Diagnóstico do dispositivo"</string>
+    <string name="app_title" msgid="7463703024205195273">"Diagnósticos do dispositivo"</string>
     <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Continuar"</string>
     <string name="unavailable" msgid="7842920330665850121">"Indisponível"</string>
@@ -52,70 +52,57 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Substituída"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Histórico da peça"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% da capacidade original"</string>
+    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
+    <skip />
+    <!-- no translation found for battery_health_cold (4164463402047143412) -->
+    <skip />
+    <!-- no translation found for battery_health_dead (3658507844189988433) -->
+    <skip />
+    <!-- no translation found for battery_health_good (4850784608550784236) -->
+    <skip />
+    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
+    <skip />
+    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
+    <skip />
     <string name="storage_health_title" msgid="2499144010514101535">"Integridade do armazenamento"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Capacidade total"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% de duração restante"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"Vida útil restante: %1$d%%"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Conceda as permissões solicitadas para continuar no modo de avaliação."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Cancelar"</string>
-    <string name="try_again_button" msgid="6015477950108798246">"Tente de novo"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Tentar de novo"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"Resultado do teste de toque"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"Este é o resultado do teste de toque. Para repetir o teste, volte algumas etapas."</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Este é o resultado do teste de toque. Para repetir, volte algumas etapas."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"O sensor de toque foi aprovado no teste"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"O teste do sensor de toque foi concluído com erros"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"O sensor de toque foi reprovado no teste"</string>
     <string name="pass" msgid="6411665547268368837">"Aprovado"</string>
     <string name="fail" msgid="3918028202746427731">"Falha"</string>
-    <!-- no translation found for attestation_verified (6535873137799452259) -->
-    <skip />
-    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
-    <skip />
-    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
-    <skip />
-    <!-- no translation found for attestation_security_level (6633918464653325429) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
-    <skip />
-    <!-- no translation found for attestation_os_version (4351993398048033601) -->
-    <skip />
-    <!-- no translation found for attestation_brand (5238699762448331155) -->
-    <skip />
-    <!-- no translation found for attestation_device (1984309818766961098) -->
-    <skip />
-    <!-- no translation found for attestation_product (7325714994397112640) -->
-    <skip />
-    <!-- no translation found for attestation_serial (5001580041093391656) -->
-    <skip />
-    <!-- no translation found for attestation_imei (8985230697018835192) -->
-    <skip />
-    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
-    <skip />
-    <!-- no translation found for attestation_meid (6837237287403480594) -->
-    <skip />
-    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
-    <skip />
-    <!-- no translation found for attestation_model (8223243376214262662) -->
-    <skip />
-    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
-    <skip />
-    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
-    <skip />
-    <!-- no translation found for yes (6686215078709381643) -->
-    <skip />
-    <!-- no translation found for no (5957591978126937912) -->
-    <skip />
-    <!-- no translation found for unknown (6936738212381747979) -->
-    <skip />
-    <!-- no translation found for attestation_failed (7989272430189028826) -->
-    <skip />
+    <string name="attestation_verified" msgid="6535873137799452259">"Certificado verificado"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"Dispositivo bloqueado"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Estado da Inicialização verificada"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"Nível de segurança"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Versão do Keymaster"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Nível de segurança do Keymaster"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"Versão do SO"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"Marca"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"Dispositivo"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"Produto"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"Serial"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"Segundo IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"Fabricante"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"Modelo"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Nível do patch do fornecedor"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Nível do patch de inicialização"</string>
+    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Resistente a reversão"</string>
+    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Resistência a reversão"</string>
+    <string name="yes" msgid="6686215078709381643">"Sim"</string>
+    <string name="no" msgid="5957591978126937912">"Não"</string>
+    <string name="unknown" msgid="6936738212381747979">"Desconhecido"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"Falha no atestado"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"Resultados da avaliação"</string>
-    <!-- no translation found for attestation_results (9089126954790727665) -->
-    <skip />
+    <string name="attestation_results" msgid="9089126954790727665">"Resultados do atestado"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"Segundo IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"Número de série"</string>
@@ -125,8 +112,7 @@
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"Status do sensor de toque"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"Detalhes do atestado"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"Falha no atestado"</string>
-    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
-    <skip />
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"Não foi possível determinar se o dispositivo é confiável"</string>
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Repetir atestado"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Falha na verificação do atestado. Confira sua conexão e tente de novo."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Próximas etapas"</string>
@@ -136,7 +122,7 @@
     <string name="not_locked" msgid="1663929635666930122">"Não bloqueado"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR code"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continuar no dispositivo em avaliação"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Conclua os testes no dispositivo que você está avaliando. Os resultados vão aparecer aqui."</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Conclua os testes no dispositivo que você está avaliando. Os resultados vão aparecer aqui"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Verificar agora"</string>
     <string name="trusted_scan_now_summary" msgid="2817021308986564134">"No dispositivo que você quer avaliar, acesse \n Settings/DeviceDiagnostics/Evaluated Device\n. Siga as instruções nesse dispositivo."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Siga os comandos no dispositivo avaliado. Quando solicitado, pressione aqui para continuar neste dispositivo."</string>
@@ -144,5 +130,5 @@
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Agora, uma série de telas será mostrada. Analise cada uma delas e verifique se há defeitos. Toque na tela para passar para a próxima."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Selecione abaixo a opção que melhor corresponde à condição da tela."</string>
     <string name="touch_test_summary" msgid="508062796771632474">"Agora, uma tela vermelha será mostrada.\n \n Esfregue o dedo sobre a tela até que ela fique totalmente branca. Se isso não acontecer, toque rapidamente na tela para indicar que o sensor de toque não está funcionando por completo.\n \n Se achar necessário, volte para a tela de relatórios e continue o teste de onde parou.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"Leia este QR code no dispositivo de confiança. Após a leitura, pressione \"Concluído\" neste dispositivo."</string>
+    <string name="scan_result" msgid="7232716409194522023">"Leia este QR code no dispositivo de confiança. Após a leitura, pressione \"Concluir\" neste dispositivo."</string>
 </resources>

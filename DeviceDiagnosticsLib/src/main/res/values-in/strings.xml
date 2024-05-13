@@ -52,6 +52,18 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Diganti"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Histori Suku Cadang"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% kapasitas asli"</string>
+    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
+    <skip />
+    <!-- no translation found for battery_health_cold (4164463402047143412) -->
+    <skip />
+    <!-- no translation found for battery_health_dead (3658507844189988433) -->
+    <skip />
+    <!-- no translation found for battery_health_good (4850784608550784236) -->
+    <skip />
+    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
+    <skip />
+    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
+    <skip />
     <string name="storage_health_title" msgid="2499144010514101535">"Kesehatan penyimpanan"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Total kapasitas"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
