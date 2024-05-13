@@ -151,7 +151,7 @@ class QrCodeScanFragment() :
 
     override fun isValid(qrCode: String?): Boolean {
         try {
-            BluetoothConnectionData(qrCode!!)
+            BluetoothConnectionData.fromJson(qrCode!!)
         } catch (e: Exception) {
             return false
         }
@@ -162,7 +162,7 @@ class QrCodeScanFragment() :
         getSystemService<Vibrator>(activity!!, Vibrator::class.java)!!.vibrate(
             VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE)
         )
-        startBluetooth(BluetoothConnectionData(qrCode!!))
+        startBluetooth(BluetoothConnectionData.fromJson(qrCode!!))
     }
 }
 

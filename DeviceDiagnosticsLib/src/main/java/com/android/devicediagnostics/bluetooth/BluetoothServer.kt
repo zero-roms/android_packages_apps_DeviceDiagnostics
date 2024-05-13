@@ -32,17 +32,30 @@ import org.json.JSONObject
 
 val SERVICE_UUID: UUID = UUID.fromString("0000b81d-0000-1000-8000-00805f9b34fb")
 private const val TAG = "BluetoothServer"
+private const val QRCODE_VERSION = 1
 const val CHUNK = 4096
 
-private const val PSM = "PSM"
+private const val JSON_PSM_KEY = "PSM"
+private const val JSON_VERSION_KEY = "version"
 
 class BluetoothConnectionData(var psm: Int = 0) {
-    constructor(json: String) : this() {
-        psm = JSONObject(json).getInt(PSM)
+    companion object Helpers {
+        fun fromJson(json: String): BluetoothConnectionData {
+            val obj = JSONObject(json)
+            var version: Int = 0
+            if (obj.has(JSON_VERSION_KEY)) {
+                version = obj.getInt(JSON_VERSION_KEY)
+            }
+            if (version < QRCODE_VERSION) {
+                throw Exception("Unsupported version")
+            }
+            val psm = obj.getInt(JSON_PSM_KEY)
+            return BluetoothConnectionData(psm)
+        }
     }
 
     override fun toString(): String {
-        return JSONObject().put(PSM, psm).toString()
+        return JSONObject().put(JSON_PSM_KEY, psm).put(JSON_VERSION_KEY, QRCODE_VERSION).toString()
     }
 }
 
