@@ -50,6 +50,11 @@
   <string name="evaluated_confirm_send_data">Confirm the report to send to the trusted device.</string>
   <string name="evaluated_send_report">Send report</string>
   <string name="evaluated_finalizing_report">Finalizing report...</string>
+  <string name="bluetooth_error_title">Bluetooth error</string>
+  <string name="bluetooth_error_summary">There was an error communicating with the trusted device. Please verify that Bluetooth is enabled and try again.</string>
+  <string name="sending_report">Sending report to the trusted device...</string>
+  <string name="evaluation_complete_title">Evaluation complete</string>
+  <string name="evaluation_complete_summary">The results will now appear on the trusted device</string>
 
   <!-- Battery screen -->
   <string name="battery_health_title">Health</string>

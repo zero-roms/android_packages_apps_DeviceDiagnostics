@@ -18,6 +18,7 @@ package com.android.devicediagnostics.evaluated
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
@@ -36,15 +37,23 @@ import com.android.devicediagnostics.runInBackground
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.google.protobuf.ByteString
 
-class EvaluationFinalizeFragment() : PreferenceFragmentCompat() {
+private const val TAG = "EvaluationFinalize"
+
+class EvaluationFinalizeFragment(private val ok: Boolean) : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_done, rootKey)
-        findPreference<Preference>("Done")?.setOnPreferenceClickListener {
-            val intent = Intent(activity, MainActivity::class.java)
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            activity!!.startActivity(intent)
-            activity!!.finish()
-            true
+        findPreference<Preference>("Done")!!.also {
+            if (!ok) {
+                it.setTitle(R.string.bluetooth_error_title)
+                it.setSummary(R.string.bluetooth_error_summary)
+            }
+            it.setOnPreferenceClickListener {
+                val intent = Intent(activity, MainActivity::class.java)
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                activity!!.startActivity(intent)
+                activity!!.finish()
+                true
+            }
         }
     }
 }
@@ -107,14 +116,28 @@ class EvaluationFinalizeActivity : CollapsingToolbarBaseActivity() {
     }
 
     private fun sendReport(report: DeviceReport) {
-        hideHeaderLayout()
+        showProgressIndicator(R.string.sending_report)
 
-        val bluetoothClient = ApplicationInterface.app.getBluetoothClient()
-        bluetoothClient.sendReport(report)
+        runInBackground {
+            val bluetoothClient = ApplicationInterface.app.getBluetoothClient()
+            try {
+                bluetoothClient.sendReport(report)
+                runOnUiThread { onReportSent(true) }
+            } catch (e: Exception) {
+                Log.e(TAG, "Bluetooth error: $e")
+                runOnUiThread { onReportSent(false) }
+            }
+        }
 
         supportFragmentManager.commit {
-            setReorderingAllowed(true)
-            replace(R.id.fragment_container_view, EvaluationFinalizeFragment())
+            hide(supportFragmentManager.findFragmentById(R.id.fragment_container_view)!!)
+        }
+    }
+
+    private fun onReportSent(sent: Boolean) {
+        hideHeaderLayout()
+        supportFragmentManager.commit {
+            replace(R.id.fragment_container_view, EvaluationFinalizeFragment(sent))
         }
     }
 
@@ -135,9 +158,9 @@ class EvaluationFinalizeActivity : CollapsingToolbarBaseActivity() {
         container.visibility = View.GONE
     }
 
-    private fun showProgressIndicator(resId: Int) {
+    private fun showProgressIndicator(stringResId: Int) {
         val progress = showHeaderLayout(R.layout.progress_indicator)
         val text = progress.findViewById<TextView>(R.id.progress_explainer)
-        text!!.setText(resId)
+        text!!.setText(stringResId)
     }
 }

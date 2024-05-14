@@ -84,6 +84,10 @@ object BluetoothClient : ScanCallback() {
     fun sendReport(report: DeviceReport) {
         val packet = BluetoothPacket.newBuilder().setDeviceReport(report).build()
         writeBluetoothPacket(socket!!, packet)
+        val reply = readBluetoothPacket(socket!!)
+        if (!reply.hasAck()) {
+            throw Exception("Expected acknowledgement packet")
+        }
         socket!!.close()
     }
 
