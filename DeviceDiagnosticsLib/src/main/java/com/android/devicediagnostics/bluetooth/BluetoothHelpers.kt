@@ -16,6 +16,7 @@
 package com.android.devicediagnostics.bluetooth
 
 import android.bluetooth.BluetoothSocket
+import android.util.Base64
 import com.android.devicediagnostics.Protos.BluetoothPacket
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
@@ -25,7 +26,7 @@ import org.json.JSONObject
 const val BT_READ_SIZE = 4096
 const val BT_MAX_PACKET_SIZE = 1024 * 1024
 
-private const val QRCODE_VERSION = 2
+private const val QRCODE_VERSION = 3
 
 private fun readFully(socket: BluetoothSocket, n: Int): ByteArray {
     val b = ByteArray(n)
@@ -56,11 +57,12 @@ fun writeBluetoothPacket(socket: BluetoothSocket, packet: BluetoothPacket) {
     socket.outputStream.write(bytes)
 }
 
-private const val JSON_PSM_KEY = "PSM"
-private const val JSON_VERSION_KEY = "version"
-
-class BluetoothConnectionData(var psm: Int = 0) {
+class BluetoothConnectionData(val psm: Int = 0, val challenge: ByteArray) {
     companion object Helpers {
+        private const val JSON_PSM_KEY = "PSM"
+        private const val JSON_VERSION_KEY = "version"
+        private const val JSON_CHALLENGE_KEY = "challenge"
+
         fun fromJson(json: String): BluetoothConnectionData {
             val obj = JSONObject(json)
             var version: Int = 0
@@ -71,11 +73,18 @@ class BluetoothConnectionData(var psm: Int = 0) {
                 throw Exception("Unsupported version")
             }
             val psm = obj.getInt(JSON_PSM_KEY)
-            return BluetoothConnectionData(psm)
+            val challengeBase64 = obj.getString(JSON_CHALLENGE_KEY)
+            val challenge = Base64.decode(challengeBase64, Base64.URL_SAFE)
+            return BluetoothConnectionData(psm, challenge)
         }
     }
 
     override fun toString(): String {
-        return JSONObject().put(JSON_PSM_KEY, psm).put(JSON_VERSION_KEY, QRCODE_VERSION).toString()
+        val challengeBase64 = Base64.encodeToString(challenge, Base64.URL_SAFE)
+        return JSONObject()
+            .put(JSON_PSM_KEY, psm)
+            .put(JSON_VERSION_KEY, QRCODE_VERSION)
+            .put(JSON_CHALLENGE_KEY, challengeBase64)
+            .toString()
     }
 }

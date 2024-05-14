@@ -24,7 +24,6 @@ import android.graphics.SurfaceTexture
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
-import android.util.Log
 import android.util.Size
 import android.view.TextureView
 import android.view.View
@@ -35,7 +34,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.PermissionsHelper
-import com.android.devicediagnostics.Protos
+import com.android.devicediagnostics.Protos.TrustedDeviceInfo
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
@@ -81,13 +80,8 @@ class QrCodeScanFragment() :
         requireActivity().runOnUiThread { setConnectionProgressVisibility(true) }
     }
 
-    override fun onBluetoothConnected() {
-        try {
-            val trustedDeviceInfo = bluetoothClient!!.readTrustedDeviceInfo()
-            requireActivity().runOnUiThread { onDeviceConnected(trustedDeviceInfo) }
-        } catch (e: Exception) {
-            Log.e(TAG, "Could not connect to trusted device: $e")
-        }
+    override fun onBluetoothConnected(trustedDeviceInfo: TrustedDeviceInfo) {
+        requireActivity().runOnUiThread { onDeviceConnected(trustedDeviceInfo) }
     }
 
     override fun onBluetoothConnectionFailed() {
@@ -104,7 +98,7 @@ class QrCodeScanFragment() :
         pref.isVisible = visible
     }
 
-    private fun onDeviceConnected(trustedDeviceInfo: Protos.TrustedDeviceInfo) {
+    private fun onDeviceConnected(trustedDeviceInfo: TrustedDeviceInfo) {
         setConnectionProgressVisibility(false)
         startFullTestFlow(requireActivity(), trustedDeviceInfo)
     }

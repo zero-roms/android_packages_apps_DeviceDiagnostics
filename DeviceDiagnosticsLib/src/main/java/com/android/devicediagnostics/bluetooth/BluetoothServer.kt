@@ -40,7 +40,7 @@ object BluetoothServer {
         get() = BluetoothAdapter.getDefaultAdapter()
     private var serverSocket: BluetoothServerSocket? = null
     private var socket: BluetoothSocket? = null
-    var connectionData = BluetoothConnectionData()
+    var connectionData = BluetoothConnectionData(0, ByteArray(0))
     val bluetoothEnabled
         get() = adapter.isEnabled
 
@@ -48,7 +48,9 @@ object BluetoothServer {
         startAdvertisement()
         serverSocket = adapter.listenUsingInsecureL2capChannel()
         Log.d(TAG, "Server started with psm ${serverSocket?.psm}")
-        connectionData.psm = serverSocket!!.psm
+
+        connectionData =
+            BluetoothConnectionData(serverSocket!!.psm, trustedDeviceInfo.challenge.toByteArray())
 
         // Thread since this waits for connections and otherwise will block Ux
         runInBackground() {

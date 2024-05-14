@@ -34,7 +34,7 @@ private const val TAG = "BluetoothClient"
 
 object BluetoothClient : ScanCallback() {
     interface ScanListener {
-        fun onBluetoothConnected()
+        fun onBluetoothConnected(trustedDeviceInfo: TrustedDeviceInfo)
         fun onBluetoothConnectionFailed()
     }
 
@@ -95,14 +95,24 @@ object BluetoothClient : ScanCallback() {
         if (device == null) {
             return false
         }
+
+        var trustedDeviceInfo: TrustedDeviceInfo? = null
         try {
             Log.d(TAG, "Found device ${device.name}")
             socket = device.createInsecureL2capChannel(connectionData!!.psm)
             socket!!.connect()
+
+            trustedDeviceInfo = readTrustedDeviceInfo()
+            val challenge = trustedDeviceInfo.challenge.toByteArray()
+            if (!challenge.contentEquals(connectionData!!.challenge)) {
+                throw Exception("Trusted device has unexpected challenge")
+            }
+            Log.i(TAG, "Bluetooth connection succeeded")
         } catch (e: Exception) {
+            Log.e(TAG, "Bluetooth connection error: $e")
             return false
         }
-        listener?.onBluetoothConnected()
+        listener?.onBluetoothConnected(trustedDeviceInfo)
         stopScanning()
         return true
     }
