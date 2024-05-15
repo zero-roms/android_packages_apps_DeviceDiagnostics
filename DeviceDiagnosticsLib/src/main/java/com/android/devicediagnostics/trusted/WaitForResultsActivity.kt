@@ -20,6 +20,7 @@ import android.Manifest
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.commit
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.PermissionsHelper
@@ -35,6 +36,13 @@ private const val TAG = "WaitForResultsActivity"
 class WaitForResultFragment() : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_trusted_scan, rootKey)
+    }
+
+    fun onBluetoothError() {
+        findPreference<Preference>("continue")!!.also {
+            it.setTitle(R.string.bluetooth_error_title)
+            it.setSummary(R.string.trusted_bluetooth_error_summary)
+        }
     }
 }
 
@@ -79,6 +87,9 @@ class WaitForResultActivity : CollapsingToolbarBaseActivity() {
 
     private fun onBluetoothError(e: Exception) {
         Log.e(TAG, "Could not read device report: $e")
+        if (!mFragment.isDetached) {
+            mFragment.onBluetoothError()
+        }
     }
 
     private fun onReportReceived(report: DeviceReport) {

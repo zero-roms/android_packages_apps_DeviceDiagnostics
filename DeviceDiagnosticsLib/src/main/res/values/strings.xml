@@ -144,6 +144,7 @@ This is the result of the touch test. You can rerun the test by navigating back.
   <string name="qr_code_description">QR Code</string>
   <string name="continue_on_evaluated_title">Continue on the device being evaluated</string>
   <string name="continue_on_evaluated_summary">Complete the tests on the device that you are evaluating, then the results will appear here</string>
+  <string name="trusted_bluetooth_error_summary">There was an error communicating with the evaluated device. Please verify that Bluetooth is enabled and try again.</string>
   <string name="trusted_scan_now_title">Scan now</string>
   <string name="trusted_scan_now_summary">
     <![CDATA[
