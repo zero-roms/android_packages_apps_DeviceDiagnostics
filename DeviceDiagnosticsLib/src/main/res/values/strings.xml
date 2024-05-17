@@ -17,7 +17,7 @@
 <resources>
   <string name="app_name">DeviceDiagnostics</string>
   <string name="app_title">Device diagnostics</string>
-  <string name="package_name">com.android.devicediagnostics</string>
+  <string name="package_name" translatable="false">com.android.devicediagnostics</string>
 
   <string name="activity_continue">Continue</string>
   <string name="unavailable">Unavailable</string>
