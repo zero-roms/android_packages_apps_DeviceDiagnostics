@@ -55,6 +55,11 @@
   <string name="sending_report">Sending report to the trusted device...</string>
   <string name="evaluation_complete_title">Evaluation complete</string>
   <string name="evaluation_complete_summary">The results will now appear on the trusted device</string>
+  <string name="screen_test_result_title">Screen test result</string>
+  <string name="screen_test_good_result_title">Good</string>
+  <string name="screen_test_good_result_summary">No obvious defects</string>
+  <string name="screen_test_bad_result_title">Bad</string>
+  <string name="screen_test_bad_result_summary">Screen has defects</string>
 
   <!-- Battery screen -->
   <string name="battery_health_title">Health</string>
