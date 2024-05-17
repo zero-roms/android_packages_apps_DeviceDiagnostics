@@ -18,6 +18,8 @@ package com.android.devicediagnostics
 
 import android.app.Activity
 import android.os.Build
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import androidx.test.core.app.ActivityScenario.launch
 import androidx.test.espresso.Espresso.onView
@@ -95,6 +97,7 @@ private fun touchDownAndUp(): ViewAction? {
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest {
     private var oldApp: ApplicationInterface = ApplicationInterface.app
+    private var handler = Handler(Looper.getMainLooper())
 
     @Before
     fun setupMocks() {
@@ -121,6 +124,9 @@ class MainActivityTest {
 
     @Test
     fun testEvaluationFlow() {
+        val btServer = app.getBluetoothServer()
+        whenever(btServer.bluetoothEnabled).thenReturn(true)
+
         val activityScenario = launch(MainActivity::class.java)
         activityScenario.onActivity { activity: Activity ->
             assertEquals(activity.title, "Device diagnostics")
@@ -163,7 +169,7 @@ class MainActivityTest {
         onView(withId(R.id.mainLayout)).perform(touchDownAndUp())
         intended(hasComponent(ScreenTestFinalizeActivity::class.java.name))
         onView(withText("No obvious defects")).check(matches(isDisplayed()))
-        onView(withText("Defective in some way")).check(matches(isDisplayed()))
+        onView(withText("Screen has defects")).check(matches(isDisplayed()))
         onView(withText("No obvious defects")).perform(click())
         onView(withText("Continue")).check(matches(isDisplayed()))
         onView(withText("Continue")).perform(click())
@@ -186,12 +192,16 @@ class MainActivityTest {
 
     @Test
     fun testTrustedFlow() {
+        val btServer = app.getBluetoothServer()
+        whenever(btServer.bluetoothEnabled).thenReturn(true)
+
         val activityScenario = launch(MainActivity::class.java)
         activityScenario.onActivity { activity: Activity ->
             assertEquals(activity.title, "Device diagnostics")
         }
 
-        whenever(app.getRandomBytes(any())).thenReturn(ByteArray(32))
+        val challenge = ByteArray(32)
+        whenever(app.getRandomBytes(any())).thenReturn(challenge)
 
         onView(withText("Evaluation mode")).perform(click())
         onView(withText("Trusted device")).check(matches(isDisplayed()))
@@ -199,8 +209,7 @@ class MainActivityTest {
         onView(withText("Scan now")).check(matches(isDisplayed()))
 
         // Verify that we started waiting for the bluetooth server.
-        val btServer = app.getBluetoothServer()
-        val callbackCaptor = argumentCaptor<() -> Unit>()
+        val callbackCaptor = argumentCaptor<BluetoothServer.StartListener>()
         verify(btServer, times(1)).start(any(), callbackCaptor.capture())
 
         // Set up the mocked test results.
@@ -211,8 +220,11 @@ class MainActivityTest {
         deviceReportBuilder.setTests(testResultsBuilder)
         val deviceReport = deviceReportBuilder.build()
 
-        // Invoke the server completion callback.
-        callbackCaptor.firstValue()
+        // Invoke the server completion callbacks.
+        handler.post() {
+            callbackCaptor.firstValue.onServerAvailable(generateConnectionData(challenge))
+            callbackCaptor.firstValue.onServerStarted()
+        }
 
         intended(hasComponent(WaitForResultActivity::class.java.name))
         waitForActivity<WaitForResultActivity>()
@@ -248,7 +260,10 @@ class MainActivityTest {
         whenever(app.verifyAttestation(any(), any())).thenReturn(attestationResult)
     }
 
+    private fun generateConnectionData(challenge: ByteArray): BluetoothConnectionData {
+        return BluetoothConnectionData(100, challenge)
+    }
     private fun generateQrPayload(challenge: ByteArray): String {
-        return BluetoothConnectionData(100, challenge).toString()
+        return generateConnectionData(challenge).toString()
     }
 }

@@ -22,7 +22,6 @@ import android.provider.Settings
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.devicediagnostics.evaluated.QrCodeScanActivity
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
@@ -34,7 +33,8 @@ class EvaluationModeFragment : PreferenceFragmentCompat() {
     override fun onResume() {
         super.onResume()
 
-        val enabled = BluetoothServer.bluetoothEnabled
+        val btServer = ApplicationInterface.app.getBluetoothServer()
+        val enabled = btServer.bluetoothEnabled
         findPreference<Preference>("trusted_device")!!.isVisible = enabled
         findPreference<Preference>("evaluation_mode")!!.also {
             it.isVisible = enabled

@@ -26,7 +26,8 @@ import kotlin.math.min
 import kotlin.random.Random
 
 open class ApplicationInterface {
-    val btClient = BluetoothClient()
+    private val btClient = BluetoothClient()
+    private val btServer = BluetoothServer()
 
     open fun getRandomBytes(count: Int): ByteArray {
         return Random.nextBytes(count)
@@ -38,7 +39,7 @@ open class ApplicationInterface {
         return btClient
     }
     open fun getBluetoothServer(): BluetoothServer {
-        return BluetoothServer
+        return btServer
     }
     open fun verifyAttestation(
         attestation: ByteArray,

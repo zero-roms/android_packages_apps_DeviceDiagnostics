@@ -12,6 +12,7 @@
 
     <Preference
         app:key="Continue"
+        app:selectable="false"
         app:title="@string/activity_continue"
         app:summary="@string/trusted_follow_prompts_summary" />
 </PreferenceScreen>

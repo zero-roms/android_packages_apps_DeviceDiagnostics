@@ -23,6 +23,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.fragment.app.commit
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.PermissionsHelper
@@ -52,33 +53,71 @@ private fun displayQrCode(connectionData: BluetoothConnectionData): Bitmap {
     return bmp
 }
 
-class QrCodeDisplayFragment() : PreferenceFragmentCompat() {
+class QrCodeDisplayFragment() : PreferenceFragmentCompat(), BluetoothServer.StartListener {
+    private var connectionData: BluetoothConnectionData? = null
+    private var state: TrustedState? = null
+    private var viewCreated: Boolean = false
+
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_trusted_qrcode, rootKey)
 
         val app = ApplicationInterface.app
         val challenge = app.getRandomBytes(32)
+        state = TrustedState(challenge, DeviceReport.getDefaultInstance())
 
         val infoBuilder = TrustedDeviceInfo.newBuilder()
         infoBuilder.setChallenge(ByteString.copyFrom(challenge))
         val info = infoBuilder.build()
 
-        app.getBluetoothServer().start(info) {
-            activity!!.runOnUiThread() {
-                val state = TrustedState(challenge, DeviceReport.getDefaultInstance())
-                launchTrustedActivity(activity!!, WaitForResultActivity::class.java.name, state)
-            }
-        }
+        app.getBluetoothServer().start(info, this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bmp = displayQrCode(BluetoothServer.connectionData)
+        viewCreated = true
+
+        if (connectionData != null) {
+            onServerAvailable(connectionData!!)
+        }
+    }
+
+    private fun drawQrCode() {
+        val bmp = displayQrCode(connectionData!!)
 
         val layoutPreference = findPreference("qr_code") as LayoutPreference?
         val image = layoutPreference?.findViewById<ImageView>(R.id.qrCode)
         image?.setImageBitmap(bmp)
+    }
+
+    override fun onServerAvailable(connectionData: BluetoothConnectionData) {
+        if (isDetached) {
+            return
+        }
+
+        this.connectionData = connectionData
+
+        if (viewCreated) {
+            drawQrCode()
+        }
+    }
+
+    override fun onServerStarted() {
+        if (isDetached) {
+            return
+        }
+        launchTrustedActivity(activity!!, WaitForResultActivity::class.java.name, state)
+        activity!!.finish()
+    }
+
+    override fun onServerError() {
+        if (isDetached) {
+            return
+        }
+        findPreference<Preference>("Continue")!!.also {
+            it.setTitle(R.string.bluetooth_error_title)
+            it.setSummary(R.string.bluetooth_error_summary)
+        }
     }
 }
 
