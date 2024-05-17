@@ -27,7 +27,6 @@ import android.os.Looper
 import android.os.ParcelUuid
 import android.util.Log
 import com.android.devicediagnostics.Protos.BluetoothPacket
-import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.Protos.TrustedDeviceInfo
 import com.android.devicediagnostics.runInBackground
 import java.util.UUID
@@ -46,6 +45,11 @@ class BluetoothServer {
         fun onServerAvailable(connectionData: BluetoothConnectionData)
         fun onServerStarted()
         fun onServerError()
+    }
+
+    interface ReadListener {
+        fun onBluetoothReadPacket(packet: BluetoothPacket)
+        fun onBluetoothReadError(e: Exception)
     }
 
     fun start(trustedDeviceInfo: TrustedDeviceInfo, listener: StartListener) {
@@ -74,24 +78,30 @@ class BluetoothServer {
         starter!!.start()
     }
 
-    private fun read(): BluetoothPacket {
-        return readBluetoothPacket(socket!!)
-    }
+    fun startRead(listener: ReadListener) {
+        val handler = Handler(Looper.myLooper()!!)
+        val localSocket = socket
+        runInBackground {
+            try {
+                if (localSocket == null) {
+                    throw Exception("Socket is closed")
+                }
+                val packet = readBluetoothPacket(localSocket)
+                handler.post() { listener.onBluetoothReadPacket(packet) }
+            } catch (e: Exception) {
+                handler.post() { listener.onBluetoothReadError(e) }
+            }
 
-    fun readDeviceReport(): DeviceReport {
-        val message = read()
-        if (!message.hasDeviceReport()) {
-            throw Exception("Expected DeviceReport message, got " + message.payloadCase.toString())
+            try {
+                val ack = BluetoothPacket.newBuilder().setAck(true).build()
+                writeBluetoothPacket(socket!!, ack)
+            } catch (e: Exception) {
+                Log.e(TAG, "Error sending report acknowledgement: $e")
+            }
         }
-
-        val ack = BluetoothPacket.newBuilder().setAck(true).build()
-        writeBluetoothPacket(socket!!, ack)
-
-        reset()
-        return message.deviceReport
     }
 
-    private fun reset() {
+    fun reset() {
         starter?.stop()
         starter = null
         socket?.close()

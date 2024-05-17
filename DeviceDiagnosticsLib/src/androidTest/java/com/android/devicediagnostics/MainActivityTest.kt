@@ -35,6 +35,7 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.android.devicediagnostics.Protos.BluetoothPacket
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.Protos.TestResults
 import com.android.devicediagnostics.Protos.TrustedDeviceInfo
@@ -232,7 +233,14 @@ class MainActivityTest {
         onView(withText("Continue on the device being evaluated")).check(matches(isDisplayed()))
 
         setupAttestation()
-        whenever(btServer.readDeviceReport()).thenReturn(deviceReport)
+
+        val readCaptor = argumentCaptor<BluetoothServer.ReadListener>()
+        verify(btServer, times(1)).startRead(readCaptor.capture())
+
+        handler.post() {
+            val packet = BluetoothPacket.newBuilder().setDeviceReport(deviceReport).build()
+            readCaptor.firstValue.onBluetoothReadPacket(packet)
+        }
 
         intended(hasComponent(DisplayResultActivity::class.java.name))
         waitForActivity<DisplayResultActivity>()
