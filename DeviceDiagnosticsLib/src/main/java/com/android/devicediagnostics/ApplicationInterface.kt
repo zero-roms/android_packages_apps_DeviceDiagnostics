@@ -26,6 +26,8 @@ import kotlin.math.min
 import kotlin.random.Random
 
 open class ApplicationInterface {
+    val btClient = BluetoothClient()
+
     open fun getRandomBytes(count: Int): ByteArray {
         return Random.nextBytes(count)
     }
@@ -33,7 +35,7 @@ open class ApplicationInterface {
         return QrCamera(context, activity)
     }
     open fun getBluetoothClient(): BluetoothClient {
-        return BluetoothClient
+        return btClient
     }
     open fun getBluetoothServer(): BluetoothServer {
         return BluetoothServer

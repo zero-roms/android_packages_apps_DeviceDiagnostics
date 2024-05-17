@@ -29,10 +29,11 @@ import android.util.Log
 import com.android.devicediagnostics.Protos.BluetoothPacket
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.Protos.TrustedDeviceInfo
+import kotlinx.coroutines.sync.Mutex
 
 private const val TAG = "BluetoothClient"
 
-object BluetoothClient : ScanCallback() {
+class BluetoothClient {
     interface ScanListener {
         fun onBluetoothConnected(trustedDeviceInfo: TrustedDeviceInfo)
         fun onBluetoothConnectionFailed()
@@ -41,16 +42,21 @@ object BluetoothClient : ScanCallback() {
     var connectionData: BluetoothConnectionData? = null
 
     fun start(listener: ScanListener) {
+        synchronized(lock) { startImpl(listener) }
+    }
+
+    private fun startImpl(listener: ScanListener) {
         this.listener = listener
         scanner = adapter.bluetoothLeScanner
+        scanCallback = MyScanCallback()
 
         val filters = listOf(ScanFilter.Builder().setServiceUuid(ParcelUuid(SERVICE_UUID)).build())
         val settings = ScanSettings.Builder().setScanMode(ScanSettings.SCAN_MODE_LOW_POWER).build()
-        scanner!!.startScan(filters, settings, this)
+        scanner!!.startScan(filters, settings, scanCallback!!)
         Log.d(TAG, "Started scan $scanner")
     }
 
-    fun readTrustedDeviceInfo(): TrustedDeviceInfo {
+    private fun readTrustedDeviceInfo(): TrustedDeviceInfo {
         val message = readBluetoothPacket(socket!!)
         if (!message.hasTrustedDeviceInfo()) {
             throw Exception("Expected TrustedDeviceInfo message")
@@ -62,8 +68,45 @@ object BluetoothClient : ScanCallback() {
     private var listener: ScanListener? = null
     private val adapter = BluetoothAdapter.getDefaultAdapter()
     private var scanner: BluetoothLeScanner? = null
+    private var scanCallback: ScanCallback? = null
+    private var lock = Mutex()
+
+    inner class MyScanCallback : ScanCallback() {
+        override fun onBatchScanResults(results: List<ScanResult>) {
+            for (item in results) {
+                onScanResult(0, item)
+            }
+        }
+
+        override fun onScanResult(callbackType: Int, result: ScanResult) {
+            if (result.device == null) {
+                return
+            }
+
+            synchronized(lock) {
+                if (scanCallback != this) {
+                    return
+                }
+                connect(result.device)
+            }
+        }
+
+        override fun onScanFailed(errorCode: Int) {
+            synchronized(lock) {
+                if (scanCallback != this) {
+                    return
+                }
+                Log.d(TAG, "Scan failed with error: $errorCode")
+                listener?.onBluetoothConnectionFailed()
+            }
+        }
+    }
 
     fun reset() {
+        synchronized(lock) { resetImpl() }
+    }
+
+    private fun resetImpl() {
         connectionData = null
         try {
             stopScanning()
@@ -76,26 +119,27 @@ object BluetoothClient : ScanCallback() {
 
     private fun stopScanning() {
         Log.d(TAG, "stopped scan")
-        scanner?.stopScan(this)
+        if (scanCallback != null) {
+            scanner?.stopScan(scanCallback!!)
+            scanCallback = null
+        }
         adapter.cancelDiscovery()
         listener = null
     }
 
     fun sendReport(report: DeviceReport) {
-        val packet = BluetoothPacket.newBuilder().setDeviceReport(report).build()
-        writeBluetoothPacket(socket!!, packet)
-        val reply = readBluetoothPacket(socket!!)
-        if (!reply.hasAck()) {
-            throw Exception("Expected acknowledgement packet")
+        synchronized(lock) {
+            val packet = BluetoothPacket.newBuilder().setDeviceReport(report).build()
+            writeBluetoothPacket(socket!!, packet)
+            val reply = readBluetoothPacket(socket!!)
+            if (!reply.hasAck()) {
+                throw Exception("Expected acknowledgement packet")
+            }
+            resetImpl()
         }
-        socket!!.close()
     }
 
-    private fun connect(device: BluetoothDevice?): Boolean {
-        if (device == null) {
-            return false
-        }
-
+    private fun connect(device: BluetoothDevice) {
         var trustedDeviceInfo: TrustedDeviceInfo? = null
         try {
             Log.d(TAG, "Found device ${device.name}")
@@ -110,27 +154,9 @@ object BluetoothClient : ScanCallback() {
             Log.i(TAG, "Bluetooth connection succeeded")
         } catch (e: Exception) {
             Log.e(TAG, "Bluetooth connection error: $e")
-            return false
+            return
         }
         listener?.onBluetoothConnected(trustedDeviceInfo)
         stopScanning()
-        return true
-    }
-
-    override fun onBatchScanResults(results: List<ScanResult>) {
-        for (item in results) {
-            if (connect(item.device)) {
-                break
-            }
-        }
-    }
-
-    override fun onScanResult(callbackType: Int, result: ScanResult) {
-        connect(result.device)
-    }
-
-    override fun onScanFailed(errorCode: Int) {
-        Log.d(TAG, "Scan failed with error: $errorCode")
-        listener?.onBluetoothConnectionFailed()
     }
 }

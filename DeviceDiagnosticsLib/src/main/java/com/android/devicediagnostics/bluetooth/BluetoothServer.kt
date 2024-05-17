@@ -71,10 +71,10 @@ object BluetoothServer {
         return readBluetoothPacket(socket!!)
     }
 
-    public fun readDeviceReport(): DeviceReport {
+    fun readDeviceReport(): DeviceReport {
         val message = read()
         if (!message.hasDeviceReport()) {
-            throw Exception("Expected DeviceReport message")
+            throw Exception("Expected DeviceReport message, got " + message.payloadCase.toString())
         }
 
         val ack = BluetoothPacket.newBuilder().setAck(true).build()

@@ -37,6 +37,7 @@ import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.Protos.TestResults
 import com.android.devicediagnostics.Protos.TrustedDeviceInfo
 import com.android.devicediagnostics.bluetooth.BluetoothClient
+import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
 import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.devicediagnostics.evaluated.ScreenTestFinalizeActivity
 import com.android.devicediagnostics.evaluated.TouchTestFinalizeActivity
@@ -90,8 +91,6 @@ private fun touchDownAndUp(): ViewAction? {
         }
     }
 }
-
-private const val QR_PAYLOAD = "{\"PSM\":134}"
 
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest {
@@ -148,7 +147,7 @@ class MainActivityTest {
 
         // Simulate scanning a QR code.
         val qrScanner = qrCaptor.firstValue
-        qrScanner.handleSuccessfulResult(QR_PAYLOAD)
+        qrScanner.handleSuccessfulResult(generateQrPayload(challenge.toByteArray()))
 
         // Check that bluetooth was started.
         val btCaptor = argumentCaptor<BluetoothClient.ScanListener>()
@@ -247,5 +246,9 @@ class MainActivityTest {
 
         val attestationResult = Pair(attestationRecord, AttestationResult.UNVERIFIED)
         whenever(app.verifyAttestation(any(), any())).thenReturn(attestationResult)
+    }
+
+    private fun generateQrPayload(challenge: ByteArray): String {
+        return BluetoothConnectionData(100, challenge).toString()
     }
 }

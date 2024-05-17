@@ -44,7 +44,7 @@ fun readBluetoothPacket(socket: BluetoothSocket): BluetoothPacket {
     val payloadSizeBytes = readFully(socket, 4)
     val payloadSize = ByteBuffer.wrap(payloadSizeBytes).order(ByteOrder.LITTLE_ENDIAN).getInt()
     if (payloadSize > BT_MAX_PACKET_SIZE) {
-        throw Exception("Maximum packet size exceeded: $payloadSizeBytes")
+        throw Exception("Maximum packet size exceeded: $payloadSize")
     }
     val payloadBytes = readFully(socket, payloadSize)
     return BluetoothPacket.parseFrom(payloadBytes)
