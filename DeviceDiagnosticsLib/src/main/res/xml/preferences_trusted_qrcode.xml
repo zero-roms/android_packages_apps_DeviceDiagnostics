@@ -6,13 +6,8 @@
         app:selectable="false"
         app:summary="@string/trusted_scan_now_summary"/>
 
-  <com.android.settingslib.widget.LayoutPreference
-      android:key="qr_code"
-      android:layout="@layout/layout_trusted_qrcode" />
-
-    <Preference
-        app:key="Continue"
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="qr_code"
         app:selectable="false"
-        app:title="@string/activity_continue"
-        app:summary="@string/trusted_follow_prompts_summary" />
+        android:layout="@layout/layout_trusted_qrcode" />
 </PreferenceScreen>

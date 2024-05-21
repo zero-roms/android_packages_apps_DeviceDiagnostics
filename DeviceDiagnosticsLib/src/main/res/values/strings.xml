@@ -25,7 +25,9 @@
 
   <!-- Main activity -->
   <string name="component_health_title">Component health</string>
+  <string name="component_health_summary">Run manual tests and view battery and storage health</string>
   <string name="evaluation_mode_title">Evaluation mode</string>
+  <string name="evaluation_mode_summary">Use one device to assess another device</string>
 
   <!-- Diagnostics landing -->
   <string name="manual_eval_title">Manual tests</string>
@@ -36,11 +38,10 @@
   <string name="battery_title">Battery status</string>
 
   <!-- Evaluation mode -->
-  <string name="trusted_eval_title">Trusted evaluation</string>
   <string name="trusted_device_title">Trusted device</string>
-  <string name="trusted_device_summary">Start by selecting this option on a trusted device</string>
+  <string name="eval_mode_trusted_device_summary">Assess another device. An Internet connection is required.</string>
   <string name="evaluated_device_title">Evaluated device</string>
-  <string name="evaluated_device_summary">When prompted to do so, select this option on the evaluated device</string>
+  <string name="eval_mode_evaluated_device_summary">Run diagnostic tests that will be validated by another device.</string>
   <string name="evaluated_scan_now">Scan now</string>
   <string name="evaluated_scan_now_summary">Scan the QR code on the trusted device in the rectangle below</string>
   <string name="evaluated_scan_continue_summary">Once you have successfully scanned the QR code, this device will automatically start a series of tests.</string>
@@ -148,19 +149,12 @@ This is the result of the touch test. You can rerun the test by navigating back.
   <string name="not_locked">Not locked</string>
   <string name="qr_code_description">QR Code</string>
   <string name="continue_on_evaluated_title">Continue on the device being evaluated</string>
-  <string name="continue_on_evaluated_summary">Complete the tests on the device that you are evaluating, then the results will appear here</string>
+  <string name="continue_on_evaluated_summary">Complete the tests on the device that you are evaluating, then the results will appear here.</string>
   <string name="trusted_bluetooth_error_summary">There was an error communicating with the evaluated device. Please verify that Bluetooth is enabled and try again.</string>
   <string name="trusted_scan_now_title">Scan now</string>
   <string name="trusted_scan_now_summary">
     <![CDATA[
-On the device you wish to evaluate, go to\n
-Settings/DeviceDiagnostics/Evaluated device\n
-Follow the prompts on that device.
-  ]]>
-  </string>
-  <string name="trusted_follow_prompts_summary">
-    <![CDATA[
-Follow the prompts on the evaluated device. When prompted, press here to continue on this device.
+On the device you wish to evaluate, go to Settings, System, Device diagnostics, Evaluation mode, then Evaluated device. Follow the prompts on that device.
   ]]>
   </string>
   <string name="screen_test_summary">
@@ -187,18 +181,10 @@ Please select the option below that best matches the condition of the screen.
     <![CDATA[
 You will now be shown a red screen.\n
 \n
-Rub your finger over the screen until the screen is entirely white. If you are
+Swipe your finger over the screen until the screen is entirely white. If you are
 unable to turn part of the screen white, short tap the screen to indicate that
 the touch sensor is not fully working.\n
 \n
-If you wish, you can back swipe from the report screen and continue the test
-from where you left off.\n
-  ]]>
-  </string>
-  <string name="scan_result">
-    <![CDATA[
-Please scan this QR code on the trusted device. After you have scanned it, you
-may press Done on this device.
   ]]>
   </string>
 </resources>
