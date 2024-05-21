@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"डिभाइस डाइग्नोस्टिक्स"</string>
-    <string name="app_title" msgid="7463703024205195273">"डिभाइस डाइग्नोस्टिक्स"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"डिभाइस डाइग्नोस्टिक्स"</string>
     <string name="activity_continue" msgid="2190118984182069151">"जारी राख्नुहोस्"</string>
     <string name="unavailable" msgid="7842920330665850121">"उपलब्ध छैन"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"कनेक्ट गरिँदै छ…"</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"कम्पोनेन्टको स्थिति"</string>
     <string name="storage_title" msgid="5921235202250843966">"भण्डारणको स्थिति"</string>
     <string name="battery_title" msgid="6707361668941323259">"ब्याट्रीको स्थिति"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"विश्वसनीय मूल्याङ्कन"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"विश्वसनीय डिभाइस"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"विश्वसनीय मूल्याङ्कन"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"विश्वसनीय डिभाइस"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"विश्वसनीय डिभाइसमा यो विकल्प चयन गरेर सुरु गर्नुहोस्"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"मूल्याङ्कन गरिएको डिभाइस"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"मूल्याङ्कन गरिएको डिभाइस"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"कुनै विकल्प चयन गर्न लगाइएका बेला मूल्याङ्कन गरिएको डिभाइसमा यो विकल्प चयन गर्नुहोस्"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"अहिले नै स्क्यान गर्नुहोस्"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"विश्वसनीय डिभाइसमार्फत तलको आयतमा भएको QR कोड स्क्यान गर्नुहोस्"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"विश्वसनीय डिभाइस चयन गर्नुहोस्"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"वा तलको सूचीबाट कुनै डिभाइस चयन गर्नुहोस्"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"कनेक्ट गर्न सकिएन। कृपया फेरि प्रयास गर्नुहोस्।"</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"विश्वसनीय डिभाइसमा पठाउनका निम्ति रिपोर्ट पुष्टि गर्नुहोस्।"</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"रिपोर्ट पठाउनुहोस्"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"रिपोर्ट पूरा गरिँदै छ..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"ब्लुटुथसम्बन्धी त्रुटि"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"विश्वसनीय डिभाइससँग कन्ट्याक्ट गर्ने क्रममा कुनै त्रुटि भयो। कृपया ब्लुटुथ अन गरिएको छ भन्ने कुरा पुष्टि गर्नुहोस् र फेरि प्रयास गर्नुहोस्।"</string>
+    <string name="sending_report" msgid="8735615783234611336">"रिपोर्ट विश्वसनीय डिभाइसमा पठाइँदै छ..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"मूल्याङ्कन पूरा भयो"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"यी परिणाम अब विश्वसनीय डिभाइसमा देखिने छन्"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"अवस्था"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"उत्पादन गरिएको मिति"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"पहिलो पटक प्रयोग गरेको मिति"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"परिवर्तन गरिएको छ"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"पाटपुर्जाको हिस्ट्री"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"मूल क्षमताको %1$d%%"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"ब्याट्रीको अवस्थासम्बन्धी जानकारी छैन"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"चिसो"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"मृत"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"राम्रो"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"धेरै तातो"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"अधिक भोल्टेज"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"भण्डारणको अवस्था"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"कुल क्षमता"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"मोडेल"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"विक्रेताको प्याच लेभल"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"प्याच लेभल बुट गर्नुहोस्"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"रोलब्याक गर्न नमिल्ने"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"रोलब्याक गर्न नमिल्ने सुविधा"</string>
     <string name="yes" msgid="6686215078709381643">"अँ"</string>
     <string name="no" msgid="5957591978126937912">"अहँ"</string>
     <string name="unknown" msgid="6936738212381747979">"अज्ञात"</string>
@@ -123,8 +122,9 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR कोड"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"मूल्याङ्कन गरिँदै गरिएको डिभाइसमा जारी राख्नुहोस्"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"आफूले मूल्याङ्कन गर्न लागेको डिभाइसमा परीक्षण पूरा गर्नुहोस् अनि उक्त परीक्षणका परिणामहरू यहाँ देखिने छन्"</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"मूल्याङ्कन गरिएको डिभाइससँग कनेक्ट गर्ने क्रममा कुनै त्रुटि भयो। कृपया ब्लुटुथ अन गरिएको छ भन्ने कुरा पुष्टि गर्नुहोस् र फेरि प्रयास गर्नुहोस्।"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"अहिले नै स्क्यान गर्नुहोस्"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"आफूले मूल्याङ्कन गर्न चाहेको डिभाइसमा भएको\n \"सेटिङ/डिभाइस डाइग्नोस्टिक्स/मूल्याङ्कन गरिएको डिभाइस\" मा जानुहोस्\n उक्त डिभाइसमा देखाइएका प्रम्प्टहरूको पालना गर्नुहोस्।"</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"आफूले मूल्याङ्कन गर्न चाहेको डिभाइसमा भएको\n \"सेटिङ/डिभाइस डाइग्नोस्टिक्स/मूल्याङ्कन गरिएको डिभाइस\" मा जानुहोस्\n उक्त डिभाइसमा देखाइएका प्रम्प्टहरूको पालना गर्नुहोस्।"</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"मूल्याङ्कन गरिएको डिभाइसमा देखाइएका प्रम्प्टहरूको पालना गर्नुहोस्। प्रम्प्ट देखाइएपछि यो डिभाइसमा जारी राख्न यहाँ थिच्नुहोस्।"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"तपाईंलाई अब धेरै वटा स्क्रिनहरू देखाइने छ। प्रत्येक स्क्रिन राम्रोसँग हेर्नुहोस् र खराबीहरू खोज्नुहोस्। यो कार्य पूरा गरेपछि अर्को स्क्रिनमा जान स्क्रिनमा टच गर्नुहोस्। तपाईंलाई अन्त्यमा स्क्रिन बिग्रेको छ कि छैन भन्ने कुरा सोधिने छ।"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"तपाईंलाई अब धेरै वटा स्क्रिनहरू देखाइने छ। प्रत्येक स्क्रिन राम्रोसँग हेर्नुहोस् र खराबीहरू खोज्नुहोस्। अर्को स्क्रिनमा जान स्क्रिनमा टच गर्नुहोस्।"</string>

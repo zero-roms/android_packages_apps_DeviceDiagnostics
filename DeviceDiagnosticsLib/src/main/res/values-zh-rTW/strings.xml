@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"裝置診斷"</string>
-    <string name="app_title" msgid="7463703024205195273">"裝置診斷"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"裝置診斷"</string>
     <string name="activity_continue" msgid="2190118984182069151">"繼續"</string>
     <string name="unavailable" msgid="7842920330665850121">"無法取得"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"連線中..."</string>
@@ -31,17 +30,25 @@
     <string name="component_title" msgid="6580046234562555655">"元件狀態"</string>
     <string name="storage_title" msgid="5921235202250843966">"儲存空間狀態"</string>
     <string name="battery_title" msgid="6707361668941323259">"電池狀態"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"信任評估"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"信任的裝置"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"信任的評估"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"信任的裝置"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"在信任的裝置上選取這個選項即可開始"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"評估裝置"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"評估裝置"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"請按照系統指示，在評估的裝置上選取這個選項"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"立即掃描"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"將下方的方框對準信任裝置上的 QR code，然後開始掃描"</string>
-    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"成功掃描 QR code 之後，這部裝置就會開始一系列的測試。"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"成功掃描 QR code 之後，這部裝置就會自動開始一系列的測試。"</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"選取信任的裝置"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"或者，在下方清單中選取所需裝置"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"連線失敗，請再試一次。"</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"請確認要傳送至信任裝置的報告。"</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"傳送報告"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"正在完成報告..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"藍牙錯誤"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"與信任的裝置通訊時發生錯誤。請確認藍牙已啟用，然後再試一次。"</string>
+    <string name="sending_report" msgid="8735615783234611336">"正在將報告傳送至信任的裝置..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"評估完成"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"結果現在會顯示在信任的裝置上"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"健康度"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"製造日期"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"首次使用日期"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"已更換"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"零件記錄"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"原始容量的 %1$d%%"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"沒有可用的電池健康度資訊"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"溫度過低"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"電量用盡"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"良好"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"溫度過高"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"電壓過高"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"儲存空間健康度"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"總容量"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"型號"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"供應商修補程式等級"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"啟動修補程式等級"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"無法復原"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"無法復原"</string>
     <string name="yes" msgid="6686215078709381643">"是"</string>
     <string name="no" msgid="5957591978126937912">"否"</string>
     <string name="unknown" msgid="6936738212381747979">"不明"</string>
@@ -123,8 +122,9 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR code"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"在要評估的裝置上繼續操作"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"在要評估的裝置上完成測試後，這裡就會顯示測試結果"</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"與評估裝置通訊時發生錯誤。請確認藍牙已啟用，然後再試一次。"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"立即掃描"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"在要評估的裝置上前往\n Settings/DeviceDiagnostics/Evaluated Device\n 按照該裝置上的提示操作。"</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"在要評估的裝置上前往\n Settings/DeviceDiagnostics/Evaluated device\n 按照該裝置上的提示操作。"</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"請依照評估裝置上的提示進行。提示出現時，按這裡即可在這部裝置上繼續操作。"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"螢幕現在將顯示一系列畫面。請仔細觀察每個畫面，看看是否有瑕疵。觀察完畢後，輕觸螢幕即可切換到下一個畫面。最後一個步驟時，系統會詢問你螢幕看起來是否有瑕疵。"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"螢幕現在將顯示一系列畫面。請仔細觀察每個畫面，看看是否有瑕疵。輕觸螢幕即可切換到下一個畫面。"</string>

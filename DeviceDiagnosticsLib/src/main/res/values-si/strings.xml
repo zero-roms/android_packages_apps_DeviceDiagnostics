@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"උපාංග නිර්ණය"</string>
-    <string name="app_title" msgid="7463703024205195273">"උපාංග නිර්ණය"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"උපාංග නිර්ණය"</string>
     <string name="activity_continue" msgid="2190118984182069151">"ඉදිරියට යන්න"</string>
     <string name="unavailable" msgid="7842920330665850121">"නොලැබේ"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"සබැඳේ..."</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"සංරචක තත්ත්‍වය"</string>
     <string name="storage_title" msgid="5921235202250843966">"ආචයන තත්ත්‍වය"</string>
     <string name="battery_title" msgid="6707361668941323259">"බැටරි තත්ත්‍වය"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"විශ්වසනීය ඇගයීම"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"විශ්වසනීය උපාංගය"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"විශ්වසනීය ඇගයීම"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"විශ්වසනීය උපාංගය"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"විශ්වසනීය උපාංගයක් මත මෙම විකල්පය තේරීමෙන් පටන් ගන්න"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"ඇගයෙන උපාංගය"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"ඇගයෙන උපාංගය"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"එසේ කිරීමට කියනු ලැබූ විට, ඇගයූ උපාංගය මත මෙම විකල්පය තෝරන්න"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"දැන් ස්කෑන් කරන්න"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"පහත ඍජු කෝණාස්‍රය තුළ විශ්වසනීය උපාංගය මත QR කේතය ස්කෑන් කරන්න"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"විශ්වසනීය උපාංගය තෝරන්න"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"වෛකල්පික ලෙස, පහත ලැයිස්තුවෙන් උපාංගය තෝරන්න"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"සම්බන්‍ධතාව අසමත් විය, නැවත උත්සාහ කරන්න."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"විශ්වසනීය උපාංගයට යැවීම තහවුරු කරන්න"</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"වාර්තාව යවන්න"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"වාර්තාව අවසන් කෙරේ..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"බ්ලූටූත් දෝෂය"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"විශ්වසනීය උපාංගය සමග සන්නිවේදන කිරීමේ දෝෂයක් තිබුණා. බ්ලූටූත් සබල කර ඇති බව සත්‍යාපන කර ගෙන නැවත උත්සාහ කරන්න."</string>
+    <string name="sending_report" msgid="8735615783234611336">"විශ්වසනීය උපාංගයට වාර්තාව යවනු ලැබේ..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"තක්සේරුව සම්පූර්ණයි"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"ප්‍රතිඵල දැන් විශ්වසනීය උපාංගය මත දිස් වෙයි"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"සෞඛ්‍යය"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"නිෂ්පාදන දිනය"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"පළමු පරිශීලන දිනය"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"ප්‍රතිස්ථාපන කළා"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"කොටස් ඉතිහාසය"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"මුල් ධාරිතාවෙන් %1$d%% ක්"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"බැටරි සෞඛ්‍යය නොලැබේ"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"සිසිල්"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"අක්‍රියයි"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"හොඳයි"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"අධික උෂ්ණත්වය"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"අධි වෝල්ටීයතාව"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"ආචයන සෞඛ්‍යය"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"සම්පූර්ණ ධාරිතාව"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"මාදිලිය"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"විකුණුම්කරු අණ්ඩ මට්ටම"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"අණ්ඩ මට්ටම පණ ගන්වන්න"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"ඉවත් කිරීම් ප්‍රතිරෝධකය"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"ඉවත් කිරීම් ප්‍රතිරෝධය"</string>
     <string name="yes" msgid="6686215078709381643">"ඔව්"</string>
     <string name="no" msgid="5957591978126937912">"නැත"</string>
     <string name="unknown" msgid="6936738212381747979">"නොදනී"</string>
@@ -123,8 +122,10 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR කේතය"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"අගයනු ලබන උපාංගය මත ඉදිරියට යන්න"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"ඔබ අගයන උපාංගය මත පරීක්‍ෂාව සම්පූර්ණ කරන්න, පසුව ප්‍රතිඵල මෙහි දිස් වෙයි"</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"දැන් ස්කෑන් කරන්න"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"ඔබ ඇගයීමට කැමති උපාංගය මත,\n සැකසීම් / උපාංග නිර්ණය / ඇගයෙන උපාංගය වෙත යන්න\n එම උපාංගය මත ප්‍රේරණ පිළිපදින්න."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"ඔබ ඇගයීමට කැමති උපාංගය මත,\n සැකසීම් / උපාංග නිර්ණය / ඇගයෙන උපාංගය වෙත යන්න\n එම උපාංගය මත ප්‍රේරණ පිළිපදින්න."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"ඇගයෙන උපාංගය මත ප්‍රේරණ පිළිපදින්න. ඉල්ලනු ලැබූ විට, මෙම උපාංගය මත ඉදිරියට යාමට මෙහි තට්ටු කරන්න."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"දැන් ඔබට තිර මාලාවක් පෙන්වනු ලැබේ. එකිනෙක අධ්‍යයන කර පලුදු තිබේද සොයන්න. ඔබ තෘප්තිමත් වූ විට, ඊළඟ එකට යාමට තිරය ස්පර්ශ කරන්න. අවසානයේදී, තිර කැලල් නොවී පෙනෙන්නේදැයි ඔබෙන් අසනු ලැබේ."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"දැන් ඔබට තිර මාලාවක් පෙන්වනු ලැබේ. එකිනෙක අධ්‍යයන කර පලුදු තිබේද සොයන්න. ඊළඟ එකට යාමට තිරය ස්පර්ශ කරන්න."</string>

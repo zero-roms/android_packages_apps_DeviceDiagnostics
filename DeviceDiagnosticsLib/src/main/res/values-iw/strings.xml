@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"מצב החומרה במכשיר"</string>
-    <string name="app_title" msgid="7463703024205195273">"מצב החומרה במכשיר"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"מצב החומרה במכשיר"</string>
     <string name="activity_continue" msgid="2190118984182069151">"המשך"</string>
     <string name="unavailable" msgid="7842920330665850121">"לא זמין"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"מתבצעת התחברות…"</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"סטטוס הרכיב"</string>
     <string name="storage_title" msgid="5921235202250843966">"סטטוס האחסון"</string>
     <string name="battery_title" msgid="6707361668941323259">"סטטוס הסוללה"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"בדיקה מהימנה"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"מכשיר מהימן"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"בדיקה מהימנה"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"מכשיר מהימן"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"כדי להתחיל, צריך לבחור את האפשרות הזו במכשיר מהימן"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"מכשיר שנבדק"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"מכשיר שנבדק"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"כשתוצג הנחיה, צריך לבחור את האפשרות הזו במכשיר שנבדק"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"הפעלת הסריקה"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"‏עליך לסרוק במכשיר המהימן את קוד ה-QR שמופיע במלבן למטה"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"בחירה של מכשיר מהימן"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"אפשר גם לבחור את המכשיר מהרשימה הבאה"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"החיבור נכשל, צריך לנסות שוב."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"צריך לאשר את הדוח כדי לשלוח אותו למכשיר המהימן."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"שליחת הדוח"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"יצירת הדוח תכף מסתיימת…"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"‏שגיאת Bluetooth"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"‏קרתה שגיאה בתקשורת עם המכשיר המהימן. צריך לוודא שחיבור ה-Bluetooth מופעל ולנסות שוב."</string>
+    <string name="sending_report" msgid="8735615783234611336">"הדוח נשלח למכשיר המהימן…"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"הבדיקה הסתיימה"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"התוצאות יופיעו עכשיו במכשיר המהימן"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"בריאות"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"תאריך הייצור"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"תאריך השימוש הראשון"</string>
@@ -51,83 +58,50 @@
     <string name="battery_original" msgid="2552600989411644999">"מקורית"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"הוחלפה"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"היסטוריית החלק"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"‏‫%1$d%% מתוך הקיבולת המקורית"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_summary" msgid="4699687865120722848">"‏‫%1$d%% מהקיבולת המקורית"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"מצב תקינות הסוללה לא זמין"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"קרה"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"ריקה"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"טובה"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"חימום יתר"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"מתח חשמלי גבוה מדי"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"תקינות האחסון"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"קיבולת מלאה"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"‏משך החיים שנותר ל-%1$d%%"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"‏נותר משך חיים של %1$d%%"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"עליך להעניק את ההרשאות הנדרשות כדי להמשיך במצב הבדיקה."</string>
     <string name="cancel_button" msgid="7011882021431169180">"ביטול"</string>
     <string name="try_again_button" msgid="6015477950108798246">"ניסיון חוזר"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"התוצאה של בדיקת המגע"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"זאת התוצאה של בדיקת המגע. יש לחזור לעמוד הקודם כדי לחזור על הבדיקה."</string>
-    <string name="touch_test_good_title" msgid="4008967693136685770">"בדיקת חיישן המגע עברה"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"בדיקת חיישן המגע נכשלה"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"זאת התוצאה של בדיקת המגע. כדי להריץ שוב את הבדיקה, יש לחזור לעמוד הקודם."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"חיישן המגע עבר את הבדיקה"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"חיישן המגע נכשל בבדיקה"</string>
     <string name="pass" msgid="6411665547268368837">"עובר"</string>
     <string name="fail" msgid="3918028202746427731">"הפעולה נכשלה"</string>
-    <!-- no translation found for attestation_verified (6535873137799452259) -->
-    <skip />
-    <!-- no translation found for attestation_device_locked (1423476869833029478) -->
-    <skip />
-    <!-- no translation found for attestation_verified_boot_state (6360953823092860181) -->
-    <skip />
-    <!-- no translation found for attestation_security_level (6633918464653325429) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_version (7041962401293637901) -->
-    <skip />
-    <!-- no translation found for attestation_keymaster_security_level (6412203863981781483) -->
-    <skip />
-    <!-- no translation found for attestation_os_version (4351993398048033601) -->
-    <skip />
-    <!-- no translation found for attestation_brand (5238699762448331155) -->
-    <skip />
-    <!-- no translation found for attestation_device (1984309818766961098) -->
-    <skip />
-    <!-- no translation found for attestation_product (7325714994397112640) -->
-    <skip />
-    <!-- no translation found for attestation_serial (5001580041093391656) -->
-    <skip />
-    <!-- no translation found for attestation_imei (8985230697018835192) -->
-    <skip />
-    <!-- no translation found for attestation_second_imei (7566064584445017361) -->
-    <skip />
-    <!-- no translation found for attestation_meid (6837237287403480594) -->
-    <skip />
-    <!-- no translation found for attestation_manufacturer (2043278400561674518) -->
-    <skip />
-    <!-- no translation found for attestation_model (8223243376214262662) -->
-    <skip />
-    <!-- no translation found for attestation_vendor_patch_level (5961013660410857720) -->
-    <skip />
-    <!-- no translation found for attestation_boot_patch_level (6266071138457400006) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistant (7453892842319055994) -->
-    <skip />
-    <!-- no translation found for attestation_rollback_resistance (5944208044378228469) -->
-    <skip />
-    <!-- no translation found for yes (6686215078709381643) -->
-    <skip />
-    <!-- no translation found for no (5957591978126937912) -->
-    <skip />
-    <!-- no translation found for unknown (6936738212381747979) -->
-    <skip />
-    <!-- no translation found for attestation_failed (7989272430189028826) -->
-    <skip />
+    <string name="attestation_verified" msgid="6535873137799452259">"אישור מאומת"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"המכשיר נעול"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"מצב \'הפעלה מאומתת\'"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"רמת אבטחה"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"‏הגרסה של Keymaster"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"‏רמת האבטחה של Keymaster"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"הגרסה של מערכת ההפעלה"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"מותג"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"מכשיר"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"מוצר"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"מספר סידורי"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"‏‫IMEI שני"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"היצרן"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"דגם"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"רמת התיקון של הספק"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"רמת התיקון של האתחול"</string>
+    <string name="yes" msgid="6686215078709381643">"כן"</string>
+    <string name="no" msgid="5957591978126937912">"לא"</string>
+    <string name="unknown" msgid="6936738212381747979">"לא ידוע"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"‏האימות (attestation) נכשל"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"תוצאות הבדיקה"</string>
-    <!-- no translation found for attestation_results (9089126954790727665) -->
-    <skip />
+    <string name="attestation_results" msgid="9089126954790727665">"‏תוצאות האימות (attestation)"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"‏‫IMEI שני"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"מספר סידורי"</string>
@@ -137,8 +111,7 @@
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"הסטטוס של חיישן המגע"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"‏פרטי האימות (attestation)"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"‏האימות (attestation) נכשל"</string>
-    <!-- no translation found for attestation_local_failure_summary (8657460343196696219) -->
-    <skip />
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"לא ניתן לקבוע אם המכשיר מהימן"</string>
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"‏ניסיון אימות (attestation) נוסף"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"‏האימות (attestation) נכשל, צריך לבדוק את החיבור ולנסות שוב."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"השלבים הבאים"</string>
@@ -148,9 +121,11 @@
     <string name="not_locked" msgid="1663929635666930122">"לא נעול"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"‏קוד QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"צריך להמשיך במכשיר שנמצא בבדיקה"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"צריך לסיים את הבדיקות של המכשיר. התוצאות יופיעו כאן"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"צריך לסיים את הבדיקות במכשיר שמבצעים הערכה שלו. התוצאות יופיעו כאן"</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"הפעלת הסריקה"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"במכשיר שרוצים לבדוק, עוברים אל \n ההגדרות &gt; מצב החומרה במכשיר &gt; מכשיר שנבדק\n ופועלים לפי ההנחיות במכשיר הזה."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"במכשיר שרוצים לבדוק, עוברים אל\n הגדרות &gt; מצב החומרה במכשיר &gt; מכשיר שנבדק\n ופועלים לפי ההנחיות במכשיר הזה."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"צריך לפעול לפי ההנחיות במכשיר שנבדק. כשתוצג הנחיה, צריך ללחוץ כאן כדי להמשיך במכשיר הזה."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"עכשיו תוצג לך סדרה של מסכים. עליך לבחון אותם ולחפש פגמים. בסיום הבדיקה, צריך לגעת במסך כדי לעבור למסך הבא. בסיום, תוצג לך שאלה אם המסכים נקיים מפגמים."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"עכשיו תוצג לך סדרה של מסכים. עליך לבחון אותם ולחפש פגמים. צריך לגעת במסך כדי לעבור למסך הבא."</string>

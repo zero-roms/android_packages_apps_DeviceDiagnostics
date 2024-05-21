@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
-    <string name="app_title" msgid="7463703024205195273">"పరికర సమస్య విశ్లేషణ"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"పరికర సమస్య విశ్లేషణ"</string>
     <string name="activity_continue" msgid="2190118984182069151">"కొనసాగండి"</string>
     <string name="unavailable" msgid="7842920330665850121">"అందుబాటులో లేదు"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"కనెక్ట్ అవుతోంది..."</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"కాంపోనెంట్ స్టేటస్"</string>
     <string name="storage_title" msgid="5921235202250843966">"స్టోరేజ్ స్టేటస్"</string>
     <string name="battery_title" msgid="6707361668941323259">"బ్యాటరీ స్టేటస్"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"విశ్వసనీయ ఎవాల్యుయేషన్"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"విశ్వసనీయ పరికరం"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"విశ్వసనీయ ఎవాల్యుయేషన్"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"విశ్వసనీయ పరికరం"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"విశ్వసనీయ పరికరంలో ఈ ఆప్షన్‌ను ఎంచుకోవడం ద్వారా ప్రారంభించండి"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"ఎవాల్యుయేట్ అయిన పరికరం"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"ఎవాల్యుయేట్ అయిన పరికరం"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"అలా చేయమని ప్రాంప్ట్ చేసినప్పుడు, ఎవాల్యుయేట్ అవుతున్న పరికరంలో ఈ ఆప్షన్‌ను ఎంచుకోండి"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"ఇప్పుడే స్కాన్ చేయండి"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"దిగువున ఉన్న దీర్ఘచతురస్రాకారంలో, విశ్వసనీయ పరికరంతో QR కోడ్‌ను స్కాన్ చేయండి"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"విశ్వసనీయ పరికరాన్ని ఎంచుకోండి"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"ప్రత్యామ్నాయంగా, దిగువున ఉన్న లిస్ట్ నుండి పరికరాన్ని ఎంచుకోండి"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"కనెక్షన్ విఫలమైంది, దయచేసి మళ్లీ ట్రై చేయండి."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"విశ్వసనీయ పరికరానికి పంపడానికి రిపోర్ట్‌ను నిర్ధారించండి."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"రిపోర్ట్‌ను పంపండి"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"రిపోర్ట్‌ను ఫైనలైజ్ చేస్తోంది..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"బ్లూటూత్ ఎర్రర్"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"విశ్వసనీయ పరికరంతో కమ్యూనికేట్ చేయడంలో ఒక ఎర్రర్ ఏర్పడింది. దయచేసి బ్లూటూత్ ఎనేబుల్ చేయబడిందని వెరిఫై చేసి, మళ్లీ ట్రై చేయండి."</string>
+    <string name="sending_report" msgid="8735615783234611336">"విశ్వసనీయ పరికరానికి రిపోర్ట్‌ను పంపుతోంది..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"ఎవాల్యుయేషన్ పూర్తయింది"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"ఫలితాలు ఇప్పుడు విశ్వసనీయ పరికరంలో కనిపిస్తాయి"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"ఆరోగ్యం"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"తయారీ తేదీ"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"మొదటి వినియోగ తేదీ"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"రీప్లేస్ చేయబడింది"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"పార్ట్ హిస్టరీ"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"ఒరిజినల్ కెపాసిటీలో %1$d%%"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"బ్యాటరీ స్థితి అందుబాటులో లేదు"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"చల్లగా ఉంది"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"డెడ్ అయిపోయింది"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"బాగుంది"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"తీవ్రమైన వేడి"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"అధిక వోల్టేజి"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"స్టోరేజ్ హెల్త్"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"పూర్తి సామర్థ్యం"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"మోడల్"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"వెండర్ ప్యాచ్ స్థాయి"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"బూట్ ప్యాచ్ స్థాయి"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"రోల్‌బ్యాక్ నిరోధకం"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"రోల్‌బ్యాక్ నిరోధకత"</string>
     <string name="yes" msgid="6686215078709381643">"అవును"</string>
     <string name="no" msgid="5957591978126937912">"లేదు"</string>
     <string name="unknown" msgid="6936738212381747979">"తెలియని రకం"</string>
@@ -123,8 +122,9 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR కోడ్"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"ఎవాల్యుయేట్ అవుతున్న పరికరంలో కొనసాగండి"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"మీరు ఎవాల్యుయేట్ చేస్తున్న పరికరంలో టెస్ట్‌లను పూర్తి చేయండి, ఆపై ఆ ఫలితాలు ఇక్కడ కనిపిస్తాయి"</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"ఎవాల్యుయేట్ చేసిన పరికరంతో కమ్యూనికేట్ చేయడంలో ఒక ఎర్రర్ ఏర్పడింది. దయచేసి బ్లూటూత్ ఎనేబుల్ చేయబడిందని వెరిఫై చేసి, మళ్లీ ట్రై చేయండి."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"ఇప్పుడే స్కాన్ చేయండి"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"మీరు ఎవాల్యుయేట్ చేయాలనుకుంటున్న పరికరంలో,\n సెట్టింగ్‌లు/డివైజ్ సమస్య విశ్లేషణ/ఎవాల్యుయేట్ చేసిన పరికరం\nకు వెళ్లి, ఆ పరికరంలో ప్రాంప్ట్‌లను ఫాలో అవ్వండి."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"మీరు ఎవాల్యుయేట్ చేయాలనుకుంటున్న పరికరంలో,\n సెట్టింగ్‌లు/డివైజ్ సమస్య విశ్లేషణ/ఎవాల్యుయేట్ చేసిన పరికరం\nకు వెళ్లి, ఆ పరికరంలో ప్రాంప్ట్‌లను ఫాలో అవ్వండి."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"ఎవాల్యుయేట్ అయిన పరికరంలో ప్రాంప్ట్‌లను ఫాలో అవ్వండి. ప్రాంప్ట్ చేసినప్పుడు, ఈ పరికరంలో కొనసాగడానికి ఇక్కడ నొక్కండి."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"ఇప్పుడు మీకు వరుస స్క్రీన్‌లు కనిపిస్తాయి. ఒక్కొక్కటిగా చెక్ చేసి, లోపాలను కనుగొనండి. మీరు సంతృప్తి చెందిన తర్వాత, తదుపరి దానికి కొనసాగడానికి స్క్రీన్‌ను తాకండి. చివరగా, స్క్రీన్ పాడైందా అని మిమ్మల్ని అడగడం జరుగుతుంది."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ఇప్పుడు మీకు వరుస స్క్రీన్‌లు కనిపిస్తాయి. ఒక్కొక్కటిగా చెక్ చేసి, లోపాలను కనుగొనండి. తర్వాతి దానికి కొనసాగడానికి స్క్రీన్‌ను తాకండి."</string>

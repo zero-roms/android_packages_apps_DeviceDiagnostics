@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"ডিভাইস ডায়াগনস্টিকস"</string>
-    <string name="app_title" msgid="7463703024205195273">"ডিভাইস ডায়াগনস্টিকস"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"ডিভাইস ডায়াগনস্টিক"</string>
     <string name="activity_continue" msgid="2190118984182069151">"চালিয়ে যান"</string>
     <string name="unavailable" msgid="7842920330665850121">"উপলভ্য নেই"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"কানেক্ট করা হচ্ছে…"</string>
@@ -27,21 +26,29 @@
     <string name="evaluation_mode_title" msgid="5845218248059550975">"মূল্যায়ন মোড"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"ম্যানুয়াল পরীক্ষা"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ডিসপ্লে টেস্ট"</string>
-    <string name="touch_test_title" msgid="4347784874948129736">"টাচ সংক্রান্ত পরীক্ষা"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"টাচ সংক্রান্ত টেস্ট"</string>
     <string name="component_title" msgid="6580046234562555655">"কম্পোনেন্ট স্ট্যাটাস"</string>
     <string name="storage_title" msgid="5921235202250843966">"স্টোরেজ স্ট্যাটাস"</string>
     <string name="battery_title" msgid="6707361668941323259">"ব্যাটারির স্ট্যাটাস"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"বিশ্বস্ত মূল্যায়ন"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"বিশ্বস্ত ডিভাইস"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"বিশ্বস্ত মূল্যায়ন"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"বিশ্বস্ত ডিভাইস"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"কোনও বিশ্বস্ত ডিভাইসে এই বিকল্প বেছে নেওয়ার মাধ্যমে শুরু করুন"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"মূল্যায়ন করা ডিভাইস"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"মূল্যায়ন করা ডিভাইস"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"প্রম্পট করা হলে, এই বিকল্পটি এমন ডিভাইসে বেছে নিন যেটি মূল্যায়ন করা হয়েছে"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"এখনই স্ক্যান করুন"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"বিশ্বস্ত ডিভাইসে নিচে দেওয়া আয়তক্ষেত্রের মধ্যে দেখানো QR কোডটি স্ক্যান করুন"</string>
-    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR কোড সঠিকভাবে স্ক্যান করা হলে, এই ডিভাইস অটোমেটিক অনেকগুলি পরীক্ষা শুরু করবে।"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR কোড সঠিকভাবে স্ক্যান করা হলে, এই ডিভাইস অটোমেটিক অনেকগুলি টেস্ট শুরু করবে।"</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"বিশ্বস্ত ডিভাইস বেছে নিন"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"বিকল্পভাবে নিম্নলিখিত তালিকা থেকে ডিভাইসটি বেছে নিন"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"কানেক্ট করা যায়নি, আবার চেষ্টা করুন।"</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"রিপোর্ট বিশ্বস্ত ডিভাইসে পাঠাতে, সেটি কনফার্ম করুন।"</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"রিপোর্ট পাঠান"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"রিপোর্ট চূড়ান্ত করা হচ্ছে..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"ব্লুটুথ সংক্রান্ত সমস্যা"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"বিশ্বস্ত ডিভাইসের সাথে যোগাযোগ করার সময় কোনও সমস্যা হয়েছে। ব্লুটুথ চালু আছে কিনা তা চেক করুন ও আবার চেষ্টা করুন।"</string>
+    <string name="sending_report" msgid="8735615783234611336">"বিশ্বস্ত ডিভাইসে রিপোর্ট পাঠানো হচ্ছে..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"মূল্যায়ন করা হয়ে গেছে"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"ফলাফলগুলি এখন বিশ্বস্ত ডিভাইসে দেখানো হবে"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"হেল্থ"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"ব্যাটারি তৈরির তারিখ"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"প্রথম ব্যবহারের তারিখ"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"রিপ্লেস করা হয়েছে"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"ব্যাটারি পার্টের ইতিহাস"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"মূল ক্যাপাসিটির %1$d%%"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"ব্যাটারির আয়ু সংক্রান্ত তথ্য উপলভ্য নেই"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"কোল্ড"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"ডেড"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"গুড"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"ওভারহিট"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"ওভার ভোল্টেজ"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"স্টোরেজ হেল্থ"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"মোট ক্যাপাসিটি"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -73,7 +74,7 @@
     <string name="try_again_button" msgid="6015477950108798246">"আবার চেষ্টা করুন"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"টাচ সংক্রান্ত টেস্টের ফলাফল"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"এখানে টাচ সংক্রান্ত টেস্টের ফলাফল আছে। ফিরে গিয়ে আবার টেস্ট রান করাতে পারেন।"</string>
-    <string name="touch_test_good_title" msgid="4008967693136685770">"টাচ সেন্সর সংক্রান্ত পরীক্ষা পাস করেছে"</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"টাচ সেন্সর সংক্রান্ত টেস্ট পাস করেছে"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"টাচ সেন্সর টেস্ট করা যায়নি"</string>
     <string name="pass" msgid="6411665547268368837">"পাস"</string>
     <string name="fail" msgid="3918028202746427731">"করা যায়নি"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"মডেল"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"ভেন্ডর প্যাচ লেভেল"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"বুট প্যাচ লেভেল"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"রোলব্যাক রেজিস্ট্যান্ট"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"রোলব্যাক রেজিস্ট্যান্স"</string>
     <string name="yes" msgid="6686215078709381643">"হ্যাঁ"</string>
     <string name="no" msgid="5957591978126937912">"না"</string>
     <string name="unknown" msgid="6936738212381747979">"অজানা"</string>
@@ -123,8 +122,10 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR কোড"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"যে ডিভাইসটির মূল্যায়ন করা হচ্ছে সেটিতে কাজ চালিয়ে যান"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"যে ডিভাইসটির মূল্যায়ন করা হচ্ছে সেটির পরীক্ষা সম্পূর্ণ করুন। এরপর, ফলাফল এখানে দেখানো হবে"</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"এখনই স্ক্যান করুন"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"আপনি যে ডিভাইসে মূল্যায়ন করতে চান, সেই ডিভাইসে,\n সেটিংস/ডিভাইস ডায়াগনস্টিকস/মূল্যায়ন করা ডিভাইস\n বিকল্প দেখুন। সেই ডিভাইসে দেখানো প্রম্পট ফলো করুন।"</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"আপনি যে ডিভাইসে মূল্যায়ন করতে চান, সেই ডিভাইসে,\n সেটিংস/ডিভাইস ডায়াগনস্টিকস/মূল্যায়ন করা ডিভাইস\n বিকল্প দেখুন। সেই ডিভাইসে দেখানো প্রম্পট ফলো করুন।"</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"যাচাই করা ডিভাইসে দেখানো প্রম্পট অনুসরণ করুন। প্রম্পট করা হলে, এই ডিভাইসে কাজ চালিয়ে যেতে এখানে প্রেস করুন।"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"এবার আপনি অনেকগুলি স্ক্রিন দেখতে পাবেন। প্রতিটি খুঁটিয়ে দেখুন এবং তাতে কোনও সমস্যা আছে কিনা তা খুঁজে বার করুন। আপনি সন্তুষ্ট হলে, পরেরটিতে যেতে স্ক্রিনে টাচ করুন। সবার শেষে, স্ক্রিনগুলি সম্পূর্ণ দাগমুক্ত কিনা তা আপনার কাছে জানতে চাওয়া হবে।"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"এবার আপনি অনেকগুলি স্ক্রিন দেখতে পাবেন। প্রতিটি খুঁটিয়ে দেখুন এবং তাতে কোনও সমস্যা আছে কিনা তা খুঁজে বার করুন। পরেরটিতে যেতে স্ক্রিনে টাচ করুন।"</string>

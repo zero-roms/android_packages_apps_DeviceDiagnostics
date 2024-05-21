@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"I-DeviceDiagnostics"</string>
-    <string name="app_title" msgid="7463703024205195273">"Ezokuhlolisimo Sensiza"</string>
-    <string name="package_name" msgid="857863781906528502">"Okuthi com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Ezokuhlolisimo sensiza"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Qhubeka"</string>
     <string name="unavailable" msgid="7842920330665850121">"Ayitholakali"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Iyaxhuma..."</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"Isimo sesakhi"</string>
     <string name="storage_title" msgid="5921235202250843966">"Isimo sesitoreji"</string>
     <string name="battery_title" msgid="6707361668941323259">"Isimo sebhethri"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Ukuhlola Okuthenjwayo"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Idivayisi Ethenjwayo"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Ukuhlola okuthenjwayo"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Idivayisi ethenjwayo"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"Qala ngokukhetha lokhu okukhethwa kukho edivayisini ethenjwayo"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Idivayisi Ehloliwe"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Idivayisi ehloliwe"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Uma uyalwa ukwenza kanjalo, khetha lokhu okukhethwa kukho edivayisini ehloliwe"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skena manje"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skena ikhodi ye-QR edivayisini ethembekile onxandeni ongezansi"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Khetha idivayisi ethembekile"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Noma khetha idivayisi ohlwini olungezansi"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Uxhumo lwehlulekile, sicela uzame futhi."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Qinisekisa umbiko ozowuthumela edivayisini ethenjwayo."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Thumela umbiko"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Iphothula umbiko..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Iphutha le-Bluetooth"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Kube nephutha lokuxhumana nedivayisi ethenjwayo. Sicela uqinisekise ukuthi i-Bluetooth ivuliwe bese uzame futhi."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Ithumela umbiko edivayisi ethenjwayo..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Ukuhlola kuqedile"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Imiphumela manje izovela edivayisini ethenjwayo"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Ezempilo"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Ilanga lokukhiqiza"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Ilanga lokuqala lokusetshenziswa"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Kufakwe esikhundleni"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Umlando Wengxenye"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"U-%1$d%% womthamo wokuqala"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Impilo yebhethri ayitholakali"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Kuyabanda"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Ifile"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Kuhle"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Ishisa kakhulu"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Phezu kwamandla"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Impilo yesitoreji"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Inani lomthamo"</string>
     <!-- String.format failed for translation -->
@@ -97,8 +98,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Imodeli"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Ileveli yepheshi yomthengisi"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Qalisa ileveli yepheshi"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Iyakuvimbela ukusebenziseka kabusha"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Ukuvimbela ukusebenziseka kabusha"</string>
     <string name="yes" msgid="6686215078709381643">"Yebo"</string>
     <string name="no" msgid="5957591978126937912">"Cha"</string>
     <string name="unknown" msgid="6936738212381747979">"Akwaziwa"</string>
@@ -125,8 +124,10 @@
     <string name="qr_code_description" msgid="4665712956570877310">"Ikhodi ye-QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Qhubeka edivayisini ehlolwayo"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Qedela ukuhlola edivayisini oyihlolayo, bese imiphumela izovela lapha"</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skena manje"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Edivayisi ofisa ukuyihlola, iya\n Kumasethingi/i-DeviceDiagnostics/Idivayisi Ehloliwe\n Landela imiyalo kuleyo divayisi."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Edivayisi ofisa ukuyihlola, iya\n Emasethingini/i-DeviceDiagnostics/Idivayisi ehloliwe\n Landela imiyalo kuleyo divayisi."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Landela imiyalo edivayisini ehloliwe. Uma uyalwa, cindezela lapha ukuze uqhubeke kule divayisi."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Manje uzoboniswa uchungechunge lwezikrini. Funda ngakunye futhi ubheke amaphutha. Uma sewanelisekile, thinta isikrini ukuze uye kwesilandelayo. Ekugcineni, uzobuzwa ukuthi izikrini zibukeka zingenasici."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Manje uzoboniswa uchungechunge lwezikrini. Funda ngakunye futhi ubheke amaphutha. Thinta isikrini ukuze uye kwesilandelayo."</string>

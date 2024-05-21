@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"设备诊断"</string>
-    <string name="app_title" msgid="7463703024205195273">"设备诊断"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"设备诊断"</string>
     <string name="activity_continue" msgid="2190118984182069151">"继续"</string>
     <string name="unavailable" msgid="7842920330665850121">"不可用"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"正在连接…"</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"组件状态"</string>
     <string name="storage_title" msgid="5921235202250843966">"存储空间状态"</string>
     <string name="battery_title" msgid="6707361668941323259">"电池状态"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"可信评估"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"可信设备"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"可信评估"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"可信设备"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"在可信设备上选择此选项即可开始"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"已评估的设备"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"已评估的设备"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"请按照提示在已评估的设备上选择此选项"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"立即扫描"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"将下方的方框对准可信设备上的二维码进行扫描"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"选择可信设备"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"也可以在下方列表中选择所需设备"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"连接失败，请重试。"</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"请确认要发给可信设备的报告。"</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"发送报告"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"正在完成报告…"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"蓝牙错误"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"与可信设备通信时出错。请确认蓝牙已启用，然后再试。"</string>
+    <string name="sending_report" msgid="8735615783234611336">"正在将报告发送到可信设备…"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"评估完成"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"结果现在会显示在可信设备上"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"健康度"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"制造日期"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"首次使用日期"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"更换的电池"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"部件历史记录"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"原始容量的 %1$d%%"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"无法获取电池健康度信息"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"低温"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"没电"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"良好"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"过热"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"电压过高"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"存储空间状况"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"总容量"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"型号"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"供应商补丁级别"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"启动补丁级别"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"抗回滚"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"抗回滚"</string>
     <string name="yes" msgid="6686215078709381643">"是"</string>
     <string name="no" msgid="5957591978126937912">"否"</string>
     <string name="unknown" msgid="6936738212381747979">"未知"</string>
@@ -123,8 +122,10 @@
     <string name="qr_code_description" msgid="4665712956570877310">"二维码"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"在要评估的设备上继续操作"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"在要评估的设备上完成测试后，这里就会显示结果"</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"立即扫描"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"在要评估的设备上，前往\n“设置/设备诊断/已评估的设备”\n按照该设备上的提示操作。"</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"在要评估的设备上，前往\n“设置/设备诊断/已评估的设备”\n按照该设备上的提示操作。"</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"按照已评估的设备上的提示操作。收到提示时，按这里即可继续在这部设备上操作。"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"现在，系统将显示一系列画面。请检查每一个画面，看看是否有缺陷。检查完一个画面后，轻触该画面即可进入下一个画面。最后，系统会询问您这些画面看起来是否无瑕疵。"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"现在，系统将显示一系列画面。请检查每一个画面，看看是否有缺陷。轻触当前画面可进入下一个画面。"</string>

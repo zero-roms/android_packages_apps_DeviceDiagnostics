@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"UchunguziwaKifaa"</string>
-    <string name="app_title" msgid="7463703024205195273">"Uchunguzi wa Kifaa"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Uchunguzi wa kifaa"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Endelea"</string>
     <string name="unavailable" msgid="7842920330665850121">"Haipo"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Inaunganisha..."</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"Hali ya kipengele cha kifaa"</string>
     <string name="storage_title" msgid="5921235202250843966">"Hali ya hifadhi"</string>
     <string name="battery_title" msgid="6707361668941323259">"Hali ya betri"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Kutathmini Kuaminika kwa Kifaa"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Kifaa Unachokiamini"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Mchakato wa kutathmini unaoaminika"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Kifaa unachokiamini"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"Anza kwa kuteua chaguo hili kwenye kifaa unachokiamini"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Kifaa Kilichotathminiwa"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Kifaa kilichotathminiwa"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Ukidokezewa, teua chaguo hili kwenye kifaa kilichotathminiwa"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Changanua sasa"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Changanua msimbo wa QR kwenye kifaa unachokiamini katika mstatili ulio hapa chini"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Chagua kifaa unachokiamini"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Au, chagua kifaa kwenye orodha iliyo hapa chini"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Imeshindwa kuunganisha, tafadhali jaribu tena."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Thibitisha ripoti unayotuma kwenye kifaa unachokiamini."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Tuma ripoti"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Inakamilisha ripoti..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Hitilafu ya Bluetooth"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Hitilafu imetokea wakati wa kuwasiliana na kifaa unachokiamini. Tafadhali thibitisha kuwa Bluetooth imewashwa kisha ujaribu tena."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Inatuma ripoti kwenye kifaa unachokiamini..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Mchakato wa kutathmini umekamilika"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Matokeo yataonekana kwenye kifaa unachokiamini"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Muda wa kudumu wa betri"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Tarehe ya kutengenezwa"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Tarehe ya matumizi ya kwanza"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Imebadilishwa"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Kumbukumbu za Kipengele cha Kifaa"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% ya uwezo halisi"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Hali ya muda wa kudumu wa betri haipatikani"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Baridi"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Imeharibika"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Nzuri"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Joto jingi mno"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Kiwango cha juu mno cha volti"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Uthabiti wa hifadhi"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Kiasi chote cha hifadhi"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Muundo"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Kiwango cha rekebisho la usalama la mtoa huduma"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Kiwango cha rekebisho la usalama wakati wa kuwasha"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Inastahimili ushushaji kiwango"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Ustahimili dhidi ya ushushaji kiwango"</string>
     <string name="yes" msgid="6686215078709381643">"Ndiyo"</string>
     <string name="no" msgid="5957591978126937912">"Hapana"</string>
     <string name="unknown" msgid="6936738212381747979">"Hakijulikani"</string>
@@ -123,8 +122,9 @@
     <string name="qr_code_description" msgid="4665712956570877310">"Msimbo wa QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Endelea kwenye kifaa kinachotathminiwa"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Kamilisha kufanya majaribio kwenye kifaa unachokitathmini, kisha matokeo yataonekana hapa"</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Hitilafu fulani imetokea wakati wa kuwasiliana na kifaa kilichotathminiwa. Tafadhali thibitisha kuwa Bluetooth imewashwa kisha ujaribu tena."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Changanua sasa"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Kwenye kifaa ambacho ungependa kukitathmini, nenda kwenye\n Mipangilio/UchunguziwaKifaa/Kifaa Kilichotathminiwa\n Fuata vidokezo kwenye kifaa hicho."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Kwenye kifaa ambacho ungependa kukitathmini, nenda kwenye\n Mipangilio/UchunguziwaKifaa/Kifaa kilichotathminiwa\n Fuata vidokezo kwenye kifaa hicho."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Fuata vidokezo kwenye kifaa kilichotathminiwa. Ukidokezewa, bonyeza hapa ili uendelee kwenye kifaa hiki."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Sasa utaonyeshwa mfululizo wa skrini. Chunguza kila skrini na ubaini kasoro. Baada ya kuridhika, gusa skrini iliyopo ili uende kwenye skrini inayofuata. Hatimaye, utaulizwa iwapo skrini hazina kasoro zozote."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Sasa utaonyeshwa mfululizo wa skrini. Chunguza kila skrini na ubaini kasoro. Gusa skrini iliyopo ili uende kwenye skrini inayofuata."</string>

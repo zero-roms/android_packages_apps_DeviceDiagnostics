@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
-    <string name="app_title" msgid="7463703024205195273">"Device Diagnostics"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Device diagnostics"</string>
     <string name="activity_continue" msgid="2190118984182069151">"जारी रखें"</string>
     <string name="unavailable" msgid="7842920330665850121">"उपलब्ध नहीं है"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"कनेक्ट किया जा रहा है…"</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"कॉम्पोनेंट की स्थिति"</string>
     <string name="storage_title" msgid="5921235202250843966">"डिवाइस के स्टोरेज की स्थिति"</string>
     <string name="battery_title" msgid="6707361668941323259">"बैटरी की स्थिति"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"भरोसेमंद आकलन"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"भरोसेमंद डिवाइस"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"भरोसेमंद जांच"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"भरोसेमंद डिवाइस"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"भरोसेमंद डिवाइस पर इस विकल्प को चुनने के बाद, जांच शुरू करें"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"जांचा गया डिवाइस"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"जांचा गया डिवाइस"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"जब ऐसा करने के लिए कहा जाए, तो जांचे गए डिवाइस पर इस विकल्प को चुनें"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"अभी स्कैन करें"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"यहां दिए गए रेक्टैंगल में मौजूद क्यूआर कोड को भरोसेमंद डिवाइस से स्कैन करें"</string>
@@ -42,9 +41,17 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"भरोसेमंद डिवाइस को चुनें"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"इसके अलावा, यहां दी गई सूची में से कोई डिवाइस चुनें"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"कनेक्ट नहीं किया जा सका, कृपया फिर से कोशिश करें."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"भरोसेमंद डिवाइस को भेजने के लिए, रिपोर्ट की पुष्टि करें."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"रिपोर्ट भेजें"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"रिपोर्ट तैयार की जा रही है..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"ब्लूटूथ से जुड़ी समस्या"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"भरोसेमंद डिवाइस से कनेक्ट करने में गड़बड़ी हुई. कृपया पुष्टि करें कि ब्लूटूथ चालू हो और फिर से कोशिश करें."</string>
+    <string name="sending_report" msgid="8735615783234611336">"भरोसेमंद डिवाइस को रिपोर्ट भेजी जा रही है..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"जांच पूरी हुई"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"नतीजे अब भरोसेमंद डिवाइस में दिखेंगे"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"बैटरी की परफ़ॉर्मेंस"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"बैटरी बनाए जाने की तारीख"</string>
-    <string name="battery_first_usage_date" msgid="1183985039020984695">"पहली बार बैटरी इस्तेमाल करने की तारीख"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"बैटरी को पहली बार इस्तेमाल किए जाने की तारीख"</string>
     <string name="battery_cycle_count" msgid="1002728954996996785">"बैटरी कितनी बार पूरी इस्तेमाल की गई"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"बैटरी का सीरियल नंबर"</string>
     <string name="battery_part_status" msgid="504091754655232085">"बैटरी के पार्ट की स्थिति"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"बैटरी को बदला गया"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"बैटरी के पार्ट का इतिहास"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"बैटरी की ओरिजनल कपैसिटी का %1$d%%"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"बैटरी की परफ़ॉर्मेंस से जुड़ा डेटा उपलब्ध नहीं है"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"बैटरी का तापमान बहुत कम है"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"बैटरी खत्म हो गई है"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"बैटरी की लाइफ़ अच्छी है"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"बैटरी ज़रूरत से ज़्यादा गर्म है"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"वोल्टेज ज़्यादा है"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"डिवाइस के स्टोरेज की परफ़ॉर्मेंस"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"डिवाइस का कुल स्टोरेज"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -74,7 +75,7 @@
     <string name="touch_test_result_title" msgid="8236119653054988245">"टच टेस्ट का नतीजा"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"टच टेस्ट का नतीजा यह रहा. वापस जाकर, टेस्ट को फिर से चलाया जा सकता है."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"टच सेंसर की जांच सफल रही"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"टच सेंसर टेस्ट फ़ेल हो गया"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"टच सेंसर की जांच फ़ेल हो गई"</string>
     <string name="pass" msgid="6411665547268368837">"पास"</string>
     <string name="fail" msgid="3918028202746427731">"फ़ेल"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"सर्टिफ़िकेट की पुष्टि की गई है"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"मॉडल"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"वेंडर का पैच लेवल"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"पैच लेवल चालू करें"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"रोलबैक रेज़िस्टेंट (कुंजी का दोबारा इस्तेमाल नहीं किया जाएगा)"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"रोलबैक रेज़िस्टेंस (कुंजी का दोबारा इस्तेमाल न कर पाना)"</string>
     <string name="yes" msgid="6686215078709381643">"हां"</string>
     <string name="no" msgid="5957591978126937912">"नहीं"</string>
     <string name="unknown" msgid="6936738212381747979">"जानकारी मौजूद नहीं है"</string>
@@ -121,13 +120,14 @@
     <string name="locked" msgid="2034650000550950371">"लॉक है"</string>
     <string name="not_locked" msgid="1663929635666930122">"लॉक नहीं है"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"क्यूआर कोड"</string>
-    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"उस डिवाइस की जांच जारी रखें जिसका आकलन किया जा रहा है"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"जिस डिवाइस की जांच की जा रही है उस पर टेस्ट पूरा करें. इसके बाद, नतीजे यहां दिखेंगे"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"उस डिवाइस पर जारी रखें जिसकी जांच की जा रही है"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"जांचे जा रहे डिवाइस पर टेस्ट पूरे करें. इसके बाद, नतीजे यहां दिखेंगे"</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"जांचे गए डिवाइस से कनेक्ट करने में गड़बड़ी हुई. कृपया पुष्टि करें कि ब्लूटूथ चालू हो और फिर से कोशिश करें."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"अभी स्कैन करें"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"जिस डिवाइस का आकलन करना है उसमें \n सेटिंग/DeviceDiagnostics/वह डिवाइस जिसका आकलन हो चुका है\n पर जाएं. इसके बाद, डिवाइस पर दिए गए निर्देशों का पालन करें."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"जिस डिवाइस की जांच करनी है उसमें \n सेटिंग/DeviceDiagnostics/वह डिवाइस जिसकी जांच हो चुकी है\n पर जाएं. इसके बाद, डिवाइस पर दिए गए निर्देशों का पालन करें."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"जांचे गए डिवाइस पर मिलने वाले प्रॉम्प्ट फ़ॉलो करें. प्रॉम्प्ट फ़ॉलो करने के बाद, इस डिवाइस पर जारी रखने के लिए यहां दबाएं."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"अब आपको स्क्रीन की एक सीरीज़ दिखेगी. हर एक की जांच करें और खराबियों का पता लगाएं. सही से जांच कर लेने के बाद, अगली स्क्रीन पर जाने के लिए स्क्रीन को छुएं. आखिर में, आपसे यह पूछा जाएगा कि स्क्रीन पर कोई खराबी थी या नहीं."</string>
-    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"अब आपको स्क्रीन की एक सीरीज़ दिखेगी. हर एक की जांच करें और खराबियों का पता लगाएं. अगली स्क्रीन पर जाने के लिए, स्क्रीन को छुएं."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"अब आपको एक के बाद एक कई स्क्रीन दिखाई जाएंगी. हर एक पर दिए गए निर्देशों के मुताबिक जांच करें और खराबियों का पता लगाएं. अगली स्क्रीन पर जाने के लिए, स्क्रीन को छुएं."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"कृपया, यहां दिए गए विकल्पों में वह विकल्प चुनें जो स्क्रीन की स्थिति से मेल खाता हो."</string>
     <string name="touch_test_summary" msgid="508062796771632474">"अब आपको लाल रंग की एक स्क्रीन दिखेगी.\n \n स्क्रीन के पूरी तरह से सफ़ेद होने तक, स्क्रीन पर अपनी उंगली से घिसें. अगर स्क्रीन का कोई हिस्सा सफ़ेद नहीं हो पा रहा है, तो स्क्रीन पर हल्का टैप करें. इससे यह पता चल सकेगा कि टच सेंसर पूरी तरह से काम नहीं कर रहा है.\n \n अगर आप चाहें, तो रिपोर्ट स्क्रीन से बैक स्वाइप किया जा सकता है और टेस्ट को वहीं से शुरू किया जा सकता है जहां पर आपने उसे छोड़ा था.\n"</string>
     <string name="scan_result" msgid="7232716409194522023">"कृपया इस क्यूआर कोड को भरोसेमंद डिवाइस से स्कैन करें. इसे स्कैन करने के बाद, उस डिवाइस पर \'हो गया\' को दबाया जा सकता है."</string>
