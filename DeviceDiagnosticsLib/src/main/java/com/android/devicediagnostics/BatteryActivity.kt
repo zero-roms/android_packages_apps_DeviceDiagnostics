@@ -42,31 +42,26 @@ fun legacyHealthToStringId(value: Int): Int {
     }
 }
 
-class BatteryInfoFragment(private var diagnostics: BatteryInfo) : PreferenceFragmentCompat() {
+class BatteryInfoFragment(private val diagnostics: BatteryInfo, private val launchLevel: Int) :
+    PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.battery_preferences, rootKey)
 
-        val app = ApplicationInterface.app
-        val vsrLevel = app.getLaunchLevel()
-
         findPreference<BatteryHealthPreference>("health")!!.also {
             it.diagnostics = diagnostics
-            if (vsrLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-                it.setPercent(max(0, diagnostics.stateOfHealth.toLong()), 100)
-                if (diagnostics.stateOfHealth >= 0) {
-                    it.setBottomSummary(
-                        getString(R.string.battery_health_summary, diagnostics.stateOfHealth)
-                    )
-                } else {
-                    it.setBottomSummary(getString(R.string.battery_health_unavailable))
-                }
+            it.setPercent(max(0, diagnostics.stateOfHealth.toLong()), 100)
+            if (diagnostics.hasStateOfHealth()) {
+                it.setBottomSummary(
+                    getString(R.string.battery_health_summary, diagnostics.stateOfHealth)
+                )
             } else {
-                it.isVisible = false
+                it.setBottomSummary(getString(R.string.battery_health_unavailable))
+                it.isVisible = launchLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
             }
         }
 
         findPreference<Preference>("legacy_health")!!.also {
-            if (vsrLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            if (diagnostics.hasStateOfHealth()) {
                 it.isVisible = false
             } else {
                 it.summary = getString(legacyHealthToStringId(diagnostics.legacyHealth))
@@ -77,50 +72,45 @@ class BatteryInfoFragment(private var diagnostics: BatteryInfo) : PreferenceFrag
         findPreference<Preference>("manufacture_date")!!.also {
             if (diagnostics.manufactureDate != null) {
                 it.summary = diagnostics.manufactureDate
-            } else if (vsrLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-                it.summary = getString(R.string.unknown)
             } else {
-                it.isVisible = false
+                it.summary = getString(R.string.unknown)
+                it.isVisible = launchLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
             }
         }
 
         findPreference<Preference>("first_usage_date")!!.also {
-            if (diagnostics.firstUsageDate != null) {
+            if (diagnostics.hasFirstUsageDate()) {
                 it.summary = diagnostics.firstUsageDate
-            } else if (vsrLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-                it.summary = getString(R.string.unknown)
             } else {
-                it.isVisible = false
+                it.summary = getString(R.string.unknown)
+                it.isVisible = launchLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
             }
         }
 
         findPreference<Preference>("cycle_count")!!.also {
-            if (diagnostics.cycleCount != -1) {
+            if (diagnostics.hasCycleCount()) {
                 it.summary = diagnostics.cycleCount.toString()
-            } else if (vsrLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-                it.summary = getString(R.string.unknown)
             } else {
-                it.isVisible = false
+                it.summary = getString(R.string.unknown)
+                it.isVisible = launchLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
             }
         }
 
         findPreference<Preference>("serial_number")!!.also {
-            if (diagnostics.serial != null) {
+            if (diagnostics.hasSerial()) {
                 it.summary = diagnostics.serial
-            } else if (vsrLevel >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
-                it.summary = getString(R.string.unknown)
             } else {
-                it.isVisible = false
+                it.summary = getString(R.string.unknown)
+                it.isVisible = launchLevel > Build.VERSION_CODES.VANILLA_ICE_CREAM
             }
         }
 
         findPreference<Preference>("part_status")!!.also {
-            if (diagnostics.partStatus != null) {
+            if (diagnostics.hasPartStatus()) {
                 it.summary = diagnostics.partStatus
-            } else if (vsrLevel >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
-                it.summary = getString(R.string.unknown)
             } else {
-                it.isVisible = false
+                it.summary = getString(R.string.unknown)
+                it.isVisible = launchLevel > Build.VERSION_CODES.VANILLA_ICE_CREAM
             }
         }
     }
@@ -132,7 +122,7 @@ class BatteryHealthPreference(context: Context, attrs: AttributeSet) :
     var diagnostics: BatteryInfo = BatteryInfo.getDefaultInstance()
 
     override fun getSummary(): CharSequence? {
-        if (diagnostics.stateOfHealth == -1) {
+        if (!diagnostics.hasStateOfHealth()) {
             return context.getString(R.string.unavailable)
         }
         return diagnostics.stateOfHealth.toString() + "%"
@@ -147,9 +137,10 @@ class BatteryActivity : CollapsingToolbarBaseActivity() {
 
         if (savedInstanceState == null) {
             val diagnostics = readBatteryInfo()
+            val launchLevel = readLaunchLevel()
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add(R.id.fragment_container_view, BatteryInfoFragment(diagnostics))
+                add(R.id.fragment_container_view, BatteryInfoFragment(diagnostics, launchLevel))
             }
         }
     }
@@ -163,12 +154,21 @@ class BatteryActivity : CollapsingToolbarBaseActivity() {
         return getBatteryInfo(this)
     }
 
+    private fun readLaunchLevel(): Int {
+        if (intent.extras != null) {
+            return intent.extras!!.getInt(INTENT_LAUNCH_LEVEL)
+        }
+        return ApplicationInterface.app.getLaunchLevel()
+    }
+
     companion object Static {
         const val INTENT_BATTERY_INFO = "battery_info"
+        const val INTENT_LAUNCH_LEVEL = "vsr_level"
 
-        fun createIntent(from: Activity, diagnostics: BatteryInfo): Intent {
+        fun createIntent(from: Activity, diagnostics: BatteryInfo, launchLevel: Int): Intent {
             return Intent(from, BatteryActivity::class.java)
                 .putExtra(INTENT_BATTERY_INFO, diagnostics.toByteArray())
+                .putExtra(INTENT_LAUNCH_LEVEL, launchLevel)
         }
     }
 }

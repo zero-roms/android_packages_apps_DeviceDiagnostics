@@ -52,7 +52,10 @@ fun getBatteryInfo(context: Context): BatteryInfo {
         }
     } catch (e: Exception) {}
 
-    builder.setStateOfHealth(bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_STATE_OF_HEALTH))
+    val stateOfHealth = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_STATE_OF_HEALTH)
+    if (stateOfHealth >= 0) {
+        builder.setStateOfHealth(stateOfHealth)
+    }
 
     if (android.os.Flags.batteryPartStatusApi()) {
         val status = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_PART_STATUS)

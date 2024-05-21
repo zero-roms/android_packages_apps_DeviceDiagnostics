@@ -41,7 +41,8 @@ class DisplayResultFragment(
         findPreference<Preference>("touch")?.summary = if (tests.touchTest) pass else fail
 
         findPreference<Preference>("battery")!!.setOnPreferenceClickListener {
-            val intent = BatteryActivity.createIntent(activity!!, report.battery)
+            val intent =
+                BatteryActivity.createIntent(activity!!, report.battery, report.launchLevel)
             activity!!.startActivity(intent)
             true
         }

@@ -25,10 +25,10 @@ message TestResults {
 }
 
 message BatteryInfo {
-    int32 cycle_count = 1;
+    optional int32 cycle_count = 1;
     optional string manufacture_date = 2;
     optional string first_usage_date = 3;
-    int32 state_of_health = 4;
+    optional int32 state_of_health = 4;
     optional string serial = 5;
     optional string part_status = 6;
     int32 legacy_health = 7;
@@ -49,6 +49,7 @@ message DeviceReport {
     bytes attestation = 2;
     BatteryInfo battery = 3;
     StorageInfo storage = 4;
+    int32 launch_level = 5;
 }
 
 message BluetoothPacket {

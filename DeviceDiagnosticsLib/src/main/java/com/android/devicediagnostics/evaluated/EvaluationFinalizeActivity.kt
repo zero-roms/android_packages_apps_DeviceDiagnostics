@@ -82,11 +82,13 @@ class EvaluationFinalizeActivity : CollapsingToolbarBaseActivity() {
 
             val batteryInfo = getBatteryInfo(this)
             val storageInfo = getStorageInfo(this)
+            val launchLevel = ApplicationInterface.app.getLaunchLevel()
 
             val attestation = createAttestationRecord(state.trustedDevice.challenge.toByteArray())
             reportBuilder.setAttestation(ByteString.copyFrom(attestation))
             reportBuilder.setBattery(batteryInfo)
             reportBuilder.setStorage(storageInfo)
+            reportBuilder.setLaunchLevel(launchLevel)
 
             val report = reportBuilder.build()
 
