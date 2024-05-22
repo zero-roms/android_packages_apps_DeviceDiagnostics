@@ -44,14 +44,15 @@ import com.android.settingslib.widget.LayoutPreference
 
 private const val TAG = "evaluated/QrCodeScan"
 
-class QrCodeScanFragment() :
-    TextureView.SurfaceTextureListener,
-    BluetoothClient.ScanListener,
-    QrCamera.ScannerCallback,
-    PreferenceFragmentCompat() {
+class QrCodeScanFragment(private val callbacks: Callbacks) :
+    TextureView.SurfaceTextureListener, QrCamera.ScannerCallback, PreferenceFragmentCompat() {
     private var textureView: TextureView? = null
-    private var bluetoothClient: BluetoothClient? = null
     private var mCamera: QrCamera? = null
+
+    interface Callbacks {
+        fun isQrCodeValid(qrCode: String?): Boolean
+        fun onQrCodeScanned(qrCode: String)
+    }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_evaluated_scan, rootKey)
@@ -72,43 +73,14 @@ class QrCodeScanFragment() :
         textureView!!.clipToOutline = true
     }
 
-    private fun startBluetooth(connectionData: BluetoothConnectionData) {
-        bluetoothClient = ApplicationInterface.app.getBluetoothClient()
-        bluetoothClient!!.connectionData = connectionData
-        bluetoothClient!!.start(this)
-
-        requireActivity().runOnUiThread { setConnectionProgressVisibility(true) }
-    }
-
-    override fun onBluetoothConnected(trustedDeviceInfo: TrustedDeviceInfo) {
-        requireActivity().runOnUiThread { onDeviceConnected(trustedDeviceInfo) }
-    }
-
-    override fun onBluetoothConnectionFailed() {
-        onBluetoothFailure()
-    }
-
-    private fun setConnectionProgressVisibility(visible: Boolean) {
+    fun setConnectionProgressVisibility(visible: Boolean) {
         val pref = findPreference<Preference>("connection_progress")!!
         pref.isVisible = visible
     }
 
-    private fun setConnectionFailedVisibility(visible: Boolean) {
+    fun setConnectionFailedVisibility(visible: Boolean) {
         val pref = findPreference<Preference>("connection_failed")!!
         pref.isVisible = visible
-    }
-
-    private fun onDeviceConnected(trustedDeviceInfo: TrustedDeviceInfo) {
-        setConnectionProgressVisibility(false)
-        startFullTestFlow(requireActivity(), trustedDeviceInfo)
-    }
-
-    private fun onBluetoothFailure() {
-        setConnectionProgressVisibility(false)
-        setConnectionFailedVisibility(true)
-
-        val bt = ApplicationInterface.app.getBluetoothClient()
-        bt.reset()
     }
 
     override fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
@@ -141,24 +113,18 @@ class QrCodeScanFragment() :
     }
 
     override fun isValid(qrCode: String?): Boolean {
-        try {
-            BluetoothConnectionData.fromJson(qrCode!!)
-        } catch (e: Exception) {
-            return false
-        }
-        return true
+        return callbacks.isQrCodeValid(qrCode)
     }
 
     override fun handleSuccessfulResult(qrCode: String?) {
-        getSystemService<Vibrator>(activity!!, Vibrator::class.java)!!.vibrate(
-            VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE)
-        )
-        startBluetooth(BluetoothConnectionData.fromJson(qrCode!!))
+        callbacks.onQrCodeScanned(qrCode!!)
     }
 }
 
-class QrCodeScanActivity : CollapsingToolbarBaseActivity() {
-    private var mFragment = QrCodeScanFragment()
+class QrCodeScanActivity :
+    CollapsingToolbarBaseActivity(), QrCodeScanFragment.Callbacks, BluetoothClient.ScanListener {
+    private var mFragment = QrCodeScanFragment(this)
+    private var bluetoothClient: BluetoothClient? = null
 
     private val permissions =
         PermissionsHelper(
@@ -190,5 +156,47 @@ class QrCodeScanActivity : CollapsingToolbarBaseActivity() {
             setReorderingAllowed(true)
             add(R.id.fragment_container_view, mFragment)
         }
+    }
+
+    override fun isQrCodeValid(qrCode: String?): Boolean {
+        try {
+            BluetoothConnectionData.fromJson(qrCode!!)
+        } catch (e: Exception) {
+            return false
+        }
+        return true
+    }
+
+    override fun onQrCodeScanned(qrCode: String) {
+        getSystemService<Vibrator>(Vibrator::class.java)!!.vibrate(
+            VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE)
+        )
+        startBluetooth(BluetoothConnectionData.fromJson(qrCode))
+    }
+
+    private fun startBluetooth(connectionData: BluetoothConnectionData) {
+        bluetoothClient = ApplicationInterface.app.getBluetoothClient()
+        bluetoothClient!!.connectionData = connectionData
+        bluetoothClient!!.start(this)
+
+        runOnUiThread { mFragment.setConnectionProgressVisibility(true) }
+    }
+
+    override fun onBluetoothConnected(trustedDeviceInfo: TrustedDeviceInfo) {
+        // Can be called from the test thread, so wrap this call in runOnUiThread.
+        runOnUiThread { onDeviceConnected(trustedDeviceInfo) }
+    }
+
+    private fun onDeviceConnected(trustedDeviceInfo: TrustedDeviceInfo) {
+        mFragment.setConnectionProgressVisibility(false)
+        startFullTestFlow(this, trustedDeviceInfo)
+    }
+
+    override fun onBluetoothConnectionFailed() {
+        mFragment.setConnectionProgressVisibility(false)
+        mFragment.setConnectionFailedVisibility(true)
+
+        val bt = ApplicationInterface.app.getBluetoothClient()
+        bt.reset()
     }
 }
