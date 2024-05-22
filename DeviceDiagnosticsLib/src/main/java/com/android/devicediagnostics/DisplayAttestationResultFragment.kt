@@ -20,6 +20,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.google.android.attestation.AuthorizationList
 import com.google.android.attestation.ParsedAttestationRecord
+import com.google.android.attestation.RootOfTrust
 import java.util.Optional
 
 class DisplayAttestationResultFragment(
@@ -83,8 +84,13 @@ class DisplayAttestationResultFragment(
 
     private fun getVerifiedBootState(): String {
         val root = record.teeEnforced.rootOfTrust
-        if (!root.isPresent) return activity!!.resources.getString(R.string.unknown)
-        return root.get().verifiedBootState.name
+        var stringResId = R.string.avb_not_verified
+        if (
+            root.isPresent && root.get().verifiedBootState == RootOfTrust.VerifiedBootState.VERIFIED
+        ) {
+            stringResId = R.string.avb_verified
+        }
+        return activity!!.resources.getString(stringResId)
     }
 
     private fun showInt(key: String, value: Optional<Int>?) {
