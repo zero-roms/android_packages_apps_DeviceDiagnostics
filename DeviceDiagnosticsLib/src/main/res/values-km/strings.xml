@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
-    <string name="app_title" msgid="7463703024205195273">"ការវិនិច្ឆយឧបករណ៍"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"ការវិនិច្ឆយឧបករណ៍"</string>
     <string name="activity_continue" msgid="2190118984182069151">"បន្ត"</string>
     <string name="unavailable" msgid="7842920330665850121">"មិនមានទេ"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"កំពុង​ភ្ជាប់..."</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"ស្ថានភាពសមាសធាតុ"</string>
     <string name="storage_title" msgid="5921235202250843966">"ស្ថានភាពទំហំផ្ទុក"</string>
     <string name="battery_title" msgid="6707361668941323259">"ស្ថានភាពថ្ម"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"ការវាយតម្លៃដែលទុកចិត្ត"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"ឧបករណ៍​ដែល​ទុកចិត្ត"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"ការវាយតម្លៃដែលទុកចិត្ត"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"ឧបករណ៍​ដែល​ទុកចិត្ត"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"ចាប់ផ្ដើមដោយជ្រើសរើសជម្រើសនេះនៅលើឧបករណ៍​ដែល​ទុក​ចិត្ត"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"ឧបករណ៍ដែលទទួលការវាយតម្លៃ"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"ឧបករណ៍ដែលទទួលការវាយតម្លៃ"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"នៅពេលស្នើឱ្យធ្វើដូច្នោះ សូមជ្រើសរើសជម្រើសនេះនៅលើឧបករណ៍ដែលទទួលការវាយតម្លៃ"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"ស្កេនឥឡូវនេះ"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"ស្កេនកូដ QR នៅលើឧបករណ៍​ដែល​ទុក​ចិត្តនៅក្នុងចតុកោណកែងខាងក្រោម"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"ជ្រើសរើសឧបករណ៍​ដែល​ទុក​ចិត្ត"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"ឬម្យ៉ាងទៀត ជ្រើសរើសឧបករណ៍ពីបញ្ជីខាងក្រោម"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"ការតភ្ជាប់មិនបានសម្រេចទេ សូមព្យាយាមម្ដងទៀត។"</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"បញ្ជាក់របាយការណ៍ ដើម្បីផ្ញើទៅឧបករណ៍​ដែល​ទុក​ចិត្ត។"</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"ផ្ញើរបាយការណ៍"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"កំពុងសម្រេចបញ្ចប់របាយការណ៍..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"បញ្ហាប៊្លូធូស"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"មានបញ្ហាក្នុងការភ្ជាប់ទំនាក់ទំនងជាមួយឧបករណ៍​ដែល​ទុក​ចិត្ត។ សូមផ្ទៀងផ្ទាត់ថា ប៊្លូធូសត្រូវបានបើក រួចព្យាយាមម្ដងទៀត។"</string>
+    <string name="sending_report" msgid="8735615783234611336">"កំពុងផ្ញើរបាយការណ៍ទៅឧបករណ៍​ដែល​ទុក​ចិត្ត..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"ការវាយតម្លៃបានបញ្ចប់"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"ឥឡូវនេះ លទ្ធផលនឹងបង្ហាញនៅលើឧបករណ៍​ដែល​ទុក​ចិត្ត"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"គុណភាព"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"កាលបរិច្ឆេទផលិត"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"កាលបរិច្ឆេទប្រើប្រាស់ដំបូង"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"បាន​ជំនួស"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"ប្រវត្តិផ្នែក"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% នៃកាប៉ាស៊ីតេដើម"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"មិនអាចប្រើគុណភាព​ថ្មបានទេ"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"ត្រជាក់"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"ខូច"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"ល្អ"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"ក្ដៅ​ខ្លាំង"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"លើស​តង់ស្យុង"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"គុណភាពទំហំផ្ទុក"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"កាប៉ាស៊ីតេសរុប"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -72,7 +73,7 @@
     <string name="cancel_button" msgid="7011882021431169180">"បោះបង់"</string>
     <string name="try_again_button" msgid="6015477950108798246">"ព្យាយាមម្ដងទៀត"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"លទ្ធផលធ្វើតេស្តការចុច"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"នេះជាលទ្ធផលនៃការធ្វើតេស្តការចុច។ អ្នកអាចដំណើរការការធ្វើតេស្តឡើងវិញដោយរុករកថយក្រោយ។"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"នេះជាលទ្ធផលនៃការធ្វើតេស្តការចុច។ អ្នកអាចដំណើរការការធ្វើតេស្តឡើងវិញដោយត្រឡប់ក្រោយ។"</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"ការធ្វើតេស្តសេនស័រចាប់ការចុចបានសម្រេច"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"ការធ្វើតេស្តសេនស័រចាប់ការចុចមិនបានសម្រេចទេ"</string>
     <string name="pass" msgid="6411665547268368837">"ជោគជ័យ"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"ម៉ូដែល"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"កម្រិតបំណះអ្នកផ្គត់ផ្គង់"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"ចាប់ផ្ដើមកម្រិតបំណះ"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"ធន់នឹងការប្ដូរត្រឡប់"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"ភាពធន់នឹងការប្ដូរត្រឡប់"</string>
     <string name="yes" msgid="6686215078709381643">"បាទ/ចាស"</string>
     <string name="no" msgid="5957591978126937912">"ទេ"</string>
     <string name="unknown" msgid="6936738212381747979">"មិន​ស្គាល់"</string>
@@ -123,8 +122,10 @@
     <string name="qr_code_description" msgid="4665712956570877310">"កូដ QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"បន្តលើឧបករណ៍ដែលកំពុងត្រូវបានវាយតម្លៃ"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"បញ្ចប់ការធ្វើតេស្តលើឧបករណ៍ដែលអ្នកកំពុងវាយតម្លៃ បន្ទាប់មក លទ្ធផលនឹងបង្ហាញនៅទីនេះ"</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"ស្កេនឥឡូវនេះ"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"នៅលើឧបករណ៍ដែលអ្នកចង់វាយតម្លៃ សូមចូលទៅកាន់\n ការកំណត់/DeviceDiagnostics/ឧបករណ៍ដែលទទួលការវាយតម្លៃ\n អនុវត្តតាមសារតម្រុយនៅលើឧបករណ៍នោះ។"</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"នៅលើឧបករណ៍ដែលអ្នកចង់វាយតម្លៃ សូមចូលទៅកាន់\n ការកំណត់/DeviceDiagnostics/ឧបករណ៍ដែលទទួលការវាយតម្លៃ\n អនុវត្តតាមសារតម្រុយនៅលើឧបករណ៍នោះ។"</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"អនុវត្តតាមសារតម្រុយនៅលើឧបករណ៍ដែលទទួលការវាយតម្លៃ។ នៅពេលស្នើ សូមចុចទីនេះដើម្បីបន្តលើឧបករណ៍នេះ។"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"ឥឡូវនេះ អ្នកនឹងត្រូវបានបង្ហាញឱ្យឃើញអេក្រង់មួយចំនួន។ សិក្សាអេក្រង់នីមួយៗ ហើយរកមើលកំហូច។ ពេលអ្នកពេញចិត្តហើយ សូមចុចលើអេក្រង់ដើម្បីបន្តទៅអេក្រង់បន្ទាប់។ នៅចុងបញ្ចប់ អ្នកនឹងត្រូវបានសួរថាតើអេក្រង់ទាំងនេះមើលទៅមានបញ្ហាឬអត់។"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ឥឡូវនេះ អ្នកនឹងត្រូវបានបង្ហាញឱ្យឃើញអេក្រង់មួយចំនួន។ សិក្សាអេក្រង់នីមួយៗ ហើយរកមើលកំហូច។ សូមចុចលើអេក្រង់ដើម្បីបន្តទៅអេក្រង់បន្ទាប់។"</string>

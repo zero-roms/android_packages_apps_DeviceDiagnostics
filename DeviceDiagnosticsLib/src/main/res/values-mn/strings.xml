@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"Төхөөрөмжийн оношилгоо"</string>
-    <string name="app_title" msgid="7463703024205195273">"Төхөөрөмжийн оношилгоо"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Төхөөрөмжийн оношилгоо"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Үргэлжлүүлэх"</string>
     <string name="unavailable" msgid="7842920330665850121">"Боломжгүй"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Холбогдож байна..."</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"Бүрэлдэхүүн хэсгийн төлөв"</string>
     <string name="storage_title" msgid="5921235202250843966">"Хадгалах сангийн төлөв"</string>
     <string name="battery_title" msgid="6707361668941323259">"Батарейн төлөв"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Итгэмжлэгдсэн үнэлгээ"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Итгэмжлэгдсэн төхөөрөмж"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Итгэмжлэгдсэн үнэлгээ"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Итгэмжлэгдсэн төхөөрөмж"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"Итгэмжлэгдсэн төхөөрөмж дээр энэ сонголтыг сонгосноор эхэлнэ үү"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Үнэлсэн төхөөрөмж"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Үнэлсэн төхөөрөмж"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Ингэхийг зааварчилсан үед үнэлсэн төхөөрөмж дээр уг сонголтыг сонгоно уу"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Одоо скан хийх"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Доорх тэгш өнцөгт дэх итгэмжлэгдсэн төхөөрөмж дээр QR кодыг скан хийнэ үү"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Итгэмжлэгдсэн төхөөрөмж сонгоно уу"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Эсвэл доорх жагсаалтаас төхөөрөмжийг сонгоно уу"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Холболт амжилтгүй боллоо. Дахин оролдоно уу."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Итгэмжлэгдсэн төхөөрөмж рүү илгээхийн тулд тайланг баталгаажуулна уу"</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Тайлан илгээх"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Тайланг эцэслэж байна..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Bluetooth-н алдаа"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Итгэмжлэгдсэн төхөөрөмжтэй харилцах үед алдаа гарлаа. Bluetooth-г идэвхжүүлсэн болохыг баталгаажуулж, дахин оролдоно уу."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Итгэмжлэгдсэн төхөөрөмж рүү тайлан илгээж байна..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Үнэлгээ дууслаа"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Үр дүн одоо итгэмжлэгдсэн төхөөрөмж дээр харагдана"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Хэрэглээний төлөв"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Үйлдвэрлэсэн огноо"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Анх ашигласан огноо"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Сольсон"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Эд ангийн түүх"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"Эх чадамжийн %1$d%%"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Цэнэг барилт боломжгүй"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Хүйтэн"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Цэнэггүй"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Сайн"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Хэт халалт"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Хүчдэл хэтэрсэн"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Хадгалах сангийн хэрэглээний төлөв"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Нийт багтаамж"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Загвар"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Нийлүүлэгчийн нөхөөсний түвшин"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Нөхөөсний түвшнийг ачаалах"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Буцаах боломжгүй"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Буцаах боломжгүй"</string>
     <string name="yes" msgid="6686215078709381643">"Тийм"</string>
     <string name="no" msgid="5957591978126937912">"Үгүй"</string>
     <string name="unknown" msgid="6936738212381747979">"Тодорхойгүй"</string>
@@ -123,8 +122,10 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR код"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Үнэлж буй төхөөрөмж дээр үргэлжлүүлнэ үү"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Үнэлж буй төхөөрөмж дээрх туршилтыг дуусгана уу. Үр дүн нь энд харагдана"</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Одоо скан хийх"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Та үнэлэхийг хүссэн төхөөрөмж дээрээ\n Settings/DeviceDiagnostics/Evaluated Device\n руу очоод, тухайн төхөөрөмж дээрх зааврыг дагана уу."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Та үнэлэхийг хүссэн төхөөрөмж дээрээ\n Тохиргоо/Төхөөрөмжийн оношилгоо/Үнэлсэн төхөөрөмж\n рүү очоод, тухайн төхөөрөмж дээрх зааврыг дагана уу."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Үнэлсэн төхөөрөмж дээрх зааврыг дагана уу. Зааварчилсан үед энэ төхөөрөмж дээр үргэлжлүүлэхийн тулд энд дарна уу."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Танд одоо цуврал дэлгэцийг харуулна. Нэг бүрчлэн судалж, согог байгаа эсэхийг хайна уу. Та сэтгэл хангалуун байвал дараагийнх руу очихын тулд дэлгэцэд хүрнэ үү. Эцэст нь танаас дэлгэц өө сэвгүй харагдаж байгаа эсэхийг асууна."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Танд одоо цуврал дэлгэцийг харуулна. Нэг бүрчлэн судалж, согог байгаа эсэхийг хайна уу. Дараагийнх руу очихын тулд дэлгэцэд хүрнэ үү."</string>

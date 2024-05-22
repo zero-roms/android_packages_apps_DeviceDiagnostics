@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
-    <string name="app_title" msgid="7463703024205195273">"Chẩn đoán thiết bị"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Chẩn đoán thiết bị"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Tiếp tục"</string>
     <string name="unavailable" msgid="7842920330665850121">"Không có"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Đang kết nối..."</string>
@@ -27,14 +26,14 @@
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Chế độ đánh giá"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Bài kiểm tra thủ công"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Bài kiểm tra màn hình"</string>
-    <string name="touch_test_title" msgid="4347784874948129736">"Bài kiểm tra cảm biến chạm"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Bài kiểm tra cảm ứng"</string>
     <string name="component_title" msgid="6580046234562555655">"Trạng thái của thành phần"</string>
     <string name="storage_title" msgid="5921235202250843966">"Trạng thái bộ nhớ"</string>
     <string name="battery_title" msgid="6707361668941323259">"Trạng thái pin"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Đánh giá thiết bị tin cậy"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Thiết bị tin cậy"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Đánh giá thiết bị tin cậy"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Thiết bị tin cậy"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"Bắt đầu bằng cách chọn phương án này trên một thiết bị tin cậy"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Thiết bị được đánh giá"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Thiết bị được đánh giá"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Khi được nhắc làm như vậy, hãy chọn phương án này trên thiết bị được đánh giá"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Quét ngay"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Hãy quét mã QR ở trong hình chữ nhật bên dưới trên thiết bị tin cậy"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Chọn thiết bị tin cậy"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Hoặc chọn thiết bị này trong danh sách bên dưới"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Không kết nối được. Vui lòng thử lại."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Xác nhận báo cáo sẽ gửi cho thiết bị tin cậy này."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Gửi báo cáo"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Đang hoàn thiện báo cáo..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Lỗi Bluetooth"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Đã xảy ra lỗi khi kết nối với thiết bị tin cậy này. Hãy xác minh rằng bạn đã bật Bluetooth rồi thử lại."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Đang gửi báo cáo cho thiết bị tin cậy này..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Đánh giá xong"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Giờ đây, kết quả sẽ xuất hiện trên thiết bị tin cậy này"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Tình trạng"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Ngày sản xuất"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Ngày đầu tiên sử dụng"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Đã thay thế"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Nhật ký pin"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% dung lượng ban đầu"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Không có thông tin về tình trạng pin"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Thấp"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Hết pin"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Tốt"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Quá nóng"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Điện áp quá mức"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Tình trạng bộ nhớ"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Tổng dung lượng"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -71,10 +72,10 @@
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Vui lòng cấp các quyền được yêu cầu để tiếp tục với chế độ đánh giá."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Huỷ"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Thử lại"</string>
-    <string name="touch_test_result_title" msgid="8236119653054988245">"Kết quả của bài kiểm tra cảm biến chạm"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"Đây là kết quả của bài kiểm tra cảm biến chạm. Bạn có thể quay lại để chạy lại bài kiểm tra này."</string>
-    <string name="touch_test_good_title" msgid="4008967693136685770">"Bài kiểm tra cảm biến chạm cho kết quả đạt"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"Bài kiểm tra cảm biến chạm cho kết quả không đạt"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Kết quả của bài kiểm tra cảm ứng"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Đây là kết quả của bài kiểm tra cảm ứng. Bạn có thể quay lại để chạy lại bài kiểm tra này."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Thiết bị đã vượt qua bài kiểm tra cảm biến cảm ứng"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Thiết bị không vượt qua được bài kiểm tra cảm biến cảm ứng"</string>
     <string name="pass" msgid="6411665547268368837">"Đạt"</string>
     <string name="fail" msgid="3918028202746427731">"Không thành công"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"Chứng chỉ đã được xác minh"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Mẫu"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Cấp độ bản vá của nhà cung cấp"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Cấp độ bản vá của trình khởi động"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Chống khôi phục"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Tính năng chống khôi phục"</string>
     <string name="yes" msgid="6686215078709381643">"Có"</string>
     <string name="no" msgid="5957591978126937912">"Không"</string>
     <string name="unknown" msgid="6936738212381747979">"Không xác định"</string>
@@ -123,12 +122,13 @@
     <string name="qr_code_description" msgid="4665712956570877310">"Mã QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Tiếp tục trên thiết bị đang được đánh giá"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Hãy hoàn thành các bài kiểm tra trên thiết bị mà bạn đang đánh giá. Khi đó, kết quả sẽ xuất hiện ở đây"</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Đã xảy ra lỗi khi kết nối với thiết bị được đánh giá này. Hãy đảm bảo rằng bạn đã bật Bluetooth rồi thử lại."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Quét ngay"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Trên thiết bị bạn muốn đánh giá, hãy chuyển đến phần\n Cài đặt/DeviceDiagnostics/Thiết bị được đánh giá\n Làm theo lời nhắc trên thiết bị đó."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Trên thiết bị bạn muốn đánh giá, hãy chuyển đến phần\n Cài đặt/Chẩn đoán thiết bị/Thiết bị được đánh giá\n Làm theo lời nhắc trên thiết bị đó."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Làm theo các lời nhắc trên thiết bị được đánh giá. Khi được nhắc, hãy nhấn vào đây để tiếp tục trên thiết bị này."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Giờ đây, bạn sẽ thấy một loạt màn hình. Hãy kiểm tra từng màn hình một và tìm lỗi. Khi bạn đã hài lòng, hãy chạm vào màn hình này để chuyển sang màn hình tiếp theo. Cuối cùng, bạn sẽ được hỏi xem những màn hình này có lỗi gì không."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Giờ đây, bạn sẽ thấy một loạt màn hình. Hãy kiểm tra từng màn hình một và tìm lỗi. Chạm vào màn hình này để chuyển sang màn hình tiếp theo."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Vui lòng chọn phương án đúng nhất với tình trạng của màn hình ở bên dưới."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Giờ đây, bạn sẽ thấy một màn hình màu đỏ.\n \n Đặt ngón tay của bạn lên màn hình này cho đến khi màn hình hoàn toàn chuyển sang màu trắng. Nếu bạn không thể chuyển một phần màn hình này sang màu trắng, thì hãy nhấn nhanh vào màn hình để cho biết rằng cảm biến chạm chưa hoàn toàn hoạt động.\n \n Trên màn hình báo cáo, bạn có thể vuốt sang trái và tiếp tục bài kiểm tra từ vị trí bạn đã dừng lại (nếu muốn).\n"</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"Giờ đây, bạn sẽ thấy một màn hình màu đỏ.\n \n Đặt ngón tay của bạn lên màn hình này cho đến khi màn hình hoàn toàn chuyển sang màu trắng. Nếu bạn không thể chuyển một phần màn hình này sang màu trắng, thì hãy nhấn nhanh vào màn hình để cho biết rằng cảm biến cảm ứng không hoàn toàn bình thường.\n \n Trên màn hình báo cáo, bạn có thể vuốt sang trái và tiếp tục bài kiểm tra từ vị trí bạn đã dừng lại (nếu muốn).\n"</string>
     <string name="scan_result" msgid="7232716409194522023">"Vui lòng quét mã QR này trên thiết bị tin cậy. Sau khi quét xong, bạn có thể nhấn vào \"Xong\" trên thiết bị này."</string>
 </resources>

@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"Įrenginio diagnostika"</string>
-    <string name="app_title" msgid="7463703024205195273">"Įrenginio diagnostika"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Įrenginių diagnostika"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Tęsti"</string>
     <string name="unavailable" msgid="7842920330665850121">"Nepasiekiama"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Jungiamasi..."</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"Komponento būsena"</string>
     <string name="storage_title" msgid="5921235202250843966">"Saugyklos būsena"</string>
     <string name="battery_title" msgid="6707361668941323259">"Akumuliatoriaus būsena"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Patikimo įrenginio vertinimas"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Patikimas įrenginys"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Patikimo įrenginio vertinimas"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Patikimas įrenginys"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"Pradėkite pasirinkdami šią parinktį patikimame įrenginyje"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Įvertintas įrenginys"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Įvertintas įrenginys"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Kai būsite paraginti, pasirinkite šią parinktį įvertintame įrenginyje"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Nuskaityti dabar"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Toliau pateiktame stačiakampyje nuskaitykite QR kodą, esantį ant patikimo įrenginio"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Pasirinkite patikimą įrenginį"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Arba pasirinkite įrenginį iš sąrašo apačioje"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Nutrūko ryšys, bandykite dar kartą."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Patvirtinkite ataskaitą, kurią reikia nusiųsti patikimam įrenginiui."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Siųsti ataskaitą"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Baigiama ataskaita…"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"„Bluetooth“ klaida"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Palaikant ryšį su patikimu įrenginiu įvyko klaida. Įsitikinkite, kad „Bluetooth“ yra įgalintas, ir bandykite dar kartą."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Ataskaita siunčiama patikimam įrenginiui…"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Vertinimas baigtas"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Rezultatai dabar bus rodomi patikimame įrenginyje"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Būklė"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Pagaminimo data"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Pirmo naudojimo data"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Pakeistas"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Dalies istorija"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% pradinės talpos"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Akumuliatoriaus būsena nepasiekiama"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Šaltas"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Išsikrovęs"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Geras"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Perkaitęs"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Viršįtampis"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Saugyklos būklė"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Bendra talpa"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Modelis"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Paslaugų teikėjo pataisos lygis"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Paleisti pataisos lygį"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Neleidžiama atšaukti keitimų"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Neleidžiama atšaukti keitimų"</string>
     <string name="yes" msgid="6686215078709381643">"Taip"</string>
     <string name="no" msgid="5957591978126937912">"Ne"</string>
     <string name="unknown" msgid="6936738212381747979">"Nežinoma"</string>
@@ -123,8 +122,9 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR kodas"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Tęskite įrenginyje, kurį vertinate"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Atlikite testus įrenginyje, kurį vertinate, tada rezultatai bus rodomi čia"</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Palaikant ryšį su įvertintu įrenginiu įvyko klaida. Įsitikinkite, kad „Bluetooth“ yra įgalintas, ir bandykite dar kartą."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Nuskaityti dabar"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Įrenginyje, kurį norite įvertinti, eikite į \n „Nustatymai“ / „Įrenginio diagnostika“ / „Įvertintas įrenginys“\n Vadovaukitės įrenginyje pateikiamais raginimais."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Įrenginyje, kurį norite įvertinti, eikite į \n „Nustatymai“ / „Įrenginių diagnostika“ / „Įvertintas įrenginys“\n Vadovaukitės tame įrenginyje pateikiamais raginimais."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Vadovaukitės patikimame įrenginyje pateiktais raginimais. Kai būsite paraginti, paspauskite čia ir tęskite įrenginyje."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Dabar bus parodyti keli ekranai. Apžiūrėkite kiekvieną ir ieškokite defektų. Kai baigsite, palieskite ekraną ir pereikite prie kito. Galiausiai jūsų bus paklausta, ar ekranai atrodo nepriekaištingai."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Dabar bus parodyti keli ekranai. Apžiūrėkite kiekvieną ir ieškokite defektų. Palieskite ekraną, kad pereitumėte prie kito."</string>

@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
-    <string name="app_title" msgid="7463703024205195273">"Greining tækis"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Greining tækis"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Áfram"</string>
     <string name="unavailable" msgid="7842920330665850121">"Ekki tiltækt"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Tengist..."</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"Staða íhlutar"</string>
     <string name="storage_title" msgid="5921235202250843966">"Staða geymslu"</string>
     <string name="battery_title" msgid="6707361668941323259">"Staða rafhlöðu"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Traust mat"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Traust tæki"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Traust mat"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Traust tæki"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"Byrjaðu á að velja þennan valkost í traustu tæki"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Metið tæki"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Metið tæki"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Veldu þennan valkost í metna tækinu þegar beðið er um það"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skanna núna"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skannaðu QR-kóðann á trausta tækinu í ferhyrningnum að neðan"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Veldu traust tæki"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Þú getur einnig valið tækið af listanum fyrir neðan"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Ekki náðist tenging, reyndu aftur."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Staðfestu tilkynninguna til að senda til trausta tækisins."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Senda tilkynningu"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Verið er að ganga frá tilkynningu..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Bluetooth-villa"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Villa kom upp í samskiptum við trausta tækið. Staðfestu að kveikt sé á Bluetooth og reyndu aftur."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Sendi tilkynningu til trausta tækisins..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Mati lokið"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Niðurstöðurnar koma nú í ljós í trausta tækinu"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Heilsa"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Framleiðsludagsetning"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Dagsetning fyrstu notkunar"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Skipt um"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Ferill hlutar"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% af upprunalegu geymslurými"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Ástand rafhlöðu ekki tiltækt"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Köld"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Engin hleðsla"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Gott"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Of heit"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Of mikil spenna"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Ástand geymslu"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Heildarrými"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Gerð"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Stig plásturs söluaðila"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Ræsa stig plásturs"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Afturköllunarþolinn"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Afturköllunarviðnám"</string>
     <string name="yes" msgid="6686215078709381643">"Já"</string>
     <string name="no" msgid="5957591978126937912">"Nei"</string>
     <string name="unknown" msgid="6936738212381747979">"Óþekkt"</string>
@@ -123,8 +122,10 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR-kóði"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Haltu áfram í tækinu sem er verið að meta"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Ljúktu prófunum á tækinu sem þú ert að meta, þá birtast niðurstöðurnar hér"</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skanna núna"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Í tækinu sem þú vilt meta skaltu fara í \n Settings/DeviceDiagnostics/Evaluated Device\n Fylgdu leiðbeiningunum í því tæki."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Í tækinu sem þú vilt meta skaltu fara í \n Stillingar/Greining tækis/Metið tæki\n Fylgdu leiðbeiningunum í því tæki."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Fylgdu leiðbeiningunum í metna tækinu. Ýttu hér þegar um það er beðið til að halda áfram í þessu tæki."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Nú verða þér sýndar nokkrar skjámyndir. Skoðaðu hverja þeirra vel og leitaðu að göllum. Þegar þú ert búin(n) skaltu snerta skjámyndina til að fara í þá næstu. Í lokin verðurðu spurð(ur) hvort skjámyndirnar hafi virst gallalausar."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Nú verða þér sýndar nokkrar skjámyndir. Skoðaðu hverja þeirra vel og leitaðu að göllum. Snertu skjámyndina til að fara í þá næstu."</string>

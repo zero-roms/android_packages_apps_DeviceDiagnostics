@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"Diagnostika zařízení"</string>
-    <string name="app_title" msgid="7463703024205195273">"Diagnostika zařízení"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Diagnostika zařízení"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Pokračovat"</string>
     <string name="unavailable" msgid="7842920330665850121">"Není k dispozici"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Připojování…"</string>
@@ -31,17 +30,25 @@
     <string name="component_title" msgid="6580046234562555655">"Stav součásti"</string>
     <string name="storage_title" msgid="5921235202250843966">"Stav úložiště"</string>
     <string name="battery_title" msgid="6707361668941323259">"Stav baterie"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Důvěryhodné posouzení"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Důvěryhodné zařízení"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Posouzení důvěryhodnosti"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Důvěryhodné zařízení"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"Začněte výběrem této možnosti na důvěryhodném zařízení"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Posuzované zařízení"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Posuzované zařízení"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Až k tomu budete vyzváni, vyberte na posuzovaném zařízení tuto možnost"</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"Zkontrolovat"</string>
-    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Naskenujte na důvěryhodném zařízení QR kód v obdélníku níže"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Naskenovat"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Naskenujte QR kód na důvěryhodném zařízení do tohoto čtverce"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Po úspěšném naskenování QR kódu se v tomto zařízení automaticky spustí série testů."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Vyberte důvěryhodné zařízení"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Případně vyberte zařízení ze seznamu níže"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Připojení selhalo, zkuste to znovu."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Potvrďte přehled, který chcete odeslat na důvěryhodné zařízení."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Odeslat přehled"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Finalizace přehledu…"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Chyba rozhraní Bluetooth"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Při komunikaci s důvěryhodným zařízením došlo k chybě. Zkontrolujte, zda je zapnuté rozhraní Bluetooth, a zkuste to znovu."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Odesílání přehledu na důvěryhodné zařízení…"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Posouzení dokončeno"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Výsledky se teď zobrazí na důvěryhodném zařízení"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Stav"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Datum výroby"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Datum prvního použití"</string>
@@ -52,27 +59,21 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Vyměněná"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Historie dílu"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d %% původní kapacity"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Stav baterie nedostupný"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Nízká"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Vybitá"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Dobrá"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Přehřátá"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Přepětí"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Stav úložiště"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Celková kapacita"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"Zbývá %1$d %% životnosti"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"Zbývá %1$d %%"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Pokud chcete pokračovat v posuzování, udělte požadovaná oprávnění."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Zrušit"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Zkusit znovu"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"Výsledek testu dotykového senzoru"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"Toto je výsledek dotykového testu. Test můžete znovu spustit tím, že přejdete zpět."</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Toto je výsledek testu dotykového senzoru. Test můžete znovu spustit tím, že přejdete zpět."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Test dotykového senzoru byl úspěšný"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Test dotykového senzoru nebyl úspěšný"</string>
     <string name="pass" msgid="6411665547268368837">"Vyhovuje"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Model"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Úroveň oprav dodavatele"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Úroveň opravy zavaděče"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Odolné proti rollbacku"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Odolnost proti rollbacku"</string>
     <string name="yes" msgid="6686215078709381643">"Ano"</string>
     <string name="no" msgid="5957591978126937912">"Ne"</string>
     <string name="unknown" msgid="6936738212381747979">"Není známo"</string>
@@ -123,8 +122,9 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR kód"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Pokračujte na posuzovaném zařízení"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Dokončete testy na zařízení, které posuzujete. Pak se tady zobrazí výsledky."</string>
-    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Zkontrolovat"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Na zařízení, které chcete posoudit, přejděte na \nNastavení / Diagnostika zařízení / Posuzované zařízení.\nPostupujte podle pokynů na daném zařízení."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Při komunikaci s vyhodnocovaným zařízením došlo k chybě. Zkontrolujte, zda je zapnuté Bluetooth, a zkuste to znovu."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Naskenovat"</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Na zařízení, které chcete posoudit, přejděte na \nNastavení / Diagnostika zařízení / Posuzované zařízení.\n Postupujte podle pokynů na daném zařízení."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Postupujte podle pokynů na posuzovaném zařízení. Až k tomu budete vyzváni, stiskněte toto tlačítko a pokračujte na tomto zařízení."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Teď se bude zobrazovat řada obrazovek. Každou si důkladně prohlédněte a hledejte vady. Jakmile budete spokojeni, klepnutím přejděte na další. Na konci se zeptáme, zda jste na obrazovkách našli nějaké vady."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Teď se bude zobrazovat řada obrazovek. Každou si důkladně prohlédněte a hledejte vady. Klepnutím přejdete na další."</string>

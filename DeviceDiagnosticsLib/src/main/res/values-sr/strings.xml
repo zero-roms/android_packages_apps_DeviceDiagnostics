@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"Дијагностика уређаја"</string>
-    <string name="app_title" msgid="7463703024205195273">"Дијагностика уређаја"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Дијагностика уређаја"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Настави"</string>
     <string name="unavailable" msgid="7842920330665850121">"Недоступно"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Повезује се..."</string>
@@ -31,17 +30,25 @@
     <string name="component_title" msgid="6580046234562555655">"Статус компоненти"</string>
     <string name="storage_title" msgid="5921235202250843966">"Статус меморијског простора"</string>
     <string name="battery_title" msgid="6707361668941323259">"Статус батерије"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Процена поузданог уређаја"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Поуздани уређај"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Процена поузданог уређаја"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Поуздани уређај"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"За почетак изаберите ову опцију на поузданом уређају"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Уређај који се процењује"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Уређај који се процењује"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Када се то од вас затражи, изаберите ову опцију на уређају који се процењује"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Скенирај"</string>
-    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Скенирајте QR кôд на поузданом уређају у правоугаонику у наставку"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Скенирајте QR кôд поузданог уређаја"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Када скенирате QR кôд, овај уређај аутоматски покреће низ тестова."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Изаберите поуздани уређај"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Или изаберите уређај са листе у наставку"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Повезивање није успело. Пробајте поново."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Потврдите извештај који ћете послати поузданом уређају."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Пошаљи извештај"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Извештај је при крају..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Грешка са Bluetooth-ом"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Дошло је до грешке у комуникацији са поузданим уређајем. Проверите да ли је Bluetooth омогућен и пробајте поново."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Извештај се шаље на поуздани уређај..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Процена је завршена"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Резултати ће се приказати на поузданом уређају"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Стање"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Датум производње"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Датум првог коришћења"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Замењено"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Историја дела"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% првобитног капацитета"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Стање батерије није доступно"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Ниска температура"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Празна батерија"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Добро стање"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Прегрејана батерија"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Пренапон"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Стање меморијског простора"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Укупан капацитет"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -73,8 +74,8 @@
     <string name="try_again_button" msgid="6015477950108798246">"Пробајте поново"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"Резултат теста сензора за додир"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Ово је резултат теста сензора за додир. Можете поново да покренете тест тако што ћете се вратити назад."</string>
-    <string name="touch_test_good_title" msgid="4008967693136685770">"Тест сензора за додир је успео"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"Тест сензора за додир није успео"</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Сензор за додир је прошао тест"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Сензор за додир није прошао тест"</string>
     <string name="pass" msgid="6411665547268368837">"Успешно"</string>
     <string name="fail" msgid="3918028202746427731">"Неуспешно"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"Сертификат Верификовано"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Модел"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Ниво закрпе за добављача"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Ниво закрпе за покретање"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Отпорно на враћање"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Отпорност на враћање"</string>
     <string name="yes" msgid="6686215078709381643">"Да"</string>
     <string name="no" msgid="5957591978126937912">"Не"</string>
     <string name="unknown" msgid="6936738212381747979">"Непознато"</string>
@@ -122,9 +121,11 @@
     <string name="not_locked" msgid="1663929635666930122">"Није закључано"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR кôд"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Наставите на уређају који се процењује"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Обавите тестове на уређају који процењујете. Резултати ће се приказати овде"</string>
+    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Обавите тестове на уређају који процењујете. Резултати ће се приказати овде."</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Скенирај"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"На уређају који желите да процените идите на\n Подешавања/Дијагностика уређаја/Уређај који се процењује\n Пратите упутства на том уређају."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"На уређају који желите да процените идите на\n Подешавања/Дијагностика уређаја/Уређај који се процењује\n Пратите упутства на том уређају."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Пратите упутства на уређају који се процењује. Када се то од вас затражи, притисните овде да бисте наставили на овом уређају."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Сада ћемо вам приказати низ екрана. Проучите сваки од њих и потражите неправилности. Када будете задовољни, додирните екран да бисте прешли на следећи. На крају ћемо вас питати да ли екрани изгледају исправно."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Сада ћемо вам приказати низ екрана. Проучите сваки од њих и потражите неправилности. Додирните екран да бисте прешли на следећи."</string>

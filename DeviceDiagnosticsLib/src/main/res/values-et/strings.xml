@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"Seadmediagnostika"</string>
-    <string name="app_title" msgid="7463703024205195273">"Seadmediagnostika"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Seadmediagnostika"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Jätka"</string>
     <string name="unavailable" msgid="7842920330665850121">"Pole saadaval"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Ühendamine…"</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"Komponendi olek"</string>
     <string name="storage_title" msgid="5921235202250843966">"Salvestusruumi olek"</string>
     <string name="battery_title" msgid="6707361668941323259">"Aku olek"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Usaldusväärne hindamine"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Usaldusväärne seade"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Usaldusväärne hindamine"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Usaldusväärne seade"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"Alustuseks tehke usaldusväärses seadmes see valik"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Hinnatav seade"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Hinnatav seade"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Küsimise korral tehke hinnatavas seadmes see valik"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skanni kohe"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skannige usaldusväärses seadmes allolevas ristkülikus olev QR-kood"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Usaldusväärse seadme valimine"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Või valige seade allolevast loendist"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Ühendamine ebaõnnestus, proovige uuesti."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Kinnitage teavitus, et saata see usaldusväärsele seadmele."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Teavituse saatmine"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Teavituse lõpuleviimine …"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Bluetoothi viga"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Usaldusväärse seadmega suhtlemisel ilmnes viga. Veenduge, et Bluetooth oleks lubatud, ja proovige uuesti."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Teavituse saatmine usaldusväärsele seadmele …"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Hindamine on lõpetatud"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Tulemused kuvatakse nüüd usaldusväärses seadmes"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Seisund"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Tootmiskuupäev"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Esmakasutuse kuupäev"</string>
@@ -52,22 +59,16 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Asendatud"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Osa ajalugu"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% algsest mahutavusest"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Aku seisukord pole saadaval"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Külm"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Tühi"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Hea"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Ülekuumenemine"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Ülepinge"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Salvestusruumi seisund"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Kogumaht"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"Järelejäänud eluiga %1$d%%"</string>
+    <string name="storage_health_summary" msgid="598369034208451623">"Järelejäänud salvestusmaht: %1$d%%"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Hindamisrežiimis jätkamiseks andke taotletud õigused."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Tühista"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Proovige uuesti"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Mudel"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Teenusepakkuja paiga tase"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Alglaadimise paiga tase"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Versiooni tagasipööramine ei ole võimalik"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Versiooni tagasipööramise võimalus"</string>
     <string name="yes" msgid="6686215078709381643">"Jah"</string>
     <string name="no" msgid="5957591978126937912">"Ei"</string>
     <string name="unknown" msgid="6936738212381747979">"Teadmata"</string>
@@ -123,12 +122,13 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR-kood"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Jätkake hinnatavas seadmes"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Tehke hinnatavas seadmes testid ja tulemused kuvatakse siin"</string>
-    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skanni kohe"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Avage hinnatavas seadmes jaotis \n Seaded / Seadmediagnostika / Hinnatav seade\n Järgige selles seadmes kuvatavaid viipasid."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Hinnatava seadmega suhtlemisel ilmnes viga. Veenduge, et Bluetooth oleks lubatud, ja proovige uuesti."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skannige kohe"</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Avage hinnatavas seadmes jaotis \n Seaded / Seadmediagnostika / Hinnatav seade\n Järgige selles seadmes kuvatavaid viipasid."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Järgige hinnatavas seadmes kuvatavaid viipasid. Küsimise korral vajutage siin, et jätkata selles seadmes."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Teile näidatakse rida ekraane. Uurige igaüht ja otsige defekte. Kui olete rahul, puudutage ekraani, et liikuda järgmisele. Lõpus küsitakse teilt, ega ekraanidel pole iluvigu."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Teile näidatakse rida ekraane. Uurige igaüht ja otsige defekte. Puudutage ekraani, et liikuda järgmisele."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Tehke allpool valik, mis vastab kõige paremini ekraani seisukorrale."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Teile kuvatakse nüüd punane ekraan.\n \n Hõõruge oma sõrme üle ekraani, kuni ekraan muutub täiesti valgeks. Kui teil ei õnnestu ekraan valgeks muuta, tehke ekraanil lühike puudutus, millega näitate, et puuteandur ei tööta täielikult.\n \n Soovi korral saate teavituskuval pühkida tagasiliikumiseks ja jätkata testi seal, kus pooleli jäite.\n"</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"Teile kuvatakse nüüd punane ekraan.\n \n Hõõruge oma sõrme üle ekraani, kuni ekraan muutub täiesti valgeks. Kui teil ei õnnestu ekraani valgeks muuta, tehke ekraanil lühike puudutus, millega näitate, et puuteandur ei tööta täielikult.\n \n Soovi korral saate teavituskuval pühkida tagasiliikumiseks ja jätkata testi seal, kus pooleli jäite.\n"</string>
     <string name="scan_result" msgid="7232716409194522023">"Skannige usaldusväärses seadmes see QR-kood. Pärast skannimist võite vajutada selles seadmes nuppu Valmis."</string>
 </resources>

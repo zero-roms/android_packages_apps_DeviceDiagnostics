@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"Gailuaren diagnostikoak"</string>
-    <string name="app_title" msgid="7463703024205195273">"Gailuaren diagnostikoak"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Gailuaren diagnostikoak"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Egin aurrera"</string>
     <string name="unavailable" msgid="7842920330665850121">"Ez dago erabilgarri"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Konektatzen…"</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"Osagaiaren egoera"</string>
     <string name="storage_title" msgid="5921235202250843966">"Biltegiaren egoera"</string>
     <string name="battery_title" msgid="6707361668941323259">"Bateriaren egoera"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Ebaluazio fidagarria"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Gailu fidagarria"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Ebaluazio fidagarria"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Gailu fidagarria"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"Hasteko, hautatu aukera hau gailu fidagarri batean"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Ebaluatutako gailua"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Ebaluatutako gailua"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Hala eskatzen zaizunean, hautatu aukera hau ebaluatzen ari zaren gailuan"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Eskaneatu"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Eskaneatu gailu fidagarriko QR kodea beheko laukian"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Hautatu gailu fidagarria"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Bestela, hautatu gailua beheko zerrendatik"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Ezin izan da konektatu. Saiatu berriro."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Berretsi gailu fidagarrira bidali beharreko txostena."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Bidali txostena"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Txostena amaitzen…"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Bluetootharen errorea"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Errore bat gertatu da gailu fidagarriarekin komunikatzean. Egiaztatu Bluetootha gaituta dagoela eta saiatu berriro."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Txostena gailu fidagarrira bidaltzen…"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Osatu da ebaluazioa"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Gailu fidagarrian agertuko dira orain emaitzak"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Osasuna"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Fabrikazio-data"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Lehen erabileraren data"</string>
@@ -51,19 +58,13 @@
     <string name="battery_original" msgid="2552600989411644999">"Jatorrizkoa"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Ordeztu da"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Piezaren historia"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"Hasierako ahalmenaren %% %1$d"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_summary" msgid="4699687865120722848">"Jatorrizko ahalmenaren %% %1$d"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Bateriaren egoera ez dago erabilgarri"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Hotza"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Agortuta"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Ona"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Gainberotuta"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Gaintentsioa"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Biltegiaren bizitza"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Ahalmen osoa"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -77,7 +78,7 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Ezin izan da egin ukipen-sentsorearen proba"</string>
     <string name="pass" msgid="6411665547268368837">"Gainditu du"</string>
     <string name="fail" msgid="3918028202746427731">"Huts egin du"</string>
-    <string name="attestation_verified" msgid="6535873137799452259">"Ziurtagiri egiaztatua"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"Egiaztatu da ziurtagiria"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"Gailua blokeatuta dago"</string>
     <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Abioko egiaztapenaren egoera"</string>
     <string name="attestation_security_level" msgid="6633918464653325429">"Segurtasun-maila"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Modeloa"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Saltzailearen adabaki-maila"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Abiarazlearen adabaki-maila"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Tekla ezin da berriro erabilgarri jarri"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Tekla berriro erabilgarri jartzea galarazteko aukera"</string>
     <string name="yes" msgid="6686215078709381643">"Bai"</string>
     <string name="no" msgid="5957591978126937912">"Ez"</string>
     <string name="unknown" msgid="6936738212381747979">"Ezezaguna"</string>
@@ -123,12 +122,14 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR kodea"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Egin aurrera ebaluatzen ari zaren gailuan"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Osatu probak ebaluatzen ari zaren gailuan, eta hemen agertuko dira emaitzak"</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Eskaneatu"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Ebaluatu nahi duzun gailuan, joan\n Ezarpenak/Gailuaren diagnostikoak/Ebaluatutako gailua\n atalera eta jarraitu gailuko eskaera-mezuei."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Ebaluatu nahi duzun gailuan, joan\n Ezarpenak/Gailuaren diagnostikoak/Ebaluatutako gailua\n atalera eta jarraitu gailuko eskaera-mezuei."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Jarraitu ebaluatzen ari zaren gailuko eskaera-mezuei. Hala eskatzen zaizunean, sakatu hau gailu honetan egiteko aurrera."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Orain, pantaila sorta bat erakutsiko dizugu. Aztertu pantaila bakoitza eta bilatu akatsak. Prest zaudenean, sakatu pantaila hurrengora pasatzeko. Amaieran, pantailek akatsik ote zuten galdetuko zaizu."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Orain, pantaila sorta bat erakutsiko dizugu. Aztertu pantaila bakoitza eta bilatu akatsak. Sakatu pantaila hurrengora pasatzeko."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Beheko aukeren artean, hautatu pantailaren egoerarekin ondoen bat datorrena."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Orain, pantaila gorri bat erakutsiko dizugu.\n \n Igurtzi hatza pantailan hura guztiz zuri ikusi arte. Pantailaren zati bat zuri bihurtu ezin baduzu, sakatu labur pantaila, ukipen-sentsoreak behar bezala funtzionatzen ez duela adierazteko.\n \n Nahi izanez gero, pasatu hatza salatzeko pantailan eta jarraitu probarekin lehen zeunden tokitik.\n"</string>
+    <string name="touch_test_summary" msgid="508062796771632474">"Orain, pantaila gorri bat erakutsiko dizugu.\n \n Igurtzi hatza pantailan hura guztiz zuri ikusi arte. Pantailaren zati bat zuri bihurtu ezin baduzu, sakatu labur pantaila, ukipen-sentsoreak behar bezala funtzionatzen ez duela adierazteko.\n \n Nahi izanez gero, pasatu hatza atzera salatzeko pantailan eta jarraitu probarekin lehen zeunden tokitik.\n"</string>
     <string name="scan_result" msgid="7232716409194522023">"Eskaneatu gailu fidagarriko QR kodea. Hura eskaneatu ondoren, sakatu Eginda gailu honetan."</string>
 </resources>

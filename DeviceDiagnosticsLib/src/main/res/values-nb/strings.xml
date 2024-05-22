@@ -18,12 +18,11 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"Enhetsdiagnostikk"</string>
-    <string name="app_title" msgid="7463703024205195273">"Enhetsdiagnose"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Enhetsdiagnose"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Fortsett"</string>
     <string name="unavailable" msgid="7842920330665850121">"Ikke tilgjengelig"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Kobler til …"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Komponenttilstand"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Komponenthelse"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Evalueringsmodus"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Manuelle tester"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Skjermtest"</string>
@@ -31,39 +30,41 @@
     <string name="component_title" msgid="6580046234562555655">"Komponentstatus"</string>
     <string name="storage_title" msgid="5921235202250843966">"Lagringsstatus"</string>
     <string name="battery_title" msgid="6707361668941323259">"Batteristatus"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Godkjent evaluering"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Godkjent enhet"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Klarert evaluering"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Godkjent enhet"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"Start ved å velge dette alternativet på en godkjent enhet"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Evaluert enhet"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Evaluert enhet"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Når du blir bedt om det, velger du dette alternativet på enheten som evalueres"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skann nå"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skann QR-koden på den godkjente enheten i rektangelet nedenfor"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Når du har skannet QR-koden, starter denne enheten automatisk en serie med tester."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Velg godkjent enhet"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Eller velg enheten fra listen nedenfor"</string>
-    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Tilkoblingen mislyktes. Prøv på nytt."</string>
-    <string name="battery_health_title" msgid="3945318982701313271">"Tilstand"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Tilkobling mislyktes. Prøv på nytt."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Bekreft rapporten som skal sendes til den godkjente enheten."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Send rapport"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Fullfører rapporten …"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Bluetooth-feil"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Det oppsto en feil under kommunikasjonen med den godkjente enheten. Bekreft at Bluetooth er slått på, og prøv på nytt."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Sender rapporten til den godkjente enheten …"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Evalueringen er fullført"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Resultatene vises nå på den godkjente enheten"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Helse"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Produksjonsdato"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Første bruksdato"</string>
     <string name="battery_cycle_count" msgid="1002728954996996785">"Syklusantall"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"Serienummer"</string>
-    <string name="battery_part_status" msgid="504091754655232085">"Status for delen"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Komponentstatus"</string>
     <string name="battery_original" msgid="2552600989411644999">"Original"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Erstattet"</string>
-    <string name="battery_part_history" msgid="5669260842330985767">"Logg for delen"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Komponentlogg"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d %% av opprinnelig kapasitet"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Batteritilstanden er ikke tilgjengelig"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Kaldt"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Dødt"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Bra"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"For varmt"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Overspenning"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Lagringstilstand"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Total kapasitet"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Modell"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Nivå av leverandørfeilretting"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Nivå av oppstartsfeilrettinger"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Rollback-bestandig"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Rollback-bestandighet"</string>
     <string name="yes" msgid="6686215078709381643">"Ja"</string>
     <string name="no" msgid="5957591978126937912">"Nei"</string>
     <string name="unknown" msgid="6936738212381747979">"Ukjent"</string>
@@ -104,7 +103,7 @@
     <string name="evaluation_results" msgid="1584774109554324406">"Evalueringsresultater"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Attesteringsresultater"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
-    <string name="imei2_title" msgid="4414064408324667040">"IMEI nr. 2"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"Andre IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"Serienummer"</string>
     <string name="bootloader_locked_title" msgid="4498089738937695995">"Oppstartsinnlasteren er låst"</string>
     <string name="trustworthy_title" msgid="5360267928618795351">"Enheten er pålitelig"</string>
@@ -114,7 +113,7 @@
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"Attesteringen mislyktes"</string>
     <string name="attestation_local_failure_summary" msgid="8657460343196696219">"Kunne ikke fastslå om enheten er pålitelig"</string>
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Prøv attestering på nytt"</string>
-    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Kunne ikke bekrefte attesteringen. Sjekk tilkoblingen, og prøv på nytt."</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Kunne ikke bekrefte attesteringen. Sjekk tilkoblingen og prøv på nytt."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Neste trinn"</string>
     <string name="evaluate_another_title" msgid="6275248738668045886">"Evaluer en annen enhet"</string>
     <string name="back_to_main_title" msgid="2496143013300121780">"Tilbake til hovedmenyen"</string>
@@ -123,8 +122,10 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR-kode"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Fortsett på enheten som blir evaluert"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Fullfør testene på enheten du evaluerer, så vises resultatene her"</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skann nå"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"På enheten du vil evaluere, går du til\n Innstillinger / Enhetsdiagnostikk / Evaluert enhet\n Følg veiledningen på den enheten."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"På enheten du vil evaluere, går du til\n Innstillinger / Enhetsdiagnose / Evaluert enhet\n Følg veiledningen på den enheten."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Følg veiledningen på enheten som evalueres. Når du blir bedt om det, trykker du her for å fortsette på denne enheten."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Nå får du se en serie med skjermer. Se nøye på hver av dem, og se etter defekter. Når du er tilfreds, trykker du på skjermen for å gå videre til den neste. Til slutt blir du spurt om skjermene ser plettfrie ut."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Nå får du se en serie med skjermer. Se nøye på hver av dem, og se etter defekter. Trykk på skjermen for å gå videre til den neste."</string>

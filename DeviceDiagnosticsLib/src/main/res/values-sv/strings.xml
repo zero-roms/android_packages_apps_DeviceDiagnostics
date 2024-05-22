@@ -18,8 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"Enhetsdiagnostik"</string>
-    <string name="app_title" msgid="7463703024205195273">"Enhetsdiagnostik"</string>
-    <string name="package_name" msgid="857863781906528502">"com.android.devicediagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Enhetsdiagnostik"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Fortsätt"</string>
     <string name="unavailable" msgid="7842920330665850121">"Inte tillgängligt"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Ansluter …"</string>
@@ -31,10 +30,10 @@
     <string name="component_title" msgid="6580046234562555655">"Komponentstatus"</string>
     <string name="storage_title" msgid="5921235202250843966">"Lagringsstatus"</string>
     <string name="battery_title" msgid="6707361668941323259">"Batteristatus"</string>
-    <string name="trusted_eval_title" msgid="4432759069360054054">"Betrodd utvärdering"</string>
-    <string name="trusted_device_title" msgid="3219415756372384370">"Betrodd enhet"</string>
+    <string name="trusted_eval_title" msgid="3021650200400980573">"Betrodd utvärdering"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Betrodd enhet"</string>
     <string name="trusted_device_summary" msgid="4474986970820223924">"Starta testet genom att välja det här alternativet på en betrodd enhet"</string>
-    <string name="evaluated_device_title" msgid="9045224709517029285">"Utvärderad enhet"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Utvärderad enhet"</string>
     <string name="evaluated_device_summary" msgid="7492640289008695049">"Välj det här alternativet på den utvärderade enheten när du uppmanas till det"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skanna nu"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skanna QR-koden i rektangeln nedan med den betrodda enheten"</string>
@@ -42,6 +41,14 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Välj betrodd enhet"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Alternativt kan du välja enheten från listan nedan"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Anslutningen misslyckades. Försök igen."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Bekräfta rapporten för att skicka till den betrodda enheten."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Skicka rapport"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Slutför rapport …"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Fel med Bluetooth"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Ett fel uppstod vid kommunikationen med den betrodda enheten. Verifiera att Bluetooth är aktiverat och försök igen."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Skickar rapporten till den betrodda enheten …"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Utvärderingen har slutförts"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Resultaten visas nu på den betrodda enheten"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Hälsa"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Tillverkningsdatum"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Datum för första användning"</string>
@@ -52,18 +59,12 @@
     <string name="battery_replaced" msgid="2356023769075469649">"Ersattes"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Delhistorik"</string>
     <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% av ursprungskapaciteten"</string>
-    <!-- no translation found for battery_health_unavailable (5093923315136769788) -->
-    <skip />
-    <!-- no translation found for battery_health_cold (4164463402047143412) -->
-    <skip />
-    <!-- no translation found for battery_health_dead (3658507844189988433) -->
-    <skip />
-    <!-- no translation found for battery_health_good (4850784608550784236) -->
-    <skip />
-    <!-- no translation found for battery_health_overheat (8745643548393640213) -->
-    <skip />
-    <!-- no translation found for battery_health_over_voltage (1970205983413868560) -->
-    <skip />
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Batterihälsa ej tillgänglig"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Kallt"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Urladdat"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"God"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Överhettning"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Överspänning"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Lagringshälsa"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Total kapacitet"</string>
     <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
@@ -95,8 +96,6 @@
     <string name="attestation_model" msgid="8223243376214262662">"Modell"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Programkorrigeringsnivå från leverantör"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Programkorrigeringsnivå för start"</string>
-    <string name="attestation_rollback_resistant" msgid="7453892842319055994">"Återställningsresistant"</string>
-    <string name="attestation_rollback_resistance" msgid="5944208044378228469">"Återställningsresistans"</string>
     <string name="yes" msgid="6686215078709381643">"Ja"</string>
     <string name="no" msgid="5957591978126937912">"Nej"</string>
     <string name="unknown" msgid="6936738212381747979">"Okänd"</string>
@@ -123,8 +122,10 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR-kod"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Fortsätt på enheten som utvärderas"</string>
     <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Slutför testen på enheten som du utvärderar. Då visas resultaten här."</string>
+    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <skip />
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skanna nu"</string>
-    <string name="trusted_scan_now_summary" msgid="2817021308986564134">"Öppna\n Inställningar/Enhetsdiagnostik/Utvärderad enhet\n på enheten som du vill utvärdera. Följ uppmaningarna på den enheten."</string>
+    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Öppna\n Inställningar/Enhetsdiagnostik/Utvärderad enhet\n på enheten som du vill utvärdera. Följ uppmaningarna på den enheten."</string>
     <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Följ uppmaningarna på den utvärderade enheten. Tryck här när du uppmanas att göra det för att fortsätta på den här enheten."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Det kommer nu visas en serie skärmar. Granska varje skärm och titta efter defekter. När du är nöjd ska du trycka på skärmen för att gå vidare till nästa. Till sist får du frågan om skärmarna ser felfria ut."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Det kommer nu visas en serie skärmar. Granska varje skärm och titta efter defekter. Tryck på skärmen för att gå vidare till nästa."</string>
