@@ -19,19 +19,45 @@ package com.android.devicediagnostics
 import android.app.Activity
 import android.app.ActivityManager
 import android.content.Context.ACTIVITY_SERVICE
+import android.os.Build
+import android.os.Handler
+import android.os.Looper
+import androidx.test.espresso.intent.Intents
 import androidx.test.platform.app.InstrumentationRegistry
+import com.android.devicediagnostics.bluetooth.BluetoothClient
+import com.android.devicediagnostics.bluetooth.BluetoothServer
+import org.junit.After
+import org.junit.Before
+import org.mockito.Mockito
+import org.mockito.kotlin.whenever
 
-/*
-class TestApplication : ApplicationInterface() {
-    override fun getRandomBytes(count: Int): ByteArray {
-        return (1..count).map { it.toByte() }.toByteArray()
+open class ActivityTest {
+    private var oldApp: ApplicationInterface = ApplicationInterface.app
+    protected var handler = Handler(Looper.getMainLooper())
+
+    @Before
+    fun setupMocks() {
+        Intents.init()
+
+        ApplicationInterface.setApp(Mockito.mock(ApplicationInterface::class.java))
+        whenever(app.getLaunchLevel()).thenReturn(Build.VERSION_CODES.VANILLA_ICE_CREAM)
+
+        val btClient = Mockito.mock(BluetoothClient::class.java)
+        whenever(app.getBluetoothClient()).thenReturn(btClient)
+
+        val btServer = Mockito.mock(BluetoothServer::class.java)
+        whenever(app.getBluetoothServer()).thenReturn(btServer)
     }
 
-    // Not mocked yet.
-    override fun getLaunchLevel(): Int {
-        return Build.VERSION_CODES.VANILLA_ICE_CREAM
+    @After
+    fun teardownMocks() {
+        ApplicationInterface.setApp(oldApp)
+        Intents.release()
     }
-}*/
+
+    protected val app: ApplicationInterface
+        get() = ApplicationInterface.app
+}
 
 inline fun getVisibleActivity(): String? {
     val am =

@@ -28,7 +28,6 @@ import android.util.Size
 import android.view.TextureView
 import android.view.View
 import android.view.ViewOutlineProvider
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -41,8 +40,6 @@ import com.android.devicediagnostics.bluetooth.BluetoothConnectionData
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.qrcode.QrCamera
 import com.android.settingslib.widget.LayoutPreference
-
-private const val TAG = "evaluated/QrCodeScan"
 
 class QrCodeScanFragment(private val callbacks: Callbacks) :
     TextureView.SurfaceTextureListener, QrCamera.ScannerCallback, PreferenceFragmentCompat() {

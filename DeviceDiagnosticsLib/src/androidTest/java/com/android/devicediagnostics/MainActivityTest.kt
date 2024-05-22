@@ -17,9 +17,6 @@
 package com.android.devicediagnostics
 
 import android.app.Activity
-import android.os.Build
-import android.os.Handler
-import android.os.Looper
 import android.view.View
 import androidx.test.core.app.ActivityScenario.launch
 import androidx.test.espresso.Espresso.onView
@@ -28,7 +25,6 @@ import androidx.test.espresso.ViewAction
 import androidx.test.espresso.action.MotionEvents
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.intent.Intents
 import androidx.test.espresso.intent.Intents.intended
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
@@ -52,9 +48,7 @@ import com.google.android.attestation.ParsedAttestationRecord
 import com.google.protobuf.ByteString
 import java.nio.charset.Charset
 import org.hamcrest.Matcher
-import org.junit.After
 import org.junit.Assert.assertEquals
-import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mockito
@@ -96,33 +90,7 @@ private fun touchDownAndUp(): ViewAction? {
 }
 
 @RunWith(AndroidJUnit4::class)
-class MainActivityTest {
-    private var oldApp: ApplicationInterface = ApplicationInterface.app
-    private var handler = Handler(Looper.getMainLooper())
-
-    @Before
-    fun setupMocks() {
-        Intents.init()
-
-        ApplicationInterface.setApp(Mockito.mock(ApplicationInterface::class.java))
-        whenever(app.getLaunchLevel()).thenReturn(Build.VERSION_CODES.VANILLA_ICE_CREAM)
-
-        val btClient = Mockito.mock(BluetoothClient::class.java)
-        whenever(app.getBluetoothClient()).thenReturn(btClient)
-
-        val btServer = Mockito.mock(BluetoothServer::class.java)
-        whenever(app.getBluetoothServer()).thenReturn(btServer)
-    }
-
-    @After
-    fun teardownMocks() {
-        ApplicationInterface.setApp(oldApp)
-        Intents.release()
-    }
-
-    private val app: ApplicationInterface
-        get() = ApplicationInterface.app
-
+class MainActivityTest : ActivityTest() {
     @Test
     fun testEvaluationFlow() {
         val btServer = app.getBluetoothServer()
