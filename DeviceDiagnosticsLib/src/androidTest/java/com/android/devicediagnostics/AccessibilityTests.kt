@@ -25,6 +25,7 @@ import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import com.android.devicediagnostics.evaluated.ScreenTestIntroActivity
+import com.android.devicediagnostics.evaluated.TouchTestIntroActivity
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -48,6 +49,20 @@ class AccessibilityTests : ActivityTest() {
         onView(withText(R.string.visual_test_warning_summary)).check(matches(isDisplayed()))
         onView(withText(R.string.activity_continue)).perform(click())
         intended(hasComponent(ScreenTestIntroActivity::class.java.name))
+        onView(withText(R.string.activity_continue)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun testTouchTestContinue() {
+        val activityScenario = launch(TouchTestIntroActivity::class.java)
+        activityScenario.onActivity { activity: Activity ->
+            assertEquals(activity.title, "Touch test")
+        }
+
+        onView(withText(R.string.cancel)).check(matches(isDisplayed()))
+        onView(withText(R.string.visual_test_warning_summary)).check(matches(isDisplayed()))
+        onView(withText(R.string.activity_continue)).perform(click())
+        intended(hasComponent(TouchTestIntroActivity::class.java.name))
         onView(withText(R.string.activity_continue)).check(matches(isDisplayed()))
     }
 }
