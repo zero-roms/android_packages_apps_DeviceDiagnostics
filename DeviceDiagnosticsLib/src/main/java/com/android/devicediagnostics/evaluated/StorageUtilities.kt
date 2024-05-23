@@ -29,29 +29,11 @@ fun getStorageInfo(context: Context): StorageInfo {
             ServiceManager.getService(Context.STORAGE_STATS_SERVICE)
         )
     val totalBytes = ssm.getTotalBytes(StorageManager.UUID_PRIVATE_INTERNAL, context.opPackageName)
-    setStorageInfoCapacity(builder, (totalBytes / 1000) / 1000)
+    builder.setCapacityBytes(totalBytes)
 
     if (android.os.Flags.storageLifetimeApi()) {
         val sm = context.getSystemService(Context.STORAGE_SERVICE) as StorageManager
         builder.setUsefulLifetimeRemaining(sm.internalStorageRemainingLifetime)
     }
     return builder.build()
-}
-
-private fun setStorageInfoCapacity(builder: StorageInfo.Builder, value: Long) {
-    var totalCapacity = value
-    var totalCapacityUnits = "MB"
-
-    if (totalCapacity >= 1000) {
-        totalCapacity /= 1000
-        totalCapacityUnits = "GB"
-    }
-
-    if (totalCapacity >= 1000) {
-        totalCapacity /= 1000
-        totalCapacityUnits = "TB"
-    }
-
-    builder.setCapacity(totalCapacity)
-    builder.setCapacityUnits(totalCapacityUnits)
 }

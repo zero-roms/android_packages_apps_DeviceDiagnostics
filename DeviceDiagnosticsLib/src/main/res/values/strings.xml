@@ -14,7 +14,7 @@
   ~ limitations under the License.
   -->
 
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">DeviceDiagnostics</string>
   <string name="app_title">Device diagnostics</string>
   <string name="package_name" translatable="false">com.android.devicediagnostics</string>
@@ -89,7 +89,7 @@
   <!-- Storage screen -->
   <string name="storage_health_title">Storage health</string>
   <string name="storage_total_capacity_title">Total capacity</string>
-  <string name="storage_total_capacity_summary">%1$d %2$s</string>
+  <string name="storage_total_capacity_summary"><xliff:g id="number" example="128">%1$s</xliff:g> <xliff:g id="unit" example="KB">%2$s</xliff:g></string>
   <string name="storage_health_summary_fmt">%1$s lifetime remaining</string>
 
   <!-- Permissions -->
