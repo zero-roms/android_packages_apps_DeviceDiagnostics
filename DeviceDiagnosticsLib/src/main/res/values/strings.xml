@@ -78,7 +78,7 @@
   <string name="battery_original">Original</string>
   <string name="battery_replaced">Replaced</string>
   <string name="battery_part_history">Part History</string>
-  <string name="battery_health_summary">%1$d%% of original capacity</string>
+  <string name="battery_health_summary_fmt">%1$s of original capacity</string>
   <string name="battery_health_unavailable">Battery health unavailable</string>
   <string name="battery_health_cold">Cold</string>
   <string name="battery_health_dead">Dead</string>
@@ -90,7 +90,7 @@
   <string name="storage_health_title">Storage health</string>
   <string name="storage_total_capacity_title">Total capacity</string>
   <string name="storage_total_capacity_summary">%1$d %2$s</string>
-  <string name="storage_health_summary">%1$d%% lifetime remaining</string>
+  <string name="storage_health_summary_fmt">%1$s lifetime remaining</string>
 
   <!-- Permissions -->
   <string name="grant_eval_permissions_dialog">Please grant the requested permissions to continue in evaluation mode.</string>

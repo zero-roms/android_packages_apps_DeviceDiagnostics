@@ -27,6 +27,7 @@ import com.android.devicediagnostics.Protos.StorageInfo
 import com.android.devicediagnostics.evaluated.getStorageInfo
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.widget.UsageProgressBarPreference
+import java.text.NumberFormat
 
 class StorageInfoFragment(private var diagnostics: StorageInfo) : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -35,10 +36,11 @@ class StorageInfoFragment(private var diagnostics: StorageInfo) : PreferenceFrag
         findPreference<StorageHealthPreference>("health")!!.also {
             it.diagnostics = diagnostics
             if (diagnostics.usefulLifetimeRemaining != -1) {
+                val locale = getDefaultLocale(activity!!)
+                val percent = diagnostics.usefulLifetimeRemaining / 100.0f
+                val percentString = NumberFormat.getPercentInstance(locale).format(percent)
                 it.setPercent(diagnostics.usefulLifetimeRemaining.toLong(), 100)
-                it.setBottomSummary(
-                    getString(R.string.storage_health_summary, diagnostics.usefulLifetimeRemaining)
-                )
+                it.setBottomSummary(getString(R.string.storage_health_summary_fmt, percentString))
             } else {
                 it.isVisible = false
             }

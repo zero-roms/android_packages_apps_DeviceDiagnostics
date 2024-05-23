@@ -15,7 +15,6 @@
  */
 package com.android.devicediagnostics
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.BatteryManager
@@ -29,6 +28,7 @@ import com.android.devicediagnostics.Protos.BatteryInfo
 import com.android.devicediagnostics.evaluated.getBatteryInfo
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.widget.UsageProgressBarPreference
+import java.text.NumberFormat
 import kotlin.math.max
 
 fun legacyHealthToStringId(value: Int): Int {
@@ -51,9 +51,10 @@ class BatteryInfoFragment(private val diagnostics: BatteryInfo, private val laun
             it.diagnostics = diagnostics
             it.setPercent(max(0, diagnostics.stateOfHealth.toLong()), 100)
             if (diagnostics.hasStateOfHealth()) {
-                it.setBottomSummary(
-                    getString(R.string.battery_health_summary, diagnostics.stateOfHealth)
-                )
+                val locale = getDefaultLocale(activity!!)
+                val percent = diagnostics.stateOfHealth / 100.0f
+                val percentString = NumberFormat.getPercentInstance(locale).format(percent)
+                it.setBottomSummary(getString(R.string.battery_health_summary_fmt, percentString))
             } else {
                 it.setBottomSummary(getString(R.string.battery_health_unavailable))
                 it.isVisible = launchLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
@@ -165,7 +166,7 @@ class BatteryActivity : CollapsingToolbarBaseActivity() {
         const val INTENT_BATTERY_INFO = "battery_info"
         const val INTENT_LAUNCH_LEVEL = "vsr_level"
 
-        fun createIntent(from: Activity, diagnostics: BatteryInfo, launchLevel: Int): Intent {
+        fun createIntent(from: Context, diagnostics: BatteryInfo, launchLevel: Int): Intent {
             return Intent(from, BatteryActivity::class.java)
                 .putExtra(INTENT_BATTERY_INFO, diagnostics.toByteArray())
                 .putExtra(INTENT_LAUNCH_LEVEL, launchLevel)
