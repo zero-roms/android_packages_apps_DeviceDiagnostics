@@ -16,8 +16,10 @@
 
 package com.android.devicediagnostics
 
+import android.accessibilityservice.AccessibilityServiceInfo
 import android.content.Context
 import android.os.SystemProperties
+import android.view.accessibility.AccessibilityManager
 import com.android.devicediagnostics.bluetooth.BluetoothClient
 import com.android.devicediagnostics.bluetooth.BluetoothServer
 import com.android.settingslib.qrcode.QrCamera
@@ -61,6 +63,16 @@ open class ApplicationInterface {
             return boardApiLevel
         }
         return firstApiLevel
+    }
+
+    open fun isUsingScreenReader(context: Context): Boolean {
+        val am = context.getSystemService(Context.ACCESSIBILITY_SERVICE) as AccessibilityManager?
+        if (am == null || !am.isEnabled) {
+            return false
+        }
+        val serviceInfoList =
+            am.getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_SPOKEN)
+        return serviceInfoList.isNotEmpty() || am.isTouchExplorationEnabled
     }
 
     private fun getPropertyInt(key: String, defaultValue: Int): Int {

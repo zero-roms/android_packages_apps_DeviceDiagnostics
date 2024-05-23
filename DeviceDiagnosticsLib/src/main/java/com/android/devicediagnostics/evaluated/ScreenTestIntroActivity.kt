@@ -20,6 +20,7 @@ import android.os.Bundle
 import androidx.fragment.app.commit
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.android.devicediagnostics.ApplicationInterface
 import com.android.devicediagnostics.R
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 
@@ -50,6 +51,14 @@ class ScreenTestIntroActivity : CollapsingToolbarBaseActivity() {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 add(R.id.fragment_container_view, ScreenTestIntroFragment())
+            }
+
+            if (ApplicationInterface.app.isUsingScreenReader(this)) {
+                showAccessibilityDialog(
+                    this,
+                    R.string.screen_test_title,
+                    R.string.visual_test_warning_summary
+                )
             }
         }
     }

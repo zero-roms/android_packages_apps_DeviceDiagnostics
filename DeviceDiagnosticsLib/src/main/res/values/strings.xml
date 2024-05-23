@@ -62,6 +62,11 @@
   <string name="screen_test_bad_result_title">Bad</string>
   <string name="screen_test_bad_result_summary">Screen has defects</string>
 
+  <!-- A11y warnings -->
+  <string name="manual_testing_title">Manual testing</string>
+  <string name="visual_test_warning_summary">The following test requires visual inspection of the physical display.</string>
+  <string name="cancel">Cancel</string>
+
   <!-- Battery screen -->
   <string name="battery_health_title">Health</string>
   <string name="battery_manufacturing_date">Manufacturing date</string>
