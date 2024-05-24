@@ -19,6 +19,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.text.format.Formatter
 import android.util.AttributeSet
 import androidx.fragment.app.commit
 import androidx.preference.Preference
@@ -47,12 +48,13 @@ class StorageInfoFragment(private var diagnostics: StorageInfo) : PreferenceFrag
         }
 
         findPreference<Preference>("total_capacity")!!.also {
-            it.summary =
-                getString(
-                    R.string.storage_total_capacity_summary,
-                    diagnostics.capacity,
-                    diagnostics.capacityUnits
+            val desc =
+                Formatter.formatBytes(
+                    activity!!.resources,
+                    diagnostics.capacityBytes,
+                    Formatter.FLAG_SHORTER
                 )
+            it.summary = getString(R.string.storage_total_capacity_summary, desc.value, desc.units)
         }
     }
 }

@@ -35,9 +35,9 @@ message BatteryInfo {
 }
 
 message StorageInfo {
-    int64 capacity = 1;
-    string capacity_units = 2;
+    reserved 1, 2;
     optional int32 useful_lifetime_remaining = 3;
+    int64 capacity_bytes = 4;
 }
 
 message TrustedDeviceInfo {
