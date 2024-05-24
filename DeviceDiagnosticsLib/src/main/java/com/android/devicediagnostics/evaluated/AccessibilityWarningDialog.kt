@@ -20,11 +20,10 @@ import android.app.AlertDialog
 import com.android.devicediagnostics.R
 
 fun showAccessibilityDialog(activity: Activity, titleResId: Int, messageResId: Int) {
-    val builder =
-        AlertDialog.Builder(activity)
-            .setTitle(titleResId)
-            .setMessage(messageResId)
-            .setPositiveButton(R.string.activity_continue) { _, _ -> }
-            .setNegativeButton(R.string.cancel) { _, _ -> activity.finish() }
-            .show()
+    AlertDialog.Builder(activity)
+        .setTitle(titleResId)
+        .setMessage(messageResId)
+        .setPositiveButton(R.string.proceed) { _, _ -> }
+        .setNegativeButton(R.string.cancel) { _, _ -> activity.finish() }
+        .show()
 }

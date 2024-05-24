@@ -20,6 +20,7 @@
   <string name="package_name" translatable="false">com.android.devicediagnostics</string>
 
   <string name="activity_continue">Continue</string>
+  <string name="proceed">Proceed</string>
   <string name="unavailable">Unavailable</string>
   <string name="bluetooth_connecting">Connecting...</string>
 
@@ -64,7 +65,7 @@
 
   <!-- A11y warnings -->
   <string name="manual_testing_title">Manual testing</string>
-  <string name="visual_test_warning_summary">The following test requires visual inspection of the physical display.</string>
+  <string name="visual_test_warning_summary">The following test requires visual inspection and confirmation of the physical display. Are you sure you want to proceed?</string>
   <string name="cancel">Cancel</string>
 
   <!-- Battery screen -->

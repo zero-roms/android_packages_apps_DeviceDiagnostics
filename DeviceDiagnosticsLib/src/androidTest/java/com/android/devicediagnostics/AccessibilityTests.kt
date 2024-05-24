@@ -47,7 +47,7 @@ class AccessibilityTests : ActivityTest() {
 
         onView(withText(R.string.cancel)).check(matches(isDisplayed()))
         onView(withText(R.string.visual_test_warning_summary)).check(matches(isDisplayed()))
-        onView(withText(R.string.activity_continue)).perform(click())
+        onView(withText(R.string.proceed)).perform(click())
         intended(hasComponent(ScreenTestIntroActivity::class.java.name))
         onView(withText(R.string.activity_continue)).check(matches(isDisplayed()))
     }
@@ -61,7 +61,7 @@ class AccessibilityTests : ActivityTest() {
 
         onView(withText(R.string.cancel)).check(matches(isDisplayed()))
         onView(withText(R.string.visual_test_warning_summary)).check(matches(isDisplayed()))
-        onView(withText(R.string.activity_continue)).perform(click())
+        onView(withText(R.string.proceed)).perform(click())
         intended(hasComponent(TouchTestIntroActivity::class.java.name))
         onView(withText(R.string.activity_continue)).check(matches(isDisplayed()))
     }
