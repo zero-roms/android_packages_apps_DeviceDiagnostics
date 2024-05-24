@@ -54,7 +54,8 @@ class StorageInfoFragment(private var diagnostics: StorageInfo) : PreferenceFrag
                     diagnostics.capacityBytes,
                     Formatter.FLAG_SHORTER
                 )
-            it.summary = getString(R.string.storage_total_capacity_summary, desc.value, desc.units)
+            it.summary =
+                getString(R.string.storage_total_capacity_summary_fmt, desc.value, desc.units)
         }
     }
 }
