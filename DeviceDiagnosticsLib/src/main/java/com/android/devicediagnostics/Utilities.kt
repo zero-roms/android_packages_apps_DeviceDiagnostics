@@ -15,7 +15,9 @@
  */
 package com.android.devicediagnostics
 
+import android.content.Context
 import android.os.AsyncTask
+import java.util.Locale
 
 // Must only be called on the UI thread.
 fun runInBackground(handler: () -> Unit) {
@@ -27,4 +29,8 @@ fun runInBackground(handler: () -> Unit) {
             }
         }
     task.execute()
+}
+
+fun getDefaultLocale(context: Context): Locale {
+    return context.resources.configuration.locales.get(0)
 }
