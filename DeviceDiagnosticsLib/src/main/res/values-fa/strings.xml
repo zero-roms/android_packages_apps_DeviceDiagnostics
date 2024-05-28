@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"تشخیص سلامت دستگاه"</string>
     <string name="app_title" msgid="2766786539301072967">"تشخیص سلامت دستگاه"</string>
     <string name="activity_continue" msgid="2190118984182069151">"ادامه دادن"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"ناموجود"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"درحال اتصال…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"وضعیت مؤلفه"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"اجرای آزمایش‌های دستی و مشاهده سلامت باتری و فضای ذخیره‌سازی"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"حالت ارزیابی"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"استفاده از یک دستگاه برای ارزیابی دستگاهی دیگر"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"آزمایش‌های دستی"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"آزمایش نمایشگر"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"آزمایش حسگر لمسی"</string>
     <string name="component_title" msgid="6580046234562555655">"وضعیت جزء"</string>
     <string name="storage_title" msgid="5921235202250843966">"وضعیت فضای ذخیره‌سازی"</string>
     <string name="battery_title" msgid="6707361668941323259">"وضعیت باتری"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"ارزیابی مطمئن"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"دستگاه مطمئن"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"با انتخاب این گزینه در دستگاهی مطمئن شروع کنید"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"دستگاه دیگری را ارزیابی کنید. برای این کار، اتصال اینترنت لازم است."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"دستگاه ارزیابی‌شده"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"هروقت درخواست شد این کار را انجام دهید، این گزینه را در دستگاه ارزیابی‌شده انتخاب کنید"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"آزمایش‌های تشخیص خرابی را می‌توان اجرا کرد که توسط دستگاه دیگری اعتبارسنجی می‌شود."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"اکنون اسکن شود"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"رمزینه پاسخ‌سریع را در دستگاه مطمئن در مستطیل زیر اسکن کنید"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"پس‌از اینکه رمزینه پاسخ‌سریع را باموفقیت اسکن کردید، این دستگاه به‌طور خودکار مجموعه‌ای از آزمایش‌ها را شروع خواهد کرد."</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"درحال ارسال گزارش به دستگاه مطمئن…"</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"ارزیابی کامل شد"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"اکنون نتایج در دستگاه مطمئن نشان داده خواهد شد"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"نتیجه آزمایش صفحه‌نمایش"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"خوب"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"ایراد واضحی نداشت"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"بد"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"صفحه‌نمایش ایرادی دارد"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"سلامت"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"تاریخ تولید"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"تاریخ اولین استفاده"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"اصلی"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"تعویض‌شده"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"سابقه قطعه"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"‏‫%1$d%% از ظرفیت اصلی"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"اطلاعات سلامت باتری دردسترس نیست"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"ضعیف"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"خالی"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"ولتاژ زیاد"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"سلامت فضای ذخیره‌سازی"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"ظرفیت کل"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"‏‫%1$d%% از طول عمر باقی مانده است"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"برای ادامه دادن در حالت ارزیابی، لطفاً اجازه‌های درخواست‌شده را اعطا کنید."</string>
     <string name="cancel_button" msgid="7011882021431169180">"لغو کردن"</string>
     <string name="try_again_button" msgid="6015477950108798246">"امتحان مجدد"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"نه"</string>
     <string name="unknown" msgid="6936738212381747979">"نامشخص"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"گواهی ناموفق بود"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"نتایج ارزیابی"</string>
     <string name="attestation_results" msgid="9089126954790727665">"نتایج گواهی"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,15 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"باز"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"رمزینه پاسخ‌سریع"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"ادامه دادن در دستگاهی که درحال ارزیابی است"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"این آزمایش‌ها را در دستگاهی که ارزیابی می‌کنید انجام دهید، سپس نتایج آزمایش در اینجا نشان داده خواهد شد"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
-    <skip />
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"این آزمایش‌ها را در دستگاهی که ارزیابی می‌کنید انجام دهید، سپس نتایج آزمایش در اینجا نشان داده خواهد شد."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"در برقراری ارتباط با دستگاه ارزیابی‌شده خطایی روی داد. لطفاً بررسی کنید بلوتوث فعال باشد و دوباره امتحان کنید."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"اکنون اسکن شود"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"در دستگاهی که می‌خواهید ارزیابی کنید، به\n تنظیمات/ تشخیص سلامت دستگاه/ دستگاه ارزیابی‌شده\n بروید و پیام‌واره‌ها را در آن دستگاه دنبال کنید."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"پیام‌واره‌ها را در دستگاه ارزیابی‌شده دنبال کنید. هروقت درخواست شد، اینجا را برای ادامه دادن در این دستگاه فشار دهید."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"در دستگاهی که می‌خواهید ارزیابی شود، به «تنظیمات، سیستم، تشخیص سلامت دستگاه، حالت ارزیابی»، و سپس «دستگاه ارزیابی‌شده» بروید. پیام‌واره‌ها را در آن دستگاه دنبال کنید."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"اکنون مجموعه‌ای از صفحه‌ها به شما نشان داده خواهد شد. همه صفحه‌ها را بررسی کنید و نقص‌ها را پیدا کنید. وقتی از همه‌چیز رضایت پیدا کردید، صفحه را لمس کنید تا به صفحه بعدی بروید. در پایان، از شما پرسیده می‌شود آیا صفحه‌ها به‌نظر بی‌نقص هستند یا نه."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"اکنون مجموعه‌ای از صفحه‌ها به شما نشان داده خواهد شد. همه صفحه‌ها را بررسی کنید و نقص‌ها را پیدا کنید. صفحه را لمس کنید تا به صفحه بعدی بروید."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"لطفاً گزینه‌ای را که بیشترین مطابقت را با وضعیت صفحه‌نمایش دارد در زیر انتخاب کنید."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"اکنون صفحه‌ای قرمز به شما نشان داده خواهد شد.\n \n انگشتتان را روی صفحه‌نمایش بکشید تا کل صفحه سفید شود. اگر نمی‌توانید قسمت‌هایی از صفحه را سفید کنید، روی صفحه ضربه کوتاه بزنید تا نشان دهید که حسگر لمسی به‌طور کامل کار نمی‌کند.\n \n درصورت تمایل، می‌توانید از صفحه گزارش تند به‌عقب بکشید و آزمایش را از جایی که رها کردید ادامه دهید.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"لطفاً این رمزیه پاسخ‌سریع را در دستگاه مطمئن اسکن کنید. بعداز اسکن کردن رمزینه پاسخ‌سریع، می‌توانید «تمام» را در این دستگاه فشار دهید."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"اکنون صفحه‌ای قرمز به شما نشان داده خواهد شد.\n \n انگشتتان را روی صفحه‌نمایش تند بکشید تا کل صفحه سفید شود. اگر نمی‌توانید قسمت‌هایی از صفحه را سفید کنید، روی صفحه ضربه کوتاهی بزنید تا نشان دهید حسگر لمسی به‌طور کامل کار نمی‌کند.\n \n"</string>
 </resources>

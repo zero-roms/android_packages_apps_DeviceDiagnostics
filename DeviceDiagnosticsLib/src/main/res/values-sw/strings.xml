@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"UchunguziwaKifaa"</string>
     <string name="app_title" msgid="2766786539301072967">"Uchunguzi wa kifaa"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Endelea"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"Haipo"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Inaunganisha..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"Uthabiti wa kipengele cha kifaa"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Fanya majaribio mwenyewe na uangalie muda wa kudumu wa betri na uthabiti wa hifadhi"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Hali ya kutathmini"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Tumia kifaa kimoja kutathmini kifaa kingine"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Majaribio ya kujifanyia"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Jaribio la skrini"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Jaribio la kugusa"</string>
     <string name="component_title" msgid="6580046234562555655">"Hali ya kipengele cha kifaa"</string>
     <string name="storage_title" msgid="5921235202250843966">"Hali ya hifadhi"</string>
     <string name="battery_title" msgid="6707361668941323259">"Hali ya betri"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"Mchakato wa kutathmini unaoaminika"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Kifaa unachokiamini"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"Anza kwa kuteua chaguo hili kwenye kifaa unachokiamini"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Tathmini kifaa kingine. Muunganisho wa Intaneti unahitajika."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Kifaa kilichotathminiwa"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"Ukidokezewa, teua chaguo hili kwenye kifaa kilichotathminiwa"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Fanya majaribio ya uchunguzi ambayo yatathibitishwa na kifaa kingine."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Changanua sasa"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Changanua msimbo wa QR kwenye kifaa unachokiamini katika mstatili ulio hapa chini"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Baada ya kuchanganua msimbo wa QR, kifaa hiki kitaanzisha kiotomatiki mfululizo wa majaribio."</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"Inatuma ripoti kwenye kifaa unachokiamini..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Mchakato wa kutathmini umekamilika"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Matokeo yataonekana kwenye kifaa unachokiamini"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Matokeo ya jaribio la skrini"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Nzuri"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Hakuna kasoro za wazi"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Ni mbaya"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Skrini ina kasoro"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"Muda wa kudumu wa betri"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Tarehe ya kutengenezwa"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Tarehe ya matumizi ya kwanza"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"Halisi"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Imebadilishwa"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Kumbukumbu za Kipengele cha Kifaa"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% ya uwezo halisi"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Hali ya muda wa kudumu wa betri haipatikani"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Baridi"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Imeharibika"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Kiwango cha juu mno cha volti"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Uthabiti wa hifadhi"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Kiasi chote cha hifadhi"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"Imebakisha %1$d%% ya muda wake wa kudumu"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Tafadhali toa ruhusa zinazotakikana ili uendelee katika hali ya kutathmini."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Acha"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Jaribu tena"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"Hapana"</string>
     <string name="unknown" msgid="6936738212381747979">"Hakijulikani"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Imeshindwa kuthibitisha"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"Matokeo ya kutathmini"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Matokeo ya uthibitishaji"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,14 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"Haijafungwa"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"Msimbo wa QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Endelea kwenye kifaa kinachotathminiwa"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Kamilisha kufanya majaribio kwenye kifaa unachokitathmini, kisha matokeo yataonekana hapa"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Kamilisha kufanya majaribio kwenye kifaa unachokitathmini, kisha matokeo yataonekana hapa."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Hitilafu fulani imetokea wakati wa kuwasiliana na kifaa kilichotathminiwa. Tafadhali thibitisha kuwa Bluetooth imewashwa kisha ujaribu tena."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Changanua sasa"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Kwenye kifaa ambacho ungependa kukitathmini, nenda kwenye\n Mipangilio/UchunguziwaKifaa/Kifaa kilichotathminiwa\n Fuata vidokezo kwenye kifaa hicho."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Fuata vidokezo kwenye kifaa kilichotathminiwa. Ukidokezewa, bonyeza hapa ili uendelee kwenye kifaa hiki."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Kwenye kifaa ambacho ungependa kukitathmini, nenda kwenye Mipangilio, Mfumo, Uchunguzi wa Kifaa, Hali ya Kutathmini, kisha Kifaa Kilichotathminiwa. Fuata vidokezo kwenye kifaa hicho."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Sasa utaonyeshwa mfululizo wa skrini. Chunguza kila skrini na ubaini kasoro. Baada ya kuridhika, gusa skrini iliyopo ili uende kwenye skrini inayofuata. Hatimaye, utaulizwa iwapo skrini hazina kasoro zozote."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Sasa utaonyeshwa mfululizo wa skrini. Chunguza kila skrini na ubaini kasoro. Gusa skrini iliyopo ili uende kwenye skrini inayofuata."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Tafadhali teua chaguo lililo hapa chini linalolingana vizuri zaidi na hali ya skrini."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Sasa utaonyeshwa skrini nyekundu.\n \n Sugua kidole chako kwenye skrini hadi skrini nzima iwe nyeupe. Ikiwa huwezi kubadilisha sehemu fulani ya skrini iwe nyeupe, gusa skrini kidogo ili kuashiria kuwa kitambuzi cha kugusa hakifanyi kazi inavyostahili.\n \n Ukipenda, unaweza kutelezesha kidole nyuma kutoka kwenye skrini ya ripoti na uendelee na jaribio kuanzia ulikoachia.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"Tafadhali changanua msimbo huu wa QR kwenye kifaa unachokiamini. Baada ya kuuchanganua, unaweza kubonyeza \'Nimemaliza\' kwenye kifaa hiki."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Sasa utaonyeshwa skrini nyekundu.\n \n Telezesha kidole chako kwenye skrini hadi skrini nzima iwe nyeupe. Ikiwa huwezi kubadilisha sehemu fulani ya skrini iwe nyeupe, gusa skrini kidogo ili kuashiria kuwa kitambuzi cha kugusa hakifanyi kazi inavyostahili.\n \n"</string>
 </resources>

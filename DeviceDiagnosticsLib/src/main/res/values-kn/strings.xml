@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"ಸಾಧನದ ಡಯಾಗ್ನಾಸ್ಟಿಕ್ಸ್"</string>
     <string name="app_title" msgid="2766786539301072967">"ಸಾಧನದ ಡಯಾಗ್ನಾಸ್ಟಿಕ್ಸ್"</string>
     <string name="activity_continue" msgid="2190118984182069151">"ಮುಂದುವರಿಸಿ"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"ಲಭ್ಯವಿಲ್ಲ"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"ಕನೆಕ್ಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"ಘಟಕದ ಆರೋಗ್ಯ"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"ಹಸ್ತಚಾಲಿತ ಪರೀಕ್ಷೆಗಳನ್ನು ರನ್ ಮಾಡಿ ಮತ್ತು ಬ್ಯಾಟರಿ ಮತ್ತು ಸಂಗ್ರಹಣೆ ಆರೋಗ್ಯವನ್ನು ವೀಕ್ಷಿಸಿ"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"ಮೌಲ್ಯಮಾಪನ ಮೋಡ್"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"ಇನ್ನೊಂದು ಸಾಧನದ ಮೌಲ್ಯಮಾಪನ ಮಾಡಲು ಒಂದು ಸಾಧನವನ್ನು ಬಳಸಿ"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"ಹಸ್ತಚಾಲಿತ ಪರೀಕ್ಷೆಗಳು"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ಡಿಸ್‌ಪ್ಲೇ ಪರೀಕ್ಷೆ"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"ಸ್ಪರ್ಶ ಪರೀಕ್ಷೆ"</string>
     <string name="component_title" msgid="6580046234562555655">"ಘಟಕದ ಸ್ಥಿತಿ"</string>
     <string name="storage_title" msgid="5921235202250843966">"ಸಂಗ್ರಹಣೆ ಸ್ಥಿತಿ"</string>
     <string name="battery_title" msgid="6707361668941323259">"ಬ್ಯಾಟರಿಯ ಸ್ಥಿತಿ"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"ವಿಶ್ವಾಸಾರ್ಹ ಮೌಲ್ಯಮಾಪನ"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನದಲ್ಲಿ ಈ ಆಯ್ಕೆಯನ್ನು ಆರಿಸುವ ಮೂಲಕ ಪ್ರಾರಂಭಿಸಿ"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"ಮತ್ತೊಂದು ಸಾಧನದ ಮೌಲ್ಯಮಾಪನ ಮಾಡಿ. ಇಂಟರ್‌ನೆಟ್ ಕನೆಕ್ಷನ್‌ನ ಅಗತ್ಯವಿದೆ."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"ಮೌಲ್ಯಮಾಪನ ಮಾಡಿದ ಸಾಧನ"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"ಹಾಗೆ ಮಾಡಲು ಪ್ರಾಂಪ್ಟ್ ಮಾಡಿದಾಗ, ಮೌಲ್ಯಮಾಪನ ಮಾಡಿದ ಸಾಧನದಲ್ಲಿ ಈ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"ಮತ್ತೊಂದು ಸಾಧನದಿಂದ ಪ್ರಮಾಣೀಕರಿಸಲಾಗುವ ಡಯಾಗ್ನಾಸ್ಟಿಕ್ ಪರೀಕ್ಷೆಗಳನ್ನು ರನ್ ಮಾಡಿ."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"ಈಗಲೇ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"ಕೆಳಗೆ ನೀಡಲಾಗಿರುವ ಆಯತದಲ್ಲಿರುವ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನದಿಂದ QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"ನೀವು QR ಕೋಡ್ ಅನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಸ್ಕ್ಯಾನ್ ಮಾಡಿದ ನಂತರ, ಈ ಸಾಧನವು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಪರೀಕ್ಷೆಗಳ ಸರಣಿಯನ್ನು ಪ್ರಾರಂಭಿಸುತ್ತದೆ."</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನಕ್ಕೆ ವರದಿಯನ್ನು ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"ಮೌಲ್ಯಮಾಪನ ಪೂರ್ಣಗೊಂಡಿದೆ"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"ಫಲಿತಾಂಶಗಳು ಈಗ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನದಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"ಸ್ಕ್ರೀನ್ ಪರೀಕ್ಷೆಯ ಫಲಿತಾಂಶ"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"ಉತ್ತಮ"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"ಯಾವುದೇ ಸ್ಪಷ್ಟ ದೋಷಗಳಿಲ್ಲ"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"ಕಳಪೆಯಾಗಿದೆ"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"ಸ್ಕ್ರೀನ್ ದೋಷಗಳನ್ನು ಹೊಂದಿದೆ"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"ಆರೋಗ್ಯ"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"ಉತ್ಪಾದಿಸಿದ ದಿನಾಂಕ"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"ಮೊದಲ ಬಳಕೆಯ ದಿನಾಂಕ"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"ಮೂಲ"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"ಬದಲಿಸಲಾಗಿದೆ"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"ಭಾಗದ ಇತಿಹಾಸ"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"ಮೂಲ ಸಾಮರ್ಥ್ಯದ %1$d%%"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"ಬ್ಯಾಟರಿ ಹೆಲ್ತ್ ಲಭ್ಯವಿಲ್ಲ"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"ತಣ್ಣಗಿದೆ"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"ಡೆಡ್ ಆಗಿದೆ"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"ವೋಲ್ಟೇಜ್ ಮಿತಿಮೀರಿದೆ"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"ಸಂಗ್ರಹಣೆ ಆರೋಗ್ಯ"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"ಒಟ್ಟು ಸಾಮರ್ಥ್ಯ"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% ಸಮಯಾವಧಿ ಉಳಿದಿದೆ"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"ಮೌಲ್ಯಮಾಪನ ಮೋಡ್‌ನಲ್ಲಿ ಮುಂದುವರಿಯಲು ವಿನಂತಿಸಿದ ಅನುಮತಿಗಳನ್ನು ನೀಡಿ."</string>
     <string name="cancel_button" msgid="7011882021431169180">"ರದ್ದುಮಾಡಿ"</string>
     <string name="try_again_button" msgid="6015477950108798246">"ಪುನಃ ಪ್ರಯತ್ನಿಸಿ"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"ಇಲ್ಲ"</string>
     <string name="unknown" msgid="6936738212381747979">"ಅಪರಿಚಿತ"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"ದೃಢೀಕರಣ ವಿಫಲವಾಗಿದೆ"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"ಮೌಲ್ಯಮಾಪನ ಫಲಿತಾಂಶಗಳು"</string>
     <string name="attestation_results" msgid="9089126954790727665">"ದೃಢೀಕರಣದ ಫಲಿತಾಂಶಗಳು"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,15 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"ಲಾಕ್ ಆಗಿಲ್ಲ"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR ಕೋಡ್"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"ಸಾಧನವನ್ನು ಮೌಲ್ಯಮಾಪನ ಮಾಡುವುದನ್ನು ಮುಂದುವರಿಸಿ"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"ನೀವು ಮೌಲ್ಯಮಾಪನ ಮಾಡುತ್ತಿರುವ ಸಾಧನದಲ್ಲಿ ಪರೀಕ್ಷೆಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ನಂತರ ಫಲಿತಾಂಶಗಳು ಇಲ್ಲಿ ಗೋಚರಿಸುತ್ತವೆ"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
-    <skip />
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"ನೀವು ಮೌಲ್ಯಮಾಪನ ಮಾಡುತ್ತಿರುವ ಸಾಧನದಲ್ಲಿ ಪರೀಕ್ಷೆಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ, ನಂತರ ಫಲಿತಾಂಶಗಳು ಇಲ್ಲಿ ಗೋಚರಿಸುತ್ತವೆ."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"ಮೌಲ್ಯಮಾಪನ ಮಾಡಿದ ಸಾಧನದ ಜೊತೆ ಸಂವಹನ ನಡೆಸುವಾಗ ದೋಷ ಕಂಡುಬಂದಿದೆ. ಬ್ಲೂಟೂತ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ ಹಾಗೂ ಪುನಃ ಪ್ರಯತ್ನಿಸಿ."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"ಈಗಲೇ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"ನೀವು ಮೌಲ್ಯಮಾಪನ ಮಾಡಲು ಬಯಸುವ ಸಾಧನದಲ್ಲಿ, \n ಸೆಟ್ಟಿಂಗ್‌ಗಳು/ಸಾಧನದ ಡಯಾಗ್ನಾಸ್ಟಿಕ್ಸ್/ಮೌಲ್ಯಮಾಪನ ಮಾಡಿದ ಸಾಧನ\n ಎಂಬಲ್ಲಿಗೆ ಹೋಗಿ, ಆ ಸಾಧನದಲ್ಲಿನ ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ಅನುಸರಿಸಿ."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"ಮೌಲ್ಯಮಾಪನ ಮಾಡಿದ ಸಾಧನದಲ್ಲಿನ ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ಅನುಸರಿಸಿ. ಪ್ರಾಂಪ್ಟ್ ಮಾಡಿದಾಗ, ಈ ಸಾಧನದಲ್ಲಿ ಮುಂದುವರಿಯಲು ಇಲ್ಲಿ ಒತ್ತಿರಿ."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"ನೀವು ಮೌಲ್ಯಮಾಪನ ಮಾಡಲು ಬಯಸುವ ಸಾಧನದಲ್ಲಿ, ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಸಿಸ್ಟಂ, ಸಾಧನದ ಡಯಾಗ್ನಾಸ್ಟಿಕ್ಸ್, ಮೌಲ್ಯಮಾಪನ ಮೋಡ್, ನಂತರ ಮೌಲ್ಯಮಾಪನ ಮಾಡಿದ ಸಾಧನ ಎಂಬಲ್ಲಿಗೆ ಹೋಗಿ. ಆ ಸಾಧನದಲ್ಲಿನ ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ಅನುಸರಿಸಿ."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"ಈಗ ನಿಮಗೆ ಸ್ಕ್ರೀನ್‌ಗಳ ಸರಣಿಯನ್ನು ತೋರಿಸಲಾಗುತ್ತದೆ. ಪ್ರತಿಯೊಂದನ್ನು ಅಧ್ಯಯನ ಮಾಡಿ ಮತ್ತು ನ್ಯೂನತೆಗಳನ್ನು ನೋಡಿ. ಒಮ್ಮೆ ನೀವು ತೃಪ್ತರಾದ ನಂತರ, ಮುಂದಿನದಕ್ಕೆ ಸರಿಸಲು ಸ್ಕ್ರೀನ್ ಅನ್ನು ಸ್ಪರ್ಶಿಸಿ. ಕೊನೆಯಲ್ಲಿ, ಸ್ಕ್ರೀನ್‌ಗಳು ದೋಷರಹಿತವಾಗಿ ಕಾಣುತ್ತವೆಯೇ ಎಂದು ನಿಮ್ಮನ್ನು ಕೇಳಲಾಗುತ್ತದೆ."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ಈಗ ನಿಮಗೆ ಸ್ಕ್ರೀನ್‌ಗಳ ಸರಣಿಯನ್ನು ತೋರಿಸಲಾಗುತ್ತದೆ. ಪ್ರತಿಯೊಂದನ್ನು ಅಧ್ಯಯನ ಮಾಡಿ ಮತ್ತು ನ್ಯೂನತೆಗಳನ್ನು ನೋಡಿ. ಮುಂದಿನದಕ್ಕೆ ಸರಿಸಲು ಸ್ಕ್ರೀನ್ ಅನ್ನು ಸ್ಪರ್ಶಿಸಿ."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"ಸ್ಕ್ರೀನ್‌ನ ಸ್ಥಿತಿಗೆ ಉತ್ತಮವಾಗಿ ಹೊಂದಾಣಿಕೆಯಾಗುವ ಕೆಳಗಿನ ಆಯ್ಕೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"ಈಗ ನಿಮಗೆ ಕೆಂಪು ಸ್ಕ್ರೀನ್ ಅನ್ನು ತೋರಿಸಲಾಗುತ್ತದೆ.\n \n ಸ್ಕ್ರೀನ್ ಸಂಪೂರ್ಣವಾಗಿ ಬಿಳಿಯಾಗುವವರೆಗೆ ನಿಮ್ಮ ಬೆರಳನ್ನು ಸ್ಕ್ರೀನ್ ಮೇಲೆ ಉಜ್ಜುತ್ತಿರಿ. ನೀವು ಸ್ಕ್ರೀನ್‌ನ ಭಾಗವನ್ನು ಬಿಳಿಯಾಗಿ ಮಾಡಲು ಸಾಧ್ಯವಾಗದಿದ್ದರೆ, ಸ್ಪರ್ಶದ ಸೆನ್ಸರ್ ಸಂಪೂರ್ಣವಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿಲ್ಲ ಎಂದು ಸೂಚಿಸಲು ಸ್ಕ್ರೀನ್ ಅನ್ನು ಚಿಕ್ಕದಾಗಿ ಟ್ಯಾಪ್ ಮಾಡಿ.\n \n ನೀವು ಬಯಸಿದರೆ, ನೀವು ವರದಿಯ ಸ್ಕ್ರೀನ್‌ನಿಂದ ಹಿಂದಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಬಹುದು ಮತ್ತು ನೀವು ನಿಲ್ಲಿಸಿದ ಸ್ಥಳದಿಂದ ಪರೀಕ್ಷೆಯನ್ನು ಮುಂದುವರಿಸಬಹುದು.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"ಈ QR ಕೋಡ್ ಅನ್ನು ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನದಲ್ಲಿ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ. ನೀವು ಅದನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿದ ನಂತರ, ನೀವು ಈ ಸಾಧನದಲ್ಲಿ ಮುಗಿದಿದೆ ಅನ್ನು ಒತ್ತಬಹುದು."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"ಈಗ ನಿಮಗೆ ಕೆಂಪು ಸ್ಕ್ರೀನ್ ಅನ್ನು ತೋರಿಸಲಾಗುತ್ತದೆ.\n \n ಸ್ಕ್ರೀನ್ ಸಂಪೂರ್ಣವಾಗಿ ಬಿಳಿಯಾಗುವವರೆಗೆ ನಿಮ್ಮ ಬೆರಳನ್ನು ಸ್ಕ್ರೀನ್ ಮೇಲೆ ಸ್ವೈಪ್ ಮಾಡುತ್ತಿರಿ. ನೀವು ಸ್ಕ್ರೀನ್‌ನ ಒಂದು ಭಾಗವನ್ನು ಬಿಳಿಯಾಗಿ ಮಾಡಲು ಸಾಧ್ಯವಾಗದಿದ್ದರೆ, ಸ್ಪರ್ಶದ ಸೆನ್ಸರ್ ಭಾಗಶಃ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿಲ್ಲ ಎಂದು ಸೂಚಿಸಲು ಸ್ಕ್ರೀನ್ ಅನ್ನು ಚಿಕ್ಕದಾಗಿ ಟ್ಯಾಪ್ ಮಾಡಿ.\n \n"</string>
 </resources>

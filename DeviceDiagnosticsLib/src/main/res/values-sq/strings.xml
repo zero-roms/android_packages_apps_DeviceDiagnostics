@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"Diagnostikimi i pajisjes"</string>
     <string name="app_title" msgid="2766786539301072967">"Diagnostikimi i pajisjes"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Vazhdo"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"Nuk ofrohet"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Po lidhet..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"Gjendja e komponentit"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Ekzekuto teste manuale dhe shiko gjendjen e baterisë dhe të hapësirës ruajtëse"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Modaliteti i vlerësimit"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Përdor një pajisje për të vlerësuar një pajisje tjetër"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Testet manuale"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Testi i ekranit"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Testi i prekjes"</string>
     <string name="component_title" msgid="6580046234562555655">"Statusi i komponentit"</string>
     <string name="storage_title" msgid="5921235202250843966">"Statusi i hapësirës ruajtëse"</string>
     <string name="battery_title" msgid="6707361668941323259">"Statusi i baterisë"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"Vlerësimi i besuar"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Pajisja e besuar"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"Fillo duke zgjedhur këtë opsion në një pajisje të besuar"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Vlerëso një pajisje tjetër. Kërkohet një lidhje interneti."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Pajisja e vlerësuar"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"Kur të kërkohet të bësh këtë, zgjidh këtë opsion në pajisjen e vlerësuar"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Ekzekuto teste diagnostikuese që do të verifikohen nga një pajisje tjetër."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skano tani"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skano kodin QR në pajisjen e besuar në drejtkëndëshin më poshtë"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Pasi të kesh skanuar me sukses kodin QR, kjo pajisje do të nisë automatikisht një seri testesh."</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"Raporti po dërgohet te pajisja e besuar..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Vlerësimi përfundoi"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Rezultati tani do të shfaqet te pajisja e besuar"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Rezultati i testimit të ekranit"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"I mirë"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Nuk ka defekte të dukshme"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"E keqe"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Ekrani ka defekte"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"Gjendja"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Data e prodhimit"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Data e përdorimit të parë"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"Origjinale"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Zëvendësuar"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Historiku i pjesës"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% e kapacitetit origjinal"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Gjendja e baterisë nuk ofrohet"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"E ftohtë"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Ka mbaruar"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Mbi voltazh"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Gjendja e hapësirës ruajtëse"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Kapaciteti total"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"Kohëzgjatja e mbetur: %1$d%%"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Jep lejet e kërkuara për të vazhduar në modalitetin e vlerësimit."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Anulo"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Provo përsëri"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"Jo"</string>
     <string name="unknown" msgid="6936738212381747979">"I panjohur"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Vërtetimi dështoi"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"Rezultatet e vlerësimit"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Rezultatet e vërtetimit"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,15 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"Nuk është kyçur"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"Kodi QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Vazhdo në pajisjen që po vlerësohet"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Përfundo testet në pajisjen që po vlerëson dhe më pas rezultatet do të shfaqen këtu"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
-    <skip />
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Përfundo testet në pajisjen që po vlerëson dhe më pas rezultatet do të shfaqen këtu."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Ndodhi një gabim gjatë komunikimit me pajisjen e vlerësuar. Verifiko që Bluetooth-i është i aktivizuar dhe provo përsëri."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skano tani"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Në pajisjen që dëshiron të vlerësosh, shko te\n Settings/DeviceDiagnostics/Evaluated device\n Ndiq kërkesat në atë pajisje."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Ndiq kërkesat në pajisjen e vlerësuar. Kur të kërkohet, shtyp këtu për të vazhduar në këtë pajisje."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Në pajisjen që dëshiron të vlerësosh, shko te \"Cilësimet\", \"Sistemi\", \"Diagnostikimi i pajisjes\", \"Modaliteti i vlerësimit\" dhe më pas \"Pajisja e vlerësuar\". Ndiq kërkesat në atë pajisje."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Tani do të të shfaqen një seri ekranesh. Studio secilin prej tyre dhe shiko për defekte. Kur të jesh i kënaqur, prek ekranin për të kaluar te tjetri. Në fund, do të pyetesh nëse ekranet duken pa njolla."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Tani do të të shfaqen një seri ekranesh. Studio secilin prej tyre dhe shiko për defekte. Prek ekranin për të kaluar te tjetri."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Zgjidh opsionin më poshtë që përputhet më mirë me gjendjen e ekranit."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Tani do të të shfaqet një ekran i kuq.\n \n Fërko ekranin me gisht derisa ekrani të jetë plotësisht i bardhë. Nëse nuk mund ta kthesh një pjesë të ekranit në ngjyrë të bardhë, bëj një trokitje të shkurtër në ekran për të treguar që sensori i prekjes nuk funksionon plotësisht.\n \n Nëse dëshiron, mund të kthehesh prapa me rrëshqitje nga ekrani i raportit dhe të vazhdosh testin nga aty ku e ke lënë.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"Skano këtë kod QR në pajisjen e besuar. Pasi ta kesh skanuar, mund të shtypësh \"U krye\" në këtë pajisje."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Tani do të të shfaqet një ekran i kuq.\n \n Rrëshqit shpejt gishtin mbi ekran derisa ekrani të jetë plotësisht i bardhë. Nëse nuk mund ta kthesh një pjesë të ekranit në ngjyrë të bardhë, bëj një trokitje të shkurtër në ekran për të treguar që sensori i prekjes nuk funksionon plotësisht.\n \n"</string>
 </resources>

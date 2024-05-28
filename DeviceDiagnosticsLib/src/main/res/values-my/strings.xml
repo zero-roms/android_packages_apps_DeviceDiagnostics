@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"စက် အမှားရှာဖွေမှုများ"</string>
     <string name="app_title" msgid="2766786539301072967">"စက်၏ ပြဿနာ ရှာဖွေဖော်ထုတ်ခြင်း"</string>
     <string name="activity_continue" msgid="2190118984182069151">"ရှေ့ဆက်ရန်"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"မရနိုင်ပါ"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"ချိတ်ဆက်နေသည်…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"အစိတ်အပိုင်း ကြံ့ခိုင်မှု"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"ကိုယ်တိုင်စစ်ဆေးမှုများ ပြုလုပ်ရန်နှင့် ဘက်ထရီနှင့် သိုလှောင်ခန်းအခြေအနေကို ကြည့်ရန်"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"အကဲဖြတ်မုဒ်"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"နောက်စက်တစ်ခုကို အကဲဖြတ်ရန်အတွက် စက်တစ်ခုကို သုံးရန်"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"လူကိုယ်တိုင် စမ်းသပ်မှု"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"စခရင် စမ်းသပ်မှု"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"ထိတွေ့မှု စမ်းသပ်ချက်"</string>
     <string name="component_title" msgid="6580046234562555655">"အစိတ်အပိုင်း အခြေအနေ"</string>
     <string name="storage_title" msgid="5921235202250843966">"သိုလှောင်ခန်း အခြေအနေ"</string>
     <string name="battery_title" msgid="6707361668941323259">"ဘက်ထရီ အခြေအနေ"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"စိတ်ချရသည့် အကဲဖြတ်ချက်"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"စိတ်ချရသည့်စက်ပစ္စည်း"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"စိတ်ချရသည့်စက်ပစ္စည်းပေါ်တွင် ဤတစ်ခုကိုရွေးခြင်းဖြင့် စတင်ပါ"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"နောက်စက်တစ်ခုကို အကဲဖြတ်ပါ။ အင်တာနက်ချိတ်ဆက်မှု လိုအပ်သည်။"</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"အကဲဖြတ်နေသည့်စက်"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"ထိုသို့ပြုလုပ်ရန် တိုက်တွန်းချက် ပေါ်လာသောအခါ အကဲဖြတ်နေသည့်စက်ပေါ်တွင် ဤနည်းလမ်းကို ရွေးပါ"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"နောက်စက်က အတည်ပြုမည့် အမှားရှာဖွေစစ်ဆေးမှုများ ပြုလုပ်ပါ။"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"ယခု စကင်ဖတ်ရန်"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"အောက်ပါထောင့်မှန်စတုဂံရှိ QR ကုဒ်ကို စိတ်ချရသည့်စက်ပစ္စည်းပေါ်တွင် စကင်ဖတ်ပါ"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR ကုဒ်ကို စကင်ဖတ်ပြီးသည်နှင့် ဤစက်သည် စမ်းသပ်မှုများကို အလိုအလျောက် စတင်ပါမည်။"</string>
@@ -49,6 +52,15 @@
     <string name="sending_report" msgid="8735615783234611336">"စိတ်ချရသည့်စက်ပစ္စည်းသို့ အစီရင်ခံစာ ပို့နေသည်…"</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"အကဲဖြတ်မှု ပြီးပါပြီ"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"စိတ်ချရသည့်စက်ပစ္စည်းတွင် ရလဒ်များကို ယခုပြပါမည်"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"စခရင် စစ်ဆေးချက်ရလဒ်"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"ကောင်းသည်"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"သိသာသော ချွတ်ယွင်းချက်များ မရှိပါ"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"မကောင်း"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"စခရင်တွင် ချွတ်ယွင်းချက်များ ရှိသည်"</string>
+    <string name="manual_testing_title" msgid="4512384040828953255">"ကိုယ်တိုင် စစ်ဆေးခြင်း"</string>
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <string name="cancel" msgid="4173470896053421075">"မလုပ်တော့"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"အခြေအနေ"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"ထုတ်လုပ်ရက်စွဲ"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"ပထမဆုံး အသုံးပြုသည့် ရက်စွဲ"</string>
@@ -58,7 +70,8 @@
     <string name="battery_original" msgid="2552600989411644999">"မူရင်း"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"လဲထားသည်"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"အစိတ်အပိုင်း မှတ်တမ်း"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"မူရင်း သိုလှောင်နိုင်မှုပမာဏ၏ %1$d%%"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"ဘက်ထရီအခြေအနေ မရနိုင်ပါ"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"အေးသည်"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"အားမရှိပါ"</string>
@@ -67,8 +80,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"ဗို့အား ကျော်လွန်နေသည်"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"သိုလှောင်ခန်း အခြေအနေ"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"စုစုပေါင်း သိုလှောင်နိုင်မှုပမာဏ"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"သက်တမ်း %1$d%% ကျန်သည်"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"အကဲဖြတ်မုဒ်တွင် ရှေ့ဆက်ရန် တောင်းဆိုထားသော ခွင့်ပြုချက်များ ပေးပါ။"</string>
     <string name="cancel_button" msgid="7011882021431169180">"မလုပ်တော့"</string>
     <string name="try_again_button" msgid="6015477950108798246">"ထပ်စမ်းကြည့်ပါ"</string>
@@ -100,6 +115,8 @@
     <string name="no" msgid="5957591978126937912">"မဟုတ်ပါ"</string>
     <string name="unknown" msgid="6936738212381747979">"မသိ"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"အထောက်အထားပြခြင်း မအောင်မြင်ပါ"</string>
+    <string name="avb_verified" msgid="4990498011432924565">"အတည်ပြုထားသည်"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"အတည်မပြုရသေးပါ"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"အကဲဖြတ်မှု ရလဒ်များ"</string>
     <string name="attestation_results" msgid="9089126954790727665">"အထောက်အထားပြခြင်းဆိုင်ရာ ရလဒ်များ"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,14 +138,12 @@
     <string name="not_locked" msgid="1663929635666930122">"လော့ခ်ချမထားပါ"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR ကုဒ်"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"အကဲဖြတ်နေသည့် စက်တွင် ဆက်လုပ်ပါ"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"သင် အကဲဖြတ်နေသည့်စက်ပေါ်တွင် စမ်းသပ်မှုများကို ပြီးဆုံးအောင်လုပ်ပါ၊ ရလဒ်များ ဤနေရာတွင် ပေါ်လာပါမည်"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"သင် အကဲဖြတ်နေသည့်စက်ပေါ်တွင် စစ်ဆေးမှုများကို ပြီးဆုံးအောင်လုပ်ပါ။ ဤနေရာတွင် ရလဒ် ပေါ်လာပါမည်။"</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"အကဲဖြတ်နေသည့်စက်နှင့် ချိတ်ဆက်ရာတွင် အမှားဖြစ်သွားသည်။ ဘလူးတုသ်ဖွင့်ထားကြောင်း အတည်ပြုပြီး ထပ်စမ်းကြည့်ပါ။"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"ယခု စကင်ဖတ်ရန်"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"အကဲဖြတ်လိုသည့် စက်ပေါ်တွင်\n ဆက်တင်များ/စက် အမှားရှာဖွေမှုများ/အကဲဖြတ်ထားသည့်စက်\n သို့သွား၍ ယင်းစက်ပေါ်ရှိ တိုက်တွန်းချက်များအတိုင်း လုပ်ဆောင်ပါ။"</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"အကဲဖြတ်နေသည့်စက်ပေါ်ရှိ တိုက်တွန်းချက်များအတိုင်း လုပ်ဆောင်ပါ။ တိုက်တွန်းချက် ပေါ်လာသောအခါ ယခုစက်ပစ္စည်းပေါ်တွင် ဆက်လုပ်ရန် ဤနေရာကို နှိပ်ပါ။"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"အကဲဖြတ်မည့် စက်ပေါ်တွင် ဆက်တင်များ၊ စနစ်၊ စက်၏ ပြဿနာ ရှာဖွေဖော်ထုတ်ခြင်း၊ အကဲဖြတ်ခြင်း မုဒ်၊ ထို့နောက် အကဲဖြတ်ထားသည့်စက် သို့သွားပါ။ ထိုစက်ပေါ်ရှိ တိုက်တွန်းချက်များအတိုင်း လုပ်ဆောင်ပါ။"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"ယခု သင့်အား စခရင်များကို အတွဲလိုက် ပြပါမည်။ စခရင်တစ်ခုစီကို လေ့လာ၍ ချွတ်ယွင်းချက်များ ရှာဖွေပါ။ စိတ်ကျေနပ်သည်နှင့် စခရင်ကို ထိ၍ နောက်တစ်ခုသို့ ရွှေ့ပါ။ နောက်ဆုံးတွင် စခရင်များ ချွတ်ယွင်းချက်ရှိပုံ ရ၊ မရ သင့်ကို မေးပါမည်။"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ယခု သင့်အား စခရင်များကို အတွဲလိုက် ပြပါမည်။ စခရင်တစ်ခုစီကို လေ့လာ၍ ချွတ်ယွင်းချက်များ ရှာဖွေပါ။ စခရင်ကို ထိ၍ နောက်တစ်ခုသို့ ရွှေ့ပါ။"</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"စခရင်အခြေအနေနှင့် အကိုက်ညီဆုံးဖြစ်သည့် တစ်ခုကို အောက်တွင် ရွေးပါ။"</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"ယခု သင့်အား အနီရောင်စခရင် ပြပါမည်။\n \n စခရင်တစ်ခုလုံး ဖြူသွားသည်အထိ သင့်လက်ချောင်းဖြင့် စခရင်ကို ပွတ်ပါ။ စခရင် တစ်စိတ်တစ်ပိုင်းကို ဖြူအောင်မပြောင်းနိုင်ပါက ထိတွေ့မှု အာရုံခံကိရိယာ အပြည့်အဝ အလုပ်မလုပ်ကြောင်း ဖော်ပြရန် စခရင်ကို တစ်ချက်တို့ပါ။\n \n ဆန္ဒရှိလျှင် အစီရင်ခံစာစခရင်ကို နောက်သို့ ပွတ်ဆွဲ၍ စမ်းသပ်မှုကို ရပ်ခဲ့သည့်နေရာမှ ဆက်လုပ်နိုင်ပါသည်။\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"စိတ်ချရသည့်စက်ပစ္စည်းပေါ်ရှိ ဤ QR ကုဒ်ကို စကင်ဖတ်ပါ။ စကင်ဖတ်ပြီးနောက် ဤစက်ပစ္စည်းတွင် ‘ပြီးပြီ’ ကို နှိပ်နိုင်သည်။"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"ယခု သင့်အား အနီရောင်စခရင် ပြပါမည်။\n \n စခရင်တစ်ခုလုံး ဖြူသွားသည်အထိ သင့်လက်ချောင်းဖြင့် စခရင်ကို ပွတ်ဆွဲပါ။ စခရင် တစ်စိတ်တစ်ပိုင်းကို ဖြူအောင်မပြောင်းနိုင်ပါက ထိတွေ့မှု အာရုံခံကိရိယာ အပြည့်အဝ အလုပ်မလုပ်ကြောင်း ဖော်ပြရန် စခရင်ကို တို့ပါ။ \n \n"</string>
 </resources>

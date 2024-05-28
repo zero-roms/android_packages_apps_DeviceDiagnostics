@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
     <string name="app_title" msgid="2766786539301072967">"Diagnostik perangkat"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Lanjutkan"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"Tidak tersedia"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Menghubungkan..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"Kesehatan komponen"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Jalankan pengujian manual dan tampilkan kesehatan baterai dan penyimpanan"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Mode evaluasi"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Gunakan satu perangkat untuk menilai perangkat lain"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Pengujian manual"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Pengujian tampilan"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Uji sentuh"</string>
     <string name="component_title" msgid="6580046234562555655">"Status komponen"</string>
     <string name="storage_title" msgid="5921235202250843966">"Status penyimpanan"</string>
     <string name="battery_title" msgid="6707361668941323259">"Status baterai"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"Evaluasi tepercaya"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Perangkat tepercaya"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"Mulailah dengan memilih opsi ini di perangkat tepercaya"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Nilai perangkat lain. Koneksi internet diperlukan."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Perangkat yang dievaluasi"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"Pilih opsi ini di perangkat yang dievaluasi saat diminta"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Jalankan pengujian diagnostik yang akan divalidasi oleh perangkat lain."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Pindai sekarang"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Pindai kode QR di perangkat tepercaya pada kotak di bawah ini"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Setelah Anda berhasil memindai kode QR, perangkat ini akan secara otomatis memulai serangkaian tes."</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"Mengirim laporan ke perangkat tepercaya..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Evaluasi selesai"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Hasil kini akan ditampilkan di perangkat tepercaya"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Hasil uji layar"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Bagus"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Tidak ada kerusakan yang terlihat jelas"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Buruk"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Terdapat kerusakan pada layar"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"Kesehatan"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Tanggal produksi"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Tanggal penggunaan pertama"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"Asli"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Diganti"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Histori Suku Cadang"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% kapasitas asli"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Kesehatan baterai tidak tersedia"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Dingin"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Mati"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Voltase berlebih"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Kesehatan penyimpanan"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Total kapasitas"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% masa aktif tersisa"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Berikan izin yang diminta untuk melanjutkan dalam mode evaluasi."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Batal"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Coba lagi"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"Tidak"</string>
     <string name="unknown" msgid="6936738212381747979">"Tidak diketahui"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Pengesahan gagal"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"Hasil evaluasi"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Hasil pengesahan"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,15 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"Tidak dikunci"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"Kode QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Lanjutkan di perangkat yang sedang dievaluasi"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Selesaikan pengujian di perangkat yang Anda evaluasi, maka hasilnya akan muncul di sini"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
-    <skip />
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Selesaikan pengujian di perangkat yang Anda evaluasi, maka hasilnya akan muncul di sini."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Terjadi error saat berkomunikasi dengan perangkat yang dievaluasi. Pastikan Bluetooth diaktifkan, lalu coba lagi."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Pindai sekarang"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Di perangkat yang ingin Anda evaluasi, buka\n Settings/DeviceDiagnostics/Evaluated device\n Ikuti perintah di perangkat tersebut."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Ikuti perintah di perangkat yang dievaluasi. Ketika diminta, tekan di sini untuk melanjutkan di perangkat ini."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Di perangkat yang ingin Anda evaluasi, buka Setelan, Sistem, Diagnostik perangkat, Mode evaluasi, lalu Perangkat yang dievaluasi. Ikuti perintah di perangkat tersebut."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Kini Anda dapat melihat serangkaian layar. Periksa setiap layar dan cari cacatnya. Setelah Anda yakin, sentuh layar untuk berpindah ke layar berikutnya. Pada akhirnya, Anda akan ditanya apakah layar terlihat tidak memiliki cacat."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Kini Anda akan diperlihatkan serangkaian layar. Periksa setiap layar dan cari cacatnya. Sentuh layar untuk berpindah ke yang berikutnya."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Pilih opsi di bawah ini yang paling sesuai dengan kondisi layar."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Kini Anda akan melihat layar merah.\n \n Usapkan jari Anda pada layar tersebut hingga layar menjadi putih seluruhnya. Jika Anda tidak dapat mengubah sebagian layar menjadi putih, ketuk sebentar pada layar untuk menunjukkan bahwa sensor sentuh tidak berfungsi sepenuhnya.\n \n Jika berkenan, Anda dapat menggeser kembali dari layar laporan dan melanjutkan pengujian dari bagian terakhir yang Anda tinggalkan.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"Pindai kode QR ini di perangkat tepercaya. Setelah memindainya, Anda dapat menekan Selesai di perangkat ini."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Kini Anda akan melihat layar merah.\n \n Geser jari Anda pada layar tersebut hingga layar menjadi putih seluruhnya. Jika Anda tidak dapat mengubah sebagian layar menjadi putih, ketuk sebentar pada layar untuk menunjukkan bahwa sensor sentuh tidak berfungsi sepenuhnya.\n \n"</string>
 </resources>

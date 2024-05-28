@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
     <string name="app_title" msgid="2766786539301072967">"ਡੀਵਾਈਸ ਤਸ਼ਖੀਸਾਂ"</string>
     <string name="activity_continue" msgid="2190118984182069151">"ਜਾਰੀ ਰੱਖੋ"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"ਉਪਲਬਧ ਨਹੀਂ"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"ਕਨੈਕਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"ਤੱਤ ਦੀ ਸਿਹਤ"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"ਹੱਥੀਂ ਟੈਸਟ ਚਲਾਓ ਅਤੇ ਬੈਟਰੀ ਅਤੇ ਸਟੋਰੇਜ ਦੀ ਸਥਿਤੀ ਦੇਖੋ"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"ਮੁਲਾਂਕਣ ਮੋਡ"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"ਕਿਸੇ ਹੋਰ ਡੀਵਾਈਸ ਦਾ ਮੁਲਾਂਕਣ ਕਰਨ ਲਈ ਇੱਕ ਡੀਵਾਈਸ ਵਰਤੋ"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"ਹੱਥੀਂ ਟੈਸਟ"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ਡਿਸਪਲੇ ਦਾ ਟੈਸਟ"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"ਟੱਚ ਟੈਸਟ"</string>
     <string name="component_title" msgid="6580046234562555655">"ਤੱਤ ਦੀ ਸਥਿਤੀ"</string>
     <string name="storage_title" msgid="5921235202250843966">"ਸਟੋਰੇਜ ਦੀ ਸਥਿਤੀ"</string>
     <string name="battery_title" msgid="6707361668941323259">"ਬੈਟਰੀ ਦੀ ਸਥਿਤੀ"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"ਭਰੋਸੇਯੋਗ ਮੁਲਾਂਕਣ"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ \'ਤੇ ਇਸ ਵਿਕਲਪ ਨੂੰ ਚੁਣ ਕੇ ਸ਼ੁਰੂ ਕਰੋ"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"ਕਿਸੇ ਹੋਰ ਡੀਵਾਈਸ ਦਾ ਮੁਲਾਂਕਣ ਕਰੋ। ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਲੋੜੀਂਦਾ ਹੈ।"</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"ਮੁਲਾਂਕਣ ਕੀਤਾ ਡੀਵਾਈਸ"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"ਅਜਿਹਾ ਕਰਨ ਲਈ ਕਹੇ ਜਾਣ \'ਤੇ, ਮੁਲਾਂਕਣ ਕੀਤੇ ਡੀਵਾਈਸ \'ਤੇ ਇਸ ਵਿਕਲਪ ਨੂੰ ਚੁਣੋ"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"ਤਸ਼ਖੀਸੀ ਟੈਸਟ ਚਲਾਓ, ਜਿਨ੍ਹਾਂ ਨੂੰ ਕਿਸੇ ਹੋਰ ਡੀਵਾਈਸ ਵੱਲੋਂ ਪ੍ਰਮਾਣਿਤ ਕੀਤਾ ਜਾਵੇਗਾ।"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"ਹੁਣੇ ਸਕੈਨ ਕਰੋ"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"ਹੇਠਾਂ ਦਿੱਤੀ ਆਇਤ ਵਿੱਚ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ \'ਤੇ QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR ਕੋਡ ਨੂੰ ਸਫਲਤਾਪੂਰਵਕ ਸਕੈਨ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਇਹ ਡੀਵਾਈਸ ਸਵੈਚਲਿਤ ਤੌਰ \'ਤੇ ਟੈਸਟਾਂ ਦੀ ਸੀਰੀਜ਼ ਸ਼ੁਰੂ ਕਰ ਦੇਵੇਗਾ।"</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ \'ਤੇ ਰਿਪੋਰਟ ਭੇਜੀ ਜਾ ਰਹੀ ਹੈ..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"ਮੁਲਾਂਕਣ ਪੂਰਾ ਹੋ ਗਿਆ"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"ਨਤੀਜੇ ਹੁਣ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ \'ਤੇ ਦਿਖਾਈ ਦੇਣਗੇ"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"ਸਕ੍ਰੀਨ ਟੈਸਟ ਦਾ ਨਤੀਜਾ"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"ਵਧੀਆ"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"ਖਰਾਬੀ ਦਾ ਪਤਾ ਨਹੀਂ ਲੱਗਾ"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"ਖਰਾਬ"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"ਸਕ੍ਰੀਨ ਵਿੱਚ ਖਰਾਬੀ ਹੈ"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"ਸਿਹਤ"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"ਨਿਰਮਾਣ ਦੀ ਤਾਰੀਖ"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"ਪਹਿਲੀ ਵਰਤੋਂ ਦੀ ਤਾਰੀਖ"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"ਮੂਲ"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"ਬਦਲੀ ਗਈ"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"ਪੁਰਜ਼ੇ ਦਾ ਇਤਿਹਾਸ"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"ਮੂਲ ਸਮਰੱਥਾ ਦਾ %1$d%%"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"ਬੈਟਰੀ ਦੀ ਹਾਲਤ ਸੰਬੰਧੀ ਜਾਣਕਾਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"ਠੰਡਾ"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"ਬੈਟਰੀ ਖਤਮ"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"ਵੱਧ ਵੋਲਟੇਜ"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"ਸਟੋਰੇਜ ਦੀ ਸਿਹਤ"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"ਕੁੱਲ ਸਮਰੱਥਾ"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% ਲਾਈਫਟਾਈਮ ਬਾਕੀ"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"ਕਿਰਪਾ ਕਰਕੇ ਮੁਲਾਂਕਣ ਮੋਡ ਵਿੱਚ ਜਾਰੀ ਰੱਖਣ ਲਈ ਬੇਨਤੀ ਕੀਤੀਆਂ ਇਜਾਜ਼ਤਾਂ ਦਿਓ।"</string>
     <string name="cancel_button" msgid="7011882021431169180">"ਰੱਦ ਕਰੋ"</string>
     <string name="try_again_button" msgid="6015477950108798246">"ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"ਨਹੀਂ"</string>
     <string name="unknown" msgid="6936738212381747979">"ਅਗਿਆਤ"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"ਤਸਦੀਕ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"ਮੁਲਾਂਕਣ ਨਤੀਜੇ"</string>
     <string name="attestation_results" msgid="9089126954790727665">"ਤਸਦੀਕ ਕਰਨ ਦੇ ਨਤੀਜੇ"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,15 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"ਲਾਕ ਨਹੀਂ ਹੈ"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR ਕੋਡ"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"ਮੁਲਾਂਕਣ ਕੀਤੇ ਜਾ ਰਹੇ ਡੀਵਾਈਸ \'ਤੇ ਜਾਰੀ ਰੱਖੋ"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"ਉਸ ਡੀਵਾਈਸ \'ਤੇ ਟੈਸਟ ਪੂਰੇ ਕਰੋ, ਜਿਸਦਾ ਤੁਸੀਂ ਮੁਲਾਂਕਣ ਕਰ ਰਹੇ ਹੋ, ਫਿਰ ਨਤੀਜੇ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
-    <skip />
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"ਉਸ ਡੀਵਾਈਸ \'ਤੇ ਟੈਸਟ ਪੂਰੇ ਕਰੋ, ਜਿਸਦਾ ਤੁਸੀਂ ਮੁਲਾਂਕਣ ਕਰ ਰਹੇ ਹੋ, ਫਿਰ ਨਤੀਜੇ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ।"</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"ਮੁਲਾਂਕਣ ਕੀਤੇ ਡੀਵਾਈਸਾਂ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਵੇਲੇ ਗੜਬੜ ਹੋ ਗਈ। ਕਿਰਪਾ ਕਰਕੇ ਬਲੂਟੁੱਥ ਦੇ ਚਾਲੂ ਹੋਣ ਦੀ ਪੁਸ਼ਟੀ ਕਰ ਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"ਹੁਣੇ ਸਕੈਨ ਕਰੋ"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"ਜਿਸ ਡੀਵਾਈਸ ਦਾ ਤੁਸੀਂ ਮੁਲਾਂਕਣ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ,\n Settings/DeviceDiagnostics/Evaluated ਡੀਵਾਈਸ\n \'ਤੇ ਜਾਓ ਅਤੇ ਡੀਵਾਈਸ \'ਤੇ ਦਿੱਤੇ ਉਤਪ੍ਰੇਰਕਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ।"</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"ਮੁਲਾਂਕਣ ਕੀਤੇ ਡੀਵਾਈਸ \'ਤੇ ਦਿੱਤੇ ਉਤਪ੍ਰੇਰਕਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ। ਕਹੇ ਜਾਣ \'ਤੇ, ਇਸ ਡੀਵਾਈਸ \'ਤੇ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇੱਥੇ ਦਬਾਓ।"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"ਜਿਸ ਡੀਵਾਈਸ ਦਾ ਤੁਸੀਂ ਮੁਲਾਂਕਣ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਉਸ ਤੋਂ ਸੈਟਿੰਗਾਂ, ਸਿਸਟਮ, ਡੀਵਾਈਸ ਤਸ਼ਖੀਸਾਂ, ਮੁਲਾਂਕਣ ਮੋਡ, ਫਿਰ ਮੁਲਾਂਕਣ ਕੀਤੇ ਡੀਵਾਈਸ \'ਤੇ ਜਾਓ। ਉਸ ਡੀਵਾਈਸ \'ਤੇ ਉਤਪ੍ਰੇਰਕਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ।"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"ਤੁਹਾਨੂੰ ਹੁਣ ਸਕ੍ਰੀਨਾਂ ਦੀ ਇੱਕ ਸੀਰੀਜ਼ ਦਿਖਾਈ ਜਾਵੇਗੀ। ਹਰੇਕ ਦਾ ਅਧਿਐਨ ਕਰੋ ਅਤੇ ਨੁਕਸ ਲੱਭੋ। ਸੰਤੁਸ਼ਟ ਹੋਣ ਤੋਂ ਬਾਅਦ, ਅਗਲੀ ਸਕ੍ਰੀਨ \'ਤੇ ਜਾਣ ਲਈ ਸਕ੍ਰੀਨ \'ਤੇ ਸਪਰਸ਼ ਕਰੋ। ਅੰਤ ਵਿੱਚ, ਤੁਹਾਡੇ ਤੋਂ ਪੁੱਛਿਆ ਜਾਵੇਗਾ ਕਿ ਕੀ ਸਕ੍ਰੀਨਾਂ ਬੇਦਾਗ ਦਿਖਾਈ ਦਿੰਦੀਆਂ ਹਨ।"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ਤੁਹਾਨੂੰ ਹੁਣ ਸਕ੍ਰੀਨਾਂ ਦੀ ਇੱਕ ਸੀਰੀਜ਼ ਦਿਖਾਈ ਜਾਵੇਗੀ। ਹਰੇਕ ਦਾ ਅਧਿਐਨ ਕਰੋ ਅਤੇ ਨੁਕਸ ਲੱਭੋ। ਅਗਲੀ ਸਕ੍ਰੀਨ \'ਤੇ ਜਾਣ ਲਈ ਸਕ੍ਰੀਨ \'ਤੇ ਸਪਰਸ਼ ਕਰੋ।"</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"ਕਿਰਪਾ ਕਰਕੇ ਹੇਠਾਂ ਦਿੱਤਿਆਂ ਵਿੱਚੋਂ ਉਹ ਵਿਕਲਪ ਚੁਣੋ, ਜੋ ਸਕ੍ਰੀਨ ਦੀ ਸਥਿਤੀ ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਮੇਲ ਖਾਂਦਾ ਹੈ।"</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"ਤੁਹਾਨੂੰ ਹੁਣ ਇੱਕ ਲਾਲ ਸਕ੍ਰੀਨ ਦਿਖਾਈ ਜਾਵੇਗੀ।\n \n ਆਪਣੀ ਉਂਗਲ ਨੂੰ ਸਕ੍ਰੀਨ \'ਤੇ ਉਦੋਂ ਤੱਕ ਰਗੜੋ, ਜਦੋਂ ਤੱਕ ਸਕ੍ਰੀਨ ਪੂਰੀ ਤਰ੍ਹਾਂ ਸਫ਼ੈਦ ਨਾ ਹੋ ਜਾਵੇ। ਜੇ ਤੁਸੀਂ ਸਕ੍ਰੀਨ ਦੇ ਹਿੱਸੇ ਨੂੰ ਸਫ਼ੈਦ ਨਹੀਂ ਕਰ ਪਾ ਰਹੇ ਹੋ, ਤਾਂ ਇਹ ਦਰਸਾਉਣ ਲਈ ਸਕ੍ਰੀਨ \'ਤੇ ਛੋਟਾ ਟੈਪ ਕਰੋ ਕਿ ਟੱਚ ਸੈਂਸਰ ਪੂਰੀ ਤਰ੍ਹਾਂ ਕੰਮ ਨਹੀਂ ਕਰ ਰਿਹਾ ਹੈ।\n \n ਜੇ ਤੁਸੀਂ ਚਾਹੋ, ਤਾਂ ਤੁਸੀਂ ਰਿਪੋਰਟ ਸਕ੍ਰੀਨ ਤੋਂ ਵਾਪਸ ਸਵਾਈਪ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਟੈਸਟ ਨੂੰ ਜਿੱਥੋਂ ਛੱਡਿਆ ਸੀ, ਉੱਥੋਂ ਜਾਰੀ ਰੱਖ ਸਕਦੇ ਹੋ।\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"ਕਿਰਪਾ ਕਰਕੇ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ \'ਤੇ ਇਸ QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ। ਇਸਨੂੰ ਸਕੈਨ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਤੁਸੀਂ ਇਸ ਡੀਵਾਈਸ \'ਤੇ \'ਹੋ ਗਿਆ\' ਦਬਾ ਸਕਦੇ ਹੋ।"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"ਤੁਹਾਨੂੰ ਹੁਣ ਇੱਕ ਲਾਲ ਸਕ੍ਰੀਨ ਦਿਖਾਈ ਜਾਵੇਗੀ।\n \n ਆਪਣੀ ਉਂਗਲ ਨੂੰ ਸਕ੍ਰੀਨ \'ਤੇ ਉਦੋਂ ਤੱਕ ਸਵਾਈਪ ਕਰੋ, ਜਦੋਂ ਤੱਕ ਸਕ੍ਰੀਨ ਪੂਰੀ ਤਰ੍ਹਾਂ ਸਫ਼ੈਦ ਨਾ ਹੋ ਜਾਵੇ। ਜੇ ਤੁਸੀਂ ਸਕ੍ਰੀਨ ਦੇ ਹਿੱਸੇ ਨੂੰ ਸਫ਼ੈਦ ਨਹੀਂ ਕਰ ਪਾ ਰਹੇ ਹੋ, ਤਾਂ ਇਹ ਦਰਸਾਉਣ ਲਈ ਸਕ੍ਰੀਨ \'ਤੇ ਛੋਟਾ ਟੈਪ ਕਰੋ ਕਿ ਟੱਚ ਸੈਂਸਰ ਪੂਰੀ ਤਰ੍ਹਾਂ ਕੰਮ ਨਹੀਂ ਕਰ ਰਿਹਾ ਹੈ।\n \n"</string>
 </resources>

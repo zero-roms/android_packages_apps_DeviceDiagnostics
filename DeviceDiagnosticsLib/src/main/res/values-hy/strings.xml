@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"Սարքի դիագնոստիկա"</string>
     <string name="app_title" msgid="2766786539301072967">"Սարքի դիագնոստիկա"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Շարունակել"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"Հասանելի չէ"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Միացում…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"Բաղադրիչի վիճակը"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Ձեռքով գործարկեք թեստեր և ստուգեք մարտկոցի և պահոցի վիճակը"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Ստուգման ռեժիմ"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Գնահատեք սարքը մեկ այլ սարքի միջոցով։"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Ձեռքով թեստավորումներ"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Էկրանի թեստ"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Հպման թեստ"</string>
     <string name="component_title" msgid="6580046234562555655">"Բաղադրիչի կարգավիճակը"</string>
     <string name="storage_title" msgid="5921235202250843966">"Պահոցի կարգավիճակը"</string>
     <string name="battery_title" msgid="6707361668941323259">"Մարտկոցի կարգավիճակը"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"Ստուգում վստահելի սարքում"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Վստահելի սարք"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"Ընտրեք այս տարբերակը վստահելի սարքում"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Գնահատեք այլ սարք։ Դրա համար միացեք համացանցին։"</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Գնահատվող սարք"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"Երբ հարցում հայտնվի, ընտրեք այս տարբերակը ստուգվող սարքում"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Գործարկեք դիագնոստիկ թեստեր, որոնք կստուգվեն այլ սարքի կողմից։"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Սկանավորել"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Վստահելի սարքում սկանավորեք QR կոդը ներքևի ուղղանկյան մեջ"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Երբ սկանավորեք QR կոդը, այս սարքում ավտոմատ կերպով թեստերի շարք կսկսվի։"</string>
@@ -48,7 +51,18 @@
     <string name="bluetooth_error_summary" msgid="8411286861814582793">"Վստահելի սարքի հետ կապ հաստատելիս սխալ առաջացավ։ Համոզվեք, որ Bluetooth-ը միացված է, և նորից փորձեք։"</string>
     <string name="sending_report" msgid="8735615783234611336">"Հաշվետվությունն ուղարկվում է վստահելի սարքին..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Գնահատումն ավարտված է"</string>
-    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Արդյունքները կհայտնվեն վստահելի սարքում։"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Արդյունքները կհայտնվեն վստահելի սարքում"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Էկրանի թեստավորման արդյունքներ"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Լավ"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Ակնհայտ թերություններ չկան"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Վատ"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Էկրանը թերություններ ունի"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"Վիճակը"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Արտադրման ամսաթիվը"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Առաջին օգտագործման ամսաթիվը"</string>
@@ -58,17 +72,20 @@
     <string name="battery_original" msgid="2552600989411644999">"Սկզբնական"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Փոխարինված է"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Դետալի պատմությունը"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"Սկզբնական ծավալի %1$d%%-ը"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Մարտկոցի վիճակի մասին տեղեկություններ չկան"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Սառն է"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Ամբողջությամբ լիցքաթափված է"</string>
-    <string name="battery_health_good" msgid="4850784608550784236">"Լավ վիճակում է"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Լավ"</string>
     <string name="battery_health_overheat" msgid="8745643548393640213">"Գերտաքացում"</string>
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Չափազանց բարձր լարում"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Պահոցի վիճակը"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Ընդհանուր ծավալը"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"Մնացած աշխատաժամանակը՝ %1$d%%"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Ստուգման ռեժիմում աշխատանքը շարունակելու համար տրամադրեք պահանջվող թույլտվությունները։"</string>
     <string name="cancel_button" msgid="7011882021431169180">"Չեղարկել"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Նորից փորձել"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"Ոչ"</string>
     <string name="unknown" msgid="6936738212381747979">"Անհայտ"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Հաստատումը ձախողվել է"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"Ստուգման արդյունքներ"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Հաստատման արդյունքները"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,15 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"Կողպված չէ"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR կոդ"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Շարունակեք ստուգվող սարքում"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Երբ դուք թեստեր եք կատարում ստուգվող սարքում, արդյունքները հայտնվում են այստեղ"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
-    <skip />
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Երբ թեստեր եք կատարում ստուգվող սարքում, արդյունքները հայտնվում են այստեղ։"</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Ստուգվող սարքի հետ կապ հաստատելիս սխալ առաջացավ։ Համոզվեք, որ Bluetooth-ը միացված է, և նորից փորձեք։"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Սկանավորել"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Ստուգվող սարքում անցեք\n Կարգավորումներ / Սարքի դիագնոստիկա / Գնահատվող սարք\n Հետևեք ցուցումներին այդ սարքում։"</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Հետևեք ցուցումներին ստուգվող սարքում։ Երբ հարցում հայտնվի, սեղմեք այստեղ՝ այս սարքում շարունակելու համար։"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Ստուգվող սարքում անցեք Կարգավորումներ Համակարգ, Սարքի դիագնոստիկա, Գնահատման ռեժիմ, այնուհետև՝ Գնահատվող սարք։ Հետևեք սարքում ցուցադրվող ցուցումներին։"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Այժմ ձեզ կցուցադրվի պատկերների շարք։ Ստուգեք դրանցից յուրաքանչյուրում թերությունների առկայությունը։ Երբ ավարտեք մի պատկերը, հպեք էկրանին՝ հաջորդին անցնելու համար։ Վերջում նշեք՝ արդյոք ամեն ինչ կարգին էր։"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Այժմ ձեզ կցուցադրվի պատկերների շարք։ Ստուգեք դրանցից յուրաքանչյուրում թերությունների առկայությունը։ Հպեք էկրանին՝ հաջորդ պատկերին անցնելու համար։"</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Գնահատեք էկրանի վիճակը՝ ստորև ընտրելով ամենահամապատասխան տարբերակը։"</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Այժմ դուք կտեսնեք կարմիր էկրան։\n \n Մատով անցկացրեք դրա վրայով, մինչև էկրանն ամբողջությամբ սպիտակի։ Եթե դրա որևէ հատված գույնը չի փոխում, հպեք էկրանին, որպեսզի մատնացույց անեք հպման սենսորի ոչ պատշաճ աշխատանքը։\n \n Դուք կարող եք վերադառնալ՝ մատով սահեցնելով հաշվետվության էկրանին, և շարունակել թեստը։\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"Սկանավորեք այս QR կոդը վստահելի սարքում։ Դրանից հետո այս սարքում սեղմեք «Պատրաստ է»։"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Այժմ դուք կտեսնեք կարմիր էկրան։\n \n Մատը սահեցրեք էկրանի վրայով, մինչև այն ամբողջությամբ սպիտակի։ Եթե դրա որևէ հատված գույնը չի փոխում, հպեք էկրանին, որպեսզի մատնացույց անեք հպման սենսորի ոչ պատշաճ աշխատանքը։\n \n"</string>
 </resources>

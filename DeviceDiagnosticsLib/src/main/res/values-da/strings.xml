@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"Enhedsdiagnostik"</string>
     <string name="app_title" msgid="2766786539301072967">"Enhedsdiagnostik"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Fortsæt"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"Ikke tilgængelig"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Opretter forbindelse…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"Komponentens tilstand"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Kør manuelle test, og se batteriets og lagerpladsens tilstand"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Evalueringstilstand"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Brug én enhed til at vurdere en anden enhed"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Manuelle test"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Test af display"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Test af touchsensor"</string>
     <string name="component_title" msgid="6580046234562555655">"Komponentens status"</string>
     <string name="storage_title" msgid="5921235202250843966">"Lagerpladsens status"</string>
     <string name="battery_title" msgid="6707361668941323259">"Batteristatus"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"Godkendt evaluering"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Godkendt enhed"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"Start med at vælge denne mulighed på en godkendt enhed"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Vurder en anden enhed. Internetforbindelse er påkrævet."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Evalueret enhed"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"Når du bliver bedt om det, skal du vælge denne mulighed på den evaluerede enhed"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Kør diagnosticeringstest, som valideres af en anden enhed."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Scan nu"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Scan QR-koden på den godkendte enhed i det rektangulære felt nedenfor"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Når du har scannet QR-koden, vil denne enhed automatisk starte en serie af test."</string>
@@ -49,6 +52,15 @@
     <string name="sending_report" msgid="8735615783234611336">"Sender rapporten til den godkendte enhed..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Evalueringen er gennemført"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Resultaterne vises nu på den godkendte enhed"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Resultat af skærmtest"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"God"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Ingen umiddelbare defekter"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Dårlig"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Skærmen er defekt"</string>
+    <string name="manual_testing_title" msgid="4512384040828953255">"Manuel test"</string>
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <string name="cancel" msgid="4173470896053421075">"Annuller"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Tilstand"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Fremstillingsdato"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Dato for første brug"</string>
@@ -58,7 +70,8 @@
     <string name="battery_original" msgid="2552600989411644999">"Oprindeligt"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Erstattet"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Delens historik"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d %% af den oprindelige kapacitet"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Batteritid er ikke tilgængelig"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Koldt"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Helt afladet"</string>
@@ -67,8 +80,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Over spænding"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Lagerpladsens tilstand"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Kapacitet i alt"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"%1$d %% af levetiden tilbage"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Giv de tilladelser, der anmodes om, for at fortsætte i evalueringstilstand."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Annuller"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Prøv igen"</string>
@@ -100,6 +115,8 @@
     <string name="no" msgid="5957591978126937912">"Nej"</string>
     <string name="unknown" msgid="6936738212381747979">"Ukendt"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Attestering mislykkedes"</string>
+    <string name="avb_verified" msgid="4990498011432924565">"VERIFICERET"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"IKKE VERIFICERET"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"Evalueringsresultater"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Attesteringsresultat"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,14 +138,12 @@
     <string name="not_locked" msgid="1663929635666930122">"Ikke låst"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR-kode"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Fortsæt på den enhed, der evalueres"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Gennemfør testene på den enhed, du evaluerer, så vil resultaterne dukke op her"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Gennemfør testene på den enhed, du evaluerer, så vil resultaterne dukke op her."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Der opstod en fejl under forsøget på at kommunikere med den godkendte enhed. Verificer, at Bluetooth er aktiveret, og prøv igen."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Scan nu"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"På den enhed, du vil evaluere, skal du gå til\n Indstillinger/Enhedsdiagnostik/Evalueret enhed\n Følg anvisningerne på den pågældende enhed."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Følg prompterne på den evaluerede enhed. Når du bliver bedt om det, skal du trykke her for at fortsætte på denne enhed."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"På enheden, du vil evaluere, skal du gå til Indstillinger, System, Enhedsdiagnostik, Evalueringstilstand og derefter Evalueret enhed. Følg prompterne på enheden."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Du vil nu se en serie af skærme. Undersøg hver skærm grundigt, og se, om du kan finde defekter. Når du er tilfreds, skal du trykke på skærmen for at gå videre til den næste. Til slut bliver du spurgt, om skærmene ser ud til at være fri for skrammer."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Du vil nu se en serie af skærme. Undersøg hver skærm grundigt, og se, om du kan finde defekter. Tryk på skærmen for at gå videre til den næste."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Vælg den mulighed nedenfor, der bedst matcher skærmens tilstand."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Nu vil du se en rød skærm.\n \n Gnid din finger over skærmen, indtil skærmen er helt hvid. Hvis du ikke kan gøre den pågældende del af skærmen hvid, skal du trykke hurtigt på skærmen for at indikere, at touchsensoren ikke fungerer korrekt.\n \n Hvis du vil, kan du stryge tilbage fra rapporteringsskærmen og fortsætte, hvor du slap, med testen.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"Scan denne QR-kode på den godkendte enhed. Når du har scannet den, kan du trykke på Udfør på denne enhed."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Du vil nu se en rød skærm.\n \n Stryg fingeren over skærmen, indtil skærmen er helt hvid. Hvis du ikke kan gøre en del af skærmen hvid, skal du trykke hurtigt på skærmen for at indikere, at touchsensoren ikke fungerer korrekt.\n \n"</string>
 </resources>

@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"מצב החומרה במכשיר"</string>
     <string name="app_title" msgid="2766786539301072967">"מצב החומרה במכשיר"</string>
     <string name="activity_continue" msgid="2190118984182069151">"המשך"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"לא זמין"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"מתבצעת התחברות…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"תקינות הרכיב"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"הרצה של בדיקות ידניות וצפייה בתקינות הסוללה והאחסון"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"מצב בדיקה"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"שימוש במכשיר אחד כדי לבדוק מכשיר אחר"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"בדיקות ידניות"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"הצגת הבדיקה"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"בדיקת מגע"</string>
     <string name="component_title" msgid="6580046234562555655">"סטטוס הרכיב"</string>
     <string name="storage_title" msgid="5921235202250843966">"סטטוס האחסון"</string>
     <string name="battery_title" msgid="6707361668941323259">"סטטוס הסוללה"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"בדיקה מהימנה"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"מכשיר מהימן"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"כדי להתחיל, צריך לבחור את האפשרות הזו במכשיר מהימן"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"בדיקה של מכשיר אחר. צריך חיבור לאינטרנט."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"מכשיר שנבדק"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"כשתוצג הנחיה, צריך לבחור את האפשרות הזו במכשיר שנבדק"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"הרצה של בדיקות מצב החומרה שיאומתו על ידי מכשיר אחר."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"הפעלת הסריקה"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"‏עליך לסרוק במכשיר המהימן את קוד ה-QR שמופיע במלבן למטה"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"‏לאחר הסריקה של קוד ה-QR, תופעל באופן אוטומטי סדרה של בדיקות במכשיר הזה."</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"הדוח נשלח למכשיר המהימן…"</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"הבדיקה הסתיימה"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"התוצאות יופיעו עכשיו במכשיר המהימן"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"התוצאה של בדיקת המסך"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"תקינה"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"אין פגמים בולטים"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"גרועה"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"יש פגמים במסך"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"בריאות"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"תאריך הייצור"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"תאריך השימוש הראשון"</string>
@@ -58,17 +72,20 @@
     <string name="battery_original" msgid="2552600989411644999">"מקורית"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"הוחלפה"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"היסטוריית החלק"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"‏‫%1$d%% מהקיבולת המקורית"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"מצב תקינות הסוללה לא זמין"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"קרה"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"ריקה"</string>
-    <string name="battery_health_good" msgid="4850784608550784236">"טובה"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"תקינה"</string>
     <string name="battery_health_overheat" msgid="8745643548393640213">"חימום יתר"</string>
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"מתח חשמלי גבוה מדי"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"תקינות האחסון"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"קיבולת מלאה"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"‏נותר משך חיים של %1$d%%"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"עליך להעניק את ההרשאות הנדרשות כדי להמשיך במצב הבדיקה."</string>
     <string name="cancel_button" msgid="7011882021431169180">"ביטול"</string>
     <string name="try_again_button" msgid="6015477950108798246">"ניסיון חוזר"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"לא"</string>
     <string name="unknown" msgid="6936738212381747979">"לא ידוע"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"‏האימות (attestation) נכשל"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"תוצאות הבדיקה"</string>
     <string name="attestation_results" msgid="9089126954790727665">"‏תוצאות האימות (attestation)"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,15 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"לא נעול"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"‏קוד QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"צריך להמשיך במכשיר שנמצא בבדיקה"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"צריך לסיים את הבדיקות במכשיר שמבצעים הערכה שלו. התוצאות יופיעו כאן"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
-    <skip />
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"צריך לסיים את הבדיקות במכשיר שנבדק. התוצאות יופיעו כאן."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"‏קרתה שגיאה בתקשורת עם המכשיר שנבדק. צריך לוודא שחיבור ה-Bluetooth מופעל ולנסות שוב."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"הפעלת הסריקה"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"במכשיר שרוצים לבדוק, עוברים אל\n הגדרות &gt; מצב החומרה במכשיר &gt; מכשיר שנבדק\n ופועלים לפי ההנחיות במכשיר הזה."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"צריך לפעול לפי ההנחיות במכשיר שנבדק. כשתוצג הנחיה, צריך ללחוץ כאן כדי להמשיך במכשיר הזה."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"במכשיר שרוצים לבדוק, עוברים אל \'הגדרות\', \'מערכת\', \'מצב החומרה במכשיר\', \'מצב בדיקה\' ואז \'מכשיר שנבדק\'. פועלים לפי ההנחיות במכשיר."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"עכשיו תוצג לך סדרה של מסכים. עליך לבחון אותם ולחפש פגמים. בסיום הבדיקה, צריך לגעת במסך כדי לעבור למסך הבא. בסיום, תוצג לך שאלה אם המסכים נקיים מפגמים."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"עכשיו תוצג לך סדרה של מסכים. עליך לבחון אותם ולחפש פגמים. צריך לגעת במסך כדי לעבור למסך הבא."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"צריך לבחור מהרשימה הבאה את האפשרות שמתאימה ביותר למצב המסך."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"עכשיו יוצג לך מסך אדום.\n \n עליך להעביר את האצבע על המסך עד שהמסך יהיה לבן לגמרי. אם לא הצלחת להפוך חלק מהמסך ללבן, צריך להקיש הקשה קצרה על המסך כדי לציין שחיישן המגע לא עובד כמו שצריך.\n \n אפשר גם להחליק אחורה ממסך הדוח ולהמשיך את הבדיקה במקום שבו הפסקת.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"‏צריך לסרוק את קוד ה-QR הזה במכשיר מהימן. לאחר הסריקה, אפשר ללחוץ על \'סיום\' במכשיר הזה."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"עכשיו יוצג לך מסך אדום.\n \n עליך להחליק את האצבע על המסך עד שהמסך יהיה לבן לגמרי. אם לא הצלחת להפוך חלק מהמסך ללבן, צריך להקיש הקשה קצרה על המסך כדי לציין שחיישן המגע לא עובד כמו שצריך.\n \n"</string>
 </resources>

@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
     <string name="app_title" msgid="2766786539301072967">"Diagnòstic del dispositiu"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Continua"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"No disponible"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"S\'està connectant..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"Estat del component"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Executa proves manuals i consulta l\'estat de la bateria i de l\'emmagatzematge"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Mode d\'avaluació"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Utilitza un dispositiu per avaluar-ne un altre"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Proves manuals"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Prova de pantalla"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Prova tàctil"</string>
     <string name="component_title" msgid="6580046234562555655">"Estat del component"</string>
     <string name="storage_title" msgid="5921235202250843966">"Estat de l\'emmagatzematge"</string>
     <string name="battery_title" msgid="6707361668941323259">"Estat de la bateria"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"Avaluació de confiança"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Dispositiu de confiança"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"Comença per seleccionar aquesta opció en un dispositiu de confiança"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Avalua un altre dispositiu. Es necessita una connexió a Internet."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Dispositiu avaluat"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"Quan se\'t demani, selecciona aquesta opció al dispositiu avaluat"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Executa proves de diagnòstic que validarà un altre dispositiu."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Escaneja ara"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Escaneja el codi QR del dispositiu de confiança en aquest rectangle"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Un cop hagis escanejat el codi QR correctament, aquest dispositiu iniciarà una sèrie de proves de manera automàtica."</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"S\'està enviant l\'informe al dispositiu de confiança..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"L\'avaluació s\'ha completat"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Els resultats es mostraran al dispositiu de confiança"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Resultat de la prova de pantalla"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Bon resultat"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Sense defectes evidents"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Dolenta"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"La pantalla té defectes"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"Estat"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Data de fabricació"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Data del primer ús"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"Original"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Substituïda"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Historial de la peça"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% de la capacitat original"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"L\'estat de la bateria no està disponible"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Freda"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Esgotada"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Per sobre del voltatge"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Estat d\'emmagatzematge"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Capacitat total"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"Queda un %1$d%% de temps de vida"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Concedeix els permisos sol·licitats per continuar en mode d\'avaluació."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Cancel·la"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Torna-ho a provar"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"No"</string>
     <string name="unknown" msgid="6936738212381747979">"Desconegut"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Ha fallat l\'atestació"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"Resultats de l\'avaluació"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Resultats de l\'atestació"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,15 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"No bloquejat"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"Codi QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continua al dispositiu que s\'està avaluant"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Completa les proves al dispositiu que estàs avaluant; després, els resultats es mostraran aquí"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
-    <skip />
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Completa les proves al dispositiu que estàs avaluant; després, els resultats es mostraran aquí."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"S\'ha produït un error en comunicar-se amb el dispositiu avaluat. Verifica que el Bluetooth estigui activat i torna-ho a provar."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Escaneja ara"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Al dispositiu que vulguis avaluar, ves a\n Configuració/Diagnòstic del dispositiu/Dispositiu avaluat\n Segueix les indicacions que s\'hi mostren."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Segueix les indicacions al dispositiu avaluat. Quan se\'t demani, prem aquí per continuar en aquest dispositiu."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Al dispositiu que vulguis avaluar, ves a Configuració, Sistema, Diagnòstic del dispositiu, Mode d\'avaluació i Dispositiu avaluat. Segueix les indicacions al dispositiu en qüestió."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Ara se\'t mostraran diverses pantalles. Examina-les i cerca els defectes. Quan hagis acabat, toca la pantalla per passar a la següent. Al final, se\'t preguntarà si les pantalles estan impecables."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Ara se\'t mostraran diverses pantalles. Examina-les i cerca els defectes. Toca la pantalla per passar a la següent."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"A continuació selecciona l\'opció que coincideixi millor amb la condició de la pantalla."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Ara se\'t mostrarà una pantalla vermella.\n \n Frega la pantalla amb el dit fins que quedi completament blanca. Si no pots fer que part de la pantalla es torni blanca, toca-la breument per indicar que el sensor tàctil no funciona de manera adequada.\n \n Si vols, pots lliscar cap enrere des de la pantalla de l\'informe i continuar la prova des d\'on la vas deixar.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"Escaneja aquest codi QR al dispositiu de confiança. Un cop l\'hagis escanejat, al dispositiu, prem Fet."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Ara se\'t mostrarà una pantalla vermella.\n \n Fes lliscar el dit per la pantalla fins que quedi completament blanca. Si no pots fer que part de la pantalla es torni blanca, toca-la breument per indicar que el sensor tàctil no funciona de manera adequada.\n \n"</string>
 </resources>

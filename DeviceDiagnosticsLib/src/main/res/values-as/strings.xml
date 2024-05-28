@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"ডিভাইচৰ ডায়েগন’ষ্টিক্স"</string>
     <string name="app_title" msgid="2766786539301072967">"ডিভাইচৰ ডায়েগন’ষ্টিক্স"</string>
     <string name="activity_continue" msgid="2190118984182069151">"অব্যাহত ৰাখক"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"উপলব্ধ নহয়"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"সংযোগ কৰি থকা হৈছে..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"উপাদানৰ অৱস্থা"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"মেনুৱেল পৰীক্ষণ চলাওক আৰু বেটাৰী আৰু ষ্ট’ৰেজৰ স্থিতি চাওক"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"মূল্যায়ন ম’ড"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"এটা ডিভাইচ ব্যৱহাৰ কৰি আন এটা ডিভাইচৰ মূল্যায়ন কৰক"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"মেনুৱেল পৰীক্ষণ"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ডিছপ্লে’ পৰীক্ষণ"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"স্পৰ্শ পৰীক্ষণ"</string>
     <string name="component_title" msgid="6580046234562555655">"উপাদানৰ স্থিতি"</string>
     <string name="storage_title" msgid="5921235202250843966">"ষ্ট’ৰেজৰ স্থিতি"</string>
     <string name="battery_title" msgid="6707361668941323259">"বেটাৰীৰ স্থিতি"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"বিশ্বাসী মূল্যায়ন"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"বিশ্বাসী ডিভাইচ"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"এটা বিশ্বাসী ডিভাইচত এই বিকল্পটো বাছনি কৰি আৰম্ভ কৰক"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"আন এটা ডিভাইচ এক্সেছ কৰক। এটা ইণ্টাৰনেট সংযোগৰ প্ৰয়োজন।"</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"মূল্যায়ন কৰা ডিভাইচ"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"যেতিয়া সেইটো কৰিবলৈ কোৱা হয়, মূল্যায়ন কৰা ডিভাইচত এই বিকল্পটো বাছনি কৰক"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"ডায়েগন’ষ্টিক পৰীক্ষণসমূহ চলাওক যিসমূহৰ মান্যতা অন্য ডিভাইচসমূহে নিৰূপণ কৰিব।"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"এতিয়া স্কেন কৰক"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"তলৰ আয়তক্ষেত্ৰত বিশ্বাসী ডিভাইচত কিউআৰ ক’ডটো স্কেন কৰক"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"আপুনি এবাৰ কিউআৰ ক’ডটো সফলতাৰে স্কেন কৰিলে, এই ডিভাইচে স্বয়ংক্ৰিয়ভাৱে পৰীক্ষাৰ এটা শৃংখলা আৰম্ভ কৰিব।"</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"ৰিপ’ৰ্ট বিশ্বাসী ডিভাইচলৈ পঠিয়াই থকা হৈছে..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"মূল্যায়ন সম্পূৰ্ণ হৈছে"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"ফলাফলসমূহ এতিয়া বিশ্বাসী ডিভাইচত ওলাব"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"স্ক্ৰীন পৰীক্ষাৰ ফলাফল"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"ভাল"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"কোনো খুঁত নাই"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"বেয়া"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"স্ক্ৰীনখনত খুঁত আছে"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"অৱস্থা"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"নিৰ্মাণৰ তাৰিখ"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"প্ৰথমবাৰ ব্যৱহাৰ হোৱাৰ তাৰিখ"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"মূল"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"সলনি কৰা হৈছে"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"বেটাৰীৰ পাৰ্টৰ ইতিহাস"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"মূল ক্ষমতাৰ %1$d%%"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"বেটাৰীৰ স্থিতি উপলব্ধ নহয়"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"ঠাণ্ডা"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"মৃত"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"বেছি ভল্টেজ"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"ষ্ট’ৰেজৰ অৱস্থা"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"মুঠ ক্ষমতা"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% জীৱনকাল বাকী আছে"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"মূল্যায়ন ম’ডত অব্যাহত ৰাখিবলৈ অনুগ্ৰহ কৰি অনুৰোধ কৰা অনুমতিসমূহ প্ৰদান কৰক।"</string>
     <string name="cancel_button" msgid="7011882021431169180">"বাতিল কৰক"</string>
     <string name="try_again_button" msgid="6015477950108798246">"পুনৰ চেষ্টা কৰক"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"নহয়"</string>
     <string name="unknown" msgid="6936738212381747979">"অজ্ঞাত"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"প্ৰমাণীকৰণ কৰিব পৰা নগ’ল"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"মূল্যায়নৰ ফলাফল"</string>
     <string name="attestation_results" msgid="9089126954790727665">"প্ৰমাণীকৰণৰ ফলাফল"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,14 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"লক কৰা নাই"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"কিউআৰ ক’ড"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"মূল্যায়ন কৰি থকা ডিভাইচটোত অব্যাহত ৰাখক"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"আপুনি মূল্যায়ন কৰি থকা ডিভাইচত পৰীক্ষাসমূহ সম্পূৰ্ণ কৰক, তাৰ পাছত ফলাফল ইয়াত ওলাব"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"আপুনি মূল্যায়ন কৰি থকা ডিভাইচত পৰীক্ষাসমূহ সম্পূৰ্ণ কৰক, তাৰ পাছত ফলাফল ইয়াত ওলাব।"</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"মূল্যায়ন কৰা ডিভাইচটোৰ সৈতে যোগাযোগ কৰোঁতে কিবা আসোঁৱাহ হৈছে। অনুগ্ৰহ কৰি ব্লুটুথ সক্ষম কৰি থোৱাটো নিশ্চিত কৰক আৰু পুনৰ চেষ্টা কৰক।"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"এতিয়া স্কেন কৰক"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"আপুনি মূল্যায়ন কৰিব বিচৰা ডিভাইচটোত, \n ছেটিং/ডিভাইচৰ ডায়েগন’ষ্টিক্স/মূল্যায়ন কৰা ডিভাইচ\nলৈ যাওক সেই ডিভাইচটোত প্ৰম্পট্‌সমূহ অনুসৰণ কৰক।"</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"মূল্যায়ন কৰা ডিভাইচত প্ৰম্পট্‌সমূহ অনুসৰণ কৰক। যেতিয়া কোৱা হয়, এই ডিভাইচত অব্যাহত ৰাখিবলৈ ইয়াত টিপক।"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"আপুনি মূল্যায়ন কৰিব বিচৰা ডিভাইচটোত, ছেটিং, ছিষ্টেম, ডিভাইচ ডায়েগন’ষ্টিক্স, মূল্যায়ন ম’ড আৰু তাৰ পাছত মূল্যায়ন কৰা ডিভাইচলৈ যাওক। সেই ডিভাইচটোত প্ৰম্পট্‌সমূহ অনুসৰণ কৰক।"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"এতিয়া আপোনাক স্ক্ৰীনৰ এটা শৃংখলা দেখুওৱা হ’ব। প্ৰত্যেকখনত কিবা খুঁত আছে নেকি চাওক। আপুনি সন্তুষ্ট হ’লে, পৰৱৰ্তীখনলৈ যাবলৈ স্ক্ৰীনখন স্পৰ্শ কৰক। শেষত আপোনাক স্ক্ৰীনসমূহ দেখাত খুঁত বিহীন হয়নে নহয় সোধা হ’ব।"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"এতিয়া আপোনাক স্ক্ৰীনৰ এটা শৃংখলা দেখুওৱা হ’ব। প্ৰত্যেকখনত কিবা খুঁত আছে নেকি চাওক। পৰৱৰ্তীখনলৈ যাবলৈ স্ক্ৰীনখন স্পৰ্শ কৰক।"</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"অনুগ্ৰহ কৰি তলত সেই বিকল্পটো বাছনি কৰক যি স্ক্ৰীনৰ স্থিতিৰ সৈতে সৰ্বোত্তমভাৱে মিলে।"</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"এতিয়া আপোনাক এখন ৰঙা স্ক্ৰীন দেখুওৱা হ’ব।\n \n স্ক্ৰীনখন সম্পূৰ্ণ বগা নোহোৱালৈকে স্ক্ৰীনৰ ওপৰত আঙুলিৰে মোহাৰি থাকক। যদি আপুনি স্ক্ৰীনখনৰ এটা অংশ বগা কৰিব নোৱাৰে, স্পৰ্শ ছেন্সৰে ভালদৰে কাম কৰা নাই বুলি সূচাবলৈ স্ক্ৰীনখন কম সময়ৰ বাবে টিপক।\n \n যদি আপুনি বিচাৰে, আপুনি ৰিপ’ৰ্ট স্ক্ৰীনৰ পৰা পাছলৈ ছোৱাইপ কৰিব পাৰে আৰু আপুনি য’ত এৰিছিল তাৰ পৰাই পৰীক্ষণটো অব্যাহত ৰাখিব পাৰে।\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"অনুগ্ৰহ কৰি বিশ্বাসী ডিভাইচত এই কিউআৰ ক’ডটো স্কেন কৰক। আপুনি এইটো স্কেন কৰাৰ পাছত, আপুনি এই ডিভাইচত কৰা হ’লত টিপিব পাৰে।"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"এতিয়া আপোনাক এখন ৰঙা স্ক্ৰীন দেখুওৱা হ’ব।\n \n স্ক্ৰীনখন সম্পূৰ্ণ বগা নোহোৱালৈকে স্ক্ৰীনৰ ওপৰত আঙুলিৰে ছোৱাইপ কৰক। যদি আপুনি স্ক্ৰীনখনৰ এটা অংশ বগা কৰিব নোৱাৰে, তেন্তে স্পৰ্শ ছেন্সৰে ভালদৰে কাম কৰা নাই বুলি সূচাবলৈ স্ক্ৰীনখন কম সময়ৰ বাবে টিপক।\n \n"</string>
 </resources>

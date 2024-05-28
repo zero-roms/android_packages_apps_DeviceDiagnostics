@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
     <string name="app_title" msgid="2766786539301072967">"Qurilma diagnostikasi"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Davom etish"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"Mavjud emas"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Ulanmoqda..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"Komponent ahvoli"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Batareya va xotira holatini koʻrish uchun testlarni mustaqil ishga tushiring"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Baholash rejimi"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Boshqa qurilmada ochishda bitta qurilmadan foydalaning"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Qoʻlda bajariladigan testlar"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Displey testi"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Sensor testi"</string>
     <string name="component_title" msgid="6580046234562555655">"Komponent holati"</string>
     <string name="storage_title" msgid="5921235202250843966">"Xotira holati"</string>
     <string name="battery_title" msgid="6707361668941323259">"Batareya holati"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"Ishonchli baholash"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Ishonchli qurilma"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"Ishonchli qurilmada bu variantni tanlash bilan boshlang"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Boshqa qurilmada oching. Internet aloqasi zarur."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Baholangan qurilma"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"Soʻralganida, baholangan qurilmada bu parametrni tanlang"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Boshqa qurilmada tasdiqlanadigan diagnostika testlarini ishga tushiring."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skanerlash"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Quyidagi toʻrtburchakda ishonchli qurilmadagi QR kodni skanerlang"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR kod skanerlangach, bu qurilma avtomatik ravishda bir qator testlarni boshlaydi."</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"Hisobot ishonchli qurilmaga yuborilmoqda..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Baholash yakunlandi"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Natijalar endi ishonchli qurilmada chiqadi"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Ekran sinovi natijasi"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Yaxshi"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Sezilarli nuqsonlar topilmadi"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Yomon"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Ekranda nuqsonlar bor"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"Ahvoli"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Ishlab chiqarish sanasi"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Birinchi ishlatish sanasi"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"Original"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Almashtirilgan"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Ehtiyot qism tarixi"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"Original sigʻimning %1$d%%"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Batareya holati noaniq"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Sovuq"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Quvvati tugagan"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Juda yuqori kuchlanish"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Xotira ahvoli"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Jami sigʻim"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% quvvati qolgan"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Baholash rejimida davom etish uchun soʻralgan ruxsatlarni bering."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Bekor qilish"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Qayta urinish"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"Yoʻq"</string>
     <string name="unknown" msgid="6936738212381747979">"Noaniq"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Attestatsiya amalga oshmadi"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"Baholash natijalari"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Attestatsiya natijalari"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,15 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"Qulflanmagan"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR kod"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Baholanayotgan qurilmada davom etish"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Baholanayotgan qurilmada testlarni yakunlang, natijalar shu yerda chiqadi"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
-    <skip />
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Baholanayotgan qurilmada testlarni yakunlang, natijalar shu yerda chiqadi."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Baholangan qurilma bilan bogʻlanishda xatolik yuz berdi. Bluetooth yoniqligini tekshiring va qayta urining."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skanerlash"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Baholashni istagan qurilmada bunga kiring:\n Sozlamalar/Qurilma diagnostikasi/Baholangan qurilma\n Shu qurilmadagi koʻrsatmalarga amal qiling."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Baholangan qurilmada koʻrsatmalarga amal qiling. Soʻralganida, shu qurilmada davom etish uchun bu yerni bosing."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Baholashni istagan qurilmada bunga kiring: Sozlamalar, Tizim, Qurilma diagnostikasi, Baholash rejimi, Baholangan qurilma. Shu qurilmada koʻrsatmalarga amal qiling."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Endi bir nechta ekran koʻrsatiladi. Har birini oʻrganib, nuqsonlarni qidiring. Hammasi joyida boʻlsa, keyingisiga oʻtish uchun ekranga teging. Oxirida ekranlar toza yoki yoʻqligi soʻraladi."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Endi bir nechta ekran koʻrsatiladi. Har birini oʻrganib, nuqsonlarni qidiring. Keyingisiga oʻtish uchun ekranni bosing."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Quyida ekran holatiga eng mos keladigan variantni tanlang."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Endi qizil ekran koʻrsatiladi.\n \n Ekran butunlay oqarguncha barmoqni ekran ustida ishqalang. Ekranning bir qismini oqartirolmasangiz, sensor toʻliq ishlamayotganini bildirish uchun ekranga qisqa bosing.\n \n Xohlasangiz, hisobot ekranidan orqaga suring va testni kelgan joyidan davom ettiring.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"Bu QR kodni ishonchli qurilmada skanerlang. Skanerlagach, bu qurilmada Tayyor tugmasini bosish mumkin."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Endi qizil ekran koʻrsatiladi.\n \n Ekran butunlay oqarguncha barmoq bilan yonga suring. Ekranning bir qismini oqartirolmasangiz, sensor toʻliq ishlamayotganini bildirish uchun ekranga qisqa bosing.\n \n"</string>
 </resources>

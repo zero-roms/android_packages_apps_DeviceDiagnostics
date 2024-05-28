@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"Toesteldiagnostiek"</string>
     <string name="app_title" msgid="2766786539301072967">"Toesteldiagnostiek"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Gaan voort"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"Onbeskikbaar"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Koppel tans …"</string>
     <string name="component_health_title" msgid="6177813132789269842">"Komponentgesondheid"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Laat loop handmatige toetse en bekyk battery- en berginggesondheid"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Evaluasiemodus"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Gebruik een toestel om ’n ander toestel te evalueer"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Handmatige toetse"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Vertoontoets"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Raaktoets"</string>
     <string name="component_title" msgid="6580046234562555655">"Komponentstatus"</string>
     <string name="storage_title" msgid="5921235202250843966">"Bergingstatus"</string>
     <string name="battery_title" msgid="6707361668941323259">"Batterystatus"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"Vertroude evaluering"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Vertroude toestel"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"Begin deur hierdie opsie op ’n vertroude toestel te kies"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Evalueer ’n ander toestel. ’n Internetverbinding is nodig."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Geëvalueerde toestel"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"Kies hierdie opsie op die geëvalueerde toestel wanneer jy gevra word om dit te doen"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Laat loop diagnostiese toetse wat deur ’n ander toestel gevalideer sal word."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skandeer nou"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skandeer die QR-kode op die vertroude toestel in die reghoek hieronder"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Hierdie toestel sal outomaties ’n reeks toetse begin sodra jy die QR-kode suksesvol geskandeer het."</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"Verslag word na die vertroude toestel toe gestuur ..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Evaluering is voltooi"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Die resultate sal nou op die vertroude toestel verskyn"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Skermtoetsresultaat"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Goed"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Geen ooglopende defekte nie"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Sleg"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Die skerm het defekte"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"Gesondheid"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Vervaardigingsdatum"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Eerste gebruikdatum"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"Oorspronklike"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Vervang"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Onderdeelgeskiedenis"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% van oorspronklike kapasiteit"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Batterygesondheid is onbeskikbaar"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Koud"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Dood"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Oor spanning"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Berginggesondheid"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Totale kapasiteit"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% leeftyd bly oor"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Staan die versoekte toestemmings toe om in evaluasiemodus voort te gaan."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Kanselleer"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Probeer weer"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"Nee"</string>
     <string name="unknown" msgid="6936738212381747979">"Onbekend"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Attestasie het misluk"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"Evaluasieresultate"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Attestasieresultate"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,15 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"Nie gesluit nie"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR-kode"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Gaan voort op die toestel wat geëvalueer word"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Voltooi die toetse op die toestel wat jy evalueer en die resultate sal dan hier verskyn"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
-    <skip />
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Voltooi die toetse op die toestel wat jy evalueer en die resultate sal dan hier verskyn."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Kon nie met die geëvalueerde toestel kommunikeer nie. Verifieer dat Bluetooth geaktiveer is en probeer weer."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skandeer nou"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Gaan op die toestel wat jy wil evalueer na\n Instellings/Toesteldiagnostiek/Geëvalueerde toestel\n Volg die porboodskappe op daardie toestel."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Volg die porboodskappe op die geëvalueerde toestel. Wanneer jy gevra word, druk hier om op hierdie toestel aan te gaan."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Gaan op die toestel wat jy wil evalueer na Instellings, Stelsel, Toesteldiagnostiek, Evalueringmodus, en dan na Geëvalueerde toestel. Volg die porboodskappe op daardie toestel."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"’n Reeks skerms sal nou aan jou gewys word. Bestudeer elkeen en kyk vir defekte. Sodra jy tevrede is, raak aan die skerm om na die volgende een toe te beweeg. Jy sal aan die einde gevra word of dit lyk asof die skerms sonder probleme is."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"’n Reeks skerms sal nou aan jou gewys word. Bestudeer elkeen en kyk vir defekte. Raak aan die skerm om na die volgende een toe te beweeg."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Kies die opsie hieronder wat die beste by die toestand van die skerm pas."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"’n Rooi skerm sal nou aan jou gewys word.\n \n Vryf jou vinger oor die skerm totdat die skerm heeltemal wit is. As jy ’n sekere deel van die skerm nie wit kan maak nie, korttik op die skerm om aan te dui dat die raaksensor nie ten volle werk nie.\n \n As jy wil, kan jy vanaf die verslagskerm terugswiep en waar jy opgehou het aangaan met die toets.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"Skandeer hierdie QR-kode op die vertroude toestel. Jy kan ná die skandering Klaar op hierdie toestel druk."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"’n Rooi skerm sal nou aan jou gewys word.\n \n Swiep jou vinger oor die skerm totdat die skerm heeltemal wit is. As jy ’n sekere deel van die skerm nie wit kan maak nie, korttik op die skerm om aan te dui dat die raaksensor nie ten volle werk nie.\n \n"</string>
 </resources>

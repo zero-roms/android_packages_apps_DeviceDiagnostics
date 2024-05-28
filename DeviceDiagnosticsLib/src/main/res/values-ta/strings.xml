@@ -20,21 +20,28 @@
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
     <string name="app_title" msgid="2766786539301072967">"Device diagnostics"</string>
     <string name="activity_continue" msgid="2190118984182069151">"தொடர்க"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"இல்லை"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"இணைக்கிறது..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"காம்பனென்ட் நிலை"</string>
+    <!-- no translation found for component_health_summary (2799337555706868947) -->
+    <skip />
     <string name="evaluation_mode_title" msgid="5845218248059550975">"மதிப்பீட்டுப் பயன்முறை"</string>
+    <!-- no translation found for evaluation_mode_summary (7327453519906858863) -->
+    <skip />
     <string name="manual_eval_title" msgid="4335717606581762762">"நேரடிப் பரிசோதனைகள்"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"டிஸ்ப்ளே பரிசோதனை"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"தொடும் பரிசோதனை"</string>
     <string name="component_title" msgid="6580046234562555655">"பாகங்களின் நிலை"</string>
     <string name="storage_title" msgid="5921235202250843966">"சேமிப்பகத்தின் நிலை"</string>
     <string name="battery_title" msgid="6707361668941323259">"பேட்டரி நிலை"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"நம்பகமான மதிப்பீடு"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"நம்பகமான சாதனம்"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"நம்பகமான சாதனத்தில் இந்த விருப்பத்தைத் தேர்ந்தெடுப்பதன் மூலம் தொடங்கலாம்"</string>
+    <!-- no translation found for eval_mode_trusted_device_summary (8217291325895255590) -->
+    <skip />
     <string name="evaluated_device_title" msgid="5546625787928257821">"மதிப்பிடப்பட்ட சாதனம்"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"அப்படிக் கேட்கும்போது, மதிப்பிடப்பட்ட சாதனத்தில் இந்த விருப்பத்தைத் தேர்ந்தெடுக்கவும்"</string>
+    <!-- no translation found for eval_mode_evaluated_device_summary (3636314493314426253) -->
+    <skip />
     <string name="evaluated_scan_now" msgid="5413803134686672845">"இப்போதே ஸ்கேன் செய்யுங்கள்"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"நம்பகமான சாதனத்தில் உள்ள QR குறியீட்டை கீழே உள்ள செவ்வகத்தில் ஸ்கேன் செய்யவும்"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR குறியீட்டை ஸ்கேன் செய்ததும், இந்தச் சாதனம் தொடர் பரிசோதனைகளைத் தானாகவே தொடங்கும்."</string>
@@ -49,6 +56,18 @@
     <string name="sending_report" msgid="8735615783234611336">"நம்பகமான சாதனத்திற்கு அறிக்கையை அனுப்புகிறது..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"மதிப்பீடு நிறைவடைந்தது"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"முடிவுகள் இப்போது நம்பகமான சாதனத்தில் தோன்றும்"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"திரைப் பரிசோதனையின் முடிவு"</string>
+    <!-- no translation found for screen_test_good_result_title (8032695232528965724) -->
+    <skip />
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"வெளிப்படையான குறைபாடுகள் இல்லை"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"மோசம்"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"திரையில் குறைபாடுகள் உள்ளன"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"பேட்டரி நிலை"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"தயாரிப்புத் தேதி"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"முதலில் பயன்படுத்திய தேதி"</string>
@@ -58,7 +77,8 @@
     <string name="battery_original" msgid="2552600989411644999">"அசல்"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"மாற்றப்பட்டது"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"பேட்டரியின் முந்தைய பாகம்"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"அசல் திறனில் %1$d%%"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"பேட்டரி நிலை தெரியவில்லை"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"குளிராக உள்ளது"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"பேட்டரியில் சார்ஜ் இல்லை"</string>
@@ -67,8 +87,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"அதிக வோல்டேஜ்"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"சேமிப்பகத்தின் நிலை"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"மொத்த இடம்"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% சேமிப்பகம் மீதமுள்ளது"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"மதிப்பீட்டுப் பயன்முறையில் தொடர, கேட்கப்பட்ட அனுமதிகளை வழங்கவும்."</string>
     <string name="cancel_button" msgid="7011882021431169180">"ரத்துசெய்"</string>
     <string name="try_again_button" msgid="6015477950108798246">"மீண்டும் முயல்க"</string>
@@ -100,6 +122,10 @@
     <string name="no" msgid="5957591978126937912">"இல்லை"</string>
     <string name="unknown" msgid="6936738212381747979">"தெரியவில்லை"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"சான்றொப்பம் வழங்க முடியவில்லை"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"மதிப்பீட்டு முடிவுகள்"</string>
     <string name="attestation_results" msgid="9089126954790727665">"சான்றொப்ப முடிவுகள்"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,15 +147,15 @@
     <string name="not_locked" msgid="1663929635666930122">"பூட்டப்படவில்லை"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR குறியீடு"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"மதிப்பிடப்படும் சாதனத்தில் தொடர்தல்"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"நீங்கள் மதிப்பிடும் சாதனத்தில் பரிசோதனைகளை நிறைவுசெய்யவும், அதன்பிறகு முடிவுகள் இங்கே காட்டப்படும்"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
+    <!-- no translation found for continue_on_evaluated_summary (2610517924466437207) -->
     <skip />
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"மதிப்பிடப்பட்ட சாதனத்தைத் தொடர்புகொள்வதில் பிழை ஏற்பட்டது. புளூடூத் இயக்கப்பட்டுள்ளதை உறுதிப்படுத்திவிட்டு மீண்டும் முயலவும்."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"இப்போதே ஸ்கேன் செய்யுங்கள்"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"நீங்கள் மதிப்பிட விரும்பும் சாதனத்தில்,\n Settings/DeviceDiagnostics/Evaluated device\n என்பதற்குச் சென்று அந்தச் சாதனத்தில் உள்ள அறிவிப்புகளைப் பின்பற்றுங்கள்."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"மதிப்பிடப்பட்ட சாதனத்தில் உள்ள வழிமுறைகளைப் பின்பற்றவும். வழிமுறைகளைப் பின்பற்றும்போது, இந்தச் சாதனத்தில் தொடர இங்கே அழுத்தவும்."</string>
+    <!-- no translation found for trusted_scan_now_summary (578587921199486348) -->
+    <skip />
     <string name="screen_test_summary" msgid="6565006807310186664">"உங்களுக்கு இப்போது தொடர்ச்சியான திரைகள் காட்டப்படும். ஒவ்வொன்றையும் கவனித்து குறைபாடுகள் உள்ளனவா எனப் பார்க்கவும். திருப்தியடைந்ததும், அடுத்ததற்குச் செல்ல திரையைத் தொடவும். இறுதியாக, திரைகள் சேதமில்லாமல் உள்ளனவா என உங்களிடம் கேட்கப்படும்."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"உங்களுக்கு இப்போது தொடர்ச்சியான திரைகள் காட்டப்படும். ஒவ்வொன்றையும் கவனித்து குறைபாடுகள் உள்ளனவா எனப் பார்க்கவும். அடுத்ததற்குச் செல்ல திரையைத் தொடவும்."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"கீழுள்ள விருப்பத்தில் திரையின் நிலையுடன் நன்றாகப் பொருந்தும் ஒன்றைத் தேர்ந்தெடுக்கவும்."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"உங்களுக்கு இப்போது சிவப்பு நிறத் திரைக் காட்டப்படும்.\n \n திரை முழுவதும் வெள்ளையாகும் வரை திரையின் மீது உங்கள் விரலால் தேய்க்கவும். திரையின் ஒரு பகுதியை வெள்ளையாக மாற்ற முடியவில்லை எனில், மெதுவாகத் திரையின் மீது தொட்டு, டச் சென்சார் முழுமையாக வேலை செய்யவில்லை என்பதைத் தெரியப்படுத்தவும்.\n \n நீங்கள் விரும்பினால், புகார் திரையில் இருந்து பின்னோக்கி ஸ்வைப் செய்து நீங்கள் நிறுத்திய இடத்திலிருந்து பரிசோதனையைத் தொடரலாம்.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"நம்பகமான சாதனத்தில் இந்த QR குறியீட்டை ஸ்கேன் செய்யவும். அதை ஸ்கேன் செய்தபிறகு இந்தச் சாதனத்தில் \'முடிந்தது\' என்பதை நீங்கள் அழுத்தலாம்."</string>
+    <!-- no translation found for touch_test_summary (5989536270591433560) -->
+    <skip />
 </resources>

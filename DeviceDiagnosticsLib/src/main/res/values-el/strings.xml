@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
     <string name="app_title" msgid="2766786539301072967">"Διαγνωστικά στοιχεία συσκευής"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Συνέχεια"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"Μη διαθέσιμο"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Σύνδεση…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"Υγεία στοιχείου"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Εκτέλεση μη αυτόματων δοκιμών και προβολή υγείας μπαταρίας και αποθηκευτικού χώρου"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Λειτουργία αξιολόγησης"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Χρησιμοποιήστε μια συσκευή για την αξιολόγηση μιας άλλης συσκευής"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Μη αυτόματες δοκιμές"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Δοκιμή προβολής"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Δοκιμή αφής"</string>
     <string name="component_title" msgid="6580046234562555655">"Κατάσταση στοιχείου"</string>
     <string name="storage_title" msgid="5921235202250843966">"Κατάσταση αποθηκευτικού χώρου"</string>
     <string name="battery_title" msgid="6707361668941323259">"Κατάσταση μπαταρίας"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"Αξιόπιστη αξιολόγηση"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Αξιόπιστη συσκευή"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"Ξεκινήστε ορίζοντας αυτή την επιλογή σε μια αξιόπιστη συσκευή"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Αξιολογήστε μια άλλη συσκευή. Απαιτείται σύνδεση στο διαδίκτυο."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Συσκευή που αξιολογείται"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"Όταν σας ζητηθεί, ορίστε αυτή την επιλογή στη συσκευή που αξιολογείται"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Εκτελέστε διαγνωστικούς ελέγχους που θα επαληθευτούν από μια άλλη συσκευή."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Σάρωση τώρα"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Σαρώστε τον κωδικό QR στην αξιόπιστη συσκευή στο ορθογώνιο παρακάτω"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Όταν ολοκληρώσετε με επιτυχία τη σάρωση του κωδικού QR, αυτή η συσκευή θα ξεκινήσει αυτόματα μια σειρά δοκιμών."</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"Αποστολή αναφοράς στην αξιόπιστη συσκευή…"</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Η αξιολόγηση ολοκληρώθηκε"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Τα αποτελέσματα θα εμφανιστούν τώρα στην αξιόπιστη συσκευή"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Αποτέλεσμα δοκιμής οθόνης"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Καλή"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Δεν υπάρχουν εμφανή ελαττώματα"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Κακή"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Η οθόνη έχει ελαττώματα"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"Υγεία"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Ημερομηνία κατασκευής"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Ημερομηνία πρώτης χρήσης"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"Αρχική"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Αντικαταστάθηκε"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Ιστορικό εξαρτήματος"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% της αρχικής χωρητικότητας"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Η υγεία μπαταρίας δεν είναι διαθέσιμη"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Κρύα"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Εξαντλημένη"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Υπερβολική τάση"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Υγεία αποθηκευτικού χώρου"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Συνολική χωρητικότητα"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"%1$d%% υπολειπόμενος συνολικός χρόνος"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Εκχωρήστε τις απαραίτητες άδειες για συνέχιση στη λειτουργία αξιολόγησης."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Ακύρωση"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Δοκιμάστε ξανά"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"Όχι"</string>
     <string name="unknown" msgid="6936738212381747979">"Άγνωστο"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Αποτυχία επικύρωσης"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"Αποτελέσματα αξιολόγησης"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Αποτελέσματα επικύρωσης"</string>
     <string name="imei_title" msgid="4360390946838995750">"Αριθμός IMEI"</string>
@@ -121,15 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"Μη κλειδωμένη"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"Κωδικός QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Συνέχεια στη συσκευή που αξιολογείται"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"Ολοκληρώστε τις δοκιμές στη συσκευή που αξιολογείτε. Τα αποτελέσματα θα εμφανιστούν εδώ"</string>
-    <!-- no translation found for trusted_bluetooth_error_summary (2655404481798929818) -->
-    <skip />
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Ολοκληρώστε τις δοκιμές στη συσκευή που αξιολογείτε και, στη συνέχεια, τα αποτελέσματα θα εμφανιστούν εδώ."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Παρουσιάστηκε σφάλμα κατά την επικοινωνία με τη συσκευή που αξιολογείται. Επαληθεύστε ότι το Bluetooth είναι ενεργοποιημένο και δοκιμάστε ξανά."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Σάρωση τώρα"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"Στη συσκευή που θέλετε να αξιολογήσετε, μεταβείτε στη σελίδα\n Settings/DeviceDiagnostics/Evaluated Device\n Ακολουθήστε τις οδηγίες σε εκείνη τη συσκευή."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"Ακολουθήστε τις οδηγίες στη συσκευή που αξιολογείται. Όταν σας ζητηθεί, πατήστε εδώ για να συνεχίσετε σε αυτή τη συσκευή."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Στη συσκευή που θέλετε να αξιολογήσετε, μεταβείτε στις Ρυθμίσεις και έπειτα επιλέξτε Σύστημα, Διαγνωστικά στοιχεία συσκευής, Λειτουργία αξιολόγησης και, στη συνέχεια, Συσκευή που αξιολογείται. Ακολουθήστε τις οδηγίες στη συγκεκριμένη συσκευή."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Θα δείτε, τώρα, μια σειρά από οθόνες. Εξετάστε κάθε οθόνη και αναζητήστε πιθανά ελαττώματα. Όταν ολοκληρώσετε την εξέταση μιας οθόνης, αγγίξτε την οθόνη για να μεταβείτε στην επόμενη. Στο τέλος, θα ερωτηθείτε αν οι οθόνες εμφανίζονται χωρίς προβλήματα."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Θα δείτε, τώρα, μια σειρά από οθόνες. Εξετάστε κάθε οθόνη και αναζητήστε πιθανά ελαττώματα. Αγγίξτε την οθόνη για να μεταβείτε στην επόμενη."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Ορίστε παρακάτω την επιλογή που ταιριάζει καλύτερα με την κατάσταση της οθόνης."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"Θα δείτε, τώρα, μια κόκκινη οθόνη.\n \n Τρίψτε με το δάχτυλό σας την οθόνη μέχρι να γίνει εντελώς λευκή. Αν δεν καταφέρετε να κάνετε ένα μέρος της οθόνης λευκό, πατήστε σύντομα στην οθόνη, για να υποδείξετε ότι ο αισθητήρας αφής δεν λειτουργεί πλήρως.\n \n Αν θέλετε, μπορείτε να σύρετε προς τα πίσω από την οθόνη αναφοράς και να συνεχίσετε τη δοκιμή από το σημείο που σταματήσατε.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"Σαρώστε αυτόν τον κωδικό QR στην αξιόπιστη συσκευή. Αφού τον σαρώσετε, μπορείτε να πατήσετε Τέλος σε αυτή τη συσκευή."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Θα δείτε, τώρα, μια κόκκινη οθόνη.\n \n Σύρετε το δάχτυλό σας στην οθόνη μέχρι να γίνει εντελώς λευκή. Αν δεν καταφέρετε να κάνετε ένα μέρος της οθόνης λευκό, πατήστε σύντομα στην οθόνη, για να υποδείξετε ότι ο αισθητήρας αφής δεν λειτουργεί πλήρως.\n \n"</string>
 </resources>

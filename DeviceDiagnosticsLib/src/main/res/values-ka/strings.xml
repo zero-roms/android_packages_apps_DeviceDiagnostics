@@ -20,21 +20,24 @@
     <string name="app_name" msgid="4531685026837318886">"მოწყობილობის დიაგნოსტიკა"</string>
     <string name="app_title" msgid="2766786539301072967">"მოწყობილობის დიაგნოსტიკა"</string>
     <string name="activity_continue" msgid="2190118984182069151">"გაგრძელება"</string>
+    <!-- no translation found for proceed (8922926495095369132) -->
+    <skip />
     <string name="unavailable" msgid="7842920330665850121">"მიუწვდომელია"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"მიმდინარეობს დაკავშირება..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"კომპონენტის მდგომარეობა"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"გაუშვით ხელით შესასრულებელი ტესტები და იხილეთ ბატარეის და მეხსიერების მდგომარეობა"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"შეფასების რეჟიმი"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"ერთი მოწყობილობის გამოყენება მეორეს შესაფასებლად"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"ხელით შესასრულებელი ტესტები"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ტესტის გამოჩენა"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"შეხების ტესტი"</string>
     <string name="component_title" msgid="6580046234562555655">"კომპონენტის სტატუსი"</string>
     <string name="storage_title" msgid="5921235202250843966">"მეხსიერების სტატუსი"</string>
     <string name="battery_title" msgid="6707361668941323259">"ბატარეის სტატუსი"</string>
-    <string name="trusted_eval_title" msgid="3021650200400980573">"სანდო შეფასება"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"სანდო მოწყობილობა"</string>
-    <string name="trusted_device_summary" msgid="4474986970820223924">"სანდო მოწყობილობაზე ამ ვარიანტის არჩევით დაწყება"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"სხვა მოწყობილობის შეფასება. საჭიროებს ინტერნეტ-კავშირს."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"შეფასებული მოწყობილობა"</string>
-    <string name="evaluated_device_summary" msgid="7492640289008695049">"ასეთის მოთხოვნისას, აირჩიეთ ეს ვარიანტი შეფასებულ მოწყობილობაზე"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"გაუშვით დიაგნოსტიკური ტესტები, რომლებიც სხვა მოწყობილობის მიერ გადამოწმდება."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"ახლავე სკანირება"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"დაასკანირეთ QR კოდი სანდო მოწყობილობაზე ქვემოთ მოცემულ მართკუთხედში"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"როდესაც წარმატებით დაასკანირებთ QR კოდს, ეს მოწყობილობა ავტომატურად დაიწყებს ტესტების სერიას."</string>
@@ -49,6 +52,17 @@
     <string name="sending_report" msgid="8735615783234611336">"მიმდინარეობს სანდო მოწყობილობისთვის მოხსენების გადაგზავნა..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"შეფასება დასრულდა"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"შედეგები გამოჩნდება სანდო მოწყობილობაზე"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"ეკრანის ტესტის შედეგი"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"კარგი"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"აშკარა ხარვეზების გარეშე"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"ცუდი"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"ეკრანს აქვს ხარვეზები"</string>
+    <!-- no translation found for manual_testing_title (4512384040828953255) -->
+    <skip />
+    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
+    <skip />
+    <!-- no translation found for cancel (4173470896053421075) -->
+    <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"მდგომარეობა"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"წარმოების თარიღი"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"პირველი გამოყენების მონაცემები"</string>
@@ -58,7 +72,8 @@
     <string name="battery_original" msgid="2552600989411644999">"ორიგინალი"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"ჩანაცვლებული"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"ნაწილის ისტორია"</string>
-    <string name="battery_health_summary" msgid="4699687865120722848">"%1$d%% ორიგინალი ტევადობიდან"</string>
+    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
+    <skip />
     <string name="battery_health_unavailable" msgid="5093923315136769788">"ბატარეის მდგომარეობა არ არის ხელმისაწვდომი"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"ცივი"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"ცარიელი"</string>
@@ -67,8 +82,10 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"ჭარბი ძაბვა"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"მეხსიერების მდგომარეობა"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"სრული ტევადობა"</string>
-    <string name="storage_total_capacity_summary" msgid="5266698118960025252">"%1$d %2$s"</string>
-    <string name="storage_health_summary" msgid="598369034208451623">"სიცოცხლის დარჩენილი ხანგრძლივობა: %1$d%%"</string>
+    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
+    <skip />
+    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
+    <skip />
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"შეფასების რეჟიმის გასაგრძელებლად, გთხოვთ დაუშვათ მოთხოვნილი ნებართვები."</string>
     <string name="cancel_button" msgid="7011882021431169180">"გაუქმება"</string>
     <string name="try_again_button" msgid="6015477950108798246">"ცადეთ ხელახლა"</string>
@@ -100,6 +117,10 @@
     <string name="no" msgid="5957591978126937912">"არა"</string>
     <string name="unknown" msgid="6936738212381747979">"უცნობი"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"დამოწმება ვერ მოხერხდა"</string>
+    <!-- no translation found for avb_verified (4990498011432924565) -->
+    <skip />
+    <!-- no translation found for avb_not_verified (6853341577991139767) -->
+    <skip />
     <string name="evaluation_results" msgid="1584774109554324406">"შეფასების შედეგები"</string>
     <string name="attestation_results" msgid="9089126954790727665">"დამოწმების შედეგები"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -121,14 +142,12 @@
     <string name="not_locked" msgid="1663929635666930122">"არ არის ჩაკეტილი"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR კოდი"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"გააგრძელეთ მოწყობილობაზე, რომლის შეფასებაც მიმდინარეობს"</string>
-    <string name="continue_on_evaluated_summary" msgid="664900522936161381">"დაასრულეთ ტესტები იმ მოწყობილობაზე, რომელსაც აფასებთ. შედეგები გამოჩნდება აქ"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"დაასრულეთ ტესტები იმ მოწყობილობაზე, რომელსაც აფასებთ. შედეგები გამოჩნდება აქ."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"შეფასებულ მოწყობილობასთან კავშირის დროს დაფიქსირდა შეცდომა. დარწმუნდით, რომ Bluetooth ჩართულია და ცადეთ ხელახლა."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"ახლავე სკანირება"</string>
-    <string name="trusted_scan_now_summary" msgid="6674231739723136526">"მოწყობილობაზე, რომლის შეფასებაც გსურთ, გადადით\n პარამეტრები/მოწყობილობის დიაგნოსტიკა/შეფასებული მოწყობილობა\n მიჰყევით მოთხოვნებს ამ მოწყობილობაზე."</string>
-    <string name="trusted_follow_prompts_summary" msgid="6429672136115706024">"მიჰყევით მოთხოვნებს შეფასებულ მოწყობილობაზე. ამ მოწყობილობაზე გასაგრძელებლად, მოთხოვნისას დააჭირეთ აქ."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"მოწყობილობაზე, რომლის შეფასებაც გსურთ, გადადით: პარამეტრებზე &gt; სისტემა &gt; მოწყობილობის დიაგნოსტიკა &gt; შეფასების რეჟიმი &gt; შეფასებული მოწყობილობა. მიჰყევით მოთხოვნებს ამ მოწყობილობაზე."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"ახლა გამოგიჩნდებათ რამდენიმე ეკრანი. შეისწავლეთ თითოეული და მოძებნეთ ხარვეზები. როდესაც დაასრულებთ, შეეხეთ ეკრანს და გადადით შემდეგზე. დასრულებისას გკითხავენ, ეკრანები უნაკლოდ გამოიყურებოდა თუ არა."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ახლა გამოგიჩნდებათ რამდენიმე ეკრანი. შეისწავლეთ თითოეული და მოძებნეთ ხარვეზები. შეეხეთ ეკრანს შემდეგზე გადასასვლელად."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"ქვემოთ მოცემული ვარიანტებიდან აირჩიეთ ვარიანტი, რომელიც ყველაზე მეტად ემთხვევა თქვენი ეკრანის მდგომარეობას."</string>
-    <string name="touch_test_summary" msgid="508062796771632474">"ახლა გამოგიჩნდებათ წითელი ეკრანი.\n \n გადაუსვით თითი ეკრანზე, სანამ ის მთლიანად არ გათეთრდება. თუ ვერ შეძლებთ ეკრანის ნაწილის გათეთრებას, ეკრანზე მოკლე შეხებით აღნიშნეთ, რომ შეხების სენსორი სრულად არ მუშაობს.\n \n სურვილის შემთხვევაში შეგიძლიათ ანგარიშის ეკრანიდან გადაფურცლოთ უკან ტესტზე და გააგრძელოთ იქიდან, სადაც გაჩერდით.\n"</string>
-    <string name="scan_result" msgid="7232716409194522023">"დაასკანირეთ ეს QR კოდი სანდო მოწყობილობაზე დასკანირების შემდეგ შეგიძლიათ დააჭიროთ ღილაკს „მზადაა“ ამ მოწყობილობაზე."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"ახლა გამოგიჩნდებათ წითელი ეკრანი.\n \n გადაფურცლეთ, სანამ ეკრანი მთლიანად არ გათეთრდება. თუ ვერ შეძლებთ ეკრანის ნაწილის გათეთრებას, ეკრანზე მოკლე შეხებით აღნიშნეთ, რომ შეხების სენსორი სრულად არ მუშაობს.\n \n"</string>
 </resources>
