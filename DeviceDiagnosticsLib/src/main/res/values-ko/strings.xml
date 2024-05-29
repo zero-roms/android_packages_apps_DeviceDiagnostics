@@ -57,12 +57,10 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"명백한 결함 없음"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"좋지 않음"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"화면에 결함이 있음"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"수동 테스트"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"취소"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"성능 상태"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"제조일"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"최초 사용일"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"아니요"</string>
     <string name="unknown" msgid="6936738212381747979">"알 수 없음"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"증명 실패"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"인증됨"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"인증되지 않음"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"평가 결과"</string>
     <string name="attestation_results" msgid="9089126954790727665">"증명 결과"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>

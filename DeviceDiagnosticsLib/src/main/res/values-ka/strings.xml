@@ -25,9 +25,9 @@
     <string name="unavailable" msgid="7842920330665850121">"მიუწვდომელია"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"მიმდინარეობს დაკავშირება..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"კომპონენტის მდგომარეობა"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"გაუშვით ხელით შესასრულებელი ტესტები და იხილეთ ბატარეის და მეხსიერების მდგომარეობა"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"გაუშვით ხელით შესასრულებელი ტესტები და იხილეთ ბატარეისა და მეხსიერების მდგომარეობა"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"შეფასების რეჟიმი"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"ერთი მოწყობილობის გამოყენება მეორეს შესაფასებლად"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"გამოიყენეთ ერთი მოწყობილობა მეორეს შესაფასებლად"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"ხელით შესასრულებელი ტესტები"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ტესტის გამოჩენა"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"შეხების ტესტი"</string>
@@ -37,7 +37,7 @@
     <string name="trusted_device_title" msgid="6291497999963968533">"სანდო მოწყობილობა"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"სხვა მოწყობილობის შეფასება. საჭიროებს ინტერნეტ-კავშირს."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"შეფასებული მოწყობილობა"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"გაუშვით დიაგნოსტიკური ტესტები, რომლებიც სხვა მოწყობილობის მიერ გადამოწმდება."</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"გაუშვით დიაგნოსტიკური ტესტები, რომლებიც სხვა მოწყობილობით გადამოწმდება."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"ახლავე სკანირება"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"დაასკანირეთ QR კოდი სანდო მოწყობილობაზე ქვემოთ მოცემულ მართკუთხედში"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"როდესაც წარმატებით დაასკანირებთ QR კოდს, ეს მოწყობილობა ავტომატურად დაიწყებს ტესტების სერიას."</string>
@@ -57,12 +57,10 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"აშკარა ხარვეზების გარეშე"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"ცუდი"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"ეკრანს აქვს ხარვეზები"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"ხელით ტესტირება"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"გაუქმება"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"მდგომარეობა"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"წარმოების თარიღი"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"პირველი გამოყენების მონაცემები"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"არა"</string>
     <string name="unknown" msgid="6936738212381747979">"უცნობი"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"დამოწმება ვერ მოხერხდა"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"დადასტურებულია"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"დადასტურებული არ არის"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"შეფასების შედეგები"</string>
     <string name="attestation_results" msgid="9089126954790727665">"დამოწმების შედეგები"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -145,7 +141,7 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"დაასრულეთ ტესტები იმ მოწყობილობაზე, რომელსაც აფასებთ. შედეგები გამოჩნდება აქ."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"შეფასებულ მოწყობილობასთან კავშირის დროს დაფიქსირდა შეცდომა. დარწმუნდით, რომ Bluetooth ჩართულია და ცადეთ ხელახლა."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"ახლავე სკანირება"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"მოწყობილობაზე, რომლის შეფასებაც გსურთ, გადადით: პარამეტრებზე &gt; სისტემა &gt; მოწყობილობის დიაგნოსტიკა &gt; შეფასების რეჟიმი &gt; შეფასებული მოწყობილობა. მიჰყევით მოთხოვნებს ამ მოწყობილობაზე."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"მოწყობილობაზე, რომლის შეფასებაც გსურთ, გადადით: პარამეტრები &gt; სისტემა &gt; მოწყობილობის დიაგნოსტიკა &gt; შეფასების რეჟიმი &gt; შეფასებული მოწყობილობა. მიჰყევით მოთხოვნებს ამ მოწყობილობაზე."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"ახლა გამოგიჩნდებათ რამდენიმე ეკრანი. შეისწავლეთ თითოეული და მოძებნეთ ხარვეზები. როდესაც დაასრულებთ, შეეხეთ ეკრანს და გადადით შემდეგზე. დასრულებისას გკითხავენ, ეკრანები უნაკლოდ გამოიყურებოდა თუ არა."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ახლა გამოგიჩნდებათ რამდენიმე ეკრანი. შეისწავლეთ თითოეული და მოძებნეთ ხარვეზები. შეეხეთ ეკრანს შემდეგზე გადასასვლელად."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"ქვემოთ მოცემული ვარიანტებიდან აირჩიეთ ვარიანტი, რომელიც ყველაზე მეტად ემთხვევა თქვენი ეკრანის მდგომარეობას."</string>
