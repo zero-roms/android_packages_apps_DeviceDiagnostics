@@ -22,18 +22,6 @@ import android.content.IntentFilter
 import android.os.BatteryManager
 import com.android.devicediagnostics.Protos.BatteryInfo
 import com.android.devicediagnostics.R
-import java.time.Instant
-import java.time.ZoneId
-import java.time.format.DateTimeFormatter
-import java.time.format.FormatStyle
-
-private fun formatSecondsAsDate(seconds: Long): String {
-    val instant = Instant.ofEpochSecond(seconds)
-    return instant
-        .atZone(ZoneId.systemDefault())
-        .toLocalDate()
-        .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
-}
 
 fun getBatteryInfo(context: Context): BatteryInfo {
     val builder = BatteryInfo.newBuilder()
@@ -43,12 +31,12 @@ fun getBatteryInfo(context: Context): BatteryInfo {
     try {
         var date = bm.getLongProperty(BatteryManager.BATTERY_PROPERTY_MANUFACTURING_DATE)
         if (date >= 0) {
-            builder.setManufactureDate(formatSecondsAsDate(date))
+            builder.setManufactureTimestamp(date)
         }
 
         date = bm.getLongProperty(BatteryManager.BATTERY_PROPERTY_FIRST_USAGE_DATE)
         if (date >= 0) {
-            builder.setFirstUsageDate(formatSecondsAsDate(date))
+            builder.setFirstUsageTimestamp(date)
         }
     } catch (e: Exception) {}
 

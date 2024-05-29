@@ -17,6 +17,10 @@ package com.android.devicediagnostics
 
 import android.content.Context
 import android.os.AsyncTask
+import java.time.Instant
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
 import java.util.Locale
 
 // Must only be called on the UI thread.
@@ -33,4 +37,10 @@ fun runInBackground(handler: () -> Unit) {
 
 fun getDefaultLocale(context: Context): Locale {
     return context.resources.configuration.locales.get(0)
+}
+
+fun localizeDateTimestamp(locale: Locale, seconds: Long): String {
+    val instant = Instant.ofEpochSecond(seconds)
+    val dateFormat = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).withLocale(locale)
+    return instant.atZone(ZoneId.systemDefault()).toLocalDate().format(dateFormat)
 }

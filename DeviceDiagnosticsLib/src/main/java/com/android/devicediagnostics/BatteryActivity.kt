@@ -17,6 +17,8 @@ package com.android.devicediagnostics
 
 import android.content.Context
 import android.content.Intent
+import android.icu.number.NumberFormatter
+import android.icu.util.MeasureUnit
 import android.os.BatteryManager
 import android.os.Build
 import android.os.Bundle
@@ -28,7 +30,6 @@ import com.android.devicediagnostics.Protos.BatteryInfo
 import com.android.devicediagnostics.evaluated.getBatteryInfo
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
 import com.android.settingslib.widget.UsageProgressBarPreference
-import java.text.NumberFormat
 import kotlin.math.max
 
 fun legacyHealthToStringId(value: Int): Int {
@@ -47,13 +48,14 @@ class BatteryInfoFragment(private val diagnostics: BatteryInfo, private val laun
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.battery_preferences, rootKey)
 
+        val locale = getDefaultLocale(activity!!)
+        val formatter = NumberFormatter.withLocale(locale)
         findPreference<BatteryHealthPreference>("health")!!.also {
             it.diagnostics = diagnostics
             it.setPercent(max(0, diagnostics.stateOfHealth.toLong()), 100)
             if (diagnostics.hasStateOfHealth()) {
-                val locale = getDefaultLocale(activity!!)
-                val percent = diagnostics.stateOfHealth / 100.0f
-                val percentString = NumberFormat.getPercentInstance(locale).format(percent)
+                val percentString =
+                    formatter.unit(MeasureUnit.PERCENT).format(diagnostics.stateOfHealth).toString()
                 it.setBottomSummary(getString(R.string.battery_health_summary_fmt, percentString))
             } else {
                 it.setBottomSummary(getString(R.string.battery_health_unavailable))
@@ -71,8 +73,8 @@ class BatteryInfoFragment(private val diagnostics: BatteryInfo, private val laun
         }
 
         findPreference<Preference>("manufacture_date")!!.also {
-            if (diagnostics.manufactureDate != null) {
-                it.summary = diagnostics.manufactureDate
+            if (diagnostics.hasManufactureTimestamp()) {
+                it.summary = localizeDateTimestamp(locale, diagnostics.manufactureTimestamp)
             } else {
                 it.summary = getString(R.string.unknown)
                 it.isVisible = launchLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
@@ -80,8 +82,8 @@ class BatteryInfoFragment(private val diagnostics: BatteryInfo, private val laun
         }
 
         findPreference<Preference>("first_usage_date")!!.also {
-            if (diagnostics.hasFirstUsageDate()) {
-                it.summary = diagnostics.firstUsageDate
+            if (diagnostics.hasFirstUsageTimestamp()) {
+                it.summary = localizeDateTimestamp(locale, diagnostics.firstUsageTimestamp)
             } else {
                 it.summary = getString(R.string.unknown)
                 it.isVisible = launchLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
@@ -90,7 +92,7 @@ class BatteryInfoFragment(private val diagnostics: BatteryInfo, private val laun
 
         findPreference<Preference>("cycle_count")!!.also {
             if (diagnostics.hasCycleCount()) {
-                it.summary = diagnostics.cycleCount.toString()
+                it.summary = formatter.format(diagnostics.cycleCount).toString()
             } else {
                 it.summary = getString(R.string.unknown)
                 it.isVisible = launchLevel >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
