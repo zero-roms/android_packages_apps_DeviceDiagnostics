@@ -35,7 +35,7 @@
     <string name="storage_title" msgid="5921235202250843966">"儲存空間狀態"</string>
     <string name="battery_title" msgid="6707361668941323259">"電池狀態"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"信任的裝置"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"使用一部裝置評估另一部裝置。需要互聯網連線。"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"評估另一部裝置。需要互聯網連線。"</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"已評估的裝置"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"執行診斷測試，再由另一部裝置進行驗證。"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"立即掃瞄"</string>
@@ -138,7 +138,7 @@
     <string name="not_locked" msgid="1663929635666930122">"未鎖定"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR 碼"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"在要評估的裝置上繼續操作"</string>
-    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"在要評估的裝置上完成測試後，這裡就會顯示測試結果。"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"在要評估的裝置上完成測試後，這裡就會顯示測試結果"</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"與已評估的裝置通訊時發生錯誤。請確認藍牙已啟用，然後再試一次。"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"立即掃瞄"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"在要評估的裝置上前往「設定」&gt; [系統] &gt; [裝置診斷] &gt; [評估模式] &gt; [已評估的裝置]，然後按照該裝置上的提示操作。"</string>

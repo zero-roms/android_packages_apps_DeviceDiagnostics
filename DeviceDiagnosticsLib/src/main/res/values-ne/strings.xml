@@ -27,7 +27,7 @@
     <string name="component_health_title" msgid="6177813132789269842">"कम्पोनेन्टको अवस्था"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"म्यानुअल तरिकाले परीक्षण गर्नुहोस् र ब्याट्री र भण्डारणको अवस्था हेर्नुहोस्"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"मूल्याङ्कन मोड"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"अर्को डिभाइस एक्सेस गर्न एउटा डिभाइस प्रयोग गर्नुहोस्"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"एउटा डिभाइस मूल्याङ्कन गर्न अर्को डिभाइस प्रयोग गर्नुहोस्"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"म्यानुअल परीक्षणहरू"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"डिस्प्लेसम्बन्धी परीक्षण"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"टचसम्बन्धी परीक्षण"</string>
@@ -35,7 +35,7 @@
     <string name="storage_title" msgid="5921235202250843966">"भण्डारणको स्थिति"</string>
     <string name="battery_title" msgid="6707361668941323259">"ब्याट्रीको स्थिति"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"विश्वसनीय डिभाइस"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"अर्को डिभाइस एक्सेस गर्नुहोस्। इन्टरनेट कनेक्सन चाहिन्छ।"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"अर्को डिभाइस मूल्याङ्कन गर्नुहोस्। इन्टरनेट कनेक्सन चाहिन्छ।"</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"मूल्याङ्कन गरिएको डिभाइस"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"अर्को डिभाइसले पुष्टि गर्ने डाइग्नोस्टिक्स परीक्षणहरू रन गर्नुहोस्।"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"अहिले नै स्क्यान गर्नुहोस्"</string>
@@ -57,12 +57,10 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"कुनै खास खराबी छैन"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"खराबी छ"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"स्क्रिनमा खराबी छ"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"म्यानुअल परीक्षण"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"रद्द गर्नुहोस्"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"अवस्था"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"उत्पादन गरिएको मिति"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"पहिलो पटक प्रयोग गरेको मिति"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"अहँ"</string>
     <string name="unknown" msgid="6936738212381747979">"अज्ञात"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"प्रमाणीकरण गर्न सकिएन"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"पुष्टि गरिएको छ"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"पुष्टि गरिएको छैन"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"मूल्याङ्कनको परिणाम"</string>
     <string name="attestation_results" msgid="9089126954790727665">"प्रमाणीकरणका परिणाम"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>

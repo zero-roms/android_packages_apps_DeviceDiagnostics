@@ -20,8 +20,7 @@
     <string name="app_name" msgid="4531685026837318886">"Diagnostikimi i pajisjes"</string>
     <string name="app_title" msgid="2766786539301072967">"Diagnostikimi i pajisjes"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Vazhdo"</string>
-    <!-- no translation found for proceed (8922926495095369132) -->
-    <skip />
+    <string name="proceed" msgid="8922926495095369132">"Vazhdo"</string>
     <string name="unavailable" msgid="7842920330665850121">"Nuk ofrohet"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Po lidhet..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"Gjendja e komponentit"</string>
@@ -59,8 +58,7 @@
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Ekrani ka defekte"</string>
     <!-- no translation found for manual_testing_title (4512384040828953255) -->
     <skip />
-    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
-    <skip />
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"Testi i mëposhtëm kërkon inspektim dhe konfirmim vizual të ekranit fizik. E konfirmon që dëshiron të vazhdosh?"</string>
     <!-- no translation found for cancel (4173470896053421075) -->
     <skip />
     <string name="battery_health_title" msgid="3945318982701313271">"Gjendja"</string>
@@ -72,8 +70,7 @@
     <string name="battery_original" msgid="2552600989411644999">"Origjinale"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Zëvendësuar"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Historiku i pjesës"</string>
-    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
-    <skip />
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s e kapacitetit fillestar"</string>
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Gjendja e baterisë nuk ofrohet"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"E ftohtë"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Ka mbaruar"</string>
@@ -84,8 +81,7 @@
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Kapaciteti total"</string>
     <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
     <skip />
-    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
-    <skip />
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Kohëzgjatja e mbetur: %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Jep lejet e kërkuara për të vazhduar në modalitetin e vlerësimit."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Anulo"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Provo përsëri"</string>

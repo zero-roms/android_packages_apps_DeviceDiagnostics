@@ -20,8 +20,7 @@
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
     <string name="app_title" msgid="2766786539301072967">"Diagnóstico del dispositivo"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Continuar"</string>
-    <!-- no translation found for proceed (8922926495095369132) -->
-    <skip />
+    <string name="proceed" msgid="8922926495095369132">"Continuar"</string>
     <string name="unavailable" msgid="7842920330665850121">"No disponible"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Conectando..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"Condiciones del componente"</string>
@@ -57,12 +56,9 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Sin defectos evidentes"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Negativo"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"La pantalla tiene defectos"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
-    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
-    <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"Pruebas manuales"</string>
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"Para la siguiente prueba se necesitará la inspección visual y la confirmación de la pantalla física. ¿Seguro que quieres continuar?"</string>
+    <string name="cancel" msgid="4173470896053421075">"Cancelar"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Salud"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Fecha de fabricación"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Fecha del primer uso"</string>
@@ -72,8 +68,7 @@
     <string name="battery_original" msgid="2552600989411644999">"Original"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Reemplazada"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Historial de la pieza"</string>
-    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
-    <skip />
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s de la capacidad original"</string>
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Estado de la batería no disponible"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Fría"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Agotada"</string>
@@ -84,8 +79,7 @@
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Capacidad total"</string>
     <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
     <skip />
-    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
-    <skip />
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Queda un %1$s de vida útil"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Concede los permisos que se solicitan para continuar en el modo Evaluación."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Cancelar"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Reintentar"</string>
@@ -117,10 +111,8 @@
     <string name="no" msgid="5957591978126937912">"No"</string>
     <string name="unknown" msgid="6936738212381747979">"Desconocido"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Error en la atestación"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"VERIFICADO"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"NO VERIFICADO"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"Resultados de la evaluación"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Resultados de la atestación"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>

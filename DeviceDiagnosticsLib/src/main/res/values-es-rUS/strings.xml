@@ -57,12 +57,10 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Sin defectos obvios"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Malo"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"La pantalla tiene desperfectos"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"Pruebas manuales"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"Cancelar"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Salud"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Fecha de fabricación"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Fecha del primer uso"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"No"</string>
     <string name="unknown" msgid="6936738212381747979">"Desconocido"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Falló la certificación"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"SE VERIFICÓ"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"SIN VERIFICAR"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"Resultados de la evaluación"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Resultados de la certificación"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -145,9 +141,9 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Completa las pruebas en el dispositivo que estás evaluando y, luego, los resultados aparecerán aquí."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Se produjo un error durante la comunicación con el dispositivo evaluado. Verifica que el Bluetooth esté habilitado y vuelve a intentarlo."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Escanea ahora"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"En el dispositivo que quieras evaluar, ve a Configuración, Sistema, Diagnóstico del dispositivo, Modo de evaluación, y luego, Dispositivo evaluado. Sigue las instrucciones que aparecen en ese dispositivo."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"En el dispositivo que quieras evaluar, ve a Configuración, Sistema, Diagnóstico del dispositivo, Modo de evaluación y, luego, Dispositivo evaluado. Sigue las instrucciones que aparecen en ese dispositivo."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Ahora se te mostrarán una serie de pantallas. Analiza cada una y busca defectos. Cuando estés conforme, toca la pantalla para pasar a la siguiente. Al final, se te preguntará si las pantallas se ven perfectas."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Ahora se te mostrarán una serie de pantallas. Analiza cada una y busca defectos. Toca la pantalla para pasar a la siguiente."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"De las siguientes opciones, selecciona la que mejor describa el estado de la pantalla."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Ahora se te mostrará una pantalla roja.\n \n Desliza el dedo sobre la pantalla hasta que esté completamente blanca. Si no puedes blanquear parte de la pantalla, realiza un toque corto en la pantalla para indicar que el sensor táctil no funciona por completo.\n\n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Ahora se te mostrará una pantalla roja.\n \n Desliza el dedo sobre la pantalla hasta que esté completamente blanca. Si no puedes blanquear parte de la pantalla, presiona la pantalla de forma leve para indicar que el sensor táctil no funciona por completo.\n \n"</string>
 </resources>

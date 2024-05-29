@@ -25,9 +25,9 @@
     <string name="unavailable" msgid="7842920330665850121">"উপলভ্য নেই"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"কানেক্ট করা হচ্ছে…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"কম্পোনেন্টের পারফর্ম্যান্স"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"ম্যানুয়াল পরীক্ষা রান করান ও ব্যাটারি এবং স্টোরেজ হেলথ দেখুন"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"ম্যানুয়াল টেস্ট রান করুন এবং ব্যাটারি ও স্টোরেজ হেল্থ দেখুন"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"মূল্যায়ন মোড"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"অন্য ডিভাইসের মূল্যায়ন করতে একটি ডিভাইস ব্যবহার করুন"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"একটি ডিভাইস ব্যবহার করে অন্য ডিভাইস মূল্যায়ন করুন"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"ম্যানুয়াল পরীক্ষা"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ডিসপ্লে টেস্ট"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"টাচ সংক্রান্ত টেস্ট"</string>
@@ -35,9 +35,9 @@
     <string name="storage_title" msgid="5921235202250843966">"স্টোরেজ স্ট্যাটাস"</string>
     <string name="battery_title" msgid="6707361668941323259">"ব্যাটারির স্ট্যাটাস"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"বিশ্বস্ত ডিভাইস"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"অন্য ডিভাইসের মূল্যায়ন করুন। ইন্টারনেট কানেকশন প্রয়োজন।"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"অন্য ডিভাইস মূল্যায়ন করুন। ইন্টারনেট কানেকশন প্রয়োজন।"</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"মূল্যায়ন করা ডিভাইস"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"ডায়াগনস্টিক পরীক্ষা রান করান যেটি অন্য ডিভাইসের মাধ্যমে যাচাই করা হবে।"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"অন্য ডিভাইস যাচাই করবে এমন ডায়াগনস্টিক টেস্ট রান করুন।"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"এখনই স্ক্যান করুন"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"বিশ্বস্ত ডিভাইসে নিচে দেওয়া আয়তক্ষেত্রের মধ্যে দেখানো QR কোডটি স্ক্যান করুন"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR কোড সঠিকভাবে স্ক্যান করা হলে, এই ডিভাইস অটোমেটিক অনেকগুলি টেস্ট শুরু করবে।"</string>
@@ -57,12 +57,10 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"চোখে পড়ার মতো সমস্যা নেই"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"খারাপ"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"স্ক্রিনে সমস্যা রয়েছে"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"ম্যানুয়াল টেস্টিং"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"বাতিল করুন"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"হেল্থ"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"ব্যাটারি তৈরির তারিখ"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"প্রথম ব্যবহারের তারিখ"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"না"</string>
     <string name="unknown" msgid="6936738212381747979">"অজানা"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"অ্যাটেস্টেশন কাজ করেনি"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"যাচাই করা হয়েছে"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"যাচাই করা হয়নি"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"মূল্যায়নের ফলাফল"</string>
     <string name="attestation_results" msgid="9089126954790727665">"অ্যাটেস্টেশনের ফলাফল"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -142,12 +138,12 @@
     <string name="not_locked" msgid="1663929635666930122">"লক করা নেই"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR কোড"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"যে ডিভাইসটির মূল্যায়ন করা হচ্ছে সেটিতে কাজ চালিয়ে যান"</string>
-    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"যে ডিভাইসটির মূল্যায়ন করা হচ্ছে সেটির পরীক্ষা সম্পূর্ণ করুন। এরপর, ফলাফল এখানে দেখানো হবে"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"যে ডিভাইসটির মূল্যায়ন করা হচ্ছে সেটির টেস্ট সম্পূর্ণ করুন। তারপরে, ফলাফল এখানে দেখানো হবে।"</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"মূল্যায়ন করা ডিভাইসে যোগাযোগ করার সময় কোনও সমস্যা হয়েছে। ব্লুটুথ চালু আছে কিনা তা চেক করে আবার চেষ্টা করুন।"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"এখনই স্ক্যান করুন"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"আপনি যে ডিভাইসে মূল্যায়ন করতে চান, সেই ডিভাইসে সেটিংস, সিস্টেম, ডিভাইস ডায়াগনস্টিক, মূল্যায়ন মোড তার মূল্যায়ন করা ডিভাইসে যান। সেই ডিভাইসে প্রম্পট অনুসরণ করুন।"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"যে ডিভাইস মূল্যায়ন করতে চান সেটির সেটিংস &gt; সিস্টেম &gt; ডিভাইস ডায়াগনস্টিক &gt; মূল্যায়নের মোড ও তারপরে মূল্যায়ন করা ডিভাইসে যান। ডিভাইসে দেখানো প্রম্পট অনুসরণ করুন।"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"এবার আপনি অনেকগুলি স্ক্রিন দেখতে পাবেন। প্রতিটি খুঁটিয়ে দেখুন এবং তাতে কোনও সমস্যা আছে কিনা তা খুঁজে বার করুন। আপনি সন্তুষ্ট হলে, পরেরটিতে যেতে স্ক্রিনে টাচ করুন। সবার শেষে, স্ক্রিনগুলি সম্পূর্ণ দাগমুক্ত কিনা তা আপনার কাছে জানতে চাওয়া হবে।"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"এবার আপনি অনেকগুলি স্ক্রিন দেখতে পাবেন। প্রতিটি খুঁটিয়ে দেখুন এবং তাতে কোনও সমস্যা আছে কিনা তা খুঁজে বার করুন। পরেরটিতে যেতে স্ক্রিনে টাচ করুন।"</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"নিচে দেওয়া বিকল্পগুলির মধ্যে এমন বিকল্প বেছে নিন যা স্ক্রিনের অবস্থার সাথে মিলে যায়।"</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"এবার আপনি একটি লাল রঙের স্ক্রিন দেখতে পাবেন।\n \n স্ক্রিনটি সম্পূর্ণ সাদা না হওয়া পর্যন্ত স্ক্রিনে আপনার আঙুল সোয়াইপ করতে থাকুন। স্ক্রিনের কিছু অংশ সাদা না করা গেলে, স্ক্রিনের উপরে হাল্কা করে ট্যাপ করুন যার থেকে এটি বোঝা যাবে যে টাচ সেন্সর পুরোপুরি কাজ করছে না।\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"আপনাকে এখন লাল স্ক্রিন দেখানো হবে।\n \n স্ক্রিন সম্পূর্ণ সাদা না হওয়া পর্যন্ত সেটির উপর সোয়াইপ করুন। স্ক্রিনের কিছু অংশ সাদা না হলে, টাচ সেন্সর কাজ করছে না তা বোঝানোর জন্য সেখানে হালকা করে ট্যাপ করুন।\n \n"</string>
 </resources>

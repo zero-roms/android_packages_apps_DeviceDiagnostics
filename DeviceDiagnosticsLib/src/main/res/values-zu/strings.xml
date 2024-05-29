@@ -37,7 +37,7 @@
     <string name="trusted_device_title" msgid="6291497999963968533">"Idivayisi ethenjwayo"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Hlola enye idivayisi. Kudingeka ukuxhumeka kwe-inthanethi."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Idivayisi ehloliwe"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Yenza izivivinyo zokuxilonga ezizoqinisekiswa enye idivayisi."</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Yenza uhlolo lokuxilonga oluzoqinisekiswa enye idivayisi."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skena manje"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skena ikhodi ye-QR edivayisini ethembekile onxandeni ongezansi"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Uma ususkene ikhodi ye-QR ngempumelelo, le divayisi izoqala uchungechunge lokuhlola ngokuzenzekelayo."</string>
@@ -57,12 +57,10 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Akukho okungavamile okucacile"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Kubi"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Isikrini sinokungavamile"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"Ukuhlola mathupha"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"Khansela"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Ezempilo"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Ilanga lokukhiqiza"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Ilanga lokuqala lokusetshenziswa"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"Cha"</string>
     <string name="unknown" msgid="6936738212381747979">"Akwaziwa"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Ukuqinisekiswa akuphumelelanga"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"KUQINISEKISIWE"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"AKUQINISEKISIWE"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"Imiphumela yokuhlola"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Imiphumela yokuqinisekisa"</string>
     <string name="imei_title" msgid="4360390946838995750">"I-IMEI"</string>
@@ -145,7 +141,7 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Qedela ukuhlola edivayisini oyihlolayo, bese imiphumela izovela lapha."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Kube nephutha lokuxhumana nedivayisi ehloliwe. Sicela uqinisekise ukuthi i-Bluetooth ivuliwe bese uzame futhi."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skena manje"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Kudivayisi ofisa ukuyihlola, iya kokuthi Amasethingi, Isistimu, Ukuxilongwa Kwedivayisi, Imodi Yokuhlola, bese Idivayisi Ehloliwe. Landela imiyalelo kuleyo divayisi."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Edivayisini ofisa ukuyihlola, iya Kumasethingi, Isistimu, Ezokuhlolisimo sensiza, Imodi Yokuhlola, bese Idivayisi ehloliwe. Landela imiyalelo kuleyo divayisi."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Manje uzoboniswa uchungechunge lwezikrini. Funda ngakunye futhi ubheke amaphutha. Uma sewanelisekile, thinta isikrini ukuze uye kwesilandelayo. Ekugcineni, uzobuzwa ukuthi izikrini zibukeka zingenasici."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Manje uzoboniswa uchungechunge lwezikrini. Funda ngakunye futhi ubheke amaphutha. Thinta isikrini ukuze uye kwesilandelayo."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Sicela ukhethe okukhethwa kukho okungezansi okuhambisana kangcono nesimo sesikrini."</string>

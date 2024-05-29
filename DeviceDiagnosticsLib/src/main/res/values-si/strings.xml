@@ -25,9 +25,9 @@
     <string name="unavailable" msgid="7842920330665850121">"නොලැබේ"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"සබැඳේ..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"සංරචක සෞඛ්‍යය"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"හස්තීයව පරීක්ෂණ ධාවනය කර බැටරි සහ ගබඩා සෞඛ්‍යය බලන්න"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"හස්තීය පරීක්‍ෂණ ධාවන කර බැටරි සහ ගබඩා සෞඛ්‍යය බලන්න"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"ඇගයීම් ප්‍රකාරය"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"තවත් උපාංගයක් තක්සේරු කිරීමට එක් උපාංගයක් භාවිතා කරන්න"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"එක් උපාංගයක් තක්සේරු කිරීමට තව උපාංගයක් භාවිත කරන්න"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"හස්තීය පරීක්‍ෂා"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"සංදර්ශක පරීක්‍ෂාව"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"ස්පර්ශ පරීක්‍ෂාව"</string>
@@ -35,9 +35,9 @@
     <string name="storage_title" msgid="5921235202250843966">"ආචයන තත්ත්‍වය"</string>
     <string name="battery_title" msgid="6707361668941323259">"බැටරි තත්ත්‍වය"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"විශ්වසනීය උපාංගය"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"වෙනත් උපාංගයක් තක්සේරු කරන්න. අන්තර්ජාල සම්බන්ධතාවයක් අවශ්‍ය වේ."</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"වෙනත් උපාංගයක් තක්සේරු කරන්න. අන්තර්ජාල සම්බන්‍ධතාවක් අවශ්‍ය ය."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"ඇගයෙන උපාංගය"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"වෙනත් උපාංගයක් මඟින් වලංගු වන නිර්ණය කිරීම් පරීක්ෂණ ධාවනය කරන්න."</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"වෙනත් උපාංගයකින් වලංගු කරන ලද නිර්ණ පරීක්‍ෂණ ධාවන කරන්න."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"දැන් ස්කෑන් කරන්න"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"පහත ඍජු කෝණාස්‍රය තුළ විශ්වසනීය උපාංගය මත QR කේතය ස්කෑන් කරන්න"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"ඔබ QR කේතය සාර්ථකය අගයා ඇති විට, මෙම උපාංගය ස්වයංක්‍රීයව පරීක්‍ෂණ මාලාවක් ආරම්භ කරයි."</string>
@@ -57,12 +57,10 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"පැහැදිලි අඩුපාඩු නැත"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"අයහපත්"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"තිරයේ අඩුපාඩු තිබේ"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"හස්තීය පරීක්‍ෂාව"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"අවලංගු කරන්න"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"සෞඛ්‍යය"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"නිෂ්පාදන දිනය"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"පළමු පරිශීලන දිනය"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"නැත"</string>
     <string name="unknown" msgid="6936738212381747979">"නොදනී"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"සහතික කිරීම අසමත් විය"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"සත්‍යාපනය කරන ලදි"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"සත්‍යාපන කර නැත"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"ඇගයීම් ප්‍රතිඵලය"</string>
     <string name="attestation_results" msgid="9089126954790727665">"සහතික කිරීමේ ප්‍රතිඵල"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -142,10 +138,10 @@
     <string name="not_locked" msgid="1663929635666930122">"අගුලු දමා නැත"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR කේතය"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"අගයනු ලබන උපාංගය මත ඉදිරියට යන්න"</string>
-    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"ඔබ අගයන උපාංගය මත පරීක්ෂාවන් සම්පූර්ණ කරන්න, පසුව ප්‍රතිඵල මෙහි දිස් වෙයි."</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"ඔබ අගයන උපාංගය මත පරීක්‍ෂාව සම්පූර්ණ කරන්න, පසුව ප්‍රතිඵල මෙහි දිස් වෙයි."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"ඇගයීමට ලක් කළ උපාංගය සමග සන්නිවේදන කිරීමේ දෝෂයක් තිබුණා. බ්ලූටූත් සබල කර ඇති බව සත්‍යාපන කර ගෙන නැවත උත්සාහ කරන්න."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"දැන් ස්කෑන් කරන්න"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"ඔබට ඇගයීමට අවශ්‍ය උපාංගයේ, සැකසීම්, පද්ධතිය, උපාංග නිර්ණය කිරීම්, ඇගයීම් ප්‍රකාරය, පසුව ඇගයීම් කළ උපාංගය වෙත යන්න. එම උපාංගයේ විමසීම් අනුගමනය කරන්න."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"ඔබට ඇගයීමට අවශ්‍ය උපාංගයේ, සැකසීම්, පද්ධතිය, උපාංග නිර්ණ, ඇගයීම් ප්‍රකාරය, පසුව ඇගයීම් කළ උපාංගය වෙත යන්න. එම උපාංගය මත ප්‍රේරණ අනුගමන කරන්න."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"දැන් ඔබට තිර මාලාවක් පෙන්වනු ලැබේ. එකිනෙක අධ්‍යයන කර පලුදු තිබේද සොයන්න. ඔබ තෘප්තිමත් වූ විට, ඊළඟ එකට යාමට තිරය ස්පර්ශ කරන්න. අවසානයේදී, තිර කැලල් නොවී පෙනෙන්නේදැයි ඔබෙන් අසනු ලැබේ."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"දැන් ඔබට තිර මාලාවක් පෙන්වනු ලැබේ. එකිනෙක අධ්‍යයන කර පලුදු තිබේද සොයන්න. ඊළඟ එකට යාමට තිරය ස්පර්ශ කරන්න."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"තිරයේ තත්ත්‍වයට හොඳින්ම ගැළපෙන පහත විකල්පය තෝරන්න."</string>

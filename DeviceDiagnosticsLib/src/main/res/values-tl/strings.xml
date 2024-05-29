@@ -20,14 +20,13 @@
     <string name="app_name" msgid="4531685026837318886">"MgaDiagnosticngDevice"</string>
     <string name="app_title" msgid="2766786539301072967">"Diagnostics ng device"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Magpatuloy"</string>
-    <!-- no translation found for proceed (8922926495095369132) -->
-    <skip />
+    <string name="proceed" msgid="8922926495095369132">"Magpatuloy"</string>
     <string name="unavailable" msgid="7842920330665850121">"Hindi available"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Kumokonekta..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"Kalagayan ng bahagi"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"Magpatakbo ng mga manual na test at tingnan ang kalagayan ng baterya at storage"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Magpagana ng mga manual na pagsubok at tingnan ang lagay ng baterya at storage"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Evaluation mode"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Gumamit ng isang device para masuri ang isa pang device"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Gumamit ng isang device para sumuri ng isa pang device"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Mga manual na test"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Test sa display"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Test sa pagpindot"</string>
@@ -35,9 +34,9 @@
     <string name="storage_title" msgid="5921235202250843966">"Status ng storage"</string>
     <string name="battery_title" msgid="6707361668941323259">"Status ng baterya"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Pinagkakatiwalaang device"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Suriin ang ibang device. Kinakailangan ang koneksyon sa Internet."</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Sumuri ng ibang device. Nire-require ang koneksyon sa Internet."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Nasuring device"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Magpatakbo ng mga diagnostic test na iva-validate ng isa pang device."</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Magpatakbo ng mga diagnostic na pagsubok na iva-validate ng isa pang device."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Mag-scan na"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"I-scan ang QR code sa pinagkakatiwalaang device sa parihaba sa ibaba"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Kapag na-scan mo na ang QR code, awtomatikong magsasagawa ang device na ito ng isang hanay ng mga test."</string>
@@ -53,16 +52,13 @@
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Tapos na ang pagsusuri"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Lalabas na ngayon ang mga resulta sa pinagkakatiwalaang device"</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"Resulta ng pag-test sa screen"</string>
-    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Maganda"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Maayos"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Walang kapansin-pansing sira"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Hindi maayos"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"May mga sira ang screen"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
-    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
-    <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"Manual na pagsubok"</string>
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"Ang sumusunod na pagsubok ay nangangailangan ng visual na pagsisiyasat at pagkumpirma ng pisikal na display. Sigurado ka ba na gusto mong magpatuloy?"</string>
+    <string name="cancel" msgid="4173470896053421075">"Kanselahin"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Kalagayan"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Petsa ng paggawa"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Petsa ng unang paggamit"</string>
@@ -72,8 +68,7 @@
     <string name="battery_original" msgid="2552600989411644999">"Original"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Pinalitan"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"History ng Piyesa"</string>
-    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
-    <skip />
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s ng orihinal na kapasidad"</string>
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Hindi available ang tagal ng baterya"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Malamig"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Wala na"</string>
@@ -84,8 +79,7 @@
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Kabuuang kapasidad"</string>
     <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
     <skip />
-    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
-    <skip />
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s ang natitirang lifetime"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Pakibigay ang mga hinihinging pahintulot para magpatuloy sa evaluation mode."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Kanselahin"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Subukan ulit"</string>
@@ -117,10 +111,8 @@
     <string name="no" msgid="5957591978126937912">"Hindi"</string>
     <string name="unknown" msgid="6936738212381747979">"Hindi Alam"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Hindi nagawa ang pagpapatunay"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"NA-VERIFY"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"HINDI NA-VERIFY"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"Mga resulta ng pagsusuri"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Mga resulta ng pagpapatunay"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -142,7 +134,7 @@
     <string name="not_locked" msgid="1663929635666930122">"Hindi naka-lock"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR Code"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Magpatuloy sa sinusuring device"</string>
-    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Tapusin ang mga test sa device na sinusuri mo, pagkatapos ay lalabas dito ang mga resulta."</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Tapusin ang mga pagsubok sa device na sinusuri mo, pagkatapos ay lalabas dito ang mga resulta."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Nagkaroon ng error sa pakikipag-ugnayan sa nasuring device. Paki-verify na naka-enable ang Bluetooth at subukan ulit."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Mag-scan na"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Sa device na gusto mong suriin, pumunta sa Mga Setting, System, Diagnostics ng device, Evaluation mode, pagkatapos ay Nasuring device. Sundin ang mga prompt sa device na iyon."</string>

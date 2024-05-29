@@ -25,7 +25,7 @@
     <string name="unavailable" msgid="7842920330665850121">"Nem áll rendelkezésre"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Csatlakozás…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"Összetevő élettartama"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"Manuális teszteket futtathat, és megtekintheti az akkumulátor és a tárhely állapotát."</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Manuális teszteket futtathat, és megtekintheti az akkumulátor és a tárhely állapotát"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Kiértékelési mód"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Egy eszközzel felmérhet egy másikat"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Manuális tesztek"</string>
@@ -57,12 +57,10 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Nincsenek nyilvánvaló hibák"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Rossz"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"A képernyő hibás"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"Manuális tesztelés"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"Mégse"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Állapot"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Gyártás dátuma"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Első használat dátuma"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"Nem"</string>
     <string name="unknown" msgid="6936738212381747979">"Ismeretlen"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Sikertelen tanúsítás"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"ELLENŐRZÖTT"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"NINCS ELLENŐRIZVE"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"Kiértékelés eredménye"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Tanúsítás eredményei"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -149,5 +145,5 @@
     <string name="screen_test_summary" msgid="6565006807310186664">"Most meg fog jelenni egy sor képernyő. Figyelmesen nézze át mindegyiket, és keressen hibákat. Ha elégedett az eredménnyel, érintse meg a képernyőt a következőre való továbblépéshez. A végén a rendszer meg fogja kérdezni, hogy a képernyők hibátlannak tűnnek-e."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Most meg fog jelenni egy sor képernyő. Figyelmesen nézze át mindegyiket, és keressen hibákat. Érintse meg a képernyőt a következőre való továbblépéshez."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Alább válassza ki a képernyő állapotának leginkább megfelelő lehetőséget."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Most egy piros képernyő fog megjelenni.\n \n Csúsztassa ujját a képernyőn addig, amíg a képernyő teljesen fehér nem lesz. Ha a képernyő valamelyik részét nem tudja fehérre változtatni, röviden koppintson a képernyőre annak jelzéséhez, hogy az érintési érzékelő nem működik tökéletesen.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Most egy piros képernyő fog megjelenni.\n \n Csúsztassa gyorsan ujját a képernyőn addig, amíg a képernyő teljesen fehér nem lesz. Ha a képernyő valamelyik részét nem tudja fehérre változtatni, röviden koppintson a képernyőre annak jelzéséhez, hogy az érintési érzékelő nem működik tökéletesen.\n \n"</string>
 </resources>

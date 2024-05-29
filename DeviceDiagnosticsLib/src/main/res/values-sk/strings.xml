@@ -25,7 +25,7 @@
     <string name="unavailable" msgid="7842920330665850121">"Nedostupné"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Pripája sa…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"Stav dielov"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"Spustite manuálny test a pozrite si stav batérie a ukladacieho priestoru"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Spustite manuálne testy a pozrite si stav batérie a ukladacieho priestoru"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Režim hodnotenia"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Pomocou jedného zariadenia ohodnoťte iné zariadenie"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Manuálne testy"</string>
@@ -37,7 +37,7 @@
     <string name="trusted_device_title" msgid="6291497999963968533">"Dôveryhodné zariadenie"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Ohodnoťte iné zariadenie. Vyžaduje sa internetové pripojenie."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Hodnotené zariadenie"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Spustite diagnostický text, ktorý overí iné zariadenie."</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Spustite diagnostický text, ktorý bude overený iným zariadením."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skenovať"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Naskenujte QR kód z dôveryhodného zariadenia do tohto obdĺžnika"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Po úspešnom naskenovaní QR kódu zariadenie automaticky spustí sériu testov."</string>
@@ -55,14 +55,12 @@
     <string name="screen_test_result_title" msgid="4741510800317631056">"Výsledok testu obrazovky"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"Dobré"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Žiadne očividné chyby"</string>
-    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Zlá"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Zlé"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Obrazovka má chyby"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"Manuálne testovanie"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"Zrušiť"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"Stav"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Dátum výroby"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Dátum prvého použitia"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"Nie"</string>
     <string name="unknown" msgid="6936738212381747979">"Neznáme"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Nepodarilo sa atestovať"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"OVERENÉ"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"NEOVERENÉ"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"Výsledky hodnotenia"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Výsledky atestácie"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -149,5 +145,5 @@
     <string name="screen_test_summary" msgid="6565006807310186664">"Teraz sa zobrazí niekoľko obrazoviek. Preskúmajte každú z nich a hľadajte chyby. Keď budete spokojný/-á, klepnite na obrazovku a prejdite na ďalšiu. Na konci sa vás opýtame, či obrazovky vyzerajú bezchybne."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Postupne sa zobrazí niekoľko obrazoviek. Každú z nich si dôkladne prezrite a hľadajte prípadné kazy. Klepnutím prejdete na ďalšiu obrazovku."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Vyberte možnosť nižšie, ktorá najlepšie zodpovedá stavu obrazovky."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Teraz sa zobrazí červená obrazovka.\n \n Trite prstom po nej, kým nebude úplne biela. Ak sa vám nepodarí zmeniť farbu jej časti na bielu, krátko klepnite na obrazovku, čím naznačíte, že dotykový snímač nie je úplne funkčný.\n\n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Teraz sa zobrazí červená obrazovka.\n \n Ťahajte po nej prst, kým nebude úplne biela. Ak sa vám nepodarí zmeniť farbu jej časti na bielu, krátko klepnite na obrazovku, čím naznačíte, že dotykový snímač nie je úplne funkčný.\n\n"</string>
 </resources>

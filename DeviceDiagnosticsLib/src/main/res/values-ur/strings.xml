@@ -25,9 +25,9 @@
     <string name="unavailable" msgid="7842920330665850121">"دستیاب نہیں ہے"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"منسلک ہو رہا ہے…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"اجزاء کی صحت"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"دستی ٹیسٹس چلائیں اور بیٹری اور اسٹوریج کی صحت دیکھیں"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"مینوئل ٹیسٹس چلائیں اور بیٹری اور اسٹوریج کی صحت دیکھیں"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"جائزہ موڈ"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"دوسرے آلے کا تجزیہ کرنے کے لیے ایک آلہ استعمال کریں"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"دوسرے آلے کا تجزیہ کرنے کیلئے ایک آلہ استعمال کریں"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"دستی ٹیسٹس"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ڈسپلے ٹیسٹ"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"ٹچ ٹیسٹ"</string>
@@ -37,7 +37,7 @@
     <string name="trusted_device_title" msgid="6291497999963968533">"بھروسہ مند آلہ"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"دوسرے آلے کا تجزیہ کریں۔ انٹرنیٹ کنکشن درکار ہے۔"</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"تجزیہ شدہ آلہ"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"تشخیصی ٹیسٹس چلائیں جن کی توثیق کسی دوسرے آلے سے کی جائے گی۔"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"ایسے ڈائیگناسٹکس ٹیسٹس چلائیں جن کی توثیق کسی دوسرے آلے سے کی جائے گی۔"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"ابھی اسکین کریں"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"‏نیچے مستطیل میں دیا گيا QR کوڈ قابل اعتماد آلے پر اسکین کریں"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"‏ایک بار جب آپ QR کوڈ کو کامیابی سے اسکین کر لیتے ہیں، تو یہ آلہ خودکار طور پر ٹیسٹس کا ایک سلسلہ شروع کر دے گا۔"</string>
@@ -57,12 +57,10 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"کوئی واضح خامی نہیں"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"خراب"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"اسکرین میں خامیاں ہیں"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"مینوئل ٹیسٹنگ"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"منسوخ کریں"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"صحت"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"مینوفیکچرنگ کی تاریخ"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"استعمال کی پہلی تاریخ"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"نہیں"</string>
     <string name="unknown" msgid="6936738212381747979">"نامعلوم"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"تصدیق ناکام ہو گئی"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"توثیق شدہ"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"غیر توثیق شدہ"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"جائزہ کے نتائج"</string>
     <string name="attestation_results" msgid="9089126954790727665">"تصدیق کے نتائج"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -145,9 +141,9 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"آپ جس آلے کا جائزہ لے رہے ہیں اس پر ٹیسٹ مکمل کریں، پھر نتائج یہاں ظاہر ہوں گے۔"</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"جائزہ شدہ آلے کے ساتھ مواصلت کرنے میں ایک خرابی پیش آ گئی۔ براہ کرم توثیق کریں کہ بلوٹوتھ فعال ہے اور دوبارہ کوشش کریں۔"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"ابھی اسکین کریں"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"آپ جس آلے کا جائزہ لینا چاہتے ہیں اس پر ترتیبات، سسٹم، ڈیوائس ڈائیاگناسٹکس، جائزہ موڈ، پھر جائزہ شدہ آلہ پر جائیں۔ اس آلہ پر پرامپٹس کی پیروی کریں۔"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"آپ جس آلے کا تجزیہ کرنا چاہتے ہیں اس پر ترتیبات، سسٹم، ڈیوائس ڈائیگناسٹکس، تجزیہ موڈ، پھر تجزیہ شدہ آلے پر جائیں۔ اس آلے پر پرامپٹس کی پیروی کریں۔"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"اب آپ کو اسکرینز کی ایک سیریز دکھائی جائے گی۔ ہر ایک کو چیک کریں اور خامیاں تلاش کریں۔ ایک بار جب آپ مطمئن ہو جائیں تو، اگلے پر جانے کے لیے اسکرین کو ٹچ کریں۔ آخر میں، آپ سے پوچھا جائے گا کہ کیا اسکرینز بے داغ لگتی ہیں؟"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"اب آپ کو اسکرینز کی ایک سیریز دکھائی جائے گی۔ ہر ایک کو چیک کریں اور خامیاں تلاش کریں۔ اگلی والی پر جانے کے لیے اسکرین کو ٹچ کریں۔"</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"براہ کرم نیچے دیے گئے اختیار کو منتخب کریں جو اسکرین کی حالت سے بہترین مماثل ہو۔"</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"اب آپ کو ایک سرخ اسکرین دکھائی جائے گی۔\n \n اپنی انگلی کو اسکرین پر اس وقت تک سوائپ کریں جب تک کہ اسکرین مکمل طور پر سفید نہ ہو جائے۔ اگر آپ اسکرین کے کچھ حصے کو سفید کرنے سے قاصر ہیں تو اس بات کی نشاندہی کرنے کے لیے کہ ٹچ سینسر مکمل طور پر کام نہیں کر رہا ہے، اسکرین کو مختصر طور پر تھپتھپائیں۔\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"اب آپ کو ایک سرخ اسکرین دکھائی جائے گی۔\n \n اپنی انگلی کو اسکرین پر اس وقت تک سوائپ کریں جب تک کہ اسکرین مکمل طور پر سفید نہ ہو جائے۔ اگر آپ اسکرین کے کچھ حصے کو سفید کرنے سے قاصر ہیں، تو اس بات کی نشاندہی کرنے کیلئے اسکرین کو مختصر طور پر تھپتھپائیں کہ ٹچ سینسر مکمل طور پر کام نہیں کر رہا ہے۔\n \n"</string>
 </resources>

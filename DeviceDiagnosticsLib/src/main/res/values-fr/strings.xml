@@ -27,7 +27,7 @@
     <string name="component_health_title" msgid="6177813132789269842">"Intégrité du composant"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Effectuez des tests manuels et affichez l\'état de l\'espace de stockage et de la batterie"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Mode d\'évaluation"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Utilisez un appareil pour évaluer un autre appareil"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Utilisez un appareil pour en évaluer un autre"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Tests manuels"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Test de l\'écran"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Test du capteur tactile"</string>
@@ -57,12 +57,10 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Aucun défaut apparent"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Mauvais"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"L\'écran présente des défauts"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"Tests manuels"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"Annuler"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"État"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"Date de fabrication"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Date de première utilisation"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"Non"</string>
     <string name="unknown" msgid="6936738212381747979">"Inconnu"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"Échec de l\'attestation"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"VÉRIFIÉ"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"NON VÉRIFIÉ"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"Résultats d\'évaluation"</string>
     <string name="attestation_results" msgid="9089126954790727665">"Résultats de l\'attestation"</string>
     <string name="imei_title" msgid="4360390946838995750">"Code IMEI"</string>
@@ -145,9 +141,9 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Effectuez les tests sur l\'appareil que vous évaluez, les résultats apparaîtront ensuite ici."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Une erreur s\'est produite lors de la communication avec l\'appareil évalué. Veuillez vérifier que le Bluetooth est activé, puis réessayez."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Rechercher"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Sur l\'appareil que vous souhaitez évaluer, allez dans Paramètres, Système, Diagnostic de l\'appareil, Mode d\'évaluation, puis Appareil évalué. Suivez les invites de commande sur cet appareil."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Sur l\'appareil que vous souhaitez évaluer, sélectionnez \"Paramètres\", \"Système\", \"Diagnostic de l\'appareil\", \"Mode évaluation\", puis \"Appareil évalué\". Suivez les invites de commande sur cet appareil."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Une série d\'écrans s\'affiche alors. Étudiez chacun d\'entre eux et recherchez les défauts. Une fois que c\'est fait, touchez l\'écran pour passer à l\'écran suivant. À la fin, on vous demandera si les écrans semblent intacts."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Une série d\'écrans s\'affiche alors. Étudiez chacun d\'entre eux et recherchez les défauts. Touchez l\'écran pour passer à l\'écran suivant."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Veuillez sélectionner l\'option ci-dessous qui correspond le mieux à l\'état de l\'écran."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Un écran rouge s\'affiche alors.\n \n Balayez l\'écran avec votre doigt jusqu\'à ce qu\'il devienne entièrement blanc. Si vous ne parvenez pas à rendre une partie de l\'écran blanche, appuyez brièvement sur l\'écran pour indiquer que le capteur tactile ne fonctionne pas complètement. \n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Un écran rouge s\'affiche alors.\n \n Balayez l\'écran avec votre doigt jusqu\'à ce qu\'il devienne entièrement blanc. Si vous ne parvenez pas à rendre une partie de l\'écran blanche, appuyez brièvement sur l\'écran pour indiquer que le capteur tactile ne fonctionne pas complètement.\n \n"</string>
 </resources>

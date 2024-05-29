@@ -37,7 +37,7 @@
     <string name="trusted_device_title" msgid="6291497999963968533">"విశ్వసనీయ పరికరం"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"మరొక పరికరాన్ని అంచనా వేయండి. ఇంటర్నెట్ కనెక్షన్ అవసరం."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"ఎవాల్యుయేట్ అయిన పరికరం"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"మరొక పరికరం ద్వారా వాలిడేట్ చేసే సమస్య విశ్లేషణల పరీక్షలను రన్ చేయండి."</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"మరొక పరికరం ద్వారా వాలిడేట్ చేసే సమస్య విశ్లేషణల టెస్ట్‌లను రన్ చేయండి."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"ఇప్పుడే స్కాన్ చేయండి"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"దిగువున ఉన్న దీర్ఘచతురస్రాకారంలో, విశ్వసనీయ పరికరంతో QR కోడ్‌ను స్కాన్ చేయండి"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"మీరు QR కోడ్‌ను విజయవంతంగా స్కాన్ చేసిన తర్వాత, ఈ పరికరం ఆటోమేటిక్‌గా కొన్ని టెస్ట్‌లను ప్రారంభిస్తుంది."</string>
@@ -57,12 +57,10 @@
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"స్పష్టమైన లోపాలు ఏవీ లేవు"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"బాగా లేదు"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"స్క్రీన్‌లో లోపాలు ఉన్నాయి"</string>
-    <!-- no translation found for manual_testing_title (4512384040828953255) -->
-    <skip />
+    <string name="manual_testing_title" msgid="4512384040828953255">"మాన్యువల్ టెస్టింగ్"</string>
     <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
     <skip />
-    <!-- no translation found for cancel (4173470896053421075) -->
-    <skip />
+    <string name="cancel" msgid="4173470896053421075">"రద్దు చేయండి"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"ఆరోగ్యం"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"తయారీ తేదీ"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"మొదటి వినియోగ తేదీ"</string>
@@ -117,10 +115,8 @@
     <string name="no" msgid="5957591978126937912">"లేదు"</string>
     <string name="unknown" msgid="6936738212381747979">"తెలియని రకం"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"అటెస్టేషన్ విఫలమైంది"</string>
-    <!-- no translation found for avb_verified (4990498011432924565) -->
-    <skip />
-    <!-- no translation found for avb_not_verified (6853341577991139767) -->
-    <skip />
+    <string name="avb_verified" msgid="4990498011432924565">"వెరిఫై చేయబడింది"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"వెరిఫై చేయబడలేదు"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"ఎవాల్యుయేషన్ ఫలితాలు"</string>
     <string name="attestation_results" msgid="9089126954790727665">"అటెస్టేషన్ ఫలితాలు"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
@@ -145,9 +141,9 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"మీరు ఎవాల్యుయేట్ చేస్తున్న పరికరంలో టెస్ట్‌లను పూర్తి చేయండి, ఆపై ఆ ఫలితాలు ఇక్కడ కనిపిస్తాయి."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"ఎవాల్యుయేట్ చేసిన పరికరంతో కమ్యూనికేట్ చేయడంలో ఒక ఎర్రర్ ఏర్పడింది. దయచేసి బ్లూటూత్ ఎనేబుల్ చేయబడిందని వెరిఫై చేసి, మళ్లీ ట్రై చేయండి."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"ఇప్పుడే స్కాన్ చేయండి"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"మీరు ఎవాల్యువెట్ వేయాలనుకుంటున్న పరికరంలో, సెట్టింగ్‌లు, సిస్టమ్, పరికర సమస్య విశ్లేషణ, ఎవాల్యుయేషన్ మోడ్, ఆపై ఎవాల్యువెట్ చేసిన పరికరానికి వెళ్లండి. ఆ పరికరంలో ప్రాంప్ట్‌లను ఫాలో అవ్వండి."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"మీరు ఎవాల్యుయేట్ చేయాలనుకుంటున్న పరికరంలో, సెట్టింగ్‌లు, సిస్టమ్, పరికర సమస్య విశ్లేషణ, ఎవాల్యుయేషన్ మోడ్, ఆపై ఎవాల్యుయేట్ చేసిన పరికరానికి వెళ్లండి. ఆ పరికరంలో ప్రాంప్ట్‌లను ఫాలో అవ్వండి."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"ఇప్పుడు మీకు వరుస స్క్రీన్‌లు కనిపిస్తాయి. ఒక్కొక్కటిగా చెక్ చేసి, లోపాలను కనుగొనండి. మీరు సంతృప్తి చెందిన తర్వాత, తదుపరి దానికి కొనసాగడానికి స్క్రీన్‌ను తాకండి. చివరగా, స్క్రీన్ పాడైందా అని మిమ్మల్ని అడగడం జరుగుతుంది."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ఇప్పుడు మీకు వరుస స్క్రీన్‌లు కనిపిస్తాయి. ఒక్కొక్కటిగా చెక్ చేసి, లోపాలను కనుగొనండి. తర్వాతి దానికి కొనసాగడానికి స్క్రీన్‌ను తాకండి."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"దిగువున ఉన్న ఆప్షన్ నుండి స్క్రీన్ కండిషన్‌కు బాగా మ్యాచ్ అయ్యే దాన్ని ఎంచుకోండి."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"మీకు ఇప్పుడు ఎరుపు రంగు స్క్రీన్ కనిపిస్తుంది.\n \n స్క్రీన్ పూర్తిగా తెల్లగా మారే వరకు మీ వేలును స్క్రీన్‌పై స్వైప్ చేయండి. స్క్రీన్‌లో కొంత భాగం తెల్లగా మారడం మీకు కనిపించకుంటే, స్క్రీన్‌పై కొద్దిగా ట్యాప్ చేయండి, టచ్ సెన్సార్ పూర్తిగా పనిచేయడం లేదని ఇది వెల్లడిస్తుంది.\n\n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"మీకు ఇప్పుడు ఎరుపు రంగు స్క్రీన్ కనిపిస్తుంది.\n \n స్క్రీన్ పూర్తిగా తెల్లగా మారే వరకు మీ వేలును స్క్రీన్‌పై స్వైప్ చేయండి. స్క్రీన్‌లో కొంత భాగాన్ని మీరు తెల్లగా మార్చలేకపోతే, టచ్ సెన్సార్ పూర్తి స్థాయిలో పని చేయడం లేదని తెలియజేయడానికి స్క్రీన్‌పై కొద్దిసేపు ట్యాప్ చేయండి.\n\n"</string>
 </resources>
