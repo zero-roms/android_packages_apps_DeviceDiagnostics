@@ -85,13 +85,21 @@ private fun getAttestation(challenge: ByteArray, withImei: Boolean): ByteArray {
 fun createAttestationRecord(challenge: ByteArray): ByteArray {
     // On devices without device IDs provisioned, the above code will throw ProviderException
     // Continue without this data to support testing other functionality
-    return try {
-        getAttestation(challenge, withImei = true)
+    try {
+        return getAttestation(challenge, true)
     } catch (e: java.security.ProviderException) {
         Log.e(TAG, "Could not get attestation with IMEI, retrying without: $e")
-        getAttestation(challenge, withImei = false)
     } catch (e: SecurityException) {
         Log.e(TAG, "Could not get attestation with IMEI, retrying without: $e")
-        getAttestation(challenge, withImei = false)
+    } catch (e: Exception) {
+        Log.e(TAG, "Could not create attestation record: $e")
+        return ByteArray(0)
+    }
+
+    try {
+        return getAttestation(challenge, false)
+    } catch (e: Exception) {
+        Log.e(TAG, "Could not create attestation record: $e")
+        return ByteArray(0)
     }
 }
