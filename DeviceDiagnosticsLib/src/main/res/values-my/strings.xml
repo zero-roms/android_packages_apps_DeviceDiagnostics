@@ -77,8 +77,7 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"ဗို့အား ကျော်လွန်နေသည်"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"သိုလှောင်ခန်း အခြေအနေ"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"စုစုပေါင်း သိုလှောင်နိုင်မှုပမာဏ"</string>
-    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
-    <skip />
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
     <string name="storage_health_summary_fmt" msgid="7174241725631534273">"တစ်သက်တာအတွက် ကျန်ရှိမှု %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"အကဲဖြတ်မုဒ်တွင် ရှေ့ဆက်ရန် တောင်းဆိုထားသော ခွင့်ပြုချက်များ ပေးပါ။"</string>
     <string name="cancel_button" msgid="7011882021431169180">"မလုပ်တော့"</string>

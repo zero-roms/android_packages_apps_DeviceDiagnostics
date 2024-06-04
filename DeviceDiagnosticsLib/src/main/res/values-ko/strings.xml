@@ -20,8 +20,7 @@
     <string name="app_name" msgid="4531685026837318886">"기기 진단"</string>
     <string name="app_title" msgid="2766786539301072967">"기기 진단"</string>
     <string name="activity_continue" msgid="2190118984182069151">"계속"</string>
-    <!-- no translation found for proceed (8922926495095369132) -->
-    <skip />
+    <string name="proceed" msgid="8922926495095369132">"계속"</string>
     <string name="unavailable" msgid="7842920330665850121">"사용 불가"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"연결 중…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"구성요소 상태"</string>
@@ -58,8 +57,7 @@
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"좋지 않음"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"화면에 결함이 있음"</string>
     <string name="manual_testing_title" msgid="4512384040828953255">"수동 테스트"</string>
-    <!-- no translation found for visual_test_warning_summary (8088295720348050370) -->
-    <skip />
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"다음 테스트에서는 실제 화면을 육안으로 검사하고 확인해야 합니다. 계속하시겠습니까?"</string>
     <string name="cancel" msgid="4173470896053421075">"취소"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"성능 상태"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"제조일"</string>
@@ -70,8 +68,7 @@
     <string name="battery_original" msgid="2552600989411644999">"원본"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"교체됨"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"부품 이력"</string>
-    <!-- no translation found for battery_health_summary_fmt (4363832259742003306) -->
-    <skip />
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"원래 용량의 %1$s"</string>
     <string name="battery_health_unavailable" msgid="5093923315136769788">"배터리 성능 상태 알 수 없음"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"온도가 낮음"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"방전됨"</string>
@@ -80,10 +77,8 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"과전압"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"저장용량 상태"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"총 용량"</string>
-    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
-    <skip />
-    <!-- no translation found for storage_health_summary_fmt (7174241725631534273) -->
-    <skip />
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g><xliff:g id="UNIT">%2$s</xliff:g>"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"남은 수명 %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"평가 모드를 계속하려면 요청된 권한을 부여하세요."</string>
     <string name="cancel_button" msgid="7011882021431169180">"취소"</string>
     <string name="try_again_button" msgid="6015477950108798246">"다시 시도"</string>
