@@ -25,8 +25,9 @@ import org.json.JSONObject
 
 const val BT_READ_SIZE = 4096
 const val BT_MAX_PACKET_SIZE = 1024 * 1024
+const val BT_VERSION = 1
 
-private const val QRCODE_VERSION = 3
+private const val QRCODE_VERSION = 4
 
 private fun readFully(socket: BluetoothSocket, n: Int): ByteArray {
     val b = ByteArray(n)
@@ -53,7 +54,8 @@ fun readBluetoothPacket(socket: BluetoothSocket): BluetoothPacket {
     return BluetoothPacket.parseFrom(payloadBytes)
 }
 
-fun writeBluetoothPacket(socket: BluetoothSocket, packet: BluetoothPacket) {
+fun writeBluetoothPacket(socket: BluetoothSocket, packetBuilder: BluetoothPacket.Builder) {
+    val packet = packetBuilder.setVersion(BT_VERSION).build()
     val bytes = packet.toByteArray()
     val header = ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN).putInt(bytes.size).array()
     socket.outputStream.write(header)
