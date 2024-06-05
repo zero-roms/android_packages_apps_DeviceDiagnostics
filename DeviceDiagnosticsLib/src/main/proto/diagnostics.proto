@@ -53,10 +53,16 @@ message DeviceReport {
     int32 launch_level = 5;
 }
 
+enum PacketCommand {
+    COMMAND_ACK = 0;
+    COMMAND_CLOSE = 1;
+};
+
 message BluetoothPacket {
+    int32 version = 1;
     oneof payload {
-        TrustedDeviceInfo trusted_device_info = 1;
-        DeviceReport device_report = 2;
-        bool ack = 3;
+        TrustedDeviceInfo trusted_device_info = 2;
+        DeviceReport device_report = 3;
+        PacketCommand command = 4;
     }
 }

@@ -28,6 +28,7 @@ import android.os.ParcelUuid
 import android.util.Log
 import com.android.devicediagnostics.Protos.BluetoothPacket
 import com.android.devicediagnostics.Protos.DeviceReport
+import com.android.devicediagnostics.Protos.PacketCommand
 import com.android.devicediagnostics.Protos.TrustedDeviceInfo
 import kotlinx.coroutines.sync.Mutex
 
@@ -36,6 +37,7 @@ private const val TAG = "BluetoothClient"
 class BluetoothClient {
     interface ScanListener {
         fun onBluetoothConnected(trustedDeviceInfo: TrustedDeviceInfo)
+
         fun onBluetoothConnectionFailed()
     }
 
@@ -129,10 +131,10 @@ class BluetoothClient {
 
     fun sendReport(report: DeviceReport) {
         synchronized(lock) {
-            val packet = BluetoothPacket.newBuilder().setDeviceReport(report).build()
+            val packet = BluetoothPacket.newBuilder().setDeviceReport(report)
             writeBluetoothPacket(socket!!, packet)
             val reply = readBluetoothPacket(socket!!)
-            if (!reply.hasAck()) {
+            if (reply.command != PacketCommand.COMMAND_ACK) {
                 throw Exception("Expected acknowledgement packet")
             }
             resetImpl()
