@@ -108,8 +108,8 @@ class BluetoothServer {
 
             // Wait for the client to hang up before resetting.
             try {
-                readBluetoothPacket(localSocket)
-            } finally {
+                readBluetoothPacketOrEof(localSocket)
+            } catch (_: Exception) {} finally {
                 reset()
             }
         }

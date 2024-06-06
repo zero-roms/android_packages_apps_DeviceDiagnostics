@@ -41,17 +41,25 @@ private fun readFully(socket: BluetoothSocket, n: Int): ByteArray {
     return b
 }
 
-fun readBluetoothPacket(socket: BluetoothSocket): BluetoothPacket {
+fun readBluetoothPacketOrEof(socket: BluetoothSocket): BluetoothPacket? {
     val payloadSizeBytes = readFully(socket, 4)
     val payloadSize = ByteBuffer.wrap(payloadSizeBytes).order(ByteOrder.LITTLE_ENDIAN).getInt()
     if (payloadSize == 0) {
-        throw Exception("Invalid packet received")
+        return null
     }
     if (payloadSize > BT_MAX_PACKET_SIZE) {
         throw Exception("Maximum packet size exceeded: $payloadSize")
     }
     val payloadBytes = readFully(socket, payloadSize)
     return BluetoothPacket.parseFrom(payloadBytes)
+}
+
+fun readBluetoothPacket(socket: BluetoothSocket): BluetoothPacket {
+    val packet = readBluetoothPacketOrEof(socket)
+    if (packet == null) {
+        throw Exception("Expected packet, got EOF")
+    }
+    return packet
 }
 
 fun writeBluetoothPacket(socket: BluetoothSocket, packetBuilder: BluetoothPacket.Builder) {
