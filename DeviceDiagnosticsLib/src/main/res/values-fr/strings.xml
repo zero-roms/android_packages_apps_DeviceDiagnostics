@@ -52,7 +52,7 @@
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Évaluation terminée"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Les résultats vont maintenant apparaître sur l\'appareil vérifié"</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"Résultat du test de l\'écran"</string>
-    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Bon état"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Bon"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Aucun défaut apparent"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Mauvais"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"L\'écran présente des défauts"</string>

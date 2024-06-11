@@ -54,7 +54,7 @@
     <string name="screen_test_result_title" msgid="4741510800317631056">"Wynik testu ekranu"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"Stan dobry"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Brak zauważalnych defektów"</string>
-    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Zły stan"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Stan zły"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Ekran ma defekty"</string>
     <string name="manual_testing_title" msgid="4512384040828953255">"Testy ręczne"</string>
     <string name="visual_test_warning_summary" msgid="8088295720348050370">"Test poniżej wymaga wizualnej kontroli fizycznego wyświetlacza i potwierdzenia. Czy na pewno chcesz kontynuować?"</string>

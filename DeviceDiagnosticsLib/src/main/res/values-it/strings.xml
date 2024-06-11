@@ -28,7 +28,7 @@
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Modalità di valutazione"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Utilizza un dispositivo per valutarne un altro"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Test manuali"</string>
-    <string name="screen_test_title" msgid="2748510049598105155">"Test display"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Test schermo"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Test sensore touch"</string>
     <string name="component_title" msgid="6580046234562555655">"Stato componente"</string>
     <string name="storage_title" msgid="5921235202250843966">"Stato spazio di archiviazione"</string>
@@ -52,9 +52,9 @@
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Valutazione completata"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"I risultati verranno ora visualizzati sul dispositivo attendibile"</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"Risultato del test dello schermo"</string>
-    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Buono"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Buone"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Nessun difetto evidente"</string>
-    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Gravi"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Non buone"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Lo schermo ha dei difetti"</string>
     <string name="manual_testing_title" msgid="4512384040828953255">"Test manuale"</string>
     <string name="visual_test_warning_summary" msgid="8088295720348050370">"Il seguente test richiede l\'ispezione visiva e la conferma del display fisico. Vuoi continuare?"</string>

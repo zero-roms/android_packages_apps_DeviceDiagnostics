@@ -52,7 +52,7 @@
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Posouzení dokončeno"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Výsledky se teď zobrazí na důvěryhodném zařízení"</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"Výsledek testu obrazovky"</string>
-    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Dobrý"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Dobrý výsledek"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Žádné zjevné defekty"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Špatný výsledek"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Obrazovka má defekty"</string>

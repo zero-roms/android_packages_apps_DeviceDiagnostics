@@ -54,7 +54,7 @@
     <string name="screen_test_result_title" msgid="4741510800317631056">"Niðurstöður úr skjáprófun"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"Gott"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Engir augljósir gallar"</string>
-    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Slæm"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Slæmt"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Skjárinn er gallaður"</string>
     <string name="manual_testing_title" msgid="4512384040828953255">"Handvirk prófun"</string>
     <string name="visual_test_warning_summary" msgid="8088295720348050370">"Eftirfarandi próf krefst þess að skjár tækisins sé skoðaður. Viltu örugglega halda áfram?"</string>

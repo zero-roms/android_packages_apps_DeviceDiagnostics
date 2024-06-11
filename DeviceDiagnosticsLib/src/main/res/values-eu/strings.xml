@@ -28,7 +28,7 @@
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Ebaluazio modua"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Erabili gailu bat beste bat ebaluatzeko"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Eskuzko probak"</string>
-    <string name="screen_test_title" msgid="2748510049598105155">"Pantailako testua"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Pantailaren proba"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Ukipen-proba"</string>
     <string name="component_title" msgid="6580046234562555655">"Osagaiaren egoera"</string>
     <string name="storage_title" msgid="5921235202250843966">"Biltegiaren egoera"</string>

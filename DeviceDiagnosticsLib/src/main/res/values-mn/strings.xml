@@ -51,7 +51,7 @@
     <string name="sending_report" msgid="8735615783234611336">"Итгэмжлэгдсэн төхөөрөмж рүү тайлан илгээж байна..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Үнэлж дууслаа"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Үр дүн одоо итгэмжлэгдсэн төхөөрөмж дээр харагдана"</string>
-    <string name="screen_test_result_title" msgid="4741510800317631056">"Дэлгэцийн шалгалтын үр дүн"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Дэлгэцийн туршилтын үр дүн"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"Сайн"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Тодорхой согог байхгүй"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Муу"</string>

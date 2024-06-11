@@ -52,7 +52,7 @@
     <string name="evaluation_complete_title" msgid="2503185542217582851">"평가 완료"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"이제 결과가 신뢰할 수 있는 기기에 표시됩니다."</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"화면 테스트 결과"</string>
-    <string name="screen_test_good_result_title" msgid="8032695232528965724">"양호"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"좋음"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"명백한 결함 없음"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"좋지 않음"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"화면에 결함이 있음"</string>

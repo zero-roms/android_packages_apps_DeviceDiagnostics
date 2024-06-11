@@ -54,7 +54,7 @@
     <string name="screen_test_result_title" msgid="4741510800317631056">"Resultado da proba de pantalla"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"En bo estado"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Non hai ningún defecto evidente"</string>
-    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Mala"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"En mal estado"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Hai defectos na pantalla"</string>
     <string name="manual_testing_title" msgid="4512384040828953255">"Proba manual"</string>
     <string name="visual_test_warning_summary" msgid="8088295720348050370">"A seguinte proba require unha inspección visual e unha confirmación da pantalla física. Seguro que queres continuar?"</string>

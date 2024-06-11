@@ -28,7 +28,7 @@
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Modo de avaliação"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Use um dispositivo para avaliar outro dispositivo"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Testes manuais"</string>
-    <string name="screen_test_title" msgid="2748510049598105155">"Teste de ecrã"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Teste do ecrã"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Teste tátil"</string>
     <string name="component_title" msgid="6580046234562555655">"Estado dos componentes"</string>
     <string name="storage_title" msgid="5921235202250843966">"Estado do armazenamento"</string>

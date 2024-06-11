@@ -139,6 +139,6 @@
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Na uređaju koji želite procijeniti otvorite Postavke, Sustav, Dijagnostika uređaja, Način procjene, a zatim Procijenjeni uređaj. Slijedite upute na tom uređaju."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Sada ćemo vam prikazati niz zaslona. Proučite svaki od njih i potražite nepravilnosti. Kada budete gotovi, dodirnite zaslon kako biste prešli na sljedeći. Na kraju ćemo vam pitati izgledaju li zasloni besprijekorno."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Sada ćemo vam prikazati niz zaslona. Proučite svaki od njih i potražite nepravilnosti. Dodirnite zaslon da biste prešli na sljedeći."</string>
-    <string name="screen_test_finalize" msgid="9147123495799275930">"U nastavku odaberite opciju koja najbolje odgovara uvjetu zaslona."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"U nastavku odaberite opciju koja najbolje odgovara stanju zaslona."</string>
     <string name="touch_test_summary" msgid="5989536270591433560">"Sada ćemo vam prikazati crveni zaslon.\n \n Prelazite prstom po zaslonu dok zaslon ne bude potpuno bijel. Ako dio zaslona ne možete zabijeliti, kratko dodirnite zaslon kako biste naznačili da senzor za dodir nije potpuno funkcionalan.\n \n"</string>
 </resources>

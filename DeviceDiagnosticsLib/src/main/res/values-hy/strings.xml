@@ -51,7 +51,7 @@
     <string name="sending_report" msgid="8735615783234611336">"Հաշվետվությունն ուղարկվում է վստահելի սարքին..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Գնահատումն ավարտված է"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Արդյունքները կհայտնվեն վստահելի սարքում"</string>
-    <string name="screen_test_result_title" msgid="4741510800317631056">"Էկրանի թեստավորման արդյունքներ"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Էկրանի թեստավորման արդյունք"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"Լավ"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Ակնհայտ թերություններ չկան"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Վատ"</string>

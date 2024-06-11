@@ -139,6 +139,6 @@
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"在要评估的设备上，依次前往“设置”“系统”“设备诊断”“评估模式”“已评估的设备”。按照该设备上的提示操作。"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"现在，系统将显示一系列画面。请检查每一个画面，看看是否有缺陷。检查完一个画面后，轻触该画面即可进入下一个画面。最后，系统会询问您这些画面看起来是否无瑕疵。"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"现在，系统将显示一系列画面。请检查每一个画面，看看是否有缺陷。轻触当前画面可进入下一个画面。"</string>
-    <string name="screen_test_finalize" msgid="9147123495799275930">"请在下方选择与画面状况最相符的选项。"</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"请在下方选择与屏幕状况最相符的选项。"</string>
     <string name="touch_test_summary" msgid="5989536270591433560">"现在，系统将显示红色画面。\n\n用手指在画面上滑动，直到画面完全变白。如果您无法将画面的某个部分变白，请快速点按画面，以表明触摸传感器未完全正常运行。\n\n"</string>
 </resources>

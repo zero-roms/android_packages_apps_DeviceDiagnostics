@@ -52,7 +52,7 @@
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Vlerësimi përfundoi"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Rezultati tani do të shfaqet te pajisja e besuar"</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"Rezultati i testimit të ekranit"</string>
-    <string name="screen_test_good_result_title" msgid="8032695232528965724">"I mirë"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"E mirë"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Nuk ka defekte të dukshme"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"E keqe"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Ekrani ka defekte"</string>
