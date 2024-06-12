@@ -54,7 +54,7 @@ class DisplayAttestationResultFragment(
             show("attestation_device_locked", activity!!.resources.getString(R.string.no))
         }
 
-        show("attestation_verified_boot_state", getVerifiedBootState())
+        show("attestation_verified_boot_state", activity!!.resources.getString(getVerifiedBootStateResId(record)))
         show("attestation_security_level", record.attestationSecurityLevel.name)
         show("attestation_keymaster_version", record.keymasterVersion.toString())
         show("attestation_keymaster_security_level", record.keymasterSecurityLevel.name)
@@ -82,17 +82,6 @@ class DisplayAttestationResultFragment(
         return root.isPresent && root.get().deviceLocked
     }
 
-    private fun getVerifiedBootState(): String {
-        val root = record.teeEnforced.rootOfTrust
-        var stringResId = R.string.avb_not_verified
-        if (
-            root.isPresent && root.get().verifiedBootState == RootOfTrust.VerifiedBootState.VERIFIED
-        ) {
-            stringResId = R.string.avb_verified
-        }
-        return activity!!.resources.getString(stringResId)
-    }
-
     private fun showInt(key: String, value: Optional<Int>?) {
         if (value != null && value.isPresent) return show(key, value.get().toString())
     }
@@ -110,4 +99,13 @@ class DisplayAttestationResultFragment(
     private fun hide(key: String) {
         findPreference<Preference>(key)!!.isVisible = false
     }
+}
+fun getVerifiedBootStateResId(record: ParsedAttestationRecord): Int {
+    val root = record.teeEnforced.rootOfTrust
+    if (
+        root.isPresent && root.get().verifiedBootState == RootOfTrust.VerifiedBootState.VERIFIED
+    ) {
+        return R.string.avb_verified
+    }
+    return R.string.avb_not_verified
 }

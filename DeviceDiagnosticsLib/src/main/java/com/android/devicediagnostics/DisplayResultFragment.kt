@@ -129,7 +129,7 @@ class DisplayResultFragment(
         }
         findPreference<Preference>("trustworthy")?.also {
             if (attestation.second == AttestationResult.VERIFIED) {
-                it.summary = attestationRecord.teeEnforced.rootOfTrust.get().verifiedBootState.name
+                it.summary = activity!!.resources.getString(getVerifiedBootStateResId(attestationRecord))
             } else {
                 it.summary = activity!!.resources.getString(R.string.no)
             }
