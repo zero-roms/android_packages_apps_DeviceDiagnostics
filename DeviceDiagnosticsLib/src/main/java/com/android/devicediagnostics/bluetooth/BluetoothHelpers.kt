@@ -25,8 +25,9 @@ import org.json.JSONObject
 
 const val BT_READ_SIZE = 4096
 const val BT_MAX_PACKET_SIZE = 1024 * 1024
+const val BT_VERSION = 1
 
-private const val QRCODE_VERSION = 3
+private const val QRCODE_VERSION = 4
 
 private fun readFully(socket: BluetoothSocket, n: Int): ByteArray {
     val b = ByteArray(n)
@@ -40,11 +41,11 @@ private fun readFully(socket: BluetoothSocket, n: Int): ByteArray {
     return b
 }
 
-fun readBluetoothPacket(socket: BluetoothSocket): BluetoothPacket {
+fun readBluetoothPacketOrEof(socket: BluetoothSocket): BluetoothPacket? {
     val payloadSizeBytes = readFully(socket, 4)
     val payloadSize = ByteBuffer.wrap(payloadSizeBytes).order(ByteOrder.LITTLE_ENDIAN).getInt()
     if (payloadSize == 0) {
-        throw Exception("Invalid packet received")
+        return null
     }
     if (payloadSize > BT_MAX_PACKET_SIZE) {
         throw Exception("Maximum packet size exceeded: $payloadSize")
@@ -53,7 +54,16 @@ fun readBluetoothPacket(socket: BluetoothSocket): BluetoothPacket {
     return BluetoothPacket.parseFrom(payloadBytes)
 }
 
-fun writeBluetoothPacket(socket: BluetoothSocket, packet: BluetoothPacket) {
+fun readBluetoothPacket(socket: BluetoothSocket): BluetoothPacket {
+    val packet = readBluetoothPacketOrEof(socket)
+    if (packet == null) {
+        throw Exception("Expected packet, got EOF")
+    }
+    return packet
+}
+
+fun writeBluetoothPacket(socket: BluetoothSocket, packetBuilder: BluetoothPacket.Builder) {
+    val packet = packetBuilder.setVersion(BT_VERSION).build()
     val bytes = packet.toByteArray()
     val header = ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN).putInt(bytes.size).array()
     socket.outputStream.write(header)

@@ -27,6 +27,7 @@ import android.os.Looper
 import android.os.ParcelUuid
 import android.util.Log
 import com.android.devicediagnostics.Protos.BluetoothPacket
+import com.android.devicediagnostics.Protos.PacketCommand
 import com.android.devicediagnostics.Protos.TrustedDeviceInfo
 import com.android.devicediagnostics.runInBackground
 import java.util.UUID
@@ -38,17 +39,21 @@ const val CHUNK = 4096
 class BluetoothServer {
     private val adapter
         get() = BluetoothAdapter.getDefaultAdapter()
+
     private var socket: BluetoothSocket? = null
     private var starter: ServerStarter? = null
 
     interface StartListener {
         fun onServerAvailable(connectionData: BluetoothConnectionData)
+
         fun onServerStarted()
+
         fun onServerError()
     }
 
     interface ReadListener {
         fun onBluetoothReadPacket(packet: BluetoothPacket)
+
         fun onBluetoothReadError(e: Exception)
     }
 
@@ -90,13 +95,22 @@ class BluetoothServer {
                 handler.post() { listener.onBluetoothReadPacket(packet) }
             } catch (e: Exception) {
                 handler.post() { listener.onBluetoothReadError(e) }
+                return@runInBackground
             }
 
             try {
-                val ack = BluetoothPacket.newBuilder().setAck(true).build()
+                val ack = BluetoothPacket.newBuilder().setCommand(PacketCommand.COMMAND_ACK)
                 writeBluetoothPacket(socket!!, ack)
             } catch (e: Exception) {
                 Log.e(TAG, "Error sending report acknowledgement: $e")
+                return@runInBackground
+            }
+
+            // Wait for the client to hang up before resetting.
+            try {
+                readBluetoothPacketOrEof(localSocket)
+            } catch (_: Exception) {} finally {
+                reset()
             }
         }
     }
@@ -137,7 +151,9 @@ class ServerStarter(
 
     interface Listener {
         fun onServerAdvertiseStarted(connectionData: BluetoothConnectionData)
+
         fun onServerConnected(socket: BluetoothSocket)
+
         fun onServerAdvertiseError()
     }
 
@@ -164,7 +180,7 @@ class ServerStarter(
             BluetoothConnectionData(serverSocket!!.psm, trustedDeviceInfo.challenge.toByteArray())
         listener.onServerAdvertiseStarted(connectionData)
 
-        val packet = BluetoothPacket.newBuilder().setTrustedDeviceInfo(trustedDeviceInfo).build()
+        val packet = BluetoothPacket.newBuilder().setTrustedDeviceInfo(trustedDeviceInfo)
 
         // Thread since this waits for connections and otherwise will block Ux
         runInBackground() {

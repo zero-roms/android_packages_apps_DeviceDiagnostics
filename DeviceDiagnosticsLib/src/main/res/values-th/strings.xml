@@ -35,7 +35,7 @@
     <string name="battery_title" msgid="6707361668941323259">"สถานะแบตเตอรี่"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"อุปกรณ์ที่เชื่อถือได้"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"ประเมินอุปกรณ์เครื่องอื่น ต้องมีการเชื่อมต่ออินเทอร์เน็ต"</string>
-    <string name="evaluated_device_title" msgid="5546625787928257821">"ประเมินอุปกรณ์แล้ว"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"อุปกรณ์ที่ประเมิน"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"เรียกใช้การทดสอบการวินิจฉัยที่จะให้อุปกรณ์เครื่องอื่นตรวจสอบ"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"สแกนเลย"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"สแกนคิวอาร์โค้ดบนอุปกรณ์ที่เชื่อถือได้ในรูปสี่เหลี่ยมผืนผ้าด้านล่าง"</string>
@@ -77,8 +77,7 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"แรงดันไฟฟ้าเกิน"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"ประสิทธิภาพของพื้นที่เก็บข้อมูล"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"ความจุทั้งหมด"</string>
-    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
-    <skip />
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
     <string name="storage_health_summary_fmt" msgid="7174241725631534273">"อายุการใช้งานคงเหลือ %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"โปรดให้สิทธิ์ที่ขอเพื่อดำเนินการต่อในโหมดการประเมิน"</string>
     <string name="cancel_button" msgid="7011882021431169180">"ยกเลิก"</string>

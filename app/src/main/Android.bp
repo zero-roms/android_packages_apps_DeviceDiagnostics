@@ -10,4 +10,5 @@ android_app {
     static_libs: [
         "DeviceDiagnosticsLib",
     ],
+    certificate: "platform",
 }

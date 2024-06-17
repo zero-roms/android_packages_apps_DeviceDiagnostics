@@ -77,8 +77,7 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Sobretensión"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Condiciones del almacenamiento"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Capacidad total"</string>
-    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
-    <skip />
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
     <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Queda un %1$s de vida útil"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Concede los permisos que se solicitan para continuar en el modo Evaluación."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Cancelar"</string>
@@ -140,6 +139,6 @@
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"En el dispositivo que quieras evaluar, ve a Ajustes, Sistema, Diagnóstico del dispositivo, Modo Evaluación y Dispositivo evaluado. Sigue las indicaciones en ese dispositivo."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Ahora se te mostrarán una serie de pantallas. Obsérvalas y busca posibles defectos. Cuando lo tengas todo listo, toca la pantalla para pasar a la siguiente. Al final, se te preguntará si las pantallas están impecables."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Ahora se te mostrarán una serie de pantallas. Obsérvalas y busca posibles defectos. Toca la pantalla para pasar a la siguiente."</string>
-    <string name="screen_test_finalize" msgid="9147123495799275930">"Selecciona la opción que mejor se adapte a la condición de la pantalla."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Selecciona la opción que mejor se adapte al estado de la pantalla."</string>
     <string name="touch_test_summary" msgid="5989536270591433560">"Se te mostrará una pantalla roja.\n \n Desliza el dedo por la pantalla hasta que esté completamente blanca. Si no te es posible hacer que parte de la pantalla se vuelva blanca, toca ligeramente la pantalla para indicar que el sensor táctil no funciona adecuadamente.\n \n"</string>
 </resources>

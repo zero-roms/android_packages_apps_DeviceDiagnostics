@@ -91,9 +91,6 @@ class WaitForResultActivity : CollapsingToolbarBaseActivity(), BluetoothServer.R
             return
         }
 
-        val btServer = ApplicationInterface.app.getBluetoothServer()
-        btServer.reset()
-
         val state = TrustedState.fromActivity(this)!!
         state.report = packet.deviceReport
         launchTrustedActivity(this, DisplayResultActivity::class.java.name, state)

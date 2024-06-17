@@ -43,4 +43,6 @@ android_test {
         "android.test.mock.stubs",
     ],
     test_suites: ["general-tests"],
+    certificate: "platform",
+    instrumentation_for: "DeviceDiagnostics",
 }

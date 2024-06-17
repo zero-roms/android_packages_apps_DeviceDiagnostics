@@ -53,7 +53,7 @@
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Tulemused kuvatakse nüüd usaldusväärses seadmes"</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"Ekraanitesti tulemus"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"Hea"</string>
-    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Ühtegi defekti ei tuvastatud"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Defektid puuduvad"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Halb"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Ekraanil esineb defekte"</string>
     <string name="manual_testing_title" msgid="4512384040828953255">"Käsitsi testimine"</string>
@@ -77,8 +77,7 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Ülepinge"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Salvestusruumi seisund"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Kogumaht"</string>
-    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
-    <skip />
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
     <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Järelejäänud maht: %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Hindamisrežiimis jätkamiseks andke taotletud õigused."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Tühista"</string>

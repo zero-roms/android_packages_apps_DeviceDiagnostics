@@ -51,7 +51,7 @@
     <string name="sending_report" msgid="8735615783234611336">"Итгэмжлэгдсэн төхөөрөмж рүү тайлан илгээж байна..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Үнэлж дууслаа"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Үр дүн одоо итгэмжлэгдсэн төхөөрөмж дээр харагдана"</string>
-    <string name="screen_test_result_title" msgid="4741510800317631056">"Дэлгэцийн шалгалтын үр дүн"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Дэлгэцийн туршилтын үр дүн"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"Сайн"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Тодорхой согог байхгүй"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Муу"</string>
@@ -77,8 +77,7 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Хүчдэл хэтэрсэн"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Хадгалах сангийн хэрэглээний төлөв"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Нийт багтаамж"</string>
-    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
-    <skip />
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>⁠"</string>
     <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s-н эдэлгээ үлдсэн"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Үнэлгээний горимд үргэлжлүүлэхийн тулд хүссэн зөвшөөрлийг олгоно уу."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Цуцлах"</string>
@@ -106,7 +105,7 @@
     <string name="attestation_manufacturer" msgid="2043278400561674518">"Үйлдвэрлэгч"</string>
     <string name="attestation_model" msgid="8223243376214262662">"Загвар"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Нийлүүлэгчийн нөхөөсний түвшин"</string>
-    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Нөхөөсний түвшнийг ачаалах"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Ачаалах нөхөөсний түвшин"</string>
     <string name="yes" msgid="6686215078709381643">"Тийм"</string>
     <string name="no" msgid="5957591978126937912">"Үгүй"</string>
     <string name="unknown" msgid="6936738212381747979">"Тодорхойгүй"</string>

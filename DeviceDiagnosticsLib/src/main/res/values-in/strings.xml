@@ -23,13 +23,13 @@
     <string name="proceed" msgid="8922926495095369132">"Lanjutkan"</string>
     <string name="unavailable" msgid="7842920330665850121">"Tidak tersedia"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Menghubungkan..."</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Kesehatan komponen"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"Jalankan pengujian manual dan tampilkan kesehatan baterai dan penyimpanan"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Kondisi komponen"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Jalankan pengujian manual dan tampilkan kondisi baterai dan penyimpanan"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Mode evaluasi"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Gunakan satu perangkat untuk menilai perangkat lain"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Pengujian manual"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Pengujian tampilan"</string>
-    <string name="touch_test_title" msgid="4347784874948129736">"Uji sentuh"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Pengujian sentuhan"</string>
     <string name="component_title" msgid="6580046234562555655">"Status komponen"</string>
     <string name="storage_title" msgid="5921235202250843966">"Status penyimpanan"</string>
     <string name="battery_title" msgid="6707361668941323259">"Status baterai"</string>
@@ -77,8 +77,7 @@
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Voltase berlebih"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Kesehatan penyimpanan"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Total kapasitas"</string>
-    <!-- no translation found for storage_total_capacity_summary_fmt (8200454514088613447) -->
-    <skip />
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
     <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s masa aktif tersisa"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Berikan izin yang diminta untuk melanjutkan dalam mode evaluasi."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Batal"</string>
@@ -138,8 +137,8 @@
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Terjadi error saat berkomunikasi dengan perangkat yang dievaluasi. Pastikan Bluetooth diaktifkan, lalu coba lagi."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Pindai sekarang"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Di perangkat yang ingin Anda evaluasi, buka Setelan, Sistem, Diagnostik perangkat, Mode evaluasi, lalu Perangkat yang dievaluasi. Ikuti perintah di perangkat tersebut."</string>
-    <string name="screen_test_summary" msgid="6565006807310186664">"Kini Anda dapat melihat serangkaian layar. Periksa setiap layar dan cari cacatnya. Setelah Anda yakin, sentuh layar untuk berpindah ke layar berikutnya. Pada akhirnya, Anda akan ditanya apakah layar terlihat tidak memiliki cacat."</string>
-    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Kini Anda akan diperlihatkan serangkaian layar. Periksa setiap layar dan cari cacatnya. Sentuh layar untuk berpindah ke yang berikutnya."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Kini Anda akan melihat serangkaian layar. Periksa setiap layar dan cari cacatnya. Setelah yakin, sentuh layar untuk berpindah ke yang berikutnya. Pada akhirnya, Anda akan ditanya apakah layar terlihat tidak memiliki cacat."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Kini Anda akan melihat serangkaian layar. Periksa setiap layar dan cari cacatnya. Sentuh layar untuk berpindah ke yang berikutnya."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Pilih opsi di bawah ini yang paling sesuai dengan kondisi layar."</string>
     <string name="touch_test_summary" msgid="5989536270591433560">"Kini Anda akan melihat layar merah.\n \n Geser jari Anda pada layar tersebut hingga layar menjadi putih seluruhnya. Jika Anda tidak dapat mengubah sebagian layar menjadi putih, ketuk sebentar pada layar untuk menunjukkan bahwa sensor sentuh tidak berfungsi sepenuhnya.\n \n"</string>
 </resources>

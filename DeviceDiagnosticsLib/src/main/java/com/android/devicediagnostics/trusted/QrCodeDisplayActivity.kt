@@ -91,7 +91,7 @@ class QrCodeDisplayFragment() : PreferenceFragmentCompat(), BluetoothServer.Star
     }
 
     override fun onServerAvailable(connectionData: BluetoothConnectionData) {
-        if (isDetached) {
+        if (activity == null) {
             return
         }
 
@@ -103,7 +103,7 @@ class QrCodeDisplayFragment() : PreferenceFragmentCompat(), BluetoothServer.Star
     }
 
     override fun onServerStarted() {
-        if (isDetached) {
+        if (activity == null) {
             return
         }
         launchTrustedActivity(activity!!, WaitForResultActivity::class.java.name, state)
@@ -111,10 +111,10 @@ class QrCodeDisplayFragment() : PreferenceFragmentCompat(), BluetoothServer.Star
     }
 
     override fun onServerError() {
-        if (isDetached) {
+        if (activity == null) {
             return
         }
-        findPreference<Preference>("Continue")!!.also {
+        findPreference<Preference>("Scan")!!.also {
             it.setTitle(R.string.bluetooth_error_title)
             it.setSummary(R.string.bluetooth_error_summary)
         }
