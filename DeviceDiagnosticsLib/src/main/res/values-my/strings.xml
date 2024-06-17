@@ -26,7 +26,7 @@
     <string name="component_health_title" msgid="6177813132789269842">"အစိတ်အပိုင်း ကြံ့ခိုင်မှု"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"ကိုယ်တိုင်စစ်ဆေးမှုများ ပြုလုပ်ရန်နှင့် ဘက်ထရီနှင့် သိုလှောင်ခန်းအခြေအနေကို ကြည့်ရန်"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"အကဲဖြတ်မုဒ်"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"နောက်စက်တစ်ခုကို အကဲဖြတ်ရန်အတွက် စက်တစ်ခုကို သုံးရန်"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"စက်တစ်ခုကို အကဲဖြတ်ရန်အတွက် နောက်စက်တစ်ခုကို သုံးရန်"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"လူကိုယ်တိုင် စမ်းသပ်မှု"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"စခရင် စမ်းသပ်မှု"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"ထိတွေ့မှု စမ်းသပ်ချက်"</string>
@@ -62,7 +62,7 @@
     <string name="battery_health_title" msgid="3945318982701313271">"အခြေအနေ"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"ထုတ်လုပ်ရက်စွဲ"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"ပထမဆုံး အသုံးပြုသည့် ရက်စွဲ"</string>
-    <string name="battery_cycle_count" msgid="1002728954996996785">"သုံးစွဲမှု အကြိမ်ရေ"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"အားတစ်ပတ်ဖြည့်သည့် အကြိမ်ရေ"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"အမှတ်စဉ်"</string>
     <string name="battery_part_status" msgid="504091754655232085">"အစိတ်အပိုင်း အခြေအနေ"</string>
     <string name="battery_original" msgid="2552600989411644999">"မူရင်း"</string>
@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"သိုလှောင်ခန်း အခြေအနေ"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"စုစုပေါင်း သိုလှောင်နိုင်မှုပမာဏ"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"တစ်သက်တာအတွက် ကျန်ရှိမှု %1$s"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"သက်တမ်း ကျန်ရှိမှု %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"အကဲဖြတ်မုဒ်တွင် ရှေ့ဆက်ရန် တောင်းဆိုထားသော ခွင့်ပြုချက်များ ပေးပါ။"</string>
     <string name="cancel_button" msgid="7011882021431169180">"မလုပ်တော့"</string>
     <string name="try_again_button" msgid="6015477950108798246">"ထပ်စမ်းကြည့်ပါ"</string>
@@ -117,8 +117,8 @@
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"ဒုတိယ IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"အမှတ်စဉ်"</string>
-    <string name="bootloader_locked_title" msgid="4498089738937695995">"စနစ်စတင်မှု လော့ခ်ချထားသည်"</string>
-    <string name="trustworthy_title" msgid="5360267928618795351">"စက်သည် ယုံကြည်ရသည်"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"စနစ်စတင်မှု လော့ခ်ချခြင်း"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"စက်၏ ယုံကြည်ရမှု"</string>
     <string name="display_status_title" msgid="7827806798539639832">"ပြသမှု အခြေအနေ"</string>
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"ထိတွေ့မှု အာရုံခံကိရိယာ အခြေအနေ"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"အထောက်အထားပြခြင်း အသေးစိတ်"</string>

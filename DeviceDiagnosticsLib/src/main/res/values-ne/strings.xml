@@ -86,8 +86,8 @@
     <string name="touch_test_result_summary" msgid="9215663453308287653">"यो टचसम्बन्धी परीक्षणको परिणाम हो। तपाईं पछाडि गएर फेरि यो परीक्षण गर्न सक्नुहुन्छ।"</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"टच सेन्सरसम्बन्धी परीक्षण पास भएको छ"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"टच सेन्सरसम्बन्धी परीक्षण फेल भएको छ"</string>
-    <string name="pass" msgid="6411665547268368837">"पास भयो"</string>
-    <string name="fail" msgid="3918028202746427731">"फेल भयो"</string>
+    <string name="pass" msgid="6411665547268368837">"पास"</string>
+    <string name="fail" msgid="3918028202746427731">"फेल"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"पुष्टि गरिएको प्रमाणपत्र"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"डिभाइस लक गरिएको छ"</string>
     <string name="attestation_verified_boot_state" msgid="6360953823092860181">"पुष्टि गरिएको बुटको स्थिति"</string>

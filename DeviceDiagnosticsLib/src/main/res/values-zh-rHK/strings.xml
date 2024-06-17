@@ -88,7 +88,7 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"觸控感應器測試失敗"</string>
     <string name="pass" msgid="6411665547268368837">"通過"</string>
     <string name="fail" msgid="3918028202746427731">"失敗"</string>
-    <string name="attestation_verified" msgid="6535873137799452259">"已驗證的憑證"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"憑證已驗證"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"裝置已上鎖"</string>
     <string name="attestation_verified_boot_state" msgid="6360953823092860181">"驗證開機狀態"</string>
     <string name="attestation_security_level" msgid="6633918464653325429">"安全等級"</string>

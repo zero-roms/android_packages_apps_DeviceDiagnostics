@@ -98,7 +98,7 @@
     <string name="attestation_brand" msgid="5238699762448331155">"Marca"</string>
     <string name="attestation_device" msgid="1984309818766961098">"Dispositivo"</string>
     <string name="attestation_product" msgid="7325714994397112640">"Produto"</string>
-    <string name="attestation_serial" msgid="5001580041093391656">"Serial"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"Série"</string>
     <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
     <string name="attestation_second_imei" msgid="7566064584445017361">"Segundo IMEI"</string>
     <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>

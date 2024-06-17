@@ -105,7 +105,7 @@
     <string name="attestation_manufacturer" msgid="2043278400561674518">"Үйлдвэрлэгч"</string>
     <string name="attestation_model" msgid="8223243376214262662">"Загвар"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Нийлүүлэгчийн нөхөөсний түвшин"</string>
-    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Нөхөөсний түвшнийг ачаалах"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Ачаалах нөхөөсний түвшин"</string>
     <string name="yes" msgid="6686215078709381643">"Тийм"</string>
     <string name="no" msgid="5957591978126937912">"Үгүй"</string>
     <string name="unknown" msgid="6936738212381747979">"Тодорхойгүй"</string>

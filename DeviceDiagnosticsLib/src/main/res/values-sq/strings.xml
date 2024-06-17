@@ -87,7 +87,7 @@
     <string name="touch_test_good_title" msgid="4008967693136685770">"Testi i sensorit të prekjes kaloi"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Testi i sensorit të prekjes dështoi"</string>
     <string name="pass" msgid="6411665547268368837">"Kalon"</string>
-    <string name="fail" msgid="3918028202746427731">"Dështim"</string>
+    <string name="fail" msgid="3918028202746427731">"Ngel"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"Certifikata e verifikuar"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"Pajisja është e kyçur"</string>
     <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Gjendja e ndezjes së verifikuar"</string>

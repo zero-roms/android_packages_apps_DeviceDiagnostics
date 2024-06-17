@@ -130,7 +130,7 @@
     <string name="evaluate_another_title" msgid="6275248738668045886">"दुसऱ्या डिव्हाइसचे मूल्यांकन करा"</string>
     <string name="back_to_main_title" msgid="2496143013300121780">"मुख्य मेनूवर परत जा"</string>
     <string name="locked" msgid="2034650000550950371">"लॉक केलेले"</string>
-    <string name="not_locked" msgid="1663929635666930122">"लॉक न केलेले"</string>
+    <string name="not_locked" msgid="1663929635666930122">"लॉक केलेला नाही"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR कोड"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"मूल्यांकन केले जात असलेल्या डिव्हाइसवर पुढे सुरू ठेवा"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"तुम्ही मूल्यांकन करत असलेल्या डिव्हाइसवरील चाचण्या पूर्ण करा, त्यानंतर परिणाम इथे दिसतील."</string>
