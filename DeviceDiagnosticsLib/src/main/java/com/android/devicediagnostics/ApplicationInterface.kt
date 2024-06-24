@@ -18,37 +18,49 @@ package com.android.devicediagnostics
 
 import android.accessibilityservice.AccessibilityServiceInfo
 import android.content.Context
+import android.os.Build
 import android.os.SystemProperties
 import android.view.accessibility.AccessibilityManager
 import com.android.devicediagnostics.bluetooth.BluetoothClient
+import com.android.devicediagnostics.bluetooth.BluetoothClientImpl
 import com.android.devicediagnostics.bluetooth.BluetoothServer
+import com.android.devicediagnostics.bluetooth.FakeBluetoothClient
 import com.android.settingslib.qrcode.QrCamera
 import com.google.android.attestation.ParsedAttestationRecord
 import kotlin.math.min
 import kotlin.random.Random
 
 open class ApplicationInterface {
-    private val btClient = BluetoothClient()
+    private val btClient = BluetoothClientImpl()
     private val btServer = BluetoothServer()
+    private var singleDeviceMode = false
 
     open fun getRandomBytes(count: Int): ByteArray {
         return Random.nextBytes(count)
     }
+
     open fun getQrCamera(context: Context, activity: QrCamera.ScannerCallback): QrCamera {
         return QrCamera(context, activity)
     }
+
     open fun getBluetoothClient(): BluetoothClient {
+        if (singleDeviceMode) {
+            return FakeBluetoothClient()
+        }
         return btClient
     }
+
     open fun getBluetoothServer(): BluetoothServer {
         return btServer
     }
+
     open fun verifyAttestation(
         attestation: ByteArray,
         challenge: ByteArray
     ): Pair<ParsedAttestationRecord?, AttestationResult> {
         return getAttestation(attestation, challenge)
     }
+
     open fun getLaunchLevel(): Int {
         val vendorApiLevel = getPropertyInt("ro.vendor.api_level", -1)
         if (vendorApiLevel != -1) {
@@ -86,6 +98,19 @@ open class ApplicationInterface {
         } catch (e: Exception) {
             defaultValue
         }
+    }
+
+    // This allows testing the Bluetooth flow without having two devices.
+    fun enterSingleDeviceMode(): Boolean {
+        if (Build.IS_USER) {
+            return false
+        }
+        singleDeviceMode = true
+        return true
+    }
+
+    fun leaveSingleDeviceMode() {
+        singleDeviceMode = false
     }
 
     companion object {

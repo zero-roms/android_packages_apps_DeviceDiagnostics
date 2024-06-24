@@ -48,6 +48,7 @@ class QrCodeScanFragment(private val callbacks: Callbacks) :
 
     interface Callbacks {
         fun isQrCodeValid(qrCode: String?): Boolean
+
         fun onQrCodeScanned(qrCode: String)
     }
 
@@ -68,6 +69,16 @@ class QrCodeScanFragment(private val callbacks: Callbacks) :
                 }
             }
         textureView!!.clipToOutline = true
+
+        // Tap the QR code scanner to use a fake bluetooth client during testing.
+        var counter = 0
+        textureView!!.setOnClickListener {
+            if (++counter == 5 && ApplicationInterface.app.enterSingleDeviceMode()) {
+                val fakeQrCode = BluetoothConnectionData(0, byteArrayOf(0)).toString()
+                callbacks.onQrCodeScanned(fakeQrCode)
+            }
+            true
+        }
     }
 
     fun setConnectionProgressVisibility(visible: Boolean) {
@@ -141,6 +152,8 @@ class QrCodeScanActivity :
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_one_fragment)
         setTitle(R.string.evaluation_mode_title)
+
+        ApplicationInterface.app.leaveSingleDeviceMode()
     }
 
     override fun onResume() {

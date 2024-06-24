@@ -34,7 +34,7 @@ import kotlinx.coroutines.sync.Mutex
 
 private const val TAG = "BluetoothClient"
 
-class BluetoothClient {
+abstract class BluetoothClient {
     interface ScanListener {
         fun onBluetoothConnected(trustedDeviceInfo: TrustedDeviceInfo)
 
@@ -43,7 +43,15 @@ class BluetoothClient {
 
     var connectionData: BluetoothConnectionData? = null
 
-    fun start(listener: ScanListener) {
+    abstract fun start(listener: ScanListener)
+
+    abstract fun sendReport(report: DeviceReport)
+
+    abstract fun reset()
+}
+
+class BluetoothClientImpl : BluetoothClient() {
+    override fun start(listener: ScanListener) {
         synchronized(lock) { startImpl(listener) }
     }
 
@@ -104,7 +112,7 @@ class BluetoothClient {
         }
     }
 
-    fun reset() {
+    override fun reset() {
         synchronized(lock) { resetImpl() }
     }
 
@@ -129,7 +137,7 @@ class BluetoothClient {
         listener = null
     }
 
-    fun sendReport(report: DeviceReport) {
+    override fun sendReport(report: DeviceReport) {
         synchronized(lock) {
             val packet = BluetoothPacket.newBuilder().setDeviceReport(report)
             writeBluetoothPacket(socket!!, packet)
