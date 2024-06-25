@@ -8,6 +8,7 @@
       android:layout_width="300dp"
       android:layout_height="wrap_content"
       android:layout_marginLeft="24dp"
+      android:layout_marginRight="24dp"
       android:textAppearance="@*android:style/TextAppearance.DeviceDefault.Body1"
       android:text="@string/evaluated_confirm_send_data" />
 
@@ -17,5 +18,6 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginLeft="24dp"
+      android:layout_marginRight="24dp"
       android:text="@string/evaluated_send_report"/>
 </LinearLayout>
