@@ -23,14 +23,14 @@
     <string name="proceed" msgid="8922926495095369132">"Endelea"</string>
     <string name="unavailable" msgid="7842920330665850121">"Haipo"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Inaunganisha..."</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Uthabiti wa kipengele cha kifaa"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Uthabiti wa vipengele"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Fanya majaribio mwenyewe na uangalie muda wa kudumu wa betri na uthabiti wa hifadhi"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Hali ya kutathmini"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Tumia kifaa kimoja kutathmini kingine"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Majaribio ya kujifanyia"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Jaribio la skrini"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Jaribio la kugusa"</string>
-    <string name="component_title" msgid="6580046234562555655">"Hali ya kipengele cha kifaa"</string>
+    <string name="component_title" msgid="6580046234562555655">"Hali ya vipengele"</string>
     <string name="storage_title" msgid="5921235202250843966">"Hali ya hifadhi"</string>
     <string name="battery_title" msgid="6707361668941323259">"Hali ya betri"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Kifaa unachokiamini"</string>
@@ -67,7 +67,7 @@
     <string name="battery_part_status" msgid="504091754655232085">"Hali ya kipengele cha kifaa"</string>
     <string name="battery_original" msgid="2552600989411644999">"Halisi"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Imebadilishwa"</string>
-    <string name="battery_part_history" msgid="5669260842330985767">"Kumbukumbu za Kipengele cha Kifaa"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Kumbukumbu ya Vipengele"</string>
     <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s ya uwezo halisi"</string>
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Hali ya muda wa kudumu wa betri haipatikani"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Baridi"</string>

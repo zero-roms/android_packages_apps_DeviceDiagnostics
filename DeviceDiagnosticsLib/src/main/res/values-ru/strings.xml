@@ -49,7 +49,7 @@
     <string name="bluetooth_error_title" msgid="4352617586275775499">"Ошибка Bluetooth"</string>
     <string name="bluetooth_error_summary" msgid="8411286861814582793">"При попытке связаться с надежным устройством произошла ошибка. Проверьте, что Bluetooth включен, и попробуйте снова."</string>
     <string name="sending_report" msgid="8735615783234611336">"Отправка отчета на надежное устройство…"</string>
-    <string name="evaluation_complete_title" msgid="2503185542217582851">"Оценка завершена"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Проверка завершена"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Результаты будут показаны на надежном устройстве."</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"Результат тестирования экрана"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"Хорошо"</string>

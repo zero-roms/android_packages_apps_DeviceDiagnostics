@@ -105,7 +105,7 @@
     <string name="attestation_manufacturer" msgid="2043278400561674518">"உற்பத்தியாளர்"</string>
     <string name="attestation_model" msgid="8223243376214262662">"மாடல்"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"விற்பனையாளர் இணைப்பு நிலை"</string>
-    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"பேட்ச் நிலையைத் தொடங்கு"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"தொடக்க பேட்ச் நிலை"</string>
     <string name="yes" msgid="6686215078709381643">"ஆம்"</string>
     <string name="no" msgid="5957591978126937912">"இல்லை"</string>
     <string name="unknown" msgid="6936738212381747979">"தெரியவில்லை"</string>
@@ -117,7 +117,7 @@
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"இரண்டாவது IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"வரிசை எண்"</string>
-    <string name="bootloader_locked_title" msgid="4498089738937695995">"பூட்லோடர் பூட்டப்பட்டுள்ளது"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"பூட்லோடர் பூட்டப்பட்டுள்ளதா"</string>
     <string name="trustworthy_title" msgid="5360267928618795351">"சாதனத்தின் நம்பகத்தன்மை"</string>
     <string name="display_status_title" msgid="7827806798539639832">"டிஸ்ப்ளே நிலை"</string>
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"டச் சென்சாரின் நிலை"</string>

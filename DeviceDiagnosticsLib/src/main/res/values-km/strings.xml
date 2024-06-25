@@ -23,14 +23,14 @@
     <string name="proceed" msgid="8922926495095369132">"បន្ត"</string>
     <string name="unavailable" msgid="7842920330665850121">"មិនមានទេ"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"កំពុង​ភ្ជាប់..."</string>
-    <string name="component_health_title" msgid="6177813132789269842">"គុណភាពសមាសធាតុ"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"គុណភាពគ្រឿងបង្គុំ"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"ធ្វើតេស្តដោយផ្ទាល់ដៃ និងមើលគុណភាពទំហំផ្ទុក ក៏ដូចជាថ្ម"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"មុខងារវាយតម្លៃ"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"ប្រើឧបករណ៍មួយ ដើម្បីវាយតម្លៃឧបករណ៍ផ្សេងទៀត"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"ការធ្វើតេស្តដោយផ្ទាល់ដៃ"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ការធ្វើតេស្តផ្ទាំងអេក្រង់"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"ការធ្វើតេស្តការចុច"</string>
-    <string name="component_title" msgid="6580046234562555655">"ស្ថានភាពសមាសធាតុ"</string>
+    <string name="component_title" msgid="6580046234562555655">"ស្ថានភាពគ្រឿងបង្គុំ"</string>
     <string name="storage_title" msgid="5921235202250843966">"ស្ថានភាពទំហំផ្ទុក"</string>
     <string name="battery_title" msgid="6707361668941323259">"ស្ថានភាពថ្ម"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"ឧបករណ៍​ដែល​ទុកចិត្ត"</string>
@@ -76,7 +76,7 @@
     <string name="battery_health_overheat" msgid="8745643548393640213">"ក្ដៅ​ខ្លាំង"</string>
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"លើស​តង់ស្យុង"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"គុណភាពទំហំផ្ទុក"</string>
-    <string name="storage_total_capacity_title" msgid="1212959252345254806">"កាប៉ាស៊ីតេសរុប"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"ទំហំផ្ទុកសរុប"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>⁠"</string>
     <string name="storage_health_summary_fmt" msgid="7174241725631534273">"នៅសល់អាយុកាលទាំងមូល %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"សូមផ្ដល់ការអនុញ្ញាតដែលបានស្នើសុំ ដើម្បីបន្តក្នុងមុខងារវាយតម្លៃ។"</string>

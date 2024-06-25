@@ -38,8 +38,8 @@
     <string name="evaluated_device_title" msgid="5546625787928257821">"מכשיר שנבדק"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"הרצה של בדיקות אבחון שיאומתו על ידי מכשיר אחר."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"הפעלת הסריקה"</string>
-    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"‏עליך לסרוק במכשיר המהימן את קוד ה-QR שמופיע במלבן למטה"</string>
-    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"‏לאחר הסריקה של קוד ה-QR, תופעל באופן אוטומטי סדרה של בדיקות במכשיר הזה."</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"‏צריך לסרוק במכשיר המהימן את קוד ה-QR שמופיע במלבן למטה"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"‏אחרי הסריקה של קוד ה-QR, תופעל באופן אוטומטי סדרה של בדיקות במכשיר הזה."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"בחירה של מכשיר מהימן"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"אפשר גם לבחור את המכשיר מהרשימה הבאה"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"החיבור נכשל, צריך לנסות שוב."</string>

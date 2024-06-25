@@ -38,7 +38,7 @@
     <string name="evaluated_device_title" msgid="5546625787928257821">"อุปกรณ์ที่ประเมิน"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"เรียกใช้การทดสอบการวินิจฉัยที่จะให้อุปกรณ์เครื่องอื่นตรวจสอบ"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"สแกนเลย"</string>
-    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"สแกนคิวอาร์โค้ดบนอุปกรณ์ที่เชื่อถือได้ในรูปสี่เหลี่ยมผืนผ้าด้านล่าง"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"สแกนคิวอาร์โค้ดจากอุปกรณ์ที่เชื่อถือได้โดยให้โค้ดอยู่ภายในรูปสี่เหลี่ยมผืนผ้าด้านล่าง"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"เมื่อสแกนคิวอาร์โค้ดเรียบร้อยแล้ว อุปกรณ์นี้จะเริ่มชุดการทดสอบโดยอัตโนมัติ"</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"เลือกอุปกรณ์ที่เชื่อถือได้"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"อีกวิธีหนึ่งคือเลือกอุปกรณ์จากรายการด้านล่าง"</string>

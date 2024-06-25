@@ -34,10 +34,10 @@
     <string name="storage_title" msgid="5921235202250843966">"Stav úložiska"</string>
     <string name="battery_title" msgid="6707361668941323259">"Stav batérie"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Dôveryhodné zariadenie"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Ohodnoťte iné zariadenie. Vyžaduje sa internetové pripojenie."</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Ohodnoťte ďalšie zariadenie. Vyžaduje sa internetové pripojenie."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Hodnotené zariadenie"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Spustite diagnostický text, ktorý bude overený iným zariadením."</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skenovať"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Spustite diagnostické testy, ktoré budú overené iným zariadením."</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skenujte"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Naskenujte QR kód z dôveryhodného zariadenia do tohto obdĺžnika"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Po úspešnom naskenovaní QR kódu zariadenie automaticky spustí sériu testov."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Výber dôveryhodného zariadenia"</string>
@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"Stav úložiska"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Celková kapacita"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Zostávajúca životnosť: %1$s"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Zostáva %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Udeľte požadované povolenia na pokračovanie v režime hodnotenia."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Zrušiť"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Skúsiť znova"</string>

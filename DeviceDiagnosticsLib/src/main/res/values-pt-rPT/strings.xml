@@ -38,7 +38,7 @@
     <string name="evaluated_device_title" msgid="5546625787928257821">"Dispositivo avaliado"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Execute testes de diagnóstico que vão ser validados por outro dispositivo."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Ler agora"</string>
-    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Leia o código QR no dispositivo fidedigno no retângulo abaixo"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Insira o código QR no retângulo para o ler no dispositivo fidedigno"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Quando tiver lido o código QR com êxito, este dispositivo vai iniciar uma série de testes automaticamente."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Selecione o dispositivo fidedigno"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Em alternativa, selecione o dispositivo na lista abaixo"</string>
@@ -127,7 +127,7 @@
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Tente a atestação novamente"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Falha ao validar a atestação. Verifique a sua ligação e tente novamente."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Passos seguintes"</string>
-    <string name="evaluate_another_title" msgid="6275248738668045886">"Avalie outro dispositivo"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Avaliar outro dispositivo"</string>
     <string name="back_to_main_title" msgid="2496143013300121780">"Voltar ao menu principal"</string>
     <string name="locked" msgid="2034650000550950371">"Bloqueado"</string>
     <string name="not_locked" msgid="1663929635666930122">"Não bloqueado"</string>
@@ -140,5 +140,5 @@
     <string name="screen_test_summary" msgid="6565006807310186664">"Agora, vai ver uma série de ecrãs. Analise cada um deles e procure defeitos. Quando terminar, toque no ecrã para passar ao próximo. No fim, é-lhe perguntado se os ecrãs estão imaculados."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Agora, vai ver uma série de ecrãs. Analise cada um deles e procure defeitos. Toque no ecrã para passar ao próximo."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Selecione a opção abaixo que melhor corresponde à condição do ecrã."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Agora, vai ver um ecrã vermelho.\n \n Deslize rapidamente o dedo no ecrã até que este fique totalmente branco. Se não conseguir que uma parte do ecrã fique branca, toque brevemente no ecrã para indicar que o sensor tátil não está a funcionar totalmente.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Agora, vai ver um ecrã vermelho.\n \n Deslize o dedo no ecrã até que este fique totalmente branco. Se não conseguir que uma parte do ecrã fique branca, toque brevemente no ecrã para indicar que o sensor tátil não está a funcionar totalmente.\n \n"</string>
 </resources>

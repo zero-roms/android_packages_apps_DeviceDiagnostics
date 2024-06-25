@@ -105,7 +105,7 @@
     <string name="attestation_manufacturer" msgid="2043278400561674518">"Κατασκευαστής"</string>
     <string name="attestation_model" msgid="8223243376214262662">"Μοντέλο"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Επίπεδο ενημέρωσης κώδικα παρόχου"</string>
-    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Εκκίνηση επιπέδου ενημέρωσης κώδικα"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Επίπεδο ενημέρωσης κώδικα εκκίνησης"</string>
     <string name="yes" msgid="6686215078709381643">"Ναι"</string>
     <string name="no" msgid="5957591978126937912">"Όχι"</string>
     <string name="unknown" msgid="6936738212381747979">"Άγνωστο"</string>
@@ -130,7 +130,7 @@
     <string name="evaluate_another_title" msgid="6275248738668045886">"Αξιολόγηση άλλης συσκευής"</string>
     <string name="back_to_main_title" msgid="2496143013300121780">"Επιστροφή στο κύριο μενού"</string>
     <string name="locked" msgid="2034650000550950371">"Κλειδωμένη"</string>
-    <string name="not_locked" msgid="1663929635666930122">"Μη κλειδωμένη"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Δεν κλειδώθηκε"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"Κωδικός QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Συνέχεια στη συσκευή που αξιολογείται"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Ολοκληρώστε τις δοκιμές στη συσκευή που αξιολογείτε και, στη συνέχεια, τα αποτελέσματα θα εμφανιστούν εδώ."</string>

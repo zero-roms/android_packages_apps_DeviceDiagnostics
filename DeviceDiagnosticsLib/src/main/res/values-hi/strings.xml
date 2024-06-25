@@ -25,7 +25,7 @@
     <string name="bluetooth_connecting" msgid="7966802493158307502">"कनेक्ट किया जा रहा है…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"कॉम्पोनेंट की परफ़ॉर्मेंस"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"मैन्युअल टेस्ट करके, बैटरी और स्टोरेज की परफ़ॉर्मेंस देखें"</string>
-    <string name="evaluation_mode_title" msgid="5845218248059550975">"जांच करने वाला मोड"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"जांच मोड"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"किसी डिवाइस की जांच करने के लिए दूसरे डिवाइस का इस्तेमाल करें"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"मैन्युअल तरीके से जांच करने की सुविधा"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"डिसप्ले की जांंच"</string>
@@ -38,7 +38,7 @@
     <string name="evaluated_device_title" msgid="5546625787928257821">"जांचा गया डिवाइस"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"डिवाइस की परफ़ॉर्मेंस से जुड़ी जानकारी देने वाले टेस्ट करें. इन टेस्ट के नतीजों की पुष्टि दूसरे डिवाइस से की जाएगी."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"अभी स्कैन करें"</string>
-    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"यहां दिए गए रेक्टैंगल में मौजूद क्यूआर कोड को भरोसेमंद डिवाइस से स्कैन करें"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"भरोसेमंद डिवाइस पर, नीचे दिए गए रेक्टैंगल बॉक्स से क्यूआर कोड स्कैन करें"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"क्यूआर कोड स्कैन करने के बाद, इस डिवाइस पर अपने-आप अलग-अलग तरह की जांंच शुरू हो जाएंगी."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"भरोसेमंद डिवाइस को चुनें"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"इसके अलावा, यहां दी गई सूची में से कोई डिवाइस चुनें"</string>
@@ -50,7 +50,7 @@
     <string name="bluetooth_error_summary" msgid="8411286861814582793">"भरोसेमंद डिवाइस से कनेक्ट करने में गड़बड़ी हुई. कृपया पुष्टि करें कि ब्लूटूथ चालू हो और फिर से कोशिश करें."</string>
     <string name="sending_report" msgid="8735615783234611336">"भरोसेमंद डिवाइस को रिपोर्ट भेजी जा रही है..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"जांच पूरी हुई"</string>
-    <string name="evaluation_complete_summary" msgid="1899365605498435450">"नतीजे अब भरोसेमंद डिवाइस में दिखेंगे"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"नतीजे अब भरोसेमंद डिवाइस पर दिखेंगे"</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"स्क्रीन टेस्ट का नतीजा"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"अच्छी"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"स्क्रीन में किसी खराबी का साफ़ तौर पर पता नहीं चला"</string>
@@ -98,26 +98,26 @@
     <string name="attestation_brand" msgid="5238699762448331155">"ब्रैंड"</string>
     <string name="attestation_device" msgid="1984309818766961098">"डिवाइस"</string>
     <string name="attestation_product" msgid="7325714994397112640">"प्रॉडक्ट"</string>
-    <string name="attestation_serial" msgid="5001580041093391656">"क्रम"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"सीरियल नंबर"</string>
     <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
     <string name="attestation_second_imei" msgid="7566064584445017361">"दूसरा IMEI नंबर"</string>
     <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
     <string name="attestation_manufacturer" msgid="2043278400561674518">"मैन्युफ़ैक्चरर"</string>
     <string name="attestation_model" msgid="8223243376214262662">"मॉडल"</string>
-    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"वेंडर का पैच लेवल"</string>
-    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"पैच लेवल चालू करें"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"वेंडर पैच लेवल"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"बूट पैच लेवल"</string>
     <string name="yes" msgid="6686215078709381643">"हां"</string>
     <string name="no" msgid="5957591978126937912">"नहीं"</string>
     <string name="unknown" msgid="6936738212381747979">"जानकारी मौजूद नहीं है"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"प्रमाणित नहीं किया जा सका"</string>
     <string name="avb_verified" msgid="4990498011432924565">"पुष्टि हो चुकी है"</string>
     <string name="avb_not_verified" msgid="6853341577991139767">"पुष्टि नहीं हुई"</string>
-    <string name="evaluation_results" msgid="1584774109554324406">"आकलन के नतीजे"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"जांच के नतीजे"</string>
     <string name="attestation_results" msgid="9089126954790727665">"प्रमाणित करने से जुड़े नतीजे"</string>
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"दूसरा IMEI नंबर"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"सीरियल नंबर"</string>
-    <string name="bootloader_locked_title" msgid="4498089738937695995">"बूटलोडर को लॉक किया गया"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"बूटलोडर को लॉक किया गया है"</string>
     <string name="trustworthy_title" msgid="5360267928618795351">"डिवाइस भरोसेमंद है"</string>
     <string name="display_status_title" msgid="7827806798539639832">"डिसप्ले की स्थिति"</string>
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"टच सेंसर की स्थिति"</string>
@@ -130,13 +130,13 @@
     <string name="evaluate_another_title" msgid="6275248738668045886">"दूसरे डिवाइस की जांच करें"</string>
     <string name="back_to_main_title" msgid="2496143013300121780">"मुख्य मेन्यू पर वापस जाएं"</string>
     <string name="locked" msgid="2034650000550950371">"लॉक है"</string>
-    <string name="not_locked" msgid="1663929635666930122">"लॉक नहीं है"</string>
+    <string name="not_locked" msgid="1663929635666930122">"नहीं"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"क्यूआर कोड"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"उस डिवाइस पर जारी रखें जिसकी जांच की जा रही है"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"जांचे जा रहे डिवाइस पर टेस्ट पूरे करें. इसके बाद, नतीजे यहां दिखेंगे."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"जांचे गए डिवाइस से कनेक्ट करने में गड़बड़ी हुई. कृपया पुष्टि करें कि ब्लूटूथ चालू हो और फिर से कोशिश करें."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"अभी स्कैन करें"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"आपको जिस डिवाइस की जांच करनी है उसकी सेटिंग खोले, सिस्टम पर जाएं, और Device diagnostics में जाकर, जांच करने वाले मोड को चुनें. इसके बाद, \'जांचा गया डिवाइस\' पर जाएं. उस डिवाइस पर प्रॉम्प्ट फ़ॉलो करें."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"आपको जिस डिवाइस की जांच करनी है उसकी सेटिंग खोले, सिस्टम पर जाएं, और Device diagnostics में जाकर, जांच मोड चुनें. इसके बाद, \'जांचा गया डिवाइस\' पर जाएं और उस डिवाइस पर प्रॉम्प्ट फ़ॉलो करें."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"अब आपको स्क्रीन की एक सीरीज़ दिखेगी. हर एक की जांच करें और खराबियों का पता लगाएं. सही से जांच कर लेने के बाद, अगली स्क्रीन पर जाने के लिए स्क्रीन को छुएं. आखिर में, आपसे यह पूछा जाएगा कि स्क्रीन पर कोई खराबी थी या नहीं."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"अब आपको एक के बाद एक कई स्क्रीन दिखाई जाएंगी. हर एक पर दिए गए निर्देशों के मुताबिक जांच करें और खराबियों का पता लगाएं. अगली स्क्रीन पर जाने के लिए, स्क्रीन को छुएं."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"कृपया, यहां दिए गए विकल्पों में से वह विकल्प चुनें जो स्क्रीन की स्थिति से मेल खाता हो."</string>

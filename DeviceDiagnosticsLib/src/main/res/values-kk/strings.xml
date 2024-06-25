@@ -24,9 +24,9 @@
     <string name="unavailable" msgid="7842920330665850121">"Қолжетімді емес"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Қосылып жатыр…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"Құрамдас күйі"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"Қолмен сынақтар жүргізу үшін батарея заряды мен жад көлемі күйін тексеріңіз."</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Қолмен сынақтар жүргізіп, батарея мен жад күйін тексеріңіз."</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Бағалау режимі"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Басқа құрылғыда бағалау жүргізу үшін басқа бір құрылғыны пайдаланыңыз."</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Бір құрылғыны бағалау үшін басқасын пайдаланыңыз."</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Қолмен жүргізілетін сынақтар"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Дисплей сынағы"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Сенсорлық сынақ"</string>
@@ -34,7 +34,7 @@
     <string name="storage_title" msgid="5921235202250843966">"Жад күйі"</string>
     <string name="battery_title" msgid="6707361668941323259">"Батарея күйі"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Сенімді құрылғы"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Басқа құрылғыда бағалау жүргізіңіз. Интернет қосылымы қажет."</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Басқа құрылғыда бағалау жүргізіңіз. Интернет қажет."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Бағаланатын құрылғы"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Басқа құрылғыда тексерілетін диагностикалық сынақтар жүргізіңіз."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Қазір сканерлеу"</string>
@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"Жад күйі"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Жалпы сыйымдылығы"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s жұмыс мерзімі қалды."</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Қалған жұмыс мерзімі: %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Бағалау режимінде жалғастыру үшін қажетті рұқсаттарды беріңіз."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Бас тарту"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Қайталау"</string>
@@ -88,9 +88,9 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Сенсорлық датчик сынағы қатемен аяқталды"</string>
     <string name="pass" msgid="6411665547268368837">"Өтті"</string>
     <string name="fail" msgid="3918028202746427731">"Орындалмады"</string>
-    <string name="attestation_verified" msgid="6535873137799452259">"Расталған сертификат"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"Сертификат расталған"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"Құрылғы құлыпталды."</string>
-    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Расталған жүктеу күйі"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Жүктеу күйі расталған"</string>
     <string name="attestation_security_level" msgid="6633918464653325429">"Қауіпсіздік деңгейі"</string>
     <string name="attestation_keymaster_version" msgid="7041962401293637901">"Keymaster нұсқасы"</string>
     <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Keymaster қауіпсіздік деңгейі"</string>
@@ -127,7 +127,7 @@
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Аттестаттаудан қайта өту"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Аттестаттау расталмады. Байланысты тексеріп, әрекетті қайталап көріңіз."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Келесі қадамдар"</string>
-    <string name="evaluate_another_title" msgid="6275248738668045886">"Басқа құрылғыны бағалаңыз"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Басқа құрылғыны бағалау"</string>
     <string name="back_to_main_title" msgid="2496143013300121780">"Басты мәзірге оралу"</string>
     <string name="locked" msgid="2034650000550950371">"Құлыпталған"</string>
     <string name="not_locked" msgid="1663929635666930122">"Құлыпталмаған"</string>

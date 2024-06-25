@@ -23,7 +23,7 @@
     <string name="proceed" msgid="8922926495095369132">"Pokračovat"</string>
     <string name="unavailable" msgid="7842920330665850121">"Není k dispozici"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Připojování…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Stav součásti"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Stav součástí"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Spustit ruční testy a zobrazit stav baterie a úložiště"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Režim posouzení"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Použít jedno zařízení k posouzení jiného"</string>
@@ -38,7 +38,7 @@
     <string name="evaluated_device_title" msgid="5546625787928257821">"Posuzované zařízení"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Spustit diagnostické testy, které budou ověřeny jiným zařízením."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Naskenovat"</string>
-    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Naskenujte QR kód na důvěryhodném zařízení do tohoto čtverce"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Do tohoto čtverce naskenujte QR kód na důvěryhodném zařízení"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Po úspěšném naskenování QR kódu se v tomto zařízení automaticky spustí série testů."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Vyberte důvěryhodné zařízení"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Případně vyberte zařízení ze seznamu níže"</string>
@@ -104,7 +104,7 @@
     <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
     <string name="attestation_manufacturer" msgid="2043278400561674518">"Výrobce"</string>
     <string name="attestation_model" msgid="8223243376214262662">"Model"</string>
-    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Úroveň oprav dodavatele"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Úroveň opravy dodavatele"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Úroveň opravy zavaděče"</string>
     <string name="yes" msgid="6686215078709381643">"Ano"</string>
     <string name="no" msgid="5957591978126937912">"Ne"</string>
@@ -130,7 +130,7 @@
     <string name="evaluate_another_title" msgid="6275248738668045886">"Posoudit další zařízení"</string>
     <string name="back_to_main_title" msgid="2496143013300121780">"Zpět do hlavní nabídky"</string>
     <string name="locked" msgid="2034650000550950371">"Zamčeno"</string>
-    <string name="not_locked" msgid="1663929635666930122">"Nezamčeno"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Neuzamčen"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"QR kód"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Pokračujte na posuzovaném zařízení"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Dokončete testy na zařízení, které posuzujete. Pak se tady zobrazí výsledky."</string>
@@ -140,5 +140,5 @@
     <string name="screen_test_summary" msgid="6565006807310186664">"Teď se bude zobrazovat řada obrazovek. Každou si důkladně prohlédněte a hledejte vady. Jakmile budete spokojeni, klepnutím přejděte na další. Na konci se zeptáme, zda jste na obrazovkách našli nějaké vady."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Teď se bude zobrazovat řada obrazovek. Každou si důkladně prohlédněte a hledejte vady. Klepnutím přejdete na další."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Níže vyberte možnost, která nejlépe odpovídá stavu obrazovky."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Teď se vám zobrazí červená obrazovka.\n \n Přejíždějte prstem po obrazovce, dokud nebude celá bílá. Pokud se vám část obrazovky na bílo obarvit nepodaří, krátkým klepnutím na obrazovku dejte najevo, že dotykový senzor plně nefunguje.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Teď se vám zobrazí červená obrazovka.\n \n Přejíždějte po ní prstem, dokud nebude celá bílá. Pokud se vám část obrazovky na bílo obarvit nepodaří, krátce na ni klepněte a dejte tak najevo, že dotykový senzor plně nefunguje.\n \n"</string>
 </resources>

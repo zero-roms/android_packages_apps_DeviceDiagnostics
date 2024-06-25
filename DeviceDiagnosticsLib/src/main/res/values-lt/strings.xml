@@ -105,7 +105,7 @@
     <string name="attestation_manufacturer" msgid="2043278400561674518">"Gamintojas"</string>
     <string name="attestation_model" msgid="8223243376214262662">"Modelis"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Paslaugų teikėjo pataisos lygis"</string>
-    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Paleisti pataisos lygį"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Operacinės sistemos paleidimo pataisos lygis"</string>
     <string name="yes" msgid="6686215078709381643">"Taip"</string>
     <string name="no" msgid="5957591978126937912">"Ne"</string>
     <string name="unknown" msgid="6936738212381747979">"Nežinoma"</string>

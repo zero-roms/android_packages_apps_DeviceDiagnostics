@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"Kondycja miejsca na dane"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Całkowita pojemność"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Pozostało %1$s żywotności"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Pozostało bezterminowo %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Przyznaj wymagane uprawnienia, aby kontynuować w trybie oceny."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Anuluj"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Spróbuj ponownie"</string>
@@ -86,7 +86,7 @@
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Oto wynik testu dotyku. Możesz ponownie go uruchomić, przechodząc wstecz."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Test czujnika dotykowego się powiódł"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Test czujnika dotykowego się nie powiódł"</string>
-    <string name="pass" msgid="6411665547268368837">"Udało się"</string>
+    <string name="pass" msgid="6411665547268368837">"Test udany"</string>
     <string name="fail" msgid="3918028202746427731">"Niepowodzenie"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"Zweryfikowany certyfikat"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"Urządzenie zablokowane"</string>
@@ -105,7 +105,7 @@
     <string name="attestation_manufacturer" msgid="2043278400561674518">"Producent"</string>
     <string name="attestation_model" msgid="8223243376214262662">"Model"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Poprawka na poziomie dostawcy"</string>
-    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Poprawka na poziomie jądra"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Poprawka na poziomie programu rozruchowego"</string>
     <string name="yes" msgid="6686215078709381643">"Tak"</string>
     <string name="no" msgid="5957591978126937912">"Nie"</string>
     <string name="unknown" msgid="6936738212381747979">"Brak informacji"</string>
