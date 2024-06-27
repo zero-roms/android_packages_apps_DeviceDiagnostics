@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"Tình trạng bộ nhớ"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Tổng dung lượng"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Còn %1$s thời lượng"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Còn %1$s tuổi thọ"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Vui lòng cấp các quyền được yêu cầu để tiếp tục với chế độ đánh giá."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Huỷ"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Thử lại"</string>
@@ -138,7 +138,7 @@
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Quét ngay"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Trên thiết bị bạn muốn đánh giá, hãy chuyển đến phần Cài đặt, Hệ thống, Chẩn đoán thiết bị, Chế độ đánh giá, rồi chọn Thiết bị được đánh giá. Làm theo các lời nhắc trên thiết bị đó."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Giờ đây, bạn sẽ thấy một loạt màn hình. Hãy kiểm tra từng màn hình một và tìm lỗi. Khi bạn đã hài lòng, hãy chạm vào màn hình này để chuyển sang màn hình tiếp theo. Cuối cùng, bạn sẽ được hỏi xem những màn hình này có lỗi gì không."</string>
-    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Giờ đây, bạn sẽ thấy một loạt màn hình. Hãy kiểm tra từng màn hình một và tìm lỗi. Chạm vào màn hình này để chuyển sang màn hình tiếp theo."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Sau đây bạn sẽ thấy một loạt màn hình. Hãy kiểm tra từng màn hình một và tìm lỗi. Chạm vào màn hình này để chuyển sang màn hình tiếp theo."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Vui lòng chọn phương án đúng nhất với tình trạng của màn hình ở bên dưới."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Giờ đây, bạn sẽ thấy một màn hình màu đỏ.\n \n Vuốt ngón tay lên màn hình này cho đến khi màn hình hoàn toàn chuyển sang màu trắng. Nếu bạn không thể chuyển một phần màn hình này sang màu trắng, thì hãy nhấn nhanh vào màn hình để cho biết rằng cảm biến cảm ứng không hoàn toàn bình thường.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Sau đây bạn sẽ thấy một màn hình màu đỏ.\n \n Vuốt ngón tay lên màn hình này cho đến khi màn hình hoàn toàn chuyển sang màu trắng. Nếu không thể chuyển một phần màn hình này sang màu trắng, hãy nhấn nhanh vào màn hình để cho biết rằng cảm biến cảm ứng không hoàn toàn bình thường.\n \n"</string>
 </resources>

@@ -24,7 +24,7 @@
     <string name="unavailable" msgid="7842920330665850121">"Недостапно"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Се поврзува…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"Состојба на компонентата"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"Извршете рачни тестирања и прегледајте ја состојбата на батеријата и просторот"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Извршете рачни тестирања и прегледајте ја состојбата на батеријата и на просторот"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Режим на процена"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Користете еден уред за да процените друг уред"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Рачни тестирања"</string>
@@ -44,7 +44,7 @@
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Алтернативно, изберете го уредот од списокот подолу"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Поврзувањето не успеа. Обидете се повторно."</string>
     <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Потврдете го извештајот за испраќање до доверливиот уред."</string>
-    <string name="evaluated_send_report" msgid="7692059671222319749">"Испрати пријава"</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Испрати извештај"</string>
     <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Извештајот се финализира…"</string>
     <string name="bluetooth_error_title" msgid="4352617586275775499">"Грешка на Bluetooth"</string>
     <string name="bluetooth_error_summary" msgid="8411286861814582793">"Се јави грешка при комуникацијата со доверливиот уред. Потврдете дека Bluetooth е овозможен и обидете се повторно."</string>

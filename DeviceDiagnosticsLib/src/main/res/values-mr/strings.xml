@@ -34,7 +34,7 @@
     <string name="storage_title" msgid="5921235202250843966">"स्टोरेजचे स्टेटस"</string>
     <string name="battery_title" msgid="6707361668941323259">"बॅटरीचे स्टेटस"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"विश्वसनीय डिव्हाइस"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"दुसऱ्या डिव्हाइसचे मुल्यांकन करा. इंटरनेट कनेक्शन आवश्यक आहे."</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"दुसऱ्या डिव्हाइसचे मूल्यांकन करा. इंटरनेट कनेक्शन आवश्यक आहे."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"मूल्यांकन केलेले डिव्हाइस"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"निदान चाचण्या रन करा, ज्यांची दुसऱ्या डिव्हाइसद्वारे पडताळणी केली जाईल."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"आताच स्कॅन करा"</string>

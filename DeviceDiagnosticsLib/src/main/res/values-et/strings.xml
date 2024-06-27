@@ -37,7 +37,7 @@
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Hinnake teist seadet. Vaja on internetiühendust."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Hinnatav seade"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Käitage diagnostikateste, mille valideerib teine seade."</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skanni kohe"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skannige kohe"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skannige usaldusväärses seadmes allolevas ristkülikus olev QR-kood"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Kui olete QR-koodi skanninud, käivitab see seade automaatselt rea teste."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Usaldusväärse seadme valimine"</string>

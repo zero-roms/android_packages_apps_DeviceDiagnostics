@@ -37,7 +37,7 @@
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Перевірте інший пристрій. Для цього потрібне інтернет-з’єднання."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Пристрій, що перевіряється"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Виконайте діагностичні тести, результати яких буде підтверджено на іншому пристрої."</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"Сканувати"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Скануйте"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"На надійному пристрої відскануйте QR-код в прямокутнику нижче"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Коли ви відскануєте QR-код, на пристрої автоматично запуститься серія тестів."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Виберіть надійний пристрій"</string>
@@ -50,7 +50,7 @@
     <string name="bluetooth_error_summary" msgid="8411286861814582793">"Не вдалося встановити з’єднання з надійним пристроєм. Перевірте, чи ввімкнено Bluetooth, і повторіть спробу."</string>
     <string name="sending_report" msgid="8735615783234611336">"Надсилання звіту на надійний пристрій…"</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Перевірку завершено"</string>
-    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Тепер результати з’являться на надійному пристрої"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Результати мають з’явитися на надійному пристрої"</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"Результат тесту екрана"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"Добре"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Немає явних дефектів"</string>
@@ -88,7 +88,7 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Тест датчика дотику не пройдено"</string>
     <string name="pass" msgid="6411665547268368837">"Пройдено"</string>
     <string name="fail" msgid="3918028202746427731">"Не пройдено"</string>
-    <string name="attestation_verified" msgid="6535873137799452259">"Підтверджений сертифікат"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"Сертифікат підтверджено"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"Пристрій заблоковано"</string>
     <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Стан перевірки під час запуску"</string>
     <string name="attestation_security_level" msgid="6633918464653325429">"Рівень безпеки"</string>
@@ -121,7 +121,7 @@
     <string name="trustworthy_title" msgid="5360267928618795351">"Надійний пристрій"</string>
     <string name="display_status_title" msgid="7827806798539639832">"Статус екрана"</string>
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"Статус датчика дотику"</string>
-    <string name="attestation_details_title" msgid="7637645023797408279">"Деталі атестації"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Відомості про атестацію"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"Помилка атестації"</string>
     <string name="attestation_local_failure_summary" msgid="8657460343196696219">"Не вдається визначити, чи пристрій надійний"</string>
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Повторити атестацію"</string>
@@ -135,7 +135,7 @@
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Продовжте на пристрої, який ви перевіряєте"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Коли ви протестуєте пристрій, який перевіряєте, тут з’являться результати."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Під час з’єднання з пристроєм, що перевіряється, сталася помилка. Перевірте, чи ввімкнено Bluetooth, і повторіть спробу."</string>
-    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Сканувати"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Скануйте"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"На пристрої, який ви хочете перевірити, виберіть \"Налаштування\", \"Система\", \"Діагностика пристрою\", \"Режим перевірки\", а потім – \"Пристрій, що перевіряється\". Дотримуйтеся вказівок на екрані того пристрою."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Зараз ви побачите ряд екранів. Огляньте кожен із них і пошукайте дефекти. Якщо все в порядку, торкніться екрана, щоб перейти до наступного. Наприкінці у вас запитають, чи немає на екранах плям."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Зараз ви побачите ряд екранів. Огляньте кожен із них і пошукайте дефекти. Торкніться екрана, щоб перейти до наступного."</string>

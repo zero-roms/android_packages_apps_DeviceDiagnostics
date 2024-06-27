@@ -37,7 +37,7 @@
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Evalúa otro dispositivo. Se necesita conexión a Internet."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Dispositivo evaluado"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Ejecuta pruebas de diagnóstico que validará otro dispositivo."</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"Escanear ahora"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Escanea ahora"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Escanea el código QR en el dispositivo de confianza en el siguiente rectángulo"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Cuando hayas escaneado el código QR de forma correcta, este dispositivo comenzará una serie de pruebas automáticamente."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Selecciona el dispositivo de confianza"</string>

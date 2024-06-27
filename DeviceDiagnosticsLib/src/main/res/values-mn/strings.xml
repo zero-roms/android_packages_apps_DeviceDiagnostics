@@ -38,7 +38,7 @@
     <string name="evaluated_device_title" msgid="5546625787928257821">"Үнэлсэн төхөөрөмж"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Өөр төхөөрөмжөөс баталгаажуулах оношилгооны туршилт явуулна уу."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Одоо скан хийх"</string>
-    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Доорх тэгш өнцөгт дэх итгэмжлэгдсэн төхөөрөмж дээр QR кодыг скан хийнэ үү"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Итгэмжлэгдсэн төхөөрөмж дээрх QR кодыг доорх тэгш өнцөгт дотор скан хийнэ үү"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Таныг QR кодыг амжилттай скан хийсний дараа энэ төхөөрөмж цуврал туршилтыг автоматаар эхлүүлнэ."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Итгэмжлэгдсэн төхөөрөмж сонгоно уу"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Эсвэл доорх жагсаалтаас төхөөрөмжийг сонгоно уу"</string>

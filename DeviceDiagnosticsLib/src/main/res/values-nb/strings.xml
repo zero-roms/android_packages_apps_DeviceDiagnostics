@@ -68,7 +68,7 @@
     <string name="battery_original" msgid="2552600989411644999">"Original"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Erstattet"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Komponentlogg"</string>
-    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s av den originale kapasiteten"</string>
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s av den opprinnelige kapasiteten"</string>
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Batteritilstanden er ikke tilgjengelig"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Kaldt"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Dødt"</string>

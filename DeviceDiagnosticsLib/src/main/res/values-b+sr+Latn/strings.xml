@@ -37,7 +37,7 @@
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Procenite drugi uređaj. Treba vam internet veza."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Uređaj koji se procenjuje"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Pokrenite dijagnostičke testove koji će biti provereni na drugom uređaju."</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skeniraj"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skenirajte"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skenirajte QR kôd pouzdanog uređaja"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Kada skenirate QR kôd, ovaj uređaj automatski pokreće niz testova."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Izaberite pouzdani uređaj"</string>

@@ -105,7 +105,7 @@
     <string name="attestation_manufacturer" msgid="2043278400561674518">"নিৰ্মাতা"</string>
     <string name="attestation_model" msgid="8223243376214262662">"মডেল"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"বিক্ৰেতাৰ পেচ্চৰ স্তৰ"</string>
-    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"পেচ্চৰ স্তৰ বুট কৰক"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"বুট পেচ্চ স্তৰ"</string>
     <string name="yes" msgid="6686215078709381643">"হয়"</string>
     <string name="no" msgid="5957591978126937912">"নহয়"</string>
     <string name="unknown" msgid="6936738212381747979">"অজ্ঞাত"</string>

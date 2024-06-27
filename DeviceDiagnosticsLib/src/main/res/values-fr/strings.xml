@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"État de l\'espace de stockage"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Capacité totale"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s de durée de vie restant(e)(s)"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s de durée de vie restante"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Veuillez accorder les autorisations demandées pour continuer en mode évaluation."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Annuler"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Réessayer"</string>
@@ -135,10 +135,10 @@
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continuez sur l\'appareil en cours d\'évaluation"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Effectuez les tests sur l\'appareil que vous évaluez, les résultats apparaîtront ensuite ici."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Une erreur s\'est produite lors de la communication avec l\'appareil évalué. Veuillez vérifier que le Bluetooth est activé, puis réessayez."</string>
-    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Rechercher"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Scanner"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Sur l\'appareil que vous souhaitez évaluer, sélectionnez \"Paramètres\", \"Système\", \"Diagnostic de l\'appareil\", \"Mode évaluation\", puis \"Appareil évalué\". Suivez les invites de commande sur cet appareil."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Une série d\'écrans s\'affiche alors. Étudiez chacun d\'entre eux et recherchez les défauts. Une fois que c\'est fait, touchez l\'écran pour passer à l\'écran suivant. À la fin, on vous demandera si les écrans semblent intacts."</string>
-    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Une série d\'écrans s\'affiche alors. Étudiez chacun d\'entre eux et recherchez les défauts. Touchez l\'écran pour passer à l\'écran suivant."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Une série d\'écrans va s\'afficher. Étudiez chacun d\'entre eux et recherchez les défauts. Touchez l\'écran pour passer à l\'écran suivant."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Veuillez sélectionner l\'option ci-dessous qui correspond le mieux à l\'état de l\'écran."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Un écran rouge s\'affiche alors.\n \n Balayez l\'écran avec votre doigt jusqu\'à ce qu\'il devienne entièrement blanc. Si vous ne parvenez pas à rendre une partie de l\'écran blanche, appuyez brièvement sur l\'écran pour indiquer que le capteur tactile ne fonctionne pas complètement.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Un écran rouge va s\'afficher.\n \n Balayez l\'écran avec votre doigt jusqu\'à ce qu\'il devienne entièrement blanc. Si vous ne parvenez pas à rendre une partie de l\'écran blanche, appuyez brièvement sur l\'écran pour indiquer que le capteur tactile ne fonctionne pas complètement.\n \n"</string>
 </resources>

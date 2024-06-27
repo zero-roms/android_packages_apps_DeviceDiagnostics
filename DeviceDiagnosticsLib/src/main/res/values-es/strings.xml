@@ -23,7 +23,7 @@
     <string name="proceed" msgid="8922926495095369132">"Continuar"</string>
     <string name="unavailable" msgid="7842920330665850121">"No disponible"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Conectando..."</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Condiciones del componente"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Estado de los componentes"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Ejecuta pruebas manuales y consulta el estado de la batería y del almacenamiento"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Modo Evaluación"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Usa un dispositivo para evaluar otro"</string>
@@ -36,7 +36,7 @@
     <string name="trusted_device_title" msgid="6291497999963968533">"Dispositivo de confianza"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Evalúa otro dispositivo. Se requiere una conexión a Internet."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Dispositivo evaluado"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Ejecuta pruebas diagnósticas que validará otro dispositivo."</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Ejecuta pruebas diagnósticas que otro dispositivo validará."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Escanear ahora"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Escanea el código QR del dispositivo de confianza en este rectángulo"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Una vez que hayas escaneado correctamente el código QR, este dispositivo iniciará automáticamente una serie de pruebas."</string>

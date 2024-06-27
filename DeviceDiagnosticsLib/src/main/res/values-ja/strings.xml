@@ -24,11 +24,11 @@
     <string name="unavailable" msgid="7842920330665850121">"使用不可"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"接続しています..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"コンポーネントの状態"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"手動テストを実行してバッテリーとストレージの健全性を確認する"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"手動テストを実行してバッテリーとストレージの健全性を確認します"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"評価モード"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"評価対象デバイスとは異なるデバイスを使って評価します"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"手動テスト"</string>
-    <string name="screen_test_title" msgid="2748510049598105155">"ディスプレイのテスト"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"ディスプレイをテスト"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"タッチテスト"</string>
     <string name="component_title" msgid="6580046234562555655">"コンポーネントのステータス"</string>
     <string name="storage_title" msgid="5921235202250843966">"ストレージの状態"</string>
@@ -37,9 +37,9 @@
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"別のデバイスを評価します。インターネット接続が必要です。"</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"評価対象デバイス"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"診断テストを実行し、別のデバイスで検証します。"</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"スキャン開始"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"QR コードをスキャン"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"信頼できるデバイスで、以下の長方形内の QR コードをスキャンします"</string>
-    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR コードのスキャンが適切に完了すると、このデバイスで一連のテストが自動的に開始されます。"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR コードのスキャンが適切に完了すると、デバイスで一連のテストが自動的に開始されます。"</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"信頼できるデバイスを選択"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"または、以下のリストから別のデバイスを選択します"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"接続できません。もう一度お試しください。"</string>
@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"ストレージの健全性"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"総容量"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"残存耐用期間: %1$s"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"残り寿命: %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"評価モードで続行するには、必要な許可を与えてください。"</string>
     <string name="cancel_button" msgid="7011882021431169180">"キャンセル"</string>
     <string name="try_again_button" msgid="6015477950108798246">"もう一度お試しください"</string>
@@ -136,7 +136,7 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"評価対象デバイスに対するテストが完了すると、結果がここに表示されます。"</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"評価対象デバイスとの通信中にエラーが発生しました。Bluetooth が有効であることを確認して、もう一度お試しください。"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"スキャン開始"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"評価対象デバイスで、[設定]、[システム]、[デバイス診断]、[評価モード]、[評価対象デバイス] の順に選択します。そのデバイスに表示されるメッセージに沿って進めます。"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"評価対象デバイスで、[設定] &gt; [システム] &gt; [デバイス診断] &gt; [評価モード] &gt; [評価対象デバイス] の順に選択し、表示されるメッセージに沿って進めます。"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"一連の画面が表示されます。各画面をチェックし、不具合がないか確認してください。問題がなかったら、画面をタップして次に進みます。最後に、画面に傷や汚れがないか確認するメッセージが表示されます。"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"一連の画面が表示されます。各画面をチェックし、不具合がないか確認してください。画面をタップすると次に進みます。"</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"以下の中から、画面の状態を最もよく表している選択肢を選んでください。"</string>

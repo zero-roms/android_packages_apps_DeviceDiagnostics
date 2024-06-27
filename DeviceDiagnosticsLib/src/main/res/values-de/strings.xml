@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"Zustand des Speichers"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Gesamtkapazität"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s Akkulebensdauer verbleibend"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s Lebensdauer verbleibend"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Bitte erteile die angeforderten Berechtigungen. Anschließend kannst du im Bewertungsmodus fortfahren."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Abbrechen"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Noch mal versuchen"</string>
@@ -140,5 +140,5 @@
     <string name="screen_test_summary" msgid="6565006807310186664">"Dir werden jetzt verschiedene Displays gezeigt. Sieh dir jedes an und halte nach Mängeln Ausschau. Wenn du fertig bist, tippe auf das Display, um mit dem nächsten fortzufahren. Zum Schluss wirst du gefragt, ob die Displays einwandfrei aussehen."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Dir werden jetzt verschiedene Displays gezeigt. Sieh dir jedes an und halte nach Mängeln Ausschau. Tippe auf das Display, um mit dem nächsten fortzufahren."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Bitte wähle unten die Option aus, die den Displayzustand am besten beschreibt."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Dir wird jetzt ein roter Bildschirm gezeigt.\n \n Wische mit deinem Finger über ihn, bis er vollständig weiß ist. Wenn ein Teil des Bildschirms nicht weiß wird, tippe kurz auf ihn, um anzugeben, dass der Touchsensor nicht vollständig funktioniert.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Dir wird jetzt ein roter Bildschirm gezeigt.\n \n Wische mit deinem Finger über ihn, bis er vollständig weiß ist. Wenn ein Teil des Bildschirms nicht weiß wird, tippe kurz darauf, um anzugeben, dass der Touchsensor nicht vollständig funktioniert.\n \n"</string>
 </resources>

@@ -37,7 +37,7 @@
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"სხვა მოწყობილობის შეფასება. საჭიროებს ინტერნეტ-კავშირს."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"შეფასებული მოწყობილობა"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"გაუშვით დიაგნოსტიკური ტესტები, რომლებიც სხვა მოწყობილობით გადამოწმდება."</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"ახლავე სკანირება"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"დაასკანირეთ ახლა"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"დაასკანირეთ QR კოდი სანდო მოწყობილობაზე ქვემოთ მოცემულ მართკუთხედში"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"როდესაც წარმატებით დაასკანირებთ QR კოდს, ეს მოწყობილობა ავტომატურად დაიწყებს ტესტების სერიას."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"სანდო მოწყობილობის არჩევა"</string>
@@ -135,7 +135,7 @@
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"გააგრძელეთ მოწყობილობაზე, რომლის შეფასებაც მიმდინარეობს"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"დაასრულეთ ტესტები იმ მოწყობილობაზე, რომელსაც აფასებთ. შედეგები გამოჩნდება აქ."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"შეფასებულ მოწყობილობასთან კავშირის დროს დაფიქსირდა შეცდომა. დარწმუნდით, რომ Bluetooth ჩართულია და ცადეთ ხელახლა."</string>
-    <string name="trusted_scan_now_title" msgid="6091670756288147729">"ახლავე სკანირება"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"დაასკანირეთ ახლა"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"მოწყობილობაზე, რომლის შეფასებაც გსურთ, გადადით: პარამეტრები &gt; სისტემა &gt; მოწყობილობის დიაგნოსტიკა &gt; შეფასების რეჟიმი &gt; შეფასებული მოწყობილობა. მიჰყევით მოთხოვნებს ამ მოწყობილობაზე."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"ახლა გამოგიჩნდებათ რამდენიმე ეკრანი. შეისწავლეთ თითოეული და მოძებნეთ ხარვეზები. როდესაც დაასრულებთ, შეეხეთ ეკრანს და გადადით შემდეგზე. დასრულებისას გკითხავენ, ეკრანები უნაკლოდ გამოიყურებოდა თუ არა."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ახლა გამოგიჩნდებათ რამდენიმე ეკრანი. შეისწავლეთ თითოეული და მოძებნეთ ხარვეზები. შეეხეთ ეკრანს შემდეგზე გადასასვლელად."</string>

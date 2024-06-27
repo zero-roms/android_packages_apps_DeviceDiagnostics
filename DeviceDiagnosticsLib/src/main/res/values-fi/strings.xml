@@ -38,7 +38,7 @@
     <string name="evaluated_device_title" msgid="5546625787928257821">"Arvioitu laite"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Suorita diagnostiikkatestejä, jotka vahvistetaan toisella laitteella."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skannaa nyt"</string>
-    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skannaa luotetun laitteen QR-koodi alla olevalla suorakulmiolla"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skannaa luotetun laitteen QR-koodi alla olevaan suorakulmioon"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Kun olet skannannut QR-koodin, tämä laite aloittaa automaattisesti joukon testejä."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Valitse luotettu laite"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Voit myös valita laitteen alla olevasta listasta"</string>

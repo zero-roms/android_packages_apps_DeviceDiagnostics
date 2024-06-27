@@ -86,8 +86,8 @@
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Ecco il risultato del test del sensore touch. Puoi ripetere il test tornando indietro."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Test sensore touch riuscito"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Test sensore touch non riuscito"</string>
-    <string name="pass" msgid="6411665547268368837">"Superato"</string>
-    <string name="fail" msgid="3918028202746427731">"Non superato"</string>
+    <string name="pass" msgid="6411665547268368837">"Test riuscito"</string>
+    <string name="fail" msgid="3918028202746427731">"Test non riuscito"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"Certificato verificato"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"Dispositivo bloccato"</string>
     <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Stato di Avvio verificato"</string>

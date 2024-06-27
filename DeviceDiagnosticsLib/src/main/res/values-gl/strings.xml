@@ -17,7 +17,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
+    <string name="app_name" msgid="4531685026837318886">"Diagnóstico do dispositivo"</string>
     <string name="app_title" msgid="2766786539301072967">"Diagnóstico do dispositivo"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Continuar"</string>
     <string name="proceed" msgid="8922926495095369132">"Continuar"</string>

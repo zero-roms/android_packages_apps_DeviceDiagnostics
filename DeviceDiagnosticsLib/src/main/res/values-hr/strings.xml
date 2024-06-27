@@ -23,10 +23,10 @@
     <string name="proceed" msgid="8922926495095369132">"Nastavi"</string>
     <string name="unavailable" msgid="7842920330665850121">"Nije dostupno"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Povezivanje..."</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Zdravlje komponente"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Stanje komponente"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Pokrenite ručne testove i pogledajte stanje baterije i pohrane"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Način procjene"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Upotrijebite jedan uređaj da biste pristupili drugom uređaju"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Pomoću jednog uređaja procijenite drugi"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Ručni testovi"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Testiranje zaslona"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Testiranje dodira"</string>
@@ -37,7 +37,7 @@
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Procijenite drugi uređaj. Potrebna je internetska veza."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Procijenjeni uređaj"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Pokrenite dijagnostičke testove koje će potvrditi drugi uređaj."</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skeniraj odmah"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skenirajte odmah"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skenirajte QR kôd na pouzdanom uređaju u pravokutniku u nastavku"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Nakon što uspješno skenirate QR kôd, na ovom će uređaju automatski započeti niz testova."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Odaberite pouzdani uređaj"</string>
@@ -68,7 +68,7 @@
     <string name="battery_original" msgid="2552600989411644999">"Izvorno"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Zamijenjeno"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Povijest dijela"</string>
-    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s originalnog kapaciteta"</string>
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s izvornog kapaciteta"</string>
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Stanje baterije nije dostupno"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Niska"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"Ne reagira"</string>
@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"Zdravlje pohrane"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Ukupan kapacitet"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Preostalo %1$s životnog vijeka"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Preostalo je %1$s životnog vijeka"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Dodijelite zatražena dopuštenja da biste nastavili u načinu procjene."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Odustani"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Pokušaj ponovo"</string>
@@ -86,8 +86,8 @@
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Ovo je rezultat testiranja dodira. Ako se vratite, možete ponovo pokrenuti testiranje."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Senzor za dodir uspješno je prošao testiranje"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Testiranje senzora za dodir nije uspjelo"</string>
-    <string name="pass" msgid="6411665547268368837">"Prolaz"</string>
-    <string name="fail" msgid="3918028202746427731">"Negativan rezultat procjene"</string>
+    <string name="pass" msgid="6411665547268368837">"Prošao je procjenu"</string>
+    <string name="fail" msgid="3918028202746427731">"Nije prošao procjenu"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"Potvrđeni certifikat"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"Uređaj je zaključan"</string>
     <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Stanje potvrđenog pokretanja"</string>
@@ -117,7 +117,7 @@
     <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
     <string name="imei2_title" msgid="4414064408324667040">"Drugi IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"Serijski broj"</string>
-    <string name="bootloader_locked_title" msgid="4498089738937695995">"Početni program za pokretanje je zaključan"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Pokretač operativnog sustava je zaključan"</string>
     <string name="trustworthy_title" msgid="5360267928618795351">"Uređaj je pouzdan"</string>
     <string name="display_status_title" msgid="7827806798539639832">"Status zaslona"</string>
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"Status senzora za dodir"</string>

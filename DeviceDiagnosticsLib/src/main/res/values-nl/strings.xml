@@ -38,13 +38,13 @@
     <string name="evaluated_device_title" msgid="5546625787928257821">"Geëvalueerd apparaat"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Voer diagnostische tests uit die worden gevalideerd door een ander apparaat."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Nu scannen"</string>
-    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Scan de QR-code in de rechthoek hieronder op het veilige apparaat"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Scan de QR-code op het veilige apparaat in de rechthoek hieronder"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Als je de QR-code hebt gescand, wordt automatisch een reeks tests op dit apparaat gestart."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Veilig apparaat selecteren"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Je kunt het apparaat ook selecteren in de lijst hieronder"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Verbinding is mislukt. Probeer het opnieuw."</string>
     <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Bevestig het rapport dat je naar het veilige apparaat wilt sturen."</string>
-    <string name="evaluated_send_report" msgid="7692059671222319749">"Rapport versturen"</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Rapport sturen"</string>
     <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Rapport afronden..."</string>
     <string name="bluetooth_error_title" msgid="4352617586275775499">"Bluetooth-fout"</string>
     <string name="bluetooth_error_summary" msgid="8411286861814582793">"Er ging iets fout bij de communicatie met het veilige apparaat. Ga na of bluetooth aanstaat en probeer het opnieuw."</string>
@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"Opslagstatus"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Totale capaciteit"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s levensduur resterend"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Nog %1$s levensduur"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Geef de gevraagde rechten om verder te gaan in de evaluatiemodus."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Annuleren"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Opnieuw proberen"</string>
@@ -138,7 +138,7 @@
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Nu scannen"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Ga op het apparaat dat je wilt evalueren naar Instellingen, Systeem, Apparaatdiagnose, Evaluatiemodus en dan Geëvalueerd apparaat. Volg de prompts op dat apparaat."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Je krijgt nu een reeks schermen te zien. Zoek op elk scherm naar defecten. Klaar? Tik dan op het scherm om naar het volgende te gaan. Aan het eind wordt je gevraagd of de schermen er ongeschonden uitzien."</string>
-    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Je krijgt nu een reeks schermen te zien. Zoek op elk scherm naar defecten. Tik op het scherm om naar het volgende te gaan."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Er worden nu een reeks schermen weergegeven. Zoek op elk scherm naar defecten. Tik op het scherm om naar het volgende te gaan."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Selecteer hieronder de optie die het best past bij de conditie van het scherm."</string>
     <string name="touch_test_summary" msgid="5989536270591433560">"Je krijgt nu een rood scherm.\n \n Swipe met je vinger over het scherm tot het helemaal wit is. Als je een deel van het scherm niet wit kunt maken, tik je kort op het scherm om aan te geven dat de aanraaksensor niet helemaal werkt.\n \n"</string>
 </resources>
