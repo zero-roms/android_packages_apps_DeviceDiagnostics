@@ -226,7 +226,7 @@ class ServerStarter(
     }
 
     private fun stopAdvertising() {
-        serverSocket!!.close()
+        serverSocket?.close()
         synchronized(this) {
             if (advertiseCallback != null) {
                 advertiser.stopAdvertising(advertiseCallback!!)
