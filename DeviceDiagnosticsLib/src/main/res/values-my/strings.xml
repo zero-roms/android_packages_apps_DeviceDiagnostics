@@ -81,7 +81,7 @@
     <string name="storage_health_summary_fmt" msgid="7174241725631534273">"သက်တမ်း ကျန်ရှိမှု %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"အကဲဖြတ်မုဒ်တွင် ရှေ့ဆက်ရန် တောင်းဆိုထားသော ခွင့်ပြုချက်များ ပေးပါ။"</string>
     <string name="cancel_button" msgid="7011882021431169180">"မလုပ်တော့"</string>
-    <string name="try_again_button" msgid="6015477950108798246">"ထပ်စမ်းကြည့်ပါ"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"ထပ်စမ်းကြည့်ရန်"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"ထိတွေ့မှု စမ်းသပ်ချက်ရလဒ်"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"၎င်းသည် ထိတွေ့မှု စမ်းသပ်ချက်ရလဒ် ဖြစ်သည်။ နောက်သို့ ပြန်သွားခြင်းဖြင့် စမ်းသပ်မှု ပြန်လုပ်နိုင်သည်။"</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"ထိတွေ့မှု အာရုံခံကိရိယာ စမ်းသပ်ခြင်း အောင်မြင်ပါသည်"</string>
