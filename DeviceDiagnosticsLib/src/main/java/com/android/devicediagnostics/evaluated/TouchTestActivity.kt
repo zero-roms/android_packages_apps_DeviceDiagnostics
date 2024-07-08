@@ -61,24 +61,27 @@ class TouchTestView(context: Context, attrs: AttributeSet) : View(context, attrs
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        if (event != null)
-            try {
-                when (event.action) {
-                    MotionEvent.ACTION_DOWN -> timer = timeSource.markNow()
-                    MotionEvent.ACTION_UP ->
-                        if (array.all { it.all { it } })
-                            (context as TouchTestActivity).reportResult(true)
-                        else if (timeSource.markNow() - timer < 0.2.seconds)
-                            (context as TouchTestActivity).reportResult(false)
+        event?.let {
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    timer = timeSource.markNow()
                 }
-
-                val x = (event.x / xSize).toInt()
-                val y = (event.y / ySize).toInt()
-                if (!array[x][y]) {
+                MotionEvent.ACTION_UP ->
+                    if (array.all { it.all { it } })
+                        (context as TouchTestActivity).reportResult(true)
+                    else if (timeSource.markNow() - timer < 0.2.seconds)
+                        (context as TouchTestActivity).reportResult(false)
+            }
+            val pointerCount = event.pointerCount
+            for(i in 0 until pointerCount) {
+                val x = (event.getX(i) / xSize).toInt()
+                val y = (event.getY(i) / ySize).toInt()
+                if(!array[x][y]) {
                     array[x][y] = true
                     invalidate()
                 }
-            } catch (e: Exception) {}
+            }
+        }
         return true
     }
 }
