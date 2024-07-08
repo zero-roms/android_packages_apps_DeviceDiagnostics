@@ -41,6 +41,7 @@ class TouchTestView(context: Context, attrs: AttributeSet) : View(context, attrs
     private val squareSize = 200 // px
     private val columns = context.getResources().getDisplayMetrics().widthPixels / squareSize
     private val rows = context.getResources().getDisplayMetrics().heightPixels / squareSize
+    private val exitTime = 0.05.seconds
 
     private val xSize
         get() = width.toFloat() / columns
@@ -73,7 +74,7 @@ class TouchTestView(context: Context, attrs: AttributeSet) : View(context, attrs
                 MotionEvent.ACTION_UP ->
                     if (array.all { it.all { it } })
                         (context as TouchTestActivity).reportResult(true)
-                    else if (timeSource.markNow() - timer < 0.2.seconds)
+                    else if (timeSource.markNow() - timer < exitTime)
                         (context as TouchTestActivity).reportResult(false)
             }
             val pointerCount = event.pointerCount
