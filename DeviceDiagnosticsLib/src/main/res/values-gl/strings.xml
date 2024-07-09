@@ -39,7 +39,7 @@
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Executa probas de diagnóstico que validará outro dispositivo."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Escanear agora"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Escanea o código QR co dispositivo de confianza no rectángulo que aparece máis abaixo"</string>
-    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Así que escanees correctamente o código QR, o dispositivo executará de forma automática unha serie de probas."</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Así que escanees correctamente o código QR, este dispositivo executará de forma automática unha serie de probas."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Seleccionar o dispositivo de confianza"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Se o prefires, podes seleccionar o dispositivo na seguinte lista"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Produciuse un erro coa conexión. Téntao de novo."</string>
