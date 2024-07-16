@@ -23,10 +23,10 @@
     <string name="proceed" msgid="8922926495095369132">"המשך"</string>
     <string name="unavailable" msgid="7842920330665850121">"לא זמין"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"מתחברים למכשיר…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"תקינות הרכיב"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"הרצה של בדיקות ידניות וצפייה בתקינות הסוללה והאחסון"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"תקינות הרכיבים"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"בדיקות ידניות ונתונים על תקינות הסוללה והאחסון"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"מצב בדיקה"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"שימוש במכשיר אחד כדי להעריך מכשיר אחר"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"שימוש במכשיר אחד כדי לבדוק מכשיר אחר"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"בדיקות ידניות"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"בדיקת המסך"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"בדיקת מגע"</string>

@@ -90,7 +90,7 @@
     <string name="fail" msgid="3918028202746427731">"No superada"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"Certificat verificat"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"Dispositiu bloquejat"</string>
-    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Estat de l\'inici verificat"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Estat d\'inici verificat"</string>
     <string name="attestation_security_level" msgid="6633918464653325429">"Nivell de seguretat"</string>
     <string name="attestation_keymaster_version" msgid="7041962401293637901">"Versió de Keymaster"</string>
     <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Nivell de seguretat de Keymaster"</string>

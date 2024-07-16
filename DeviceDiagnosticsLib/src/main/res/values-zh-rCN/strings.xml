@@ -35,7 +35,7 @@
     <string name="battery_title" msgid="6707361668941323259">"电池状态"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"可信设备"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"评估另一台设备。该过程需要互联网连接。"</string>
-    <string name="evaluated_device_title" msgid="5546625787928257821">"已评估的设备"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"所评估的设备"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"运行将由另一台设备验证的诊断测试。"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"立即扫描"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"将下方的方框对准可信设备上的二维码进行扫描"</string>
@@ -136,7 +136,7 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"在要评估的设备上完成测试后，结果会显示在此处。"</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"与评估的设备通信时出错。请确认蓝牙已启用，然后再试。"</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"立即扫描"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"在要评估的设备上，依次前往“设置”“系统”“设备诊断”“评估模式”“已评估的设备”。按照设备上的提示操作。"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"在要评估的设备上，依次前往“设置”“系统”“设备诊断”“评估模式”“所评估的设备”。按照设备上的提示操作。"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"现在，系统将显示一系列画面。请检查每一个画面，看看是否有缺陷。检查完一个画面后，轻触该画面即可进入下一个画面。最后，系统会询问您这些画面看起来是否无瑕疵。"</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"现在，系统将显示一系列画面。请检查每一个画面，看看是否有缺陷。轻触当前画面可进入下一个画面。"</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"请在下方选择与屏幕状况最相符的选项。"</string>
