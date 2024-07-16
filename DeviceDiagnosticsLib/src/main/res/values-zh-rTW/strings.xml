@@ -35,7 +35,7 @@
     <string name="battery_title" msgid="6707361668941323259">"電池狀態"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"信任的裝置"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"評估另一部裝置。必須連上網際網路。"</string>
-    <string name="evaluated_device_title" msgid="5546625787928257821">"評估裝置"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"受評估裝置"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"執行診斷測試，再由另一部裝置進行驗證。"</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"立即掃描"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"將下方的方框對準信任裝置上的 QR code，然後開始掃描"</string>
@@ -88,7 +88,7 @@
     <string name="touch_test_bad_title" msgid="6888320344429184690">"未通過觸控感應器測試"</string>
     <string name="pass" msgid="6411665547268368837">"通過"</string>
     <string name="fail" msgid="3918028202746427731">"未通過"</string>
-    <string name="attestation_verified" msgid="6535873137799452259">"已驗證的憑證"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"憑證已驗證"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"裝置已鎖定"</string>
     <string name="attestation_verified_boot_state" msgid="6360953823092860181">"驗證開機程序狀態"</string>
     <string name="attestation_security_level" msgid="6633918464653325429">"安全等級"</string>

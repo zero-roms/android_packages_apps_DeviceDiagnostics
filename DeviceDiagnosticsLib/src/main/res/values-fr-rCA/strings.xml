@@ -43,7 +43,7 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Sélectionner un appareil de confiance"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Vous pouvez également sélectionner l\'appareil dans la liste ci-dessous"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Échec de la connexion, veuillez réessayer."</string>
-    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Confirmez le signalement à envoyer à l\'appareil de confiance."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Confirmez le rapport à envoyer à l\'appareil de confiance."</string>
     <string name="evaluated_send_report" msgid="7692059671222319749">"Envoyer un rapport"</string>
     <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Finalisation du signalement en cours…"</string>
     <string name="bluetooth_error_title" msgid="4352617586275775499">"Erreur Bluetooth"</string>
@@ -90,7 +90,7 @@
     <string name="fail" msgid="3918028202746427731">"Échec"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"Certificat vérifié"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"Appareil verrouillé"</string>
-    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"État du Démarrage vérifié"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"État du démarrage vérifié"</string>
     <string name="attestation_security_level" msgid="6633918464653325429">"Niveau de sécurité"</string>
     <string name="attestation_keymaster_version" msgid="7041962401293637901">"Version Keymaster"</string>
     <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Niveau de sécurité Keymaster"</string>

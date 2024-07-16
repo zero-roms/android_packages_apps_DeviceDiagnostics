@@ -25,7 +25,7 @@
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Conectando..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"Estado de los componentes"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Ejecuta pruebas manuales y consulta el estado de la batería y del almacenamiento"</string>
-    <string name="evaluation_mode_title" msgid="5845218248059550975">"Modo Evaluación"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Modo de evaluación"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Usa un dispositivo para evaluar otro"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Pruebas manuales"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Prueba de pantalla"</string>

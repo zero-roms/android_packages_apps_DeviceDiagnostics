@@ -23,14 +23,14 @@
     <string name="proceed" msgid="8922926495095369132">"Continuar"</string>
     <string name="unavailable" msgid="7842920330665850121">"Indisponível"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Conectando…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Integridade do componente"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Integridade dos componentes"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Faça testes manuais para avaliar a integridade da bateria e do armazenamento"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Modo de avaliação"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Use um dispositivo para avaliar outro"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Testes manuais"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Teste de tela"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Teste de toque"</string>
-    <string name="component_title" msgid="6580046234562555655">"Status do componente"</string>
+    <string name="component_title" msgid="6580046234562555655">"Status dos componentes"</string>
     <string name="storage_title" msgid="5921235202250843966">"Status do armazenamento"</string>
     <string name="battery_title" msgid="6707361668941323259">"Status da bateria"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Dispositivo de confiança"</string>
