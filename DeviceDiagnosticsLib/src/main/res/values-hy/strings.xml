@@ -121,7 +121,7 @@
     <string name="trustworthy_title" msgid="5360267928618795351">"Սարքը վստահելի է"</string>
     <string name="display_status_title" msgid="7827806798539639832">"Էկրանի կարգավիճակը"</string>
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"Հպման սենսորի կարգավիճակը"</string>
-    <string name="attestation_details_title" msgid="7637645023797408279">"Հաստատման մանրամասներ"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Ատեստավորման մանրամասներ"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"Հաստատումը ձախողվեց"</string>
     <string name="attestation_local_failure_summary" msgid="8657460343196696219">"Չհաջողվեց որոշել սարքի հուսալիությունը"</string>
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Փորձեք նորից հաստատել"</string>

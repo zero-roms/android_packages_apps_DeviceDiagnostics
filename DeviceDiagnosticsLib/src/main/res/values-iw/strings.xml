@@ -26,7 +26,7 @@
     <string name="component_health_title" msgid="6177813132789269842">"תקינות הרכיבים"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"בדיקות ידניות ונתונים על תקינות הסוללה והאחסון"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"מצב בדיקה"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"שימוש במכשיר אחד כדי לבדוק מכשיר אחר"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"בדיקת מכשיר אחד באמצעות מכשיר אחר"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"בדיקות ידניות"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"בדיקת המסך"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"בדיקת מגע"</string>

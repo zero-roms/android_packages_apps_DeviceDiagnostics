@@ -130,7 +130,7 @@
     <string name="evaluate_another_title" msgid="6275248738668045886">"Evalúa otro dispositivo"</string>
     <string name="back_to_main_title" msgid="2496143013300121780">"Vuelve al menú principal"</string>
     <string name="locked" msgid="2034650000550950371">"Bloqueado"</string>
-    <string name="not_locked" msgid="1663929635666930122">"No bloqueado"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Sin bloqueo"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"Código QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continúa en el dispositivo que se está evaluando"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Completa las pruebas en el dispositivo que estás evaluando y, luego, los resultados aparecerán aquí."</string>
