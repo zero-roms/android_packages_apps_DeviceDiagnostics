@@ -140,5 +140,5 @@
     <string name="screen_test_summary" msgid="6565006807310186664">"’n Reeks skerms sal nou aan jou gewys word. Bestudeer elkeen en kyk vir defekte. Sodra jy tevrede is, raak aan die skerm om na die volgende een toe te beweeg. Jy sal aan die einde gevra word of dit lyk asof die skerms sonder probleme is."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"’n Reeks skerms sal nou aan jou gewys word. Bestudeer elkeen en kyk vir defekte. Raak aan die skerm om na die volgende een toe te beweeg."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Kies die opsie hieronder wat die beste by die toestand van die skerm pas."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"’n Rooi skerm sal nou aan jou gewys word.\n \n Swiep jou vinger oor die skerm totdat die skerm heeltemal wit is. As jy ’n sekere deel van die skerm nie wit kan maak nie, korttik op die skerm om aan te dui dat die raaksensor nie ten volle werk nie.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"’n Rooi skerm sal nou aan jou gewys word.\n \n Swiep jou vinger oor die skerm totdat die skerm heeltemal wit is. As jy ’n sekere deel van die skerm nie wit kan maak nie, korttik dan op die skerm om aan te dui dat die raaksensor nie ten volle werk nie.\n \n"</string>
 </resources>
