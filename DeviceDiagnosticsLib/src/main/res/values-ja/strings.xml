@@ -24,7 +24,7 @@
     <string name="unavailable" msgid="7842920330665850121">"使用不可"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"接続しています..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"コンポーネントの状態"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"手動テストを実行してバッテリーとストレージの健全性を確認します"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"手動テストを実行してバッテリーとストレージの状態を確認します"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"評価モード"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"評価対象デバイスとは異なるデバイスを使って評価します"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"手動テスト"</string>

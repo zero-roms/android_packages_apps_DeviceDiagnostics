@@ -18,7 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"CihazSorunTanılama"</string>
-    <string name="app_title" msgid="2766786539301072967">"Cihaz Sorun Tanılama"</string>
+    <string name="app_title" msgid="2766786539301072967">"Cihaz sorun tanılama"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Devam"</string>
     <string name="proceed" msgid="8922926495095369132">"Devam et"</string>
     <string name="unavailable" msgid="7842920330665850121">"Yok"</string>
@@ -136,9 +136,9 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Değerlendirdiğiniz cihazda tamamladığınız testlerin sonuçları burada gösterilir."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Değerlendirilen cihazla iletişim kurulurken hata oldu. Lütfen Bluetooth\'un etkinleştirilmiş olduğunu doğrulayıp tekrar deneyin."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Şimdi tara"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Değerlendirmek istediğiniz cihazda Ayarlar, Sistem, Cihaz Sorun Tanılama, Değerlendirme modu ve ardından Değerlendirilen cihaz bölümüne gidin. Değerlendirilen cihazdaki talimatları uygulayın."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Değerlendirmek istediğiniz cihazda Ayarlar, Sistem, Cihaz sorun tanılama, Değerlendirme modu ve ardından Değerlendirilen cihaz bölümüne gidin. Değerlendirilen cihazdaki talimatları uygulayın."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Şimdi bazı ekranlar gösterilecek. Her birini inceleyerek kusur olup olmadığına bakın. İşiniz bittiğinde ekrana dokunarak sonrakine geçin. Sonunda ekranların kusursuz görünüp görünmediği sorulacak."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Şimdi bazı ekranlar gösterilecek. Her birini inceleyerek kusur olup olmadığına bakın. Ekrana dokunarak sonrakine geçin."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Lütfen aşağıdaki seçeneklerden ekranın durumuna en uygun olanı belirleyin."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Kırmızı bir ekran gösterilecek.\n \n Ekran tamamen beyaz olana kadar parmağınızı ekrana sürtün. Ekranın bir kısmını beyaza döndüremezseniz dokunmatik sensörün tam olarak çalışmadığını belirtmek için ekrana kısa dokunun.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Şimdi kırmızı bir ekran göreceksiniz.\n \n Ekran tamamen beyaz olana kadar parmağınızı ekranda hareket ettirin. Ekranın bir kısmı beyaza dönmezse dokunmatik sensörün tam olarak çalışmadığını belirtmek için ekrana kısa dokunun.\n \n"</string>
 </resources>

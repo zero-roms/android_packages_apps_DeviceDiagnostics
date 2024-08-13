@@ -34,7 +34,7 @@
     <string name="storage_title" msgid="5921235202250843966">"Status do armazenamento"</string>
     <string name="battery_title" msgid="6707361668941323259">"Status da bateria"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Dispositivo de confiança"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Avaliar outro dispositivo. É necessário ter uma conexão de Internet."</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Avalie outro dispositivo. É necessário ter uma conexão de Internet."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Dispositivo avaliado"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Faça testes de diagnóstico que serão validados por outro dispositivo."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Vamos avaliar o dispositivo"</string>
@@ -135,10 +135,10 @@
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continuar no dispositivo em avaliação"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Conclua os testes no dispositivo que você está avaliando. Os resultados vão aparecer aqui."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Ocorreu um erro na comunicação com o dispositivo avaliado. Confira se o Bluetooth está ativado e tente de novo."</string>
-    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Verificar agora"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"No dispositivo que você quer avaliar, acesse \"Configurações &gt; Sistema &gt; Diagnóstico do dispositivo &gt; Modo de avaliação &gt; Dispositivo avaliado\". Siga as instruções no dispositivo."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Verifique agora"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"No dispositivo que você quer avaliar, acesse Configurações &gt; Sistema &gt; Diagnóstico do dispositivo &gt; Modo de avaliação &gt; Dispositivo avaliado. Siga as instruções no dispositivo."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Agora, uma série de telas será mostrada. Analise cada uma delas e verifique se há defeitos. Quando não houver mais problemas, toque na tela para passar para a próxima. No final, responda se a tela aparece sem manchas."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Agora, uma série de telas será mostrada. Analise cada uma delas e verifique se há defeitos. Toque na tela para passar para a próxima."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Selecione abaixo a opção que melhor corresponde à condição da tela."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Agora, uma tela vermelha será mostrada.\n \n Deslize o dedo sobre a tela até que ela fique totalmente branca. Se isso não acontecer, toque rapidamente na tela para indicar que o sensor de toque não está funcionando por completo.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Agora, será mostrada uma tela vermelha.\n \n Deslize o dedo sobre a tela até que ela fique totalmente branca. Se isso não acontecer, toque rapidamente na tela para indicar que o sensor de toque não está funcionando por completo.\n \n"</string>
 </resources>

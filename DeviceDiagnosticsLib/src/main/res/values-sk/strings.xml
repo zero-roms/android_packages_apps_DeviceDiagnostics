@@ -34,7 +34,7 @@
     <string name="storage_title" msgid="5921235202250843966">"Stav úložiska"</string>
     <string name="battery_title" msgid="6707361668941323259">"Stav batérie"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Dôveryhodné zariadenie"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Ohodnoťte ďalšie zariadenie. Vyžaduje sa internetové pripojenie."</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Ohodnoťte iné zariadenie. Vyžaduje sa internetové pripojenie."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Hodnotené zariadenie"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Spustite diagnostické testy, ktoré budú overené iným zariadením."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skenujte"</string>
@@ -135,10 +135,10 @@
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Pokračujte v hodnotenom zariadení"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Dokončite testy v hodnotenom zariadení. Tu sa potom zobrazia výsledky."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Pri komunikácii s vyhodnocovaným zariadením sa vyskytla chyba. Skontrolujte, či je zapnuté rozhranie Bluetooth a skúste to znova."</string>
-    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skenovať"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skenujte"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"V zariadení, ktoré chcete hodnotiť, prejdite do sekcie Nastavenia, Systém, Diagnostika zariadenia, Režim hodnotenia a potom Hodnotené zariadenie. Postupujte podľa pokynov v tomto zariadení."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Teraz sa zobrazí niekoľko obrazoviek. Preskúmajte každú z nich a hľadajte chyby. Keď budete spokojný/-á, klepnite na obrazovku a prejdite na ďalšiu. Na konci sa vás opýtame, či obrazovky vyzerajú bezchybne."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Postupne sa zobrazí niekoľko obrazoviek. Každú z nich si dôkladne prezrite a hľadajte prípadné kazy. Klepnutím prejdete na ďalšiu obrazovku."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Vyberte možnosť nižšie, ktorá najlepšie zodpovedá stavu obrazovky."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Teraz sa zobrazí červená obrazovka.\n \n Ťahajte po nej prst, kým nebude úplne biela. Ak sa vám nepodarí zmeniť farbu jej časti na bielu, krátko klepnite na obrazovku, čím naznačíte, že dotykový snímač nie je úplne funkčný.\n\n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Teraz sa zobrazí červená obrazovka.\n \nŤahajte po nej prstom, kým nebude úplne biela. Ak sa vám nepodarí zafarbiť časť obrazovky nabielo, krátko na ňu klepnite a dajte tak najavo, že dotykový senzor nie je úplne funkčný.\n\n"</string>
 </resources>

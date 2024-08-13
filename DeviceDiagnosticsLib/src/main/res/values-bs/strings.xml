@@ -37,7 +37,7 @@
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Procijenite drugi uređaj. Potrebna je internetska veza."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Procijenjeni uređaj"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Pokrenite dijagnostičke testove koje će potvrditi drugi uređaj."</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skeniraj sada"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Skenirajte sada"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Skenirajte QR kôd na pouzdanom uređaju u pravougaoniku u nastavku"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Nakon što uspješno skenirate QR kôd, uređaj će automatski pokrenuti niz testova."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Odaberite pouzdani uređaj"</string>
@@ -135,10 +135,10 @@
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Nastavite na uređaju koji se procjenjuje"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Izvršite testove na uređaju koji procjenjujete i rezultati će se prikazati ovdje."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Došlo je do greške prilikom komunikacije s procijenjenim uređajem. Provjerite je li Bluetooth omogućen i pokušajte ponovo."</string>
-    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skeniraj sada"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skenirajte sada"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Na uređaju koji želite procijeniti idite u Postavke, Sistem, Dijagnostika uređaja, Način rada za procjenu, a zatim Procijenjeni uređaj. Slijedite upite na tom uređaju."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Sada ćemo vam prikazati niz ekrana. Proučite svaki ekran i potražite defekte. Kada budete zadovoljni, dodirnite ekran da pređete na sljedeći. Na kraju ćemo vas pitati izgledaju li ekrani besprijekorno."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Sada ćemo vam prikazati niz ekrana. Proučite svaki ekran i potražite defekte. Dodirnite ekran da pređete na sljedeći."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Odaberite opciju u nastavku koja se najbolje podudara sa stanjem ekrana."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Sada ćemo vam prikazati crveni ekran.\n \n Prevlačite prst preko ekrana dok u potpunosti ne pobijeli. Ako ne možete postići da dio ekrana pobijeli, nakratko dodirnite ekran da pokažete da senzor za dodir ne funkcionira u potpunosti.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Sada ćemo vam prikazati crveni ekran.\n \n Prevlačite prstom preko ekrana dok ekran u potpunosti ne pobijeli. Ako ne možete postići da dio ekrana pobijeli, nakratko dodirnite ekran da pokažete da senzor za dodir ne funkcionira u potpunosti.\n \n"</string>
 </resources>

@@ -23,8 +23,8 @@
     <string name="proceed" msgid="8922926495095369132">"Продовжити"</string>
     <string name="unavailable" msgid="7842920330665850121">"Недоступно"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"З’єднання…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Стан компонента"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"Виконайте ручні тести й дізнайтеся стан акумулятора та пам’яті"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Стан компонентів"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Виконайте тести вручну, щоб перевірити стан акумулятора й пам’яті"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Режим перевірки"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Скористайтесь одним пристроєм, щоб перевірити інший"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Ручні тести"</string>

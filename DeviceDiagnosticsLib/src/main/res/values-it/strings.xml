@@ -37,7 +37,7 @@
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Valuta un altro dispositivo. È necessaria una connessione a internet."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Dispositivo valutato"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Esegui test diagnostici che verranno convalidati da un altro dispositivo."</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"Esegui scansione ora"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Scansiona ora"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Scansiona il codice QR sul dispositivo attendibile nel rettangolo sottostante"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Una volta scansionato il codice QR, il dispositivo avvierà automaticamente una serie di test."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Seleziona dispositivo attendibile"</string>
@@ -135,7 +135,7 @@
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continua sul dispositivo in fase di valutazione"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Completa i test sul dispositivo che stai valutando. I risultati saranno poi visualizzati qui."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Si è verificato un errore durante la comunicazione con il dispositivo valutato. Verifica che il Bluetooth sia attivo e riprova."</string>
-    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Esegui scansione ora"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Scansiona ora"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Sul dispositivo che vuoi valutare, vai a Impostazioni, Sistema, Diagnostica dispositivo, Modalità di valutazione, Dispositivo valutato. Segui le istruzioni su quel dispositivo."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Adesso ti verrà mostrata una serie di schermate. Esaminale tutte e cerca i difetti. Se la schermata ti soddisfa, tocca lo schermo per passare a quella successiva. Alla fine, ti verrà chiesto se le schermate sembrano senza difetti."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Adesso ti verrà mostrata una serie di schermate. Esaminale tutte e cerca i difetti. Tocca lo schermo per passare alla schermata successiva."</string>
