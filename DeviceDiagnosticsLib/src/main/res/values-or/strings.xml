@@ -24,7 +24,7 @@
     <string name="unavailable" msgid="7842920330665850121">"ଅନୁପଲବ୍ଧ"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"କନେକ୍ଟ ହେଉଛି..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"କମ୍ପୋନେଣ୍ଟର ଅବସ୍ଥା"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"ମାନୁଆଲ ଟେଷ୍ଟ ଚଲାନ୍ତୁ ଏବଂ ବେଟେରୀ ଓ ଷ୍ଟୋରେଜ ହେଲ୍ଥ ଭ୍ୟୁ କରନ୍ତୁ"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"ମାନୁଆଲ ଟେଷ୍ଟଗୁଡ଼ିକୁ ଚଲାନ୍ତୁ ଏବଂ ବେଟେରୀ ଓ ଷ୍ଟୋରେଜର ସ୍ଥିତିକୁ ଭ୍ୟୁ କରନ୍ତୁ"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"ମୂଲ୍ୟାଙ୍କନ ମୋଡ"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"ଅନ୍ୟ ଏକ ଡିଭାଇସର ମୂଲ୍ୟାଙ୍କନ କରିବା ପାଇଁ ଗୋଟିଏ ଡିଭାଇସ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"ମାନୁଆଲ ଟେଷ୍ଟ"</string>

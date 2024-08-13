@@ -23,14 +23,14 @@
     <string name="proceed" msgid="8922926495095369132">"Continuă"</string>
     <string name="unavailable" msgid="7842920330665850121">"Indisponibil"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Se conectează…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Starea componentei"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Starea componentelor"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Rulează teste manuale și vezi starea bateriei și a spațiului de stocare"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Modul de evaluare"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Folosește un dispozitiv pentru a evalua un altul"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Teste manuale"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Test pentru ecran"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Test de atingere"</string>
-    <string name="component_title" msgid="6580046234562555655">"Starea componentei"</string>
+    <string name="component_title" msgid="6580046234562555655">"Starea componentelor"</string>
     <string name="storage_title" msgid="5921235202250843966">"Starea spațiului de stocare"</string>
     <string name="battery_title" msgid="6707361668941323259">"Starea bateriei"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Dispozitiv de încredere"</string>
@@ -64,7 +64,7 @@
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Data primei utilizări"</string>
     <string name="battery_cycle_count" msgid="1002728954996996785">"Numărul de cicluri"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"Număr de serie"</string>
-    <string name="battery_part_status" msgid="504091754655232085">"Starea componentei"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Starea componentelor"</string>
     <string name="battery_original" msgid="2552600989411644999">"Originală"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Înlocuită"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Istoricul componentei"</string>

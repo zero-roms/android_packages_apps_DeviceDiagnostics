@@ -140,5 +140,5 @@
     <string name="screen_test_summary" msgid="6565006807310186664">"You will now be shown a series of screens. Study each one and look for defects. Once you are satisfied, touch the screen to move to the next one. At the end, you will be asked if the screens look unblemished."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"You will now be shown a series of screens. Study each one and look for defects. Touch the screen to move to the next one."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Please select the option below that best matches the condition of the screen."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"You will now be shown a red screen.\n \n Rub your finger over the screen until the screen is entirely white. If you are unable to turn part of the screen white, short tap the screen to indicate that the touch sensor is not fully working.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"You will now be shown a red screen.\n \nRub your finger over the screen until the screen is entirely white. If you are unable to turn part of the screen white, short tap the screen to indicate that the touch sensor is not fully working.\n \n"</string>
 </resources>

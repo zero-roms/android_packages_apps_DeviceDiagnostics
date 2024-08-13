@@ -136,7 +136,7 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Kamilisha kufanya majaribio kwenye kifaa unachokitathmini, kisha matokeo yataonekana hapa."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Hitilafu fulani imetokea wakati wa kuwasiliana na kifaa kilichotathminiwa. Tafadhali thibitisha kuwa Bluetooth imewashwa kisha ujaribu tena."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Changanua sasa"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Kwenye kifaa ambacho ungependa kukitathmini, nenda kwenye Mipangilio, Mfumo, Uchunguzi wa Kifaa, Hali ya Tathmini, kisha kifaa Kilichotathminiwa. Fuata vidokezo kwenye kifaa hicho."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Kwenye kifaa ambacho ungependa kukitathmini, nenda kwenye Mipangilio, Mfumo, Uchunguzi wa Kifaa, Hali ya kutathmini, kisha kifaa Kilichotathminiwa. Fuata vidokezo kwenye kifaa hicho."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Sasa utaonyeshwa mfululizo wa skrini. Chunguza kila skrini na ubaini kasoro. Baada ya kuridhika, gusa skrini iliyopo ili uende kwenye skrini inayofuata. Hatimaye, utaulizwa iwapo skrini hazina kasoro zozote."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Sasa utaonyeshwa mfululizo wa skrini. Chunguza kila skrini na ubaini kasoro. Gusa skrini iliyopo ili uende kwenye skrini inayofuata."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Tafadhali teua chaguo lililo hapa chini linalolingana vizuri zaidi na hali ya skrini."</string>

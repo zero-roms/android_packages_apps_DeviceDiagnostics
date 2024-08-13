@@ -23,8 +23,8 @@
     <string name="proceed" msgid="8922926495095369132">"Egin aurrera"</string>
     <string name="unavailable" msgid="7842920330665850121">"Ez dago erabilgarri"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Konektatzen…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Osagaiaren bizitza"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"Egin probak eskuz eta ikusi bateriaren eta biltegiaren egoera"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Osagaien egoera"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Exekutatu probak eskuz, eta ikusi bateriaren eta biltegiaren egoera"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Ebaluazio modua"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Erabili gailu bat beste bat ebaluatzeko"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Eskuzko probak"</string>
@@ -36,7 +36,7 @@
     <string name="trusted_device_title" msgid="6291497999963968533">"Gailu fidagarria"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Ebaluatu beste gailu bat. Interneteko konexioa behar da."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Ebaluatutako gailua"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Egin beste gailu baten bidez baliozkotuko diren diagnostiko-probak."</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Exekutatu beste gailu baten bidez baliozkotuko diren diagnostiko-probak."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Eskaneatu"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Eskaneatu gailu fidagarriko QR kodea beheko laukian"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR kodea eskaneatu ondoren, gailua proba batzuk egiten hasiko da automatikoki."</string>

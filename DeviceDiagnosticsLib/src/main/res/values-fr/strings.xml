@@ -18,14 +18,14 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"Diagnostics de l\'appareil"</string>
-    <string name="app_title" msgid="2766786539301072967">"Diagnostics de l\'appareil"</string>
+    <string name="app_title" msgid="2766786539301072967">"Diagnostic de l\'appareil"</string>
     <string name="activity_continue" msgid="2190118984182069151">"Continuer"</string>
     <string name="proceed" msgid="8922926495095369132">"Continuer"</string>
     <string name="unavailable" msgid="7842920330665850121">"Non disponible"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Connexion…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Intégrité du composant"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Intégrité des composants"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Effectuez des tests manuels et affichez l\'état de l\'espace de stockage et de la batterie"</string>
-    <string name="evaluation_mode_title" msgid="5845218248059550975">"Mode d\'évaluation"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Mode évaluation"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Utilisez un appareil pour en évaluer un autre"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Tests manuels"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Test de l\'écran"</string>
@@ -140,5 +140,5 @@
     <string name="screen_test_summary" msgid="6565006807310186664">"Une série d\'écrans s\'affiche alors. Étudiez chacun d\'entre eux et recherchez les défauts. Une fois que c\'est fait, touchez l\'écran pour passer à l\'écran suivant. À la fin, on vous demandera si les écrans semblent intacts."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Une série d\'écrans va s\'afficher. Étudiez chacun d\'entre eux et recherchez les défauts. Touchez l\'écran pour passer à l\'écran suivant."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Veuillez sélectionner l\'option ci-dessous qui correspond le mieux à l\'état de l\'écran."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Un écran rouge va s\'afficher.\n \n Balayez l\'écran avec votre doigt jusqu\'à ce qu\'il devienne entièrement blanc. Si vous ne parvenez pas à rendre une partie de l\'écran blanche, appuyez brièvement sur l\'écran pour indiquer que le capteur tactile ne fonctionne pas complètement.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Un écran rouge va s\'afficher.\n \nBalayez l\'écran avec votre doigt jusqu\'à ce qu\'il devienne entièrement blanc. Si vous ne parvenez pas à rendre une partie de l\'écran blanche, appuyez brièvement sur l\'écran pour indiquer que le capteur tactile ne fonctionne pas complètement.\n \n"</string>
 </resources>

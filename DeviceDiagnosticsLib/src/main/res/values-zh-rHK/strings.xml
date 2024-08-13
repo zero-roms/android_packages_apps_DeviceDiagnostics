@@ -23,8 +23,8 @@
     <string name="proceed" msgid="8922926495095369132">"繼續"</string>
     <string name="unavailable" msgid="7842920330665850121">"無法取得"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"正在連線…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"組件健康度"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"執行手動測試及查看電池和儲存空間健康度"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"組件效能"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"執行手動測試及查看電池和儲存空間效能"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"評估模式"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"使用一部裝置評估另一部裝置"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"手動測試"</string>

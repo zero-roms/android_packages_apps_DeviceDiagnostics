@@ -136,7 +136,7 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Completa las pruebas en el dispositivo que estés evaluando, y los resultados aparecerán aquí."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"No se ha podido establecer la comunicación con el dispositivo evaluado. Comprueba que el Bluetooth esté habilitado e inténtalo de nuevo."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Escanear ahora"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"En el dispositivo que quieras evaluar, ve a Ajustes, Sistema, Diagnóstico del dispositivo, Modo Evaluación y Dispositivo evaluado. Sigue las indicaciones en ese dispositivo."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"En el dispositivo que quieras evaluar, ve a Ajustes, Sistema, Diagnóstico del dispositivo, Modo de evaluación y Dispositivo evaluado. Sigue las indicaciones en ese dispositivo."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Ahora se te mostrarán una serie de pantallas. Obsérvalas y busca posibles defectos. Cuando lo tengas todo listo, toca la pantalla para pasar a la siguiente. Al final, se te preguntará si las pantallas están impecables."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Ahora se te mostrarán una serie de pantallas. Obsérvalas y busca posibles defectos. Toca la pantalla para pasar a la siguiente."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Selecciona la opción que mejor se adapte al estado de la pantalla."</string>

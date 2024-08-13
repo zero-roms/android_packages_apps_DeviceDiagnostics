@@ -23,7 +23,7 @@
     <string name="proceed" msgid="8922926495095369132">"Jätka"</string>
     <string name="unavailable" msgid="7842920330665850121">"Pole saadaval"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Ühendamine…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Komponendi seisund"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Komponentide seisund"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Käitage käsitsiteste ning vaadake aku ja salvestusruumi seisukorda"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Hindamisrežiim"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Kasutage ühte seadet teise seadme hindamiseks"</string>

@@ -36,7 +36,7 @@
     <string name="trusted_device_title" msgid="6291497999963968533">"Zaufane urządzenie"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Oceń inne urządzenie. Wymagane jest połączenie z internetem."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Oceniane urządzenie"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Uruchom testy diagnostyczne, które zostaną sprawdzone na innym urządzeniu."</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Uruchom testy diagnostyczne, które zostaną zweryfikowane na innym urządzeniu."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Skanuj teraz"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Zeskanuj kod QR na zaufanym urządzeniu w prostokącie poniżej"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Po zeskanowaniu kodu QR urządzenie automatycznie rozpocznie serię testów."</string>
@@ -140,5 +140,5 @@
     <string name="screen_test_summary" msgid="6565006807310186664">"Zobaczysz teraz serię ekranów. Sprawdź każdy z nich pod kątem wad. Gdy wszystko będzie w porządku, dotknij ekranu, aby przejść do następnego. Na koniec zobaczysz pytanie, czy ekrany wyglądają na nieskazitelne."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Zobaczysz teraz serię ekranów. Sprawdź każdy z nich pod kątem wad. Dotknij ekranu, aby przejść do następnego."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Wybierz poniżej opcję, która najlepiej odpowiada stanowi ekranu."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Zobaczysz teraz czerwony ekran.\n \n Przesuwaj palcem po ekranie, aż ekran stanie się całkowicie biały. Jeśli nie możesz zmienić koloru części ekranu na biały, kliknij ekran, aby wskazać, że czujnik dotykowy nie działa w pełni.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Zobaczysz teraz czerwony ekran.\n \nPrzesuwaj palcem po ekranie, aż ekran stanie się całkowicie biały. Jeśli nie możesz zmienić koloru części ekranu na biały, kliknij ekran, aby wskazać, że czujnik dotykowy nie działa w pełni.\n \n"</string>
 </resources>

@@ -135,7 +135,7 @@
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Nastavite na uređaju koji se procenjuje"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Obavite testove na uređaju koji procenjujete. Rezultati će se prikazati ovde."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Došlo je do greške u komunikaciji sa uređajem koji se procenjuje. Proverite da li je Bluetooth omogućen i probajte ponovo."</string>
-    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skeniraj"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skenirajte"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Na uređaju koji želite da procenite idite u Podešavanja, Sistem, Dijagnostika uređaja, Režim procene, pa Uređaj koji se procenjuje. Pratite uputstva na tom uređaju."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Sada ćemo vam prikazati niz ekrana. Proučite svaki od njih i potražite nepravilnosti. Kada budete zadovoljni, dodirnite ekran da biste prešli na sledeći. Na kraju ćemo vas pitati da li ekrani izgledaju ispravno."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Sada ćemo vam prikazati niz ekrana. Proučite svaki od njih i potražite nepravilnosti. Dodirnite ekran da biste prešli na sledeći."</string>

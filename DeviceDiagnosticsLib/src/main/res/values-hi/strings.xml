@@ -23,9 +23,9 @@
     <string name="proceed" msgid="8922926495095369132">"आगे बढ़ें"</string>
     <string name="unavailable" msgid="7842920330665850121">"उपलब्ध नहीं है"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"कनेक्ट किया जा रहा है…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"कॉम्पोनेंट की परफ़ॉर्मेंस"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"कॉम्पोनेंट की परफ़ॉर्मेंस की जांच"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"मैन्युअल टेस्ट करके, बैटरी और स्टोरेज की परफ़ॉर्मेंस देखें"</string>
-    <string name="evaluation_mode_title" msgid="5845218248059550975">"जांच मोड"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"दूसरे डिवाइस की मदद से जांच"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"किसी डिवाइस की जांच करने के लिए दूसरे डिवाइस का इस्तेमाल करें"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"मैन्युअल तरीके से जांच करने की सुविधा"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"डिसप्ले की जांंच"</string>
@@ -60,14 +60,14 @@
     <string name="visual_test_warning_summary" msgid="8088295720348050370">"इस टेस्ट के लिए, विज़ुअल इंस्पेक्शन करना और फ़िजिकल डिसप्ले की पुष्टि करना ज़रूरी है. क्या आपको जारी रखना है?"</string>
     <string name="cancel" msgid="4173470896053421075">"रद्द करें"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"बैटरी की परफ़ॉर्मेंस"</string>
-    <string name="battery_manufacturing_date" msgid="5243620020486093692">"बैटरी कब बनी है"</string>
-    <string name="battery_first_usage_date" msgid="1183985039020984695">"बैटरी को पहली बार इस्तेमाल किए जाने की तारीख"</string>
-    <string name="battery_cycle_count" msgid="1002728954996996785">"बैटरी पूरी चार्ज होने से लेकर खत्म होने तक का साइकल"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"बनने की तारीख"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"पहली बार इस्तेमाल की तारीख"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"फ़ुल चार्ज और खत्म होने का साइकल"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"बैटरी का सीरियल नंबर"</string>
     <string name="battery_part_status" msgid="504091754655232085">"बैटरी के पार्ट की स्थिति"</string>
     <string name="battery_original" msgid="2552600989411644999">"ओरिजनल बैटरी"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"बैटरी को बदला गया"</string>
-    <string name="battery_part_history" msgid="5669260842330985767">"बैटरी के पार्ट का इतिहास"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"खास जानकारी"</string>
     <string name="battery_health_summary_fmt" msgid="4363832259742003306">"ओरिजनल कपैसिटी का %1$s"</string>
     <string name="battery_health_unavailable" msgid="5093923315136769788">"बैटरी की परफ़ॉर्मेंस से जुड़ा डेटा उपलब्ध नहीं है"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"बैटरी का तापमान बहुत कम है"</string>
@@ -136,9 +136,9 @@
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"जांचे जा रहे डिवाइस पर टेस्ट पूरे करें. इसके बाद, नतीजे यहां दिखेंगे."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"जांचे गए डिवाइस से कनेक्ट करने में गड़बड़ी हुई. कृपया पुष्टि करें कि ब्लूटूथ चालू हो और फिर से कोशिश करें."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"अभी स्कैन करें"</string>
-    <string name="trusted_scan_now_summary" msgid="578587921199486348">"आपको जिस डिवाइस की जांच करनी है उसकी सेटिंग खोले, सिस्टम पर जाएं, और Device diagnostics में जाकर, जांच मोड चुनें. इसके बाद, \'जांचा गया डिवाइस\' पर जाएं और उस डिवाइस पर प्रॉम्प्ट फ़ॉलो करें."</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"आपको जिस डिवाइस की जांच करनी है उसकी सेटिंग खोलें. फिर सिस्टम पर जाएं और Device diagnostics में, \'दूसरे डिवाइस की मदद से जांच\' चुनें. इसके बाद, \'जांचा गया डिवाइस\' पर जाएं और उस डिवाइस पर मिले प्रॉम्प्ट फ़ॉलो करें."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"अब आपको स्क्रीन की एक सीरीज़ दिखेगी. हर एक की जांच करें और खराबियों का पता लगाएं. सही से जांच कर लेने के बाद, अगली स्क्रीन पर जाने के लिए स्क्रीन को छुएं. आखिर में, आपसे यह पूछा जाएगा कि स्क्रीन पर कोई खराबी थी या नहीं."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"अब आपको एक के बाद एक कई स्क्रीन दिखाई जाएंगी. हर एक पर दिए गए निर्देशों के मुताबिक जांच करें और खराबियों का पता लगाएं. अगली स्क्रीन पर जाने के लिए, स्क्रीन को छुएं."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"कृपया, यहां दिए गए विकल्पों में से वह विकल्प चुनें जो स्क्रीन की स्थिति से मेल खाता हो."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"अब आपको लाल रंग की एक स्क्रीन दिखेगी.\n \n स्क्रीन के पूरी तरह से सफ़ेद होने तक, स्क्रीन पर अपनी उंगली से स्वाइप करें. अगर स्क्रीन का कुछ हिस्सा सफ़ेद नहीं हो पा रहा है, तो स्क्रीन पर हल्का टैप करें जिससे यह पता चल सकेगा कि टच सेंसर पूरी तरह से काम नहीं कर रहा है.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"अब फ़ोन की पूरी स्क्रीन लाल रंग हो जाएगी.\n \n स्क्रीन पर अपनी उंगली से तब तक स्वाइप करें, जब तक कि वह पूरी तरह से सफ़ेद न हो जाए. अगर कुछ हिस्सा सफ़ेद नहीं हो रहा है, तो स्क्रीन पर हल्के से टैप करें. यह इस बात का सिग्नल होगा कि टच सेंसर पूरी तरह से काम नहीं कर रहा है.\n \n"</string>
 </resources>
