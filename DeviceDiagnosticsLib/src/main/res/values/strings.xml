@@ -90,6 +90,11 @@
   <string name="storage_health_title">Storage health</string>
   <string name="storage_total_capacity_title">Total capacity</string>
   <string name="storage_total_capacity_summary_fmt"><xliff:g id="number" example="128">%1$s</xliff:g> <xliff:g id="unit" example="KB">%2$s</xliff:g></string>
+  <!-- Remaining lifetime of the device's storage chip as a percentage. When data is written,
+       flash cells in the storage chip will very slowly degrade. This percentage is an estimate
+       of how much degradation has occurred. For example, the storage chip might be specified
+       to withstand X amount of activity. "90% lifetime remaining" would indicate that 10% of
+       that activity has already occurred. -->
   <string name="storage_health_summary_fmt">%1$s lifetime remaining</string>
 
   <!-- Permissions -->
