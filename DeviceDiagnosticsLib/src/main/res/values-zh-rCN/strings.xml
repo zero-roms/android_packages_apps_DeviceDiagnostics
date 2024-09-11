@@ -67,7 +67,7 @@
     <string name="battery_part_status" msgid="504091754655232085">"部件状态"</string>
     <string name="battery_original" msgid="2552600989411644999">"原电池"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"更换的电池"</string>
-    <string name="battery_part_history" msgid="5669260842330985767">"部件历史记录"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"零件信息"</string>
     <string name="battery_health_summary_fmt" msgid="4363832259742003306">"原始容量的 %1$s"</string>
     <string name="battery_health_unavailable" msgid="5093923315136769788">"无法获取电池健康度信息"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"低温"</string>

@@ -62,12 +62,12 @@
     <string name="battery_health_title" msgid="3945318982701313271">"בריאות"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"תאריך הייצור"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"תאריך השימוש הראשון"</string>
-    <string name="battery_cycle_count" msgid="1002728954996996785">"מספר מחזורי הטעינה"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"מחזורי הסוללה שהושלמו"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"מספר סידורי"</string>
     <string name="battery_part_status" msgid="504091754655232085">"סטטוס החלק"</string>
     <string name="battery_original" msgid="2552600989411644999">"מקורית"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"הוחלפה"</string>
-    <string name="battery_part_history" msgid="5669260842330985767">"היסטוריית החלק"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"היסטוריית הרכיב"</string>
     <string name="battery_health_summary_fmt" msgid="4363832259742003306">"‏‫%1$s מהקיבולת המקורית"</string>
     <string name="battery_health_unavailable" msgid="5093923315136769788">"מצב תקינות הסוללה לא זמין"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"קרה"</string>
