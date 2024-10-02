@@ -47,7 +47,7 @@
     <string name="evaluated_send_report" msgid="7692059671222319749">"Кабар берүү"</string>
     <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Манжа изи тууралуу баяндама..."</string>
     <string name="bluetooth_error_title" msgid="4352617586275775499">"Bluetooth катасы"</string>
-    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Ишенимдүү түзмөк менен байланышууда ката кетти. Bluetooth иштетилгенин текшерип, кайра аракет кылыңыз."</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Ишенимдүү түзмөк менен байланышууда ката кетти. Bluetooth иштетилгенин текшерип, кайталап көрүңүз."</string>
     <string name="sending_report" msgid="8735615783234611336">"Ишенимдүү түзмөккө отчет жөнөтүлүүдө..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Бааланып бүттү"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Натыйжалар эми ишенимдүү түзмөктө көрүнөт"</string>
@@ -134,7 +134,7 @@
     <string name="qr_code_description" msgid="4665712956570877310">"QR коду"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Текшерилип жаткан түзмөктө улантыңыз"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Текшерилип жаткан түзмөктү сынаганда, жыйынтыгы бул жерде көрүнөт."</string>
-    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Текшерилип жаткан түзмөк менен байланышууда ката кетти. Bluetooth иштетилгенин текшерип, кайра аракет кылыңыз."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Текшерилип жаткан түзмөк менен байланышууда ката кетти. Bluetooth иштетилгенин текшерип, кайталап көрүңүз."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Азыр скандоо"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Текшергиңиз келген түзмөктөн Параметрлер &gt; Система &gt; Түзмөктүн мүчүлүштүктөрүн аныктоо &gt; Текшерилүүчү түзмөк &gt; Түзмөктү текшерүү дегенге өтүңүз. Ошол жердеги нускамаларды аткарыңыз."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Сизге бир нече көрүнүш сунушталып, алардагы көйгөйлөрдү аныктайсыз. Баары жайында болсо, кийинкисине өтүү үчүн экранга тийип коесуз. Акырында көйгөй бар же жогун айтасыз."</string>
