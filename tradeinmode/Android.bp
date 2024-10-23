@@ -33,4 +33,11 @@ cc_binary {
     static_libs: [
         "libgflags",
     ],
+    required: ["tradeinmode.rc"],
+}
+
+prebuilt_etc {
+    name: "tradeinmode.rc",
+    src: "tradeinmode.rc",
+    sub_dir: "init",
 }
