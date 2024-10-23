@@ -35,6 +35,10 @@ message BatteryInfo {
     optional int64 first_usage_timestamp = 9;
 }
 
+message LockInfo {
+    bool factory_reset_protection = 1;
+}
+
 message StorageInfo {
     reserved 1, 2;
     optional int32 useful_lifetime_remaining = 3;
@@ -51,6 +55,7 @@ message DeviceReport {
     BatteryInfo battery = 3;
     StorageInfo storage = 4;
     int32 launch_level = 5;
+    LockInfo locks = 6;
 }
 
 enum PacketCommand {

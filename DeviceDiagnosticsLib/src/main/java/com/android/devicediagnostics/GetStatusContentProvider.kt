@@ -25,6 +25,7 @@ import android.util.Log
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.evaluated.createAttestationRecord
 import com.android.devicediagnostics.evaluated.getBatteryInfo
+import com.android.devicediagnostics.evaluated.getLockInfo
 import com.android.devicediagnostics.evaluated.getStorageInfo
 import com.google.protobuf.ByteString
 
@@ -81,11 +82,14 @@ class GetStatusContentProvider : ContentProvider() {
 
         override fun getString(column: Int): String {
             return DeviceReport.newBuilder().run {
-                setBattery(getBatteryInfo(context))
-                setStorage(getStorageInfo(context))
-                setLaunchLevel(ApplicationInterface.app.getLaunchLevel())
-                selection?.run {
-                    setAttestation(ByteString.copyFrom(createAttestationRecord(toByteArray())))
+                setLocks(getLockInfo(context))
+                if (!getLocks().getFactoryResetProtection()) {
+                    setBattery(getBatteryInfo(context))
+                    setStorage(getStorageInfo(context))
+                    setLaunchLevel(ApplicationInterface.app.getLaunchLevel())
+                    selection?.run {
+                        setAttestation(ByteString.copyFrom(createAttestationRecord(toByteArray())))
+                    }
                 }
                 "${build()}"
             }
