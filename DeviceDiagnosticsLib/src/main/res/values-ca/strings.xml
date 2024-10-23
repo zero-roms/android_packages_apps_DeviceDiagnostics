@@ -47,7 +47,7 @@
     <string name="evaluated_send_report" msgid="7692059671222319749">"Envia l\'informe"</string>
     <string name="evaluated_finalizing_report" msgid="2808969866170324986">"S\'està finalitzant l\'informe..."</string>
     <string name="bluetooth_error_title" msgid="4352617586275775499">"Error de Bluetooth"</string>
-    <string name="bluetooth_error_summary" msgid="8411286861814582793">"S\'ha produït un error en comunicar-se amb el dispositiu de confiança. Verifica que el Bluetooth estigui activat i torna-ho a provar."</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Hi ha hagut un error en comunicar-se amb el dispositiu de confiança. Verifica que el Bluetooth estigui activat i torna-ho a provar."</string>
     <string name="sending_report" msgid="8735615783234611336">"S\'està enviant l\'informe al dispositiu de confiança..."</string>
     <string name="evaluation_complete_title" msgid="2503185542217582851">"L\'avaluació s\'ha completat"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Els resultats es mostraran al dispositiu de confiança"</string>
@@ -134,7 +134,7 @@
     <string name="qr_code_description" msgid="4665712956570877310">"Codi QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continua al dispositiu que s\'està avaluant"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Completa les proves al dispositiu que estàs avaluant; després, els resultats es mostraran aquí."</string>
-    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"S\'ha produït un error en comunicar-se amb el dispositiu avaluat. Verifica que el Bluetooth estigui activat i torna-ho a provar."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Hi ha hagut un error en comunicar-se amb el dispositiu avaluat. Verifica que el Bluetooth estigui activat i torna-ho a provar."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Escaneja ara"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Al dispositiu que vulguis avaluar, ves a Configuració, Sistema, Diagnòstic del dispositiu, Mode d\'avaluació i Dispositiu avaluat. Segueix les indicacions al dispositiu en qüestió."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Ara se\'t mostraran diverses pantalles. Examina-les i cerca els defectes. Quan hagis acabat, toca la pantalla per passar a la següent. Al final, se\'t preguntarà si les pantalles estan impecables."</string>
