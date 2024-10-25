@@ -28,10 +28,12 @@ import com.android.tradeinmode.flags.Flags.enableTradeInMode
 class BootCompleteReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (!enableTradeInMode()) return
-        var b: IBinder = ServiceManager.getServiceOrThrow("tradeinmode")
-        var service: ITradeInMode = ITradeInMode.Stub.asInterface(b)
-        if (service.start()) {
-            Slog.i("BootCompleteReceiver", "Entered trade-in mode.")
+        var b: IBinder? = ServiceManager.getService("tradeinmode")
+        if (b != null) {
+            var service: ITradeInMode = ITradeInMode.Stub.asInterface(b)
+            if (service.start()) {
+                Slog.i("BootCompleteReceiver", "Entered trade-in mode.")
+            }
         }
     }
 }
