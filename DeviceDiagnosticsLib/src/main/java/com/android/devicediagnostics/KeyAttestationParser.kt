@@ -27,7 +27,6 @@ import java.nio.ByteBuffer
 import java.security.cert.CertificateException
 import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate
-import java.util.zip.Inflater
 import org.bouncycastle.util.encoders.Base64
 
 private const val TAG = "Attestation"
@@ -62,13 +61,15 @@ enum class AttestationResult {
     // No attempt was made to verify the certificate.
     SKIPPED_VERIFICATION,
     // The certificate was verified.
-    VERIFIED
+    VERIFIED,
 }
 
 class AttestationController(val challenge: ByteArray, val selfCheck: Boolean) {
     interface Callbacks {
         fun onAttestationReceived(result: Pair<ParsedAttestationRecord, AttestationResult>)
+
         fun onAttestationRetry()
+
         fun onAttestationError()
     }
 
@@ -79,7 +80,7 @@ class AttestationController(val challenge: ByteArray, val selfCheck: Boolean) {
             var attestation =
                 ApplicationInterface.app.verifyAttestation(
                     report.attestation.toByteArray(),
-                    challenge
+                    challenge,
                 )
             if (attestation.second == AttestationResult.NETWORK_ERROR && selfCheck)
                 attestation = Pair(attestation.first, AttestationResult.SKIPPED_VERIFICATION)
@@ -99,24 +100,13 @@ class AttestationController(val challenge: ByteArray, val selfCheck: Boolean) {
 
 fun getAttestation(
     attestation: ByteArray,
-    challenge: ByteArray
+    challenge: ByteArray,
 ): Pair<ParsedAttestationRecord?, AttestationResult> {
-    val inflater = Inflater()
-    inflater.setInput(attestation, 0, attestation.size)
-    var inflated = ByteArray(0)
-    while (true) {
-        val inflatedChunk = ByteArray(256)
-        val inflatedBytes = inflater.inflate(inflatedChunk)
-        if (inflatedBytes == 0) break
-        inflated += inflatedChunk.take(inflatedBytes).toByteArray()
-    }
-    inflater.end()
-
     var certs: ImmutableList<X509Certificate>?
     var record: ParsedAttestationRecord? = null
 
     try {
-        certs = loadCertificates(inflated)
+        certs = loadCertificates(attestation)
         record = ParsedAttestationRecord.createParsedAttestationRecord(certs)
         if (verifyCertificateChain(certs)) {
             if (record.attestationChallenge.contentEquals(challenge)) {
