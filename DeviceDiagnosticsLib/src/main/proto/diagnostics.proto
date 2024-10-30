@@ -19,9 +19,11 @@ syntax = "proto3";
 package com.android.devicediagnostics;
 option java_outer_classname = "Protos";
 
+// When updating this file, update DeviceReportJsonFormatter.kt as well.
+
 message TestResults {
-    bool screen_test = 1;
-    bool touch_test = 2;
+    optional bool screen_test = 1;
+    optional bool touch_test = 2;
 }
 
 message BatteryInfo {
