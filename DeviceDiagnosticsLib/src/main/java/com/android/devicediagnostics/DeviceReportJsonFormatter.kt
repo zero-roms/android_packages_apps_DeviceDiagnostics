@@ -79,7 +79,10 @@ fun deviceReportToJson(report: DeviceReport): JSONObject {
     val obj = JSONObject()
     if (report.hasTests()) putIfNotEmpty(obj, "tests", testResultsToJson(report.tests))
     if (!report.attestation.isEmpty)
-        obj.put("attestation", Base64.encode(report.attestation.toByteArray(), Base64.DEFAULT))
+        obj.put(
+            "attestation",
+            Base64.encodeToString(report.attestation.toByteArray(), Base64.DEFAULT),
+        )
     if (report.hasBattery()) putIfNotEmpty(obj, "battery", batteryInfoToJson(report.battery))
     if (report.hasStorage()) putIfNotEmpty(obj, "storage", storageInfoToJson(report.storage))
     obj.put("launch_level", report.launchLevel)

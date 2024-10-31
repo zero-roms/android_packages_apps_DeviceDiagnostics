@@ -18,26 +18,18 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-cc_binary {
-    name: "tradeinmode",
-    cflags: [
-        "-Wall",
-        "-Werror",
-    ],
-    srcs: [
-        "adb-helper.cpp",
-    ],
-    shared_libs: [
-        "libbase",
-    ],
-    static_libs: [
-        "libgflags",
-    ],
-    required: ["tradeinmode.rc"],
-}
-
 prebuilt_etc {
     name: "tradeinmode.rc",
     src: "tradeinmode.rc",
     sub_dir: "init",
+}
+
+java_binary {
+    name: "tradeinmode",
+    srcs: ["src/**/*.kt"],
+    main_class: "com.android.devicediagnostics.commands.Commands",
+    required: ["tradeinmode.rc"],
+    dex_preopt: {
+        enabled: false,
+    },
 }
