@@ -85,7 +85,7 @@ fun deviceReportToJson(report: DeviceReport): JSONObject {
         )
     if (report.hasBattery()) putIfNotEmpty(obj, "battery", batteryInfoToJson(report.battery))
     if (report.hasStorage()) putIfNotEmpty(obj, "storage", storageInfoToJson(report.storage))
-    obj.put("launch_level", report.launchLevel)
+    obj.putIfPresent(report.hasLaunchLevel(), "launch_level", report.launchLevel)
     obj.put("locks", lockInfoToJson(report.locks))
     return obj
 }
