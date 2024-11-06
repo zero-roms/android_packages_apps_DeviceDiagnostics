@@ -23,7 +23,7 @@
     <string name="proceed" msgid="8922926495095369132">"Nastavi"</string>
     <string name="unavailable" msgid="7842920330665850121">"Nije dostupno"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Povezivanje..."</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Stanje komponente"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Stanje komponenti"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Pokrenite ručne testove i pogledajte stanje baterije i pohrane"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Način procjene"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Pomoću jednog uređaja procijenite drugi"</string>
