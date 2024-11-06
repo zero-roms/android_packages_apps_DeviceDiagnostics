@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"උපාංග නිර්ණය"</string>
+    <string name="app_title" msgid="2766786539301072967">"උපාංග නිර්ණය"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"ඉදිරියට යන්න"</string>
+    <string name="proceed" msgid="8922926495095369132">"ඉදිරියට යන්න"</string>
+    <string name="unavailable" msgid="7842920330665850121">"නොලැබේ"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"සබැඳේ..."</string>
+    <string name="component_health_title" msgid="6177813132789269842">"සංරචක සෞඛ්‍යය"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"හස්තීය පරීක්‍ෂණ ධාවන කර බැටරි සහ ගබඩා සෞඛ්‍යය බලන්න"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"ඇගයීම් ප්‍රකාරය"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"එක් උපාංගයක් තක්සේරු කිරීමට තව උපාංගයක් භාවිත කරන්න"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"හස්තීය පරීක්‍ෂා"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"සංදර්ශක පරීක්‍ෂාව"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"ස්පර්ශ පරීක්‍ෂාව"</string>
+    <string name="component_title" msgid="6580046234562555655">"සංරචක තත්ත්‍වය"</string>
+    <string name="storage_title" msgid="5921235202250843966">"ආචයන තත්ත්‍වය"</string>
+    <string name="battery_title" msgid="6707361668941323259">"බැටරි තත්ත්‍වය"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"විශ්වසනීය උපාංගය"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"වෙනත් උපාංගයක් තක්සේරු කරන්න. අන්තර්ජාල සම්බන්‍ධතාවක් අවශ්‍ය ය."</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"ඇගයෙන උපාංගය"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"වෙනත් උපාංගයකින් වලංගු කරන ලද නිර්ණ පරීක්‍ෂණ ධාවන කරන්න."</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"දැන් ස්කෑන් කරන්න"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"පහත ඍජු කෝණාස්‍රය තුළ විශ්වසනීය උපාංගය මත QR කේතය ස්කෑන් කරන්න"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"ඔබ QR කේතය සාර්ථකය අගයා ඇති විට, මෙම උපාංගය ස්වයංක්‍රීයව පරීක්‍ෂණ මාලාවක් ආරම්භ කරයි."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"විශ්වසනීය උපාංගය තෝරන්න"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"වෛකල්පික ලෙස, පහත ලැයිස්තුවෙන් උපාංගය තෝරන්න"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"සම්බන්‍ධතාව අසමත් විය, නැවත උත්සාහ කරන්න."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"විශ්වසනීය උපාංගයට යැවීම තහවුරු කරන්න"</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"වාර්තාව යවන්න"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"වාර්තාව අවසන් කෙරේ..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"බ්ලූටූත් දෝෂය"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"විශ්වසනීය උපාංගය සමග සන්නිවේදන කිරීමේ දෝෂයක් තිබුණා. බ්ලූටූත් සබල කර ඇති බව සත්‍යාපන කර ගෙන නැවත උත්සාහ කරන්න."</string>
+    <string name="sending_report" msgid="8735615783234611336">"විශ්වසනීය උපාංගයට වාර්තාව යවනු ලැබේ..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"තක්සේරුව සම්පූර්ණයි"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"ප්‍රතිඵල දැන් විශ්වසනීය උපාංගය මත දිස් වෙයි"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"තිර පරීක්ෂණ ප්‍රතිඵලය"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"හොඳයි"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"පැහැදිලි අඩුපාඩු නැත"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"අයහපත්"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"තිරයේ අඩුපාඩු තිබේ"</string>
+    <string name="manual_testing_title" msgid="4512384040828953255">"හස්තීය පරීක්‍ෂාව"</string>
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"පහත පරීක්ෂණයට දෘශ්‍ය පරීක්ෂාව සහ භෞතික සංදර්ශකය තහවුරු කිරීම අවශ්‍ය වේ. ඔබට ඉදිරියට යාමට අවශ්‍ය බවට සහතික ද?"</string>
+    <string name="cancel" msgid="4173470896053421075">"අවලංගු කරන්න"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"සෞඛ්‍යය"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"නිෂ්පාදන දිනය"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"පළමු පරිශීලන දිනය"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"චක්‍ර ගණන"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"අනුක්‍රමික අංකය"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"කොටස් තත්ත්‍වය"</string>
+    <string name="battery_original" msgid="2552600989411644999">"මුල්"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"ප්‍රතිස්ථාපන කළා"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"කොටස් ඉතිහාසය"</string>
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"මුල් ධාරිතාවෙන් %1$s"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"බැටරි සෞඛ්‍යය නොලැබේ"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"සිසිල්"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"අක්‍රියයි"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"හොඳයි"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"අධික උෂ්ණත්වය"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"අධි වෝල්ටීයතාව"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"ආචයන සෞඛ්‍යය"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"සම්පූර්ණ ධාරිතාව"</string>
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>⁠"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s ආයු කාලය ඉතිරිව ඇත"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"ඇගයීම් ප්‍රකාරය තුළ ඉදිරියට යාමට ඉල්ලන ලද අවසර දෙන්න."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"අවලංගු කරන්න"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"නැවත උත්සාහ කරන්න"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"ස්පර්ශ පරීක්‍ෂණ ප්‍රතිඵලය"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"මෙය ස්පර්ශ පරීක්‍ෂාවේ ප්‍රතිඵලය වෙයි. ඔබට ආපස්සට සංචලන කිරීමෙන් පරීක්‍ෂාව නැවත සිදු කළ හැක."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"ස්පර්ශ සංවේදක පරීක්‍ෂාව සමත් විය"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"ස්පර්ශ සංවේදක පරීක්‍ෂාව අසමත් විය"</string>
+    <string name="pass" msgid="6411665547268368837">"පසු කිරීම"</string>
+    <string name="fail" msgid="3918028202746427731">"අසමත්"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"සත්‍යාපිත සහතිකය"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"උපාංගය අගුලු වැටී ඇත"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"සත්‍යාපිත පණ ගැන්වීම් තත්ත්‍වය"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"ආරක්‍ෂක මට්ටම"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Keymaster අනුවාදය"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Keymaster ආරක්‍ෂක මට්ටම"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"OS අනුවාදය"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"සන්නම"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"උපාංගය"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"නිෂ්පාදනය"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"අනුක්‍රමික"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"දෙවෙනි IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"නිෂ්පාදකයා"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"මාදිලිය"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"විකුණුම්කරු අණ්ඩ මට්ටම"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"අණ්ඩ මට්ටම පණ ගන්වන්න"</string>
+    <string name="yes" msgid="6686215078709381643">"ඔව්"</string>
+    <string name="no" msgid="5957591978126937912">"නැත"</string>
+    <string name="unknown" msgid="6936738212381747979">"නොදනී"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"සහතික කිරීම අසමත් විය"</string>
+    <string name="avb_verified" msgid="4990498011432924565">"සත්‍යාපනය කරන ලදි"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"සත්‍යාපන කර නැත"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"ඇගයීම් ප්‍රතිඵලය"</string>
+    <string name="attestation_results" msgid="9089126954790727665">"සහතික කිරීමේ ප්‍රතිඵල"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"දෙවෙනි IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"අනුක්‍රමික අංකය"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"ආරම්භකය අගුලු වැටී ඇත"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"උපාංගය විශ්වසනීයයි"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"සංදර්ශක තත්ත්‍වය"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"ස්පර්ශ සංවේදක තත්ත්‍වය"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"සහතික කිරීම් විස්තර"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"සහතික කිරීම අසමත් විය"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"උපාංගය විශ්වසනීයද තීරණ කළ නොහැකි විය"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"සහතික කිරීම නැවත උත්සාහ කරන්න"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"සහතික කිරීම සත්‍යාපන කිරීමට අසමත් විය, ඔබේ සම්බන්‍ධතාව පරීක්‍ෂා කර නැවත උත්සාහ කරන්න."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"මීළඟ පියවර"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"තව උපාංගයක් අගයන්න"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"ආපසු ප්‍රධාන මෙනුවට"</string>
+    <string name="locked" msgid="2034650000550950371">"අගුලු දමා ඇත"</string>
+    <string name="not_locked" msgid="1663929635666930122">"අගුලු දමා නැත"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR කේතය"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"අගයනු ලබන උපාංගය මත ඉදිරියට යන්න"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"ඔබ අගයන උපාංගය මත පරීක්‍ෂාව සම්පූර්ණ කරන්න, පසුව ප්‍රතිඵල මෙහි දිස් වෙයි."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"ඇගයීමට ලක් කළ උපාංගය සමග සන්නිවේදන කිරීමේ දෝෂයක් තිබුණා. බ්ලූටූත් සබල කර ඇති බව සත්‍යාපන කර ගෙන නැවත උත්සාහ කරන්න."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"දැන් ස්කෑන් කරන්න"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"ඔබට ඇගයීමට අවශ්‍ය උපාංගයේ, සැකසීම්, පද්ධතිය, උපාංග නිර්ණ, ඇගයීම් ප්‍රකාරය, පසුව ඇගයීම් කළ උපාංගය වෙත යන්න. එම උපාංගය මත ප්‍රේරණ අනුගමන කරන්න."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"දැන් ඔබට තිර මාලාවක් පෙන්වනු ලැබේ. එකිනෙක අධ්‍යයන කර පලුදු තිබේද සොයන්න. ඔබ තෘප්තිමත් වූ විට, ඊළඟ එකට යාමට තිරය ස්පර්ශ කරන්න. අවසානයේදී, තිර කැලල් නොවී පෙනෙන්නේදැයි ඔබෙන් අසනු ලැබේ."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"දැන් ඔබට තිර මාලාවක් පෙන්වනු ලැබේ. එකිනෙක අධ්‍යයන කර පලුදු තිබේද සොයන්න. ඊළඟ එකට යාමට තිරය ස්පර්ශ කරන්න."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"තිරයේ තත්ත්‍වයට හොඳින්ම ගැළපෙන පහත විකල්පය තෝරන්න."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"දැන් ඔබට රතු තිරයක් පෙන්වනු ලැබේ.\n \n තිරය සම්පූර්ණයෙන් සුදු වන තෙක් ඔබේ ඇඟිල්ල තිරය මත ස්වයිප් කරන්න. ඔබ තිරයේ කොටසක් සුදට හැරවිය නොහැකි නම්, ස්පර්ශ සංවේදකය සම්පූර්ණයෙන් ක්‍රියා නොකරන බව සඳහන් කිරීමට තිරයට කෙටියෙන් තට්ටු කරන්න.\n \n"</string>
+</resources>

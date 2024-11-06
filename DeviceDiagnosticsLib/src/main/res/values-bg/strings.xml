@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"Диагностика на устройството"</string>
+    <string name="app_title" msgid="2766786539301072967">"Диагностика на устройството"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Напред"</string>
+    <string name="proceed" msgid="8922926495095369132">"Напред"</string>
+    <string name="unavailable" msgid="7842920330665850121">"Не е налице"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"Установява се връзка..."</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Състояние на компонента"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Провеждайте ръчни тестове и преглеждайте състоянието на батерията и хранилището"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Режим за оценяване"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Използване на едно устройство за оценяване на друго"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Ръчни тестове"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Тестване на екрана"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Тест за докосване"</string>
+    <string name="component_title" msgid="6580046234562555655">"Състояние на компонента"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Състояние на хранилището"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Състояние на батерията"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Надеждно устройство"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Оценяване на друго устройство. Изисква се връзка с интернет."</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Оценявано устройство"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Провеждайте диагностични тестове, които ще бъдат потвърдени чрез друго устройство."</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Сканиране сега"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Сканирайте QR кода на надеждното устройство в правоъгълното поле по-долу"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"След като сканирате QR кода, автоматично ще се стартират редица тестове на това устройство."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Избор на надеждно устройство"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Можете също да изберете устройството от списъка по-долу"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Връзката не бе успешна. Моля, опитайте отново."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Потвърдете сигнала, който да се изпрати до надеждното устройство."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Изпращане на сигнал"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Сигналът се финализира..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Грешка в Bluetooth"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"При комуникацията с надеждното устройство възникна грешка. Уверете се, че функцията за Bluetooth е активирана, и опитайте отново."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Сигналът се изпраща до надеждното устройство..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Оценяването завърши"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Резултатите вече ще се показват на надеждното устройство"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Резултат от теста на екрана"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Добър резултат"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Няма очевидни дефекти"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Незадоволително"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Екранът е с дефекти"</string>
+    <string name="manual_testing_title" msgid="4512384040828953255">"Ръчно тестване"</string>
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"Следващият тест изисква визуална проверка и потвърждение на физическия екран. Наистина ли искате да продължите?"</string>
+    <string name="cancel" msgid="4173470896053421075">"Отказ"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Състояние"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Дата на производство"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Дата на първото използване"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Брой цикли"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Сериен номер"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Състояние на частта"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Оригинална"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Сменена"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"История на частта"</string>
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s от първоначалния капацитет"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Няма данни за състоянието на батерията"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Студена"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Изтощена"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Добро"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Прегряване"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Пренапрежение"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Състояние на хранилището"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Общ капацитет"</string>
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Оставащ живот: %1$s"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Предоставете заявените разрешения, за да продължите в режим на оценяване."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Отказ"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Нов опит"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Резултат от теста за докосване"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Това е резултатът от теста за докосване. Можете да го проведете отново, като се върнете назад."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Тестът на сензора за докосване бе издържан"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Тестът на сензора за докосване не бе издържан"</string>
+    <string name="pass" msgid="6411665547268368837">"Успешно"</string>
+    <string name="fail" msgid="3918028202746427731">"Неуспешно"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"Потвърден сертификат"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"Устройството е заключено"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Състояние на потвърдено стартиране"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"Ниво на сигурност"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Версия на Keymaster"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Ниво на сигурност на Keymaster"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"Версия на операционната система"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"Марка"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"Устройство"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"Продукт"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"Сериен номер"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"Втори IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"Производител"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"Модел"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Ниво на корекцията на образа от производителя"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Ниво на корекцията на образа за стартиране"</string>
+    <string name="yes" msgid="6686215078709381643">"Да"</string>
+    <string name="no" msgid="5957591978126937912">"Не"</string>
+    <string name="unknown" msgid="6936738212381747979">"Неизвестно"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"Неуспешно удостоверяване"</string>
+    <string name="avb_verified" msgid="4990498011432924565">"ПОТВЪРДЕНО"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"НЕПОТВЪРДЕНО"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"Резултати от оценяването"</string>
+    <string name="attestation_results" msgid="9089126954790727665">"Резултати от удостоверяването"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"Втори IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Сериен номер"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Програмата за първоначално зареждане е заключена"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Устройството е надеждно"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Състояние на екрана"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Състояние на сензора за докосване"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Подробности за удостоверяването"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Неуспешно удостоверяване"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"Не бе определено дали устройството е надеждно"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Нов опит за удостоверяване"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Удостоверяването не бе потвърдено. Проверете връзката си и опитайте отново."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Следващи стъпки"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Оценяване на друго устройство"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Назад към главното меню"</string>
+    <string name="locked" msgid="2034650000550950371">"Заключено"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Отключено"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR код"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Продължете на устройството, което оценявате"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Завършете тестовете на устройството, което оценявате, и резултатите ще се покажат тук."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"При комуникацията с тестваното устройство възникна грешка. Уверете се, че функцията за Bluetooth е активирана, и опитайте отново."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Сканиране сега"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"На устройството, което искате да оцените, отворете „Настройки“, „Системни“, „Диагностика на устройството“, „Режим за оценяване“, след което изберете „Оценявано устройство“. Следвайте инструкциите на това устройство."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Сега ще видите поредица от екрани. Разгледайте всеки един от тях и потърсете дефекти. Когато имате готовност, докоснете екрана, за да се придвижите към следващия. Накрая ще ви попитаме дали екраните изглеждат без дефекти."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Сега ще видите поредица от екрани. Разгледайте всеки един от тях и потърсете дефекти. Докоснете екрана, за да се придвижите към следващия."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"По-долу изберете опцията, която най-добре описва състоянието на екрана."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Сега ще видите червен екран.\n \n Плъзгайте пръста си по екрана, докато не оцветите целия екран в бяло. В случай че част от него не може да бъде оцветена в бяло, докоснете бързо екрана, за да посочите, че сензорът за докосване не е напълно изправен.\n \n"</string>
+</resources>

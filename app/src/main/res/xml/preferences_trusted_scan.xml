@@ -1,7 +1,0 @@
-<PreferenceScreen  xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-  <Preference
-      app:title="Continue on device being evaluated"
-      app:selectable="false"
-      app:summary="Complete the tests on the device that you are evaluating, then the results will appear here"/>
-</PreferenceScreen>

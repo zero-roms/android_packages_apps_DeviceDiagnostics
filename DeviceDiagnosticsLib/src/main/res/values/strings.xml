@@ -1,0 +1,203 @@
+<!--
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">DeviceDiagnostics</string>
+  <string name="app_title">Device diagnostics</string>
+  <string name="package_name" translatable="false">com.android.devicediagnostics</string>
+
+  <string name="activity_continue">Continue</string>
+  <string name="proceed">Proceed</string>
+  <string name="unavailable">Unavailable</string>
+  <string name="bluetooth_connecting">Connecting...</string>
+
+  <!-- Main activity -->
+  <string name="component_health_title">Component health</string>
+  <string name="component_health_summary">Run manual tests and view battery and storage health</string>
+  <string name="evaluation_mode_title">Evaluation mode</string>
+  <string name="evaluation_mode_summary">Use one device to assess another device</string>
+
+  <!-- Diagnostics landing -->
+  <string name="manual_eval_title">Manual tests</string>
+  <string name="screen_test_title">Display test</string>
+  <string name="touch_test_title">Touch test</string>
+  <string name="component_title">Component status</string>
+  <string name="storage_title">Storage status</string>
+  <string name="battery_title">Battery status</string>
+
+  <!-- Evaluation mode -->
+  <string name="trusted_device_title">Trusted device</string>
+  <string name="eval_mode_trusted_device_summary">Assess another device. An Internet connection is required.</string>
+  <string name="evaluated_device_title">Evaluated device</string>
+  <string name="eval_mode_evaluated_device_summary">Run diagnostic tests that will be validated by another device.</string>
+  <string name="evaluated_scan_now">Scan now</string>
+  <string name="evaluated_scan_now_summary">Scan the QR code on the trusted device in the rectangle below</string>
+  <string name="evaluated_scan_continue_summary">Once you have successfully scanned the QR code, this device will automatically start a series of tests.</string>
+  <string name="evaluated_scan_select_device_title">Select trusted device</string>
+  <string name="evaluated_scan_select_device_summary">Alternatively select the device from the list below</string>
+  <string name="evaluated_bt_fail_title">Connection failed, please try again.</string>
+  <string name="evaluated_confirm_send_data">Confirm the report to send to the trusted device.</string>
+  <string name="evaluated_send_report">Send report</string>
+  <string name="evaluated_finalizing_report">Finalizing report...</string>
+  <string name="bluetooth_error_title">Bluetooth error</string>
+  <string name="bluetooth_error_summary">There was an error communicating with the trusted device. Please verify that Bluetooth is enabled and try again.</string>
+  <string name="sending_report">Sending report to the trusted device...</string>
+  <string name="evaluation_complete_title">Evaluation complete</string>
+  <string name="evaluation_complete_summary">The results will now appear on the trusted device</string>
+  <string name="screen_test_result_title">Screen test result</string>
+  <string name="screen_test_good_result_title">Good</string>
+  <string name="screen_test_good_result_summary">No obvious defects</string>
+  <string name="screen_test_bad_result_title">Bad</string>
+  <string name="screen_test_bad_result_summary">Screen has defects</string>
+
+  <!-- A11y warnings -->
+  <string name="manual_testing_title">Manual testing</string>
+  <string name="visual_test_warning_summary">The following test requires visual inspection and confirmation of the physical display. Are you sure you want to proceed?</string>
+  <string name="cancel">Cancel</string>
+
+  <!-- Battery screen -->
+  <string name="battery_health_title">Health</string>
+  <string name="battery_manufacturing_date">Manufacturing date</string>
+  <string name="battery_first_usage_date">First usage date</string>
+  <string name="battery_cycle_count">Cycle count</string>
+  <string name="battery_serial_number">Serial number</string>
+  <string name="battery_part_status">Part status</string>
+  <string name="battery_original">Original</string>
+  <string name="battery_replaced">Replaced</string>
+  <string name="battery_part_history">Part History</string>
+  <string name="battery_health_summary_fmt">%1$s of original capacity</string>
+  <string name="battery_health_unavailable">Battery health unavailable</string>
+  <string name="battery_health_cold">Cold</string>
+  <string name="battery_health_dead">Dead</string>
+  <string name="battery_health_good">Good</string>
+  <string name="battery_health_overheat">Overheat</string>
+  <string name="battery_health_over_voltage">Over voltage</string>
+
+  <!-- Storage screen -->
+  <string name="storage_health_title">Storage health</string>
+  <string name="storage_total_capacity_title">Total capacity</string>
+  <string name="storage_total_capacity_summary_fmt"><xliff:g id="number" example="128">%1$s</xliff:g> <xliff:g id="unit" example="KB">%2$s</xliff:g></string>
+  <!-- Remaining lifetime of the device's storage chip as a percentage. When data is written,
+       flash cells in the storage chip will very slowly degrade. This percentage is an estimate
+       of how much degradation has occurred. For example, the storage chip might be specified
+       to withstand X amount of activity. "90% lifetime remaining" would indicate that 10% of
+       that activity has already occurred. -->
+  <string name="storage_health_summary_fmt">%1$s lifetime remaining</string>
+
+  <!-- Permissions -->
+  <string name="grant_eval_permissions_dialog">Please grant the requested permissions to continue in evaluation mode.</string>
+  <string name="cancel_button">Cancel</string>
+  <string name="try_again_button">Try again</string>
+
+  <!-- Touch test activity -->
+  <string name="touch_test_result_title">Touch test result</string>
+  <string name="touch_test_result_summary">
+    <![CDATA[
+This is the result of the touch test. You can rerun the test by navigating back.
+    ]]>
+  </string>
+  <string name="touch_test_good_title">The touch sensor test passed</string>
+  <string name="touch_test_bad_title">The touch sensor test failed</string>
+  <string name="pass">Pass</string>
+  <string name="fail">Fail</string>
+
+  <!-- Attestation details -->
+  <string name="attestation_verified">Verified certificate</string>
+  <string name="attestation_device_locked">Device locked</string>
+  <string name="attestation_verified_boot_state">Verified boot state</string>
+  <string name="attestation_security_level">Security level</string>
+  <string name="attestation_keymaster_version">Keymaster version</string>
+  <string name="attestation_keymaster_security_level">Keymaster security level</string>
+  <string name="attestation_os_version">OS version</string>
+  <string name="attestation_brand">Brand</string>
+  <string name="attestation_device">Device</string>
+  <string name="attestation_product">Product</string>
+  <string name="attestation_serial">Serial</string>
+  <string name="attestation_imei">IMEI</string>
+  <string name="attestation_second_imei">Second IMEI</string>
+  <string name="attestation_meid">MEID</string>
+  <string name="attestation_manufacturer">Manufacturer</string>
+  <string name="attestation_model">Model</string>
+  <string name="attestation_vendor_patch_level">Vendor patch level</string>
+  <string name="attestation_boot_patch_level">Boot patch level</string>
+  <string name="yes">Yes</string>
+  <string name="no">No</string>
+  <string name="unknown">Unknown</string>
+  <string name="attestation_failed">Attestation failed</string>
+  <string name="avb_verified">VERIFIED</string>
+  <string name="avb_not_verified">NOT VERIFIED</string>
+
+  <!-- Trusted activity -->
+  <string name="evaluation_results">Evaluation results</string>
+  <string name="attestation_results">Attestation results</string>
+  <string name="imei_title">IMEI</string>
+  <string name="imei2_title">Second IMEI</string>
+  <string name="serial_number_title">Serial number</string>
+  <string name="bootloader_locked_title">Bootloader locked</string>
+  <string name="trustworthy_title">Device trustworthy</string>
+  <string name="display_status_title">Display status</string>
+  <string name="touch_sensor_status_title">Touch sensor status</string>
+  <string name="attestation_details_title">Attestation details</string>
+  <string name="attestation_local_failure_title">Attestation failed</string>
+  <string name="attestation_local_failure_summary">Could not determine whether device is trustworthy</string>
+  <string name="attestation_remote_failure_title">Retry attestation</string>
+  <string name="attestation_remote_failure_summary">Failed to verify attestation, check your connection and try again.</string>
+  <string name="evaluate_mode_next_action_title">Next steps</string>
+  <string name="evaluate_another_title">Evaluate another device</string>
+  <string name="back_to_main_title">Back to main menu</string>
+  <string name="locked">Locked</string>
+  <string name="not_locked">Not locked</string>
+  <string name="qr_code_description">QR Code</string>
+  <string name="continue_on_evaluated_title">Continue on the device being evaluated</string>
+  <string name="continue_on_evaluated_summary">Complete the tests on the device that you are evaluating, then the results will appear here.</string>
+  <string name="trusted_bluetooth_error_summary">There was an error communicating with the evaluated device. Please verify that Bluetooth is enabled and try again.</string>
+  <string name="trusted_scan_now_title">Scan now</string>
+  <string name="trusted_scan_now_summary">
+    <![CDATA[
+On the device you wish to evaluate, go to Settings, System, Device diagnostics, Evaluation mode, then Evaluated device. Follow the prompts on that device.
+  ]]>
+  </string>
+  <string name="screen_test_summary">
+    <![CDATA[
+You will now be shown a series of screens.
+Study each one and look for defects.
+Once you are satisfied, touch the screen to move to the next one.
+At the end, you will be asked if the screens look unblemished.
+  ]]>
+  </string>
+  <string name="screen_test_summary_one_shot">
+    <![CDATA[
+You will now be shown a series of screens.
+Study each one and look for defects.
+Touch the screen to move to the next one.
+  ]]>
+  </string>
+  <string name="screen_test_finalize">
+    <![CDATA[
+Please select the option below that best matches the condition of the screen.
+  ]]>
+  </string>
+  <string name="touch_test_summary">
+    <![CDATA[
+You will now be shown a red screen.\n
+\n
+Swipe your finger over the screen until the screen is entirely white. If you are
+unable to turn part of the screen white, short tap the screen to indicate that
+the touch sensor is not fully working.\n
+\n
+  ]]>
+  </string>
+</resources>

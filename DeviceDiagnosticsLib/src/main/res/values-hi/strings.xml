@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Device diagnostics"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"जारी रखें"</string>
+    <string name="proceed" msgid="8922926495095369132">"आगे बढ़ें"</string>
+    <string name="unavailable" msgid="7842920330665850121">"उपलब्ध नहीं है"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"कनेक्ट किया जा रहा है…"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"कॉम्पोनेंट की परफ़ॉर्मेंस की जांच"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"मैन्युअल टेस्ट करके, बैटरी और स्टोरेज की परफ़ॉर्मेंस देखें"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"दूसरे डिवाइस की मदद से जांच"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"किसी डिवाइस की जांच करने के लिए दूसरे डिवाइस का इस्तेमाल करें"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"मैन्युअल तरीके से जांच करने की सुविधा"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"डिसप्ले की जांंच"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"टच सेंसर की जांच"</string>
+    <string name="component_title" msgid="6580046234562555655">"कॉम्पोनेंट की स्थिति"</string>
+    <string name="storage_title" msgid="5921235202250843966">"डिवाइस के स्टोरेज की स्थिति"</string>
+    <string name="battery_title" msgid="6707361668941323259">"बैटरी की स्थिति"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"भरोसेमंद डिवाइस"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"दूसरे डिवाइस की जांच करें. इसके लिए, इंटरनेट कनेक्शन होना ज़रूरी है."</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"जांचा गया डिवाइस"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"डिवाइस की परफ़ॉर्मेंस से जुड़ी जानकारी देने वाले टेस्ट करें. इन टेस्ट के नतीजों की पुष्टि दूसरे डिवाइस से की जाएगी."</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"अभी स्कैन करें"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"भरोसेमंद डिवाइस पर, नीचे दिए गए रेक्टैंगल बॉक्स से क्यूआर कोड स्कैन करें"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"क्यूआर कोड स्कैन करने के बाद, इस डिवाइस पर अपने-आप अलग-अलग तरह की जांंच शुरू हो जाएंगी."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"भरोसेमंद डिवाइस को चुनें"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"इसके अलावा, यहां दी गई सूची में से कोई डिवाइस चुनें"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"कनेक्ट नहीं किया जा सका, कृपया फिर से कोशिश करें."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"भरोसेमंद डिवाइस पर भेजने के लिए, रिपोर्ट की पुष्टि करें."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"रिपोर्ट भेजें"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"रिपोर्ट तैयार की जा रही है..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"ब्लूटूथ से जुड़ी समस्या"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"भरोसेमंद डिवाइस से कनेक्ट करने में गड़बड़ी हुई. कृपया पुष्टि करें कि ब्लूटूथ चालू हो और फिर से कोशिश करें."</string>
+    <string name="sending_report" msgid="8735615783234611336">"भरोसेमंद डिवाइस को रिपोर्ट भेजी जा रही है..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"जांच पूरी हुई"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"नतीजे अब भरोसेमंद डिवाइस पर दिखेंगे"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"स्क्रीन टेस्ट का नतीजा"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"अच्छी"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"स्क्रीन में किसी खराबी का साफ़ तौर पर पता नहीं चला"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"खराब"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"स्क्रीन में खराबियां हैं"</string>
+    <string name="manual_testing_title" msgid="4512384040828953255">"मैन्युअल टेस्टिंग"</string>
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"इस टेस्ट के लिए, विज़ुअल इंस्पेक्शन करना और फ़िजिकल डिसप्ले की पुष्टि करना ज़रूरी है. क्या आपको जारी रखना है?"</string>
+    <string name="cancel" msgid="4173470896053421075">"रद्द करें"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"बैटरी की परफ़ॉर्मेंस"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"बनने की तारीख"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"पहली बार इस्तेमाल की तारीख"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"फ़ुल चार्ज और खत्म होने का साइकल"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"बैटरी का सीरियल नंबर"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"बैटरी के पार्ट की स्थिति"</string>
+    <string name="battery_original" msgid="2552600989411644999">"ओरिजनल बैटरी"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"बैटरी को बदला गया"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"खास जानकारी"</string>
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"ओरिजनल कपैसिटी का %1$s"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"बैटरी की परफ़ॉर्मेंस से जुड़ा डेटा उपलब्ध नहीं है"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"बैटरी का तापमान बहुत कम है"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"बैटरी खत्म हो गई है"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"बैटरी की लाइफ़ अच्छी है"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"बैटरी ज़रूरत से ज़्यादा गर्म है"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"वोल्टेज ज़्यादा है"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"डिवाइस के स्टोरेज की परफ़ॉर्मेंस"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"डिवाइस का कुल स्टोरेज"</string>
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s लाइफ़ बची है"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"आकलन करने वाले मोड का इस्तेमाल जारी रखने के लिए, अनुरोध की गई अनुमतियों को मंज़ूरी दें."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"रद्द करें"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"फिर से कोशिश करें"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"टच टेस्ट का नतीजा"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"यहां टच सेंसर से जुड़ी जांच का नतीजा मौजूद है. आपके पास, वापस जाकर टेस्ट को फिर से चलाने का विकल्प है."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"टच सेंसर की जांच सफल रही"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"टच सेंसर की जांच फ़ेल हो गई"</string>
+    <string name="pass" msgid="6411665547268368837">"पास"</string>
+    <string name="fail" msgid="3918028202746427731">"फ़ेल"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"सर्टिफ़िकेट की पुष्टि की गई है"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"डिवाइस लॉक कर दिया गया है"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"वेरिफ़ाइड बूट की स्थिति"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"सुरक्षा का स्तर"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Keymaster का वर्शन"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Keymaster का सुरक्षा स्तर"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"ओएस वर्शन"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"ब्रैंड"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"डिवाइस"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"प्रॉडक्ट"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"सीरियल नंबर"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"दूसरा IMEI नंबर"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"मैन्युफ़ैक्चरर"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"मॉडल"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"वेंडर पैच लेवल"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"बूट पैच लेवल"</string>
+    <string name="yes" msgid="6686215078709381643">"हां"</string>
+    <string name="no" msgid="5957591978126937912">"नहीं"</string>
+    <string name="unknown" msgid="6936738212381747979">"जानकारी मौजूद नहीं है"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"प्रमाणित नहीं किया जा सका"</string>
+    <string name="avb_verified" msgid="4990498011432924565">"पुष्टि हो चुकी है"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"पुष्टि नहीं हुई"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"जांच के नतीजे"</string>
+    <string name="attestation_results" msgid="9089126954790727665">"प्रमाणित करने से जुड़े नतीजे"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"दूसरा IMEI नंबर"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"सीरियल नंबर"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"बूटलोडर को लॉक किया गया है"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"डिवाइस भरोसेमंद है"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"डिसप्ले की स्थिति"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"टच सेंसर की स्थिति"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"प्रमाणित करने से जुड़ी जानकारी"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"प्रमाणित नहीं किया जा सका"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"डिवाइस पर भरोसा किया जा सकता है या नहीं, यह तय नहीं किया जा सका"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"फिर से प्रमाणित करने की कोशिश करें"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"प्रमाणित करने के लिए पुष्टि नहीं की जा सकी. अपने इंटरनेट कनेक्शन की जांच करें और दोबारा कोशिश करें."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"अगले चरण"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"दूसरे डिवाइस की जांच करें"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"मुख्य मेन्यू पर वापस जाएं"</string>
+    <string name="locked" msgid="2034650000550950371">"लॉक है"</string>
+    <string name="not_locked" msgid="1663929635666930122">"नहीं"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"क्यूआर कोड"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"उस डिवाइस पर जारी रखें जिसकी जांच की जा रही है"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"जांचे जा रहे डिवाइस पर टेस्ट पूरे करें. इसके बाद, नतीजे यहां दिखेंगे."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"जांचे गए डिवाइस से कनेक्ट करने में गड़बड़ी हुई. कृपया पुष्टि करें कि ब्लूटूथ चालू हो और फिर से कोशिश करें."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"अभी स्कैन करें"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"आपको जिस डिवाइस की जांच करनी है उसकी सेटिंग खोलें. फिर सिस्टम पर जाएं और Device diagnostics में, \'दूसरे डिवाइस की मदद से जांच\' चुनें. इसके बाद, \'जांचा गया डिवाइस\' पर जाएं और उस डिवाइस पर मिले प्रॉम्प्ट फ़ॉलो करें."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"अब आपको स्क्रीन की एक सीरीज़ दिखेगी. हर एक की जांच करें और खराबियों का पता लगाएं. सही से जांच कर लेने के बाद, अगली स्क्रीन पर जाने के लिए स्क्रीन को छुएं. आखिर में, आपसे यह पूछा जाएगा कि स्क्रीन पर कोई खराबी थी या नहीं."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"अब आपको एक के बाद एक कई स्क्रीन दिखाई जाएंगी. हर एक पर दिए गए निर्देशों के मुताबिक जांच करें और खराबियों का पता लगाएं. अगली स्क्रीन पर जाने के लिए, स्क्रीन को छुएं."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"कृपया, यहां दिए गए विकल्पों में से वह विकल्प चुनें जो स्क्रीन की स्थिति से मेल खाता हो."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"अब फ़ोन की पूरी स्क्रीन लाल रंग हो जाएगी.\n \n स्क्रीन पर अपनी उंगली से तब तक स्वाइप करें, जब तक कि वह पूरी तरह से सफ़ेद न हो जाए. अगर कुछ हिस्सा सफ़ेद नहीं हो रहा है, तो स्क्रीन पर हल्के से टैप करें. यह इस बात का सिग्नल होगा कि टच सेंसर पूरी तरह से काम नहीं कर रहा है.\n \n"</string>
+</resources>

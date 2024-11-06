@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Diagnóstico del dispositivo"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Continuar"</string>
+    <string name="proceed" msgid="8922926495095369132">"Continuar"</string>
+    <string name="unavailable" msgid="7842920330665850121">"No disponible"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"Conectando…"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Estado de los componentes"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Ejecuta pruebas manuales y visualiza el estado de la batería y el almacenamiento"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Modo de evaluación"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Usa un dispositivo para evaluar otro"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Pruebas manuales"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Prueba de pantalla"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Prueba táctil"</string>
+    <string name="component_title" msgid="6580046234562555655">"Estado de los componentes"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Estado del almacenamiento"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Estado de la batería"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Dispositivo de confianza"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Evalúa otro dispositivo. Se necesita conexión a Internet."</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Dispositivo evaluado"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Ejecuta pruebas de diagnóstico que validará otro dispositivo."</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Escanea ahora"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Escanea el código QR en el dispositivo de confianza en el siguiente rectángulo"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Cuando hayas escaneado el código QR de forma correcta, este dispositivo comenzará una serie de pruebas automáticamente."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Selecciona el dispositivo de confianza"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"También puedes seleccionar el dispositivo de la lista que se muestra a continuación"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"No se pudo establecer la conexión. Vuelve a intentarlo."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Confirma el informe para enviarlo al dispositivo de confianza."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Enviar informe"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Finalizando informe…"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Error de Bluetooth"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Se produjo un error durante la comunicación con el dispositivo de confianza. Verifica que el Bluetooth esté habilitado y vuelve a intentarlo."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Enviando informe al dispositivo de confianza…"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Evaluación completa"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Los resultados ahora aparecerán en el dispositivo de confianza"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Resultado de la prueba de pantalla"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Bueno"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Sin defectos obvios"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Malo"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"La pantalla tiene desperfectos"</string>
+    <string name="manual_testing_title" msgid="4512384040828953255">"Pruebas manuales"</string>
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"La siguiente prueba requiere inspección visual y confirmación de la pantalla física. ¿Confirmas que quieres continuar?"</string>
+    <string name="cancel" msgid="4173470896053421075">"Cancelar"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Salud"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Fecha de fabricación"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Fecha del primer uso"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Conteo de ciclos"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Número de serie"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Estado de las piezas"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Original"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Reemplazada"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Historial de la pieza"</string>
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s de capacidad original"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Estado de la batería no disponible"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Fría"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Agotada"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Bueno"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Temperatura excesiva"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Voltaje excesivo"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Salud del almacenamiento"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Capacidad total"</string>
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"%1$s de duración restante"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Otorga los permisos solicitados para continuar en el modo de evaluación."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Cancelar"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Reintentar"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Resultado de la prueba táctil"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Este es el resultado de la prueba táctil. Para volver a hacer la prueba, navega hacia atrás."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Prueba del sensor táctil realizada correctamente"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Falló la prueba del sensor táctil"</string>
+    <string name="pass" msgid="6411665547268368837">"Aprobado"</string>
+    <string name="fail" msgid="3918028202746427731">"Reprobado"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"Certificado verificado"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"Dispositivo bloqueado"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Estado de inicio verificado"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"Nivel de seguridad"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Versión de Keymaster"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Nivel de seguridad de Keymaster"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"Versión del SO"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"Marca"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"Dispositivo"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"Producto"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"Número de serie"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"Segundo IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"Fabricante"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"Modelo"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Nivel de parche del proveedor"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Nivel de parche de inicio"</string>
+    <string name="yes" msgid="6686215078709381643">"Sí"</string>
+    <string name="no" msgid="5957591978126937912">"No"</string>
+    <string name="unknown" msgid="6936738212381747979">"Desconocido"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"Falló la certificación"</string>
+    <string name="avb_verified" msgid="4990498011432924565">"SE VERIFICÓ"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"SIN VERIFICAR"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"Resultados de la evaluación"</string>
+    <string name="attestation_results" msgid="9089126954790727665">"Resultados de la certificación"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"Segundo IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Número de serie"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Bootloader bloqueado"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Dispositivo confiable"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Estado de la pantalla"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Estado del sensor táctil"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Detalles de la certificación"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Falló la certificación"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"No se pudo determinar si el dispositivo es confiable"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Reintenta la certificación"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"No se pudo verificar la certificación. Comprueba tu conexión y vuelve a intentarlo."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Próximos pasos"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Evalúa otro dispositivo"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Vuelve al menú principal"</string>
+    <string name="locked" msgid="2034650000550950371">"Bloqueado"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Sin bloqueo"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"Código QR"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continúa en el dispositivo que se está evaluando"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Completa las pruebas en el dispositivo que estás evaluando y, luego, los resultados aparecerán aquí."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Se produjo un error durante la comunicación con el dispositivo evaluado. Verifica que el Bluetooth esté habilitado y vuelve a intentarlo."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Escanea ahora"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"En el dispositivo que quieras evaluar, ve a Configuración, Sistema, Diagnóstico del dispositivo, Modo de evaluación y, luego, Dispositivo evaluado. Sigue las instrucciones que aparecen en ese dispositivo."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Ahora se te mostrarán una serie de pantallas. Analiza cada una y busca defectos. Cuando estés conforme, toca la pantalla para pasar a la siguiente. Al final, se te preguntará si las pantallas se ven perfectas."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Ahora se te mostrarán una serie de pantallas. Analiza cada una y busca defectos. Toca la pantalla para pasar a la siguiente."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"De las siguientes opciones, selecciona la que mejor describa el estado de la pantalla."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Ahora se te mostrará una pantalla roja.\n \n Desliza el dedo sobre la pantalla hasta que esté completamente blanca. Si no puedes blanquear una parte, presiona la pantalla de forma leve para indicar que el sensor táctil no funciona por completo.\n \n"</string>
+</resources>

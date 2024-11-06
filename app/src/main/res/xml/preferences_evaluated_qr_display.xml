@@ -1,7 +1,0 @@
-<PreferenceScreen  xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-  <Preference
-      app:key="Done"
-      app:title="Evaluation complete"
-      app:summary="The results will now appear on your trusted device"/>
-</PreferenceScreen>

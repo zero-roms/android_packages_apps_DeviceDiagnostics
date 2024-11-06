@@ -1,0 +1,68 @@
+//
+// Copyright (C) 2023 The Android Open Source Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+syntax = "proto3";
+
+package com.android.devicediagnostics;
+option java_outer_classname = "Protos";
+
+message TestResults {
+    bool screen_test = 1;
+    bool touch_test = 2;
+}
+
+message BatteryInfo {
+    reserved 2, 3;
+    optional int32 cycle_count = 1;
+    optional int32 state_of_health = 4;
+    optional string serial = 5;
+    optional string part_status = 6;
+    int32 legacy_health = 7;
+    optional int64 manufacture_timestamp = 8;
+    optional int64 first_usage_timestamp = 9;
+}
+
+message StorageInfo {
+    reserved 1, 2;
+    optional int32 useful_lifetime_remaining = 3;
+    int64 capacity_bytes = 4;
+}
+
+message TrustedDeviceInfo {
+    bytes challenge = 1;
+}
+
+message DeviceReport {
+    TestResults tests = 1;
+    bytes attestation = 2;
+    BatteryInfo battery = 3;
+    StorageInfo storage = 4;
+    int32 launch_level = 5;
+}
+
+enum PacketCommand {
+    COMMAND_ACK = 0;
+    COMMAND_CLOSE = 1;
+};
+
+message BluetoothPacket {
+    int32 version = 1;
+    oneof payload {
+        TrustedDeviceInfo trusted_device_info = 2;
+        DeviceReport device_report = 3;
+        PacketCommand command = 4;
+    }
+}

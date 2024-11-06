@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"بيانات تشخيص الجهاز"</string>
+    <string name="app_title" msgid="2766786539301072967">"تفحّص الجهاز"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"متابعة"</string>
+    <string name="proceed" msgid="8922926495095369132">"متابعة"</string>
+    <string name="unavailable" msgid="7842920330665850121">"غير متاحة"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"جارٍ الاتصال بالبلوتوث…"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"سلامة المكوِّن"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"يمكنك إجراء اختبارات يدوية وعرض حالة البطارية ومساحة التخزين"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"وضع التقييم"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"يمكنك استخدام أحد الأجهزة لتقييم جهاز آخر"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"الاختبارات اليدوية"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"اختبار الشاشة"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"اختبار اللمس"</string>
+    <string name="component_title" msgid="6580046234562555655">"حالة المكوِّن"</string>
+    <string name="storage_title" msgid="5921235202250843966">"حالة وحدة التخزين"</string>
+    <string name="battery_title" msgid="6707361668941323259">"حالة البطارية"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"الجهاز الموثوق به"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"يمكنك تقييم جهاز آخر، مع ضرورة توفّر اتصال بالإنترنت."</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"الجهاز الذي تم تقييمه"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"يمكنك إجراء الاختبارات التشخيصية التي سيتم التحقّق منها بواسطة جهاز آخر."</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"المسح الضوئي الآن"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"يُرجى إجراء مسح ضوئي لرمز الاستجابة السريعة الظاهر على الجهاز الموثوق به في المستطيل أدناه"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"عندما يتم مسح رمز الاستجابة السريعة ضوئيًا بنجاح، ستبدأ تلقائيًا سلسلة من الاختبارات على هذا الجهاز."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"اختيار الجهاز الموثوق به"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"يمكنك بدلاً من ذلك اختيار الجهاز من القائمة أدناه"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"تعذَّر الاتصال. يُرجى إعادة المحاولة."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"يُرجى تأكيد التقرير لإرساله إلى الجهاز الموثوق به."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"إرسال التقرير"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"جارٍ إكمال التقرير..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"خطأ في البلوتوث"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"حدث خطأ أثناء الاتصال بالجهاز الموثوق به. يُرجى التأكّد من تفعيل البلوتوث ثمّ إعادة المحاولة."</string>
+    <string name="sending_report" msgid="8735615783234611336">"جارٍ إرسال التقرير إلى الجهاز الموثوق به..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"اكتمل التقييم"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"ستظهر النتائج الآن على الجهاز الموثوق به"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"نتيجة اختبار الشاشة"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"جيدة"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"لا تتضمّن الشاشة أي عيوب واضحة"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"سيئة"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"تتضمّن الشاشة بعض العيوب"</string>
+    <string name="manual_testing_title" msgid="4512384040828953255">"الاختبار اليدوي"</string>
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"يتطلب الاختبار التالي فحصًا مرئيًا لشاشة العرض وتأكيدًا لنتائج الفحص. هل تريد فعلاً المتابعة؟"</string>
+    <string name="cancel" msgid="4173470896053421075">"إلغاء"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"الحالة"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"تاريخ التصنيع"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"تاريخ أول استخدام"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"عدد مرات تفريغ البطارية وشحنها"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"الرقم التسلسلي"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"حالة القطعة"</string>
+    <string name="battery_original" msgid="2552600989411644999">"السعة الأصلية"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"تاريخ الاستبدال"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"سجلّ القطعة"</string>
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"‏يتبقّى ‎%1$s من السعة الأصلية للبطارية"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"حالة البطارية غير متاحة"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"باردة"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"فارغة"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"جيدة"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"سخونة مفرطة"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"جهد كهربي زائد"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"حالة وحدة التخزين"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"السعة الإجمالية"</string>
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"‫<xliff:g id="NUMBER">%1$s</xliff:g> ‏<xliff:g id="UNIT">%2$s</xliff:g>"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"‏يتبقّى ‎%1$s من سعة وحدة التخزين"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"يُرجى منح الأذونات المطلوبة للمتابعة في وضع التقييم."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"إلغاء"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"إعادة المحاولة"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"نتيجة اختبار اللمس"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"هذه هي نتيجة اختبار اللمس. يمكنك إعادة إجراء الاختبار من خلال الرجوع للصفحة السابقة."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"تم اجتياز اختبار أداة استشعار اللمس"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"تعذَّر اجتياز اختبار أداة استشعار اللمس"</string>
+    <string name="pass" msgid="6411665547268368837">"تم اجتياز الاختبار"</string>
+    <string name="fail" msgid="3918028202746427731">"لم يتم اجتياز الاختبار"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"شهادة إثبات سلامة الجهاز"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"الجهاز مُقفل"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"حالة \"التشغيل المتحقّق منه\""</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"مستوى الأمان"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"‏إصدار Keymaster"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"‏مستوى الأمان الذي يوفّره Keymaster"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"إصدار نظام التشغيل"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"العلامة التجارية"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"الجهاز"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"المنتَج"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"الرقم التسلسلي"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"‏رمز IMEI الثاني"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"الشركة المصنِّعة"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"الطراز"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"مستوى رمز التصحيح الذي يوفّره المورِّد"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"مستوى رمز تصحيح برنامج الإقلاع"</string>
+    <string name="yes" msgid="6686215078709381643">"نعم"</string>
+    <string name="no" msgid="5957591978126937912">"لا"</string>
+    <string name="unknown" msgid="6936738212381747979">"غير معروفة"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"تعذّرت المصادقة"</string>
+    <string name="avb_verified" msgid="4990498011432924565">"تم التحقق"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"لم يتم التحقق"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"نتائج التقييم"</string>
+    <string name="attestation_results" msgid="9089126954790727665">"نتائج عملية المصادقة"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"‏رمز IMEI الثاني"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"الرقم التسلسلي"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"برنامج الإقلاع مقفَل"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"الجهاز موثوق به"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"حالة الشاشة"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"حالة أداة استشعار اللمس"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"تفاصيل المصادقة"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"تعذّرت المصادقة"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"تعذَّر تحديد ما إذا كان الجهاز موثوقًا به"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"إعادة محاولة إجراء المصادقة"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"تعذَّر إتمام عملية المصادقة. يُرجى التحقق من الاتصال بالإنترنت وإعادة المحاولة."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"الخطوات التالية"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"تقييم جهاز آخر"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"الرجوع إلى القائمة الرئيسية"</string>
+    <string name="locked" msgid="2034650000550950371">"مقفَل"</string>
+    <string name="not_locked" msgid="1663929635666930122">"غير مقفَل"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"رمز الاستجابة السريعة"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"المتابعة باستخدام الجهاز الذي يتم تقييمه"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"أكمِل الاختبارات على الجهاز الذي تقيّمه وستظهر لك النتائج هنا."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"حدث خطأ أثناء الاتصال بالجهاز الذي تم تقييمه. يُرجى التأكّد من تفعيل البلوتوث ثم إعادة المحاولة."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"المسح الضوئي الآن"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"على الجهاز الذي تريد تقييمه، انتقِل إلى \"الإعدادات\" &gt; \"النظام\" &gt; \"تفحّص الجهاز\" &gt; \"وضع التقييم\" &gt; \"الجهاز الذي تم تقييمه\". اتّبِع التعليمات التي تظهر على ذلك الجهاز."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"ستظهر لك الآن مجموعة من الشاشات. اطّلِع على كل شاشة وابحث عن العيوب بها. وبعد الانتهاء منها، المُس الشاشة للانتقال إلى التي تليها. في النهاية، سيتم سؤالك عمّا إذا كانت الشاشات خالية من العيوب."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ستظهر لك الآن مجموعة من الشاشات. اطّلِع على كل شاشة وابحث عن العيوب بها. المُس الشاشة للانتقال إلى التي تليها."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"يُرجى تحديد الخيار الأنسب لحالة الشاشة ممّا يلي:"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"ستظهر لك الآن شاشة حمراء.\n \n مرِّر إصبعك سريعًا على الشاشة إلى أن تتحول كلها إلى اللون الأبيض. إذا لم تتمكّن من تحويل جزء من الشاشة إلى اللون الأبيض، فانقر مرة واحدة بسرعة على الشاشة للإشارة إلى أنّ أداة استشعار اللمس لا تعمل بشكل كامل.\n\n"</string>
+</resources>
