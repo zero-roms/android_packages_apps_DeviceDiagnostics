@@ -56,7 +56,7 @@ message DeviceReport {
     bytes attestation = 2;
     BatteryInfo battery = 3;
     StorageInfo storage = 4;
-    int32 launch_level = 5;
+    optional int32 launch_level = 5;
     LockInfo locks = 6;
 }
 

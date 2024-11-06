@@ -26,6 +26,7 @@ import android.os.Binder
 import android.os.Bundle
 import android.os.Process
 import android.os.ResultReceiver
+import android.os.SystemProperties
 import android.os.UserHandle
 import java.io.FileDescriptor
 import kotlin.system.exitProcess
@@ -47,6 +48,10 @@ class Commands {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
+            if (SystemProperties.getInt("sys.boot_completed", 0) != 1) {
+                System.err.println("Device not fully booted")
+                exitProcess(1)
+            }
             try {
                 main_wrapper(Tokenizer(args))
             } catch (e: Exception) {
