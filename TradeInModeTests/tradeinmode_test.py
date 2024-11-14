@@ -73,8 +73,10 @@ class TradeInModeTest(unittest.TestCase):
         out, err, return_code = self.dut.Execute("touch /data/local/tmp/tim")
         self.assertEqual(return_code, 1, "Used shell in TIM foyer")
 
+        # Enter evaluation mode. This can return either 0 (success) or 255 (adb disconnected)
+        # depending on whether the tool returns before adb restarts or not.
         out, err, return_code = self.dut.Execute("tradeinmode evaluate")
-        self.assertEqual(return_code, 255, "Failed to enter evaluation mode")
+        self.assertIn(return_code, [0, 255], "Failed to enter evaluation mode")
 
         for i in range(30):
           out, err, return_code = self.dut.Execute("touch /data/local/tmp/tim")
