@@ -2,6 +2,9 @@
   "postsubmit": [
     {
       "name": "DeviceDiagnosticsTests"
+    },
+    {
+      "name": "tradeinmode_test"
     }
   ]
 }
