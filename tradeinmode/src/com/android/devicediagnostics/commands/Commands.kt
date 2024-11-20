@@ -44,6 +44,20 @@ class Tokenizer(private val args: Array<String>) {
     }
 }
 
+fun isDebuggable(): Boolean {
+    return SystemProperties.getInt("ro.debuggable", 0) == 1
+}
+
+fun isTradeInModeEnabled(): Boolean {
+    return SystemProperties.getInt("persist.adb.tradeinmode", 0) > 0
+}
+
+fun ensureTradeInModeAllowed() {
+    if (!isDebuggable() && !isTradeInModeEnabled()) {
+        throw Exception("Command not available.")
+    }
+}
+
 class Commands {
     companion object {
         @JvmStatic
@@ -65,6 +79,8 @@ class Commands {
             if (cmd == null) {
                 throw IllegalArgumentException("Expected command.")
             }
+
+            ensureTradeInModeAllowed()
 
             if (cmd == "getstatus") {
                 doGetStatus(args)
