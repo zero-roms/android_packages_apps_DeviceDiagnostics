@@ -86,6 +86,8 @@ class Commands {
                 doGetStatus(args)
             } else if (cmd == "evaluate") {
                 doEvaluate(args)
+            } else if (cmd == "poweroff") {
+                SystemProperties.set("sys.powerctl", "shutdown")
             } else {
                 throw IllegalArgumentException("Unknown command.")
             }
