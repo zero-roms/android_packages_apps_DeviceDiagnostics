@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+  <Preference
+      app:title="@string/screen_test_result_title"
+      app:selectable="false"
+      app:summary="@string/screen_test_finalize"/>
+  <Preference
+      app:key="Good"
+      app:title="@string/screen_test_good_result_title"
+      app:summary="@string/screen_test_good_result_summary"/>
+  <Preference
+      app:key="Bad"
+      app:title="@string/screen_test_bad_result_title"
+      app:summary="@string/screen_test_bad_result_summary"/>
+</PreferenceScreen>

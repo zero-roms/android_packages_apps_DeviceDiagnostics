@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"Дијагностика на уредот"</string>
+    <string name="app_title" msgid="2766786539301072967">"Дијагностика на уредот"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Продолжете"</string>
+    <string name="proceed" msgid="8922926495095369132">"Продолжи"</string>
+    <string name="unavailable" msgid="7842920330665850121">"Недостапно"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"Се поврзува…"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Состојба на компонентата"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Извршете рачни тестирања и прегледајте ја состојбата на батеријата и на просторот"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Режим на процена"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Користете еден уред за да процените друг уред"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Рачни тестирања"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Тестирање на екранот"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Тестирање на сензорот на допир"</string>
+    <string name="component_title" msgid="6580046234562555655">"Статус на компонентата"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Статус на просторот"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Статус на батеријата"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Доверлив уред"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Проценете друг уред. Потребна е интернет-врска."</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Проценет уред"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Извршете дијагностички тестирања што ќе ги потврдите преку друг уред."</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Скенирајте сега"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Скенирајте го QR-кодот на доверливиот уред во правоаголникот подолу"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Откако ќе го скенирате QR-кодот успешно, уредов ќе започне низа тестирања автоматски."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Изберете доверлив уред"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Алтернативно, изберете го уредот од списокот подолу"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Поврзувањето не успеа. Обидете се повторно."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Потврдете го извештајот за испраќање до доверливиот уред."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Испрати извештај"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Извештајот се финализира…"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Грешка на Bluetooth"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Се јави грешка при комуникацијата со доверливиот уред. Потврдете дека Bluetooth е овозможен и обидете се повторно."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Се испраќа извештај до доверливиот уред…"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Процената е завршена"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Резултатите сега ќе се појават на доверливиот уред"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Резултат од тестирањето на екранот"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Добро"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Нема очигледни дефекти"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Лошо"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Екранот има дефекти"</string>
+    <string name="manual_testing_title" msgid="4512384040828953255">"Рачно тестирање"</string>
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"Следново тестирање бара визуелна проверка и потврда на физичкиот екран. Дали сигурно сакате да продолжите?"</string>
+    <string name="cancel" msgid="4173470896053421075">"Откажи"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Состојба"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Датум на производство"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Датум на прво користење"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Број на циклуси"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Сериски број"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Статус на делот"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Оригинал"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Замена"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Историја на делот"</string>
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s од првичниот капацитет"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Состојбата на батеријата е недостапна"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Ладна"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Празна"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Добра"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Прегреана"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Над напон"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Состојба на просторот"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Вкупен простор"</string>
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Преостанат работен век: %1$s"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Доделете ги бараните дозволи за да продолжите во „Режим на процена“."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Откажи"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Обидете се повторно"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Резултат од тестирањето на сензорот на допир"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Ова е резултатот од тестирањето на сензорот на допир. Може да го повторите тестирањето така што ќе се вратите назад."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Тестирањето на сензорот на допир успеа"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Тестирањето на сензорот на допир не успеа"</string>
+    <string name="pass" msgid="6411665547268368837">"Успешно"</string>
+    <string name="fail" msgid="3918028202746427731">"Неуспешно"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"Потврден сертификат"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"Уредот е заклучен"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Состојба „Потврдено подигање“"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"Ниво на безбедност"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Верзија на Keymaster"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Ниво на безбедност на Keymaster"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"Верзија на OS"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"Бренд"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"Уред"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"Производ"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"Сериски број"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"Втор IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"Производител"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"Модел"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Ниво на лепенка за продавачот"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Ниво на лепенка за подигање"</string>
+    <string name="yes" msgid="6686215078709381643">"Да"</string>
+    <string name="no" msgid="5957591978126937912">"Не"</string>
+    <string name="unknown" msgid="6936738212381747979">"Непознато"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"Потврдата не успеа"</string>
+    <string name="avb_verified" msgid="4990498011432924565">"ПОТВРДЕНО"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"НЕ Е ПОТВРДЕНО"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"Резултати од процената"</string>
+    <string name="attestation_results" msgid="9089126954790727665">"Резултати од потврдата"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"Втор IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Сериски број"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Вчитувачот на систем е заклучен"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Уредот е доверлив"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Статус на екранот"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Статус на сензорот на допир"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Детали за атестот"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Атестот не успеа"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"Не можеше да се утврди дали уредот е доверлив"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Повторете го атестот"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Потврдувањето на атестот не успеа. Проверете ја врската и обидете се повторно."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Следни чекори"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Проценете друг уред"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Назад на главното мени"</string>
+    <string name="locked" msgid="2034650000550950371">"Заклучено"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Не е заклучено"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR-код"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Продолжете на уредот што се проценува"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Завршете ги тестирањата на уредот што го проценувате, па резултатите ќе се појават тука."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Се јави грешка при комуникацијата со проценетиот уред. Потврдете дека Bluetooth е овозможен и обидете се повторно."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Скенирајте сега"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Одете во „Поставки &gt; Систем &gt; Дијагностика на уред &gt; Режим на процена &gt; Проценет уред“ на уредот што сакате да го процените. Следете ги упатствата на тој уред."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Сега ќе ви се прикажат низа екрани. Проверете го секој од нив детално и погледнете дали има дефекти. Кога ќе бидете задоволни со проверката, допрете го екранот за да преминете на следниот. На крајот, системот ќе ве праша дали екраните изгледаат беспрекорно."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Сега ќе ви се прикажат низа екрани. Проверете го секој од нив детално и погледнете дали има дефекти. Допрете го екранот за да преминете на следниот."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Изберете ја опцијата подолу што најмногу одговара на состојбата на екранот."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Сега ќе ви се прикаже црвен екран.\n \n Повлечете на екранот со прстот додека екранот не побели целосно. Ако дел од екранот не побелува, кратко допрете го екранот за да означите дека сензорот на допир не е целосно функционален.\n \n"</string>
+</resources>

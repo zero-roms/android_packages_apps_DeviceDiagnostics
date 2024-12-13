@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"设备诊断"</string>
+    <string name="app_title" msgid="2766786539301072967">"设备诊断"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"继续"</string>
+    <string name="proceed" msgid="8922926495095369132">"继续"</string>
+    <string name="unavailable" msgid="7842920330665850121">"不可用"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"正在连接…"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"组件健康度"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"进行手动测试并查看电池和存储空间状况"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"评估模式"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"用一台设备评估另一台设备"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"手动测试"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"显示测试"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"触控测试"</string>
+    <string name="component_title" msgid="6580046234562555655">"组件状态"</string>
+    <string name="storage_title" msgid="5921235202250843966">"存储空间状态"</string>
+    <string name="battery_title" msgid="6707361668941323259">"电池状态"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"可信设备"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"评估另一台设备。该过程需要联网。"</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"所评估的设备"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"运行将由另一台设备验证的诊断测试。"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"立即扫描"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"将下方的方框对准可信设备上的二维码进行扫描"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"您成功扫描二维码后，此设备将自动开始一系列测试。"</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"选择可信设备"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"也可以在下方列表中选择所需设备"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"连接失败，请重试。"</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"请确认要发给可信设备的报告。"</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"发送报告"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"正在完成报告…"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"蓝牙错误"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"与可信设备通信时出错。请确认蓝牙已启用，然后再试。"</string>
+    <string name="sending_report" msgid="8735615783234611336">"正在将报告发送到可信设备…"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"评估完成"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"结果现在会显示在可信设备上"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"屏幕测试结果"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"良好"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"无明显缺陷"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"差"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"屏幕有缺陷"</string>
+    <string name="manual_testing_title" msgid="4512384040828953255">"手动测试"</string>
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"以下测试需要目视检查并确认实体显示屏幕。确定要继续吗？"</string>
+    <string name="cancel" msgid="4173470896053421075">"取消"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"健康度"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"制造日期"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"首次使用日期"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"循环次数"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"序列号"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"部件状态"</string>
+    <string name="battery_original" msgid="2552600989411644999">"原电池"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"更换的电池"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"零件信息"</string>
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"原始容量的 %1$s"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"无法获取电池健康度信息"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"低温"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"没电"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"良好"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"过热"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"电压过高"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"存储空间状况"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"总容量"</string>
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>⁠"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"生命周期剩余 %1$s"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"请授予必要权限，以便继续使用评估模式。"</string>
+    <string name="cancel_button" msgid="7011882021431169180">"取消"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"请重试"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"触摸测试结果"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"这是触摸测试的结果。您可以返回并重新运行测试。"</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"已通过触摸传感器测试"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"未通过触摸传感器测试"</string>
+    <string name="pass" msgid="6411665547268368837">"通过"</string>
+    <string name="fail" msgid="3918028202746427731">"未通过"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"已验证证书"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"设备已锁定"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"已验证启动状态"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"安全等级"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Keymaster 版本"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Keymaster 安全等级"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"操作系统版本"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"品牌"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"设备"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"产品"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"序列"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"第二个 IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"制造商"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"型号"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"供应商补丁级别"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"启动补丁级别"</string>
+    <string name="yes" msgid="6686215078709381643">"是"</string>
+    <string name="no" msgid="5957591978126937912">"否"</string>
+    <string name="unknown" msgid="6936738212381747979">"未知"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"认证失败"</string>
+    <string name="avb_verified" msgid="4990498011432924565">"已验证"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"未经验证"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"评估结果"</string>
+    <string name="attestation_results" msgid="9089126954790727665">"认证结果"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"第二个 IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"序列号"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"引导加载程序已锁定"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"可信设备"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"显示状态"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"触控传感器状态"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"认证详情"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"未通过认证"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"无法确定设备是否可信"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"再次尝试认证"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"认证验证失败，请检查网络连接，然后重试。"</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"后续步骤"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"评估其他设备"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"返回主菜单"</string>
+    <string name="locked" msgid="2034650000550950371">"已锁定"</string>
+    <string name="not_locked" msgid="1663929635666930122">"未锁定"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"二维码"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"在要评估的设备上继续操作"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"在要评估的设备上完成测试后，结果会显示在此处。"</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"与评估的设备通信时出错。请确认蓝牙已启用，然后再试。"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"立即扫描"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"在要评估的设备上，依次前往“设置”“系统”“设备诊断”“评估模式”“所评估的设备”。按照设备上的提示操作。"</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"现在，系统将显示一系列画面。请检查每一个画面，看看是否有缺陷。检查完一个画面后，轻触该画面即可进入下一个画面。最后，系统会询问您这些画面看起来是否无瑕疵。"</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"现在，系统将显示一系列画面。请检查每一个画面，看看是否有缺陷。轻触当前画面可进入下一个画面。"</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"请在下方选择与屏幕状况最相符的选项。"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"现在，系统将显示红色画面。\n\n用手指在画面上滑动，直到画面完全变白。如果您无法将画面的某个部分变白，请快速点按画面，以表明触控传感器未完全正常运行。\n\n"</string>
+</resources>

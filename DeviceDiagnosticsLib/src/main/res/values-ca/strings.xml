@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"Diagnòstic del dispositiu"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Continua"</string>
+    <string name="proceed" msgid="8922926495095369132">"Continua"</string>
+    <string name="unavailable" msgid="7842920330665850121">"No disponible"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"S\'està connectant..."</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Estat del component"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Executa proves manuals i consulta l\'estat de la bateria i de l\'emmagatzematge"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Mode d\'avaluació"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Utilitza un dispositiu per avaluar-ne un altre"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Proves manuals"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Prova de pantalla"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Prova tàctil"</string>
+    <string name="component_title" msgid="6580046234562555655">"Estat del component"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Estat de l\'emmagatzematge"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Estat de la bateria"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Dispositiu de confiança"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Avalua un altre dispositiu. Es necessita una connexió a Internet."</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Dispositiu avaluat"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Executa proves de diagnòstic que validarà un altre dispositiu."</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Escaneja ara"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Escaneja el codi QR del dispositiu de confiança en aquest rectangle"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Un cop hagis escanejat el codi QR correctament, aquest dispositiu iniciarà una sèrie de proves de manera automàtica."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Selecciona el dispositiu de confiança"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"També pots seleccionar el dispositiu de la llista següent"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Ha fallat la connexió; torna-ho a provar."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Confirma l\'informe per enviar-lo al dispositiu de confiança."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Envia l\'informe"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"S\'està finalitzant l\'informe..."</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Error de Bluetooth"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Hi ha hagut un error en comunicar-se amb el dispositiu de confiança. Verifica que el Bluetooth estigui activat i torna-ho a provar."</string>
+    <string name="sending_report" msgid="8735615783234611336">"S\'està enviant l\'informe al dispositiu de confiança..."</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"L\'avaluació s\'ha completat"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Els resultats es mostraran al dispositiu de confiança"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Resultat de la prova de pantalla"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Bo"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Sense defectes evidents"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Dolent"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"La pantalla té defectes"</string>
+    <string name="manual_testing_title" msgid="4512384040828953255">"Proves manuals"</string>
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"Cal una inspecció visual de la pantalla física i una confirmació per a la prova següent. Confirmes que vols continuar?"</string>
+    <string name="cancel" msgid="4173470896053421075">"Cancel·la"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Estat"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Data de fabricació"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Data del primer ús"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Nombre de cicles"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Número de sèrie"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Estat de la peça"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Original"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Substituïda"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Historial de la peça"</string>
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s de la capacitat original"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"L\'estat de la bateria no està disponible"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Freda"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Esgotada"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Bona"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Sobreescalfada"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Per sobre del voltatge"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Estat d\'emmagatzematge"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Capacitat total"</string>
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Temps de vida restant: %1$s"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Concedeix els permisos sol·licitats per continuar en mode d\'avaluació."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Cancel·la"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Torna-ho a provar"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Resultat de la prova tàctil"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Aquest és el resultat de la prova tàctil. Pots executar-la de nou tornant enrere."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"S\'ha superat la prova del sensor tàctil"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"La prova del sensor tàctil ha fallat"</string>
+    <string name="pass" msgid="6411665547268368837">"Aprovada"</string>
+    <string name="fail" msgid="3918028202746427731">"No superada"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"Certificat verificat"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"Dispositiu bloquejat"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Estat d\'inici verificat"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"Nivell de seguretat"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Versió de Keymaster"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Nivell de seguretat de Keymaster"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"Versió de l\'SO"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"Marca"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"Dispositiu"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"Producte"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"Número de sèrie"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"Segon IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"Fabricant"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"Model"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Nivell de pedaç del proveïdor"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Nivell del pedaç d\'inici"</string>
+    <string name="yes" msgid="6686215078709381643">"Sí"</string>
+    <string name="no" msgid="5957591978126937912">"No"</string>
+    <string name="unknown" msgid="6936738212381747979">"Desconegut"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"Ha fallat l\'atestació"</string>
+    <string name="avb_verified" msgid="4990498011432924565">"VERIFICAT"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"SENSE VERIFICAR"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"Resultats de l\'avaluació"</string>
+    <string name="attestation_results" msgid="9089126954790727665">"Resultats de l\'atestació"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"Segon IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Número de sèrie"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"S\'ha bloquejat el bootloader"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Dispositiu de confiança"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Estat de la pantalla"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Estat del sensor tàctil"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Detalls de l\'atestació"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Ha fallat l\'atestació"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"No s\'ha pogut determinar si el dispositiu és fiable"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Torna a provar l\'atestació"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"No s\'ha pogut verificar l\'atestació; comprova la connexió i torna-ho a provar."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Passos següents"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Avalua un altre dispositiu"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Torna al menú principal"</string>
+    <string name="locked" msgid="2034650000550950371">"Bloquejat"</string>
+    <string name="not_locked" msgid="1663929635666930122">"No bloquejat"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"Codi QR"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continua al dispositiu que s\'està avaluant"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Completa les proves al dispositiu que estàs avaluant; després, els resultats es mostraran aquí."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Hi ha hagut un error en comunicar-se amb el dispositiu avaluat. Verifica que el Bluetooth estigui activat i torna-ho a provar."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Escaneja ara"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Al dispositiu que vulguis avaluar, ves a Configuració, Sistema, Diagnòstic del dispositiu, Mode d\'avaluació i Dispositiu avaluat. Segueix les indicacions al dispositiu en qüestió."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Ara se\'t mostraran diverses pantalles. Examina-les i cerca els defectes. Quan hagis acabat, toca la pantalla per passar a la següent. Al final, se\'t preguntarà si les pantalles estan impecables."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Ara se\'t mostraran diverses pantalles. Examina-les i cerca els defectes. Toca la pantalla per passar a la següent."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Selecciona l\'opció que coincideixi millor amb l\'estat de la pantalla."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Ara se\'t mostrarà una pantalla vermella.\n \n Fes lliscar el dit per la pantalla fins que quedi completament blanca. Si no pots fer que part de la pantalla es torni blanca, toca-la breument per indicar que el sensor tàctil no funciona de manera adequada.\n \n"</string>
+</resources>

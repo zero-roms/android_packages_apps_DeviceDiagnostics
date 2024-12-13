@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ~ Copyright 2024 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="4531685026837318886">"Diagnostika zařízení"</string>
+    <string name="app_title" msgid="2766786539301072967">"Diagnostika zařízení"</string>
+    <string name="activity_continue" msgid="2190118984182069151">"Pokračovat"</string>
+    <string name="proceed" msgid="8922926495095369132">"Pokračovat"</string>
+    <string name="unavailable" msgid="7842920330665850121">"Není k dispozici"</string>
+    <string name="bluetooth_connecting" msgid="7966802493158307502">"Připojování…"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Stav součástí"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Spustit ruční testy a zobrazit stav baterie a úložiště"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Režim posouzení"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Použít jedno zařízení k posouzení jiného"</string>
+    <string name="manual_eval_title" msgid="4335717606581762762">"Ruční testy"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"Test displeje"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Test dotykového senzoru"</string>
+    <string name="component_title" msgid="6580046234562555655">"Stav součásti"</string>
+    <string name="storage_title" msgid="5921235202250843966">"Stav úložiště"</string>
+    <string name="battery_title" msgid="6707361668941323259">"Stav baterie"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"Důvěryhodné zařízení"</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Posoudit další zařízení. Je potřeba připojení k internetu."</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"Posuzované zařízení"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Spustit diagnostické testy, které budou ověřeny jiným zařízením."</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"Naskenovat"</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Do tohoto čtverce naskenujte QR kód na důvěryhodném zařízení"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Po úspěšném naskenování QR kódu se v tomto zařízení automaticky spustí série testů."</string>
+    <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Vyberte důvěryhodné zařízení"</string>
+    <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Případně vyberte zařízení ze seznamu níže"</string>
+    <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Připojení selhalo, zkuste to znovu."</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"Potvrďte přehled, který chcete odeslat na důvěryhodné zařízení."</string>
+    <string name="evaluated_send_report" msgid="7692059671222319749">"Odeslat přehled"</string>
+    <string name="evaluated_finalizing_report" msgid="2808969866170324986">"Finalizace přehledu…"</string>
+    <string name="bluetooth_error_title" msgid="4352617586275775499">"Chyba rozhraní Bluetooth"</string>
+    <string name="bluetooth_error_summary" msgid="8411286861814582793">"Při komunikaci s důvěryhodným zařízením došlo k chybě. Zkontrolujte, zda je zapnuté rozhraní Bluetooth, a zkuste to znovu."</string>
+    <string name="sending_report" msgid="8735615783234611336">"Odesílání přehledu na důvěryhodné zařízení…"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"Posouzení dokončeno"</string>
+    <string name="evaluation_complete_summary" msgid="1899365605498435450">"Výsledky se teď zobrazí na důvěryhodném zařízení"</string>
+    <string name="screen_test_result_title" msgid="4741510800317631056">"Výsledek testu obrazovky"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Dobrý výsledek"</string>
+    <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Žádné zjevné defekty"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Špatný výsledek"</string>
+    <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Obrazovka má defekty"</string>
+    <string name="manual_testing_title" msgid="4512384040828953255">"Ruční testování"</string>
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"Následující test vyžaduje vizuální kontrolu a ověření fyzického displeje. Opravdu chcete pokračovat?"</string>
+    <string name="cancel" msgid="4173470896053421075">"Zrušit"</string>
+    <string name="battery_health_title" msgid="3945318982701313271">"Stav"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"Datum výroby"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"Datum prvního použití"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"Počet cyklů"</string>
+    <string name="battery_serial_number" msgid="2784394586800439008">"Sériové číslo"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Stav dílu"</string>
+    <string name="battery_original" msgid="2552600989411644999">"Původní"</string>
+    <string name="battery_replaced" msgid="2356023769075469649">"Vyměněná"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Historie dílu"</string>
+    <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s původní kapacity"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"Stav baterie nedostupný"</string>
+    <string name="battery_health_cold" msgid="4164463402047143412">"Nízká"</string>
+    <string name="battery_health_dead" msgid="3658507844189988433">"Vybitá"</string>
+    <string name="battery_health_good" msgid="4850784608550784236">"Dobrá"</string>
+    <string name="battery_health_overheat" msgid="8745643548393640213">"Přehřátá"</string>
+    <string name="battery_health_over_voltage" msgid="1970205983413868560">"Přepětí"</string>
+    <string name="storage_health_title" msgid="2499144010514101535">"Stav úložiště"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Celková kapacita"</string>
+    <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Zbývá %1$s"</string>
+    <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Pokud chcete pokračovat v posuzování, udělte požadovaná oprávnění."</string>
+    <string name="cancel_button" msgid="7011882021431169180">"Zrušit"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Zkusit znovu"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Výsledek testu dotykového senzoru"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Toto je výsledek testu dotykového senzoru. Test můžete znovu spustit tím, že přejdete zpět."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Test dotykového senzoru byl úspěšný"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Test dotykového senzoru nebyl úspěšný"</string>
+    <string name="pass" msgid="6411665547268368837">"Vyhovuje"</string>
+    <string name="fail" msgid="3918028202746427731">"Nevyhovuje"</string>
+    <string name="attestation_verified" msgid="6535873137799452259">"Ověřený certifikát"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"Zařízení uzamčeno"</string>
+    <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Stav ověřeného spuštění"</string>
+    <string name="attestation_security_level" msgid="6633918464653325429">"Úroveň zabezpečení"</string>
+    <string name="attestation_keymaster_version" msgid="7041962401293637901">"Verze nástroje Keymaster"</string>
+    <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"Úroveň zabezpečení nástroje Keymaster"</string>
+    <string name="attestation_os_version" msgid="4351993398048033601">"Verze operačního systému"</string>
+    <string name="attestation_brand" msgid="5238699762448331155">"Značka"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"Zařízení"</string>
+    <string name="attestation_product" msgid="7325714994397112640">"Produkt"</string>
+    <string name="attestation_serial" msgid="5001580041093391656">"Sériové číslo"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_second_imei" msgid="7566064584445017361">"Druhé číslo IMEI"</string>
+    <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
+    <string name="attestation_manufacturer" msgid="2043278400561674518">"Výrobce"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"Model"</string>
+    <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Úroveň opravy dodavatele"</string>
+    <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Úroveň opravy zavaděče"</string>
+    <string name="yes" msgid="6686215078709381643">"Ano"</string>
+    <string name="no" msgid="5957591978126937912">"Ne"</string>
+    <string name="unknown" msgid="6936738212381747979">"Není známo"</string>
+    <string name="attestation_failed" msgid="7989272430189028826">"Atestace se nezdařila"</string>
+    <string name="avb_verified" msgid="4990498011432924565">"OVĚŘENO"</string>
+    <string name="avb_not_verified" msgid="6853341577991139767">"NEOVĚŘENO"</string>
+    <string name="evaluation_results" msgid="1584774109554324406">"Výsledky hodnocení"</string>
+    <string name="attestation_results" msgid="9089126954790727665">"Výsledky atestace"</string>
+    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei2_title" msgid="4414064408324667040">"Druhé číslo IMEI"</string>
+    <string name="serial_number_title" msgid="1361280023487536604">"Sériové číslo"</string>
+    <string name="bootloader_locked_title" msgid="4498089738937695995">"Bootloader uzamčen"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"Zařízení je důvěryhodné"</string>
+    <string name="display_status_title" msgid="7827806798539639832">"Stav displeje"</string>
+    <string name="touch_sensor_status_title" msgid="5595027618553558639">"Stav dotykového senzoru"</string>
+    <string name="attestation_details_title" msgid="7637645023797408279">"Podrobnosti o atestaci"</string>
+    <string name="attestation_local_failure_title" msgid="3071623434519219695">"Atestace se nezdařila"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"Nebylo možné určit, zda je zařízení důvěryhodné"</string>
+    <string name="attestation_remote_failure_title" msgid="8025019568951127574">"Opakovat pokus o atestaci"</string>
+    <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"Ověření atestace se nezdařilo, zkontrolujte připojení a zkuste to znovu."</string>
+    <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"Další kroky"</string>
+    <string name="evaluate_another_title" msgid="6275248738668045886">"Posoudit další zařízení"</string>
+    <string name="back_to_main_title" msgid="2496143013300121780">"Zpět do hlavní nabídky"</string>
+    <string name="locked" msgid="2034650000550950371">"Zamčeno"</string>
+    <string name="not_locked" msgid="1663929635666930122">"Neuzamčen"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR kód"</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Pokračujte na posuzovaném zařízení"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Dokončete testy na zařízení, které posuzujete. Pak se tady zobrazí výsledky."</string>
+    <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Při komunikaci s vyhodnocovaným zařízením došlo k chybě. Zkontrolujte, zda je zapnuté Bluetooth, a zkuste to znovu."</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"Naskenovat"</string>
+    <string name="trusted_scan_now_summary" msgid="578587921199486348">"Na zařízení, které chcete posoudit, přejděte na Nastavení, Systém, Diagnostika zařízení, Režim posouzení a pak na Posuzované zařízení. Postupujte podle pokynů na daném zařízení."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Teď se bude zobrazovat řada obrazovek. Každou si důkladně prohlédněte a hledejte vady. Jakmile budete spokojeni, klepnutím přejděte na další. Na konci se zeptáme, zda jste na obrazovkách našli nějaké vady."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Teď se bude zobrazovat řada obrazovek. Každou si důkladně prohlédněte a hledejte vady. Klepnutím přejdete na další."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Níže vyberte možnost, která nejlépe odpovídá stavu obrazovky."</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Teď se vám zobrazí červená obrazovka.\n \n Přejíždějte po ní prstem, dokud nebude celá bílá. Pokud se vám část obrazovky na bílo obarvit nepodaří, krátce na ni klepněte a dejte tak najevo, že dotykový senzor plně nefunguje.\n \n"</string>
+</resources>

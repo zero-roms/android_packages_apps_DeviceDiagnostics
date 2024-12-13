@@ -1,0 +1,106 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+  <Preference
+      app:key="attestation_verified"
+      app:selectable="false"
+      app:title="@string/attestation_verified"/>
+
+  <Preference
+      app:key="attestation_device_locked"
+      app:selectable="false"
+      app:title="@string/attestation_device_locked"/>
+
+  <Preference
+      app:key="attestation_verified_boot_state"
+      app:selectable="false"
+      app:title="@string/attestation_verified_boot_state"/>
+
+  <Preference
+      app:key="attestation_imei"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_imei"/>
+
+  <Preference
+      app:key="attestation_serial"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_serial"/>
+
+  <Preference
+      app:key="attestation_security_level"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_security_level"/>
+
+  <Preference
+      app:key="attestation_keymaster_version"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_keymaster_version"/>
+
+  <Preference
+      app:key="attestation_keymaster_security_level"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_keymaster_security_level"/>
+
+  <Preference
+      app:key="attestation_os_version"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_os_version"/>
+
+  <Preference
+      app:key="attestation_brand"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_brand"/>
+
+  <Preference
+      app:key="attestation_device"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_device"/>
+
+  <Preference
+      app:key="attestation_product"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_product"/>
+
+  <Preference
+      app:key="attestation_second_imei"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_second_imei"/>
+
+  <Preference
+      app:key="attestation_meid"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_meid"/>
+
+  <Preference
+      app:key="attestation_manufacturer"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_manufacturer"/>
+
+  <Preference
+      app:key="attestation_model"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_model"/>
+
+  <Preference
+      app:key="attestation_vendor_patch_level"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_vendor_patch_level"/>
+
+  <Preference
+      app:key="attestation_boot_patch_level"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/attestation_boot_patch_level"/>
+</PreferenceScreen>

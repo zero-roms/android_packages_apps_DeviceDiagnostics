@@ -1,0 +1,25 @@
+<PreferenceScreen  xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <Preference
+      app:key="Scan"
+      app:title="@string/evaluated_scan_now"
+      app:selectable="false"
+      app:summary="@string/evaluated_scan_now_summary" />
+
+  <com.android.settingslib.widget.LayoutPreference
+      android:key="qr_code"
+      app:selectable="false"
+      android:layout="@layout/evaluated_qrcode_scanner" />
+
+  <com.android.settingslib.widget.LayoutPreference
+      android:key="connection_progress"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      android:layout="@layout/progress_indicator" />
+
+  <Preference
+      app:key="connection_failed"
+      app:selectable="false"
+      app:isPreferenceVisible="false"
+      app:title="@string/evaluated_bt_fail_title" />
+</PreferenceScreen>
