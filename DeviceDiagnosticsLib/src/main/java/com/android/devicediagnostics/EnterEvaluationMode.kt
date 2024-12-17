@@ -29,6 +29,11 @@ class EnterEvaluationMode : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        enterEvaluationMode()
+        finish()
+    }
+
+    private fun enterEvaluationMode() {
         if (!enableTradeInMode()) {
             return
         }
@@ -47,7 +52,5 @@ class EnterEvaluationMode : Activity() {
             intent.setAction("com.android.setupwizard.TIM")
             startActivity(intent)
         }
-
-        finish()
     }
 }
