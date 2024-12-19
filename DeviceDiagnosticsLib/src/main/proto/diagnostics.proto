@@ -58,6 +58,7 @@ message DeviceReport {
     StorageInfo storage = 4;
     optional int32 launch_level = 5;
     LockInfo locks = 6;
+    ProductInfo product = 7;
 }
 
 enum PacketCommand {
@@ -72,4 +73,12 @@ message BluetoothPacket {
         DeviceReport device_report = 3;
         PacketCommand command = 4;
     }
+}
+
+message ProductInfo {
+    optional string brand = 1;
+    optional string device = 2;
+    optional string manufacturer = 3;
+    optional string model = 4;
+    optional string name = 5;
 }

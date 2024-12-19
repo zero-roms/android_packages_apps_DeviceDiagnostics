@@ -19,6 +19,7 @@ import android.util.Base64
 import com.android.devicediagnostics.Protos.BatteryInfo
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.Protos.LockInfo
+import com.android.devicediagnostics.Protos.ProductInfo
 import com.android.devicediagnostics.Protos.StorageInfo
 import com.android.devicediagnostics.Protos.TestResults
 import org.json.JSONObject
@@ -58,6 +59,16 @@ private fun batteryInfoToJson(battery: BatteryInfo): JSONObject {
     return obj
 }
 
+private fun productInfoToJson(product: ProductInfo): JSONObject {
+    val obj = JSONObject()
+    obj.putIfPresent(product.hasBrand(), "brand", product.brand)
+    obj.putIfPresent(product.hasDevice(), "device", product.device)
+    obj.putIfPresent(product.hasManufacturer(), "manufacturer", product.manufacturer)
+    obj.putIfPresent(product.hasModel(), "model", product.model)
+    obj.putIfPresent(product.hasName(), "name", product.name)
+    return obj
+}
+
 private fun storageInfoToJson(storage: StorageInfo): JSONObject {
     val obj = JSONObject()
     obj.putIfPresent(
@@ -87,5 +98,6 @@ fun deviceReportToJson(report: DeviceReport): JSONObject {
     if (report.hasStorage()) putIfNotEmpty(obj, "storage", storageInfoToJson(report.storage))
     obj.putIfPresent(report.hasLaunchLevel(), "launch_level", report.launchLevel)
     obj.put("locks", lockInfoToJson(report.locks))
+    if (report.hasProduct()) putIfNotEmpty(obj, "product", productInfoToJson(report.product))
     return obj
 }
