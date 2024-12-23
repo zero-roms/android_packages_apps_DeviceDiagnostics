@@ -46,11 +46,23 @@ class EnterEvaluationMode : Activity() {
         }
 
         if (service.enterEvaluationMode()) {
-            // Dismiss suw
-            val intent = Intent(Intent.ACTION_MAIN)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            intent.setAction("com.android.setupwizard.TIM")
-            startActivity(intent)
+            // Dismiss suw the old way via an activity
+            try {
+                val intent = Intent(Intent.ACTION_MAIN)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.setAction("com.android.setupwizard.TIM")
+                startActivity(intent)
+                return
+            } catch (e: Exception) {}
+
+            // Dismiss suw the new way via a broadcast
+            val broadcast = Intent(Intent.ACTION_MAIN)
+            broadcast.setAction("com.google.android.setupwizard.ENTER_TRADE_IN_MODE")
+            broadcast.setClassName(
+                "com.google.android.setupwizard",
+                "com.google.android.setupwizard.SetupWizardEnterTradeInModeReceiver",
+            )
+            sendBroadcast(broadcast)
         }
     }
 }
