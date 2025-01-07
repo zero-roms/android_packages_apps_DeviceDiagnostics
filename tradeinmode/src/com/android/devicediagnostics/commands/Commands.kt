@@ -52,6 +52,10 @@ fun isTradeInModeEnabled(): Boolean {
     return SystemProperties.getInt("persist.adb.tradeinmode", 0) > 0
 }
 
+fun isBootCompleted(): Boolean {
+    return SystemProperties.getInt("sys.boot_completed", 0) != 0
+}
+
 fun ensureTradeInModeAllowed() {
     if (!isDebuggable() && !isTradeInModeEnabled()) {
         throw Exception("Command not available.")
@@ -62,36 +66,46 @@ class Commands {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            if (SystemProperties.getInt("sys.boot_completed", 0) != 1) {
-                System.err.println("Device not fully booted")
-                exitProcess(1)
-            }
             try {
-                main_wrapper(Tokenizer(args))
+                doMain(Tokenizer(args))
             } catch (e: Exception) {
                 System.err.println("Error: $e")
                 exitProcess(1)
             }
         }
+    }
+}
 
-        fun main_wrapper(args: Tokenizer) {
-            val cmd = args.next()
-            if (cmd == null) {
-                throw IllegalArgumentException("Expected command.")
-            }
+fun doMain(args: Tokenizer) {
+    var cmd = args.next()
+    if (cmd == null) {
+        throw IllegalArgumentException("Expected command.")
+    }
 
-            ensureTradeInModeAllowed()
+    // Optional wait-until-ready prefix to make testing easier.
+    if (cmd == "wait-until-ready") {
+        doWaitUntilReady()
 
-            if (cmd == "getstatus") {
-                doGetStatus(args)
-            } else if (cmd == "evaluate") {
-                doEvaluate(args)
-            } else if (cmd == "poweroff") {
-                SystemProperties.set("sys.powerctl", "shutdown")
-            } else {
-                throw IllegalArgumentException("Unknown command.")
-            }
+        cmd = args.next()
+        if (cmd == null) {
+            return
         }
+    }
+
+    if (!isBootCompleted()) {
+        throw Exception("Device not fully booted")
+    }
+
+    ensureTradeInModeAllowed()
+
+    if (cmd == "getstatus") {
+        doGetStatus(args)
+    } else if (cmd == "evaluate") {
+        doEvaluate(args)
+    } else if (cmd == "poweroff") {
+        SystemProperties.set("sys.powerctl", "shutdown")
+    } else {
+        throw IllegalArgumentException("Unknown command.")
     }
 }
 
@@ -197,5 +211,38 @@ fun doGetStatus(args: Tokenizer) {
         if (holder != null && holder.provider != null) {
             am.removeContentProviderExternalAsUser(uri.authority, token, UserHandle.USER_SYSTEM)
         }
+    }
+}
+
+fun isTradeInModeReady(): Boolean {
+    if (!isBootCompleted()) {
+        return false
+    }
+
+    val am = ActivityManager.getService()
+    if (am == null) {
+        return false
+    }
+
+    val token = Binder()
+    val uriString = "content://com.android.devicediagnostics/.GetStatusContentProvider"
+    val uri = Uri.parse(uriString)
+    var holder: ContentProviderHolder? = null
+    try {
+        holder =
+            am.getContentProviderExternal(uri.authority, UserHandle.USER_SYSTEM, token, "*cmd*")
+        return holder != null && holder.provider != null
+    } catch (e: Exception) {
+        return false
+    } finally {
+        if (holder != null && holder.provider != null) {
+            am.removeContentProviderExternalAsUser(uri.authority, token, UserHandle.USER_SYSTEM)
+        }
+    }
+}
+
+fun doWaitUntilReady() {
+    while (!isTradeInModeReady()) {
+        Thread.sleep(500)
     }
 }
