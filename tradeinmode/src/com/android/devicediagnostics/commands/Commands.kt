@@ -19,7 +19,6 @@ import android.app.ActivityManager
 import android.app.ContentProviderHolder
 import android.content.AttributionSource
 import android.content.ContentResolver
-import android.content.IContentProvider
 import android.database.Cursor
 import android.net.Uri
 import android.os.Binder
@@ -52,6 +51,10 @@ fun isTradeInModeEnabled(): Boolean {
     return SystemProperties.getInt("persist.adb.tradeinmode", 0) > 0
 }
 
+fun isBootCompleted(): Boolean {
+    return SystemProperties.getInt("sys.boot_completed", 0) != 0
+}
+
 fun ensureTradeInModeAllowed() {
     if (!isDebuggable() && !isTradeInModeEnabled()) {
         throw Exception("Command not available.")
@@ -62,36 +65,46 @@ class Commands {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            if (SystemProperties.getInt("sys.boot_completed", 0) != 1) {
-                System.err.println("Device not fully booted")
-                exitProcess(1)
-            }
             try {
-                main_wrapper(Tokenizer(args))
+                doMain(Tokenizer(args))
             } catch (e: Exception) {
                 System.err.println("Error: $e")
                 exitProcess(1)
             }
         }
+    }
+}
 
-        fun main_wrapper(args: Tokenizer) {
-            val cmd = args.next()
-            if (cmd == null) {
-                throw IllegalArgumentException("Expected command.")
-            }
+fun doMain(args: Tokenizer) {
+    var cmd = args.next()
+    if (cmd == null) {
+        throw IllegalArgumentException("Expected command.")
+    }
 
-            ensureTradeInModeAllowed()
+    // Optional wait-until-ready prefix to make testing easier.
+    if (cmd == "wait-until-ready") {
+        doWaitUntilReady()
 
-            if (cmd == "getstatus") {
-                doGetStatus(args)
-            } else if (cmd == "evaluate") {
-                doEvaluate(args)
-            } else if (cmd == "poweroff") {
-                SystemProperties.set("sys.powerctl", "shutdown")
-            } else {
-                throw IllegalArgumentException("Unknown command.")
-            }
+        cmd = args.next()
+        if (cmd == null) {
+            return
         }
+    }
+
+    if (!isBootCompleted()) {
+        throw Exception("Device not fully booted")
+    }
+
+    ensureTradeInModeAllowed()
+
+    if (cmd == "getstatus") {
+        doGetStatus(args)
+    } else if (cmd == "evaluate") {
+        doEvaluate(args)
+    } else if (cmd == "poweroff") {
+        SystemProperties.set("sys.powerctl", "shutdown")
+    } else {
+        throw IllegalArgumentException("Unknown command.")
     }
 }
 
@@ -126,49 +139,14 @@ fun doEvaluate(args: Tokenizer) {
         )
 }
 
-fun queryGetStatusProvider(provider: IContentProvider, uri: Uri, extras: Bundle): Int {
-    val cursor =
-        provider.query(
-            AttributionSource(Binder.getCallingUid(), callingPackage(), null),
-            uri,
-            arrayOf<String>(),
-            extras,
-            null,
-        )
-    if (cursor == null) {
-        System.err.println("No result found.")
-        return 1
-    }
-    try {
-        if (!cursor.moveToFirst()) {
-            System.err.println("No result found.")
-            return 1
-        }
-        if (cursor.getColumnCount() < 1) {
-            System.err.println("No result found.")
-            return 1
-        }
-        if (cursor.getType(0) != Cursor.FIELD_TYPE_STRING) {
-            System.err.println("No result found.")
-            return 1
-        }
-        println(cursor.getString(0))
-    } finally {
-        cursor.close()
-    }
-    return 0
-}
-
 fun doGetStatus(args: Tokenizer) {
-    val extras = Bundle()
-
     val arg = args.next()
+    var challenge: String? = null
     if (arg == "--challenge") {
-        val challenge = args.next()
+        challenge = args.next()
         if (challenge == null) {
             throw IllegalArgumentException("Expected challenge.")
         }
-        extras.putString(ContentResolver.QUERY_ARG_SQL_SELECTION, challenge)
     } else if (arg != null) {
         throw IllegalArgumentException("Unexpected argument.")
     }
@@ -177,9 +155,75 @@ fun doGetStatus(args: Tokenizer) {
         throw IllegalArgumentException("Unexpected argument.")
     }
 
+    val uriString = "content://com.android.devicediagnostics/.GetStatusContentProvider"
+    val result = queryStringContentProvider(uriString, challenge)
+    if (result == null) {
+        System.err.println("No result found.")
+        return
+    }
+    println(result)
+}
+
+fun queryStringContentProvider(uriString: String, selection: String?): String? {
     val am = ActivityManager.getService()
     if (am == null) {
         throw Exception("ActivityManager is not available.")
+    }
+
+    val extras = Bundle()
+    if (selection != null) {
+        extras.putString(ContentResolver.QUERY_ARG_SQL_SELECTION, selection)
+    }
+
+    val token = Binder()
+    val uri = Uri.parse(uriString)
+    var holder: ContentProviderHolder? = null
+    try {
+        holder =
+            am.getContentProviderExternal(uri.authority, UserHandle.USER_SYSTEM, token, "*cmd*")
+        if (holder == null) {
+            throw Exception("Could not find provider: " + uri.authority)
+        }
+        val cursor =
+            holder.provider.query(
+                AttributionSource(Binder.getCallingUid(), callingPackage(), null),
+                uri,
+                arrayOf<String>(),
+                extras,
+                null,
+            )
+        if (cursor == null) {
+            return null
+        }
+        try {
+            if (!cursor.moveToFirst()) {
+                return null
+            }
+            if (cursor.getColumnCount() < 1) {
+                return null
+            }
+            if (cursor.getType(0) != Cursor.FIELD_TYPE_STRING) {
+                return null
+            }
+            return cursor.getString(0)
+        } finally {
+            cursor.close()
+        }
+    } finally {
+        if (holder != null && holder.provider != null) {
+            am.removeContentProviderExternalAsUser(uri.authority, token, UserHandle.USER_SYSTEM)
+        }
+    }
+}
+
+fun isTradeInModeReady(): Boolean {
+    if (!isBootCompleted()) {
+        return false
+    }
+
+    val am = ActivityManager.getService()
+    if (am == null) {
+        return false
     }
 
     val token = Binder()
@@ -189,13 +233,18 @@ fun doGetStatus(args: Tokenizer) {
     try {
         holder =
             am.getContentProviderExternal(uri.authority, UserHandle.USER_SYSTEM, token, "*cmd*")
-        if (holder == null) {
-            throw Exception("Could not find provider: " + uri.authority)
-        }
-        queryGetStatusProvider(holder.provider, uri, extras)
+        return holder != null && holder.provider != null
+    } catch (e: Exception) {
+        return false
     } finally {
         if (holder != null && holder.provider != null) {
             am.removeContentProviderExternalAsUser(uri.authority, token, UserHandle.USER_SYSTEM)
         }
+    }
+}
+
+fun doWaitUntilReady() {
+    while (!isTradeInModeReady()) {
+        Thread.sleep(500)
     }
 }
