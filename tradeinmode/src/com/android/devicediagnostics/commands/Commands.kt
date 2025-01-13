@@ -30,6 +30,8 @@ import android.os.UserHandle
 import java.io.FileDescriptor
 import kotlin.system.exitProcess
 
+const val STATE_PROP = "persist.adb.tradeinmode"
+
 class Tokenizer(private val args: Array<String>) {
     private var cursor = 0
 
@@ -48,7 +50,7 @@ fun isDebuggable(): Boolean {
 }
 
 fun isTradeInModeEnabled(): Boolean {
-    return SystemProperties.getInt("persist.adb.tradeinmode", 0) > 0
+    return SystemProperties.getInt(STATE_PROP, 0) > 0
 }
 
 fun isBootCompleted(): Boolean {
@@ -91,6 +93,11 @@ fun doMain(args: Tokenizer) {
         }
     }
 
+    if (cmd == "testing" && isDebuggable()) {
+        doTesting(args)
+        return
+    }
+
     if (!isBootCompleted()) {
         throw Exception("Device not fully booted")
     }
@@ -103,6 +110,8 @@ fun doMain(args: Tokenizer) {
         doEvaluate(args)
     } else if (cmd == "poweroff") {
         SystemProperties.set("sys.powerctl", "shutdown")
+    } else if (cmd == "reboot") {
+        SystemProperties.set("sys.powerctl", "reboot")
     } else {
         throw IllegalArgumentException("Unknown command.")
     }
@@ -116,18 +125,13 @@ fun callingPackage(): String? {
     }
 }
 
-fun doEvaluate(args: Tokenizer) {
-    if (args.more()) {
-        throw IllegalArgumentException("Unexpected argument.")
-    }
-
+fun startActivity(activity: String) {
     val am = ActivityManager.getService()
     if (am == null) {
         throw Exception("ActivityManager is not available.")
     }
 
-    val path = "com.android.devicediagnostics/.EnterEvaluationMode"
-    val shellArgs = arrayOf("start", "-n", path)
+    val shellArgs = arrayOf("start", "-n", activity)
     am.asBinder()
         .shellCommand(
             FileDescriptor.`in`,
@@ -137,6 +141,52 @@ fun doEvaluate(args: Tokenizer) {
             null,
             ResultReceiver(null),
         )
+}
+
+fun doTesting(args: Tokenizer) {
+    if (!args.more()) {
+        throw IllegalArgumentException("Expected argument.")
+    }
+
+    val uriString = "content://com.android.devicediagnostics.TradeInModeTestingContentProvider"
+
+    val cmd = args.next()
+
+    if (cmd == "status") {
+        val result = queryStringContentProvider(uriString, cmd)
+        println(result)
+        return
+    }
+
+    var reboot: Boolean = false
+    if (cmd == "start") {
+        println("Device will reboot in trade-in mode.")
+        reboot = true
+    } else if (cmd == "wipe") {
+        println("Device will reboot to wipe userdata.")
+        reboot = true
+    } else if (cmd == "stop") {
+        println("Device will restart adb.")
+    } else {
+        throw IllegalArgumentException("Unknown argument.")
+    }
+
+    val result = queryStringContentProvider(uriString, cmd)
+    if (result != "ok") {
+        throw Exception("Failed to query testing content provider")
+    }
+
+    if (reboot) {
+        SystemProperties.set("sys.powerctl", "reboot")
+    }
+}
+
+fun doEvaluate(args: Tokenizer) {
+    if (args.more()) {
+        throw IllegalArgumentException("Unexpected argument.")
+    }
+
+    startActivity("com.android.devicediagnostics/.EnterEvaluationMode")
 }
 
 fun doGetStatus(args: Tokenizer) {
@@ -155,7 +205,7 @@ fun doGetStatus(args: Tokenizer) {
         throw IllegalArgumentException("Unexpected argument.")
     }
 
-    val uriString = "content://com.android.devicediagnostics/.GetStatusContentProvider"
+    val uriString = "content://com.android.devicediagnostics.GetStatusContentProvider"
     val result = queryStringContentProvider(uriString, challenge)
     if (result == null) {
         System.err.println("No result found.")
@@ -227,7 +277,7 @@ fun isTradeInModeReady(): Boolean {
     }
 
     val token = Binder()
-    val uriString = "content://com.android.devicediagnostics/.GetStatusContentProvider"
+    val uriString = "content://com.android.devicediagnostics.GetStatusContentProvider"
     val uri = Uri.parse(uriString)
     var holder: ContentProviderHolder? = null
     try {

@@ -26,10 +26,16 @@
       android:theme="@style/Theme.DeviceDiagnostics">
     <provider
         android:name="com.android.devicediagnostics.GetStatusContentProvider"
-        android:authorities="com.android.devicediagnostics"
+        android:authorities="com.android.devicediagnostics.GetStatusContentProvider"
         android:enabled="true"
         android:exported="true"
         android:permission="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <provider
+        android:name="com.android.devicediagnostics.TradeInModeTestingContentProvider"
+        android:authorities="com.android.devicediagnostics.TradeInModeTestingContentProvider"
+        android:enabled="true"
+        android:exported="true"
+        android:permission="android.permission.ENTER_TRADE_IN_MODE"/>
     <activity
         android:name="com.android.devicediagnostics.MainActivity"
         android:exported="true">
