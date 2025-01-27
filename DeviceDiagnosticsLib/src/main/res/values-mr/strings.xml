@@ -28,7 +28,7 @@
     <string name="evaluation_mode_title" msgid="5845218248059550975">"मूल्यांकन मोड"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"एका डिव्हाइसचे मूल्यांकन करण्यासाठी दुसरे डिव्हाइस वापरा"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"मॅन्युअल चाचण्या"</string>
-    <string name="screen_test_title" msgid="2748510049598105155">"चाचणी प्रदर्शित करा"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"डिस्प्लेची चाचणी"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"स्पर्श चाचणी"</string>
     <string name="component_title" msgid="6580046234562555655">"घटकाचे स्टेटस"</string>
     <string name="storage_title" msgid="5921235202250843966">"स्टोरेजचे स्टेटस"</string>

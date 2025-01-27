@@ -29,7 +29,7 @@
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"ஒரு சாதனத்தைப் பயன்படுத்தி மற்றொரு சாதனத்தை மதிப்பிடவும்"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"நேரடிப் பரிசோதனைகள்"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"டிஸ்ப்ளே பரிசோதனை"</string>
-    <string name="touch_test_title" msgid="4347784874948129736">"தொடும் பரிசோதனை"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"டச் சென்சார் பரிசோதனை"</string>
     <string name="component_title" msgid="6580046234562555655">"பாகங்களின் நிலை"</string>
     <string name="storage_title" msgid="5921235202250843966">"சேமிப்பகத்தின் நிலை"</string>
     <string name="battery_title" msgid="6707361668941323259">"பேட்டரி நிலை"</string>

@@ -82,9 +82,9 @@
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"请授予必要权限，以便继续使用评估模式。"</string>
     <string name="cancel_button" msgid="7011882021431169180">"取消"</string>
     <string name="try_again_button" msgid="6015477950108798246">"请重试"</string>
-    <string name="touch_test_result_title" msgid="8236119653054988245">"触摸测试结果"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"这是触摸测试的结果。您可以返回并重新运行测试。"</string>
-    <string name="touch_test_good_title" msgid="4008967693136685770">"已通过触摸传感器测试"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"触控测试结果"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"这是触控测试的结果。您可以返回并重新运行测试。"</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"已通过触控传感器测试"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"未通过触摸传感器测试"</string>
     <string name="pass" msgid="6411665547268368837">"通过"</string>
     <string name="fail" msgid="3918028202746427731">"未通过"</string>

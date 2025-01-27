@@ -139,6 +139,6 @@
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"No dispositivo que queiras avaliar, vai a Configuración &gt; Sistema &gt; Diagnóstico do dispositivo &gt; Modo de avaliación &gt; Dispositivo avaliado. Sigue as indicacións nese dispositivo."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Aparecerá unha serie de pantallas. Revisa cada unha delas en busca de defectos. Cando esteas conforme, toca a pantalla para pasar á seguinte. Ao final, preguntaráseche se as pantallas están perfectas."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Aparecerá unha serie de pantallas. Revisa cada unha delas en busca de defectos. Toca a pantalla para pasar á seguinte."</string>
-    <string name="screen_test_finalize" msgid="9147123495799275930">"Das seguintes opcións, selecciona a que mellor describa a condición da pantalla."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Das seguintes opcións, selecciona a que mellor describa o estado da pantalla."</string>
     <string name="touch_test_summary" msgid="5989536270591433560">"Mostraráseche unha pantalla vermella.\n \n Pasa o dedo por toda a pantalla ata que estea completamente branca. Se non es quen de poñer branca unha parte, toca brevemente a pantalla para indicar que o sensor táctil non funciona como é debido.\n \n"</string>
 </resources>

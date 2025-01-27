@@ -52,7 +52,7 @@
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Avaliação concluída"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Os resultados aparecem agora no dispositivo fidedigno"</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"Resultado do teste do ecrã"</string>
-    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Bom"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Boa qualidade"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Nenhum defeito evidente"</string>
     <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Má qualidade"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"O ecrã apresenta defeitos"</string>
@@ -139,6 +139,6 @@
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"No dispositivo que quer avaliar, aceda a Definições, Sistema, Diagnóstico do dispositivo, Modo de avaliação e Dispositivo avaliado. Siga as instruções nesse dispositivo."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Agora, vai ver uma série de ecrãs. Analise cada um deles e procure defeitos. Quando terminar, toque no ecrã para passar ao próximo. No fim, é-lhe perguntado se os ecrãs estão imaculados."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Agora, vai ver uma série de ecrãs. Analise cada um deles e procure defeitos. Toque no ecrã para passar ao próximo."</string>
-    <string name="screen_test_finalize" msgid="9147123495799275930">"Selecione a opção abaixo que melhor corresponde à condição do ecrã."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Selecione a opção abaixo que melhor corresponde ao estado do ecrã."</string>
     <string name="touch_test_summary" msgid="5989536270591433560">"Agora, vai ver um ecrã vermelho.\n \n Deslize o dedo no ecrã até que este fique totalmente branco. Se não conseguir que uma parte do ecrã fique branca, toque brevemente no ecrã para indicar que o sensor tátil não está a funcionar totalmente.\n \n"</string>
 </resources>

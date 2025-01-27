@@ -29,7 +29,7 @@
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Ein Gerät verwenden, um ein anderes zu bewerten"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Manuelle Tests"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Displaytest"</string>
-    <string name="touch_test_title" msgid="4347784874948129736">"Touchsensortest"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Touchsensor-Test"</string>
     <string name="component_title" msgid="6580046234562555655">"Komponentenstatus"</string>
     <string name="storage_title" msgid="5921235202250843966">"Speicherstatus"</string>
     <string name="battery_title" msgid="6707361668941323259">"Akkustatus"</string>
@@ -84,8 +84,8 @@
     <string name="try_again_button" msgid="6015477950108798246">"Noch mal versuchen"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"Ergebnis des Touchsensortests"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Dies ist das Ergebnis des Touchsensortests. Du kannst den Test wiederholen, indem du zurückgehst."</string>
-    <string name="touch_test_good_title" msgid="4008967693136685770">"Touchsensortest bestanden"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"Touchsensortest nicht bestanden"</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Touchsensor-Test bestanden"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Touchsensor-Test nicht bestanden"</string>
     <string name="pass" msgid="6411665547268368837">"Bestanden"</string>
     <string name="fail" msgid="3918028202746427731">"Nicht bestanden"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"Verifiziertes Zertifikat"</string>

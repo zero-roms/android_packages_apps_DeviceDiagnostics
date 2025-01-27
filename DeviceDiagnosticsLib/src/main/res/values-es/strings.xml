@@ -83,7 +83,7 @@
     <string name="cancel_button" msgid="7011882021431169180">"Cancelar"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Reintentar"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"Resultado de la prueba táctil"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"Este es el resultado de la prueba táctil. Puedes volver a ejecutar la prueba volviendo a la página anterior."</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Este es el resultado de la prueba táctil. Puedes ejecutar de nuevo la prueba volviendo a la página anterior."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Prueba del sensor táctil superada"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Prueba del sensor táctil no superada"</string>
     <string name="pass" msgid="6411665547268368837">"Superada"</string>

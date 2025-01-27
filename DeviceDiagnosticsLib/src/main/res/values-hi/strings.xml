@@ -82,8 +82,8 @@
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"आकलन करने वाले मोड का इस्तेमाल जारी रखने के लिए, अनुरोध की गई अनुमतियों को मंज़ूरी दें."</string>
     <string name="cancel_button" msgid="7011882021431169180">"रद्द करें"</string>
     <string name="try_again_button" msgid="6015477950108798246">"फिर से कोशिश करें"</string>
-    <string name="touch_test_result_title" msgid="8236119653054988245">"टच टेस्ट का नतीजा"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"यहां टच सेंसर से जुड़ी जांच का नतीजा मौजूद है. आपके पास, वापस जाकर टेस्ट को फिर से चलाने का विकल्प है."</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"टच सेंसर की जांच का नतीजा"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"यहां टच सेंसर से जुड़ी जांच का नतीजा दिया गया है. आपके पास, वापस जाकर टेस्ट को फिर से चलाने का विकल्प है."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"टच सेंसर की जांच सफल रही"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"टच सेंसर की जांच फ़ेल हो गई"</string>
     <string name="pass" msgid="6411665547268368837">"पास"</string>
