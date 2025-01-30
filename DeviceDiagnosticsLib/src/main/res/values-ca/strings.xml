@@ -139,6 +139,6 @@
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Al dispositiu que vulguis avaluar, ves a Configuració, Sistema, Diagnòstic del dispositiu, Mode d\'avaluació i Dispositiu avaluat. Segueix les indicacions al dispositiu en qüestió."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Ara se\'t mostraran diverses pantalles. Examina-les i cerca els defectes. Quan hagis acabat, toca la pantalla per passar a la següent. Al final, se\'t preguntarà si les pantalles estan impecables."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Ara se\'t mostraran diverses pantalles. Examina-les i cerca els defectes. Toca la pantalla per passar a la següent."</string>
-    <string name="screen_test_finalize" msgid="9147123495799275930">"Selecciona l\'opció que coincideixi millor amb l\'estat de la pantalla."</string>
+    <string name="screen_test_finalize" msgid="9147123495799275930">"Selecciona l\'opció que descrigui millor l\'estat de la pantalla."</string>
     <string name="touch_test_summary" msgid="5989536270591433560">"Ara se\'t mostrarà una pantalla vermella.\n \n Fes lliscar el dit per la pantalla fins que quedi completament blanca. Si no pots fer que part de la pantalla es torni blanca, toca-la breument per indicar que el sensor tàctil no funciona de manera adequada.\n \n"</string>
 </resources>

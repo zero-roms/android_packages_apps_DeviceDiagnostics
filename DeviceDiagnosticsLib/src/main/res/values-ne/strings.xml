@@ -28,8 +28,8 @@
     <string name="evaluation_mode_title" msgid="5845218248059550975">"मूल्याङ्कन मोड"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"एउटा डिभाइस मूल्याङ्कन गर्न अर्को डिभाइस प्रयोग गर्नुहोस्"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"म्यानुअल परीक्षणहरू"</string>
-    <string name="screen_test_title" msgid="2748510049598105155">"डिस्प्लेसम्बन्धी परीक्षण"</string>
-    <string name="touch_test_title" msgid="4347784874948129736">"टचसम्बन्धी परीक्षण"</string>
+    <string name="screen_test_title" msgid="2748510049598105155">"डिस्प्ले परीक्षण"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"टच परीक्षण"</string>
     <string name="component_title" msgid="6580046234562555655">"कम्पोनेन्टको स्थिति"</string>
     <string name="storage_title" msgid="5921235202250843966">"भण्डारणको स्थिति"</string>
     <string name="battery_title" msgid="6707361668941323259">"ब्याट्रीको स्थिति"</string>
@@ -83,9 +83,9 @@
     <string name="cancel_button" msgid="7011882021431169180">"रद्द गर्नुहोस्"</string>
     <string name="try_again_button" msgid="6015477950108798246">"फेरि प्रयास गर्नुहोस्"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"टचसम्बन्धी परीक्षणको परिणाम"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"यो टचसम्बन्धी परीक्षणको परिणाम हो। तपाईं पछाडि गएर फेरि यो परीक्षण गर्न सक्नुहुन्छ।"</string>
-    <string name="touch_test_good_title" msgid="4008967693136685770">"टच सेन्सरसम्बन्धी परीक्षण पास भएको छ"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"टच सेन्सरसम्बन्धी परीक्षण फेल भएको छ"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"यो टच परीक्षणको परिणाम हो। तपाईं पछाडि गएर फेरि यो परीक्षण गर्न सक्नुहुन्छ।"</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"टच सेन्सर परीक्षण पास भएको छ"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"टच सेन्सर परीक्षण फेल भएको छ"</string>
     <string name="pass" msgid="6411665547268368837">"पास"</string>
     <string name="fail" msgid="3918028202746427731">"फेल"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"पुष्टि गरिएको प्रमाणपत्र"</string>

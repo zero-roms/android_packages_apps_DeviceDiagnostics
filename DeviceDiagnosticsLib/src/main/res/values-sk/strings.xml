@@ -52,9 +52,9 @@
     <string name="evaluation_complete_title" msgid="2503185542217582851">"Hodnotenie bolo dokončené"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"Výsledky sa teraz budú zobrazovať v dôveryhodnom zariadení"</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"Výsledok testu obrazovky"</string>
-    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Dobré"</string>
+    <string name="screen_test_good_result_title" msgid="8032695232528965724">"Dobrý výsledok"</string>
     <string name="screen_test_good_result_summary" msgid="1995033654279054797">"Žiadne očividné chyby"</string>
-    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Zlé"</string>
+    <string name="screen_test_bad_result_title" msgid="2287969677501836657">"Zlý výsledok"</string>
     <string name="screen_test_bad_result_summary" msgid="2826928400358426952">"Obrazovka má chyby"</string>
     <string name="manual_testing_title" msgid="4512384040828953255">"Manuálne testovanie"</string>
     <string name="visual_test_warning_summary" msgid="8088295720348050370">"Nasledujúci test vyžaduje vizuálnu kontrolu a potvrdenie fyzickej obrazovky. Naozaj chcete pokračovať?"</string>

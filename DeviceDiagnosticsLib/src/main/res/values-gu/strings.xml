@@ -62,7 +62,7 @@
     <string name="battery_health_title" msgid="3945318982701313271">"બૅટરીની ક્ષમતા"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"ઉત્પાદનની તારીખ"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"પહેલા વપરાશની તારીખ"</string>
-    <string name="battery_cycle_count" msgid="1002728954996996785">"ચક્રની સંખ્યા"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"ચાર્જિંગ સાઇકલની સંખ્યા"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"અનુક્રમ નંબર"</string>
     <string name="battery_part_status" msgid="504091754655232085">"બૅટરીના ભાગનું સ્ટેટસ"</string>
     <string name="battery_original" msgid="2552600989411644999">"ઑરિજિનલ"</string>
