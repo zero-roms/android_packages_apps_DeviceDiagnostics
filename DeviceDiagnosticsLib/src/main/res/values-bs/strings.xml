@@ -82,7 +82,7 @@
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Dajte zatražena odobrenja da nastavite u načinu rada za procjenu."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Otkaži"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Pokušaj ponovo"</string>
-    <string name="touch_test_result_title" msgid="8236119653054988245">"Rezultat testa senzora za dodir"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Rezultat testa dodira"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Ovo je rezultat testa dodira. Vratite se ako želite ponovo izvršiti test."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Test senzora za dodir je uspio"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Test senzora za dodir nije uspio"</string>

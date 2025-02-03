@@ -29,7 +29,7 @@
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Бир түзмөктү башка түзмөктүн жардамы менен текшериңиз"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Кол менен аткарылган сыноолор"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Экранды сыноо"</string>
-    <string name="touch_test_title" msgid="4347784874948129736">"Тийүүлөрдү сыноо"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Тийүү сенсорун сыноо"</string>
     <string name="component_title" msgid="6580046234562555655">"Компоненттин статусу"</string>
     <string name="storage_title" msgid="5921235202250843966">"Сактагычтын абалы"</string>
     <string name="battery_title" msgid="6707361668941323259">"Батареянын абалы"</string>
@@ -82,7 +82,7 @@
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Текшерүү режиминде улантуу үчүн суралган уруксаттарды бериңиз."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Жокко чыгаруу"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Кайталоо"</string>
-    <string name="touch_test_result_title" msgid="8236119653054988245">"Тийүүлөрдү сыноонун натыйжасы"</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Тийүү сенсорун сыноо натыйжасы"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Бул тийүү сенсорун сыноо жыйынтыгы. Артка кайтып, кайра сынап көрсөңүз болот."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Тийүү сенсору сыноодон өттү"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Сыналган жок"</string>

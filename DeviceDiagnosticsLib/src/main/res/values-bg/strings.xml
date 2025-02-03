@@ -84,7 +84,7 @@
     <string name="try_again_button" msgid="6015477950108798246">"Нов опит"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"Резултат от теста за докосване"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Това е резултатът от теста за докосване. Можете да го проведете отново, като се върнете назад."</string>
-    <string name="touch_test_good_title" msgid="4008967693136685770">"Тестът на сензора за докосване бе издържан"</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Тестът на сензора за докосване бе успешен"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Тестът на сензора за докосване не бе издържан"</string>
     <string name="pass" msgid="6411665547268368837">"Успешно"</string>
     <string name="fail" msgid="3918028202746427731">"Неуспешно"</string>

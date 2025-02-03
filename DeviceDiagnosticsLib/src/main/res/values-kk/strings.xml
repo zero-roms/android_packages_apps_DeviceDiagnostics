@@ -29,7 +29,7 @@
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Бір құрылғыны бағалау үшін басқасын пайдаланыңыз."</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Қолмен жүргізілетін сынақтар"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Дисплей сынағы"</string>
-    <string name="touch_test_title" msgid="4347784874948129736">"Сенсорлық сынақ"</string>
+    <string name="touch_test_title" msgid="4347784874948129736">"Сенсорлық датчик сынағы"</string>
     <string name="component_title" msgid="6580046234562555655">"Құрамдас күйі"</string>
     <string name="storage_title" msgid="5921235202250843966">"Жад күйі"</string>
     <string name="battery_title" msgid="6707361668941323259">"Батарея күйі"</string>
@@ -82,8 +82,8 @@
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Бағалау режимінде жалғастыру үшін қажетті рұқсаттарды беріңіз."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Бас тарту"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Қайталау"</string>
-    <string name="touch_test_result_title" msgid="8236119653054988245">"Сенсорлық сынақтың нәтижесі"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"Бұл — сенсорлық сынақтың нәтижесі. Артқа өту арқылы сынақты қайта жүргізе аласыз."</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Нәтиже"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Бұл — сенсорлық датчик сынағының нәтижесі. Артқа өту арқылы сынақты қайта жүргізе аласыз."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Сенсорлық датчик сынағы сәтті аяқталды"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Сенсорлық датчик сынағы қатемен аяқталды"</string>
     <string name="pass" msgid="6411665547268368837">"Өтті"</string>
