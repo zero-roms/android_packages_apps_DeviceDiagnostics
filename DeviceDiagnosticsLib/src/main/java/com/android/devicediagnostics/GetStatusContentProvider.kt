@@ -27,6 +27,7 @@ import android.util.Log
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.evaluated.createAttestationRecord
 import com.android.devicediagnostics.evaluated.getBatteryInfo
+import com.android.devicediagnostics.evaluated.getHingeInfo
 import com.android.devicediagnostics.evaluated.getLockInfo
 import com.android.devicediagnostics.evaluated.getProductInfo
 import com.android.devicediagnostics.evaluated.getStorageInfo
@@ -35,53 +36,55 @@ import org.json.JSONArray
 private const val TAG = "GetStatus"
 
 class GetStatusContentProvider : ContentProvider() {
-    override fun onCreate(): Boolean {
-        return true
-    }
+    override fun onCreate(): Boolean = true
 
     override fun query(
-        uri: Uri,
-        projection: Array<out String>?,
-        selection: String?,
-        selectionArgs: Array<out String>?,
-        sortOrder: String?,
-    ): Cursor? {
-        return StatusCursor(context!!, selection)
-    }
+            uri: Uri,
+            projection: Array<out String>?,
+            selection: String?,
+            selectionArgs: Array<out String>?,
+            sortOrder: String?,
+    ): Cursor? = StatusCursor(context!!, selection)
 
     override fun getType(uri: Uri): String? {
         Log.d(TAG, "Not implemented")
         return null
     }
 
-    override fun insert(uri: Uri, values: ContentValues?): Uri? {
+    override fun insert(
+            uri: Uri,
+            values: ContentValues?,
+    ): Uri? {
         Log.d(TAG, "Not implemented")
         return null
     }
 
-    override fun delete(uri: Uri, selection: String?, selectionArgs: Array<out String>?): Int {
-        Log.d(TAG, "Not implemented")
-        return 0
-    }
-
-    override fun update(
-        uri: Uri,
-        values: ContentValues?,
-        selection: String?,
-        selectionArgs: Array<out String>?,
+    override fun delete(
+            uri: Uri,
+            selection: String?,
+            selectionArgs: Array<out String>?,
     ): Int {
         Log.d(TAG, "Not implemented")
         return 0
     }
 
-    class StatusCursor(val context: Context, val selection: String?) : AbstractCursor() {
-        override fun getCount(): Int {
-            return 1
-        }
+    override fun update(
+            uri: Uri,
+            values: ContentValues?,
+            selection: String?,
+            selectionArgs: Array<out String>?,
+    ): Int {
+        Log.d(TAG, "Not implemented")
+        return 0
+    }
 
-        override fun getColumnNames(): Array<String> {
-            return arrayOf("Status")
-        }
+    class StatusCursor(
+            val context: Context,
+            val selection: String?,
+    ) : AbstractCursor() {
+        override fun getCount(): Int = 1
+
+        override fun getColumnNames(): Array<String> = arrayOf("Status")
 
         override fun getString(column: Int): String {
             val challenge: ByteArray
@@ -92,17 +95,18 @@ class GetStatusContentProvider : ContentProvider() {
             }
 
             val report =
-                DeviceReport.newBuilder().run {
-                    setLocks(getLockInfo(context))
-                    if (!locks.factoryResetProtection) {
-                        setBattery(getBatteryInfo(context))
-                        setStorage(getStorageInfo(context))
-                        setLaunchLevel(ApplicationInterface.app.getLaunchLevel())
-                        setProduct(getProductInfo())
-                        selection?.run { setAttestation(createAttestationRecord(challenge)) }
+                    DeviceReport.newBuilder().run {
+                        setLocks(getLockInfo(context))
+                        if (!locks.factoryResetProtection) {
+                            setBattery(getBatteryInfo(context))
+                            setStorage(getStorageInfo(context))
+                            setLaunchLevel(ApplicationInterface.app.getLaunchLevel())
+                            setProduct(getProductInfo())
+                            setHinge(getHingeInfo())
+                            selection?.run { setAttestation(createAttestationRecord(challenge)) }
+                        }
+                        build()
                     }
-                    build()
-                }
             val json = deviceReportToJson(report)
             if (!report.locks.factoryResetProtection) {
                 val tm = context.getSystemService(TelephonyManager::class.java)!!
