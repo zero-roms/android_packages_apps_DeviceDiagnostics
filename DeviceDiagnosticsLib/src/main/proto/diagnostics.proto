@@ -19,9 +19,11 @@ syntax = "proto3";
 package com.android.devicediagnostics;
 option java_outer_classname = "Protos";
 
+// When updating this file, update DeviceReportJsonFormatter.kt as well.
+
 message TestResults {
-    bool screen_test = 1;
-    bool touch_test = 2;
+    optional bool screen_test = 1;
+    optional bool touch_test = 2;
 }
 
 message BatteryInfo {
@@ -33,6 +35,10 @@ message BatteryInfo {
     int32 legacy_health = 7;
     optional int64 manufacture_timestamp = 8;
     optional int64 first_usage_timestamp = 9;
+}
+
+message LockInfo {
+    bool factory_reset_protection = 1;
 }
 
 message StorageInfo {
@@ -50,7 +56,8 @@ message DeviceReport {
     bytes attestation = 2;
     BatteryInfo battery = 3;
     StorageInfo storage = 4;
-    int32 launch_level = 5;
+    optional int32 launch_level = 5;
+    LockInfo locks = 6;
 }
 
 enum PacketCommand {
