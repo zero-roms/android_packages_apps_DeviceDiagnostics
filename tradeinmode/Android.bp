@@ -26,10 +26,21 @@ prebuilt_etc {
 
 java_binary {
     name: "tradeinmode",
-    srcs: ["src/**/*.kt"],
+    srcs: ["src/**/Commands.kt"],
     main_class: "com.android.devicediagnostics.commands.Commands",
     required: ["tradeinmode.rc"],
     dex_preopt: {
         enabled: false,
     },
+}
+
+java_library {
+    name: "tradeinmode_attestation_lib",
+    srcs: [
+        "src/com/android/devicediagnostics/AttestationHelpers.kt",
+    ],
+    libs: [
+        "android-key-attestation",
+    ],
+    host_supported: true,
 }

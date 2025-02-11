@@ -28,5 +28,6 @@ android_library {
         "kotlin-reflect",
         "zxing-core-1.7",
         "aconfig_trade_in_mode_flags_java_lib",
+        "tradeinmode_attestation_lib",
     ],
 }

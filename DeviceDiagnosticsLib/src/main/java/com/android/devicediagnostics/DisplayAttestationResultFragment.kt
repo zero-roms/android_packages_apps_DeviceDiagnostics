@@ -20,12 +20,11 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.google.android.attestation.AuthorizationList
 import com.google.android.attestation.ParsedAttestationRecord
-import com.google.android.attestation.RootOfTrust
 import java.util.Optional
 
 class DisplayAttestationResultFragment(
     private val record: ParsedAttestationRecord,
-    private val result: AttestationResult
+    private val result: AttestationResult,
 ) : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.attestation_details, rootKey)
@@ -48,13 +47,16 @@ class DisplayAttestationResultFragment(
             show("attestation_serial", activity!!.resources.getString(R.string.attestation_failed))
         }
 
-        if (isDeviceLocked()) {
+        if (isDeviceLocked(record)) {
             show("attestation_device_locked", activity!!.resources.getString(R.string.yes))
         } else {
             show("attestation_device_locked", activity!!.resources.getString(R.string.no))
         }
 
-        show("attestation_verified_boot_state", activity!!.resources.getString(getVerifiedBootStateResId(record)))
+        show(
+            "attestation_verified_boot_state",
+            activity!!.resources.getString(getVerifiedBootStateResId(record)),
+        )
         show("attestation_security_level", record.attestationSecurityLevel.name)
         show("attestation_keymaster_version", record.keymasterVersion.toString())
         show("attestation_keymaster_security_level", record.keymasterSecurityLevel.name)
@@ -77,11 +79,6 @@ class DisplayAttestationResultFragment(
         showInt("attestation_boot_patch_level", list.bootPatchLevel)
     }
 
-    private fun isDeviceLocked(): Boolean {
-        val root = record.teeEnforced.rootOfTrust
-        return root.isPresent && root.get().deviceLocked
-    }
-
     private fun showInt(key: String, value: Optional<Int>?) {
         if (value != null && value.isPresent) return show(key, value.get().toString())
     }
@@ -100,11 +97,9 @@ class DisplayAttestationResultFragment(
         findPreference<Preference>(key)!!.isVisible = false
     }
 }
+
 fun getVerifiedBootStateResId(record: ParsedAttestationRecord): Int {
-    val root = record.teeEnforced.rootOfTrust
-    if (
-        root.isPresent && root.get().verifiedBootState == RootOfTrust.VerifiedBootState.VERIFIED
-    ) {
+    if (getVerifiedBootState(record)) {
         return R.string.avb_verified
     }
     return R.string.avb_not_verified

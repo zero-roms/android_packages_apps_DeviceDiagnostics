@@ -1,10 +1,11 @@
-/* Copyright 2016, The Android Open Source Project, Inc.
+/*
+ * Copyright (C) 2025 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *   http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,12 +15,10 @@
  */
 package com.android.devicediagnostics
 
-import android.app.Activity
-import android.util.Log
-import com.android.devicediagnostics.Protos.DeviceReport
 import com.google.android.attestation.CertificateRevocationStatus
 import com.google.android.attestation.Constants
 import com.google.android.attestation.ParsedAttestationRecord
+import com.google.android.attestation.RootOfTrust
 import com.google.common.collect.ImmutableList
 import java.io.ByteArrayInputStream
 import java.io.IOException
@@ -29,28 +28,6 @@ import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate
 import org.bouncycastle.util.encoders.Base64
 
-private const val TAG = "Attestation"
-
-/**
- * This is an illustration of how you can use the Bouncy Castle ASN.1 parser to extract information
- * from an Android attestation data structure. On a secure server that you trust, create similar
- * logic to verify that a key pair has been generated in an Android device. The app on the device
- * must retrieve the key's certificate chain using KeyStore.getCertificateChain(), then send the
- * contents to the trusted server.
- *
- * In this example, the certificate chain includes hard-coded excerpts of each certificate.
- *
- * This example demonstrates the following tasks:
- * 1. Loading the certificates from PEM-encoded strings.
- * 2. Verifying the certificate chain, up to the root. Note that this example does NOT require the
- *    root certificate to appear within Google's list of root certificates. However, if you're
- *    verifying the properties of hardware-backed keys on a device that ships with hardware-level
- *    key attestation, Android 7.0 (API level 24) or higher, and Google Play services, your
- *    production code should enforce this requirement.
- * 3. Checking if any certificate in the chain has been revoked or suspended.
- * 4. Extracting the attestation extension data from the attestation certificate.
- * 5. Verifying (and printing) several important data elements from the attestation extension.
- */
 enum class AttestationResult {
     // There was a non-network error performing attestation.
     GENERIC_ERROR,
@@ -60,47 +37,17 @@ enum class AttestationResult {
     UNVERIFIED,
     // No attempt was made to verify the certificate.
     SKIPPED_VERIFICATION,
+    // Certificate was verified but the challenge was incorrect.
+    BAD_CHALLENGE,
     // The certificate was verified.
     VERIFIED,
 }
 
-class AttestationController(val challenge: ByteArray, val selfCheck: Boolean) {
-    interface Callbacks {
-        fun onAttestationReceived(result: Pair<ParsedAttestationRecord, AttestationResult>)
-
-        fun onAttestationRetry()
-
-        fun onAttestationError()
-    }
-
-    // If "selfCheck" is true, we allow network verification to soft fail.
-    fun verifyAttestation(activity: Activity, report: DeviceReport, callbacks: Callbacks) {
-        // Attestation check does a network lookup, so must be on separate thread
-        runInBackground {
-            var attestation =
-                ApplicationInterface.app.verifyAttestation(
-                    report.attestation.toByteArray(),
-                    challenge,
-                )
-            if (attestation.second == AttestationResult.NETWORK_ERROR && selfCheck)
-                attestation = Pair(attestation.first, AttestationResult.SKIPPED_VERIFICATION)
-
-            activity.runOnUiThread {
-                if (attestation.second == AttestationResult.GENERIC_ERROR) {
-                    callbacks.onAttestationError()
-                } else if (attestation.second == AttestationResult.NETWORK_ERROR) {
-                    callbacks.onAttestationRetry()
-                } else {
-                    callbacks.onAttestationReceived(Pair(attestation.first!!, attestation.second))
-                }
-            }
-        }
-    }
-}
-
-fun getAttestation(
+// Verify a device's attestation record. If a challenge is provided, verify the
+// challenge as well.
+public fun checkAttestation(
     attestation: ByteArray,
-    challenge: ByteArray,
+    challenge: ByteArray?,
 ): Pair<ParsedAttestationRecord?, AttestationResult> {
     var certs: ImmutableList<X509Certificate>?
     var record: ParsedAttestationRecord? = null
@@ -108,21 +55,33 @@ fun getAttestation(
     try {
         certs = loadCertificates(attestation)
         record = ParsedAttestationRecord.createParsedAttestationRecord(certs)
-        if (verifyCertificateChain(certs)) {
-            if (record.attestationChallenge.contentEquals(challenge)) {
-                return Pair(record, AttestationResult.VERIFIED)
-            }
-            Log.e(TAG, "Attestation failed: challenge does not match")
+        if (!verifyCertificateChain(certs)) {
+            return Pair(record, AttestationResult.UNVERIFIED)
         }
-        return Pair(record, AttestationResult.UNVERIFIED)
+        if (challenge != null && !record.attestationChallenge.contentEquals(challenge)) {
+            return Pair(record, AttestationResult.BAD_CHALLENGE)
+        }
+        return Pair(record, AttestationResult.VERIFIED)
     } catch (e: Exception) {
         // Note: set record so we can distinguish between parsing errors and network errors.
-        Log.e(TAG, "Attestation failed: $e")
         if (record != null && e is IOException) {
             return Pair(record, AttestationResult.NETWORK_ERROR)
         }
         return Pair(record, AttestationResult.GENERIC_ERROR)
     }
+}
+
+public fun isDeviceLocked(record: ParsedAttestationRecord): Boolean {
+    val root = record.teeEnforced.rootOfTrust
+    return root.isPresent && root.get().deviceLocked
+}
+
+public fun getVerifiedBootState(record: ParsedAttestationRecord): Boolean {
+    val root = record.teeEnforced.rootOfTrust
+    if (root.isPresent && root.get().verifiedBootState == RootOfTrust.VerifiedBootState.VERIFIED) {
+        return true
+    }
+    return false
 }
 
 private fun verifyCertificateChain(certs: List<X509Certificate>): Boolean {

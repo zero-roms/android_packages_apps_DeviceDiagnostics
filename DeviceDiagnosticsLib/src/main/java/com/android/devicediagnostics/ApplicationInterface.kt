@@ -56,9 +56,9 @@ open class ApplicationInterface {
 
     open fun verifyAttestation(
         attestation: ByteArray,
-        challenge: ByteArray
+        challenge: ByteArray,
     ): Pair<ParsedAttestationRecord?, AttestationResult> {
-        return getAttestation(attestation, challenge)
+        return checkAttestation(attestation, challenge)
     }
 
     open fun getLaunchLevel(): Int {
