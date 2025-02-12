@@ -85,6 +85,13 @@ class GetStatusContentProvider : ContentProvider() {
         }
 
         override fun getString(column: Int): String {
+            val challenge: ByteArray
+            if (selection == null) {
+                challenge = ByteArray(0)
+            } else {
+                challenge = selection.toByteArray(Charsets.UTF_8)
+            }
+
             val report =
                 DeviceReport.newBuilder().run {
                     setLocks(getLockInfo(context))
@@ -94,9 +101,7 @@ class GetStatusContentProvider : ContentProvider() {
                         setLaunchLevel(ApplicationInterface.app.getLaunchLevel())
                         setProduct(getProductInfo())
                         selection?.run {
-                            setAttestation(
-                                ByteString.copyFrom(createAttestationRecord(toByteArray()))
-                            )
+                            setAttestation(ByteString.copyFrom(createAttestationRecord(challenge)))
                         }
                     }
                     build()
