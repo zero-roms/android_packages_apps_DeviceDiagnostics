@@ -44,3 +44,16 @@ java_library {
     ],
     host_supported: true,
 }
+
+java_binary_host {
+    name: "parse_tim_attestation",
+    srcs: ["src/**/AttestationCli.kt"],
+    main_class: "com.android.devicediagnostics.commands.AttestationCli",
+    static_libs: [
+        "android-key-attestation",
+        "gson",
+        "guava",
+        "json-prebuilt",
+        "tradeinmode_attestation_lib",
+    ],
+}
