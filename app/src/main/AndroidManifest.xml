@@ -36,6 +36,12 @@
         android:enabled="true"
         android:exported="true"
         android:permission="android.permission.ENTER_TRADE_IN_MODE"/>
+    <provider
+        android:name="com.android.devicediagnostics.EvaluateContentProvider"
+        android:authorities="com.android.devicediagnostics.EvaluateContentProvider"
+        android:enabled="true"
+        android:exported="true"
+        android:permission="android.permission.ENTER_TRADE_IN_MODE"/>
     <activity
         android:name="com.android.devicediagnostics.MainActivity"
         android:exported="true">
@@ -73,9 +79,6 @@
               android:taskAffinity="com.android.devicediagnostics.evaluated" />
     <activity android:name="com.android.devicediagnostics.BatteryActivity" />
     <activity android:name="com.android.devicediagnostics.StorageActivity" />
-    <activity android:name="com.android.devicediagnostics.EnterEvaluationMode"
-              android:exported="true"
-              android:theme="@android:style/Theme.NoDisplay" />
     <receiver android:name="com.android.devicediagnostics.BootCompleteReceiver"
         android:exported="true">
       <intent-filter>

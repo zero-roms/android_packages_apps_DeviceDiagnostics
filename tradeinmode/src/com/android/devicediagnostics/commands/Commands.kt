@@ -186,7 +186,9 @@ fun doEvaluate(args: Tokenizer) {
         throw IllegalArgumentException("Unexpected argument.")
     }
 
-    startActivity("com.android.devicediagnostics/.EnterEvaluationMode")
+    val uriString = "content://com.android.devicediagnostics.EvaluateContentProvider"
+    queryStringContentProvider(uriString, null)
+    println("Entering evaluation mode.")
 }
 
 fun doGetStatus(args: Tokenizer) {
