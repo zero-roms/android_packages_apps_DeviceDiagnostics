@@ -86,6 +86,7 @@
   <string name="battery_health_overheat">Overheat</string>
   <string name="battery_health_over_voltage">Over voltage</string>
 
+
   <!-- Storage screen -->
   <string name="storage_health_title">Storage health</string>
   <string name="storage_total_capacity_title">Total capacity</string>

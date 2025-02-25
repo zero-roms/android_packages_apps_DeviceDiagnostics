@@ -51,6 +51,8 @@ message HingeInfo {
   repeated int32 expected_lifespan = 3;
 }
 
+message ScreenInfo { optional string screen_part_status = 1; }
+
 message TrustedDeviceInfo { bytes challenge = 1; }
 
 message DeviceReport {
@@ -63,6 +65,7 @@ message DeviceReport {
   ProductInfo product = 7;
   HingeInfo hinge = 8;
   optional AttestationInfo attestation = 9;
+  ScreenInfo screen = 10;
 }
 
 enum PacketCommand {

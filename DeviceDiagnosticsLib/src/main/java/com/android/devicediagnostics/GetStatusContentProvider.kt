@@ -30,6 +30,7 @@ import com.android.devicediagnostics.evaluated.getBatteryInfo
 import com.android.devicediagnostics.evaluated.getHingeInfo
 import com.android.devicediagnostics.evaluated.getLockInfo
 import com.android.devicediagnostics.evaluated.getProductInfo
+import com.android.devicediagnostics.evaluated.getScreenInfo
 import com.android.devicediagnostics.evaluated.getStorageInfo
 import org.json.JSONArray
 
@@ -103,6 +104,7 @@ class GetStatusContentProvider : ContentProvider() {
                             setLaunchLevel(ApplicationInterface.app.getLaunchLevel())
                             setProduct(getProductInfo())
                             setHinge(getHingeInfo())
+                            setScreen(getScreenInfo())
                             selection?.run { setAttestation(createAttestationRecord(challenge)) }
                         }
                         build()
