@@ -22,63 +22,66 @@ option java_outer_classname = "Protos";
 // When updating this file, update DeviceReportJsonFormatter.kt as well.
 
 message TestResults {
-    optional bool screen_test = 1;
-    optional bool touch_test = 2;
+  optional bool screen_test = 1;
+  optional bool touch_test = 2;
 }
 
 message BatteryInfo {
-    reserved 2, 3;
-    optional int32 cycle_count = 1;
-    optional int32 state_of_health = 4;
-    optional string serial = 5;
-    optional string part_status = 6;
-    int32 legacy_health = 7;
-    optional int64 manufacture_timestamp = 8;
-    optional int64 first_usage_timestamp = 9;
+  reserved 2, 3;
+  optional int32 cycle_count = 1;
+  optional int32 state_of_health = 4;
+  optional string serial = 5;
+  optional string part_status = 6;
+  int32 legacy_health = 7;
+  optional int64 manufacture_timestamp = 8;
+  optional int64 first_usage_timestamp = 9;
 }
 
-message LockInfo {
-    bool factory_reset_protection = 1;
-}
+message LockInfo { bool factory_reset_protection = 1; }
 
 message StorageInfo {
-    reserved 1, 2;
-    optional int32 useful_lifetime_remaining = 3;
-    int64 capacity_bytes = 4;
+  reserved 1, 2;
+  optional int32 useful_lifetime_remaining = 3;
+  int64 capacity_bytes = 4;
 }
 
-message TrustedDeviceInfo {
-    bytes challenge = 1;
+message HingeInfo {
+  optional int32 hinge_count = 1;
+  repeated int32 num_times_folded = 2;
+  repeated int32 expected_lifespan = 3;
 }
+
+message TrustedDeviceInfo { bytes challenge = 1; }
 
 message DeviceReport {
-    TestResults tests = 1;
-    bytes attestation = 2;
-    BatteryInfo battery = 3;
-    StorageInfo storage = 4;
-    optional int32 launch_level = 5;
-    LockInfo locks = 6;
-    ProductInfo product = 7;
+  TestResults tests = 1;
+  bytes attestation = 2;
+  BatteryInfo battery = 3;
+  StorageInfo storage = 4;
+  optional int32 launch_level = 5;
+  LockInfo locks = 6;
+  ProductInfo product = 7;
+  HingeInfo hinge = 8;
 }
 
 enum PacketCommand {
-    COMMAND_ACK = 0;
-    COMMAND_CLOSE = 1;
+  COMMAND_ACK = 0;
+  COMMAND_CLOSE = 1;
 };
 
 message BluetoothPacket {
-    int32 version = 1;
-    oneof payload {
-        TrustedDeviceInfo trusted_device_info = 2;
-        DeviceReport device_report = 3;
-        PacketCommand command = 4;
-    }
+  int32 version = 1;
+  oneof payload {
+    TrustedDeviceInfo trusted_device_info = 2;
+    DeviceReport device_report = 3;
+    PacketCommand command = 4;
+  }
 }
 
 message ProductInfo {
-    optional string brand = 1;
-    optional string device = 2;
-    optional string manufacturer = 3;
-    optional string model = 4;
-    optional string name = 5;
+  optional string brand = 1;
+  optional string device = 2;
+  optional string manufacturer = 3;
+  optional string model = 4;
+  optional string name = 5;
 }
