@@ -38,8 +38,8 @@
     <string name="evaluated_device_title" msgid="5546625787928257821">"Appareil évalué"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Effectuez des tests de diagnostic qui seront validés par un autre appareil."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Rechercher"</string>
-    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Scannez le code QR sur l\'appareil vérifié dans le rectangle ci-dessous"</string>
-    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Une fois que vous avez bien scanné le code QR, l\'appareil lance automatiquement une série de tests."</string>
+    <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"Scannez le QR code sur l\'appareil vérifié dans le rectangle ci-dessous"</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"Une fois que vous avez bien scanné le QR code, l\'appareil lance automatiquement une série de tests."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"Sélectionnez l\'appareil vérifié"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"Vous pouvez également sélectionner l\'appareil dans la liste ci-dessous"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"Échec de la connexion. Veuillez réessayer."</string>
@@ -131,7 +131,7 @@
     <string name="back_to_main_title" msgid="2496143013300121780">"Retour au menu principal"</string>
     <string name="locked" msgid="2034650000550950371">"Verrouillé"</string>
     <string name="not_locked" msgid="1663929635666930122">"Non verrouillé"</string>
-    <string name="qr_code_description" msgid="4665712956570877310">"Code QR"</string>
+    <string name="qr_code_description" msgid="4665712956570877310">"QR code"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Continuez sur l\'appareil en cours d\'évaluation"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Effectuez les tests sur l\'appareil que vous évaluez, les résultats apparaîtront ensuite ici."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Une erreur s\'est produite lors de la communication avec l\'appareil évalué. Veuillez vérifier que le Bluetooth est activé, puis réessayez."</string>
