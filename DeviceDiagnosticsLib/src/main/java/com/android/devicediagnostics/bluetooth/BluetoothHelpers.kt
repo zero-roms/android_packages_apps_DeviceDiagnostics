@@ -27,7 +27,8 @@ const val BT_READ_SIZE = 4096
 const val BT_MAX_PACKET_SIZE = 1024 * 1024
 const val BT_VERSION = 1
 
-private const val QRCODE_VERSION = 4
+private const val OLDEST_QRCODE_VERSION = 4
+private const val QRCODE_VERSION = 5
 
 private fun readFully(socket: BluetoothSocket, n: Int): ByteArray {
     val b = ByteArray(n)
@@ -70,7 +71,11 @@ fun writeBluetoothPacket(socket: BluetoothSocket, packetBuilder: BluetoothPacket
     socket.outputStream.write(bytes)
 }
 
-class BluetoothConnectionData(val psm: Int = 0, val challenge: ByteArray) {
+class BluetoothConnectionData(
+    val psm: Int = 0,
+    val challenge: ByteArray,
+    val version: Int = QRCODE_VERSION,
+) {
     companion object Helpers {
         private const val JSON_PSM_KEY = "PSM"
         private const val JSON_VERSION_KEY = "version"
@@ -82,13 +87,13 @@ class BluetoothConnectionData(val psm: Int = 0, val challenge: ByteArray) {
             if (obj.has(JSON_VERSION_KEY)) {
                 version = obj.getInt(JSON_VERSION_KEY)
             }
-            if (version < QRCODE_VERSION) {
+            if (version < OLDEST_QRCODE_VERSION) {
                 throw Exception("Unsupported version")
             }
             val psm = obj.getInt(JSON_PSM_KEY)
             val challengeBase64 = obj.getString(JSON_CHALLENGE_KEY)
             val challenge = Base64.decode(challengeBase64, Base64.URL_SAFE)
-            return BluetoothConnectionData(psm, challenge)
+            return BluetoothConnectionData(psm, challenge, version)
         }
     }
 
@@ -96,7 +101,7 @@ class BluetoothConnectionData(val psm: Int = 0, val challenge: ByteArray) {
         val challengeBase64 = Base64.encodeToString(challenge, Base64.URL_SAFE)
         return JSONObject()
             .put(JSON_PSM_KEY, psm)
-            .put(JSON_VERSION_KEY, QRCODE_VERSION)
+            .put(JSON_VERSION_KEY, version)
             .put(JSON_CHALLENGE_KEY, challengeBase64)
             .toString()
     }

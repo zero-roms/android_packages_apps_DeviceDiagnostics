@@ -35,7 +35,6 @@ import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.R
 import com.android.devicediagnostics.runInBackground
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
-import com.google.protobuf.ByteString
 
 private const val TAG = "EvaluationFinalize"
 
@@ -85,7 +84,15 @@ class EvaluationFinalizeActivity : CollapsingToolbarBaseActivity() {
             val launchLevel = ApplicationInterface.app.getLaunchLevel()
 
             val attestation = createAttestationRecord(state.trustedDevice.challenge.toByteArray())
-            reportBuilder.setAttestation(ByteString.copyFrom(attestation))
+
+            val bluetoothClient = ApplicationInterface.app.getBluetoothClient()
+            val connectionData = bluetoothClient.connectionData
+            if (connectionData != null && connectionData.version == 4) {
+                reportBuilder.setOldAttestation(attestation.certificates)
+            } else {
+                reportBuilder.setAttestation(attestation)
+            }
+
             reportBuilder.setBattery(batteryInfo)
             reportBuilder.setStorage(storageInfo)
             reportBuilder.setLaunchLevel(launchLevel)
@@ -112,7 +119,7 @@ class EvaluationFinalizeActivity : CollapsingToolbarBaseActivity() {
             setReorderingAllowed(true)
             replace(
                 R.id.fragment_container_view,
-                DisplayResultFragment(report, attestationController)
+                DisplayResultFragment(report, attestationController),
             )
         }
     }

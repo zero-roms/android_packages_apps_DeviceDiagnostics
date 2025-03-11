@@ -16,19 +16,22 @@
 
 package com.android.devicediagnostics.evaluated
 
+import android.security.KeyStoreException
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import android.util.Log
+import com.android.devicediagnostics.Protos.AttestationInfo
+import com.google.protobuf.ByteString
 import java.nio.ByteBuffer
 import java.security.KeyPairGenerator
 import java.security.KeyStore
 import java.security.spec.ECGenParameterSpec
 
-private const val TAG = "GetAttestation"
+private const val TAG = "Attestation"
 private const val EC_CURVE = "secp256r1"
 private const val KEYSTORE_ALIAS = "attestation_collector_key"
 
-private fun getAttestation(challenge: ByteArray, withImei: Boolean): ByteArray {
+private fun getAttestation(challenge: ByteArray): ByteArray {
     val keyStore = KeyStore.getInstance("AndroidKeyStore")
     keyStore.load(null)
     keyStore.deleteEntry(KEYSTORE_ALIAS)
@@ -40,18 +43,14 @@ private fun getAttestation(challenge: ByteArray, withImei: Boolean): ByteArray {
             .setAttestationChallenge(challenge)
 
     // Use reflection to call this system API so we can still build in Android Studio
-    if (withImei)
-        builder =
-            builder::class
-                .members
-                .firstOrNull { it.name == "setAttestationIds" }
-                ?.call(
-                    builder,
-                    intArrayOf(
-                        1,
-                        2,
-                    ), // AttestationUtils.ID_TYPE_SERIAL, AttestationUtils.ID_TYPE_IMEI
-                ) as KeyGenParameterSpec.Builder
+    builder =
+        builder::class
+            .members
+            .firstOrNull { it.name == "setAttestationIds" }
+            ?.call(
+                builder,
+                intArrayOf(1, 2), // AttestationUtils.ID_TYPE_SERIAL, AttestationUtils.ID_TYPE_IMEI
+            ) as KeyGenParameterSpec.Builder
 
     val spec = builder.build()
 
@@ -69,24 +68,67 @@ private fun getAttestation(challenge: ByteArray, withImei: Boolean): ByteArray {
     return report
 }
 
-fun createAttestationRecord(challenge: ByteArray): ByteArray {
-    // On devices without device IDs provisioned, the above code will throw ProviderException
-    // Continue without this data to support testing other functionality
+fun attestationCodeToString(code: Int): String {
+    return when (code) {
+        KeyStoreException.ERROR_ATTESTATION_CHALLENGE_TOO_LARGE -> "Challenge too large"
+        KeyStoreException.ERROR_ATTESTATION_KEYS_UNAVAILABLE -> "Attestation keys unavailable"
+        KeyStoreException.ERROR_ID_ATTESTATION_FAILURE -> "Device identifier error"
+        KeyStoreException.ERROR_INCORRECT_USAGE -> "Incorrect usage"
+        KeyStoreException.ERROR_INTERNAL_SYSTEM_ERROR -> "Internal system error"
+        KeyStoreException.ERROR_KEYMINT_FAILURE -> "KeyMint error"
+        KeyStoreException.ERROR_KEYSTORE_FAILURE -> "KeyStore error"
+        KeyStoreException.ERROR_KEYSTORE_UNINITIALIZED -> "Keystore is uninitialized"
+        KeyStoreException.ERROR_KEY_CORRUPTED -> "Key is corrupted"
+        KeyStoreException.ERROR_KEY_DOES_NOT_EXIST -> "Key does not exist"
+        KeyStoreException.ERROR_KEY_NOT_TEMPORALLY_VALID -> "Key expired or not yet usable"
+        KeyStoreException.ERROR_KEY_OPERATION_EXPIRED -> "Key operation expired"
+        KeyStoreException.ERROR_PERMISSION_DENIED -> "Permission denied"
+        else -> "Unexpected KeyStore error"
+    }
+}
+
+fun createAttestationRecord(challenge: ByteArray): AttestationInfo {
+    val builder = AttestationInfo.newBuilder()
+
+    var certs: ByteArray? = null
+    var exception: Throwable? = null
     try {
-        return getAttestation(challenge, true)
-    } catch (e: java.security.ProviderException) {
-        Log.e(TAG, "Could not get attestation with IMEI, retrying without: $e")
-    } catch (e: SecurityException) {
-        Log.e(TAG, "Could not get attestation with IMEI, retrying without: $e")
+        certs = getAttestation(challenge)
     } catch (e: Exception) {
-        Log.e(TAG, "Could not create attestation record: $e")
-        return ByteArray(0)
+        exception = e
     }
 
-    try {
-        return getAttestation(challenge, false)
-    } catch (e: Exception) {
-        Log.e(TAG, "Could not create attestation record: $e")
-        return ByteArray(0)
+    var error: String? = null
+
+    if (exception != null) {
+        Log.e(TAG, "Attestation failed", exception)
+
+        val providerException = exception as java.security.ProviderException?
+        if (providerException != null && providerException.cause != null) {
+            exception = providerException.cause
+            Log.e(TAG, "Provider threw exception", exception)
+        }
+
+        val kse = exception as android.security.KeyStoreException?
+        if (kse != null) {
+            if (
+                kse.isTransientFailure() &&
+                    kse.getRetryPolicy() == KeyStoreException.RETRY_WHEN_CONNECTIVITY_AVAILABLE
+            ) {
+                error = "Network connection needed for attestation"
+            } else {
+                // toString() dumps too much info, so we reduce it.
+                error = attestationCodeToString(kse.numericErrorCode)
+            }
+        }
     }
+
+    if (certs != null) {
+        builder.setCertificates(ByteString.copyFrom(certs))
+    } else if (error != null) {
+        builder.setError(error)
+    } else {
+        builder.setError(exception!!.message)
+    }
+    return builder.build()
 }

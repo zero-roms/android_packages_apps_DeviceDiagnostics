@@ -86,7 +86,12 @@ private fun doMain(args: Tokenizer) {
     if (!root.has("attestation")) {
         throw IllegalArgumentException("No attestation record was found")
     }
-    val encodedData = root.getString("attestation")
+    var attestation = root.getJSONObject("attestation")
+    if (!attestation.has("certificates")) {
+        throw IllegalArgumentException("No attestation record was found")
+    }
+
+    val encodedData = attestation.getString("certificates")
     if (encodedData.isEmpty()) {
         throw IllegalArgumentException("No attestation record was found")
     }

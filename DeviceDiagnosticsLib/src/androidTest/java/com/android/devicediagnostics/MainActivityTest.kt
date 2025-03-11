@@ -77,13 +77,12 @@ private fun touchDownAndUp(): ViewAction? {
             val coordinates =
                 floatArrayOf(
                     view.width.toFloat() / 2 + location[0],
-                    view.height.toFloat() / 2 + location[1]
+                    view.height.toFloat() / 2 + location[1],
                 )
             val precision = floatArrayOf(1f, 1f)
 
             // Send down event, pause, and send up
             val down = MotionEvents.sendDown(uiController, coordinates, precision).down
-            uiController.loopMainThreadForAtLeast(50)
             MotionEvents.sendUp(uiController, down, coordinates)
         }
     }
@@ -157,6 +156,8 @@ class MainActivityTest : ActivityTest() {
 
         assert(report.tests.screenTest)
         assert(!report.tests.touchTest)
+        assert(report.attestation.certificates.isEmpty() != report.attestation.error.isEmpty())
+        assert(report.oldAttestation.isEmpty())
     }
 
     @Test
@@ -229,7 +230,7 @@ class MainActivityTest : ActivityTest() {
                 ByteArray(0),
                 ByteArray(0),
                 authorizationList,
-                authorizationList
+                authorizationList,
             )
 
         val attestationResult = Pair(attestationRecord, AttestationResult.UNVERIFIED)
@@ -239,6 +240,7 @@ class MainActivityTest : ActivityTest() {
     private fun generateConnectionData(challenge: ByteArray): BluetoothConnectionData {
         return BluetoothConnectionData(100, challenge)
     }
+
     private fun generateQrPayload(challenge: ByteArray): String {
         return generateConnectionData(challenge).toString()
     }

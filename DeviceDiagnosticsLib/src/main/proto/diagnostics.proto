@@ -55,13 +55,14 @@ message TrustedDeviceInfo { bytes challenge = 1; }
 
 message DeviceReport {
   TestResults tests = 1;
-  bytes attestation = 2;
+  bytes old_attestation = 2;
   BatteryInfo battery = 3;
   StorageInfo storage = 4;
   optional int32 launch_level = 5;
   LockInfo locks = 6;
   ProductInfo product = 7;
   HingeInfo hinge = 8;
+  optional AttestationInfo attestation = 9;
 }
 
 enum PacketCommand {
@@ -84,4 +85,9 @@ message ProductInfo {
   optional string manufacturer = 3;
   optional string model = 4;
   optional string name = 5;
+}
+
+message AttestationInfo {
+  bytes certificates = 1;
+  string error = 2;
 }
