@@ -89,11 +89,19 @@ private fun lockInfoToJson(info: LockInfo): JSONObject {
 fun deviceReportToJson(report: DeviceReport): JSONObject {
     val obj = JSONObject()
     if (report.hasTests()) putIfNotEmpty(obj, "tests", testResultsToJson(report.tests))
-    if (!report.attestation.isEmpty)
-        obj.put(
-            "attestation",
-            Base64.encodeToString(report.attestation.toByteArray(), Base64.DEFAULT),
-        )
+    if (report.hasAttestation()) {
+        val info = JSONObject()
+        if (!report.attestation.certificates.isEmpty) {
+            info.put(
+                "certificates",
+                Base64.encodeToString(report.attestation.certificates.toByteArray(), Base64.DEFAULT),
+            )
+        }
+        if (!report.attestation.error.isEmpty()) {
+            info.put("error", report.attestation.error)
+        }
+        obj.put("attestation", info)
+    }
     if (report.hasBattery()) putIfNotEmpty(obj, "battery", batteryInfoToJson(report.battery))
     if (report.hasStorage()) putIfNotEmpty(obj, "storage", storageInfoToJson(report.storage))
     obj.putIfPresent(report.hasLaunchLevel(), "launch_level", report.launchLevel)

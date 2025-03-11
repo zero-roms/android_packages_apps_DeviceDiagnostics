@@ -30,7 +30,6 @@ import com.android.devicediagnostics.evaluated.getBatteryInfo
 import com.android.devicediagnostics.evaluated.getLockInfo
 import com.android.devicediagnostics.evaluated.getProductInfo
 import com.android.devicediagnostics.evaluated.getStorageInfo
-import com.google.protobuf.ByteString
 import org.json.JSONArray
 
 private const val TAG = "GetStatus"
@@ -100,9 +99,7 @@ class GetStatusContentProvider : ContentProvider() {
                         setStorage(getStorageInfo(context))
                         setLaunchLevel(ApplicationInterface.app.getLaunchLevel())
                         setProduct(getProductInfo())
-                        selection?.run {
-                            setAttestation(ByteString.copyFrom(createAttestationRecord(challenge)))
-                        }
+                        selection?.run { setAttestation(createAttestationRecord(challenge)) }
                     }
                     build()
                 }
