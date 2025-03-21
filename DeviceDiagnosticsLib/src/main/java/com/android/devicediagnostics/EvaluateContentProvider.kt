@@ -90,12 +90,9 @@ class EvaluateContentProvider : ContentProvider() {
             }
 
             // Dismiss suw the new way via a broadcast
-            val broadcast = Intent(Intent.ACTION_MAIN)
+            val broadcast = Intent()
             broadcast.setAction("com.google.android.setupwizard.ENTER_TRADE_IN_MODE")
-            broadcast.setClassName(
-                "com.google.android.setupwizard",
-                "com.google.android.setupwizard.SetupWizardEnterTradeInModeReceiver",
-            )
+            broadcast.addFlags(Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND)
             context.sendBroadcast(broadcast)
             return ""
         }
