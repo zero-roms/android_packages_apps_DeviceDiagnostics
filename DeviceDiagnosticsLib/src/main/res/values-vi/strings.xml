@@ -103,7 +103,7 @@
     <string name="attestation_second_imei" msgid="7566064584445017361">"Số IMEI thứ hai"</string>
     <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
     <string name="attestation_manufacturer" msgid="2043278400561674518">"Nhà sản xuất"</string>
-    <string name="attestation_model" msgid="8223243376214262662">"Mẫu"</string>
+    <string name="attestation_model" msgid="8223243376214262662">"Kiểu máy"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"Cấp độ bản vá của nhà cung cấp"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"Cấp độ bản vá của trình khởi động"</string>
     <string name="yes" msgid="6686215078709381643">"Có"</string>
