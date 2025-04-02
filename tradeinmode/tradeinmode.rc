@@ -6,19 +6,3 @@
 # we explicitly stop adbd on failure.
 on property:persist.adb.tradeinmode=-1 && property:ro.debuggable=0
     stop adbd
-
-# When testing tradeinmode, disable early-boot adbd.
-#   persist.adb.test_tradeinmode=1 - Ensures we only do this during TIM testing.
-#   persist.adb.tradeinmode="" - Ensures we only do this if TIM isn't active yet (eg before
-#                                ITradeInMode.start is called)
-#   ro.debuggable=1 - Defense-in-depth to exclude non-debuggable devices.
-#   init.svc.adbd=running - Triggers when adb is first turned on early in the boot
-#                           process. On a non-debuggable build, adb will never be turned on
-#                           by default. But on a debuggable build it is, so this will trigger.
-#   sys.boot_completed="" - TIM activates when sys.boot_completed=1, so this ensures we don't
-#                           keep disabling adb after TIM is live.
-on property:persist.adb.test_tradeinmode=1 && property:persist.adb.tradeinmode="" && property:ro.debuggable=1 && property:init.svc.adbd=running && property:sys.boot_completed=""
-    stop adbd
-
-on property:persist.adb.test_tradeinmode=1 && property:persist.adb.tradeinmode=1 && property:ro.debuggable=1 && property:init.svc.adbd=stopped
-    start adbd
