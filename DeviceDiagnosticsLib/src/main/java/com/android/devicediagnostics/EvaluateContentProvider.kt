@@ -89,12 +89,29 @@ class EvaluateContentProvider : ContentProvider() {
                 throw IllegalStateException("Evaluation mode is not available.")
             }
 
+            if (tryActivityDismissal()) {
+                return ""
+            }
+
             // Dismiss suw the new way via a broadcast
             val broadcast = Intent()
             broadcast.setAction("com.google.android.setupwizard.ENTER_TRADE_IN_MODE")
             broadcast.addFlags(Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND)
             context.sendBroadcast(broadcast)
             return ""
+        }
+
+        private fun tryActivityDismissal(): Boolean {
+            // Dismiss suw the old way via an activity
+            try {
+                val intent = Intent(Intent.ACTION_MAIN)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.setAction("com.android.setupwizard.TIM")
+                context.startActivity(intent)
+                return true
+            } catch (e: Exception) {
+                return false
+            }
         }
 
         override fun getShort(column: Int): Short {
