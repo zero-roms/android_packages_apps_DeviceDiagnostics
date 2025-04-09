@@ -84,7 +84,7 @@ private fun storageInfoToJson(storage: StorageInfo): JSONObject {
 
 private fun hingeInfoToJson(hinge: HingeInfo): JSONObject {
     val obj = JSONObject()
-    if (hinge.numTimesFoldedList != null && hinge.expectedLifespanList != null) {
+    if (hinge.hingeCount != 0) {
         val hinges = JSONArray()
         for (i in 0 until hinge.hingeCount) {
             val h = JSONObject()
