@@ -99,7 +99,7 @@
     <string name="attestation_device" msgid="1984309818766961098">"डिवाइस"</string>
     <string name="attestation_product" msgid="7325714994397112640">"प्रॉडक्ट"</string>
     <string name="attestation_serial" msgid="5001580041093391656">"सीरियल नंबर"</string>
-    <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
+    <string name="attestation_imei" msgid="8985230697018835192">"आईएमईआई"</string>
     <string name="attestation_second_imei" msgid="7566064584445017361">"दूसरा IMEI नंबर"</string>
     <string name="attestation_meid" msgid="6837237287403480594">"MEID"</string>
     <string name="attestation_manufacturer" msgid="2043278400561674518">"मैन्युफ़ैक्चरर"</string>
@@ -114,7 +114,7 @@
     <string name="avb_not_verified" msgid="6853341577991139767">"पुष्टि नहीं हुई"</string>
     <string name="evaluation_results" msgid="1584774109554324406">"जांच के नतीजे"</string>
     <string name="attestation_results" msgid="9089126954790727665">"प्रमाणित करने से जुड़े नतीजे"</string>
-    <string name="imei_title" msgid="4360390946838995750">"IMEI"</string>
+    <string name="imei_title" msgid="4360390946838995750">"आईएमईआई"</string>
     <string name="imei2_title" msgid="4414064408324667040">"दूसरा IMEI नंबर"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"सीरियल नंबर"</string>
     <string name="bootloader_locked_title" msgid="4498089738937695995">"बूटलोडर को लॉक किया गया है"</string>

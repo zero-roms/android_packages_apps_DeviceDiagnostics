@@ -26,7 +26,7 @@
     <string name="component_health_title" msgid="6177813132789269842">"కాంపోనెంట్ హెల్త్"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"మాన్యువల్ పరీక్షలను రన్ చేయండి, బ్యాటరీ, స్టోరేజ్ హెల్త్‌ను చూడండి"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"ఎవాల్యుయేషన్ మోడ్"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"మరొక పరికరాన్ని అంచనా వేయడానికి ఒక పరికరాన్ని ఉపయోగించండి"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"మరొక డివైజ్‌‌ను అంచనా వేయడానికి ఒక డివైజ్‌‌ను ఉపయోగించండి"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"మాన్యువల్ టెస్ట్‌లు"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"డిస్‌ప్లే టెస్ట్"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"టచ్ టెస్ట్"</string>
@@ -34,9 +34,9 @@
     <string name="storage_title" msgid="5921235202250843966">"స్టోరేజ్ స్టేటస్"</string>
     <string name="battery_title" msgid="6707361668941323259">"బ్యాటరీ స్టేటస్"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"విశ్వసనీయ పరికరం"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"మరొక పరికరాన్ని అంచనా వేయండి. ఇంటర్నెట్ కనెక్షన్ అవసరం."</string>
-    <string name="evaluated_device_title" msgid="5546625787928257821">"ఎవాల్యుయేట్ అయిన పరికరం"</string>
-    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"మరొక పరికరం ద్వారా వాలిడేట్ చేసే సమస్య విశ్లేషణల టెస్ట్‌లను రన్ చేయండి."</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"మరొక డివైజ్‌‌ను అంచనా వేయండి. ఇంటర్నెట్ కనెక్షన్ అవసరం."</string>
+    <string name="evaluated_device_title" msgid="5546625787928257821">"ఎవాల్యుయేట్ అయిన డివైజ్‌‌"</string>
+    <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"మరొక డివైజ్‌‌ ద్వారా వాలిడేట్ చేసే సమస్య విశ్లేషణల టెస్ట్‌లను రన్ చేయండి."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"ఇప్పుడే స్కాన్ చేయండి"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"దిగువున ఉన్న దీర్ఘచతురస్రాకారంలో, విశ్వసనీయ పరికరంతో QR కోడ్‌ను స్కాన్ చేయండి"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"మీరు QR కోడ్‌ను విజయవంతంగా స్కాన్ చేసిన తర్వాత, ఈ పరికరం ఆటోమేటిక్‌గా కొన్ని టెస్ట్‌లను ప్రారంభిస్తుంది."</string>

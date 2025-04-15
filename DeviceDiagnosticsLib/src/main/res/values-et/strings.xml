@@ -30,7 +30,7 @@
     <string name="manual_eval_title" msgid="4335717606581762762">"Käsitsi tehtavad testid"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Ekraani test"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Puutetest"</string>
-    <string name="component_title" msgid="6580046234562555655">"Komponendi olek"</string>
+    <string name="component_title" msgid="6580046234562555655">"Komponentide olek"</string>
     <string name="storage_title" msgid="5921235202250843966">"Salvestusruumi olek"</string>
     <string name="battery_title" msgid="6707361668941323259">"Aku olek"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Usaldusväärne seade"</string>
