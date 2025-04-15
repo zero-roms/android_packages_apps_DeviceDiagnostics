@@ -51,7 +51,7 @@ message HingeInfo {
   repeated int32 expected_lifespan = 3;
 }
 
-message ScreenInfo { optional string screen_part_status = 1; }
+message ScreenInfo { repeated string screen_part_status = 1; }
 
 message TrustedDeviceInfo { bytes challenge = 1; }
 

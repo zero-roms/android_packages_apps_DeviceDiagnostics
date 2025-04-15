@@ -100,11 +100,15 @@ private fun hingeInfoToJson(hinge: HingeInfo): JSONObject {
 
 private fun screenInfoToJson(screen: ScreenInfo): JSONObject {
     val obj = JSONObject()
-    obj.putIfPresent(
-            screen.hasScreenPartStatus(),
-            "screen_part_status",
-            screen.screenPartStatus,
-    )
+    val screens = JSONArray()
+    for (i in 0 until screen.screenPartStatusCount) {
+        val s = JSONObject()
+        s.put("part_status", screen.screenPartStatusList[i])
+        screens.put(s)
+    }
+    if (screens.length() != 0) {
+        obj.put("screens", screens)
+    }
     return obj
 }
 
