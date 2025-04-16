@@ -89,11 +89,12 @@ class EvaluateContentProvider : ContentProvider() {
                 throw IllegalStateException("Evaluation mode is not available.")
             }
 
-            if (tryActivityDismissal()) {
-                return ""
-            }
+            // Support older releases of GMSCore that used an activity to
+            // dimiss SUW.
+            tryActivityDismissal()
 
-            // Dismiss suw the new way via a broadcast
+            // Dismiss SUW the new way via a broadcast. Do this unconditionally
+            // so that custom SUWs can work in conjunction with older GMSCore.
             val broadcast = Intent()
             broadcast.setAction("com.google.android.setupwizard.ENTER_TRADE_IN_MODE")
             broadcast.addFlags(Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND)
@@ -101,17 +102,13 @@ class EvaluateContentProvider : ContentProvider() {
             return ""
         }
 
-        private fun tryActivityDismissal(): Boolean {
-            // Dismiss suw the old way via an activity
+        private fun tryActivityDismissal() {
             try {
                 val intent = Intent(Intent.ACTION_MAIN)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 intent.setAction("com.android.setupwizard.TIM")
                 context.startActivity(intent)
-                return true
-            } catch (e: Exception) {
-                return false
-            }
+            } catch (e: Exception) {}
         }
 
         override fun getShort(column: Int): Short {
