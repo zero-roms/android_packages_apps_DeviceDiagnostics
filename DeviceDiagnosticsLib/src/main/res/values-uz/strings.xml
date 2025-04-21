@@ -23,14 +23,14 @@
     <string name="proceed" msgid="8922926495095369132">"Davom etish"</string>
     <string name="unavailable" msgid="7842920330665850121">"Mavjud emas"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Ulanmoqda..."</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Komponent ahvoli"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Tarkibiy qismlar ahvoli"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Batareya va xotira holatini koʻrish uchun testlarni mustaqil ishga tushiring"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Baholash rejimi"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Boshqa qurilmada ochishda bitta qurilmadan foydalaning"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Qoʻlda bajariladigan testlar"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Displey testi"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Sensor testi"</string>
-    <string name="component_title" msgid="6580046234562555655">"Komponent holati"</string>
+    <string name="component_title" msgid="6580046234562555655">"Tarkibiy qismlar holati"</string>
     <string name="storage_title" msgid="5921235202250843966">"Xotira holati"</string>
     <string name="battery_title" msgid="6707361668941323259">"Batareya holati"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Ishonchli qurilma"</string>

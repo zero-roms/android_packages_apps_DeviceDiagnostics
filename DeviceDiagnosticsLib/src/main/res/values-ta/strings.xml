@@ -24,9 +24,9 @@
     <string name="unavailable" msgid="7842920330665850121">"இல்லை"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"இணைக்கிறது..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"காம்பனென்ட் நிலை"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"நேரடிப் பரிசோதனைகளை இயக்கி, பேட்டரியையும் சேமிப்பகத்தின் நிலையையும் பார்க்கவும்"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"நீங்களாகப் பரிசோதனைகளை இயக்கி, பேட்டரி மற்றும் சேமிப்பகத்தின் நிலையைப் பார்க்கலாம்"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"மதிப்பீட்டுப் பயன்முறை"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"ஒரு சாதனத்தைப் பயன்படுத்தி மற்றொரு சாதனத்தை மதிப்பிடவும்"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"ஒரு சாதனத்தைப் பயன்படுத்தி மற்றொரு சாதனத்தை மதிப்பிடலாம்"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"நேரடிப் பரிசோதனைகள்"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"டிஸ்ப்ளே பரிசோதனை"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"டச் சென்சார் பரிசோதனை"</string>

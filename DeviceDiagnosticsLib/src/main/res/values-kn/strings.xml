@@ -23,7 +23,7 @@
     <string name="proceed" msgid="8922926495095369132">"ಮುಂದುವರಿಸಿ"</string>
     <string name="unavailable" msgid="7842920330665850121">"ಲಭ್ಯವಿಲ್ಲ"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"ಕನೆಕ್ಟ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."</string>
-    <string name="component_health_title" msgid="6177813132789269842">"ಘಟಕದ ಆರೋಗ್ಯ"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"ಘಟಕದ ಸುಸ್ಥಿತಿ"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"ಮ್ಯಾನುವಲ್ ಪರೀಕ್ಷೆಗಳನ್ನು ರನ್ ಮಾಡಿ ಮತ್ತು ಬ್ಯಾಟರಿ ಮತ್ತು ಸಂಗ್ರಹಣಾ ಆರೋಗ್ಯವನ್ನು ವೀಕ್ಷಿಸಿ"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"ಮೌಲ್ಯಮಾಪನ ಮೋಡ್"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"ಇನ್ನೊಂದು ಸಾಧನವನ್ನು ನಿರ್ಣಯಿಸಲು ಒಂದು ಸಾಧನವನ್ನು ಬಳಸಿ"</string>

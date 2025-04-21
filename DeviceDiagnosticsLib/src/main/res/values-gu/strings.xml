@@ -26,7 +26,7 @@
     <string name="component_health_title" msgid="6177813132789269842">"ઘટકની ક્ષમતા"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"મેન્યુઅલ પરીક્ષણો ચલાવો તેમજ બૅટરી અને સ્ટોરેજની ક્ષમતા ચેક કરી જુઓ"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"મૂલ્યાંકનનો મોડ"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"એક ડિવાઇસ વડે બીજા ડિવાઇસનું મૂલ્યાંકન કરો"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"એક ડિવાઇસ વડે કોઈ અન્ય ડિવાઇસનું મૂલ્યાંકન કરો"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"મેન્યુઅલ પરીક્ષણો"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ડિસ્પ્લેનું પરીક્ષણ"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"ટચનું પરીક્ષણ"</string>

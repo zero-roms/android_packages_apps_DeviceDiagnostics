@@ -23,7 +23,7 @@
     <string name="proceed" msgid="8922926495095369132">"Continua"</string>
     <string name="unavailable" msgid="7842920330665850121">"No disponible"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"S\'està connectant..."</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Estat del component"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Estat dels components"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Executa proves manuals i consulta l\'estat de la bateria i de l\'emmagatzematge"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Mode d\'avaluació"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Utilitza un dispositiu per avaluar-ne un altre"</string>

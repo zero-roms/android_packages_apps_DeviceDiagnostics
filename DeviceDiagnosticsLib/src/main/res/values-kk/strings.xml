@@ -34,7 +34,7 @@
     <string name="storage_title" msgid="5921235202250843966">"Жад күйі"</string>
     <string name="battery_title" msgid="6707361668941323259">"Батарея күйі"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Сенімді құрылғы"</string>
-    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Басқа құрылғыда бағалау жүргізіңіз. Интернет қажет."</string>
+    <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"Басқа құрылғыға баға беріңіз. Интернет қажет."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"Бағаланатын құрылғы"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"Басқа құрылғыда тексерілетін диагностикалық сынақтар жүргізіңіз."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"Қазір сканерлеу"</string>

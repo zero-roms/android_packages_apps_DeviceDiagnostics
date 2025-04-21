@@ -23,14 +23,14 @@
     <string name="proceed" msgid="8922926495095369132">"Continuer"</string>
     <string name="unavailable" msgid="7842920330665850121">"Non accessible"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Connexion en cours…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"Santé du composant"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"Exécuter des tests manuels et consulter l\'état de la pile et de l\'espace de stockage"</string>
+    <string name="component_health_title" msgid="6177813132789269842">"Santé des composants"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Exécutez des tests manuels et consultez l\'état de la pile et de l\'espace de stockage"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Mode d\'évaluation"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Utiliser un appareil pour en évaluer un autre"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Utilisez un appareil pour en évaluer un autre"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Tests manuels"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Test relatif à l\'écran"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Test tactile"</string>
-    <string name="component_title" msgid="6580046234562555655">"État du composant"</string>
+    <string name="component_title" msgid="6580046234562555655">"État des composants"</string>
     <string name="storage_title" msgid="5921235202250843966">"État de l\'espace de stockage"</string>
     <string name="battery_title" msgid="6707361668941323259">"État de la pile"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Appareil de confiance"</string>

@@ -25,7 +25,7 @@
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Menyambung..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"Kesihatan komponen"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Jalankan ujian manual dan lihat kesihatan bateri dan storan"</string>
-    <string name="evaluation_mode_title" msgid="5845218248059550975">"Cara penilaian"</string>
+    <string name="evaluation_mode_title" msgid="5845218248059550975">"Mod penilaian"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Gunakan satu peranti untuk menilai peranti lain"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Ujian manual"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Ujian paparan"</string>

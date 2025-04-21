@@ -30,7 +30,7 @@
     <string name="manual_eval_title" msgid="4335717606581762762">"Tests manuels"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Test de l\'écran"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Test du capteur tactile"</string>
-    <string name="component_title" msgid="6580046234562555655">"État du composant"</string>
+    <string name="component_title" msgid="6580046234562555655">"État des composants"</string>
     <string name="storage_title" msgid="5921235202250843966">"État de l\'espace de stockage"</string>
     <string name="battery_title" msgid="6707361668941323259">"État de la batterie"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Appareil vérifié"</string>
