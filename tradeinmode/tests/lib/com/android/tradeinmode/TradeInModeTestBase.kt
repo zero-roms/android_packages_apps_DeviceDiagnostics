@@ -150,6 +150,13 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         assertTrue(battery.has("manufacturing_date"))
         assertTrue(battery.has("first_usage_date"))
 
+        if (root.has("sensors")) {
+            val sensors = root.getJSONObject("sensors")
+            if (sensors.has("moisture_intrusion")) {
+                assertTrue(sensors.optBoolean("moisture_intrusion"))
+            }
+        }
+
         assertTrue(root.has("locks"))
         val locks = root.getJSONObject("locks")
         assertFalse(locks.getBoolean("factory_reset_protection"))
@@ -211,8 +218,8 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
 
     protected fun isTradeInModeSupported(): Boolean {
         return !FeatureUtil.isTV(mDevice) &&
-            !FeatureUtil.isWatch(mDevice) &&
-            !FeatureUtil.isAutomotive(mDevice)
+                !FeatureUtil.isWatch(mDevice) &&
+                !FeatureUtil.isAutomotive(mDevice)
     }
 
     protected fun restoreDevice() {

@@ -22,6 +22,7 @@ import com.android.devicediagnostics.Protos.HingeInfo
 import com.android.devicediagnostics.Protos.LockInfo
 import com.android.devicediagnostics.Protos.ProductInfo
 import com.android.devicediagnostics.Protos.ScreenInfo
+import com.android.devicediagnostics.Protos.SensorInfo
 import com.android.devicediagnostics.Protos.StorageInfo
 import com.android.devicediagnostics.Protos.TestResults
 import org.json.JSONArray
@@ -98,6 +99,16 @@ private fun hingeInfoToJson(hinge: HingeInfo): JSONObject {
     return obj
 }
 
+private fun sensorInfoToJson(sensor: SensorInfo): JSONObject {
+    val obj = JSONObject()
+    obj.putIfPresent(
+            sensor.hasMoistureIntrusion(),
+            "moisture_intrusion",
+            sensor.moistureIntrusion,
+    )
+    return obj
+}
+
 private fun screenInfoToJson(screen: ScreenInfo): JSONObject {
     val obj = JSONObject()
     val screens = JSONArray()
@@ -141,6 +152,7 @@ fun deviceReportToJson(report: DeviceReport): JSONObject {
     if (report.hasStorage()) putIfNotEmpty(obj, "storage", storageInfoToJson(report.storage))
     if (report.hasHinge()) putIfNotEmpty(obj, "hinge", hingeInfoToJson(report.hinge))
     if (report.hasScreen()) putIfNotEmpty(obj, "screen", screenInfoToJson(report.screen))
+    if (report.hasSensor()) putIfNotEmpty(obj, "sensors", sensorInfoToJson(report.sensor))
     obj.putIfPresent(report.hasLaunchLevel(), "launch_level", report.launchLevel)
     obj.put("locks", lockInfoToJson(report.locks))
     if (report.hasProduct()) putIfNotEmpty(obj, "product", productInfoToJson(report.product))
