@@ -26,12 +26,14 @@ fun getScreenInfo(): ScreenInfo {
     var service: ITradeInMode = ITradeInMode.Stub.asInterface(b)
     val builder = ScreenInfo.newBuilder()
 
-    val screenPartStatus = service.getScreenPartStatus()
-    if (screenPartStatus == ITradeInMode.ScreenPartStatus.ORIGINAL) {
-        builder.setScreenPartStatus("original")
-    }
-    if (screenPartStatus == ITradeInMode.ScreenPartStatus.REPLACED) {
-        builder.setScreenPartStatus("replaced")
+    val screenPartStatuses: IntArray = service.getScreenPartStatus()
+    screenPartStatuses.forEachIndexed { _, screenPartStatus ->
+        if (screenPartStatus == ITradeInMode.ScreenPartStatus.ORIGINAL) {
+            builder.addScreenPartStatus("original")
+        }
+        if (screenPartStatus == ITradeInMode.ScreenPartStatus.REPLACED) {
+            builder.addScreenPartStatus("replaced")
+        }
     }
 
     return builder.build()
