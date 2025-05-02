@@ -33,13 +33,13 @@
     <string name="component_title" msgid="6580046234562555655">"కాంపోనెంట్ స్టేటస్"</string>
     <string name="storage_title" msgid="5921235202250843966">"స్టోరేజ్ స్టేటస్"</string>
     <string name="battery_title" msgid="6707361668941323259">"బ్యాటరీ స్టేటస్"</string>
-    <string name="trusted_device_title" msgid="6291497999963968533">"విశ్వసనీయ పరికరం"</string>
+    <string name="trusted_device_title" msgid="6291497999963968533">"విశ్వసనీయ డివైజ్"</string>
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"మరొక డివైజ్‌‌ను అంచనా వేయండి. ఇంటర్నెట్ కనెక్షన్ అవసరం."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"ఎవాల్యుయేట్ అయిన డివైజ్‌‌"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"మరొక డివైజ్‌‌ ద్వారా వాలిడేట్ చేసే సమస్య విశ్లేషణల టెస్ట్‌లను రన్ చేయండి."</string>
     <string name="evaluated_scan_now" msgid="5413803134686672845">"ఇప్పుడే స్కాన్ చేయండి"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"దిగువున ఉన్న దీర్ఘచతురస్రాకారంలో, విశ్వసనీయ పరికరంతో QR కోడ్‌ను స్కాన్ చేయండి"</string>
-    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"మీరు QR కోడ్‌ను విజయవంతంగా స్కాన్ చేసిన తర్వాత, ఈ పరికరం ఆటోమేటిక్‌గా కొన్ని టెస్ట్‌లను ప్రారంభిస్తుంది."</string>
+    <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"మీరు QR కోడ్‌ను విజయవంతంగా స్కాన్ చేసిన తర్వాత, ఈ డివైజ్ ఆటోమేటిక్‌గా కొన్ని టెస్ట్‌లను ప్రారంభిస్తుంది."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"విశ్వసనీయ పరికరాన్ని ఎంచుకోండి"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"ప్రత్యామ్నాయంగా, దిగువున ఉన్న లిస్ట్ నుండి పరికరాన్ని ఎంచుకోండి"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"కనెక్షన్ విఫలమైంది, దయచేసి మళ్లీ ట్రై చేయండి."</string>
@@ -89,14 +89,14 @@
     <string name="pass" msgid="6411665547268368837">"పాస్"</string>
     <string name="fail" msgid="3918028202746427731">"విఫలమైంది"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"వెరిఫై చేయబడిన సర్టిఫికెట్"</string>
-    <string name="attestation_device_locked" msgid="1423476869833029478">"పరికరం లాక్ చేయబడింది"</string>
+    <string name="attestation_device_locked" msgid="1423476869833029478">"డివైజ్ లాక్ చేయబడింది"</string>
     <string name="attestation_verified_boot_state" msgid="6360953823092860181">"వెరిఫై చేయబడిన బూట్ స్టేట్"</string>
     <string name="attestation_security_level" msgid="6633918464653325429">"సెక్యూరిటీ స్థాయి"</string>
     <string name="attestation_keymaster_version" msgid="7041962401293637901">"కీమాస్టర్ వెర్షన్"</string>
     <string name="attestation_keymaster_security_level" msgid="6412203863981781483">"కీమాస్టర్ సెక్యూరిటీ స్థాయి"</string>
     <string name="attestation_os_version" msgid="4351993398048033601">"OS వెర్షన్"</string>
     <string name="attestation_brand" msgid="5238699762448331155">"బ్రాండ్"</string>
-    <string name="attestation_device" msgid="1984309818766961098">"పరికరం"</string>
+    <string name="attestation_device" msgid="1984309818766961098">"డివైజ్"</string>
     <string name="attestation_product" msgid="7325714994397112640">"ప్రోడక్ట్"</string>
     <string name="attestation_serial" msgid="5001580041093391656">"సీరియల్ నంబర్"</string>
     <string name="attestation_imei" msgid="8985230697018835192">"IMEI"</string>
@@ -118,12 +118,12 @@
     <string name="imei2_title" msgid="4414064408324667040">"రెండవ IMEI"</string>
     <string name="serial_number_title" msgid="1361280023487536604">"సీరియల్ నంబర్"</string>
     <string name="bootloader_locked_title" msgid="4498089738937695995">"బూట్‌లోడర్ లాక్ చేయబడింది"</string>
-    <string name="trustworthy_title" msgid="5360267928618795351">"పరికరం విశ్వసనీయమైనది"</string>
+    <string name="trustworthy_title" msgid="5360267928618795351">"డివైజ్ విశ్వసనీయమైనది"</string>
     <string name="display_status_title" msgid="7827806798539639832">"డిస్‌ప్లే స్టేటస్"</string>
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"టచ్ సెన్సార్ స్టేటస్"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"అటెస్టేషన్ వివరాలు"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"అటెస్టేషన్ విఫలమైంది"</string>
-    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"పరికరం విశ్వసనీయమైనదో కాదో నిర్ధారించడం సాధ్యం కాలేదు"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"డివైజ్ విశ్వసనీయమైనదో కాదో నిర్ధారించడం సాధ్యం కాలేదు"</string>
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"అటెస్టేషన్‌ను మళ్లీ ట్రై చేయండి"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"అటెస్టేషన్ వెరిఫికేషన్ విఫలమైంది, మీ కనెక్షన్‌ను చెక్ చేసి, మళ్లీ ట్రై చేయండి."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"తర్వాతి దశలు"</string>
