@@ -24,14 +24,19 @@ import com.android.tradefed.testtype.junit4.BaseHostJUnit4Test
 import com.android.tradefed.util.CommandResult
 import com.android.tradefed.util.CommandStatus
 import com.android.tradefed.util.RunUtil
+import com.google.common.io.Files
+import java.io.File
 import kotlin.time.DurationUnit
 import kotlin.time.TimeSource
 import kotlin.time.toDuration
 import org.json.JSONObject
+import org.junit.After
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertTrue
 import org.junit.Before
+import org.junit.Test
 import org.junit.runner.RunWith
 
 private val ONE_MINUTE_MS: Long = 1000 * 60
@@ -46,6 +51,78 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
     @Before
     public fun setUp() {
         mDevice = getDevice()
+    }
+
+    @After
+    public fun tearDown() {
+        restoreDevice()
+    }
+
+    @Test
+    public fun checkGetStatusFlow() {
+        if (!shouldTestTradeInMode()) {
+            return
+        }
+
+        val hasTelephony = FeatureUtil.hasTelephony(mDevice)
+
+        enterTradeInMode()
+
+        // Normal shell commands should not work.
+        var result = mDevice.executeShellV2Command("ls -l /")
+        assertNotEquals(result.getExitCode(), 0)
+
+        result = mDevice.executeShellV2Command("tradeinmode wait-until-ready getstatus")
+        assertEquals(result.getExitCode(), 0)
+
+        val root = JSONObject(result.getStdout())
+        checkGetStatus(root, hasTelephony)
+    }
+
+    @Test
+    public fun checkEvaluateFlow() {
+        if (!shouldTestTradeInMode()) {
+            return
+        }
+
+        enterTradeInMode()
+
+        // Normal shell commands should not work.
+        var result = mDevice.executeShellV2Command("stat /")
+        assertNotEquals(result.getExitCode(), 0)
+
+        result = mDevice.executeShellV2Command("tradeinmode wait-until-ready evaluate")
+        RunUtil.getDefault().sleep(PAUSE_MS)
+        mDevice.waitForDeviceOnline()
+
+        // Normal shell commands should work now.
+        result = mDevice.executeShellV2Command("stat /")
+        assertEquals(result.getExitCode(), 0)
+
+        // Wait for the "settings" service to be online.
+        waitForCommandService("settings")
+
+        // Setup should be complete.
+        assertEquals(getSettingInt("global", "device_provisioned", 0), 1)
+        assertEquals(getSettingInt("secure", "user_setup_complete", 0), 1)
+
+        // Create a temporary file and validate that it exists.
+        val tempData = "test string"
+        val tempFile = File.createTempFile("tradeinmode", ".placeholder")
+        tempFile.deleteOnExit()
+        Files.write(tempData.toByteArray(Charsets.UTF_8), tempFile)
+        val remotePath = "/data/local/tmp/" + tempFile.getName()
+        mDevice.pushFile(tempFile, remotePath)
+        assertEquals(mDevice.executeShellCommand("cat " + remotePath), tempData)
+
+        // Reboot. A wipe should have been performed and the file should be gone.
+        mDevice.rebootUntilOnline()
+        result = mDevice.executeShellV2Command("cat " + remotePath)
+        assertNotEquals(result.getExitCode(), 0)
+
+        // We should be back in SUW.
+        assertEquals(getSettingInt("global", "device_provisioned", 0), 0)
+        assertEquals(getSettingInt("secure", "user_setup_complete", 0), 0)
     }
 
     public fun checkGetStatus(root: JSONObject, hasTelephony: Boolean) {
@@ -93,18 +170,22 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         }
 
         RunUtil.getDefault().sleep(PAUSE_MS)
-        waitForDeviceNotInRecovery()
+        waitForDevice({ !inRecovery() })
 
-        // Second reboot to put adbd into trade-in mode.
+        // Second reboot to put adbd into trade-in mode. We set a property to
+        // detect whether the reboot already happened or not. This is purely
+        // for the test harness and has nothing to do with the actual trade-in
+        // mode functionality.
+        mDevice.setProperty("debug.tradeinmode", "1")
         assertTrue(mDevice.startTradeInModeTesting(DEVICE_BOOT_TIMEOUT_MS.toInt()))
-        RunUtil.getDefault().sleep(PAUSE_MS)
+        waitForDevice({ !inRecovery() && device.getProperty("debug.tradeinmode") != "1" })
     }
 
-    protected fun waitForDeviceNotInRecovery() {
+    protected fun waitForDevice(cond: () -> Boolean) {
         val start = TimeSource.Monotonic.markNow()
         val end = start + DEVICE_BOOT_TIMEOUT_MS.toDuration(DurationUnit.MILLISECONDS)
         while (true) {
-            if (!inRecovery()) {
+            if (cond()) {
                 return
             }
             val now = TimeSource.Monotonic.markNow()
@@ -134,6 +215,14 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
             !FeatureUtil.isAutomotive(mDevice)
     }
 
+    protected fun restoreDevice() {
+        val result = mDevice.executeShellCommand("tradeinmode wait-until-ready testing status")
+
+        if (result.trim().equals("testing")) {
+            mDevice.stopTradeInModeTesting()
+        }
+    }
+
     protected fun checkFlakyCommandResult(result: CommandResult): Boolean {
         if (CommandStatus.SUCCESS.equals(result.getStatus())) {
             return true
@@ -147,11 +236,22 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         return false
     }
 
-    protected fun restoreDevice() {
-        val result = mDevice.executeShellCommand("tradeinmode wait-until-ready testing status")
+    private fun waitForCommandService(cmd: String) {
+        val services = mDevice.executeShellCommand("cmd -l")
+        for (i in 1..10) {
+            if (services.contains(" $cmd")) {
+                break
+            }
+            RunUtil.getDefault().sleep(PAUSE_MS)
+        }
+    }
 
-        if (result.trim().equals("testing")) {
-            mDevice.stopTradeInModeTesting()
+    private fun getSettingInt(namespace: String, key: String, defaultValue: Int): Int {
+        try {
+            val result = mDevice.getSetting(namespace, key)
+            return result.toInt()
+        } catch (e: NumberFormatException) {
+            return defaultValue
         }
     }
 }
