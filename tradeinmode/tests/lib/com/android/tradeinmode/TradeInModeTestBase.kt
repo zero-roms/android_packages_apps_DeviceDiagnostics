@@ -136,11 +136,17 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         assertTrue(product.has("brand"))
         assertTrue(product.has("manufacturer"))
         assertTrue(product.has("model"))
+        assertTrue(product.optString("brand") != "")
+        assertTrue(product.optString("manufacturer") != "")
+        assertTrue(product.optString("model") != "")
 
         assertTrue(root.has("storage"))
         val storage = root.getJSONObject("storage")
         assertTrue(storage.has("capacity_bytes"))
-        assertTrue(storage.getLong("capacity_bytes") > 0)
+        assertTrue(storage.optLong("capacity_bytes") > 0)
+        if (storage.has("useful_lifetime_remaining")) {
+            assertTrue(storage.optInt("useful_lifetime_remaining") > 0)
+        }
 
         assertTrue(root.has("battery"))
         val battery = root.getJSONObject("battery")
@@ -149,6 +155,17 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         assertTrue(battery.has("state"))
         assertTrue(battery.has("manufacturing_date"))
         assertTrue(battery.has("first_usage_date"))
+        assertTrue(battery.optInt("cycle_count") > 0)
+        assertTrue(battery.optInt("health") > 0)
+        assertTrue(battery.optInt("state") > 0)
+        assertTrue(battery.optInt("manufacturing_date") > 0)
+        assertTrue(battery.optInt("first_usage_date") > 0)
+        if (battery.has("part_status")) {
+            assertTrue(battery.optString("part_status") != "")
+        }
+        if (battery.has("serial")) {
+            assertTrue(battery.optString("serial") != "")
+        }
 
         if (root.has("sensors")) {
             val sensors = root.getJSONObject("sensors")
