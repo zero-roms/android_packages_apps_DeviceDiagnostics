@@ -39,7 +39,7 @@ java_test_host {
     name: "TradeInModeTests",
     srcs: ["src/**/*.kt"],
     test_suites: [
-        "general-tests",
+        "device-tests",
     ],
     libs: [
         "compatibility-host-util",

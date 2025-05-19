@@ -15,6 +15,7 @@
 -->
 <configuration description="Config for Trade-in Mode test cases">
     <option name="test-suite-tag" value="apct" />
+    <option name="test-suite-tag" value="tradeinmode" />
     <option name="config-descriptor:metadata" key="parameter" value="all_foldable_states" />
     <test class="com.android.compatibility.common.tradefed.testtype.JarHostTest" >
       <option name="jar" value="TradeInModeTests.jar" />
