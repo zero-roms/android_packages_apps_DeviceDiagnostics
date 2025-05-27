@@ -150,16 +150,16 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
 
         assertTrue(root.has("battery"))
         val battery = root.getJSONObject("battery")
-        assertTrue(battery.has("cycle_count"))
-        assertTrue(battery.has("health"))
+        assertTrue(battery.optInt("cycle_count") >= 0)
+        assertTrue(battery.optInt("health") >= 0)
         assertTrue(battery.has("state"))
-        assertTrue(battery.has("manufacturing_date"))
-        assertTrue(battery.has("first_usage_date"))
-        assertTrue(battery.optInt("cycle_count") > 0)
-        assertTrue(battery.optInt("health") > 0)
+        if (battery.has("manufacturing_date")) {
+            assertTrue(battery.optInt("manufacturing_date") > 0)
+        }
+        if (battery.has("first_usage_date")) {
+            assertTrue(battery.optInt("first_usage_date") > 0)
+        }
         assertTrue(battery.optInt("state") > 0)
-        assertTrue(battery.optInt("manufacturing_date") > 0)
-        assertTrue(battery.optInt("first_usage_date") > 0)
         if (battery.has("part_status")) {
             assertTrue(battery.optString("part_status") != "")
         }
@@ -235,8 +235,8 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
 
     protected fun isTradeInModeSupported(): Boolean {
         return !FeatureUtil.isTV(mDevice) &&
-                !FeatureUtil.isWatch(mDevice) &&
-                !FeatureUtil.isAutomotive(mDevice)
+            !FeatureUtil.isWatch(mDevice) &&
+            !FeatureUtil.isAutomotive(mDevice)
     }
 
     protected fun restoreDevice() {

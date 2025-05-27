@@ -30,12 +30,12 @@ fun getBatteryInfo(context: Context): BatteryInfo {
 
     try {
         var date = bm.getLongProperty(BatteryManager.BATTERY_PROPERTY_MANUFACTURING_DATE)
-        if (date >= 0) {
+        if (date > 0) {
             builder.setManufactureTimestamp(date)
         }
 
         date = bm.getLongProperty(BatteryManager.BATTERY_PROPERTY_FIRST_USAGE_DATE)
-        if (date >= 0) {
+        if (date > 0) {
             builder.setFirstUsageTimestamp(date)
         }
     } catch (e: Exception) {}
