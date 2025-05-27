@@ -125,6 +125,56 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         assertEquals(getSettingInt("secure", "user_setup_complete", 0), 0)
     }
 
+    // This checks that tradeinmode evaluate works in userdebug, without
+    // specifically enabling TIM. We don't need an explicit userdebug
+    // check since our tests are never run on non-root devices, so the
+    // same test will work on user builds with ro.debuggable=1.
+    @Test
+    public fun checkUserdebugEvaluateFlow() {
+        if (!shouldTestTradeInMode()) {
+            return
+        }
+
+        performWipe()
+
+        // Normal shell commands should work.
+        var result = mDevice.executeShellV2Command("stat /")
+        assertEquals(result.getExitCode(), 0)
+
+        // SUW should be active.
+        assertEquals(getSettingInt("global", "device_provisioned", 0), 0)
+        assertEquals(getSettingInt("secure", "user_setup_complete", 0), 0)
+
+        result = mDevice.executeShellV2Command("tradeinmode wait-until-ready evaluate")
+        RunUtil.getDefault().sleep(PAUSE_MS)
+        mDevice.waitForDeviceOnline()
+
+        // Wait for the "settings" service to be online.
+        waitForCommandService("settings")
+
+        // Setup should be complete.
+        assertEquals(getSettingInt("global", "device_provisioned", 0), 1)
+        assertEquals(getSettingInt("secure", "user_setup_complete", 0), 1)
+
+        // Create a temporary file and validate that it exists.
+        val tempData = "test string"
+        val tempFile = File.createTempFile("tradeinmode", ".placeholder")
+        tempFile.deleteOnExit()
+        Files.write(tempData.toByteArray(Charsets.UTF_8), tempFile)
+        val remotePath = "/data/local/tmp/" + tempFile.getName()
+        mDevice.pushFile(tempFile, remotePath)
+        assertEquals(mDevice.executeShellCommand("cat " + remotePath), tempData)
+
+        // Reboot. A wipe should have been performed and the file should be gone.
+        mDevice.rebootUntilOnline()
+        result = mDevice.executeShellV2Command("cat " + remotePath)
+        assertNotEquals(result.getExitCode(), 0)
+
+        // We should be back in SUW.
+        assertEquals(getSettingInt("global", "device_provisioned", 0), 0)
+        assertEquals(getSettingInt("secure", "user_setup_complete", 0), 0)
+    }
+
     public fun checkGetStatus(root: JSONObject, hasTelephony: Boolean) {
         assertTrue(root.has("serial"))
         assertNotEquals(root.getString("serial"), "")
@@ -187,14 +237,7 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
     }
 
     protected fun enterTradeInMode() {
-        // Initial reboot to wipe the device.
-        val result = mDevice.executeShellV2Command("tradeinmode wait-until-ready testing wipe")
-        if (!checkFlakyCommandResult(result)) {
-            throw AssertionError("failed to wipe device for trade-in mode")
-        }
-
-        RunUtil.getDefault().sleep(PAUSE_MS)
-        waitForDevice({ !inRecovery() })
+        performWipe()
 
         // Second reboot to put adbd into trade-in mode. We set a property to
         // detect whether the reboot already happened or not. This is purely
@@ -203,6 +246,17 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         mDevice.setProperty("debug.tradeinmode", "1")
         assertTrue(mDevice.startTradeInModeTesting(DEVICE_BOOT_TIMEOUT_MS.toInt()))
         waitForDevice({ !inRecovery() && device.getProperty("debug.tradeinmode") != "1" })
+    }
+
+    protected fun performWipe() {
+        // Initial reboot to wipe the device.
+        val result = mDevice.executeShellV2Command("tradeinmode wait-until-ready testing wipe")
+        if (!checkFlakyCommandResult(result)) {
+            throw AssertionError("failed to wipe device for trade-in mode")
+        }
+
+        RunUtil.getDefault().sleep(PAUSE_MS)
+        waitForDevice({ !inRecovery() })
     }
 
     protected fun waitForDevice(cond: () -> Boolean) {
