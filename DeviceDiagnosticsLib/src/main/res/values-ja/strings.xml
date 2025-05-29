@@ -69,7 +69,7 @@
     <string name="battery_replaced" msgid="2356023769075469649">"交換済み"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"パーツの履歴"</string>
     <string name="battery_health_summary_fmt" msgid="4363832259742003306">"元の容量の %1$s"</string>
-    <string name="battery_health_unavailable" msgid="5093923315136769788">"バッテリーの健全性機能を使用できません"</string>
+    <string name="battery_health_unavailable" msgid="5093923315136769788">"バッテリー ヘルス機能を使用できません"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"低温"</string>
     <string name="battery_health_dead" msgid="3658507844189988433">"残量なし"</string>
     <string name="battery_health_good" msgid="4850784608550784236">"良好"</string>
