@@ -26,7 +26,7 @@
     <string name="component_health_title" msgid="6177813132789269842">"Componentconditie"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Voer handmatige tests uit en bekijk de batterijconditie en opslagstatus"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Evaluatiemodus"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Gebruik het ene apparaat om het andere te beoordelen"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Gebruik een apparaat om een ander apparaat te beoordelen"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Handmatige tests"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Schermtest"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Aanraaktest"</string>

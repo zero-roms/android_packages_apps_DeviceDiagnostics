@@ -18,7 +18,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
-    <string name="app_title" msgid="2766786539301072967">"Device diagnostics"</string>
+    <string name="app_title" msgid="2766786539301072967">"डिवाइस की जांच"</string>
     <string name="activity_continue" msgid="2190118984182069151">"जारी रखें"</string>
     <string name="proceed" msgid="8922926495095369132">"आगे बढ़ें"</string>
     <string name="unavailable" msgid="7842920330665850121">"उपलब्ध नहीं है"</string>
