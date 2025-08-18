@@ -26,7 +26,7 @@
     <string name="component_health_title" msgid="6177813132789269842">"ਤੱਤ ਦੀ ਸਿਹਤ"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"ਹੱਥੀਂ ਟੈਸਟ ਚਲਾਓ ਅਤੇ ਬੈਟਰੀ ਅਤੇ ਸਟੋਰੇਜ ਦੀ ਸਥਿਤੀ ਦੇਖੋ"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"ਮੁਲਾਂਕਣ ਮੋਡ"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"ਕਿਸੇ ਹੋਰ ਡੀਵਾਈਸ ਦਾ ਮੁਲਾਂਕਣ ਕਰਨ ਲਈ ਇੱਕ ਡੀਵਾਈਸ ਦੀ ਵਰਤੋਂ ਕਰੋ"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"ਕਿਸੇ ਇੱਕ ਡੀਵਾਈਸ ਦਾ ਮੁਲਾਂਕਣ ਕਰਨ ਲਈ ਦੂਜੇ ਡੀਵਾਈਸ ਦੀ ਵਰਤੋਂ ਕਰੋ"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"ਹੱਥੀਂ ਟੈਸਟ"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"ਡਿਸਪਲੇ ਦਾ ਟੈਸਟ"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"ਟੱਚ ਟੈਸਟ"</string>

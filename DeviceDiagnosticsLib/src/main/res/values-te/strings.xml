@@ -18,13 +18,13 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="4531685026837318886">"DeviceDiagnostics"</string>
-    <string name="app_title" msgid="2766786539301072967">"పరికర సమస్య విశ్లేషణ"</string>
+    <string name="app_title" msgid="2766786539301072967">"డివైజ్‌ సమస్య విశ్లేషణ"</string>
     <string name="activity_continue" msgid="2190118984182069151">"కొనసాగండి"</string>
     <string name="proceed" msgid="8922926495095369132">"కొనసాగించండి"</string>
     <string name="unavailable" msgid="7842920330665850121">"అందుబాటులో లేదు"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"కనెక్ట్ అవుతోంది..."</string>
     <string name="component_health_title" msgid="6177813132789269842">"కాంపోనెంట్ హెల్త్"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"మాన్యువల్ పరీక్షలను రన్ చేయండి, బ్యాటరీ, స్టోరేజ్ హెల్త్‌ను చూడండి"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"మాన్యువల్ టెస్ట్‌లు రన్ చేయండి, బ్యాటరీ ఇంకా స్టోరేజ్ స్థితిని చూడండి"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"ఎవాల్యుయేషన్ మోడ్"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"మరొక డివైజ్‌‌ను అంచనా వేయడానికి ఒక డివైజ్‌‌ను ఉపయోగించండి"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"మాన్యువల్ టెస్ట్‌లు"</string>
