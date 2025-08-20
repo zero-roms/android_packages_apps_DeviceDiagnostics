@@ -60,9 +60,9 @@
     <string name="visual_test_warning_summary" msgid="8088295720348050370">"इस टेस्ट के लिए, विज़ुअल इंस्पेक्शन करना और फ़िजिकल डिसप्ले की पुष्टि करना ज़रूरी है. क्या आपको जारी रखना है?"</string>
     <string name="cancel" msgid="4173470896053421075">"रद्द करें"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"बैटरी की परफ़ॉर्मेंस"</string>
-    <string name="battery_manufacturing_date" msgid="5243620020486093692">"बनने की तारीख"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"मैन्युफ़ैक्चर होने की तारीख"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"पहली बार इस्तेमाल की तारीख"</string>
-    <string name="battery_cycle_count" msgid="1002728954996996785">"फ़ुल चार्ज और खत्म होने का साइकल"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"बैटरी के चार्ज साइकल की संख्या"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"बैटरी का सीरियल नंबर"</string>
     <string name="battery_part_status" msgid="504091754655232085">"बैटरी के पार्ट की स्थिति"</string>
     <string name="battery_original" msgid="2552600989411644999">"ओरिजनल बैटरी"</string>
