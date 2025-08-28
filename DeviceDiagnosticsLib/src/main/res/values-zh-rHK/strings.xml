@@ -43,7 +43,7 @@
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"選取信任的裝置"</string>
     <string name="evaluated_scan_select_device_summary" msgid="1455560796129881500">"或者，在下方清單中選取所需裝置"</string>
     <string name="evaluated_bt_fail_title" msgid="4085858793778843205">"連線失敗，請再試一次。"</string>
-    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"確認要傳送至信任的裝置的報告"</string>
+    <string name="evaluated_confirm_send_data" msgid="1559799831924262598">"確認要傳送至信任裝置的報告"</string>
     <string name="evaluated_send_report" msgid="7692059671222319749">"傳送報告"</string>
     <string name="evaluated_finalizing_report" msgid="2808969866170324986">"正在完成報告…"</string>
     <string name="bluetooth_error_title" msgid="4352617586275775499">"藍牙錯誤"</string>
