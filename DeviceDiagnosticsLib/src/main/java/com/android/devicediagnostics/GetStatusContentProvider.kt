@@ -34,6 +34,7 @@ import com.android.devicediagnostics.evaluated.getScreenInfo
 import com.android.devicediagnostics.evaluated.getSensorInfo
 import com.android.devicediagnostics.evaluated.getStorageInfo
 import org.json.JSONArray
+import org.json.JSONObject
 
 private const val TAG = "GetStatus"
 
@@ -113,20 +114,36 @@ class GetStatusContentProvider : ContentProvider() {
                     }
             val json = deviceReportToJson(report)
             if (!report.locks.factoryResetProtection) {
-                val tm = context.getSystemService(TelephonyManager::class.java)!!
-                val imeis = JSONArray()
-                for (i in 0 until tm.activeModemCount) {
-                    try {
-                        imeis.put(tm.getImei(i))
-                    } catch (e: Exception) {
-                        Log.e(TAG, "Could not get device identifiers", e)
-                        break
-                    }
-                }
-                json.put("imeis", imeis)
-                json.put("serial", Build.getSerial())
+                addUniqueIdentifiers(json)
             }
             return json.toString(2)
+        }
+
+        private fun addUniqueIdentifiers(json: JSONObject) {
+            val tm = context.getSystemService(TelephonyManager::class.java)!!
+            val imeis = JSONArray()
+            for (i in 0 until tm.activeModemCount) {
+                try {
+                    imeis.put(tm.getImei(i))
+                } catch (e: Exception) {
+                    Log.e(TAG, "Could not get device identifiers", e)
+                    break
+                }
+            }
+            json.put("imeis", imeis)
+            json.put("serial", Build.getSerial())
+
+            val uiccs = JSONArray()
+            for (card in tm.uiccCardsInfo) {
+                val obj = JSONObject()
+                obj.put("eid", card.eid)
+                obj.put("removable", card.isRemovable)
+                obj.put("physical_slot_index", card.physicalSlotIndex)
+                uiccs.put(obj)
+            }
+            if (uiccs.length() > 0) {
+                json.put("uiccs", uiccs)
+            }
         }
 
         override fun getShort(column: Int): Short {
