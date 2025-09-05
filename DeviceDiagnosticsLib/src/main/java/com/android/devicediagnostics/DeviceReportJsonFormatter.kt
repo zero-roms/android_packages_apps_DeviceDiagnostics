@@ -15,8 +15,10 @@
  */
 package com.android.devicediagnostics
 
+import android.hardware.camera2.CameraCharacteristics
 import android.util.Base64
 import com.android.devicediagnostics.Protos.BatteryInfo
+import com.android.devicediagnostics.Protos.Camera
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.Protos.HingeInfo
 import com.android.devicediagnostics.Protos.LockInfo
@@ -30,6 +32,10 @@ import org.json.JSONObject
 
 private fun putIfNotEmpty(holder: JSONObject, key: String, obj: JSONObject) {
     if (obj.length() > 0) holder.put(key, obj)
+}
+
+private fun putIfNotEmpty(holder: JSONObject, key: String, array: JSONArray) {
+    if (array.length() > 0) holder.put(key, array)
 }
 
 fun <T> JSONObject.putIfPresent(present: Boolean, key: String, value: T) {
@@ -129,6 +135,29 @@ private fun lockInfoToJson(info: LockInfo): JSONObject {
     return obj
 }
 
+private fun lensFacingToString(camera: Camera): String {
+    if (!camera.hasLensFacing()) {
+        return "unknown"
+    }
+    return when (camera.lensFacing) {
+        CameraCharacteristics.LENS_FACING_BACK -> "back"
+        CameraCharacteristics.LENS_FACING_FRONT -> "front"
+        CameraCharacteristics.LENS_FACING_EXTERNAL -> "external"
+        else -> "unknown"
+    }
+}
+
+private fun cameraInfoToJson(cameras: List<Camera>): JSONArray {
+    val array = JSONArray()
+    for (camera in cameras) {
+        val obj = JSONObject()
+        obj.put("num_physical", camera.numPhysical)
+        obj.put("lens_facing", lensFacingToString(camera))
+        array.put(obj)
+    }
+    return array
+}
+
 fun deviceReportToJson(report: DeviceReport): JSONObject {
     val obj = JSONObject()
     if (report.hasTests()) putIfNotEmpty(obj, "tests", testResultsToJson(report.tests))
@@ -156,5 +185,6 @@ fun deviceReportToJson(report: DeviceReport): JSONObject {
     obj.putIfPresent(report.hasLaunchLevel(), "launch_level", report.launchLevel)
     obj.put("locks", lockInfoToJson(report.locks))
     if (report.hasProduct()) putIfNotEmpty(obj, "product", productInfoToJson(report.product))
+    putIfNotEmpty(obj, "cameras", cameraInfoToJson(report.camerasList))
     return obj
 }

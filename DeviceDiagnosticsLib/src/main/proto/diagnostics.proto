@@ -57,6 +57,11 @@ message ScreenInfo { repeated string screen_part_status = 1; }
 
 message TrustedDeviceInfo { bytes challenge = 1; }
 
+message Camera {
+  int32 num_physical = 1;
+  optional int32 lens_facing = 2;
+}
+
 message DeviceReport {
   TestResults tests = 1;
   bytes old_attestation = 2;
@@ -69,6 +74,7 @@ message DeviceReport {
   optional AttestationInfo attestation = 9;
   ScreenInfo screen = 10;
   SensorInfo sensor = 11;
+  repeated Camera cameras = 12;
 }
 
 enum PacketCommand {
