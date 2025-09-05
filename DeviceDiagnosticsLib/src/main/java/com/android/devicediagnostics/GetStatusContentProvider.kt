@@ -20,6 +20,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.AbstractCursor
 import android.database.Cursor
+import android.hardware.camera2.CameraManager
 import android.net.Uri
 import android.os.Build
 import android.telephony.TelephonyManager
@@ -27,6 +28,7 @@ import android.util.Log
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.evaluated.createAttestationRecord
 import com.android.devicediagnostics.evaluated.getBatteryInfo
+import com.android.devicediagnostics.evaluated.getCameraInfo
 import com.android.devicediagnostics.evaluated.getHingeInfo
 import com.android.devicediagnostics.evaluated.getLockInfo
 import com.android.devicediagnostics.evaluated.getProductInfo
@@ -108,6 +110,7 @@ class GetStatusContentProvider : ContentProvider() {
                             setHinge(getHingeInfo())
                             setSensor(getSensorInfo())
                             setScreen(getScreenInfo())
+                            addAllCameras(getCameraInfo(context))
                             selection?.run { setAttestation(createAttestationRecord(challenge)) }
                         }
                         build()
