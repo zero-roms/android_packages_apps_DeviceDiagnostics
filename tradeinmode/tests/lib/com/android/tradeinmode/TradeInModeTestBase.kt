@@ -233,6 +233,16 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
             val imeis = root.getJSONArray("imeis")
             assertNotEquals(imeis.length(), 0)
             assertFalse(imeis.getString(0).isEmpty())
+
+            if (root.has("uiccs")) {
+                val uiccs = root.getJSONArray("uiccs")
+                for (index in 0 .. uiccs.length() - 1) {
+                    val card = uiccs.getJSONObject(index)
+                    assertTrue(card.isNull("eid") || card.optString("eid") != "")
+                    assertTrue(card.has("removable"))
+                    assertTrue(card.optInt("physical_slot_index") >= 0)
+                }
+            }
         }
     }
 
