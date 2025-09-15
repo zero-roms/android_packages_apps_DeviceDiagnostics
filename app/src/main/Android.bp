@@ -11,4 +11,9 @@ android_app {
         "DeviceDiagnosticsLib",
     ],
     certificate: "platform",
+    optimize: {
+        enabled: true,
+        optimize: true,
+        shrink_resources: true,
+    },
 }
