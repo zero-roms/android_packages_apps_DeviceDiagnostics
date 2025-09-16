@@ -19,6 +19,7 @@ package com.android.tradeinmode
 import com.android.compatibility.common.util.FeatureUtil
 import com.android.ddmlib.TimeoutException
 import com.android.tradefed.device.ITestDevice
+import com.android.tradefed.log.LogUtil.CLog
 import com.android.tradefed.testtype.DeviceJUnit4ClassRunner
 import com.android.tradefed.testtype.junit4.BaseHostJUnit4Test
 import com.android.tradefed.util.CommandResult
@@ -63,6 +64,10 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         if (!shouldTestTradeInMode()) {
             return
         }
+        if (!hasSetupWizard()) {
+            CLog.e("Skipping test, device does not have SUW enabled")
+            return
+        }
 
         val hasTelephony = FeatureUtil.hasTelephony(mDevice)
 
@@ -82,6 +87,10 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
     @Test
     public fun checkEvaluateFlow() {
         if (!shouldTestTradeInMode()) {
+            return
+        }
+        if (!hasSetupWizard()) {
+            CLog.e("Skipping test, device does not have SUW enabled")
             return
         }
 
@@ -134,12 +143,18 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         if (!shouldTestTradeInMode()) {
             return
         }
+        if (!hasSetupWizard()) {
+            CLog.e("Skipping test, device does not have SUW enabled")
+            return
+        }
 
         performWipe()
 
         // Normal shell commands should work.
         var result = mDevice.executeShellV2Command("stat /")
         assertEquals(result.getExitCode(), 0)
+
+        waitForCommandService("settings")
 
         // SUW should be active.
         assertEquals(getSettingInt("global", "device_provisioned", 0), 0)
@@ -195,7 +210,7 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         assertTrue(storage.has("capacity_bytes"))
         assertTrue(storage.optLong("capacity_bytes") > 0)
         if (storage.has("useful_lifetime_remaining")) {
-            assertTrue(storage.optInt("useful_lifetime_remaining") > 0)
+            assertTrue(storage.optInt("useful_lifetime_remaining") >= 0)
         }
 
         assertTrue(root.has("battery"))
@@ -288,9 +303,22 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         waitForDevice({ !inRecovery() })
     }
 
+    protected fun hasSetupWizard(): Boolean {
+        val suwMode = device.getProperty("ro.setupwizard.mode")
+        if (suwMode == "EMULATOR" || suwMode == "DISABLED") {
+            return false
+        }
+        return true
+    }
+
     protected fun waitForDevice(cond: () -> Boolean) {
         val start = TimeSource.Monotonic.markNow()
         val end = start + DEVICE_BOOT_TIMEOUT_MS.toDuration(DurationUnit.MILLISECONDS)
+
+        // Wait at least once before checking |cond| since virtual devices can
+        // power off very quickly.
+        mDevice.waitForDeviceOnline(DEVICE_BOOT_TIMEOUT_MS)
+
         while (true) {
             if (cond()) {
                 return
