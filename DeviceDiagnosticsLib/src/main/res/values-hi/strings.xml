@@ -85,7 +85,7 @@
     <string name="touch_test_result_title" msgid="8236119653054988245">"टच सेंसर की जांच का नतीजा"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"यहां टच सेंसर से जुड़ी जांच का नतीजा दिया गया है. आपके पास, वापस जाकर टेस्ट को फिर से चलाने का विकल्प है."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"टच सेंसर की जांच सफल रही"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"टच सेंसर की जांच फ़ेल हो गई"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"जांच में टच सेंसर नाकाम साबित हुआ"</string>
     <string name="pass" msgid="6411665547268368837">"पास"</string>
     <string name="fail" msgid="3918028202746427731">"फ़ेल"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"सर्टिफ़िकेट की पुष्टि की गई है"</string>
