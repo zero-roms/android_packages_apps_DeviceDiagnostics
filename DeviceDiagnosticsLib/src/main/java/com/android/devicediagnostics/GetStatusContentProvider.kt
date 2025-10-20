@@ -20,6 +20,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.AbstractCursor
 import android.database.Cursor
+import android.hardware.camera2.CameraManager
 import android.net.Uri
 import android.os.Build
 import android.telephony.TelephonyManager
@@ -27,6 +28,7 @@ import android.util.Log
 import com.android.devicediagnostics.Protos.DeviceReport
 import com.android.devicediagnostics.evaluated.createAttestationRecord
 import com.android.devicediagnostics.evaluated.getBatteryInfo
+import com.android.devicediagnostics.evaluated.getCameraInfo
 import com.android.devicediagnostics.evaluated.getHingeInfo
 import com.android.devicediagnostics.evaluated.getLockInfo
 import com.android.devicediagnostics.evaluated.getProductInfo
@@ -34,6 +36,7 @@ import com.android.devicediagnostics.evaluated.getScreenInfo
 import com.android.devicediagnostics.evaluated.getSensorInfo
 import com.android.devicediagnostics.evaluated.getStorageInfo
 import org.json.JSONArray
+import org.json.JSONObject
 
 private const val TAG = "GetStatus"
 
@@ -107,26 +110,43 @@ class GetStatusContentProvider : ContentProvider() {
                             setHinge(getHingeInfo())
                             setSensor(getSensorInfo())
                             setScreen(getScreenInfo())
+                            addAllCameras(getCameraInfo(context))
                             selection?.run { setAttestation(createAttestationRecord(challenge)) }
                         }
                         build()
                     }
             val json = deviceReportToJson(report)
             if (!report.locks.factoryResetProtection) {
-                val tm = context.getSystemService(TelephonyManager::class.java)!!
-                val imeis = JSONArray()
-                for (i in 0 until tm.activeModemCount) {
-                    try {
-                        imeis.put(tm.getImei(i))
-                    } catch (e: Exception) {
-                        Log.e(TAG, "Could not get device identifiers", e)
-                        break
-                    }
-                }
-                json.put("imeis", imeis)
-                json.put("serial", Build.getSerial())
+                addUniqueIdentifiers(json)
             }
             return json.toString(2)
+        }
+
+        private fun addUniqueIdentifiers(json: JSONObject) {
+            val tm = context.getSystemService(TelephonyManager::class.java)!!
+            val imeis = JSONArray()
+            for (i in 0 until tm.activeModemCount) {
+                try {
+                    imeis.put(tm.getImei(i))
+                } catch (e: Exception) {
+                    Log.e(TAG, "Could not get device identifiers", e)
+                    break
+                }
+            }
+            json.put("imeis", imeis)
+            json.put("serial", Build.getSerial())
+
+            val uiccs = JSONArray()
+            for (card in tm.uiccCardsInfo) {
+                val obj = JSONObject()
+                obj.put("eid", card.eid)
+                obj.put("removable", card.isRemovable)
+                obj.put("physical_slot_index", card.physicalSlotIndex)
+                uiccs.put(obj)
+            }
+            if (uiccs.length() > 0) {
+                json.put("uiccs", uiccs)
+            }
         }
 
         override fun getShort(column: Int): Short {

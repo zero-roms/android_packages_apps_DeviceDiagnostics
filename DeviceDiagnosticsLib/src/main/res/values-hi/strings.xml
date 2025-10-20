@@ -60,9 +60,9 @@
     <string name="visual_test_warning_summary" msgid="8088295720348050370">"इस टेस्ट के लिए, विज़ुअल इंस्पेक्शन करना और फ़िजिकल डिसप्ले की पुष्टि करना ज़रूरी है. क्या आपको जारी रखना है?"</string>
     <string name="cancel" msgid="4173470896053421075">"रद्द करें"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"बैटरी की परफ़ॉर्मेंस"</string>
-    <string name="battery_manufacturing_date" msgid="5243620020486093692">"बनने की तारीख"</string>
+    <string name="battery_manufacturing_date" msgid="5243620020486093692">"मैन्युफ़ैक्चर होने की तारीख"</string>
     <string name="battery_first_usage_date" msgid="1183985039020984695">"पहली बार इस्तेमाल की तारीख"</string>
-    <string name="battery_cycle_count" msgid="1002728954996996785">"फ़ुल चार्ज और खत्म होने का साइकल"</string>
+    <string name="battery_cycle_count" msgid="1002728954996996785">"बैटरी के चार्ज साइकल की संख्या"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"बैटरी का सीरियल नंबर"</string>
     <string name="battery_part_status" msgid="504091754655232085">"बैटरी के पार्ट की स्थिति"</string>
     <string name="battery_original" msgid="2552600989411644999">"ओरिजनल बैटरी"</string>
@@ -85,7 +85,7 @@
     <string name="touch_test_result_title" msgid="8236119653054988245">"टच सेंसर की जांच का नतीजा"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"यहां टच सेंसर से जुड़ी जांच का नतीजा दिया गया है. आपके पास, वापस जाकर टेस्ट को फिर से चलाने का विकल्प है."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"टच सेंसर की जांच सफल रही"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"टच सेंसर की जांच फ़ेल हो गई"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"जांच में टच सेंसर नाकाम साबित हुआ"</string>
     <string name="pass" msgid="6411665547268368837">"पास"</string>
     <string name="fail" msgid="3918028202746427731">"फ़ेल"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"सर्टिफ़िकेट की पुष्टि की गई है"</string>
@@ -123,7 +123,7 @@
     <string name="touch_sensor_status_title" msgid="5595027618553558639">"टच सेंसर की स्थिति"</string>
     <string name="attestation_details_title" msgid="7637645023797408279">"प्रमाणित करने से जुड़ी जानकारी"</string>
     <string name="attestation_local_failure_title" msgid="3071623434519219695">"प्रमाणित नहीं किया जा सका"</string>
-    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"डिवाइस पर भरोसा किया जा सकता है या नहीं, यह तय नहीं किया जा सका"</string>
+    <string name="attestation_local_failure_summary" msgid="8657460343196696219">"क्या डिवाइस पर भरोसा किया जा सकता है, यह तय नहीं किया जा सका"</string>
     <string name="attestation_remote_failure_title" msgid="8025019568951127574">"फिर से प्रमाणित करने की कोशिश करें"</string>
     <string name="attestation_remote_failure_summary" msgid="4213703209008514612">"प्रमाणित करने के लिए पुष्टि नहीं की जा सकी. अपने इंटरनेट कनेक्शन की जांच करें और दोबारा कोशिश करें."</string>
     <string name="evaluate_mode_next_action_title" msgid="5476169052061576163">"अगले चरण"</string>

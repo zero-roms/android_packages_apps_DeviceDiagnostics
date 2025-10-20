@@ -67,7 +67,7 @@
     <string name="battery_part_status" msgid="504091754655232085">"Status bahagian"</string>
     <string name="battery_original" msgid="2552600989411644999">"Asal"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Digantikan"</string>
-    <string name="battery_part_history" msgid="5669260842330985767">"Sejarah Alat"</string>
+    <string name="battery_part_history" msgid="5669260842330985767">"Sejarah Komponen"</string>
     <string name="battery_health_summary_fmt" msgid="4363832259742003306">"%1$s daripada kapasiti asal"</string>
     <string name="battery_health_unavailable" msgid="5093923315136769788">"Kesihatan bateri tidak tersedia"</string>
     <string name="battery_health_cold" msgid="4164463402047143412">"Sejuk"</string>

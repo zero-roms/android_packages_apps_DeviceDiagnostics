@@ -86,8 +86,8 @@
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Aquest és el resultat de la prova tàctil. Pots executar-la de nou tornant enrere."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"S\'ha superat la prova del sensor tàctil"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"La prova del sensor tàctil ha fallat"</string>
-    <string name="pass" msgid="6411665547268368837">"Aprovada"</string>
-    <string name="fail" msgid="3918028202746427731">"No superada"</string>
+    <string name="pass" msgid="6411665547268368837">"Aprovat"</string>
+    <string name="fail" msgid="3918028202746427731">"No superat"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"Certificat verificat"</string>
     <string name="attestation_device_locked" msgid="1423476869833029478">"Dispositiu bloquejat"</string>
     <string name="attestation_verified_boot_state" msgid="6360953823092860181">"Estat d\'inici verificat"</string>

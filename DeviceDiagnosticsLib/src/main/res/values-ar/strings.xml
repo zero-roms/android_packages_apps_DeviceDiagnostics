@@ -23,8 +23,8 @@
     <string name="proceed" msgid="8922926495095369132">"متابعة"</string>
     <string name="unavailable" msgid="7842920330665850121">"غير متاحة"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"جارٍ الاتصال بالبلوتوث…"</string>
-    <string name="component_health_title" msgid="6177813132789269842">"سلامة المكوِّن"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"يمكنك إجراء اختبارات يدوية وعرض حالة البطارية ومساحة التخزين"</string>
+    <string name="component_health_title" msgid="6177813132789269842">" صحة المكوّنات"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"يمكنك إجراء اختبارات يدوية وعرض صحة البطارية ومساحة التخزين"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"وضع التقييم"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"يمكنك استخدام أحد الأجهزة لتقييم جهاز آخر"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"الاختبارات اليدوية"</string>

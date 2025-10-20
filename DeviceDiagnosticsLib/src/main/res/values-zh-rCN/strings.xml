@@ -24,7 +24,7 @@
     <string name="unavailable" msgid="7842920330665850121">"不可用"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"正在连接…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"组件健康度"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"进行手动测试并查看电池和存储空间状况"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"执行手动测试并查看电池和存储空间的健康度"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"评估模式"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"用一台设备评估另一台设备"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"手动测试"</string>

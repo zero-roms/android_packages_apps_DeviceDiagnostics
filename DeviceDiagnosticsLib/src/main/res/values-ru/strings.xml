@@ -24,9 +24,9 @@
     <string name="unavailable" msgid="7842920330665850121">"Недоступно"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Подключение…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"Состояние компонентов"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"Выполните тестирование, чтобы узнать состояние батареи и хранилища"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Запустить тесты вручную, чтобы посмотреть состояние батареи и хранилища"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Режим проверки"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Используйте одно устройство для проверки другого"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Использовать одно устройство для проверки другого"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Ручное тестирование"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Тестирование экрана"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Тест датчика касания"</string>
