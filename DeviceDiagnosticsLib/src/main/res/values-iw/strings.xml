@@ -83,7 +83,7 @@
     <string name="cancel_button" msgid="7011882021431169180">"ביטול"</string>
     <string name="try_again_button" msgid="6015477950108798246">"ניסיון חוזר"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"התוצאה של בדיקת המגע"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"זאת התוצאה של בדיקת המגע. כדי להריץ שוב את הבדיקה, יש לחזור לעמוד הקודם."</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"כאן מופיעה התוצאה של בדיקת המגע. כדי להריץ שוב את הבדיקה, יש לחזור לעמוד הקודם."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"חיישן המגע עבר את הבדיקה בהצלחה"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"חיישן המגע נכשל בבדיקה"</string>
     <string name="pass" msgid="6411665547268368837">"עובר"</string>
