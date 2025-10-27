@@ -83,7 +83,7 @@
     <string name="cancel_button" msgid="7011882021431169180">"Batal"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Coba lagi"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"Hasil uji sentuh"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"Ini adalah hasil uji sentuh. Anda dapat mengulangi pengujian dengan membukanya kembali."</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Ini adalah hasil uji sentuh. Anda dapat mengulangi pengujian dengan kembali ke layar sebelumnya."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Uji sensor sentuh berhasil"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Uji sensor sentuh gagal"</string>
     <string name="pass" msgid="6411665547268368837">"Lulus"</string>

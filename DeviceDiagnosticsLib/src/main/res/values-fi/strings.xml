@@ -83,7 +83,7 @@
     <string name="cancel_button" msgid="7011882021431169180">"Peru"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Yritä uudelleen"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"Kosketustestin tulos"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"Tämä on kosketusanturitestin tulos. Voit tehdä testin uudelleen siirtymällä takaisin."</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Tämä on kosketusanturitestin tulos. Siirry takaisin, jos haluat tehdä testin uudelleen."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Kosketusanturitesti onnistui"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Kosketusanturitesti epäonnistui"</string>
     <string name="pass" msgid="6411665547268368837">"Hyväksytty"</string>
