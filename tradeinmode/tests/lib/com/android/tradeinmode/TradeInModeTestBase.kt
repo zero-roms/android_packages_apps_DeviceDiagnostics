@@ -77,6 +77,10 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         var result = mDevice.executeShellV2Command("ls -l /")
         assertNotEquals(result.getExitCode(), 0)
 
+        result = mDevice.executeShellV2Command("tradeinmode state")
+        assertEquals(result.getExitCode(), 0)
+        assertEquals(result.getStdout().trim(), "setup")
+
         result = mDevice.executeShellV2Command("tradeinmode wait-until-ready getstatus")
         assertEquals(result.getExitCode(), 0)
 
@@ -180,6 +184,10 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         mDevice.pushFile(tempFile, remotePath)
         assertEquals(mDevice.executeShellCommand("cat " + remotePath), tempData)
 
+        result = mDevice.executeShellV2Command("tradeinmode state")
+        assertEquals(result.getExitCode(), 0)
+        assertEquals(result.getStdout().trim(), "evaluation")
+
         // Reboot. A wipe should have been performed and the file should be gone.
         mDevice.rebootUntilOnline()
         result = mDevice.executeShellV2Command("cat " + remotePath)
@@ -241,7 +249,7 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
 
         if (root.has("cameras")) {
             val cameras = root.getJSONArray("cameras")
-            for (index in 0 .. cameras.length() - 1) {
+            for (index in 0..cameras.length() - 1) {
                 val camera = cameras.getJSONObject(index)
                 assertTrue(camera.getInt("num_physical") > 0)
                 assertTrue(isValidLensFacing(camera.getString("lens_facing")))
@@ -260,7 +268,7 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
 
             if (root.has("uiccs")) {
                 val uiccs = root.getJSONArray("uiccs")
-                for (index in 0 .. uiccs.length() - 1) {
+                for (index in 0..uiccs.length() - 1) {
                     val card = uiccs.getJSONObject(index)
                     assertTrue(card.isNull("eid") || card.optString("eid") != "")
                     assertTrue(card.has("removable"))
