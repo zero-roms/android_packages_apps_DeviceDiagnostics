@@ -112,6 +112,8 @@ fun doMain(args: Tokenizer) {
         SystemProperties.set("sys.powerctl", "shutdown")
     } else if (cmd == "reboot") {
         SystemProperties.set("sys.powerctl", "reboot")
+    } else if (cmd == "state") {
+        doShowState(args)
     } else {
         throw IllegalArgumentException("Unknown command.")
     }
@@ -298,5 +300,19 @@ fun isTradeInModeReady(): Boolean {
 fun doWaitUntilReady() {
     while (!isTradeInModeReady()) {
         Thread.sleep(500)
+    }
+}
+
+fun doShowState(args: Tokenizer) {
+    if (args.more()) {
+        throw IllegalArgumentException("Unexpected argument.")
+    }
+
+    val state = SystemProperties.getInt(STATE_PROP, 0)
+    when (state) {
+        0 -> println("off")
+        1 -> println("setup")
+        2 -> println("evaluation")
+        else -> println("unknown")
     }
 }
