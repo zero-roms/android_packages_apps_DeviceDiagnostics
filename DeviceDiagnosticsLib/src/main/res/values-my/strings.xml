@@ -49,7 +49,7 @@
     <string name="bluetooth_error_title" msgid="4352617586275775499">"ဘလူးတုသ် အမှားအယွင်း"</string>
     <string name="bluetooth_error_summary" msgid="8411286861814582793">"စိတ်ချရသည့်စက်ပစ္စည်းနှင့် ချိတ်ဆက်ရာတွင် အမှားဖြစ်သွားသည်။ ဘလူးတုသ်ဖွင့်ထားကြောင်း အတည်ပြုပြီး ထပ်စမ်းကြည့်ပါ။"</string>
     <string name="sending_report" msgid="8735615783234611336">"စိတ်ချရသည့်စက်ပစ္စည်းသို့ အစီရင်ခံစာ ပို့နေသည်…"</string>
-    <string name="evaluation_complete_title" msgid="2503185542217582851">"အကဲဖြတ်မှု ပြီးပါပြီ"</string>
+    <string name="evaluation_complete_title" msgid="2503185542217582851">"အကဲဖြတ် ပြီးပါပြီ"</string>
     <string name="evaluation_complete_summary" msgid="1899365605498435450">"စိတ်ချရသည့်စက်ပစ္စည်းတွင် ရလဒ်များကို ယခုပြပါမည်"</string>
     <string name="screen_test_result_title" msgid="4741510800317631056">"စခရင် စစ်ဆေးချက်ရလဒ်"</string>
     <string name="screen_test_good_result_title" msgid="8032695232528965724">"ကောင်းသည်"</string>
