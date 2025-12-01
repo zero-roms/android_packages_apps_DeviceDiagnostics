@@ -138,7 +138,7 @@
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skenujte"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"V zariadení, ktoré chcete hodnotiť, prejdite do sekcie Nastavenia, Systém, Diagnostika zariadenia, Režim hodnotenia a potom Hodnotené zariadenie. Postupujte podľa pokynov v tomto zariadení."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Teraz sa zobrazí niekoľko obrazoviek. Preskúmajte každú z nich a hľadajte chyby. Keď budete spokojný/-á, klepnite na obrazovku a prejdite na ďalšiu. Na konci sa vás opýtame, či obrazovky vyzerajú bezchybne."</string>
-    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Postupne sa zobrazí niekoľko obrazoviek. Každú z nich si dôkladne prezrite a hľadajte prípadné kazy. Klepnutím prejdete na ďalšiu obrazovku."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Postupne sa zobrazí niekoľko obrazoviek. Každú z nich si dôkladne prezrite a hľadajte prípadné chyby. Klepnutím prejdete na ďalšiu obrazovku."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Vyberte možnosť nižšie, ktorá najlepšie zodpovedá stavu obrazovky."</string>
     <string name="touch_test_summary" msgid="5989536270591433560">"Teraz sa zobrazí červená obrazovka.\n \nŤahajte po nej prstom, kým nebude úplne biela. Ak sa vám nepodarí zafarbiť časť obrazovky nabielo, krátko na ňu klepnite a dajte tak najavo, že dotykový senzor nie je úplne funkčný.\n\n"</string>
 </resources>
