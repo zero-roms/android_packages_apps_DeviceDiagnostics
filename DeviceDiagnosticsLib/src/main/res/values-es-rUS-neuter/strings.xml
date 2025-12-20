@@ -17,5 +17,6 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="visual_test_warning_summary" msgid="8088295720348050370">"La siguiente prueba requiere inspección visual y confirmación de la pantalla física. ¿Confirmas que quieres continuar?"</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"Ahora se te mostrarán una serie de pantallas. Analiza cada una y busca defectos. Cuando estés conforme, toca la pantalla para pasar a la siguiente. Al final, se te preguntará si las pantallas se ven perfectas."</string>
 </resources>
