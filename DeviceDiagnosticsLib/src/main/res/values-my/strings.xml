@@ -106,7 +106,7 @@
     <string name="attestation_model" msgid="8223243376214262662">"မိုဒယ်"</string>
     <string name="attestation_vendor_patch_level" msgid="5961013660410857720">"ရောင်းသူ၏ ပက်ချ်အဆင့်"</string>
     <string name="attestation_boot_patch_level" msgid="6266071138457400006">"စနစ်စတင်မှု ပက်ချ်အဆင့်"</string>
-    <string name="yes" msgid="6686215078709381643">"ဟုတ်ပါသည်"</string>
+    <string name="yes" msgid="6686215078709381643">"Yes"</string>
     <string name="no" msgid="5957591978126937912">"မဟုတ်ပါ"</string>
     <string name="unknown" msgid="6936738212381747979">"မသိ"</string>
     <string name="attestation_failed" msgid="7989272430189028826">"အထောက်အထားပြခြင်း မအောင်မြင်ပါ"</string>
