@@ -63,7 +63,7 @@ inline fun getVisibleActivity(): String? {
     val am =
         InstrumentationRegistry.getInstrumentation().context.getSystemService(ACTIVITY_SERVICE)
             as ActivityManager
-    return am.appTasks[0].taskInfo.topActivity?.className
+    return am.appTasks[0].taskInfo?.topActivity?.className
 }
 
 inline fun <reified T : Activity> waitForActivity() {
