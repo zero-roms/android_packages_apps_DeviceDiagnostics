@@ -30,7 +30,7 @@
     <string name="manual_eval_title" msgid="4335717606581762762">"Ručni testovi"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Testiranje zaslona"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Testiranje dodira"</string>
-    <string name="component_title" msgid="6580046234562555655">"Status komponente"</string>
+    <string name="component_title" msgid="6580046234562555655">"Status komponenti"</string>
     <string name="storage_title" msgid="5921235202250843966">"Status pohrane"</string>
     <string name="battery_title" msgid="6707361668941323259">"Status baterije"</string>
     <string name="trusted_device_title" msgid="6291497999963968533">"Pouzdani uređaj"</string>

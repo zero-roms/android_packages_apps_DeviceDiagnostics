@@ -37,7 +37,7 @@
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"다른 기기를 평가합니다. 인터넷 연결이 필요합니다."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"평가된 기기"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"다른 기기에서 검사할 진단 테스트를 실행합니다."</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"지금 스캔"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"지금 스캔하세요"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"신뢰할 수 있는 기기에서 아래 직사각형의 QR 코드를 스캔하세요."</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"QR 코드를 스캔하면 이 기기에서 자동으로 일련의 테스트를 시작합니다."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"신뢰할 수 있는 기기 선택"</string>
@@ -138,7 +138,7 @@
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"지금 스캔"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"평가하려는 기기에서 설정, 시스템, 기기 진단, 평가 모드, 평가된 기기로 이동합니다. 해당 기기에 표시되는 안내를 따릅니다."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"이제 일련의 화면이 표시됩니다. 하나씩 살펴보고 결함이 있는지 확인합니다. 만족스러우면 화면을 터치하여 다음 화면으로 넘어갑니다. 마지막에는 화면에 흠집이 없는지 묻는 메시지가 표시됩니다."</string>
-    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"이제 일련의 화면이 표시됩니다. 하나씩 살펴보고 결함이 있는지 확인합니다. 화면을 터치하여 다음 화면으로 넘어갑니다."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"이제 일련의 화면이 표시됩니다. 하나씩 살펴보고 결함이 있는지 확인하세요. 다음 화면으로 넘어가려면 화면을 터치하세요."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"아래에서 화면 상태에 가장 적합한 옵션을 선택하세요."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"이제 빨간색 화면이 표시됩니다.\n \n 화면이 완전히 흰색이 될 때까지 손가락으로 화면을 스와이프합니다. 화면의 일부가 흰색으로 바뀌지 않으면 화면을 짧게 탭하여 터치 센서가 완전히 작동하지 않음을 표시합니다.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"이제 빨간색 화면이 표시됩니다.\n \n화면이 완전히 흰색이 될 때까지 손가락으로 화면을 스와이프하세요. 화면의 일부가 흰색으로 바뀌지 않으면 화면을 짧게 탭하여 터치 센서가 제대로 작동하지 않음을 표시하세요.\n \n"</string>
 </resources>

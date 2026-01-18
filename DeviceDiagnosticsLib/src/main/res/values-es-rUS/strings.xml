@@ -64,7 +64,7 @@
     <string name="battery_first_usage_date" msgid="1183985039020984695">"Fecha del primer uso"</string>
     <string name="battery_cycle_count" msgid="1002728954996996785">"Conteo de ciclos"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"Número de serie"</string>
-    <string name="battery_part_status" msgid="504091754655232085">"Estado de las piezas"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"Estado de la pieza"</string>
     <string name="battery_original" msgid="2552600989411644999">"Original"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"Reemplazada"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"Historial de la pieza"</string>
@@ -140,5 +140,5 @@
     <string name="screen_test_summary" msgid="6565006807310186664">"Ahora se te mostrarán una serie de pantallas. Analiza cada una y busca defectos. Cuando estés conforme, toca la pantalla para pasar a la siguiente. Al final, se te preguntará si las pantallas se ven perfectas."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Ahora se te mostrarán una serie de pantallas. Analiza cada una y busca defectos. Toca la pantalla para pasar a la siguiente."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"De las siguientes opciones, selecciona la que mejor describa el estado de la pantalla."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Ahora se te mostrará una pantalla roja.\n \n Desliza el dedo sobre la pantalla hasta que esté completamente blanca. Si no puedes blanquear una parte, presiona la pantalla de forma leve para indicar que el sensor táctil no funciona por completo.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Ahora se te mostrará una pantalla roja.\n \n Desliza el dedo sobre la pantalla hasta que esté completamente blanca. Si no puedes blanquear una parte, presiona la pantalla de forma breve para indicar que el sensor táctil no funciona por completo.\n \n"</string>
 </resources>

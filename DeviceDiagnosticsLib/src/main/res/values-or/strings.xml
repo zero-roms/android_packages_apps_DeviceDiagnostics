@@ -61,7 +61,7 @@
     <string name="cancel" msgid="4173470896053421075">"ବାତିଲ କରନ୍ତୁ"</string>
     <string name="battery_health_title" msgid="3945318982701313271">"ସ୍ୱାସ୍ଥ୍ୟ"</string>
     <string name="battery_manufacturing_date" msgid="5243620020486093692">"ଉତ୍ପାଦନ ତାରିଖ"</string>
-    <string name="battery_first_usage_date" msgid="1183985039020984695">"ପ୍ରଥମ ବ୍ୟବହାରର ଡାଟା"</string>
+    <string name="battery_first_usage_date" msgid="1183985039020984695">"ପ୍ରଥମ ବ୍ୟବହାରର ତାରିଖ"</string>
     <string name="battery_cycle_count" msgid="1002728954996996785">"ସାଇକେଲ ସଂଖ୍ୟା"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"ସିରିଏଲ ନମ୍ବର"</string>
     <string name="battery_part_status" msgid="504091754655232085">"ବେଟେରୀ ପାର୍ଟର ସ୍ଥିତି"</string>

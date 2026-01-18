@@ -137,8 +137,8 @@
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Hinnatava seadmega suhtlemisel ilmnes viga. Veenduge, et Bluetooth oleks lubatud, ja proovige uuesti."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Skannige kohe"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Tehke hinnatavas seadmes valikud Seaded, Süsteem, Seadmediagnostika, Hindamisrežiim, seejärel Hinnatav seade. Järgige selles seadmes kuvatavaid viipasid."</string>
-    <string name="screen_test_summary" msgid="6565006807310186664">"Teile näidatakse rida ekraane. Uurige igaüht ja otsige defekte. Kui olete rahul, puudutage ekraani, et liikuda järgmisele. Lõpus küsitakse teilt, ega ekraanidel pole iluvigu."</string>
-    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Teile näidatakse rida ekraane. Uurige igaüht ja otsige defekte. Puudutage ekraani, et liikuda järgmisele."</string>
+    <string name="screen_test_summary" msgid="6565006807310186664">"Teile näidatakse järjestikusi kuvasid. Uurige igaüht ja otsige defekte. Kui olete rahul, puudutage kuva, et liikuda järgmisele. Lõpus küsitakse teilt, kas kuvad on veatud."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"Teile näidatakse järjestikusi kuvasid. Uurige igaüht ja otsige defekte. Puudutage kuva, et liikuda järgmisele."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"Tehke allpool valik, mis vastab kõige paremini ekraani seisukorrale."</string>
-    <string name="touch_test_summary" msgid="5989536270591433560">"Teile kuvatakse nüüd punane ekraan.\n \n Tõmmake sõrmega üle ekraani, kuni ekraan muutub täiesti valgeks. Kui teil ei õnnestu ekraani valgeks muuta, tehke ekraanil lühike puudutus, millega näitate, et puuteandur ei tööta täielikult.\n \n"</string>
+    <string name="touch_test_summary" msgid="5989536270591433560">"Teile kuvatakse nüüd punane kuva.\n \n Tõmmake sõrmega üle ekraani, kuni kuva muutub täiesti valgeks. Kui teil ei õnnestu ekraani valgeks muuta, tehke ekraanil lühike puudutus, millega näitate, et puuteandur ei tööta täielikult.\n \n"</string>
 </resources>
