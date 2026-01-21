@@ -24,9 +24,9 @@
     <string name="unavailable" msgid="7842920330665850121">"غير متاحة"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"جارٍ الاتصال بالبلوتوث…"</string>
     <string name="component_health_title" msgid="6177813132789269842">" صحة المكوّنات"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"يمكنك إجراء اختبارات يدوية وعرض صحة البطارية ومساحة التخزين"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"إجراء اختبارات يدوية وعرض صحة البطارية ومساحة التخزين"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"وضع التقييم"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"يمكنك استخدام أحد الأجهزة لتقييم جهاز آخر"</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"استخدام أحد الأجهزة لتقييم جهاز آخر"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"الاختبارات اليدوية"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"اختبار الشاشة"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"اختبار اللمس"</string>
@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"حالة وحدة التخزين"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"السعة الإجمالية"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"‫<xliff:g id="NUMBER">%1$s</xliff:g> ‏<xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"‏يتبقّى ‎%1$s من سعة وحدة التخزين"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"‏يتبقّى ‎%1$s من السعة الأصلية لوحدة التخزين"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"يُرجى منح الأذونات المطلوبة للمتابعة في وضع التقييم."</string>
     <string name="cancel_button" msgid="7011882021431169180">"إلغاء"</string>
     <string name="try_again_button" msgid="6015477950108798246">"إعادة المحاولة"</string>
@@ -138,7 +138,7 @@
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"المسح الضوئي الآن"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"على الجهاز الذي تريد تقييمه، انتقِل إلى \"الإعدادات\" &gt; \"النظام\" &gt; \"تفحّص الجهاز\" &gt; \"وضع التقييم\" &gt; \"الجهاز الذي تم تقييمه\". اتّبِع التعليمات التي تظهر على ذلك الجهاز."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"ستظهر لك الآن مجموعة من الشاشات. اطّلِع على كل شاشة وابحث عن العيوب بها. وبعد الانتهاء منها، المُس الشاشة للانتقال إلى التي تليها. في النهاية، سيتم سؤالك عمّا إذا كانت الشاشات خالية من العيوب."</string>
-    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ستظهر لك الآن مجموعة من الشاشات. اطّلِع على كل شاشة وابحث عن العيوب بها. المُس الشاشة للانتقال إلى التي تليها."</string>
+    <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"ستظهر لك الآن مجموعة من الشاشات. اطّلِع على كل شاشة وابحث عن العيوب بها. المس الشاشة للانتقال إلى الشاشة التالية."</string>
     <string name="screen_test_finalize" msgid="9147123495799275930">"يُرجى تحديد الخيار الأنسب لحالة الشاشة ممّا يلي:"</string>
     <string name="touch_test_summary" msgid="5989536270591433560">"ستظهر لك الآن شاشة حمراء.\n \n مرِّر إصبعك سريعًا على الشاشة إلى أن تتحول كلها إلى اللون الأبيض. إذا لم تتمكّن من تحويل جزء من الشاشة إلى اللون الأبيض، فانقر مرة واحدة بسرعة على الشاشة للإشارة إلى أنّ أداة استشعار اللمس لا تعمل بشكل كامل.\n\n"</string>
 </resources>

@@ -26,7 +26,7 @@
     <string name="component_health_title" msgid="6177813132789269842">"Komponenta stāvoklis"</string>
     <string name="component_health_summary" msgid="2799337555706868947">"Izpildiet manuālus testus un skatiet akumulatora un krātuves stāvokli"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Vērtēšanas režīms"</string>
-    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Izmantojiet vienu ierīci, lai pārbaudītu citu ierīci."</string>
+    <string name="evaluation_mode_summary" msgid="7327453519906858863">"Izmantojiet vienu ierīci, lai pārbaudītu citu ierīci"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Manuālas pārbaudes"</string>
     <string name="screen_test_title" msgid="2748510049598105155">"Displeja pārbaude"</string>
     <string name="touch_test_title" msgid="4347784874948129736">"Skāriena pārbaude"</string>

@@ -24,7 +24,7 @@
     <string name="unavailable" msgid="7842920330665850121">"Μη διαθέσιμο"</string>
     <string name="bluetooth_connecting" msgid="7966802493158307502">"Σύνδεση…"</string>
     <string name="component_health_title" msgid="6177813132789269842">"Υγεία στοιχείου"</string>
-    <string name="component_health_summary" msgid="2799337555706868947">"Εκτέλεση μη αυτόματων δοκιμών και προβολή υγείας μπαταρίας και αποθηκευτικού χώρου"</string>
+    <string name="component_health_summary" msgid="2799337555706868947">"Εκτελέστε μη αυτόματες δοκιμές και δείτε την υγεία  μπαταρίας και αποθηκευτικού χώρου"</string>
     <string name="evaluation_mode_title" msgid="5845218248059550975">"Λειτουργία αξιολόγησης"</string>
     <string name="evaluation_mode_summary" msgid="7327453519906858863">"Χρησιμοποιήστε μια συσκευή για την αξιολόγηση μιας άλλης συσκευής"</string>
     <string name="manual_eval_title" msgid="4335717606581762762">"Μη αυτόματες δοκιμές"</string>
