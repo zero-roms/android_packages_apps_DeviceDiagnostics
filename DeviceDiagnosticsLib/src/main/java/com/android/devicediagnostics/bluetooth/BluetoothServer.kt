@@ -129,7 +129,7 @@ class BluetoothServer {
 class ServerStarter(
     private val adapter: BluetoothAdapter,
     private val trustedDeviceInfo: TrustedDeviceInfo,
-    private val listener: ServerStarter.Listener
+    private val listener: ServerStarter.Listener,
 ) {
     private val handler = Handler(Looper.myLooper()!!)
     private val advertiseSettings =
@@ -170,7 +170,7 @@ class ServerStarter(
                     Log.d(TAG, "Advertisement started")
                 }
             }
-        advertiser.startAdvertising(advertiseSettings, advertiseData, advertiseCallback!!)
+        advertiser?.startAdvertising(advertiseSettings, advertiseData, advertiseCallback!!)
         Log.d(TAG, "startAdvertisement: with advertiser $advertiser")
 
         serverSocket = adapter.listenUsingInsecureL2capChannel()
@@ -229,7 +229,7 @@ class ServerStarter(
         serverSocket?.close()
         synchronized(this) {
             if (advertiseCallback != null) {
-                advertiser.stopAdvertising(advertiseCallback!!)
+                advertiser?.stopAdvertising(advertiseCallback!!)
                 advertiseCallback = null
             }
             if (serverSocket != null) {
