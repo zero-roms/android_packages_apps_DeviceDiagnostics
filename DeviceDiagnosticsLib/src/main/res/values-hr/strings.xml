@@ -76,7 +76,7 @@
     <string name="battery_health_overheat" msgid="8745643548393640213">"Pregrijana"</string>
     <string name="battery_health_over_voltage" msgid="1970205983413868560">"Prejaki napon"</string>
     <string name="storage_health_title" msgid="2499144010514101535">"Zdravlje pohrane"</string>
-    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Ukupan kapacitet"</string>
+    <string name="storage_total_capacity_title" msgid="1212959252345254806">"Ukupni kapacitet"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
     <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Preostalo je %1$s životnog vijeka"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Dodijelite zatražena dopuštenja da biste nastavili u načinu procjene."</string>
