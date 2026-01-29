@@ -78,7 +78,7 @@
     <string name="storage_health_title" msgid="2499144010514101535">"Kondycja miejsca na dane"</string>
     <string name="storage_total_capacity_title" msgid="1212959252345254806">"Całkowita pojemność"</string>
     <string name="storage_total_capacity_summary_fmt" msgid="8200454514088613447">"<xliff:g id="NUMBER">%1$s</xliff:g> <xliff:g id="UNIT">%2$s</xliff:g>"</string>
-    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Pozostało bezterminowo %1$s"</string>
+    <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Pozostały cykl eksploatacji %1$s"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Przyznaj wymagane uprawnienia, aby kontynuować w trybie oceny."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Anuluj"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Spróbuj ponownie"</string>

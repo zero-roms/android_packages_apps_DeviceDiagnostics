@@ -64,7 +64,7 @@
     <string name="battery_first_usage_date" msgid="1183985039020984695">"首次使用日期"</string>
     <string name="battery_cycle_count" msgid="1002728954996996785">"循环次数"</string>
     <string name="battery_serial_number" msgid="2784394586800439008">"序列号"</string>
-    <string name="battery_part_status" msgid="504091754655232085">"部件状态"</string>
+    <string name="battery_part_status" msgid="504091754655232085">"零件状态"</string>
     <string name="battery_original" msgid="2552600989411644999">"原电池"</string>
     <string name="battery_replaced" msgid="2356023769075469649">"更换的电池"</string>
     <string name="battery_part_history" msgid="5669260842330985767">"零件信息"</string>
