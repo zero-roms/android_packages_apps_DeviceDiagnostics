@@ -133,7 +133,7 @@
     <string name="not_locked" msgid="1663929635666930122">"Tidak dikunci"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"Kod QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Teruskan pada peranti yang sedang dinilai"</string>
-    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Lengkapkan ujian pada peranti yang sedang dinilai, kemudian keputusan ujian tersebut akan dipaparkan di sini."</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Selesaikan ujian pada peranti yang sedang dinilai. Keputusannya akan dipaparkan di sini."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Terdapat ralat semasa berkomunikasi dengan peranti yang dinilai. Sila sahkan bahawa Bluetooth didayakan dan cuba lagi."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Imbas sekarang"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Pada peranti yang mahu anda jalankan penilaian, akses Tetapan, Sistem, Diagnostik peranti, Mod penilaian, kemudian Peranti yang dinilai. Ikut gesaan pada peranti tersebut."</string>

@@ -84,8 +84,8 @@
     <string name="try_again_button" msgid="6015477950108798246">"Prøv igen"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"Resultat af test af touchsensor"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Her er resultatet af testen af touchsensoren. Du kan prøve testen igen ved at gå tilbage."</string>
-    <string name="touch_test_good_title" msgid="4008967693136685770">"Testen af touchsensor blev bestået"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"Testen af touchsensor blev ikke bestået"</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"Test af touchsensor lykkedes"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"Test af touchsensor mislykkedes"</string>
     <string name="pass" msgid="6411665547268368837">"Bestået"</string>
     <string name="fail" msgid="3918028202746427731">"Ikke bestået"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"Verificeret certifikat"</string>

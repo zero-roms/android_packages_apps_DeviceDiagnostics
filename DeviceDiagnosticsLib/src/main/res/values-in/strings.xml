@@ -133,7 +133,7 @@
     <string name="not_locked" msgid="1663929635666930122">"Tidak dikunci"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"Kode QR"</string>
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"Lanjutkan di perangkat yang sedang dievaluasi"</string>
-    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Selesaikan pengujian di perangkat yang Anda evaluasi, maka hasilnya akan muncul di sini."</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"Selesaikan pengujian di perangkat yang Anda evaluasi. Hasilnya akan muncul di sini."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"Terjadi error saat berkomunikasi dengan perangkat yang dievaluasi. Pastikan Bluetooth diaktifkan, lalu coba lagi."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"Pindai sekarang"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"Di perangkat yang ingin Anda evaluasi, buka Setelan, Sistem, Diagnostik perangkat, Mode evaluasi, lalu Perangkat yang dievaluasi. Ikuti perintah di perangkat tersebut."</string>
