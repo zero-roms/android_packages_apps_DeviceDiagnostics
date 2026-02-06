@@ -85,7 +85,7 @@
     <string name="touch_test_result_title" msgid="8236119653054988245">"نتيجة اختبار اللمس"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"هذه هي نتيجة اختبار اللمس. يمكنك إعادة إجراء الاختبار من خلال الرجوع إلى الصفحة السابقة."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"تم اجتياز اختبار أداة استشعار اللمس"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"تعذَّر اجتياز اختبار أداة استشعار اللمس"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"لم يتم اجتياز اختبار أداة استشعار اللمس"</string>
     <string name="pass" msgid="6411665547268368837">"تم اجتياز الاختبار"</string>
     <string name="fail" msgid="3918028202746427731">"لم يتم اجتياز الاختبار"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"شهادة إثبات سلامة الجهاز"</string>

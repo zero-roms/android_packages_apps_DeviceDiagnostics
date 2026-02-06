@@ -83,8 +83,8 @@
     <string name="cancel_button" msgid="7011882021431169180">"रद्द करें"</string>
     <string name="try_again_button" msgid="6015477950108798246">"फिर से कोशिश करें"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"टच सेंसर की जांच का नतीजा"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"यहां टच सेंसर से जुड़ी जांच का नतीजा दिया गया है. आपके पास, वापस जाकर टेस्ट को फिर से चलाने का विकल्प है."</string>
-    <string name="touch_test_good_title" msgid="4008967693136685770">"टच सेंसर की जांच सफल रही"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"यहां टच सेंसर की जांच का नतीजा दिया गया है. आपके पास, वापस जाकर फिर से जांच करने की सुविधा भी है."</string>
+    <string name="touch_test_good_title" msgid="4008967693136685770">"जांच में टच सेंसर कामयाब रहा"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"जांच में टच सेंसर नाकाम साबित हुआ"</string>
     <string name="pass" msgid="6411665547268368837">"पास"</string>
     <string name="fail" msgid="3918028202746427731">"फ़ेल"</string>
@@ -132,8 +132,8 @@
     <string name="locked" msgid="2034650000550950371">"लॉक है"</string>
     <string name="not_locked" msgid="1663929635666930122">"नहीं"</string>
     <string name="qr_code_description" msgid="4665712956570877310">"क्यूआर कोड"</string>
-    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"उस डिवाइस पर जारी रखें जिसकी जांच की जा रही है"</string>
-    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"जांचे जा रहे डिवाइस पर टेस्ट पूरे करें. इसके बाद, नतीजे यहां दिखेंगे."</string>
+    <string name="continue_on_evaluated_title" msgid="4078768809567832628">"जिस डिवाइस की जांच की जा रही है उस पर प्रोसेस जारी रखें"</string>
+    <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"जांचे जा रहे डिवाइस पर टेस्ट पूरे करें. नतीजे यहां दिखेंगे."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"जांचे गए डिवाइस से कनेक्ट करने में गड़बड़ी हुई. कृपया पुष्टि करें कि ब्लूटूथ चालू हो और फिर से कोशिश करें."</string>
     <string name="trusted_scan_now_title" msgid="6091670756288147729">"अभी स्कैन करें"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"आपको जिस डिवाइस की जांच करनी है उसकी सेटिंग खोलें. फिर सिस्टम पर जाएं और \'डिवाइस की जांच\' में, \'दूसरे डिवाइस की मदद से जांच\' चुनें. इसके बाद, \'जांचा गया डिवाइस\' पर जाएं और उस डिवाइस पर मिले प्रॉम्प्ट फ़ॉलो करें."</string>

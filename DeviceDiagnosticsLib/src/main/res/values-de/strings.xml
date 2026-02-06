@@ -82,8 +82,8 @@
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Bitte erteile die angeforderten Berechtigungen. Anschließend kannst du im Bewertungsmodus fortfahren."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Abbrechen"</string>
     <string name="try_again_button" msgid="6015477950108798246">"Noch mal versuchen"</string>
-    <string name="touch_test_result_title" msgid="8236119653054988245">"Ergebnis des Touchsensortests"</string>
-    <string name="touch_test_result_summary" msgid="9215663453308287653">"Dies ist das Ergebnis des Touchsensortests. Du kannst den Test wiederholen, indem du zurückgehst."</string>
+    <string name="touch_test_result_title" msgid="8236119653054988245">"Ergebnis des Touchsensor-Tests"</string>
+    <string name="touch_test_result_summary" msgid="9215663453308287653">"Das ist das Ergebnis des Touchsensor-Tests. Du kannst den Test wiederholen, indem du zurückgehst."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Touchsensor-Test bestanden"</string>
     <string name="touch_test_bad_title" msgid="6888320344429184690">"Touchsensor-Test nicht bestanden"</string>
     <string name="pass" msgid="6411665547268368837">"Bestanden"</string>

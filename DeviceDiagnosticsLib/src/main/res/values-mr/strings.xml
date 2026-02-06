@@ -85,7 +85,7 @@
     <string name="touch_test_result_title" msgid="8236119653054988245">"स्पर्श चाचणीचा परिणाम"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"हा स्पर्श सेन्सर चाचणीचा परिणाम आहे. मागे नेव्हिगेट करून तुम्ही चाचणी पुन्हा रन करू शकता."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"स्‍पर्श सेन्सर चाचणी पास केली"</string>
-    <string name="touch_test_bad_title" msgid="6888320344429184690">"स्पर्श सेन्सर चाचणी अयशस्वी झाली"</string>
+    <string name="touch_test_bad_title" msgid="6888320344429184690">"स्पर्श सेन्सर चाचणी करता आली नाही"</string>
     <string name="pass" msgid="6411665547268368837">"पास"</string>
     <string name="fail" msgid="3918028202746427731">"अयशस्वी"</string>
     <string name="attestation_verified" msgid="6535873137799452259">"पडताळणी केलेले प्रमाणपत्र"</string>
