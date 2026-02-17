@@ -37,7 +37,7 @@
     <string name="eval_mode_trusted_device_summary" msgid="8217291325895255590">"دستگاه دیگری را ارزیابی کنید. برای این کار، اتصال اینترنت لازم است."</string>
     <string name="evaluated_device_title" msgid="5546625787928257821">"دستگاه ارزیابی‌شده"</string>
     <string name="eval_mode_evaluated_device_summary" msgid="3636314493314426253">"اجرای آزمایش‌های تشخیص خرابی که توسط دستگاه دیگری اعتبارسنجی می‌شوند."</string>
-    <string name="evaluated_scan_now" msgid="5413803134686672845">"اکنون اسکن شود"</string>
+    <string name="evaluated_scan_now" msgid="5413803134686672845">"اکنون اسکن کردن"</string>
     <string name="evaluated_scan_now_summary" msgid="4225756086513777639">"رمزینه پاسخ‌سریع را در دستگاه مطمئن در مستطیل زیر اسکن کنید"</string>
     <string name="evaluated_scan_continue_summary" msgid="4316722493724296922">"پس‌از اینکه رمزینه پاسخ‌سریع را باموفقیت اسکن کردید، این دستگاه به‌طور خودکار مجموعه‌ای از آزمایش‌ها را شروع خواهد کرد."</string>
     <string name="evaluated_scan_select_device_title" msgid="7981800769200920339">"انتخاب دستگاه مطمئن"</string>
@@ -135,7 +135,7 @@
     <string name="continue_on_evaluated_title" msgid="4078768809567832628">"ادامه دادن در دستگاهی که درحال ارزیابی است"</string>
     <string name="continue_on_evaluated_summary" msgid="2610517924466437207">"این آزمایش‌ها را در دستگاهی که ارزیابی می‌کنید کامل کنید، سپس نتایج آزمایش در اینجا نشان داده خواهد شد."</string>
     <string name="trusted_bluetooth_error_summary" msgid="2655404481798929818">"در برقراری ارتباط با دستگاه ارزیابی‌شده خطایی روی داد. لطفاً بررسی کنید بلوتوث فعال باشد و دوباره امتحان کنید."</string>
-    <string name="trusted_scan_now_title" msgid="6091670756288147729">"اکنون اسکن شود"</string>
+    <string name="trusted_scan_now_title" msgid="6091670756288147729">"اکنون اسکن کردن"</string>
     <string name="trusted_scan_now_summary" msgid="578587921199486348">"در دستگاهی که می‌خواهید ارزیابی شود، به «تنظیمات، سیستم، تشخیص سلامت دستگاه، حالت ارزیابی»، و سپس «دستگاه ارزیابی‌شده» بروید. پیام‌واره‌ها را در آن دستگاه دنبال کنید."</string>
     <string name="screen_test_summary" msgid="6565006807310186664">"اکنون مجموعه‌ای از صفحه‌ها به شما نشان داده خواهد شد. همه صفحه‌ها را بررسی کنید و نقص‌ها را پیدا کنید. وقتی از همه‌چیز رضایت پیدا کردید، صفحه را لمس کنید تا به صفحه بعدی بروید. در پایان، از شما پرسیده می‌شود آیا صفحه‌ها به‌نظر بی‌نقص هستند یا نه."</string>
     <string name="screen_test_summary_one_shot" msgid="7447685087916591748">"اکنون مجموعه‌ای از صفحه‌ها به شما نشان داده خواهد شد. همه صفحه‌ها را بررسی کنید و نقص‌ها را پیدا کنید. صفحه را لمس کنید تا به صفحه بعدی بروید."</string>
