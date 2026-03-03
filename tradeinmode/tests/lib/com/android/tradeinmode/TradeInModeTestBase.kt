@@ -77,7 +77,7 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         var result = mDevice.executeShellV2Command("ls -l /")
         assertNotEquals(result.getExitCode(), 0)
 
-        result = mDevice.executeShellV2Command("tradeinmode state")
+        result = mDevice.executeShellV2Command("tradeinmode wait-until-ready state")
         assertEquals(result.getExitCode(), 0)
         assertEquals(result.getStdout().trim(), "setup")
 
@@ -172,6 +172,9 @@ abstract class TradeInModeTestBase : BaseHostJUnit4Test() {
         waitForCommandService("settings")
 
         // Setup should be complete.
+        try {
+            waitForDevice({ getSettingInt("global", "device_provisioned", 0) == 1 })
+        } catch (e: Exception) {}
         assertEquals(getSettingInt("global", "device_provisioned", 0), 1)
         assertEquals(getSettingInt("secure", "user_setup_complete", 0), 1)
 
