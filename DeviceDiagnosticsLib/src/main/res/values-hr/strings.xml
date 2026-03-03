@@ -81,7 +81,7 @@
     <string name="storage_health_summary_fmt" msgid="7174241725631534273">"Preostalo je %1$s životnog vijeka"</string>
     <string name="grant_eval_permissions_dialog" msgid="4732263095697870167">"Dodijelite zatražena dopuštenja da biste nastavili u načinu procjene."</string>
     <string name="cancel_button" msgid="7011882021431169180">"Odustani"</string>
-    <string name="try_again_button" msgid="6015477950108798246">"Pokušaj ponovo"</string>
+    <string name="try_again_button" msgid="6015477950108798246">"Pokušaj ponovno"</string>
     <string name="touch_test_result_title" msgid="8236119653054988245">"Rezultat testiranja dodira"</string>
     <string name="touch_test_result_summary" msgid="9215663453308287653">"Ovo je rezultat testiranja dodira. Ako se vratite, možete ponovno pokrenuti testiranje."</string>
     <string name="touch_test_good_title" msgid="4008967693136685770">"Senzor za dodir prošao je test"</string>
