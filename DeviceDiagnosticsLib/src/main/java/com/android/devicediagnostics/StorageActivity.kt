@@ -36,7 +36,7 @@ class StorageInfoFragment(private var diagnostics: StorageInfo) : PreferenceFrag
 
         findPreference<StorageHealthPreference>("health")!!.also {
             it.diagnostics = diagnostics
-            if (diagnostics.usefulLifetimeRemaining != -1) {
+            if (diagnostics.hasUsefulLifetimeRemaining()) {
                 val locale = getDefaultLocale(activity!!)
                 val percent = diagnostics.usefulLifetimeRemaining / 100.0f
                 val percentString = NumberFormat.getPercentInstance(locale).format(percent)
@@ -68,7 +68,7 @@ class StorageHealthPreference(context: Context, attrs: AttributeSet) :
     var diagnostics: StorageInfo = StorageInfo.getDefaultInstance()
 
     override fun getSummary(): CharSequence? {
-        if (diagnostics.usefulLifetimeRemaining == -1) {
+        if (!diagnostics.hasUsefulLifetimeRemaining()) {
             return context.getString(R.string.unavailable)
         }
         return diagnostics.usefulLifetimeRemaining.toString() + "%"
